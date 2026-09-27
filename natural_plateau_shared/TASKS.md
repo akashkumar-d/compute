@@ -14,15 +14,16 @@ Times are rough, for one CPU core per run:
 - depth 3, 100k steps: about 1 h
 - depth 2, width 512, 40k steps: about 45–60 min
 
-**Order for B: T2, then T1, then T3, then T4.**
+**Order for B: T2, then T3, then T4.** T1 is on hold. A's T5 cascade runs may make T1 unnecessary; A will re-open or replace it after T5 finishes, around 11:20 UTC on Sep 27.
 
 | Task (batch file in `code/tasks/`) | Runs | Why | Est. time per run | Status |
 |---|---|---|---|---|
 | `T0_depth3_r0.35_r0.4_tuningseed` | depth 3, r = 0.35 and 0.4, tuning seed, 80k steps | Can slower deep layers put grokking inside the depth-3 plateau? | about 40 min | **done (A)**: see below |
-| `T2_depth2_width512_seeds` | depth 2, width 512, r = 0.5, fresh seeds 0–2, 40k steps | Does extra width flatten the depth-2 plateau, as it does with one hidden layer (15% → 2% CE range)? | about 45–60 min | open |
-| `T1_depth3_slower_tuningseed` | depth 3, r = 0.3 and 0.25, tuning seed, 120k steps | Continues the T0 trend: slower deep layers give a longer flat window with more of the grokking inside | about 1–1.5 h | open |
+| `T2_depth2_width512_seeds` | depth 2, width 512, r = 0.5, fresh seeds 0–2, 40k steps | Does extra width flatten the depth-2 plateau, as it does with one hidden layer (15% → 2% CE range)? | about 45–60 min | running (B, started 10:30 UTC) |
+| `T1_depth3_slower_tuningseed` | depth 3, r = 0.3 and 0.25, tuning seed, 120k steps | Continues the T0 trend: slower deep layers give a longer flat window with more of the grokking inside | about 1–1.5 h | **on hold**: T0 gave the same 13.4% CE range at r = 0.35 and 0.4, so a uniform slowdown probably doesn't help |
 | `T3_depth2_other_moduli` | depth 2, r = 0.5: p = 47 (tuning seed and seed 0), and p = 23 with layer-1 decay 0.01 (tuning seed and seed 0), 40k steps | Does the plateau carry over to other moduli? | about 15–35 min | open |
 | `T4_depth4_explore` | depth 4, r = 0.35 and 0.5, tuning seed, 120k steps | First look at depth 4 | about 1.5–2 h | open |
+| `T5_depth3_cascade` | depth 3, tuning seed, 100k steps: layer 2 at 0.5× and layer 3 at 0.25× layer 1's shrink rate, and layer 2 at 0.7× with layer 3 at 0.35×. Uses the new per-layer `eta_layers` / `lam_layers` keys in the runner. | A cascade: each deeper layer shrinks at half the rate of the one above, so the deepest layer is still shrinking through the long depth-3 grokking | about 50 min | running (A, cloud) |
 
 ## Results so far
 

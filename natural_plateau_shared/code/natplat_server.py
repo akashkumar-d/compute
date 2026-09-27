@@ -1,6 +1,7 @@
 """Self-contained runner for the natural-plateau experiments (modular addition, bias-free ReLU MLP, CE).
 
-Same numerics as code/nat.py (verified bit-for-bit on a short run), plus:
+Same numerics as code/nat.py (verified bit-for-bit on a short run), plus optional per-layer
+`eta_layers` / `lam_layers` lists (absent = old behaviour, identical numbers), plus:
   * checkpoint / resume every `ckpt_every` steps (weights + loss + observations), so long runs survive restarts;
   * gzip-compressed outputs (<name>.json.gz) and checkpoint removal on completion (storage-conscious);
   * a process pool with one BLAS thread per worker;
@@ -92,8 +93,10 @@ class Run:
         fh = cfg.get('freeze_hidden_after'); fv = cfg.get('freeze_head_after')
         for l, (W, G) in enumerate(zip(s.Ws, gWs)):
             if fh is not None and t >= fh: continue
-            eta = cfg['eta_w'] if l == 0 else cfg.get('eta_deep', cfg['eta_w'])
-            lam = cfg['lam_w'] if l == 0 else cfg.get('lam_deep', cfg['lam_w'])
+            if 'eta_layers' in cfg: eta = cfg['eta_layers'][l]                      # optional per-layer steps
+            else: eta = cfg['eta_w'] if l == 0 else cfg.get('eta_deep', cfg['eta_w'])
+            if 'lam_layers' in cfg: lam = cfg['lam_layers'][l]                      # optional per-layer decays
+            else: lam = cfg['lam_w'] if l == 0 else cfg.get('lam_deep', cfg['lam_w'])
             Q, r = polar_dir(-G)
             s.Ws[l] = W + eta * ((Q / math.sqrt(r) if r else 0 * W) - lam * W)
         gn = np.linalg.norm(gV)

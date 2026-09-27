@@ -6,6 +6,11 @@ This folder is how two Claude sessions on different accounts share the natural-p
 - The repo copy is the only shared copy.
 - Each account works in its own clone and syncs through git.
 - The repo is **public**: never commit tokens, passwords or links containing `?token=`.
+- **How A's changes get there.** A's Cowork session can read the repo but cannot push to it. A writes its files in the copy of this folder on the user's Mac. The user then runs `bash push_A_files.sh` there, which:
+  - pulls first;
+  - copies only A-owned files, so it never touches B's log, claims or results;
+  - commits and pushes.
+- B pushes directly from its own session.
 
 ## Who is who
 

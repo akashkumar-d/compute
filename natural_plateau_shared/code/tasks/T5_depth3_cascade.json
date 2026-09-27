@@ -1,0 +1,66 @@
+[
+ {
+  "name": "T5_D3_cascade_r0.5_0.25_tune_T100k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 3,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 100000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_layers": [
+    0.03,
+    0.003214285714285714,
+    0.001607142857142857
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T5_D3_cascade_r0.7_0.35_tune_T100k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 3,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 100000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_layers": [
+    0.03,
+    0.004499999999999999,
+    0.0022499999999999994
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ }
+]
