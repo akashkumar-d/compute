@@ -14,3 +14,8 @@ Format: `UTC time | A | task | status | key numbers | where`
 2026-09-27T12:13Z | A | B's T2 | checked | recomputed from the raw runs: share of the grokking rise inside the flat window 78/98/99%, CE after grokking only about -4.5% by 40k; matches B's SUMMARY | -
 2026-09-27T12:14Z | A | T8 | started (cloud) | last-layer-slow rule: depth 3 (1.0, 0.5) and depth 4 (1.0, 1.0, 0.5), tuning seed | results/T8_lastlayer_slow_rule/
 2026-09-27T12:14Z | A | queue | B: finish T3, then T6 (depth-3 cascade seeds); T1 and T4 on hold | TASKS.md
+2026-09-27T12:26Z | A | B's T3 | checked | p = 47 at depth 2: the whole grokking rise sits inside a 12.6k–14.3k-step flat window at 0.67·log p, CE range 0.9–3.0%, first-layer AGOP 0.13→0.55; p = 23 fails with these settings | results/T3_depth2_other_moduli/SUMMARY.md
+2026-09-27T12:26Z | A | queue | B already started T4 before the hold was pushed; keep it as the depth-4 uniform baseline; T6 to start on B's free cores | TASKS.md
+2026-09-27T13:05Z | A | T8 | depth 3 done | (1.0, 0.5): 77% of the test 0.1→0.9 rise inside one ≤3% window (17.9k–28.2k steps at 0.50·log p, test 0.06→0.72), CE range over grokking 8.1%, drift −6.0%; close to the tuned cascade (0.9, 0.45) at 82% / 7.0%. Depth 4 still running | results/T8_lastlayer_slow_rule/
+2026-09-27T13:05Z | A | T9 | started (cloud) | depth 2, p = 23 with layer-1 decay 0.015, tuning seed and seed 0 | results/T9_depth2_p23_decay0.015/
+2026-09-27T13:08Z | A | queue | T10 (depth 3, width 512: cascade (0.9, 0.45) tuning + seed 0, last-layer-slow (1.0, 0.5) tuning; 60k steps) is next for B after T4 and T6 | TASKS.md

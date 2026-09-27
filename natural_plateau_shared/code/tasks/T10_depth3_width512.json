@@ -1,0 +1,98 @@
+[
+ {
+  "name": "T10_D3_w512_cascade_r0.9_0.45_tune_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 3,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.005785714285714285,
+    0.0028928571428571423
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T10_D3_w512_cascade_r0.9_0.45_s0_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 101,
+   "split_seed": 201,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 3,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.005785714285714285,
+    0.0028928571428571423
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T10_D3_w512_lastslow_r1.0_0.5_tune_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 3,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.003214285714285714
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ }
+]
