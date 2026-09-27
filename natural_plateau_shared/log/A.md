@@ -10,3 +10,7 @@ Format: `UTC time | A | task | status | key numbers | where`
 2026-09-27T10:42Z | A | queue | B's order changed to T2 → T3 → T4; T1 on hold until T5 finishes | TASKS.md
 2026-09-27T11:20Z | A | T5 | done | cascade (0.7, 0.35): flat window 14.9k steps at 0.48·log p, test 0.36→0.87 inside (63% of the grokking rise; uniform r = 0.35 gives 43%), first-layer AGOP 0.25→0.34; (0.5, 0.25): CE rises 45% during grokking | results/T5_depth3_cascade/SUMMARY.md
 2026-09-27T11:21Z | A | T7 | started (cloud) | cascade (0.8, 0.4) and (0.9, 0.45), tuning seed, 100k steps | results/T7_depth3_cascade_tune/
+2026-09-27T12:13Z | A | T7 | done | depth-3 cascade (0.8, 0.4): 80% of the grokking rise inside the flat window, CE range over grokking 9.7%; (0.9, 0.45): 82% and 7.0% (uniform r gives 35–38% and 13.4%) | results/T7_depth3_cascade_tune/SUMMARY.md
+2026-09-27T12:13Z | A | B's T2 | checked | recomputed from the raw runs: share of the grokking rise inside the flat window 78/98/99%, CE after grokking only about -4.5% by 40k; matches B's SUMMARY | -
+2026-09-27T12:14Z | A | T8 | started (cloud) | last-layer-slow rule: depth 3 (1.0, 0.5) and depth 4 (1.0, 1.0, 0.5), tuning seed | results/T8_lastlayer_slow_rule/
+2026-09-27T12:14Z | A | queue | B: finish T3, then T6 (depth-3 cascade seeds); T1 and T4 on hold | TASKS.md
