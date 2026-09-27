@@ -8,3 +8,5 @@ Format: `UTC time | A | task | status | key numbers | where`
 2026-09-27T10:15Z | A | setup | moved the shared folder to GitHub (akashkumar-d/compute, branch claude/focused-gauss-cy16t3); README rewritten for the git workflow; T1 revised to r = 0.3 and 0.25 at 120k steps | README.md, TASKS.md
 2026-09-27T10:29Z | A | T5 | started (cloud) | depth-3 cascade: (0.5, 0.25) and (0.7, 0.35), tuning seed, 100k steps; runner gained optional per-layer eta_layers/lam_layers keys (old configs give identical numbers) | results/T5_depth3_cascade/
 2026-09-27T10:42Z | A | queue | B's order changed to T2 → T3 → T4; T1 on hold until T5 finishes | TASKS.md
+2026-09-27T11:20Z | A | T5 | done | cascade (0.7, 0.35): flat window 14.9k steps at 0.48·log p, test 0.36→0.87 inside (63% of the grokking rise; uniform r = 0.35 gives 43%), first-layer AGOP 0.25→0.34; (0.5, 0.25): CE rises 45% during grokking | results/T5_depth3_cascade/SUMMARY.md
+2026-09-27T11:21Z | A | T7 | started (cloud) | cascade (0.8, 0.4) and (0.9, 0.45), tuning seed, 100k steps | results/T7_depth3_cascade_tune/
