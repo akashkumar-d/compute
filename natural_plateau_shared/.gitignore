@@ -1,0 +1,9 @@
+# runner checkpoints and temporary files
+*.ckpt.npz
+*.tmp
+*.tmp.npz
+# nohup output next to results/<TASK>/
+results/*.out
+__pycache__/
+*.pyc
+.DS_Store

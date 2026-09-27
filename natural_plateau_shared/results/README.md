@@ -1,0 +1,1 @@
+Put each task's results in `results/<TASK>/`: one `*.json.gz` per run, plus `SUMMARY.md` (the output of `natplat_server.py summary`) and the runner's `queue.log`. Only the account that claimed the task writes into its folder.

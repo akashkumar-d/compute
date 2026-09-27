@@ -1,0 +1,48 @@
+[
+ {
+  "name": "T4_D4_r0.35_tune_T120k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 4,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 120000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.0022499999999999994
+  }
+ },
+ {
+  "name": "T4_D4_r0.5_tune_T120k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 4,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 120000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.003214285714285714
+  }
+ }
+]
