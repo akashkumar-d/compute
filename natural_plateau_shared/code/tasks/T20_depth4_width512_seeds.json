@@ -1,0 +1,138 @@
+[
+ {
+  "name": "T20_D4_w512_r1.0_1.0_0.4_s1_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 102,
+   "split_seed": 202,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 4,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.006428571428571428,
+    0.0025714285714285713
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T20_D4_w512_r1.0_1.0_0.45_s1_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 102,
+   "split_seed": 202,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 4,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.006428571428571428,
+    0.0028928571428571423
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T20_D4_w512_r1.0_1.0_0.4_s2_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 103,
+   "split_seed": 203,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 4,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.006428571428571428,
+    0.0025714285714285713
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T20_D4_w512_r1.0_1.0_0.45_s2_T60k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 512,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 103,
+   "split_seed": 203,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 4,
+   "steps": 60000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.006428571428571428,
+    0.0028928571428571423
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07,
+    0.07
+   ]
+  }
+ }
+]
