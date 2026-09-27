@@ -1,0 +1,140 @@
+[
+ {
+  "name": "T16_D2_p23_lw0.015_r0.45_tune_T80k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 2,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 80000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 23,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.0028928571428571423
+  }
+ },
+ {
+  "name": "T16_D2_p23_lw0.015_r0.45_s0_T80k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 2,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 80000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 23,
+   "lam_v": 0.2,
+   "init_seed": 101,
+   "split_seed": 201,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.0028928571428571423
+  }
+ },
+ {
+  "name": "T16_D2_p23_lw0.015_r0.45_s1_T80k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 2,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 80000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 23,
+   "lam_v": 0.2,
+   "init_seed": 102,
+   "split_seed": 202,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.0028928571428571423
+  }
+ },
+ {
+  "name": "T16_D2_p23_lw0.015_r0.4_tune_T80k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 2,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 80000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 23,
+   "lam_v": 0.2,
+   "init_seed": 2,
+   "split_seed": 1,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.002571428571428571
+  }
+ },
+ {
+  "name": "T16_D2_p23_lw0.015_r0.4_s0_T80k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 2,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 80000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 23,
+   "lam_v": 0.2,
+   "init_seed": 101,
+   "split_seed": 201,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.002571428571428571
+  }
+ },
+ {
+  "name": "T16_D2_p23_lw0.015_r0.4_s1_T80k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "depth": 2,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "steps": 80000,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 23,
+   "lam_v": 0.2,
+   "init_seed": 102,
+   "split_seed": 202,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "eta_deep": 0.002571428571428571
+  }
+ }
+]

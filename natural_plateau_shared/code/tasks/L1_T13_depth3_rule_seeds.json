@@ -1,0 +1,98 @@
+[
+ {
+  "name": "T13_D3_lastslow_r1.0_0.5_s0_T100k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 101,
+   "split_seed": 201,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 3,
+   "steps": 100000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.003214285714285714
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T13_D3_lastslow_r1.0_0.5_s1_T100k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 102,
+   "split_seed": 202,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 3,
+   "steps": 100000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.003214285714285714
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ {
+  "name": "T13_D3_lastslow_r1.0_0.5_s2_T100k",
+  "cfg": {
+   "frac": 0.8,
+   "width": 256,
+   "loss": "ce",
+   "eta_w": 0.03,
+   "eta_v": 0.03,
+   "init_scale": 24.0,
+   "obs_every": 20,
+   "heavy_every": 500,
+   "p": 31,
+   "lam_v": 0.2,
+   "init_seed": 103,
+   "split_seed": 203,
+   "lam_w": 0.015,
+   "deep_init_scale": 8.0,
+   "lam_deep": 0.07,
+   "depth": 3,
+   "steps": 100000,
+   "eta_layers": [
+    0.03,
+    0.006428571428571428,
+    0.003214285714285714
+   ],
+   "lam_layers": [
+    0.015,
+    0.07,
+    0.07
+   ]
+  }
+ }
+]
