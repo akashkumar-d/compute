@@ -16,7 +16,7 @@ Times are rough, for one CPU core per run:
 
 **Order for B: pull, claim and run `T18_depth4_seeds_rate045_040` with `--workers 4` (4 runs, about 2 h). Push each finished run, then the SUMMARY, then stop and wait.** Do not start T1 or T10.
 
-A plans to use a 32-core Lightning AI CPU Studio once the user starts it. The files `code/tasks/L1_<TASK>.json` are the subsets of A's tasks that the Studio runs (batch L1, 25 runs); their results go to `results/<TASK>/` as usual. They are A's; B should ignore them.
+A plans to use a 32-core Lightning AI CPU Studio once the user starts it. The files `code/tasks/L1_<TASK>.json` are the subsets of A's tasks that the Studio runs (batch L1, 25 runs); their results go to `results/<TASK>/` as usual. A second batch, `L2_<TASK>.json` (6 runs), moves A's cloud-session runs of T10 (width-512 cascade, tuning seed and seed 0) and four paused T14 runs to the Studio. They are A's; B should ignore them.
 
 | Task (batch file in `code/tasks/`) | Runs | Why | Est. time per run | Status |
 |---|---|---|---|---|
