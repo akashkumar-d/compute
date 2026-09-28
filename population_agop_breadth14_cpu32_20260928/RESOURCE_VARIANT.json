@@ -1,0 +1,20 @@
+{
+  "parent_manifest_sha256": "179fbbddd2b1d216232da629775dad23ce6ace094d86f74c418d40bbbedbb390",
+  "manifest_sha256": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+  "changed_hashed_inputs": [
+    "PROTOCOL.md"
+  ],
+  "configs_unchanged": 60,
+  "executable_inputs_unchanged": true,
+  "runtime": {
+    "workers": 30,
+    "reserved_cpus": 2,
+    "min_available_memory_gib": 24,
+    "min_free_disk_gib": 10,
+    "global_seconds": 2100,
+    "per_arm_seconds": 900,
+    "diagnostic_reserve_seconds": 180
+  },
+  "model_evaluations": 0,
+  "training_started": false
+}

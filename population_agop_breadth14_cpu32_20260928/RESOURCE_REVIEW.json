@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-28T16:51:00.384050+00:00",
+  "parent_manifest_sha256": "179fbbddd2b1d216232da629775dad23ce6ace094d86f74c418d40bbbedbb390",
+  "cpu32_manifest_sha256": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+  "both_manifests_valid": true,
+  "hashed_source_files_checked_per_bundle": 98,
+  "byte_identical_scientific_and_launcher_inputs": 35,
+  "unchanged_configs": 60,
+  "all_arm_command_arguments_equal_except_bundle_root": true,
+  "changed_hashed_inputs": [
+    "PROTOCOL.md"
+  ],
+  "changed_top_level_manifest_keys": [
+    "runtime",
+    "source_sha256",
+    "resource_note"
+  ],
+  "added_manifest_key": "resource_variant",
+  "cpu_capacity_mock_checks": [
+    {
+      "effective_cpus": 32,
+      "outcome": "pass"
+    },
+    {
+      "effective_cpus": 31,
+      "outcome": "reject",
+      "reason": "Insufficient allocated CPUs: need 30 workers + 2 free, have 31"
+    },
+    {
+      "effective_cpus": 4,
+      "outcome": "reject",
+      "reason": "Insufficient allocated CPUs: need 30 workers + 2 free, have 4"
+    }
+  ],
+  "worker_threads_forced_one": true,
+  "standard_library_launcher_tests": {
+    "passed": 16,
+    "failed": 0,
+    "model_evaluations": 0
+  },
+  "wall_budget": {
+    "arms": 60,
+    "workers": 30,
+    "reserved_cpus": 2,
+    "waves": 2,
+    "per_arm_seconds": 900,
+    "nominal_two_wave_seconds": 1800,
+    "global_seconds": 2100,
+    "overhead_margin_seconds": 300,
+    "note": "Two nominal full-budget waves fit with300s margin; runtime cap still governs and unforeseen startup/teardown delays or censoring must be reported."
+  },
+  "training_started": false,
+  "model_evaluations": 0,
+  "network_calls": 0
+}
