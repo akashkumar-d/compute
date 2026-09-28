@@ -1,0 +1,96 @@
+[
+  {
+    "id": "v9_swiglu_h2_headslow_order2_r8_d64_m64_seed642",
+    "quadrature_multiplier": 2,
+    "base_config_sha256": "6a6750d8639528c79027d1b9a0d817a481e229eb4cbb79a8078b524d2f0d83d3",
+    "config_sha256": "6db9494d17bf9fbae97a0e6b80e72ae54eaf457115829f03370950802c8fcf66",
+    "outer_changes": {
+      "tag": [
+        "v8_swiglu_h2_headslow_r8_d64_m64_seed642",
+        "v9_swiglu_h2_headslow_order2_r8_d64_m64_seed642"
+      ],
+      "cell": [
+        "swiglu_h2_headslow",
+        "swiglu_h2_headslow_order2"
+      ]
+    },
+    "argument_changes": {
+      "t_max": [
+        3000.0,
+        100.0
+      ],
+      "L_stop": [
+        0.01,
+        0.8
+      ],
+      "max_steps": [
+        15000,
+        3000
+      ],
+      "n_pair": [
+        16,
+        32
+      ],
+      "n_diag": [
+        48,
+        96
+      ],
+      "n_z": [
+        24,
+        48
+      ],
+      "n_x": [
+        12,
+        24
+      ]
+    },
+    "seed_preserved": true
+  },
+  {
+    "id": "v9_swiglu_h2_headslow_order4_r8_d64_m64_seed642",
+    "quadrature_multiplier": 4,
+    "base_config_sha256": "6a6750d8639528c79027d1b9a0d817a481e229eb4cbb79a8078b524d2f0d83d3",
+    "config_sha256": "d4346c84247471312c8790fffa2fc1f382df51371cf5be360b308522c7b958c1",
+    "outer_changes": {
+      "tag": [
+        "v8_swiglu_h2_headslow_r8_d64_m64_seed642",
+        "v9_swiglu_h2_headslow_order4_r8_d64_m64_seed642"
+      ],
+      "cell": [
+        "swiglu_h2_headslow",
+        "swiglu_h2_headslow_order4"
+      ]
+    },
+    "argument_changes": {
+      "t_max": [
+        3000.0,
+        100.0
+      ],
+      "L_stop": [
+        0.01,
+        0.8
+      ],
+      "max_steps": [
+        15000,
+        3000
+      ],
+      "n_pair": [
+        16,
+        64
+      ],
+      "n_diag": [
+        48,
+        192
+      ],
+      "n_z": [
+        24,
+        96
+      ],
+      "n_x": [
+        12,
+        48
+      ]
+    },
+    "seed_preserved": true
+  }
+]

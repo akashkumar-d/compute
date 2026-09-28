@@ -1,0 +1,25 @@
+{
+  "scope": "Independent sampled input-Jacobian geometry at fixed states; no population or trajectory certificate.",
+  "samples": [
+    8192,
+    32768
+  ],
+  "replicate_seeds": [
+    202609281,
+    202609282
+  ],
+  "chunk": 512,
+  "selected_steps": {
+    "v8_swiglu_h2_headslow_r8_d64_m64_seed641": [
+      0,
+      102
+    ],
+    "v8_swiglu_h2_headslow_r8_d64_m64_seed642": [
+      0,
+      380
+    ]
+  },
+  "wall_seconds_cap": 120,
+  "threads": 1,
+  "no_training": true
+}

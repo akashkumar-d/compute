@@ -1,0 +1,218 @@
+--- reference/v8_launch.py
++++ launcher/launch.py
+@@ -1,4 +1,7 @@
+-"""Validated, queued, bounded SERVER-only launcher; --dry-run is static only."""
++"""Bounded v9 trajectory wrapper; explicit local/server gates; dry-run is static.
++
++Fork of the preserved v8 scheduler. Scientific sources remain byte-identical.
++"""
+ from __future__ import annotations
+ 
+ import argparse
+@@ -91,14 +94,14 @@
+     manifest = load_json(manifest_path)
+     runtime = manifest["runtime"]
+     workers = runtime["workers"]
+-    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 60:
+-        raise ValueError("runtime.workers must be an integer from 1 to 60")
++    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 2:
++        raise ValueError("runtime.workers must be an integer from 1 to 2")
+     total = positive_number(runtime["global_seconds"], "global_seconds")
+     arm = positive_number(runtime["per_arm_seconds"], "per_arm_seconds")
+     reserve = positive_number(runtime["diagnostic_reserve_seconds"],
+                               "diagnostic_reserve_seconds", allow_zero=True)
+-    if total > 3300 or arm > 900 or arm > total or arm <= reserve + CLEANUP_SECONDS:
+-        raise ValueError("Require reserve + 10 < per_arm <= 900 and per_arm <= global <= 3300 seconds")
++    if total > 2150 or arm > 1990 or arm > total or arm <= reserve + CLEANUP_SECONDS:
++        raise ValueError("Require reserve + 10 < per_arm <= 1990 and per_arm <= global <= 2150 seconds")
+     hashes = manifest["source_sha256"]
+     if not isinstance(hashes, dict) or not hashes:
+         raise ValueError("source_sha256 must be a nonempty relative-path/hash mapping")
+@@ -145,14 +148,33 @@
+ 
+ 
+ def require_server():
+-    if not sys.platform.startswith("linux") or os.environ.get("AGOP_EXECUTION_SITE") != "SERVER":
+-        raise RuntimeError("Execution requires Linux and AGOP_EXECUTION_SITE=SERVER")
++    """Explicit execution modes; never spoof SERVER to run locally."""
++    site = os.environ.get("AGOP_EXECUTION_SITE")
++    if site == "SERVER" and sys.platform.startswith("linux"):
++        return site
++    if site == "LOCAL_AUTHORIZED" and sys.platform in ("darwin", "linux"):
++        return site
++    raise RuntimeError("Execution requires Linux/SERVER or explicit LOCAL_AUTHORIZED on macOS/Linux")
+ 
+ 
+ def resource_snapshot():
+     """Read allocated CPU/memory limits; never resize a machine or start work."""
+     cpus = float(len(os.sched_getaffinity(0)) if hasattr(os, 'sched_getaffinity') else os.cpu_count() or 1)
+     report = {"affinity_cpus": cpus}
++    if sys.platform == 'darwin':
++        # Conservative free+inactive+speculative pages; exclude compressed pages.
++        vm = subprocess.check_output(['/usr/bin/vm_stat'], text=True, timeout=5)
++        page = int(re.search(r'page size of (\d+) bytes', vm).group(1))
++        fields = {k.strip(): int(v.strip().rstrip('.')) for k, v in
++                  (line.split(':', 1) for line in vm.splitlines()[1:] if ':' in line)}
++        available = sum(fields.get(k, 0) for k in
++                        ('Pages free', 'Pages inactive', 'Pages speculative')) * page
++        physical = int(subprocess.check_output(['/usr/sbin/sysctl', '-n', 'hw.memsize'],
++                                                text=True, timeout=5))
++        return dict(report, effective_cpus=cpus, available_memory_gib=available/1024**3,
++                    physical_memory_gib=physical/1024**3,
++                    memory_estimator='vm_stat free+inactive+speculative; compressed excluded',
++                    free_disk_gib=__import__('shutil').disk_usage(ROOT).free/1024**3)
+     quota = Path('/sys/fs/cgroup/cpu.max')
+     if quota.exists():
+         fields = quota.read_text().split()
+@@ -194,6 +216,8 @@
+ 
+ def require_capacity(runtime):
+     report = resource_snapshot()
++    if os.environ.get('AGOP_EXECUTION_SITE') == 'SERVER' and report['effective_cpus'] < 32:
++        raise RuntimeError('SERVER mode requires the authorized allocation of at least32 CPUs')
+     reserved = runtime.get('reserved_cpus', 0)
+     if isinstance(reserved, bool) or not isinstance(reserved, int) or reserved < 0:
+         raise ValueError('reserved_cpus must be a nonnegative integer')
+@@ -269,7 +293,8 @@
+ def child_environment():
+     env = os.environ.copy()
+     env.update({key: "1" for key in THREAD_VARIABLES})
+-    env.update(AGOP_EXECUTION_SITE="SERVER", PYTHONDONTWRITEBYTECODE="1", PYTHONUNBUFFERED="1")
++    env.update(AGOP_EXECUTION_SITE=require_server(), PYTHONDONTWRITEBYTECODE="1", PYTHONUNBUFFERED="1",
++               CUDA_VISIBLE_DEVICES="")
+     return env
+ 
+ 
+@@ -331,7 +356,11 @@
+ 
+ def execute(root, output, manifest, manifest_hash):
+     require_server()
++    require_review(root, manifest_hash)
++    require_priority()
+     resource_receipt = require_capacity(manifest["runtime"])
++    resource_receipt.update(execution_site=require_server(),
++                            effective_nice=os.nice(0), expected_child_nice='inherits parent >=10')
+     # Never resume, truncate or overwrite an existing attempt.
+     output.mkdir(exist_ok=False)
+     atomic_json(output / "RESOURCES.json", resource_receipt)
+@@ -512,10 +541,99 @@
+                 # Keep the still-unacknowledged child in final active state.
+                 child.stdout.close()
+                 child.stderr.close()
++        final_error = None
++        try:
++            validate(root, manifest_hash)
++        except Exception as exc:
++            final_error = exc
++            outcome, error = 'failed', f'Final source/config validation failed: {exc}'
+         save(outcome, error)
+         history.close()
+         for sig, handler in previous.items():
+             signal.signal(sig, handler)
++        if final_error is not None:
++            raise RuntimeError(error) from final_error
++
++
++def require_priority():
++    # Fail before reserving an attempt; children inherit the verified nice value.
++    if os.nice(0) < 10:
++        os.nice(10 - os.nice(0))
++    if os.nice(0) < 10:
++        raise RuntimeError('Reduced priority could not be established; do not launch')
++
++
++def validate_protocol(manifest, root=ROOT):
++    """This preparation admits exactly the declared pair, never a new sweep."""
++    runtime = manifest['runtime']
++    expected = dict(workers=2, reserved_cpus=2, min_available_memory_gib=8,
++                    min_free_disk_gib=5, global_seconds=2150, per_arm_seconds=1990,
++                    diagnostic_reserve_seconds=180)
++    if runtime != expected or manifest.get('dependency') is not None:
++        raise ValueError('Runtime must equal the frozen v9 two-arm bounds')
++    entries = manifest['configs']
++    if len(entries) != 2 or any(e['engine'] != 'swiglu' for e in entries):
++        raise ValueError('Only the frozen two SwiGLU arms are supported')
++    base = load_json(root / 'reference/v8_seed642.json')[0]
++    for entry, multiplier in zip(entries, (2, 4)):
++        cfg = entry['config'][0]
++        expected_args = dict(base['args'], t_max=100., L_stop=.8, max_steps=3000)
++        for key in ('n_pair', 'n_diag', 'n_z', 'n_x'):
++            expected_args[key] *= multiplier
++        if cfg['args'] != expected_args or cfg['rank'] != base['rank']:
++            raise ValueError('Matched-seed trajectory parameters changed')
++        if cfg['tag'] != entry['id']:
++            raise ValueError('Config tag must equal output id')
++
++
++def require_review(root, manifest_hash):
++    review = load_json(root / 'REVIEW.json')
++    if (review.get('status') != 'approved_for_execution' or
++            review.get('manifest_sha256') != manifest_hash or
++            not review.get('reviewer') or not review.get('checks')):
++        raise RuntimeError('Independent review of this exact manifest is required before execution')
++
++
++class attempt_lock:
++    """Kernel lock plus conservative restart journal; no automatic stale cleanup."""
++    def __init__(self, root, output):
++        self.root, self.output, self.stream = root, output, None
++
++    def __enter__(self):
++        import fcntl
++        self.stream = (self.root / '.trajectory.lock').open('a+')
++        try:
++            fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
++            self.stream.seek(0)
++            previous = self.stream.read().strip()
++            if previous:
++                record = json.loads(previous)
++                directory = self.root / record['execution_dir']
++                if directory.parent != self.root or not NAME.fullmatch(record['execution_dir']):
++                    raise RuntimeError('Invalid restart journal; independent inspection required')
++                status = load_json(directory / 'STATUS.json')
++                terminal = ('completed', 'failed', 'capped', 'interrupted', 'queue_timeout')
++                if status['status'] not in terminal or status['active']:
++                    raise RuntimeError('Prior attempt not acknowledged terminal; preserve and inspect it')
++                for child in status['completed']:
++                    try:
++                        os.killpg(child['pid'], 0)
++                    except ProcessLookupError:
++                        continue
++                    raise RuntimeError('Prior process group remains live or ambiguous; do not restart')
++            self.stream.seek(0)
++            self.stream.truncate()
++            json.dump(dict(execution_dir=self.output.name, launcher_pid=os.getpid(),
++                           started_utc=utc()), self.stream)
++            self.stream.flush()
++            os.fsync(self.stream.fileno())
++            return self
++        except BaseException:
++            self.stream.close()
++            raise
++
++    def __exit__(self, *exc):
++        self.stream.close()
+ 
+ 
+ def main(argv=None, root=ROOT):
+@@ -530,13 +648,19 @@
+     output = root / args.execution_dir
+     if output.exists():
+         raise FileExistsError(f"Execution directory already exists: {output}")
++    validate_protocol(manifest, root)
+     if args.dry_run:
+         print(json.dumps({"valid": True, "arms": len(manifest["configs"]),
+                           "runtime": manifest["runtime"], "dependency": manifest.get("dependency"),
+                           "manifest_sha256": manifest_hash, "model_evaluations": 0,
+                           "execution_output_created": False}))
+         return 0
+-    return execute(root, output, manifest, manifest_hash)
++    require_server()
++    require_review(root, manifest_hash)
++    require_capacity(manifest["runtime"])
++    require_priority()
++    with attempt_lock(root, output):
++        return execute(root, output, manifest, manifest_hash)
+ 
+ 
+ if __name__ == "__main__":

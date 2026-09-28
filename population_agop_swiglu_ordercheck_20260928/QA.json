@@ -1,0 +1,13 @@
+{
+  "status": "PASS_static_and_mocked_only",
+  "manifest_sha256": "39503531b9f5cd0df5fa51d421e48ce797c33bfdbfd3fe5f926511bf44e19a30",
+  "tests_passed": 21,
+  "model_evaluations": 0,
+  "training_launched": false,
+  "network_calls": 0,
+  "science_files_byteidentical_to_v8": 11,
+  "execution_directories_created": 0,
+  "independent_review": "pending",
+  "local_capacity_note": "Parent reports approximately6.16GiB available, below fixed8GiB gate; no training launch permitted unless a fresh check passes.",
+  "remote_note": "Prepared gates/mock tests only; Studio reported stopped; no staging/publication."
+}

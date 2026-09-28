@@ -1,0 +1,30 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "39503531b9f5cd0df5fa51d421e48ce797c33bfdbfd3fe5f926511bf44e19a30",
+  "reviewer": "codex/root independent of preparation agent",
+  "reviewed_utc": "2026-09-28T21:02:48.561961+00:00",
+  "checks": [
+    "All11 scientific files including frozen SOURCE_MANIFEST byte-identical to v8",
+    "Exact paired seed642 config changes: four quadrature orders plus declared observation horizon/loss stop/step cap",
+    "Runtime1990s perarm=1800training+180diagnostics+10cleanup;2150global,2singlethreadworkers",
+    "21 mocked scheduler tests rerun PASS; manifest dry-run PASS without execution output",
+    "Read launcher diff for explicit site/resource/nice gates, process-group ownership, old-data preservation, final source hashes and conservative restart journal",
+    "Original1%/5% same-checkpoint criterion retained; order2/order4 treated separately, not independent seeds"
+  ],
+  "science_files": 11,
+  "training_launched": false,
+  "local_capacity": {
+    "available_memory_gib": 4.773586273193359,
+    "required_available_gib": 8,
+    "physical_gib": 16,
+    "free_disk_gib": 6.294567108154297,
+    "admitted": false
+  },
+  "remote_status": "Studio stopped at last check; deployment pending",
+  "limitations": [
+    "No training or whole-trajectory validation yet",
+    "No measured worst-case runtime/peak-memory guarantee",
+    "No formal quadrature or population eigenspace error bound",
+    "One reused seed; not freshseed confirmation"
+  ]
+}
