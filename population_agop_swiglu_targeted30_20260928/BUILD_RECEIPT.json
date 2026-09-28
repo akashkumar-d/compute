@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "ce71d19034ba2c20b6d47b9a7ba78350cabb44ec9916c93dce028912e588681f",
+  "arms": 30,
+  "paired_cells": 15,
+  "source_changes": [
+    "PROTOCOL.md"
+  ],
+  "scientific_executables_unchanged": true,
+  "argument_changes_file": "CONFIG_COMPARISONS.json",
+  "training_started": false
+}
