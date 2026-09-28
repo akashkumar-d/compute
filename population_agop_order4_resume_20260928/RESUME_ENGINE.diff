@@ -1,0 +1,68 @@
+--- frozen_engine_run
++++ resume_engine_run
+@@ -1,20 +1,28 @@
+-def run(cfg):
++def run(cfg, checkpoint_state):
+     head_lr = validate_head_lr(cfg.get('head_lr', 1.0))
+     d, r, m = cfg["d"], len(cfg["c"]), cfg["m"]
+     f, brk = make_link(cfg["link"])
+     T = swpop.Teacher(f, np.asarray(cfg["c"], float), breaks=brk, n_x=cfg["n_x"])
+     E = swpop.SwiGLUPop(d, T, alpha=cfg["alpha"], intercept="refit", bias=True,
+                         n_pair=cfg["n_pair"], n_diag=cfg["n_diag"], n_z=cfg["n_z"])
+-    rng = np.random.default_rng(cfg["seed"])
+-    s = cfg["s"]
+-    P = rng.standard_normal((d + 1, m)) * s / math.sqrt(d + 1)
+-    V = rng.standard_normal((d + 1, m)) * s / math.sqrt(d + 1)
+-    a = rng.standard_normal(m) * s * cfg["head_ratio"]
+-    bal0 = a ** 2 - (V ** 2).sum(0)
+-    weighted_bal0 = a ** 2 / head_lr - (V ** 2).sum(0)
+-    t = 0.0; step = 0; rows = []; Lhist = []; step_history = []; snaps = []
+-    next_cp = 0.0; t0 = time.time(); last_dL = 1e-8; last_L = 1.0
+-    prefix_exits = {}; loss_low = float('inf'); loss_high = -float('inf'); previous = None
++    prior = checkpoint_state['raw']
++    control = checkpoint_state['control']
++    snaps = [(x[0],x[1].copy(),x[2].copy(),x[3].copy()) for x in checkpoint_state['snaps']]
++    P, V, a = [x.copy() for x in snaps[-1][1:]]
++    initial_P, initial_V, initial_a = snaps[0][1:]
++    s = cfg['s']
++    bal0 = initial_a ** 2 - (initial_V ** 2).sum(0)
++    weighted_bal0 = initial_a ** 2 / head_lr - (initial_V ** 2).sum(0)
++    t, step = prior['termination']['t'], prior['termination']['step']
++    rows = copy.deepcopy(prior['rows']); Lhist = copy.deepcopy(prior['Lhist'])
++    step_history = copy.deepcopy(prior['step_history'])
++    next_cp = control['next_cp']; t0 = time.time()
++    last_dL, last_L = control['last_dL'], control['last_L']
++    prefix_exits = copy.deepcopy(control['prefix_exits'])
++    loss_low, loss_high, previous = control['loss_low'], control['loss_high'], None
++    anchor_pending = True
++    if any(getattr(T,k) != prior[k] for k in ('gamma','EY','V')):
++        raise ValueError('Teacher normalization differs from the interrupted segment')
+     def checkpoint(P, V, a, ev, step, t, L, dt, role):
+         if rows and rows[-1]['step'] == step:
+             rows[-1].setdefault('checkpoint_roles', []).append(role)
+@@ -35,12 +43,24 @@
+     while True:
+         ev = E.evaluate(P, V, a, need_grad=True)
+         L = ev["L"] / T.V
+-        Lhist.append((t, L))
++        if not anchor_pending:
++            Lhist.append((t, L))
+         GP, GV, Ga = update_directions(ev, m, head_lr)
+         gn = np.sqrt((GP ** 2).sum(0) + (GV ** 2).sum(0) + Ga ** 2)
+         th = np.sqrt((P ** 2).sum(0) + (V ** 2).sum(0) + a ** 2)
+         rel = float((gn / np.maximum(th, 1e-300)).max())
+         dt = min(cfg["dt_max"], cfg["h"] / max(rel, 1e-300))
++        if anchor_pending:
++            anchor = prior['step_history'][-1]
++            if L != anchor['L'] or dt != anchor['dt'] or rel != anchor['rel']:
++                raise ValueError('Anchor reevaluation differs: require exact saved loss/dt/rel before advancing')
++            if _STOP_REQUESTED:
++                break
++            previous = (P, V, a, ev, step, t, L, dt)
++            P = P - dt * GP; V = V - dt * GV; a = a - dt * Ga
++            t += dt; step += 1
++            anchor_pending = False
++            continue
+         step_history.append(dict(step=step, t=t, L=L, dt=dt, rel=rel))
+         loss_low = min(loss_low, L); loss_high = max(loss_high, L)
+         crossed_names = []

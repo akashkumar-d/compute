@@ -1,0 +1,44 @@
+{
+  "status": "interrupted",
+  "updated_utc": "2026-09-28T22:08:27.552135+00:00",
+  "launcher_pid": 12729,
+  "compute_elapsed_seconds": 1948.675772773,
+  "queue_elapsed_seconds": 0.005308949999971446,
+  "global_seconds": 2150,
+  "dependency": null,
+  "pending": [],
+  "completed": [
+    {
+      "id": "v9_swiglu_h2_headslow_order2_r8_d64_m64_seed642",
+      "engine": "swiglu",
+      "pid": 12730,
+      "returncode": 0,
+      "elapsed_seconds": 405.742995178,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "reap_acknowledged": true,
+      "cleanup_status": "reaped",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v9_swiglu_h2_headslow_order4_r8_d64_m64_seed642",
+      "engine": "swiglu",
+      "pid": 12731,
+      "returncode": -9,
+      "elapsed_seconds": 1948.652248181,
+      "stop_reason": "launcher_signal",
+      "term_sent": true,
+      "kill_sent": true,
+      "reap_acknowledged": true,
+      "cleanup_status": "reaped",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": false
+    }
+  ],
+  "active": [],
+  "interrupted_signal": 15,
+  "error": null,
+  "scientific_success": "not_assessed"
+}

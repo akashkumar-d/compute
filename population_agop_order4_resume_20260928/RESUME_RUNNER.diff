@@ -1,0 +1,117 @@
+--- swiglu/code/run_one.py
++++ adapter/run_resume.py
+@@ -22,13 +22,14 @@
+ import time
+ import traceback
+ 
+-CODE = Path(__file__).resolve().parent
++CODE = Path(__file__).resolve().parent.parent / "swiglu/code"
++BUNDLE = CODE.parent.parent
++from resume_state import load_checkpoint, continuation_provenance, diagnostic_plan
+ 
+ 
+ def require_server():
+-    """This fork allows bounded user-authorized local runs."""
+-    if os.environ.get('AGOP_EXECUTION_SITE') not in ('LOCAL_AUTHORIZED','SERVER'):
+-        raise RuntimeError('Explicit LOCAL_AUTHORIZED or SERVER execution site required')
++    if not sys.platform.startswith('linux') or os.environ.get('AGOP_EXECUTION_SITE') != 'SERVER':
++        raise RuntimeError('Continuation is SERVER-only on Linux')
+ 
+ 
+ def validate_diagnostic_priority_fractions(value):
+@@ -161,7 +162,8 @@
+         os.environ[key] = '1'
+     import numpy as np
+     sys.path.insert(0, str(CODE / 'engine'))
+-    import swsmall_periodic as engine
++    sys.path.insert(0, str(CODE))
++    import resume_engine as engine
+     import diagnostics
+ 
+     jobs = json.loads(args.config.read_text())
+@@ -198,6 +200,8 @@
+               'source_manifest_sha256': sha(CODE / 'SOURCE_MANIFEST.json'),
+               'runner_sha256': sha(Path(__file__)),
+               'source_files_sha256': {str(p.relative_to(CODE)): sha(p) for p in sorted(CODE.rglob('*.py'))},
++              'adapter_files_sha256': {p.name:sha(p) for p in sorted(Path(__file__).parent.glob('*.py'))},
++              'input_files_sha256': {p.name:sha(p) for p in sorted((BUNDLE/'input').iterdir()) if p.is_file()},
+               'execution_site': os.environ['AGOP_EXECUTION_SITE'],
+               'execution_platform': platform.system(),
+               'diagnostic_schema_version': diagnostics.DIAGNOSTIC_SCHEMA_VERSION,
+@@ -217,14 +221,22 @@
+     signal.signal(signal.SIGTERM, lambda *_: stop('parent_SIGTERM'))
+     signal.signal(signal.SIGINT, lambda *_: stop('parent_SIGINT'))
+     engine._STOP_REQUESTED = False
+-    engine._LAST_PARTIAL_WALL = 0.
++    engine.frozen._LAST_PARTIAL_WALL = 0.
+     # This variable controls recording paths after imports are resolved. Route
+     # the unmodified engine's periodic partials into this job's output folder.
+     recording_anchor = output / '_recording_location'
+     recording_anchor.mkdir(exist_ok=True)
+-    engine._here = str(recording_anchor)
++    engine.frozen._here = str(recording_anchor)
+     raw_path = output / (job['tag'] + '.json')
+     cfg = dict(job['args'], out=str(raw_path), verbose=True)
++    source_raw = BUNDLE / 'input' / (job['tag'] + '.json')
++    source_snaps = BUNDLE / 'input' / (job['tag'] + '_snaps.npz')
++    checkpoint_state = load_checkpoint(source_raw, source_snaps, cfg)
++    atomic_json(output / 'RESUME_INPUT.json', dict(input_sha256=checkpoint_state['inputs'],
++        original_termination=checkpoint_state['raw']['termination'],
++        scheduler_control=checkpoint_state['control'],
++        source_result_completed=False,independent_seed=False,
++        adapter_files_sha256=report['adapter_files_sha256']), finite=True)
+     timer = threading.Timer(train_seconds, lambda: stop('training_wall_budget'))
+     timer.daemon = True
+     timer.start()
+@@ -233,7 +245,8 @@
+     raw = None
+     snaps_path = raw_path.with_name(raw_path.stem + '_snaps.npz')
+     try:
+-        raw = engine.run(cfg)
++        raw = engine.run(cfg, checkpoint_state)
++        raw['continuation'] = continuation_provenance(checkpoint_state, raw['termination'])
+         timer.cancel()
+         snapshots = raw.pop('_snaps')
+         atomic_json(raw_path, raw)
+@@ -265,6 +278,23 @@
+         atomic_json(result_path, report, finite=True)
+         return 0
+ 
++    # Preserve the old segment and identify the merged view explicitly.
++    raw['continuation'] = continuation_provenance(checkpoint_state, raw['termination'])
++    atomic_json(raw_path, raw)
++    segment = dict(raw)
++    anchor = checkpoint_state['raw']['termination']['step']
++    segment['Lhist'] = raw['Lhist'][anchor:]
++    segment['step_history'] = raw['step_history'][anchor:]
++    first_snapshot = len(checkpoint_state['raw']['rows']) - 1
++    segment['rows'] = raw['rows'][first_snapshot:]
++    segment['view'] = 'continuation_only_with_explicit_shared_anchor'
++    atomic_json(output / 'continuation_segment.json', segment)
++    with np.load(snaps_path, allow_pickle=False) as snapshots:
++        np.savez_compressed(output / 'continuation_segment_snaps.npz',
++            **{k:snapshots[k][first_snapshot:] for k in ('t','P','V','a')})
++    report['continuation'] = raw['continuation']
++    report['completion_kind'] = 'merged_segmented_continuation; original result not completed retroactively'
++    report['adapter_files_sha256'] = {p.name:sha(p) for p in sorted(Path(__file__).parent.glob('*.py'))}
+     report['termination'] = raw['termination']
+     report['raw_partial'] = raw.get('partial', False)
+     report['all_update_count'] = len(raw['Lhist'])
+@@ -285,6 +315,8 @@
+                      original_L=row['L'], original_A_mean=row['A'], original_A_min=row['Amin'],
+                      original_A_top=row['Atop'], original_top_r_gap_ratio=row['gap'])
+                 for i, row in enumerate(raw['rows'])]
++    old_diagnostics = json.loads((BUNDLE/'input/diagnostics_partial.json').read_text())
++    order, report['continuation_diagnostic_policy'] = diagnostic_plan(raw, old_diagnostics, computed, order)
+     E = diagnostics.make_engine(cfg)
+     with np.load(snaps_path) as snapshots:
+         for i in order:
+@@ -292,7 +324,7 @@
+                 break
+             try:
+                 metrics = diagnostics.metrics(E, snapshots['P'][i], snapshots['V'][i], snapshots['a'][i])
+-                computed[i].update(status='ok', **metrics)
++                computed[i].update(status='ok', diagnostic_segment='continuation_diagnostic_pass', **metrics)
+             except Exception as exc:
+                 computed[i].update(status='failed', error=repr(exc))
+             atomic_json(output / 'diagnostics_partial.json', {'tag': job['tag'], 'rows': computed}, finite=True)

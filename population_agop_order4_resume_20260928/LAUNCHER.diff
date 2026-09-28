@@ -1,0 +1,122 @@
+--- reference/headscale_launch.py
++++ launcher/launch.py
+@@ -1,6 +1,6 @@
+-"""Bounded v10 cubic head-scaling SERVER-only wrapper; dry-run is static.
+-
+-Fork of the reviewed rank scheduler; all pinned v8 scientific sources unchanged.
++"""Bounded exact-state order4 continuation; SERVER-only; dry-run is static.
++
++Fork of the reviewed scheduler; frozen scientific kernels and explicit resume adapter.
+ """
+ from __future__ import annotations
+ 
+@@ -24,7 +24,7 @@
+ CLEANUP_SECONDS = 10.0
+ ENGINES = {
+     "relu": ("code/scaling_run.py", "DONE.json"),
+-    "swiglu": ("swiglu/code/run_one.py", "result.json"),
++    "swiglu": ("adapter/run_resume.py", "result.json"),
+ }
+ THREAD_VARIABLES = (
+     "OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS",
+@@ -94,14 +94,14 @@
+     manifest = load_json(manifest_path)
+     runtime = manifest["runtime"]
+     workers = runtime["workers"]
+-    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 6:
+-        raise ValueError("runtime.workers must be an integer from 1 to 6")
++    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 1:
++        raise ValueError("runtime.workers must be an integer from 1 to 1")
+     total = positive_number(runtime["global_seconds"], "global_seconds")
+     arm = positive_number(runtime["per_arm_seconds"], "per_arm_seconds")
+     reserve = positive_number(runtime["diagnostic_reserve_seconds"],
+                               "diagnostic_reserve_seconds", allow_zero=True)
+-    if total > 2150 or arm > 1990 or arm > total or arm <= reserve + CLEANUP_SECONDS:
+-        raise ValueError("Require reserve + 10 < per_arm <= 1990 and per_arm <= global <= 2150 seconds")
++    if total > 2100 or arm > 1810 or arm > total or arm <= reserve + CLEANUP_SECONDS:
++        raise ValueError("Require reserve + 10 < per_arm <= 1810 and per_arm <= global <= 2100 seconds")
+     hashes = manifest["source_sha256"]
+     if not isinstance(hashes, dict) or not hashes:
+         raise ValueError("source_sha256 must be a nonempty relative-path/hash mapping")
+@@ -148,7 +148,7 @@
+ 
+ 
+ def require_server():
+-    """Head-scaling comparison has no local execution mode."""
++    """Exact-state continuation has no local execution mode."""
+     if sys.platform.startswith('linux') and os.environ.get('AGOP_EXECUTION_SITE') == 'SERVER':
+         return 'SERVER'
+     raise RuntimeError('Execution requires Linux and AGOP_EXECUTION_SITE=SERVER')
+@@ -547,38 +547,32 @@
+ 
+ 
+ def validate_protocol(manifest, root=ROOT):
+-    """Admit only the six unchanged, independently reviewed design configs."""
+-    expected = dict(workers=6, reserved_cpus=26, min_available_memory_gib=12,
+-                    min_free_disk_gib=5, global_seconds=2150, per_arm_seconds=1990,
+-                    diagnostic_reserve_seconds=180)
++    """One pinned order4 state continuation; no initialization/recipe restart."""
++    expected = dict(workers=1,reserved_cpus=31,min_available_memory_gib=8,
++                    min_free_disk_gib=5,global_seconds=2100,per_arm_seconds=1810,
++                    diagnostic_reserve_seconds=600)
+     if manifest['runtime'] != expected or manifest.get('dependency') is not None:
+-        raise ValueError('Runtime must equal the frozen six-arm head-scaling bounds')
+-    design = load_json(root / 'DESIGN.snapshot.json')
+-    if sha256(root / 'DESIGN.snapshot.json') != manifest['design_sha256']:
+-        raise ValueError('Design hash changed')
+-    if design['planned_arms'] != 6 or len(design['arms']) != 6 or len(manifest['configs']) != 6:
+-        raise ValueError('Exactly six independently designed arms are required')
+-    observed = set()
+-    for entry, arm in zip(manifest['configs'], design['arms']):
+-        if entry['id'] != arm['id'] or entry['config_path'] != arm['config_path']:
+-            raise ValueError('Arm identities and order must match the frozen design')
+-        path = relative_file(root, arm['config_path'])
+-        if sha256(path) != arm['config_sha256'] or entry['config'] != load_json(path):
+-            raise ValueError('Config differs from the independently reviewed original bytes')
+-        if entry['configuration_sha256'] != arm['config_sha256']:
+-            raise ValueError('Configuration hash differs from design')
+-        if (entry['engine'] != 'swiglu' or entry['student'] != 'swiglu' or
+-                entry['teacher'] != 'h3' or entry['rank'] != 8 or entry['q'] != arm['q'] or
+-                entry['seed'] != arm['seed'] or entry['cell'] != arm['cell']):
+-            raise ValueError('Manifest labels do not match the designed head-scaling arm')
+-        cfg = entry['config'][0]
+-        if cfg['tag'] != entry['id'] or cfg['cell'] != arm['cell']:
+-            raise ValueError('Output id/cell must match scientific configuration')
+-        observed.add((entry['q'], entry['seed']))
+-    if observed != {(q,seed) for q in (1.,.3,.1) for seed in (641,642)}:
+-        raise ValueError('Require the complete three-head-ratio by two-seed design')
+-    if manifest.get('criterion') != design['primary_criteria']:
+-        raise ValueError('Success criteria must remain exactly the reviewed design criteria')
++        raise ValueError('Runtime must equal the frozen one-worker continuation bounds')
++    if len(manifest['configs']) != 1:
++        raise ValueError('Exactly one order4 continuation is allowed')
++    entry = manifest['configs'][0]
++    original = load_json(root/'reference/v9_MANIFEST.json')
++    matches = [c for c in original['configs'] if c['id'] == entry['id']]
++    if len(matches) != 1 or matches[0]['config'] != entry['config']:
++        raise ValueError('Original scientific configuration must remain unchanged')
++    if entry['engine'] != 'swiglu' or entry['config'][0]['args']['n_pair'] != 64:
++        raise ValueError('Require the original order4 SwiGLU arm')
++    resume = manifest['resume_input']
++    raw_path = relative_file(root,resume['raw_path'])
++    snaps_path = relative_file(root,resume['snapshots_path'])
++    if sha256(raw_path) != resume['raw_sha256'] or sha256(snaps_path) != resume['snapshots_sha256']:
++        raise ValueError('Pinned interrupted input changed')
++    raw = load_json(raw_path)
++    if raw['termination'] != resume['termination'] or raw['termination']['reason'] != 'external_stop':
++        raise ValueError('Require the exact externally stopped source segment')
++    cfg = {k:v for k,v in raw['cfg'].items() if k not in ('out','verbose')}
++    if cfg != entry['config'][0]['args']:
++        raise ValueError('Resume input and original scientific recipe disagree')
+ 
+ 
+ def require_review(root, manifest_hash):
+@@ -596,7 +590,7 @@
+ 
+     def __enter__(self):
+         import fcntl
+-        self.stream = (self.root / '.headscale.lock').open('a+')
++        self.stream = (self.root / '.continuation.lock').open('a+')
+         try:
+             fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+             self.stream.seek(0)

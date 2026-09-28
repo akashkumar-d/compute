@@ -1,0 +1,97 @@
+{
+  "control": {
+    "next_cp": 40.53101837127362,
+    "last_dL": 0.05299185929986161,
+    "last_L": 0.9470081407001384,
+    "loss_low": 0.9462111101722706,
+    "loss_high": 0.9999996472183378,
+    "prefix_exits": {
+      "ratio_1pct": {
+        "ratio": 1.01,
+        "first_exit_step": 258,
+        "first_exit_t": 24.212633157959775,
+        "last_valid_step": 257,
+        "last_valid_t": 24.15547603820079,
+        "previous_state_saved": true,
+        "crossing_state_saved": true
+      },
+      "ratio_5pct": {
+        "ratio": 1.05,
+        "first_exit_step": 382,
+        "first_exit_t": 34.13176113298201,
+        "last_valid_step": 381,
+        "last_valid_t": 34.043813571944604,
+        "previous_state_saved": true,
+        "crossing_state_saved": true
+      }
+    },
+    "natural_grid_steps": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      19,
+      22,
+      25,
+      28,
+      32,
+      36,
+      41,
+      46,
+      52,
+      59,
+      67,
+      76,
+      87,
+      99,
+      113,
+      129,
+      147,
+      167,
+      188,
+      209,
+      230,
+      252,
+      275,
+      299,
+      321,
+      339,
+      358,
+      380,
+      404,
+      431
+    ],
+    "forced_terminal_extra": true
+  },
+  "inputs": {
+    "raw_sha256": "57bc4989169e7346bd672f6052ba22fb5e796f3fe3dc9838375b2daa4735f73e",
+    "snapshots_sha256": "dab24915dcb82bc4d57b7fcf33a6ba4f8466cfaaa284abd8e3af54fd3ca435ac"
+  },
+  "initial_array_sha256": {
+    "P": "42300967d6e84c4c98f1a0881e92a030e942bda2d6a4e1bc9fd6a4860b86ad34",
+    "V": "2ca0c9df9c58b3d3d95d27f64e9b146990dc9d8c72583e28951ae466a4828642",
+    "a": "cd553d16d0a186686ba210596b7cde45173d64aa46b4287703831e0589029bd1"
+  },
+  "final_array_sha256": {
+    "P": "d64293423c2da928bb6f59b8cad81d5fcff2852ff8a2ddc84a93935221d85d72",
+    "V": "55c2e6a217037d5dfad91ac01088804097d2651948b74bae7650159f13c7d695",
+    "a": "fac7a1da28b0adc843b57f30280a70b51c1054ff207b9bf63c0190ccf30c53ed"
+  },
+  "termination": {
+    "step": 437,
+    "t": 38.72140153556326,
+    "L": 0.9462111101722706,
+    "wall_seconds": 1801.2901377677917,
+    "reason": "external_stop"
+  },
+  "all_update_count": 438,
+  "snapshot_count": 45,
+  "model_evaluations": 0,
+  "exact_input_shape_and_time_checks": true
+}

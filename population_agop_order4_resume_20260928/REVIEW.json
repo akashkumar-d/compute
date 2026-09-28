@@ -1,0 +1,40 @@
+{
+  "status": "approved_for_execution",
+  "reviewer": "codex/weighted-update-review-v9",
+  "manifest_sha256": "42665f58da72f1f8ef1271fa0b499b152ee0fdddc5551a3a7e6f97a68f02fb73",
+  "scope": "Independent source/state/runtime review for parent-controlled server dispatch of this exact continuation manifest; no approval of scientific results.",
+  "checks": [
+    "All 32 manifest file hashes verified; all 11 frozen scientific files identical to the reviewed original validation bundle.",
+    "Pinned raw/snapshot inputs, 438 evaluated states, 45 finite snapshots, initial/final array hashes, and INPUT_CHECK control reconstruction agree.",
+    "Natural checkpoint scheduler restored from step 431; artificial external-stop checkpoint 437 retained only as an extra.",
+    "Anchor step 437 is reevaluated once; exact saved loss/dt/relative-rate equality required before original 437-to-438 update; no RNG or duplicate history anchor.",
+    "Original total step/time/loss limits and block-rate arithmetic unchanged; original balance references and prefix exits restored.",
+    "Eight independently authored synthetic/state tests pass, including exact interrupted-versus-uninterrupted trajectory and checkpoint-grid equivalence, no RNG, anchor/config/clock refusals, and diagnostic preservation/priority.",
+    "Twenty-four launcher mock tests independently pass; static dry-run passes without scientific imports, model evaluation, or output-attempt creation.",
+    "Twenty-nine successful old diagnostic rows retained with origins; exact missing order-4 states 358/380 first, then other missing old states, then new states; incomplete diagnostics remain explicit.",
+    "Adapter/input provenance is recorded before scientific execution; merged and continuation-only outputs identify shared anchor and preserve interrupted source status rather than inventing an original completion receipt.",
+    "Linux SERVER-only, one child worker, single-thread environment, no GPU, fail-closed verified priority gate, memory/disk/CPU admission, 1810-second arm and 2100-second global bounds, process-group cleanup, and exclusive attempt journal inspected."
+  ],
+  "validation": {
+    "manifest_files_verified": 32,
+    "unchanged_scientific_files": 11,
+    "synthetic_adapter_tests_passed": 8,
+    "launcher_mock_tests_passed": 24,
+    "dry_run_passed": true,
+    "scientific_model_evaluations": 0,
+    "training_performed": false,
+    "network_access_performed": false
+  },
+  "dispatch_requirements": [
+    "Root publishes and dispatches the exact reviewed manifest using the original numerical runtime.",
+    "Immediately before dispatch, root verifies other live task training workers are at most 29, so combined training stays at most 30 with two CPUs free; this cross-bundle check is external.",
+    "Server capacity, priority, journal, source hashes, and anchor-equality gates must actually pass; no bypass or tolerance fallback.",
+    "Any changed source, configuration, input, resource plan, or manifest requires renewed review."
+  ],
+  "limitations": [
+    "Mock tests establish adapter/control behavior, not scientific gradient accuracy or future convergence.",
+    "Exact anchor loss/dt/relative-rate equality is not a comparison against a saved gradient vector, because that vector was not stored.",
+    "Actual server resource/priority enforcement and scientific outcomes are not yet observed by this review.",
+    "Runtime caps may still produce censored training or incomplete diagnostics; all such outcomes must be retained."
+  ]
+}
