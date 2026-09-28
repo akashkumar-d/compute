@@ -1,0 +1,188 @@
+{
+  "planned_arms": 2,
+  "paired_reused_seeds": [
+    641,
+    642
+  ],
+  "fresh_confirmation": false,
+  "retain_all_outcomes": true,
+  "controls_are_completed_attempt2": true,
+  "only_scientific_change": {
+    "head_lr": [
+      0.01,
+      0.001
+    ]
+  },
+  "runtime": {
+    "workers": 2,
+    "reserved_cpus": 30,
+    "min_available_memory_gib": 12,
+    "min_free_disk_gib": 5,
+    "global_seconds": 2150,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "criterion": {
+    "initial_whole_update_loss_max_min": [
+      1.01,
+      1.05
+    ],
+    "same_checkpoint_minimum_alignment_gain": 0.5,
+    "same_checkpoint_refit_gain_over_variance": 0.1,
+    "later_same_run_loss_drop_over_variance": 0.1,
+    "relative_agop_guard": 1e-09,
+    "refit_sensitivity_or_solver_tolerance": 1e-07,
+    "no_threshold_changes": true,
+    "swiglu_refit": "four-cutoff sensitivity envelope; not formal oracle improvement bound",
+    "relu_refit": "bounded normalized readout; l2=32, l1=64sqrt(r); numerical solver lower difference",
+    "authoritative_aggregation": "Canonical summarize_coverage.py .1Var same-state criterion; do not use ReLU native legacy primary_event_rule/refit flags based on raw >1e-5."
+  },
+  "arms": [
+    {
+      "id": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 641,
+      "width": 64,
+      "control_id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+      "control_attempt": 2,
+      "recipe": "head_lr001_paired_followup",
+      "supplemental": false,
+      "config_path": "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed641.json",
+      "configuration_sha256": "6a07c00e904c607bc48d12173b607a2cd9cc7985fd8d112a8cfd44216f92dfd9",
+      "config": [
+        {
+          "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.001,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "changes_from_control": {
+        "tag": {
+          "before": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+          "after": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641"
+        },
+        "args.head_lr": {
+          "before": 0.01,
+          "after": 0.001
+        }
+      }
+    },
+    {
+      "id": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_relu_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 642,
+      "width": 64,
+      "control_id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+      "control_attempt": 2,
+      "recipe": "head_lr001_paired_followup",
+      "supplemental": false,
+      "config_path": "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed642.json",
+      "configuration_sha256": "3c6aaa7b525a5450aec9bd08073c4fe0b55f2706df6fa668755ff9062f76cdef",
+      "config": [
+        {
+          "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.001,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "changes_from_control": {
+        "tag": {
+          "before": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+          "after": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642"
+        },
+        "args.head_lr": {
+          "before": 0.01,
+          "after": 0.001
+        }
+      }
+    }
+  ]
+}

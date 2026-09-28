@@ -1,0 +1,271 @@
+{
+  "protocol_version": "v10_raw_relu_headrate_two_arm",
+  "created_utc": "2026-09-28T23:41:00.415684+00:00",
+  "total_arms": 2,
+  "paired_reused_seeds": [
+    641,
+    642
+  ],
+  "fresh_confirmation": false,
+  "retain_all_outcomes": true,
+  "original_manifest_sha256": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+  "scheduler_manifest_sha256": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+  "design_sha256": "bd4db4f814814de9500276cffabae3f947aa9f64f243bff8d3d072cd1f8b1cc2",
+  "control_provenance_sha256": "84d35574ac977f09ffec5217dbdc9d02c4c1381079037e4754b6956a844b36d4",
+  "runtime": {
+    "workers": 2,
+    "reserved_cpus": 30,
+    "min_available_memory_gib": 12,
+    "min_free_disk_gib": 5,
+    "global_seconds": 2150,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "dependency": null,
+  "criterion": {
+    "initial_whole_update_loss_max_min": [
+      1.01,
+      1.05
+    ],
+    "same_checkpoint_minimum_alignment_gain": 0.5,
+    "same_checkpoint_refit_gain_over_variance": 0.1,
+    "later_same_run_loss_drop_over_variance": 0.1,
+    "relative_agop_guard": 1e-09,
+    "refit_sensitivity_or_solver_tolerance": 1e-07,
+    "no_threshold_changes": true,
+    "swiglu_refit": "four-cutoff sensitivity envelope; not formal oracle improvement bound",
+    "relu_refit": "bounded normalized readout; l2=32, l1=64sqrt(r); numerical solver lower difference",
+    "authoritative_aggregation": "Canonical summarize_coverage.py .1Var same-state criterion; do not use ReLU native legacy primary_event_rule/refit flags based on raw >1e-5."
+  },
+  "configs": [
+    {
+      "id": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 641,
+      "width": 64,
+      "control_id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+      "control_attempt": 2,
+      "recipe": "head_lr001_paired_followup",
+      "supplemental": false,
+      "config_path": "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed641.json",
+      "configuration_sha256": "6a07c00e904c607bc48d12173b607a2cd9cc7985fd8d112a8cfd44216f92dfd9",
+      "config": [
+        {
+          "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.001,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "changes_from_control": {
+        "tag": {
+          "before": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+          "after": "v10_swiglu_relu_headlr001_r8_d64_m64_seed641"
+        },
+        "args.head_lr": {
+          "before": 0.01,
+          "after": 0.001
+        }
+      }
+    },
+    {
+      "id": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_relu_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 642,
+      "width": 64,
+      "control_id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+      "control_attempt": 2,
+      "recipe": "head_lr001_paired_followup",
+      "supplemental": false,
+      "config_path": "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed642.json",
+      "configuration_sha256": "3c6aaa7b525a5450aec9bd08073c4fe0b55f2706df6fa668755ff9062f76cdef",
+      "config": [
+        {
+          "tag": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.001,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "changes_from_control": {
+        "tag": {
+          "before": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+          "after": "v10_swiglu_relu_headlr001_r8_d64_m64_seed642"
+        },
+        "args.head_lr": {
+          "before": 0.01,
+          "after": 0.001
+        }
+      }
+    }
+  ],
+  "source_sha256": {
+    "CONTROL_PROVENANCE.json": "84d35574ac977f09ffec5217dbdc9d02c4c1381079037e4754b6956a844b36d4",
+    "DESIGN.json": "bd4db4f814814de9500276cffabae3f947aa9f64f243bff8d3d072cd1f8b1cc2",
+    "LAUNCHER.diff": "2126707df555fa80bc2017b31670ad9df3704c397b006d2544797f3dfb15a48f",
+    "PROTOCOL.md": "d253735a54088d261681ced387d16f2fa95838eb32db6b9cc9144ad864ad7cca",
+    "README.md": "de6f058dd82a2aac105dc4a1707d0163812056f8dd5acd0e3ea054e1c9c8f290",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed641.json": "6a07c00e904c607bc48d12173b607a2cd9cc7985fd8d112a8cfd44216f92dfd9",
+    "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed642.json": "3c6aaa7b525a5450aec9bd08073c4fe0b55f2706df6fa668755ff9062f76cdef",
+    "launcher/launch.py": "7b205840f43d06da0f586389295d3600331384b12cbf614c4fe7a42f2c4d483f",
+    "launcher/test_launch.py": "2056e8dd3312ae5e5a130a6c394c6aa516c6a0075d8ceb8c90d26cba60fb71b5",
+    "reference/EVIDENCE_AND_NEXT_STEP.md": "a5e399ded4685769c3de3c6b907e5c0789062ecc56ecbfeca73e637037a792ec",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed641/config.json": "f6700bad3228446a529ecf09d5422c590b5ed76feb825313504d33d2fe219399",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed641/launch.json": "dd76d3f45558f074666f83310d37214f33f4620e2ceb6fccf33b7df0837ca293",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed641/result.json": "9fd5570764f4192ab510973cd436e0de055427997b030e128fff9f4952af31ff",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed642/config.json": "7df7883ec4499e665ba1d2c678a4d463ba26bdbc78fe913904186f18acf8d817",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed642/launch.json": "446ebbcb40124b032d72440e7d230c48bd2918af444e198ce904450d3b63153e",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed642/result.json": "685c2dabb4e86a6391686f7c59633b3d02864ca6df7b90767cee68d0ffdb85cc",
+    "reference/rank_MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "reference/rank_REVIEW.json": "130bdc3fcc7d3fd3ef324b48c8dffa961b4d639bf531d6b3ad830d1721d5284b",
+    "reference/retry_FINAL_INVENTORY.json": "b61f4512d77005467d7100a91bbd59af5c1e3b841b22a608a9c5752937643f47",
+    "reference/retry_MANIFEST.snapshot.json": "0b5058b12bc75d0f86276b1dac65c2416a27b9de31ab917f06175a3238a4aac6",
+    "reference/retry_PROVENANCE.json": "eb0555b31439cbce9c1a0175c3647b80f27fe6d00d563709892d55b5e5bb17ce",
+    "reference/retry_TRANSFER_QA.json": "f53972d738465b2abf91f9a657d5255a4fc71277225708f7be05b59f77a8df88",
+    "reference/scheduler_MANIFEST.json": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+    "reference/scheduler_REVIEW.json": "1460dc64aa8f5fe2484404f663f4104e64e9142faf0d7e174a28f6f783932fd5",
+    "reference/scheduler_launch.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "reference/scheduler_test_launch.py": "4b20d1fc1002d0bf3a53cf811a56718ae8f235132f44356cdd563a3604e4b9cb",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "pinned_sources": {
+    "CONTROL_PROVENANCE.json": "84d35574ac977f09ffec5217dbdc9d02c4c1381079037e4754b6956a844b36d4",
+    "DESIGN.json": "bd4db4f814814de9500276cffabae3f947aa9f64f243bff8d3d072cd1f8b1cc2",
+    "LAUNCHER.diff": "2126707df555fa80bc2017b31670ad9df3704c397b006d2544797f3dfb15a48f",
+    "PROTOCOL.md": "d253735a54088d261681ced387d16f2fa95838eb32db6b9cc9144ad864ad7cca",
+    "README.md": "de6f058dd82a2aac105dc4a1707d0163812056f8dd5acd0e3ea054e1c9c8f290",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed641.json": "6a07c00e904c607bc48d12173b607a2cd9cc7985fd8d112a8cfd44216f92dfd9",
+    "configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed642.json": "3c6aaa7b525a5450aec9bd08073c4fe0b55f2706df6fa668755ff9062f76cdef",
+    "launcher/launch.py": "7b205840f43d06da0f586389295d3600331384b12cbf614c4fe7a42f2c4d483f",
+    "launcher/test_launch.py": "2056e8dd3312ae5e5a130a6c394c6aa516c6a0075d8ceb8c90d26cba60fb71b5",
+    "reference/EVIDENCE_AND_NEXT_STEP.md": "a5e399ded4685769c3de3c6b907e5c0789062ecc56ecbfeca73e637037a792ec",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed641/config.json": "f6700bad3228446a529ecf09d5422c590b5ed76feb825313504d33d2fe219399",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed641/launch.json": "dd76d3f45558f074666f83310d37214f33f4620e2ceb6fccf33b7df0837ca293",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed641/result.json": "9fd5570764f4192ab510973cd436e0de055427997b030e128fff9f4952af31ff",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed642/config.json": "7df7883ec4499e665ba1d2c678a4d463ba26bdbc78fe913904186f18acf8d817",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed642/launch.json": "446ebbcb40124b032d72440e7d230c48bd2918af444e198ce904450d3b63153e",
+    "reference/controls/v10_rank_swiglu_relu_r8_d64_m64_seed642/result.json": "685c2dabb4e86a6391686f7c59633b3d02864ca6df7b90767cee68d0ffdb85cc",
+    "reference/rank_MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "reference/rank_REVIEW.json": "130bdc3fcc7d3fd3ef324b48c8dffa961b4d639bf531d6b3ad830d1721d5284b",
+    "reference/retry_FINAL_INVENTORY.json": "b61f4512d77005467d7100a91bbd59af5c1e3b841b22a608a9c5752937643f47",
+    "reference/retry_MANIFEST.snapshot.json": "0b5058b12bc75d0f86276b1dac65c2416a27b9de31ab917f06175a3238a4aac6",
+    "reference/retry_PROVENANCE.json": "eb0555b31439cbce9c1a0175c3647b80f27fe6d00d563709892d55b5e5bb17ce",
+    "reference/retry_TRANSFER_QA.json": "f53972d738465b2abf91f9a657d5255a4fc71277225708f7be05b59f77a8df88",
+    "reference/scheduler_MANIFEST.json": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+    "reference/scheduler_REVIEW.json": "1460dc64aa8f5fe2484404f663f4104e64e9142faf0d7e174a28f6f783932fd5",
+    "reference/scheduler_launch.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "reference/scheduler_test_launch.py": "4b20d1fc1002d0bf3a53cf811a56718ae8f235132f44356cdd563a3604e4b9cb",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "publication_leaf": "population_agop_raw_relu_headslow_20260928",
+  "remote_run_name": "agop-rawrelu-headslow-20260928-a01",
+  "recommended_execution_directory": "execution_headslow_a01"
+}

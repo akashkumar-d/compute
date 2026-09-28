@@ -1,0 +1,57 @@
+{
+  "status": "approved_for_execution",
+  "reviewer": "codex/root, independent of preparer",
+  "reviewed_utc": "2026-09-28T23:43:55.849283+00:00",
+  "manifest_sha256": "39ebc788d76e31c0ff031a8a48d6319dd25db1f3dc559f6717aabe7185efeed2",
+  "checks": [
+    "Read complete launcher diff; only two-worker bound, exact paired-recipe gate and separate lock changed",
+    "Independently verified38frozen hashes and two configurations against original controls: only tag and head_lr .01 to .001 changed",
+    "AST comparison confirms execution/build_command/resource/cleanup functions unchanged; reviewed exact deadline and capacity arithmetic",
+    "Existing24mockchecks passed during preparation; no unnecessary rerun of unchanged tests",
+    "Fresh live capacity check confirms six other task workers; two additions within30 on32CPU",
+    "Both reused seeds and all outcomes retained; matched control source/config/initial-array hashes frozen"
+  ],
+  "capacity_evidence": {
+    "checked_utc": "2026-09-28T23:43:11.580030+00:00",
+    "affinity_cpus": 32,
+    "other_task_workers": [
+      {
+        "pid": 33227,
+        "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+      },
+      {
+        "pid": 33228,
+        "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+      },
+      {
+        "pid": 33229,
+        "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+      },
+      {
+        "pid": 33230,
+        "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+      },
+      {
+        "pid": 33231,
+        "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+      },
+      {
+        "pid": 33232,
+        "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+      }
+    ],
+    "other_task_worker_count": 6,
+    "two_additional_within30": true
+  },
+  "limits": {
+    "workers": 2,
+    "per_arm_seconds": 1990,
+    "global_seconds": 2150,
+    "min_available_memory_gib": 12
+  },
+  "limitations": [
+    "Exploratory numerical comparison, not fresh confirmation",
+    "Higher-order numerical checks required for promising new outcomes",
+    "No teacher, criterion, architecture or physical-horizon change"
+  ]
+}

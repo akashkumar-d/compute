@@ -1,0 +1,29 @@
+test_exact_requested_command_budgets (test_launch.HeadrateGatesTests.test_exact_requested_command_budgets) ... ok
+test_frozen_headrate_design_criteria_order_and_runtime (test_launch.HeadrateGatesTests.test_frozen_headrate_design_criteria_order_and_runtime) ... ok
+test_priority_failure_is_fatal_before_any_child (test_launch.HeadrateGatesTests.test_priority_failure_is_fatal_before_any_child) ... ok
+test_restart_refuses_uncertain_prior_and_retains_data (test_launch.HeadrateGatesTests.test_restart_refuses_uncertain_prior_and_retains_data) ... ok
+test_review_refuses_unreviewed_or_wrong_manifest (test_launch.HeadrateGatesTests.test_review_refuses_unreviewed_or_wrong_manifest) ... ok
+test_server_allocation_gate (test_launch.HeadrateGatesTests.test_server_allocation_gate) ... ok
+test_server_only_modes (test_launch.HeadrateGatesTests.test_server_only_modes) ... ok
+test_confirmed_engine_commands (test_launch.LauncherTests.test_confirmed_engine_commands) ... ok
+test_dry_run_is_static_and_creates_nothing (test_launch.LauncherTests.test_dry_run_is_static_and_creates_nothing) ... ok
+test_kill_without_reap_stays_active_in_final_receipt (test_launch.LauncherTests.test_kill_without_reap_stays_active_in_final_receipt) ... ok
+test_manifest_change_rejected (test_launch.LauncherTests.test_manifest_change_rejected) ... ok
+test_mocked_batch_and_logs (test_launch.LauncherTests.test_mocked_batch_and_logs) ... ok
+test_mocked_hard_caps_and_pending_preservation (test_launch.LauncherTests.test_mocked_hard_caps_and_pending_preservation) ... ok
+test_named_dependency_requires_exit_and_nonlive_pid (test_launch.LauncherTests.test_named_dependency_requires_exit_and_nonlive_pid) ... ok
+test_per_arm_cap_reaps_before_larger_global_cap (test_launch.LauncherTests.test_per_arm_cap_reaps_before_larger_global_cap) ... ok
+test_queue_does_not_spend_compute_budget (test_launch.LauncherTests.test_queue_does_not_spend_compute_budget) ... ok
+test_queue_timeout_is_separate_and_uses_30_second_waits (test_launch.LauncherTests.test_queue_timeout_is_separate_and_uses_30_second_waits) ... ok
+test_relative_paths_and_duplicate_ids_rejected (test_launch.LauncherTests.test_relative_paths_and_duplicate_ids_rejected) ... ok
+test_server_guard_and_existing_directory (test_launch.LauncherTests.test_server_guard_and_existing_directory) ... ok
+test_source_and_config_changes_rejected (test_launch.LauncherTests.test_source_and_config_changes_rejected) ... ok
+test_source_symlink_escape_rejected (test_launch.LauncherTests.test_source_symlink_escape_rejected) ... ok
+test_two_headrate_arms_share_one_bounded_wave (test_launch.LauncherTests.test_two_headrate_arms_share_one_bounded_wave) ... ok
+test_two_workers_reserve_30_slots_on_32cpu (test_launch.LauncherTests.test_two_workers_reserve_30_slots_on_32cpu) ... ok
+test_unsupported_engine_and_invalid_budget_rejected (test_launch.LauncherTests.test_unsupported_engine_and_invalid_budget_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.892s
+
+OK

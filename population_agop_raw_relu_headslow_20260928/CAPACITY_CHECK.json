@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-09-28T23:43:11.580030+00:00",
+  "affinity_cpus": 32,
+  "other_task_workers": [
+    {
+      "pid": 33227,
+      "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+    },
+    {
+      "pid": 33228,
+      "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+    },
+    {
+      "pid": 33229,
+      "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+    },
+    {
+      "pid": 33230,
+      "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+    },
+    {
+      "pid": 33231,
+      "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+    },
+    {
+      "pid": 33232,
+      "script": "/teamspace/studios/this_studio/compute/runs/agop-swiglu-headscale-20260928-a01/population_agop_swiglu_headscale_20260928/bundle/swiglu/code/run_one.py"
+    }
+  ],
+  "other_task_worker_count": 6,
+  "two_additional_within30": true
+}

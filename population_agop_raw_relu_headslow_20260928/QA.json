@@ -1,0 +1,83 @@
+{
+  "status": "prepared_pending_independent_review",
+  "created_utc": "2026-09-28T23:42:43.053985+00:00",
+  "manifest_sha256": "39ebc788d76e31c0ff031a8a48d6319dd25db1f3dc559f6717aabe7185efeed2",
+  "frozen_files_verified": 38,
+  "unchanged_scientific_support_files": 11,
+  "config_diffs": {
+    "v10_swiglu_relu_headlr001_r8_d64_m64_seed641": {
+      "outer": {
+        "tag": [
+          "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+          "v10_swiglu_relu_headlr001_r8_d64_m64_seed641"
+        ]
+      },
+      "args": {
+        "head_lr": [
+          0.01,
+          0.001
+        ]
+      }
+    },
+    "v10_swiglu_relu_headlr001_r8_d64_m64_seed642": {
+      "outer": {
+        "tag": [
+          "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+          "v10_swiglu_relu_headlr001_r8_d64_m64_seed642"
+        ]
+      },
+      "args": {
+        "head_lr": [
+          0.01,
+          0.001
+        ]
+      }
+    }
+  },
+  "completed_attempt2_controls": [
+    "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+    "v10_rank_swiglu_relu_r8_d64_m64_seed642"
+  ],
+  "control_receipts_exit_zero": true,
+  "initial_saved_control_hashes_frozen": true,
+  "new_initial_arrays_not_yet_generated_or_compared": true,
+  "changed_scheduler_functions": [
+    "validate",
+    "validate_protocol",
+    "attempt_lock"
+  ],
+  "execute_build_command_capacity_priority_child_environment_cleanup_unchanged": true,
+  "mock_checks_passed": 24,
+  "mock_elapsed_seconds": 0.892,
+  "dry_run": {
+    "valid": true,
+    "arms": 2,
+    "runtime": {
+      "workers": 2,
+      "reserved_cpus": 30,
+      "min_available_memory_gib": 12,
+      "min_free_disk_gib": 5,
+      "global_seconds": 2150,
+      "per_arm_seconds": 1990,
+      "diagnostic_reserve_seconds": 180
+    },
+    "dependency": null,
+    "manifest_sha256": "39ebc788d76e31c0ff031a8a48d6319dd25db1f3dc559f6717aabe7185efeed2",
+    "model_evaluations": 0,
+    "execution_output_created": false
+  },
+  "runtime": {
+    "workers": 2,
+    "reserved_cpus": 30,
+    "min_available_memory_gib": 12,
+    "min_free_disk_gib": 5,
+    "global_seconds": 2150,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "criteria_unchanged": true,
+  "model_evaluations": 0,
+  "training_launched": false,
+  "published": false,
+  "network_used": false
+}

@@ -1,0 +1,24 @@
+# Raw ReLU teacher / SwiGLU: two paired head-rate follow-ups
+
+The two fixed new runs use seeds 641 and 642 from the completed rank-8 controls. The only scientific change is `head_lr: 0.01 -> 0.001`; output tags are new. Both outcomes are retained, including caps, failures and numerical ambiguity. These are reused development seeds, not fresh confirmation. The original controls and every prior artifact remain intact.
+
+Unchanged settings: raw ReLU teacher, eight unit coefficients, d = 64, m = 64, Gaussian scale 0.1, head_ratio = 1, alpha = 1, profiled intercept and biases; h = 0.01, dt_max = 50, t_max = 3000, max_steps = 20000, variance-normalized L_stop = 0.01; quadrature orders 32/96/48/24; cp_ratio = 1.06, cp_min = 0.5, dl_ratio = 1.5 and diagnostic priority fractions 0.25/0.5/0.75. All scientific source bytes match the rank study.
+
+The controls are the exact completed `rank_retry_a02` attempts for `v10_rank_swiglu_relu_r8_d64_m64_seed641/642`, verified against the remote final inventory, execution snapshot, process receipts and original configuration hashes. They are completed processes with wall-censored trajectories (t = 1042.1841 / 951.0148), not horizon-complete experiments. `CONTROL_PROVENANCE.json` freezes their saved-data hashes and first P/V/a array hashes; no restart or generated control substitutes for these data. Initialization uses only the unchanged seed, dimensions, scale and head_ratio, so source inspection predicts identical initial arrays. Verify that equality from the new saved arrays after execution before interpreting paired comparisons. Compare trajectories on their common observed support and preserve each full per-run verdict.
+
+Apply both original initial whole-update max/min loss windows 1.01 and 1.05; require same-checkpoint screened minimum-direction gain >= 0.5 and refit-improvement lower envelope difference >= 0.1 Var(Y), followed by a later same-run raw loss decrease >= 0.1 Var(Y). Keep the original initial reference, screens and tolerances. Here E[Y²] = 1 but Var(Y) = 0.21116926371833117; the raw 0.1-variance threshold is 0.021116926371833117. Refit cutoff envelopes are numerical sensitivity samples, not formal oracle bounds. A promising result still needs block-weighted-update, AGOP and refit order checks; no order-4 validation of these raw-link trajectories is claimed.
+
+The profiled intercept fits the mean at every state. This test changes the head contribution to the continuous loss derivative by a factor of ten at a fixed state; it does not change initial features or remove the linear teacher component. The adaptive step also depends on the head-rate-weighted direction, so the new path is not a clock rescaling. Strong top-direction capture alone does not identify the aggregate linear direction or establish learning of every direction. Failure, concentration on a few directions, and a merely longer loss plateau remain plausible. This intervention is separate from the cubic coupled-head-scaling pilot.
+
+Runtime: two single-thread SERVER workers, 30 reserved CPU slots, at least 32 effective CPUs, 12 GiB available memory and 5 GiB free disk, inherited nice >= 10. Each arm has 1800 s soft training + 180 s soft diagnostics + 10 s cleanup = 1990 s; the global cap is 2150 s, including bounded setup after queue admission. Both arms share one wave. Work near the global deadline is shortened, not extended. The reviewed scheduler's cleanup, reaping, source checks, output refusal and persistent restart guard are unchanged. Reservations do not discover other jobs; the parent performs a fresh combined live-process capacity check before dispatch.
+
+The exact-manifest review gate remains pending. No automatic dispatch, training, model evaluation, publication, network action or manuscript edit is part of preparation. The parent owns independent review, publication and dispatch. Use a new leaf `population_agop_raw_relu_headslow_20260928`, job `agop-rawrelu-headslow-20260928-a01`, and output directory `execution_headslow_a01`.
+
+Static checks (no model import or execution):
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 launcher/launch.py --dry-run --execution-dir execution_headslow_a01
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s launcher -p test_launch.py -v
+```
+
+After independent review and a fresh capacity check, the parent can use the verified server interpreter with `AGOP_EXECUTION_SITE=SERVER` and `launcher/launch.py --execution-dir execution_headslow_a01`. Keep the controls' head_lr=0.01 and follow-ups' head_lr=0.001 recipes separate in any report despite their unchanged scientific cell label. Verify the saved initial P/V/a hashes before pairing outcomes.
