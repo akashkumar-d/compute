@@ -1,0 +1,148 @@
+--- reviewed_continuation_launch.py
++++ launch.py
+@@ -1,6 +1,6 @@
+-"""Bounded exact-state order4 continuation; SERVER-only; dry-run is static.
+-
+-Fork of the reviewed scheduler; frozen scientific kernels and explicit resume adapter.
++"""Bounded original-rank2 diagnostics completion; SERVER-only; dry-run is static.
++
++Fork of the reviewed scheduler; frozen scientific kernels and diagnostics-only adapter.
+ """
+ from __future__ import annotations
+ 
+@@ -22,10 +22,7 @@
+ ROOT = Path(__file__).resolve().parent.parent
+ QUEUE_POLL_SECONDS = 30.0
+ CLEANUP_SECONDS = 10.0
+-ENGINES = {
+-    "relu": ("code/scaling_run.py", "DONE.json"),
+-    "swiglu": ("adapter/run_resume.py", "result.json"),
+-}
++ENGINES = {"diagnostics": ("adapter/complete_diagnostics.py", "DIAGNOSTICS_COMPLETION.json")}
+ THREAD_VARIABLES = (
+     "OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS",
+     "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS",
+@@ -100,8 +97,8 @@
+     arm = positive_number(runtime["per_arm_seconds"], "per_arm_seconds")
+     reserve = positive_number(runtime["diagnostic_reserve_seconds"],
+                               "diagnostic_reserve_seconds", allow_zero=True)
+-    if total > 2100 or arm > 1810 or arm > total or arm <= reserve + CLEANUP_SECONDS:
+-        raise ValueError("Require reserve + 10 < per_arm <= 1810 and per_arm <= global <= 2100 seconds")
++    if total > 1300 or arm > 1300 or arm > total or arm <= reserve + CLEANUP_SECONDS:
++        raise ValueError("Require reserve + 10 < per_arm <= 1300 and per_arm <= global <= 1300 seconds")
+     hashes = manifest["source_sha256"]
+     if not isinstance(hashes, dict) or not hashes:
+         raise ValueError("source_sha256 must be a nonempty relative-path/hash mapping")
+@@ -132,11 +129,8 @@
+         cfg = load_json(path)
+         if canonical(cfg) != canonical(entry["config"]):
+             raise ValueError(f"Config JSON differs from manifest: {cid}")
+-        if engine == "relu" and not isinstance(cfg, dict):
+-            raise ValueError(f"ReLU config must be an object: {cid}")
+-        if engine == "swiglu" and not (
+-                isinstance(cfg, list) and len(cfg) == 1 and isinstance(cfg[0], dict)):
+-            raise ValueError(f"SwiGLU config must be a singleton list of objects: {cid}")
++        if not (isinstance(cfg, list) and len(cfg) == 1 and isinstance(cfg[0], dict)):
++            raise ValueError(f"Diagnostic config must be a singleton list of objects: {cid}")
+     dependency = manifest.get("dependency")
+     if dependency is not None:
+         if not isinstance(dependency, dict) or set(dependency) != {"run", "max_wait_seconds"}:
+@@ -148,7 +142,7 @@
+ 
+ 
+ def require_server():
+-    """Exact-state continuation has no local execution mode."""
++    """Diagnostics completion has no local execution mode."""
+     if sys.platform.startswith('linux') and os.environ.get('AGOP_EXECUTION_SITE') == 'SERVER':
+         return 'SERVER'
+     raise RuntimeError('Execution requires Linux and AGOP_EXECUTION_SITE=SERVER')
+@@ -263,21 +257,15 @@
+     source, _ = ENGINES[entry["engine"]]
+     common = [sys.executable, str(root / source), "--config", str(root / entry["config_path"])]
+     dest = str(output / "data" / entry["id"])
+-    if entry["engine"] == "relu":
+-        return common + ["--out", dest, "--max-seconds", str(usable),
+-                         "--diagnostic-reserve", str(reserve), "--deadline-utc", deadline_utc]
+-    if entry["engine"] == "swiglu":
+-        return common + ["--tag", entry["id"], "--out-dir", dest,
+-                         "--wall-seconds", str(usable - reserve),
+-                         "--diagnostic-seconds", str(reserve), "--deadline-utc", deadline_utc]
+-    raise ValueError(f"Unsupported engine: {entry['engine']}")
++    return common + ["--tag", entry["id"], "--out-dir", dest,
++                     "--diagnostic-seconds", str(min(reserve, usable)), "--deadline-utc", deadline_utc]
+ 
+ 
+ def child_environment():
+     env = os.environ.copy()
+     env.update({key: "1" for key in THREAD_VARIABLES})
+     env.update(AGOP_EXECUTION_SITE=require_server(), PYTHONDONTWRITEBYTECODE="1", PYTHONUNBUFFERED="1",
+-               CUDA_VISIBLE_DEVICES="")
++               CUDA_VISIBLE_DEVICES="", AGOP_DIAGNOSTIC_LAUNCHER_PID=str(os.getpid()))
+     return env
+ 
+ 
+@@ -547,32 +535,34 @@
+ 
+ 
+ def validate_protocol(manifest, root=ROOT):
+-    """One pinned order4 state continuation; no initialization/recipe restart."""
++    """One completed training trajectory, original grid, no new training."""
+     expected = dict(workers=1,reserved_cpus=31,min_available_memory_gib=8,
+-                    min_free_disk_gib=5,global_seconds=2100,per_arm_seconds=1810,
+-                    diagnostic_reserve_seconds=600)
++                    min_free_disk_gib=5,global_seconds=1300,per_arm_seconds=1300,
++                    diagnostic_reserve_seconds=1200)
+     if manifest['runtime'] != expected or manifest.get('dependency') is not None:
+-        raise ValueError('Runtime must equal the frozen one-worker continuation bounds')
++        raise ValueError('Runtime must equal the frozen one-worker diagnostics bounds')
+     if len(manifest['configs']) != 1:
+-        raise ValueError('Exactly one order4 continuation is allowed')
++        raise ValueError('Exactly one original-rank2 diagnostics case is allowed')
+     entry = manifest['configs'][0]
+-    original = load_json(root/'reference/v9_MANIFEST.json')
+-    matches = [c for c in original['configs'] if c['id'] == entry['id']]
+-    if len(matches) != 1 or matches[0]['config'] != entry['config']:
++    spec = load_json(root/'INPUT_SPEC.json')
++    original = spec['source_job_config']
++    if entry['id'] != spec['tag'] or entry['config'] != original['config']:
+         raise ValueError('Original scientific configuration must remain unchanged')
+-    if entry['engine'] != 'swiglu' or entry['config'][0]['args']['n_pair'] != 64:
+-        raise ValueError('Require the original order4 SwiGLU arm')
+-    resume = manifest['resume_input']
+-    raw_path = relative_file(root,resume['raw_path'])
+-    snaps_path = relative_file(root,resume['snapshots_path'])
+-    if sha256(raw_path) != resume['raw_sha256'] or sha256(snaps_path) != resume['snapshots_sha256']:
+-        raise ValueError('Pinned interrupted input changed')
+-    raw = load_json(raw_path)
+-    if raw['termination'] != resume['termination'] or raw['termination']['reason'] != 'external_stop':
+-        raise ValueError('Require the exact externally stopped source segment')
+-    cfg = {k:v for k,v in raw['cfg'].items() if k not in ('out','verbose')}
+-    if cfg != entry['config'][0]['args']:
+-        raise ValueError('Resume input and original scientific recipe disagree')
++    if entry['engine'] != 'diagnostics' or entry['config'][0]['args'] != spec['cfg']:
++        raise ValueError('Require the pinned diagnostic recipe')
++    cfg=spec['cfg']
++    if (spec['tag'] != 'v10_rank_swiglu_h2_r2_d64_m64_seed642' or
++            cfg['link'] != 'h2' or cfg['seed'] != 642 or cfg['c'] != [1.,1.] or
++            [cfg[k] for k in ('n_pair','n_diag','n_z','n_x')] != [32,96,48,24]):
++        raise ValueError('Only the reviewed original rank2 case is authorized')
++    if manifest['external_input_spec_sha256'] != sha256(root/'INPUT_SPEC.json'):
++        raise ValueError('Pinned external input specification changed')
++    if spec['termination']['reason'] != 'loss_stop' or spec['termination']['step'] != 1244:
++        raise ValueError('Require original completed training trajectory')
++    plan=load_json(root/'COMPLETION_PLAN.json')
++    if (plan['checkpoint_count'] != 269 or plan['preserved_success_indices'] != [0,25,26,30,31]
++            or len(plan['full_compute_order']) != 264 or plan['new_training_updates'] != 0):
++        raise ValueError('Require the original diagnostic grid and exact reuse set')
+ 
+ 
+ def require_review(root, manifest_hash):
+@@ -590,7 +580,7 @@
+ 
+     def __enter__(self):
+         import fcntl
+-        self.stream = (self.root / '.continuation.lock').open('a+')
++        self.stream = (self.root / '.diagnostics_completion.lock').open('a+')
+         try:
+             fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+             self.stream.seek(0)

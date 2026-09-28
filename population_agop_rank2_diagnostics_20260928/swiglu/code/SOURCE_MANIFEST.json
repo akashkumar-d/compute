@@ -1,0 +1,18 @@
+{
+  "status": "frozen_after_review",
+  "description": "Canonical14 raw-teacher extension; source review bundled at SOURCE_REVIEW.json",
+  "parent_source_manifest_sha256": "2ab1afe85fca778685bec3706fd611f095acfa6c3d8af16ecd3d24114d835a30",
+  "canonical_moment_export_sha256": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+  "files": {
+    "diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "diagnostic_priority_policy": "optional fractional in-prefix saved-update priority, original states/order preserved"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "prepared_pending_independent_review",
+  "manifest_sha256": "d1ff33ef7fb7e035b2d4df7e9e0df7118d213461e315067fa60cfe689065b763",
+  "local_model_evaluations": 0,
+  "local_training_updates": 0,
+  "launched": false,
+  "network_used": false,
+  "tests": {
+    "launcher_mock_tests": 24,
+    "adapter_synthetic_tests": 9
+  },
+  "unchanged_scientific_support_files": [
+    "swiglu/code/SOURCE_MANIFEST.json",
+    "swiglu/code/diagnostics.py",
+    "swiglu/code/engine/canonical_links.py",
+    "swiglu/code/engine/swpop.py",
+    "swiglu/code/engine/swsmall.py",
+    "swiglu/code/engine/swsmall_periodic.py",
+    "swiglu/code/engine/vlab.py",
+    "swiglu/code/requirements.txt",
+    "swiglu/code/run_one.py",
+    "swiglu/code/validate_breadth.py",
+    "swiglu/code/validate_diagnostic_order.py"
+  ],
+  "scientific_file_count": 11,
+  "input_file_hashes_match_remote_inventory": true,
+  "input_file_hashes": {
+    "result.json": {
+      "size": 101966,
+      "sha256": "9e948fe7874c334573b199dad4c89212485377fbc734ad26caa3be27baf758c7"
+    },
+    "diagnostics_partial.json": {
+      "size": 96143,
+      "sha256": "42e1105c78af4ded477ff66fa57fea3e5197da9596f7594e3e24e48888ceb5d2"
+    },
+    "launch.json": {
+      "size": 2146,
+      "sha256": "ff17522311510939ee5ab8f4946733f68a11807139191bb76e3e9c846c6e7bbf"
+    },
+    "v10_rank_swiglu_h2_r2_d64_m64_seed642.json": {
+      "size": 467668,
+      "sha256": "c264a6ab61a84238a41680614890f8a16e493057ae190ea9eedbcca5763e066a"
+    },
+    "v10_rank_swiglu_h2_r2_d64_m64_seed642_snaps.npz": {
+      "size": 17281934,
+      "sha256": "5ba7acaed4cda6f26a9713f79763ad32f294173b183776d70a7891c242538347"
+    }
+  },
+  "numpy_archive_headers_only": {
+    "t.npy": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        269
+      ]
+    },
+    "P.npy": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        269,
+        65,
+        64
+      ]
+    },
+    "V.npy": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        269,
+        65,
+        64
+      ]
+    },
+    "a.npy": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        269,
+        64
+      ]
+    }
+  },
+  "npz_bundled": false,
+  "initial_1pct_missing": 24,
+  "additional_initial_5pct_missing": 3,
+  "remaining_missing": 237,
+  "original_success_count": 5,
+  "planned_new_diagnostic_count": 264,
+  "total_original_grid": 269,
+  "total_pinned_bundle_files": 23
+}

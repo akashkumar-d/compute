@@ -1,0 +1,227 @@
+{
+  "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+  "remote_input_root": "/teamspace/studios/this_studio/compute/runs/agop-ranks-2to16-20260928-a01/population_agop_rank_sweep_20260928/bundle/execution_remote_a01/data/v10_rank_swiglu_h2_r2_d64_m64_seed642",
+  "files": {
+    "result.json": {
+      "size": 101966,
+      "sha256": "9e948fe7874c334573b199dad4c89212485377fbc734ad26caa3be27baf758c7"
+    },
+    "diagnostics_partial.json": {
+      "size": 96143,
+      "sha256": "42e1105c78af4ded477ff66fa57fea3e5197da9596f7594e3e24e48888ceb5d2"
+    },
+    "launch.json": {
+      "size": 2146,
+      "sha256": "ff17522311510939ee5ab8f4946733f68a11807139191bb76e3e9c846c6e7bbf"
+    },
+    "v10_rank_swiglu_h2_r2_d64_m64_seed642.json": {
+      "size": 467668,
+      "sha256": "c264a6ab61a84238a41680614890f8a16e493057ae190ea9eedbcca5763e066a"
+    },
+    "v10_rank_swiglu_h2_r2_d64_m64_seed642_snaps.npz": {
+      "size": 17281934,
+      "sha256": "5ba7acaed4cda6f26a9713f79763ad32f294173b183776d70a7891c242538347"
+    }
+  },
+  "raw_name": "v10_rank_swiglu_h2_r2_d64_m64_seed642.json",
+  "snapshots_name": "v10_rank_swiglu_h2_r2_d64_m64_seed642_snaps.npz",
+  "cfg": {
+    "link": "h2",
+    "alpha": 1.0,
+    "s": 0.1,
+    "head_ratio": 1.0,
+    "h": 0.01,
+    "dt_max": 50.0,
+    "t_max": 3000.0,
+    "L_stop": 0.01,
+    "max_steps": 20000,
+    "cp_ratio": 1.06,
+    "cp_min": 0.5,
+    "dl_ratio": 1.5,
+    "n_pair": 32,
+    "n_diag": 96,
+    "n_z": 48,
+    "n_x": 24,
+    "d": 64,
+    "m": 64,
+    "c": [
+      1.0,
+      1.0
+    ],
+    "seed": 642,
+    "head_lr": 0.01,
+    "diagnostic_priority_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  },
+  "source_files_sha256": {
+    "diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "source_manifest_sha256": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+  "termination": {
+    "step": 1244,
+    "t": 115.84333122304338,
+    "L": 0.009839304411645156,
+    "wall_seconds": 1087.650916814804,
+    "reason": "loss_stop"
+  },
+  "expected_checkpoint_count": 269,
+  "expected_success_indices": [
+    0,
+    25,
+    26,
+    30,
+    31
+  ],
+  "original_ratio_prefixes": {
+    "1.01": {
+      "ratio": 1.01,
+      "last_admissible_update": 222,
+      "checkpoint_index": 25,
+      "first_crossing_update": 223,
+      "crossing_checkpoint_index": 26,
+      "right_censored": false
+    },
+    "1.05": {
+      "ratio": 1.05,
+      "last_admissible_update": 296,
+      "checkpoint_index": 30,
+      "first_crossing_update": 297,
+      "crossing_checkpoint_index": 31,
+      "right_censored": false
+    }
+  },
+  "inventory_sha256": "1307b4d1c51cbb757e765db10bb29d366a8a20b03fc3a7a5df40c29e456177eb",
+  "inventory_relative_path": "goal_followup_v10/rank_sweep/REMOTE_INVENTORY_AFTER_STOP.json",
+  "local_recovery_relative_path": "goal_followup_v10/rank_sweep/recovered_after_stop/population_agop_rank_sweep_20260928/bundle/execution_remote_a01/data/v10_rank_swiglu_h2_r2_d64_m64_seed642",
+  "source_job_config": {
+    "id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+    "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+    "cell": "v10_rank_swiglu_h2_r2",
+    "engine": "swiglu",
+    "student": "swiglu",
+    "teacher": "h2",
+    "rank": 2,
+    "seed": 642,
+    "width": 64,
+    "supplemental": false,
+    "recipe": "rank_sweep_common_precision",
+    "parent_run_id": "swiglu_h2_r8_d64_m64_seed642",
+    "config_path": "configs/v10_rank_swiglu_h2_r2_d64_m64_seed642.json",
+    "configuration_sha256": "ab671b53b629243f669d9eaaf653f80fc2f41ca28aa067e8209097254f714173",
+    "config": [
+      {
+        "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+        "cell": "v10_rank_swiglu_h2_r2",
+        "rank": 2,
+        "args": {
+          "link": "h2",
+          "alpha": 1.0,
+          "s": 0.1,
+          "head_ratio": 1.0,
+          "h": 0.01,
+          "dt_max": 50.0,
+          "t_max": 3000.0,
+          "L_stop": 0.01,
+          "max_steps": 20000,
+          "cp_ratio": 1.06,
+          "cp_min": 0.5,
+          "dl_ratio": 1.5,
+          "n_pair": 32,
+          "n_diag": 96,
+          "n_z": 48,
+          "n_x": 24,
+          "d": 64,
+          "m": 64,
+          "c": [
+            1.0,
+            1.0
+          ],
+          "seed": 642,
+          "head_lr": 0.01,
+          "diagnostic_priority_fractions": [
+            0.25,
+            0.5,
+            0.75
+          ]
+        }
+      }
+    ],
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+    "base_template_sha256": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_h2_r2_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r2"
+        },
+        "rank": {
+          "before": 8,
+          "after": 2
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "target_variance": 1.0,
+    "normalized_loss_stop": 0.01
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "status": "approved_for_execution",
+  "reviewer": "codex/weighted-update-review-v9",
+  "manifest_sha256": "d1ff33ef7fb7e035b2d4df7e9e0df7118d213461e315067fa60cfe689065b763",
+  "scope": "Independent static, provenance and mock-runtime review for parent-controlled server dispatch of this exact diagnostics-only package. No scientific result is approved.",
+  "checks": [
+    "All 23 manifest file hashes verified; all 11 frozen scientific/support files and the case configuration are byte-identical to the original rank-sweep bundle.",
+    "All five locally recovered external inputs match pinned size/SHA-256 and the independently hashed remote inventory; original source/config/termination provenance agrees.",
+    "Snapshot archive headers contain exactly t(269), P/V(269,65,64), a(269,64), float64; no real snapshot model evaluation occurred.",
+    "Independent arithmetic over the original all-update history confirms initial 1% ends at update 222 with crossing 223 and initial 5% ends at 296 with crossing 297.",
+    "Exactly five successful original records at indices 0,25,26,30,31 (updates 0,222,223,296,297) are preserved verbatim; origin labels are separate.",
+    "Original 269-state grid is unchanged. Exactly 264 unique missing states are ordered by original loss-prefix membership: 24 initial-1%, 3 additional initial-5%, 237 remaining ascending. Selection does not inspect alignment/refit outcomes.",
+    "Adapter calls only the frozen diagnostic engine/metrics at multiplier 1, performs zero training updates, loads arrays with allow_pickle=False, makes arrays read-only, and does not write original inputs.",
+    "Server/review/source/config/input gates precede scientific imports; adapter records provenance before first evaluation and rechecks input/source hashes before complete status.",
+    "Derived DIAGNOSTICS_COMPLETION.json is atomically preserved in a fresh execution/data/case directory. No result.json is created; original completed training and incomplete original diagnostics remain distinct from completion-pass status.",
+    "One CPU worker with six thread variables set to 1 and GPUs hidden; Linux SERVER-only, exact scheduler-parent PID environment gate, verified niceness >=10, 32 effective CPUs, 8 GiB available memory and 5 GiB disk admission.",
+    "1200-second soft diagnostics and 1300-second hard case/global budget, own-process-group TERM/KILL cleanup, exclusive attempt lock, conservative restart journal, and refusal of existing outputs inspected.",
+    "24 scheduler mock tests and 9 adapter synthetic/mock tests independently passed; static dry-run passed without scientific model evaluation or execution-attempt creation."
+  ],
+  "validation": {
+    "manifest_files_verified": 23,
+    "unchanged_scientific_support_files": 11,
+    "external_input_files_verified": 5,
+    "external_inventory_sha256": "1307b4d1c51cbb757e765db10bb29d366a8a20b03fc3a7a5df40c29e456177eb",
+    "checkpoint_count": 269,
+    "preserved_success_count": 5,
+    "missing_states_to_diagnose": 264,
+    "priority_group_counts": [
+      24,
+      3,
+      237
+    ],
+    "launcher_mock_tests_passed": 24,
+    "adapter_synthetic_mock_tests_passed": 9,
+    "dry_run_passed": true,
+    "scientific_model_evaluations": 0,
+    "training_performed": false,
+    "network_access_performed": false
+  },
+  "dispatch_requirements": [
+    "Parent publishes and dispatches this exact manifest with the original numerical runtime; do not silently install or upgrade scientific dependencies.",
+    "Immediately before dispatch, parent verifies at most 29 other task workers so combined workers remain at most 30 with two CPUs free on the authorized 32-CPU Studio. This cross-bundle concurrency check is external to the scheduler.",
+    "Actual server resource/priority/source/input/review/journal gates must pass; any gate failure is a refusal, not permission to bypass it.",
+    "Any changed code, configuration, input, plan, resource bounds or manifest requires renewed review."
+  ],
+  "limitations": [
+    "Approval concerns safe, faithful execution of the diagnostic completion protocol, not a scientific success classification, convergence claim or numerical integration/eigenspace certificate.",
+    "No actual server resource or deadline enforcement has been observed in this local review; those require runtime receipts.",
+    "Mock tests use artificial arrays and an injected fake backend. The real recovered snapshot archive was checked by hash and header only.",
+    "A 1200-second diagnostic cap may leave missing/failed records; incomplete sidecars must stay explicitly incomplete and be analyzed as such.",
+    "A complete diagnostic sidecar still requires later result validation and any scientific qualification required by the study; it is the same original seed and trajectory, not an independent replication."
+  ]
+}
