@@ -11,11 +11,15 @@ def save(p,record):
     temporary.write_text(json.dumps(record,indent=2,allow_nan=False)+'\n')
     temporary.replace(p)
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--execution',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--tags',nargs='+',required=True);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--execution',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--tags',nargs='+',required=True);ap.add_argument('--selected-steps',type=Path);args=ap.parse_args()
     if args.out.exists():raise FileExistsError('Preserve previous audit')
     code=Path(__file__).resolve().parents[1]/'bundle/swiglu/code';sys.path.insert(0,str(code));import diagnostics
     args.out.parent.mkdir(parents=True,exist_ok=True)
     record=dict(scope='Declared initialization and terminal states of completed runs, not trajectory certification',no_training=True,selected_tags=args.tags,inputs={},rows=[],complete=False)
+    selection=json.loads(args.selected_steps.read_text()) if args.selected_steps else None
+    if selection is not None:
+        record.update(scope='Declared saved steps selected by the frozen first-qualified-candidate rule; not trajectory certification',selected_steps=selection)
+        record['inputs'][str(args.selected_steps)]=sha(args.selected_steps)
     started=time.monotonic()
     for tag in args.tags:
         folder=args.execution/'data'/tag;receipt=folder/'result.json';raw=folder/(tag+'.json');snap=folder/(tag+'_snaps.npz')
@@ -24,7 +28,8 @@ def main():
         data=json.loads(raw.read_text());cfg=data['cfg'];states=np.load(snap)
         assert len(states['t'])==len(data['rows'])
         engines={factor:diagnostics.make_engine(cfg,factor) for factor in [1,2]}
-        for i in sorted({0,len(states['t'])-1}):
+        indices=sorted({0,len(states['t'])-1}) if selection is None else [next(i for i,r in enumerate(data['rows']) if r['step']==step) for step in selection[tag]]
+        for i in indices:
             P,V,a=states['P'][i],states['V'][i],states['a'][i]
             assert np.isclose(states['t'][i],data['rows'][i]['t'],rtol=0,atol=1e-9)
             row=dict(tag=tag,index=i,step=data['rows'][i]['step'],time=float(states['t'][i]),orders={})
