@@ -5,6 +5,7 @@ is run detached on the same server, using the original pinned Python environment
 """
 from pathlib import Path
 import datetime as dt
+import ctypes
 import hashlib
 import json
 import os
@@ -17,6 +18,27 @@ ORIGINAL = Path('/teamspace/studios/this_studio/compute/runs/agop-dataprep-broad
 EXPECTED = '26e028550adbe5edf612ffcf0a7fce0bb2e6dd6256c9bbe6dece49ab942d59ab'
 HERE = Path(__file__).resolve().parent
 DEAD = {'Z', 'X'}
+
+def open_process_handle(pid):
+    """Use libc's pidfd API when the conda Python lacks the optional os wrapper."""
+    lib = ctypes.CDLL(None,use_errno=True)
+    fn = lib.pidfd_open
+    fn.argtypes = (ctypes.c_int,ctypes.c_uint)
+    fn.restype = ctypes.c_int
+    result = fn(pid,0)
+    if result < 0:
+        error = ctypes.get_errno()
+        raise OSError(error,os.strerror(error))
+    return result
+
+def send_process_signal(handle,sig):
+    lib = ctypes.CDLL(None,use_errno=True)
+    fn = lib.pidfd_send_signal
+    fn.argtypes = (ctypes.c_int,ctypes.c_int,ctypes.c_void_p,ctypes.c_uint)
+    fn.restype = ctypes.c_int
+    if fn(handle,sig,None,0) < 0:
+        error = ctypes.get_errno()
+        raise OSError(error,os.strerror(error))
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -116,7 +138,7 @@ def main():
                  dt.datetime.fromisoformat(read(ORIGINAL/'execution/PROVENANCE.json')['created_utc']).timestamp()) + m['runtime']['global_seconds']
     if cutoff - time.time() < 180:
         raise RuntimeError('Insufficient original budget for migration')
-    handle = os.pidfd_open(pid)
+    handle = open_process_handle(pid)
     confirmed = proc(pid)
     if confirmed is None or confirmed['start_ticks'] != identity['start_ticks']:
         os.close(handle)
@@ -128,7 +150,7 @@ def main():
                    original_boot_id=Path('/proc/sys/kernel/random/boot_id').read_text().strip(),
                    workers=16, phase='preparing', events=[], children=[])
     try:
-        signal.pidfd_send_signal(handle, signal.SIGSTOP)
+        send_process_signal(handle, signal.SIGSTOP)
         frozen = True
         for _ in range(100):
             s = proc(pid)
@@ -210,7 +232,7 @@ def main():
         # All scientific children/groups have exited; only this idle coordinator is killed.
         if pending:
             subprocess.run([sys.executable,str(lp),'--dry-run'],cwd=dest,check=True,capture_output=True,text=True)
-        signal.pidfd_send_signal(handle, signal.SIGKILL)
+        send_process_signal(handle, signal.SIGKILL)
         terminated = True
         for _ in range(100):
             state = proc(pid)
@@ -248,7 +270,7 @@ def main():
         raise
     finally:
         if frozen and not terminated:
-            signal.pidfd_send_signal(handle,signal.SIGCONT)
+            send_process_signal(handle,signal.SIGCONT)
         os.close(handle)
 
 if __name__ == '__main__':
