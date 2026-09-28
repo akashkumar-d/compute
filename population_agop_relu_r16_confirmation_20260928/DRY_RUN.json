@@ -1,0 +1,1 @@
+{"valid": true, "arms": 4, "runtime": {"workers": 4, "reserved_cpus": 28, "min_available_memory_gib": 16, "min_free_disk_gib": 5, "global_seconds": 2150, "per_arm_seconds": 1990, "diagnostic_reserve_seconds": 180}, "dependency": null, "manifest_sha256": "9592d84465a011e96407fcc114fb04e1ccfa876a48e973f223978bae45e9420d", "model_evaluations": 0, "execution_output_created": false}

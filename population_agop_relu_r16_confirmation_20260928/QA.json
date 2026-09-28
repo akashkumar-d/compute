@@ -1,0 +1,46 @@
+{
+  "status": "PASS_static_preparation_pending_independent_review",
+  "created_utc": "2026-09-28T22:58:14.170119+00:00",
+  "manifest_sha256": "9592d84465a011e96407fcc114fb04e1ccfa876a48e973f223978bae45e9420d",
+  "frozen_files_verified": 52,
+  "original_frozen_files_unchanged": 79,
+  "scientific_support_files_byte_identical": 33,
+  "scientific_python_files_byte_identical": 22,
+  "confirmation_seeds": [
+    9351,
+    9352,
+    9353,
+    9354
+  ],
+  "all_four_outcomes_required": true,
+  "development_seeds_separate": [
+    641,
+    642
+  ],
+  "configuration_changes_only": [
+    "id",
+    "seed"
+  ],
+  "seed_audit_files": 1827,
+  "seed_audit_seed_fields": 7492,
+  "seed_audit_collisions": 0,
+  "seed_audit_read_errors": 0,
+  "mock_tests_passed": 27,
+  "mock_test_log_sha256": "4b841ef7aeda9af4859752a8e2068160a7274cd9b3adc60449ec1587714db92d",
+  "runtime": {
+    "workers": 4,
+    "reserved_cpus": 28,
+    "min_available_memory_gib": 16,
+    "min_free_disk_gib": 5,
+    "global_seconds": 2150,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "unchanged_original_criteria": true,
+  "review_status": "pending_independent_runtime_review",
+  "execution_output_created": false,
+  "model_evaluations": 0,
+  "training_launched": false,
+  "publication_performed": false,
+  "network_used": false
+}

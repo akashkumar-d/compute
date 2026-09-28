@@ -1,0 +1,155 @@
+--- reference/rank_launch.py
++++ launcher/launch.py
+@@ -1,4 +1,4 @@
+-"""Bounded v10 rank-sweep SERVER-only wrapper; dry-run is static.
++"""Bounded fresh-seed ReLU rank16 confirmation SERVER-only wrapper; dry-run is static.
+ 
+ Fork of the reviewed v9 scheduler; pinned v7/v8 scientific sources unchanged.
+ """
+@@ -94,14 +94,14 @@
+     manifest = load_json(manifest_path)
+     runtime = manifest["runtime"]
+     workers = runtime["workers"]
+-    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 28:
+-        raise ValueError("runtime.workers must be an integer from 1 to 28")
++    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 4:
++        raise ValueError("runtime.workers must be an integer from 1 to 4")
+     total = positive_number(runtime["global_seconds"], "global_seconds")
+     arm = positive_number(runtime["per_arm_seconds"], "per_arm_seconds")
+     reserve = positive_number(runtime["diagnostic_reserve_seconds"],
+                               "diagnostic_reserve_seconds", allow_zero=True)
+-    if total > 3600 or arm > 1990 or arm > total or arm <= reserve + CLEANUP_SECONDS:
+-        raise ValueError("Require reserve + 10 < per_arm <= 1990 and per_arm <= global <= 3600 seconds")
++    if total > 2150 or arm > 1990 or arm > total or arm <= reserve + CLEANUP_SECONDS:
++        raise ValueError("Require reserve + 10 < per_arm <= 1990 and per_arm <= global <= 2150 seconds")
+     hashes = manifest["source_sha256"]
+     if not isinstance(hashes, dict) or not hashes:
+         raise ValueError("source_sha256 must be a nonempty relative-path/hash mapping")
+@@ -148,7 +148,7 @@
+ 
+ 
+ def require_server():
+-    """Rank sweep has no local execution mode."""
++    """Fresh-seed confirmation has no local execution mode."""
+     if sys.platform.startswith('linux') and os.environ.get('AGOP_EXECUTION_SITE') == 'SERVER':
+         return 'SERVER'
+     raise RuntimeError('Execution requires Linux and AGOP_EXECUTION_SITE=SERVER')
+@@ -547,44 +547,62 @@
+ 
+ 
+ def validate_protocol(manifest, root=ROOT):
+-    """Only the independently designed, fixed rank sweep is admitted."""
+-    expected = dict(workers=28, reserved_cpus=4, min_available_memory_gib=32,
+-                    min_free_disk_gib=10, global_seconds=3600, per_arm_seconds=1990,
+-                    diagnostic_reserve_seconds=180)
+-    if manifest['runtime'] != expected or manifest.get('dependency') is not None:
+-        raise ValueError('Runtime must equal the frozen v10 rank-sweep bounds')
+-    design = load_json(root / 'DESIGN.snapshot.json')
+-    if sha256(root / 'DESIGN.snapshot.json') != manifest['design_sha256']:
+-        raise ValueError('Design hash changed')
+-    jobs = {j['id']: j for j in design['jobs']}
+-    if len(jobs) != 32 or len(manifest['configs']) != 32:
+-        raise ValueError('Exactly32 designed arms are required')
+-    expected_cells = {(student, teacher, rank, seed)
+-                      for student in ('relu','swiglu') for teacher in ('h2','relu')
+-                      for rank in (2,4,8,16) for seed in (641,642)}
+-    observed = set()
+-    queue = []
+-    for entry in manifest['configs']:
+-        job = jobs.get(entry['id'])
+-        if job is None or entry['config'] != job['planned_config']:
+-            raise ValueError('Config differs from the independently declared design')
+-        key = (job['student'],job['teacher'],job['rank'],job['seed'])
+-        if key in observed or key not in expected_cells:
+-            raise ValueError('Missing or duplicate designed rank/teacher/student/seed')
+-        observed.add(key)
+-        if (entry['engine'] != job['student'] or entry['student'] != job['student'] or
+-                entry['teacher'] != job['teacher'] or entry['rank'] != job['rank'] or
+-                entry['seed'] != job['seed']):
+-            raise ValueError('Manifest labels do not match designed config')
+-        cfg = entry['config']
+-        tag = cfg['id'] if entry['engine'] == 'relu' else cfg[0]['tag']
+-        if tag != entry['id']:
+-            raise ValueError('Output id must match scientific config id')
+-        queue.append((-job['rank'],job['seed'],job['teacher'],job['student']))
+-    if observed != expected_cells or queue != sorted(queue):
+-        raise ValueError('Require descending rank then seed/teacher/student interleaved queue')
+-    if manifest.get('criterion') != design['criterion']:
+-        raise ValueError('Success criteria must remain exactly the design criteria')
++    """Only the fixed four unused seeds and the exact development recipe."""
++    expected_runtime=dict(workers=4,reserved_cpus=28,min_available_memory_gib=16,
++                          min_free_disk_gib=5,global_seconds=2150,per_arm_seconds=1990,
++                          diagnostic_reserve_seconds=180)
++    if manifest['runtime'] != expected_runtime or manifest.get('dependency') is not None:
++        raise ValueError('Runtime must equal the frozen four-seed confirmation bounds')
++    original_path=relative_file(root,'reference/rank_MANIFEST.json')
++    original_hash='e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01'
++    if sha256(original_path) != original_hash or manifest.get('original_manifest_sha256') != original_hash:
++        raise ValueError('Original development manifest changed')
++    original=load_json(original_path)
++    design_path=relative_file(root,'DESIGN.json')
++    if sha256(design_path) != manifest['design_sha256']:
++        raise ValueError('Confirmation design changed')
++    design=load_json(design_path)
++    audit_path=relative_file(root,'FRESH_SEED_AUDIT.json')
++    if sha256(audit_path) != '0a23e772ad85a8c136c3a92ceae6f34d9bfe0d6b02650eb4e6a10c7a1de04e65' or manifest.get('fresh_seed_audit_sha256') != '0a23e772ad85a8c136c3a92ceae6f34d9bfe0d6b02650eb4e6a10c7a1de04e65':
++        raise ValueError('Precreation seed audit changed')
++    audit=load_json(audit_path)
++    seeds=[9351,9352,9353,9354]
++    if audit['seeds'] != seeds or audit['collisions'] or audit['read_errors']:
++        raise ValueError('Fresh-seed audit does not establish the fixed unused range')
++    if (manifest.get('total_arms') != 4 or manifest.get('confirmation_denominator') != 4 or
++            manifest.get('independent_seed_count') != 4 or manifest.get('paired_reused_seeds') != [] or
++            manifest.get('development_seeds_not_pooled') != [641,642] or
++            design.get('seeds') != seeds or design.get('keep_all_outcomes') is not True):
++        raise ValueError('Keep all four confirmation outcomes separate from development seeds')
++    bases=[e for e in original['configs'] if e['engine']=='relu' and e['teacher']=='h2' and e['rank']==16]
++    if len(bases)!=2 or sorted(e['seed'] for e in bases)!=[641,642]:
++        raise ValueError('Expected the two frozen development recipe references')
++    base=next(e for e in bases if e['seed']==641)
++    science=lambda c:{k:v for k,v in c.items() if k not in ('id','seed')}
++    if science(bases[0]['config']) != science(bases[1]['config']):
++        raise ValueError('Development recipes differ beyond ID and seed')
++    if len(manifest['configs'])!=4 or len(design['jobs'])!=4:
++        raise ValueError('Exactly four confirmation arms are required')
++    for actual,planned,seed in zip(manifest['configs'],design['jobs'],seeds):
++        cid=f'v10_confirm_relu_h2_r16_d64_m256_seed{seed}'
++        cfg=dict(base['config'],id=cid,seed=seed)
++        if (actual['id']!=cid or actual['seed']!=seed or actual['config']!=cfg or
++                actual!=planned or actual['config_path']!=f'configs/{cid}.json' or
++                actual['engine']!='relu' or actual['student']!='relu' or actual['teacher']!='h2' or
++                actual['rank']!=16 or actual['width']!=256 or actual['cell']!='v10_confirm_relu_h2_r16'):
++            raise ValueError('Only ID and fresh seed may differ from the exact development recipe')
++        path=relative_file(root,actual['config_path'])
++        if sha256(path)!=actual['configuration_sha256'] or load_json(path)!=cfg:
++            raise ValueError('Confirmation configuration file differs from its frozen object/hash')
++        changes={k:{'before':base['config'].get(k),'after':v} for k,v in cfg.items() if base['config'].get(k)!=v}
++        if set(changes)!={'id','seed'} or actual['changes_from_development']!=changes:
++            raise ValueError('Confirmation changes must be exactly ID and seed')
++    for name,digest in original['source_sha256'].items():
++        if name.startswith(('code/','diagnostics/','swiglu/')) or name in ('TEACHERS.json','requirements.txt'):
++            if manifest['source_sha256'].get(name)!=digest or sha256(relative_file(root,name))!=digest:
++                raise ValueError('Scientific source changed from the development bundle')
++    if manifest['criterion']!=original['criterion'] or design['criterion']!=original['criterion']:
++        raise ValueError('Original 1percent/5percent same-state success criteria must remain unchanged')
+ 
+ 
+ def require_review(root, manifest_hash):
+@@ -602,7 +620,7 @@
+ 
+     def __enter__(self):
+         import fcntl
+-        self.stream = (self.root / '.rank_sweep.lock').open('a+')
++        self.stream = (self.root / '.relu_rank16_confirmation.lock').open('a+')
+         try:
+             fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+             self.stream.seek(0)
+@@ -640,7 +658,7 @@
+ def main(argv=None, root=ROOT):
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--dry-run", action="store_true")
+-    parser.add_argument("--execution-dir", default="execution",
++    parser.add_argument("--execution-dir", default="execution_confirmation_a01",
+                         help="New single directory name inside the bundle; existing names are refused")
+     args = parser.parse_args(argv)
+     if not NAME.fullmatch(args.execution_dir):

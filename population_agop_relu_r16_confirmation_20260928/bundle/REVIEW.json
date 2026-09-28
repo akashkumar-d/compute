@@ -1,0 +1,19 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "9592d84465a011e96407fcc114fb04e1ccfa876a48e973f223978bae45e9420d",
+  "reviewer": "codex/root independent of preparer",
+  "reviewed_utc": "2026-09-28T23:00:38.084133+00:00",
+  "checks": [
+    "Read launcher diff; four-worker resource plan and exact fixed fresh-seed cohort enforced",
+    "Independently verified52frozen hashes andfour ID/seed-only configurations against originalrank16h2recipe",
+    "Precreation fresh-seed collision audit1827files/7492seedfields,zero collisions/errors; allfour retained; development641/642 separate",
+    "Independently reran27mocktests PASS in0.719s; staticdryrun PASS withoutmodelimports oroutputcreation",
+    "Current capacity receipt checks other task training<=26; four newworkers keepcombined<=30",
+    "32CPU/16GiB/5GiB and nice10 enforced by runtime;1990sarm/2150sglobal; preservefailed/capped attempts"
+  ],
+  "limitations": [
+    "Execution approval only; no confirmed scientific result",
+    "Fourfreshseeds are a small confirmation cohort, not a high-probability theorem",
+    "All outcomes must be retained; no selecting favorable seeds or pooling developmental outcomes asfresh"
+  ]
+}
