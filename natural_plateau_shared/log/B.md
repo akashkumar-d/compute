@@ -14,3 +14,5 @@ Format: `UTC time | B | task | status | key numbers | where`
 2026-09-27T18:14Z | B | T18 | started | Claude Code cloud container (Intel Xeon 2.1 GHz, 4 cores, numpy 2.4.6), 4 workers | results/T18_depth4_seeds_rate045_040/
 2026-09-27T20:39Z | B | T18 | done | in all 4 runs the longest flat window is the post-grokking tail (24.5k–28.0k steps from about 92k–95k, 0.42·log p, test 1.00); grokking on seeds 1 / 2: last layer 0.4× 22.3k→36.5k / 23.9k→39.1k with CE range 4.5% / 5.1% (drift +1.5% / −3.0%); 0.45× 23.1k→38.5k / 24.8k→39.0k with CE range 7.1% / 8.0% (drift −6.7% / −8.0%) | results/T18_depth4_seeds_rate045_040/SUMMARY.md
 2026-09-27T20:39Z | B | queue | halted | T18 done and pushed; the user paused B's work on this folder, so B takes no new tasks until the user resumes it | -
+2026-09-28T02:19Z | B | queue | resumed | user's request: T22, then T23 once A lists it, then T24 | TASKS.md
+2026-09-28T02:19Z | B | T22 | started | Claude Code cloud container (Intel Xeon 2.1 GHz, 4 cores, numpy 2.4.6), 4 workers, 1 BLAS thread each | results/T22_depth5_recipe_stage1/
