@@ -1,0 +1,39 @@
+{
+  "status": "frozen_after_local_numerical_verification",
+  "created_utc": "2026-09-28T16:18:10.176177+00:00",
+  "training_executed": false,
+  "canonical_json_sha256": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+  "files_sha256": {
+    "ADAPTER_REVIEW.md": "cd5b173b0e82eb822a90b4dfd02bd182ab9184b7860d64f31478a50295575491",
+    "population.py": "82dc6d9849531a208ae31ebaf4c95fb23bf0d56af5e9e60fd52f7b6dbb69ea34",
+    "verify_adapter.py": "ac69ee83d7ca27445b5284367c7f78337e5b9fed1ff46af6f3374b3bd6f0294e",
+    "teachers_smooth.py": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695",
+    "teachers_extra.py": "108d0352b0ff1d72c85ba725622dbe932b2de138d9d4ffbeb144f9c0c327330e",
+    "frames.py": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+    "DIAGNOSTIC_PRIORITY_VERIFICATION.json": "2f2e13655f82f839ddc236c2329f726dbc5705fbebced24f05269dfbfb41d458",
+    "VERIFICATION_SUMMARY.json": "1215251ab8829c0a4eb89b655c4055e812495f40934c30309b08d3e753a67679",
+    "refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "scaling_run.py": "a818f58a4a64774815c3fd029ad296db3f8ad2168a2cfde0e90dfa29e17950cf",
+    "verify_diagnostic_priority.py": "607bd86ca36040732dbb7683598acd3bf870f6f7399156da3d7d80a7a681b211",
+    "VERIFICATION.json": "f35155e528ea23f8a8164982f6f5f82b2557565a59a5aa7d37f73b5e74cbff73",
+    "ORDER12_STRESS.json": "1007ece3a8431f6eb4625b5cab1bbf6cf7b3c9e897ef351efc9a889de4b7c93f",
+    "teachers_product.py": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1",
+    "diagnostic_priority.py": "6427ad389b6ec1955c58ba27e21a9eb9dbcc69843149f72cc6ab96a2157bff1d",
+    "canonical14_moments.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d"
+  },
+  "unchanged_old_kernel_files": [
+    "frames.py",
+    "refit.py",
+    "teachers_product.py"
+  ],
+  "baseline_source_sha256": {
+    "population.py": "9484bd3cc0e520912a7747dfc40632c162ff8156c5f0dd51441aec717b5e3c56",
+    "teachers_extra.py": "a0e9d12035a3fbe57b47a292a95a88fbe19355aee8b06ffa75e55a99a4b7cb11",
+    "frames.py": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+    "refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "scaling_run.py": "a82dff3add4a2a80ea1dcd9c105bba876986b5175907ed4b28d5666d6e4624f6",
+    "teachers_product.py": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1"
+  },
+  "runner_all14_config_validation": "PASS",
+  "invalid_fraction_configs_rejected": 6
+}

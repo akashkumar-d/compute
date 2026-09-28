@@ -1,0 +1,851 @@
+{
+  "canonical14": [
+    {
+      "name": "h2",
+      "q": "(z^2-1)/sqrt(2)",
+      "dq": "sqrt(2)*z",
+      "convention": "even polynomial; first Hermite degree2",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 4,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          128
+        ],
+        "stages": [
+          "v3",
+          "v4"
+        ],
+        "intercepts": [
+          "none"
+        ],
+        "run_keys": [
+          "v3/relu_h2_r8_d64_m128_s1e-4_seed501",
+          "v3/relu_h2_r8_d64_m128_s1e-4_seed502",
+          "v4/relu_h2_raw_r8_d64_m128_s0p01_seed501",
+          "v4/relu_h2_raw_r8_d64_m128_s0p01_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      },
+      "swiglu": {
+        "executed_arms": 8,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          64
+        ],
+        "stages": [
+          "v3",
+          "v4",
+          "v5",
+          "v6_swi_headrate"
+        ],
+        "intercepts": [
+          "profiled"
+        ],
+        "run_keys": [
+          "v3/swiglu_he2_r8_d64_m64_s0p05_seed501",
+          "v3/swiglu_he2_r8_d64_m64_s0p05_seed502",
+          "v4/swiglu_he2_r8_d64_m64_s0p1_seed501",
+          "v4/swiglu_he2_r8_d64_m64_s0p1_seed502",
+          "v5/swiglu_h2_smallhead_r8_d64_seed501",
+          "v5/swiglu_h2_smallhead_r8_d64_seed502",
+          "v6_swi_headrate/swiglu_he2_headlr0p01_r8_d64_m64_seed501",
+          "v6_swi_headrate/swiglu_he2_headlr0p01_r8_d64_m64_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      }
+    },
+    {
+      "name": "h3",
+      "q": "(z^3-3*z)/sqrt(6)",
+      "dq": "(3*z^2-3)/sqrt(6)",
+      "convention": "odd polynomial; first Hermite degree3",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 15,
+        "distinct_seeds": [
+          501,
+          502,
+          611,
+          612,
+          613
+        ],
+        "widths": [
+          128,
+          256
+        ],
+        "stages": [
+          "v3",
+          "v4",
+          "v4_h05",
+          "v5",
+          "v6_relu"
+        ],
+        "intercepts": [
+          "none"
+        ],
+        "run_keys": [
+          "v3/relu_h3_r8_d64_m128_s1e-4_seed501",
+          "v3/relu_h3_r8_d64_m128_s1e-4_seed502",
+          "v4/relu_h3_raw_r8_d64_m128_s0p01_seed501",
+          "v4/relu_h3_raw_r8_d64_m128_s0p01_seed502",
+          "v4_h05/relu_h3_raw_r8_d64_m128_s0p01_h0p5_seed501",
+          "v4_h05/relu_h3_raw_r8_d64_m128_s0p01_h0p5_seed502",
+          "v5/relu_h3_scale0p1_r8_d64_seed501",
+          "v5/relu_h3_scale0p1_r8_d64_seed502",
+          "v5/relu_h3_width256_r8_d64_seed501",
+          "v5/relu_h3_width256_r8_d64_seed502",
+          "v6_relu/h3_confirm_r8_d64_m256_seed611",
+          "v6_relu/h3_confirm_r8_d64_m256_seed612",
+          "v6_relu/h3_confirm_r8_d64_m256_seed613",
+          "v6_relu/h3_smaller_scale_r8_d64_m256_seed501",
+          "v6_relu/h3_smaller_scale_r8_d64_m256_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      },
+      "swiglu": {
+        "executed_arms": 16,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          64,
+          128
+        ],
+        "stages": [
+          "v3",
+          "v4",
+          "v5",
+          "v6_swi_headrate",
+          "v6_swi_horizon"
+        ],
+        "intercepts": [
+          "profiled"
+        ],
+        "run_keys": [
+          "v3/swiglu_he3_r8_d64_m64_s0p05_seed501",
+          "v3/swiglu_he3_r8_d64_m64_s0p05_seed502",
+          "v4/swiglu_he3_r8_d64_m64_s0p1_seed501",
+          "v4/swiglu_he3_r8_d64_m64_s0p1_seed502",
+          "v5/swiglu_h3_smallhead_r8_d64_seed501",
+          "v5/swiglu_h3_smallhead_r8_d64_seed502",
+          "v5/swiglu_h3_scale0p3_r8_d64_seed501",
+          "v5/swiglu_h3_scale0p3_r8_d64_seed502",
+          "v5/swiglu_h3_width128_r8_d64_seed501",
+          "v5/swiglu_h3_width128_r8_d64_seed502",
+          "v6_swi_horizon/swiglu_he3_horizon_r8_d64_m64_seed501",
+          "v6_swi_horizon/swiglu_he3_horizon_r8_d64_m64_seed502",
+          "v6_swi_horizon/swiglu_he3_horizon_r8_d64_m128_seed501",
+          "v6_swi_horizon/swiglu_he3_horizon_r8_d64_m128_seed502",
+          "v6_swi_headrate/swiglu_he3_headlr0p01_r8_d64_m64_seed501",
+          "v6_swi_headrate/swiglu_he3_headlr0p01_r8_d64_m64_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      }
+    },
+    {
+      "name": "h4",
+      "q": "(z^4-6*z^2+3)/sqrt(24)",
+      "dq": "(4*z^3-12*z)/sqrt(24)",
+      "convention": "even polynomial; first Hermite degree4",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 2,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          128
+        ],
+        "stages": [
+          "v3"
+        ],
+        "intercepts": [
+          "none"
+        ],
+        "run_keys": [
+          "v3/relu_h4_r8_d64_m128_s1e-4_seed501",
+          "v3/relu_h4_r8_d64_m128_s1e-4_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "h5",
+      "q": "(z^5-10*z^3+15*z)/sqrt(120)",
+      "dq": "(5*z^4-30*z^2+15)/sqrt(120)",
+      "convention": "odd polynomial; first Hermite degree5",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "relu",
+      "q": "max(z,0)",
+      "dq": "1(z>0); value at0 immaterial under Gaussian law",
+      "convention": "nonsmooth positive homogeneous",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 10,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          128
+        ],
+        "stages": [
+          "v3",
+          "v4",
+          "v5"
+        ],
+        "intercepts": [
+          "none",
+          "profiled"
+        ],
+        "run_keys": [
+          "v3/relu_relu_r8_d64_m128_s1e-4_seed501",
+          "v3/relu_relu_r8_d64_m128_s1e-4_seed502",
+          "v4/relu_relu_raw_r8_d64_m128_s0p01_seed501",
+          "v4/relu_relu_raw_r8_d64_m128_s0p01_seed502",
+          "v4/relu_relu_profile_r8_d64_m128_s0p01_seed501",
+          "v4/relu_relu_profile_r8_d64_m128_s0p01_seed502",
+          "v5/relu_raw_scale0p1_r8_d64_seed501",
+          "v5/relu_raw_scale0p1_r8_d64_seed502",
+          "v5/relu_meanfit_scale0p1_r8_d64_seed501",
+          "v5/relu_meanfit_scale0p1_r8_d64_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      },
+      "swiglu": {
+        "executed_arms": 2,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          64
+        ],
+        "stages": [
+          "v3"
+        ],
+        "intercepts": [
+          "profiled"
+        ],
+        "run_keys": [
+          "v3/swiglu_relu_r8_d64_m64_s0p05_seed501",
+          "v3/swiglu_relu_r8_d64_m64_s0p05_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      }
+    },
+    {
+      "name": "leaky_relu",
+      "q": "z if z>=0 else 0.1*z",
+      "dq": "1 if z>0 else0.1; value at0 immaterial",
+      "convention": "negative slope0.1; no trainable parameter",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "abs",
+      "q": "abs(z)",
+      "dq": "sign(z); value at0 immaterial",
+      "convention": "even nonsmooth",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 8,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          128
+        ],
+        "stages": [
+          "v3",
+          "v4",
+          "v4_h05"
+        ],
+        "intercepts": [
+          "none",
+          "profiled"
+        ],
+        "run_keys": [
+          "v3/relu_abs_r8_d64_m128_s1e-4_seed501",
+          "v3/relu_abs_r8_d64_m128_s1e-4_seed502",
+          "v4/relu_abs_raw_r8_d64_m128_s0p01_seed501",
+          "v4/relu_abs_raw_r8_d64_m128_s0p01_seed502",
+          "v4/relu_abs_profile_r8_d64_m128_s0p01_seed501",
+          "v4/relu_abs_profile_r8_d64_m128_s0p01_seed502",
+          "v4_h05/relu_abs_profile_r8_d64_m128_s0p01_h0p5_seed501",
+          "v4_h05/relu_abs_profile_r8_d64_m128_s0p01_h0p5_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      }
+    },
+    {
+      "name": "softplus",
+      "q": "log(1+exp(z)), evaluated as logaddexp(0,z)",
+      "dq": "sigmoid(z)",
+      "convention": "beta1, no centering/offset",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "silu",
+      "q": "z*sigmoid(z)",
+      "dq": "sigmoid(z)+z*sigmoid(z)*(1-sigmoid(z))",
+      "convention": "beta1",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "gelu",
+      "q": "z*Phi(z)",
+      "dq": "Phi(z)+z*phi(z)",
+      "convention": "exact Gaussian CDF; no tanh approximation",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "sine",
+      "q": "sin(z)",
+      "dq": "cos(z)",
+      "convention": "frequency1",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 2,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          128
+        ],
+        "stages": [
+          "v3"
+        ],
+        "intercepts": [
+          "none"
+        ],
+        "run_keys": [
+          "v3/relu_sine_r8_d64_m128_s1e-4_seed501",
+          "v3/relu_sine_r8_d64_m128_s1e-4_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "tanh",
+      "q": "tanh(z)",
+      "dq": "1-tanh(z)^2",
+      "convention": "scale1",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 2,
+        "distinct_seeds": [
+          501,
+          502
+        ],
+        "widths": [
+          64
+        ],
+        "stages": [
+          "v3"
+        ],
+        "intercepts": [
+          "profiled"
+        ],
+        "run_keys": [
+          "v3/swiglu_tanh_r8_d64_m64_s0p05_seed501",
+          "v3/swiglu_tanh_r8_d64_m64_s0p05_seed502"
+        ],
+        "prior_cli_supported": true,
+        "implementation_gap": false
+      }
+    },
+    {
+      "name": "erf",
+      "q": "erf(z)",
+      "dq": "2/sqrt(pi)*exp(-z^2)",
+      "convention": "scale1, not erf(z/sqrt(2))",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    },
+    {
+      "name": "gaussian_rbf",
+      "q": "exp(-z^2/2)",
+      "dq": "-z*exp(-z^2/2)",
+      "convention": "bandwidth1, centered at0",
+      "teacher": "Y=sum_{i=1}^r q(X_i)/sqrt(r*(s2+(r-1)*mu^2)), X~N(0,I_d), mu=E[q(Z)], s2=E[q(Z)^2]",
+      "coefficient_vector": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "teacher_directions": "first8 standard basis vectors in R64",
+      "raw_target_second_moment": 1,
+      "normalization_not_centered": true,
+      "relu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      },
+      "swiglu": {
+        "executed_arms": 0,
+        "distinct_seeds": [],
+        "widths": [],
+        "stages": [],
+        "intercepts": [],
+        "run_keys": [],
+        "prior_cli_supported": false,
+        "implementation_gap": true
+      }
+    }
+  ],
+  "normalization": {
+    "raw_second_moment": 1,
+    "formula": "D=s2+(r-1)*mu^2; EY=sqrt(r)*mu/sqrt(D); Var(Y)=(s2-mu^2)/D",
+    "intercept": "Old ReLU raw baseline1 or explicit profiled controls baseline Var(Y). SwiGLU output intercept profiled. Proposed breadth14 profiles both students for every link; this changes ReLU algorithm even for meanzero targets, so historical raw successes are context, not exact recipe replications.",
+    "raw_units": "ReLU stored loss/refit are raw MSE; SwiGLU stored loss/refit are divided by Var(Y), multiply once.",
+    "swi_quadrature": "Current source uses piecewise Gauss-Legendre teacher moments on[-10,10], breaks[-6,-4,-2,0,2,4,6] plus link kinks, n_x12; finite-order approximations, new links need independent moment/derivative/doubled-order checks."
+  },
+  "parent_frozen_screen": {
+    "frozen_by_root": true,
+    "teachers": [
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "relu",
+      "leaky_relu",
+      "abs",
+      "softplus",
+      "silu",
+      "gelu",
+      "sine",
+      "tanh",
+      "erf",
+      "gaussian_rbf"
+    ],
+    "seeds": [
+      641,
+      642
+    ],
+    "r": 8,
+    "d": 64,
+    "arms": 56,
+    "cpu_workers": 4,
+    "threads_per_worker": 1,
+    "total_cap_seconds_per_arm": 210,
+    "diagnostic_allowance_seconds": 50,
+    "cleanup_allowance_seconds": 10,
+    "nominal_waves": 14,
+    "nominal_worst_arm_wave_seconds": 2940,
+    "global_compute_cap_seconds": 3300,
+    "wall_budget_note": "3300s leaves300s for setup in a1h wall ceiling; setup/QA must be bounded separately. Per-armcaps do not guarantee observed scientific horizons or complete diagnostics.",
+    "relu": {
+      "m": 256,
+      "scale": 0.01,
+      "h": 0.5,
+      "profile_intercept": true
+    },
+    "swiglu": {
+      "m": 64,
+      "s": 0.1,
+      "head_ratio": 1,
+      "head_lr": 0.01,
+      "h": 0.01,
+      "profile_intercept": true
+    },
+    "interpretation": "Two-seed exploratory, horizon-limited screening; neither confirmation nor a matched student comparison (widths, parameterizations and rates differ).",
+    "conditional_allocations": {
+      "if_verified_4_CPU": {
+        "workers": 4,
+        "arms": 56,
+        "waves": 14,
+        "per_arm_seconds": 210,
+        "training_seconds": 150,
+        "diagnostic_seconds": 50,
+        "cleanup_seconds": 10,
+        "nominal_waves_seconds": 2940,
+        "global_compute_seconds": 3300,
+        "setup_max_seconds": 120
+      },
+      "if_verified_64_CPU_and_sufficient_memory": {
+        "workers": 60,
+        "reserved_cores": 4,
+        "arms": 60,
+        "canonical_arms": 56,
+        "pure_sine_extra_arms": 4,
+        "waves": 1,
+        "threads_per_worker": 1,
+        "per_arm_seconds": 900,
+        "training_seconds": 710,
+        "diagnostic_seconds": 180,
+        "cleanup_seconds": 10,
+        "nominal_wave_seconds": 900,
+        "global_compute_seconds": 1200,
+        "setup_max_seconds": 120,
+        "conditions": [
+          "Remote lrun CPU count must report at least64 allocated cores",
+          "At least24GiB available memory and10GiB disk required by parent guard;60-worker peak memory remains unbenchmarked",
+          "Bound setup and shutdown; no dependency waits within compute budget"
+        ],
+        "caveat": "Prior4-worker throughput does not validate60-worker memory bandwidth/CPU contention.180s diagnostics is less than250-261s observed for74-75 m256 states."
+      }
+    },
+    "preferred_allocation": "64CPU only if actually allocated and memory/admission checks pass;4CPU fallback remains a separately stated shorter screen",
+    "training_allowance_seconds_4CPU": 150
+  }
+}

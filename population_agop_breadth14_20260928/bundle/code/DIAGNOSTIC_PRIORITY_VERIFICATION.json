@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "legacy_omitted_and_empty_fraction_comparisons": 300,
+  "all_saved_states_retained": true,
+  "boundary_first": true,
+  "tie_break": "earlier",
+  "no_training_executed": true
+}

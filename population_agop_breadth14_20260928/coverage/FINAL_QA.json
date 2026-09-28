@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-09-28T16:21:36.128046+00:00",
+  "checks": {
+    "84_unique_declared": true,
+    "all84_raw_configs_match": true,
+    "all_r8_d64": true,
+    "56_relu_28_swiglu": true,
+    "14_distinct_canonical": true,
+    "canonical_coverage6_and4": true,
+    "all_hashed_inputs_unchanged": true,
+    "all_markdown_local_links_exist": true,
+    "zero_model_calls": true,
+    "zero_network": true,
+    "zero_prior_data_writes": true,
+    "latest64allocation60workers": true
+  },
+  "all_passed": true,
+  "input_files": 260,
+  "completion_cautions": {
+    "explicit_exit0": 80,
+    "stale_v3_terminal_exit_receipts": 4,
+    "full_diagnostic_complete": 72,
+    "full_diagnostic_incomplete": 12
+  },
+  "outputs_sha256": {
+    "LINK_DEFINITIONS.json": "95f41fbd2efc55d1cc12f951921177528bf54befb4996acd5985d9c9071a8810",
+    "coverage.json": "7606d3b806e4ffba6dd789fce7b970721f7ae10c1b979c8ac04ad72988aff115",
+    "coverage.md": "0bbffd0a74ea6d1ceecb338529814f2a2b3544c4cb5c371cd400038ddab4b2c6",
+    "write_report.py": "6ad93ee259b6e1e02f190dc67eb6c175daeefeeae3b04afa89701d8cc0c6b352",
+    "inventory.py": "f86a23581487691d5cda63a7433c4b857d2ad77f2dd3a797ee7122dd99d18b93"
+  }
+}

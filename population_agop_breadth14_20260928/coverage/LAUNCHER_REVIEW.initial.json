@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-09-28T16:22:55.158232+00:00",
+  "scope": "Independent saved-source launcher/build/protocol review; no science imports/model evaluation/training/network; mock process tests only",
+  "approved_for_bounded_screen": false,
+  "approval_scope_note": "Inventory complete; launcher behavior tests pass, final assembly approval awaits source-hash binding and cgroup memory handling or verified fail-closed scope. Scientific teacher source review belongs to other reviewers.",
+  "source_sha256": {
+    "build_bundle.py": "4a1f2ed1d7810c8a2fceed5efc0e445c3911e51910b92a0cfe7acab6f34de33b",
+    "PROTOCOL.md": "02d93fd38c90dc500d26c5f6b8c4a8970fe038e501e6771cddccb4f61c548a53",
+    "launcher64/launch.py": "1b20daaa3fb2cc63065084afa73dd5e8690336955da70cb3965b1b4bad34d8d0",
+    "launcher64/test_launch.py": "c972453f66356927d30987ee90fc214572601ee731afd4d83b45838ff310d64a"
+  },
+  "test_results": {
+    "suite": "launcher64/test_launch.py",
+    "passed": 16,
+    "failed": 0,
+    "processes": "mocked",
+    "output_code": 0
+  },
+  "static_checks": {
+    "canonical_links": 14,
+    "fresh_common_seeds": [
+      641,
+      642
+    ],
+    "canonical_arms": 56,
+    "pure_sine_extras": 4,
+    "total": 60,
+    "workers": 60,
+    "reserved": 4,
+    "required_effective_cpu": 64,
+    "min_available_memory_gib": 24,
+    "min_free_disk_gib": 10,
+    "arm_total": 900,
+    "training": 710,
+    "diagnostic": 180,
+    "cleanup": 10,
+    "global_compute": 1200,
+    "setup_separate": 120,
+    "dependency": null,
+    "server_only_before_execute": true,
+    "capacity_before_output_creation_and_child_spawn": true,
+    "thread_environment_forced_1": true,
+    "hashes_before_each_spawn": true,
+    "no_overwrite": true,
+    "final_attempt_counts_not_asserted_by_builder_but_comprehension_count_is_60": true
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "freeze_integrity",
+      "file": "build_bundle.py",
+      "finding": "approved_for_bounded_screen boolean is accepted without comparing the reviewed scientific/source hashes to current files before copying. Review can become stale as adapters are still edited.",
+      "action": "Require all bundled reviewed executable and scientific metadata hashes to match the independent review snapshot before copying/freezing; retain static dry-run and manifest hash after assembly."
+    },
+    {
+      "id": "R2",
+      "severity": "resource_guard_scope",
+      "file": "launcher64/launch.py",
+      "finding": "CPU quotas include v1 fallback, but available-memory limit only reads cgroup-v2 memory.max/current. On v1,/proc/meminfo may describe host memory rather than task allowance.",
+      "action": "Implement v1 memory.limit_in_bytes/usage_in_bytes fallback or fail closed outside verified cgroup-v2 scope; remote admission receipt still required."
+    }
+  ],
+  "limitations": [
+    "Actual64CPU allocation and memory/disk not checked by this workstream",
+    "Capacity snapshot does not benchmark60 simultaneous scientific workers;24GiB is a declared minimum, not measured memory adequacy",
+    "180s diagnostic time can still leave missing width256 states",
+    "No assembled bundle existed at inspection;60 count derived from exact builder constants and4 preserved pure-sine entries"
+  ]
+}
