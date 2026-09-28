@@ -99,6 +99,25 @@ class RankPresentationTest(unittest.TestCase):
                 point.update(A_min=999, A_mean=-999, refit_raw=10)
         self.assertEqual(original, [r.zoom_end(cell, ratio) for ratio in (1.01, 1.05)])
 
+    def test_closed_loss_prefix_missing_diagnostics_label(self):
+        groups, _ = r.select_groups(self.data, self.manifest)
+        cell = groups['relu', 'h2', 2]
+        for arm in cell:
+            arm['issues'] = []
+            for point in arm['checkpoints']:
+                point['issues'] = []
+        self.assertEqual(r.diagnostic_coverage_counts(cell), {'1.01': 0, '1.05': 2})
+        for arm in cell:
+            for point in arm['checkpoints']:
+                point.update(agop_screen=True, refit_screen=True)
+        self.assertEqual(r.diagnostic_coverage_counts(cell), {'1.01': 0, '1.05': 0})
+        for arm in cell:
+            arm['issues'] = []
+            for point in arm['checkpoints']:
+                point.update(diagnostic_status='not_evaluated', agop_screen=None, refit_screen=None)
+        self.assertTrue(all(not r.p.prefix(arm, ratio)['right_censored'] for arm in cell for ratio in (1.01, 1.05)))
+        self.assertEqual(r.diagnostic_coverage_counts(cell), {'1.01': 2, '1.05': 2})
+
     def test_variance_normalization_and_no_extrapolation(self):
         groups, _ = r.select_groups(self.data, self.manifest)
         arm = groups['swiglu', 'relu', 2][0]

@@ -148,6 +148,29 @@ def ordered_keys():
     return list(itertools.product(TEACHERS, STUDENTS, RANKS))
 
 
+def diagnostic_coverage_counts(cell):
+    """Presentation only: count arms with saved prefix gaps/warnings/unavailability."""
+    result = {}
+    for ratio in (1.01, 1.05):
+        count = 0
+        for arm in cell:
+            prefix = p.prefix(arm, ratio)
+            end = prefix.get('end_step')
+            points = [point for point in arm.get('checkpoints', [])
+                      if end is not None and point.get('step') is not None and point['step'] <= end]
+            incomplete = (not prefix or end is None or not points
+                          or bool(prefix.get('missing_diagnostic_steps'))
+                          or bool(prefix.get('unresolved_diagnostic_steps'))
+                          or bool(arm.get('issues'))
+                          or any(point.get('diagnostic_status') != 'ok'
+                                 or point.get('agop_screen') is not True
+                                 or point.get('refit_screen') is not True
+                                 or bool(point.get('issues')) for point in points))
+            count += int(incomplete)
+        result[str(ratio)] = count
+    return result
+
+
 def criterion_text(arm, ratio):
     prefix = p.prefix(arm, ratio)
     original = prefix.get('first_material_candidate')
@@ -196,7 +219,18 @@ def render_page(teacher, groups, aggregates, ratio, title, synthetic):
         for row, student in enumerate(STUDENTS):
             for column, rank in enumerate(RANKS):
                 key = student, teacher, rank
+                start = len(fig.axes)
                 p.cell_axes(fig, outer[row, column], student, teacher, groups[key], aggregates[key], ratio is not None)
+                # Presentation-only distinction: a closed loss window can still
+                # have entirely missing or unresolved diagnostic measurements.
+                header = fig.axes[start]
+                header.get_subplotspec().get_gridspec().set_height_ratios([.82, 1, 1, 1])
+                label = header.texts[1]
+                text = label.get_text().replace('Censored/unavailable 1%/5%', 'Loss-prefix censored/unavailable 1%/5%')
+                coverage = diagnostic_coverage_counts(groups[key])
+                text += f"\nDiagnostic gaps/warnings 1%/5%: {coverage['1.01']}/2, {coverage['1.05']}/2"
+                label.set_text(text)
+                label.set_y(.51)
     finally:
         p.zoom_end = original_zoom
     handles = [p.Line2D([0], [0], color=p.COLORS['loss'], label='Raw MSE'),
@@ -274,6 +308,7 @@ def write_plots(summary_path, manifest_path, output, title, synthetic=False):
                           planned_ids=[a['id'] for a in cell], planned_seeds=[a['seed'] for a in cell],
                           shared_support=agg['support'] if agg else None,
                           zoom_end={str(r): zoom_end(cell, r) for r in (1.01, 1.05)},
+                          diagnostic_gaps_or_warnings_by_prefix=diagnostic_coverage_counts(cell),
                           arms=cell))
     report = output / 'RANK_REPORT.md'
     report.write_text(rank_report(groups, synthetic))
