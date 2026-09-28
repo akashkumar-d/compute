@@ -1,0 +1,218 @@
+{
+  "schema": "rank_retry_reporting_plan_v1",
+  "combination_rule": "Choose original attempt a01 for the 20 arms with terminal markers in the frozen stop inventory, and retry a02 for exactly the 12 arms without original terminal markers; independent of outcomes.",
+  "study_denominator": 32,
+  "retry_attempt_denominator": 12,
+  "retained_original_denominator": 20,
+  "new_independent_seeds": 0,
+  "best_attempt_selection": false,
+  "original_summary_immutable": true,
+  "rank2_completion_sidecar_included": false,
+  "scientific_criteria": "Unchanged canonical summarize_coverage.py; all selected arm records copied verbatim.",
+  "attempt_map": [
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+      "attempt": 2,
+      "selection_reason": "missing_original_terminal_marker",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+      "attempt": 1,
+      "selection_reason": "original_terminal_marker_present",
+      "config_identical_to_original": true
+    }
+  ],
+  "pinned_inputs": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/bundle/MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_retry_a02/bundle/MANIFEST.json": "0b5058b12bc75d0f86276b1dac65c2416a27b9de31ab917f06175a3238a4aac6",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_retry_a02/bundle/RETRY_SELECTION.json": "82098954c86e00db344a070dd25a87a92e1de9c28b7bd6dc6f697ba0e87c59f3",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/recovery_a01/SUMMARY.json": "c0999774b38774ac8728253e99dd1808e5127fe7550824dc7ab8d92d27a01a6a",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/recovery_a01/RECONCILIATION.json": "03924eaaf605c4ac2f9a382ecc3f389c01871334c7be442dbadbfe630b864373",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/REMOTE_INVENTORY_AFTER_STOP.json": "1307b4d1c51cbb757e765db10bb29d366a8a20b03fc3a7a5df40c29e456177eb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/summarize_coverage.py": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/plot_coverage.py": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/plot_rank.py": "30b86e5324157e5af06c82d11f6d55432e036fe8bb17e28fcc7eb8ea699c6d83"
+  },
+  "status": "prepared_before_retry_result_summarization; awaiting parent transfer/hash readiness"
+}
