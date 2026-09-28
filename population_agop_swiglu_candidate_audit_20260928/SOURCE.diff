@@ -1,0 +1,39 @@
+--- reviewed_v9_audit
++++ candidate_audit
+@@ -1,5 +1,6 @@
+ """Compare actual SwiGLU update directions at fixed saved states, without training."""
+ import argparse
++from itertools import combinations
+ import hashlib
+ import json
+ import os
+@@ -40,7 +41,11 @@
+     ap.add_argument('--execution', type=Path, required=True)
+     ap.add_argument('--selection', type=Path, required=True)
+     ap.add_argument('--out', type=Path, required=True)
++    ap.add_argument('--multipliers', default='1,2,4', help='Increasing positive integer factors, e.g.1,2')
+     args = ap.parse_args()
++    factors = [int(x) for x in args.multipliers.split(',')]
++    if len(factors) < 2 or factors != sorted(set(factors)) or any(x < 1 or x > 4 for x in factors):
++        ap.error('Use at least two distinct increasing integer multipliers in1..4')
+     if args.out.exists():
+         raise FileExistsError('Use a new output path; previous audits are preserved.')
+     code = args.code.resolve()
+@@ -50,7 +55,7 @@
+     sources = {str(p): sha(p) for p in sorted(code.rglob('*.py'))}
+     selection = json.loads(args.selection.read_text())
+     record = dict(scope='Fixed saved states only; no update is applied and no trajectory is certified.',
+-                  no_training=True, multipliers=[1, 2, 4], inputs={str(args.selection): sha(args.selection)},
++                  no_training=True, multipliers=factors, inputs={str(args.selection): sha(args.selection)},
+                   source_hashes=sources, rows=[], complete=False)
+     args.out.parent.mkdir(parents=True, exist_ok=True)
+     started = time.monotonic()
+@@ -103,7 +108,7 @@
+                     gram_asymmetry=float(np.linalg.norm(ev['G'] - ev['G'].T) / max(np.linalg.norm(ev['G']), 1e-300)))
+                 cache[factor] = dict(raw=raw_blocks, direction=vector, step=dt * vector,
+                                      M=M, Q=Q, gap=gap, dt=dt)
+-            for low, high in ((1, 2), (2, 4), (1, 4)):
++            for low, high in combinations(factors, 2):
+                 l, h = cache[low], cache[high]
+                 perturbation = float(np.linalg.norm(h['M'] - l['M'], ord=2))
+                 singular = np.linalg.svd(l['Q'].T @ h['Q'], compute_uv=False)

@@ -1,0 +1,540 @@
+{
+  "pass_check": true,
+  "synthetic_fixture_only": true,
+  "no_model_evaluation": true,
+  "training_runs": 0,
+  "planned_arms": 32,
+  "rank_order": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "no_rank_pooling": true,
+  "interpolation_aggregation_and_curve_drawing": "unchanged imported v8 functions",
+  "canonical_plot_sha256": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+  "canonical_summarizer_sha256": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166",
+  "two_seed_medians_on_shared_finite_support": true,
+  "seed_ranges_not_confidence_intervals": true,
+  "missing_diagnostics_remain_gaps": true,
+  "unresolved_finite_scores_retained_with_flags": true,
+  "zoom_selection": "min(shared history endpoint, both saved loss-only prefix endpoints), separately at 1% and 5%",
+  "normalized_units_checks": [
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+      "status": "variance unavailable",
+      "checked": 0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+      "status": "variance unavailable",
+      "checked": 0
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.11804876751909774
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+      "status": "variance unavailable",
+      "checked": 0
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.11804876751909774
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+      "status": "variance unavailable",
+      "checked": 0
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.21116926371833114
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 0.21116926371833114
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.21116926371833114
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 0.21116926371833114
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.3487031417393045
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 0.3487031417393045
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.3487031417393045
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 0.3487031417393045
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 1.0
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.5170939859895523
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 0.5170939859895523
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "status": "checked",
+      "checked": 8,
+      "target_variance": 0.5170939859895523
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+      "status": "checked",
+      "checked": 7,
+      "target_variance": 0.5170939859895523
+    }
+  ],
+  "inputs_unchanged": true,
+  "visual_review": "pending",
+  "cells": [
+    {
+      "teacher": "h2",
+      "student": "relu",
+      "rank": 2,
+      "planned_ids": [
+        "v10_rank_relu_h2_r2_d64_m256_seed641",
+        "v10_rank_relu_h2_r2_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        30.0
+      ],
+      "zoom_end": {
+        "1.01": 15.0,
+        "1.05": 25.0
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "relu",
+      "rank": 4,
+      "planned_ids": [
+        "v10_rank_relu_h2_r4_d64_m256_seed641",
+        "v10_rank_relu_h2_r4_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        30.0
+      ],
+      "zoom_end": {
+        "1.01": 15.0,
+        "1.05": 25.0
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "relu",
+      "rank": 8,
+      "planned_ids": [
+        "v10_rank_relu_h2_r8_d64_m256_seed641",
+        "v10_rank_relu_h2_r8_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        30.0
+      ],
+      "zoom_end": {
+        "1.01": 15.0,
+        "1.05": 25.0
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "relu",
+      "rank": 16,
+      "planned_ids": [
+        "v10_rank_relu_h2_r16_d64_m256_seed641",
+        "v10_rank_relu_h2_r16_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": null,
+      "zoom_end": {
+        "1.01": null,
+        "1.05": null
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "swiglu",
+      "rank": 2,
+      "planned_ids": [
+        "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+        "v10_rank_swiglu_h2_r2_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        150.0
+      ],
+      "zoom_end": {
+        "1.01": 75.0,
+        "1.05": 125.0
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "swiglu",
+      "rank": 4,
+      "planned_ids": [
+        "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+        "v10_rank_swiglu_h2_r4_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        150.0
+      ],
+      "zoom_end": {
+        "1.01": 75.0,
+        "1.05": 125.0
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "swiglu",
+      "rank": 8,
+      "planned_ids": [
+        "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+        "v10_rank_swiglu_h2_r8_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        150.0
+      ],
+      "zoom_end": {
+        "1.01": 75.0,
+        "1.05": 125.0
+      }
+    },
+    {
+      "teacher": "h2",
+      "student": "swiglu",
+      "rank": 16,
+      "planned_ids": [
+        "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+        "v10_rank_swiglu_h2_r16_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": null,
+      "zoom_end": {
+        "1.01": null,
+        "1.05": null
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "relu",
+      "rank": 2,
+      "planned_ids": [
+        "v10_rank_relu_relu_r2_d64_m256_seed641",
+        "v10_rank_relu_relu_r2_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        30.0
+      ],
+      "zoom_end": {
+        "1.01": 15.0,
+        "1.05": 25.0
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "relu",
+      "rank": 4,
+      "planned_ids": [
+        "v10_rank_relu_relu_r4_d64_m256_seed641",
+        "v10_rank_relu_relu_r4_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        30.0
+      ],
+      "zoom_end": {
+        "1.01": 15.0,
+        "1.05": 25.0
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "relu",
+      "rank": 8,
+      "planned_ids": [
+        "v10_rank_relu_relu_r8_d64_m256_seed641",
+        "v10_rank_relu_relu_r8_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        30.0
+      ],
+      "zoom_end": {
+        "1.01": 15.0,
+        "1.05": 25.0
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "relu",
+      "rank": 16,
+      "planned_ids": [
+        "v10_rank_relu_relu_r16_d64_m256_seed641",
+        "v10_rank_relu_relu_r16_d64_m256_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": null,
+      "zoom_end": {
+        "1.01": null,
+        "1.05": null
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "swiglu",
+      "rank": 2,
+      "planned_ids": [
+        "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+        "v10_rank_swiglu_relu_r2_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        150.0
+      ],
+      "zoom_end": {
+        "1.01": 75.0,
+        "1.05": 125.0
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "swiglu",
+      "rank": 4,
+      "planned_ids": [
+        "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+        "v10_rank_swiglu_relu_r4_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        150.0
+      ],
+      "zoom_end": {
+        "1.01": 75.0,
+        "1.05": 125.0
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "swiglu",
+      "rank": 8,
+      "planned_ids": [
+        "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+        "v10_rank_swiglu_relu_r8_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": [
+        0.0,
+        150.0
+      ],
+      "zoom_end": {
+        "1.01": 75.0,
+        "1.05": 125.0
+      }
+    },
+    {
+      "teacher": "relu",
+      "student": "swiglu",
+      "rank": 16,
+      "planned_ids": [
+        "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+        "v10_rank_swiglu_relu_r16_d64_m64_seed642"
+      ],
+      "planned_seeds": [
+        641,
+        642
+      ],
+      "shared_support": null,
+      "zoom_end": {
+        "1.01": null,
+        "1.05": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "pending_independent_runtime_review",
+  "execution_launched": false,
+  "dispatch_prerequisites": [
+    "v9 validation reviewed",
+    "Other task training workers<=24, combined<=30, checked immediately before launch",
+    "Source/config/runtime review against exact manifest hash"
+  ]
+}

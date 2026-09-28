@@ -1,0 +1,36 @@
+{
+  "status": "PASS_static_and_mocked_preparation_only",
+  "created_utc": "2026-09-28T21:58:24.242202+00:00",
+  "manifest_sha256": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+  "design_sha256": "f7769bd338ee43de91d4cdc53fcb76a34e7ad76623a2fe7615b6156c02d3fa5d",
+  "original_config_files_byteidentical": 6,
+  "scientific_files_byteidentical": 11,
+  "all_frozen_hashes_verified": 34,
+  "criterion_unchanged": true,
+  "tests_passed": 24,
+  "tests_wall_seconds": 1.609,
+  "model_evaluations": 0,
+  "training_launches": 0,
+  "network_calls": 0,
+  "publication": false,
+  "execution_directory_created": false,
+  "local_training_supported": false,
+  "runtime": {
+    "workers": 6,
+    "reserved_cpus": 26,
+    "min_available_memory_gib": 12,
+    "min_free_disk_gib": 5,
+    "global_seconds": 2150,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "review_status": "pending_independent_runtime_review",
+  "dispatch_prerequisites": [
+    "Parent reviews v9 validation",
+    "Parent reviews this exact source/config/runtime manifest",
+    "Parent checksothertraining<=24 immediatelybeforelaunch;combined<=30"
+  ],
+  "automatic_dispatch": false,
+  "source_gate_unchanged": true,
+  "rank_or_live_files_modified": false
+}

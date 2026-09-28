@@ -1,0 +1,44 @@
+[
+  {
+    "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+    "cell": "swiglu_h3_s30_headq100",
+    "rank": 8,
+    "args": {
+      "link": "h3",
+      "alpha": 1.0,
+      "s": 0.3,
+      "head_ratio": 1.0,
+      "h": 0.01,
+      "dt_max": 50.0,
+      "t_max": 3000.0,
+      "L_stop": 0.01,
+      "max_steps": 15000,
+      "cp_ratio": 1.06,
+      "cp_min": 0.5,
+      "dl_ratio": 1.5,
+      "n_pair": 32,
+      "n_diag": 96,
+      "n_z": 48,
+      "n_x": 24,
+      "d": 64,
+      "m": 64,
+      "c": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "seed": 641,
+      "head_lr": 0.01,
+      "diagnostic_priority_fractions": [
+        0.25,
+        0.5,
+        0.75
+      ]
+    }
+  }
+]

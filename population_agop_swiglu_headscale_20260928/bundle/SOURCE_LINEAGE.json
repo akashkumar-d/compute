@@ -1,0 +1,74 @@
+{
+  "source": "goal_followup_v8/targeted30/bundle",
+  "scientific_files": [
+    {
+      "path": "swiglu/code/SOURCE_MANIFEST.json",
+      "sha256": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/SOURCE_MANIFEST.json",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/diagnostics.py",
+      "sha256": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/diagnostics.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/canonical_links.py",
+      "sha256": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/canonical_links.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/swpop.py",
+      "sha256": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/swpop.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/swsmall.py",
+      "sha256": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/swsmall.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/swsmall_periodic.py",
+      "sha256": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/swsmall_periodic.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/vlab.py",
+      "sha256": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/vlab.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/requirements.txt",
+      "sha256": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/requirements.txt",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/run_one.py",
+      "sha256": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/run_one.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/validate_breadth.py",
+      "sha256": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/validate_breadth.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/validate_diagnostic_order.py",
+      "sha256": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/validate_diagnostic_order.py",
+      "byte_identical": true
+    }
+  ],
+  "scientific_byte_changes": 0,
+  "source_manifest_sha256": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+  "v8_manifest_sha256": "ce71d19034ba2c20b6d47b9a7ba78350cabb44ec9916c93dce028912e588681f"
+}

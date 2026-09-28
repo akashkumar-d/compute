@@ -1,0 +1,988 @@
+{
+  "protocol_version": "v10_cubic_gaussian_head_scaling",
+  "created_utc": "2026-09-28T21:57:33.443413+00:00",
+  "created_before_outcomes": true,
+  "phase": "paired_development_not_fresh_seed_confirmation",
+  "total_arms": 6,
+  "teacher_student_cells": 3,
+  "canonical_teachers": [
+    "h3"
+  ],
+  "paired_reused_seeds": [
+    641,
+    642
+  ],
+  "independent_seeds": false,
+  "runtime": {
+    "workers": 6,
+    "reserved_cpus": 26,
+    "min_available_memory_gib": 12,
+    "min_free_disk_gib": 5,
+    "global_seconds": 2150,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "dependency": null,
+  "design_sha256": "f7769bd338ee43de91d4cdc53fcb76a34e7ad76623a2fe7615b6156c02d3fa5d",
+  "criterion": "Original all-update initial1%/5%maxmin windows, same-state minimum-alignment gain>=.5, cutoff refit gain>=.1Var, later release>=.1Var; keep all failures/censoring.",
+  "configs": [
+    {
+      "id": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+      "cell": "swiglu_h3_s30_headq100",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 641,
+      "q": 1.0,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq100",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed641",
+      "config_path": "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json",
+      "configuration_sha256": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816",
+      "config": [
+        {
+          "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+          "cell": "swiglu_h3_s30_headq100",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.3,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 15000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642",
+      "cell": "swiglu_h3_s30_headq100",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 642,
+      "q": 1.0,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq100",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed642",
+      "config_path": "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json",
+      "configuration_sha256": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b",
+      "config": [
+        {
+          "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642",
+          "cell": "swiglu_h3_s30_headq100",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.3,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 15000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641",
+      "cell": "swiglu_h3_s30_headq030",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 641,
+      "q": 0.3,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq030",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed641",
+      "config_path": "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641.json",
+      "configuration_sha256": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+      "config": [
+        {
+          "tag": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641",
+          "cell": "swiglu_h3_s30_headq030",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.3,
+            "head_ratio": 0.3,
+            "h": 0.01,
+            "dt_max": 166.66666666666669,
+            "t_max": 10000.0,
+            "L_stop": 0.01,
+            "max_steps": 15000,
+            "cp_ratio": 1.06,
+            "cp_min": 1.6666666666666667,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.0009,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.3
+        ],
+        "dt_max": [
+          50.0,
+          166.66666666666669
+        ],
+        "t_max": [
+          3000.0,
+          10000.0
+        ],
+        "cp_min": [
+          0.5,
+          1.6666666666666667
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0009
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642",
+      "cell": "swiglu_h3_s30_headq030",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 642,
+      "q": 0.3,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq030",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed642",
+      "config_path": "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642.json",
+      "configuration_sha256": "f4981bf12a33ae4448b60f6ebf2a6bb42d3c8eb26507dcfe05bb0719caf06cf1",
+      "config": [
+        {
+          "tag": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642",
+          "cell": "swiglu_h3_s30_headq030",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.3,
+            "head_ratio": 0.3,
+            "h": 0.01,
+            "dt_max": 166.66666666666669,
+            "t_max": 10000.0,
+            "L_stop": 0.01,
+            "max_steps": 15000,
+            "cp_ratio": 1.06,
+            "cp_min": 1.6666666666666667,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.0009,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.3
+        ],
+        "dt_max": [
+          50.0,
+          166.66666666666669
+        ],
+        "t_max": [
+          3000.0,
+          10000.0
+        ],
+        "cp_min": [
+          0.5,
+          1.6666666666666667
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0009
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641",
+      "cell": "swiglu_h3_s30_headq010",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 641,
+      "q": 0.1,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq010",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed641",
+      "config_path": "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641.json",
+      "configuration_sha256": "5e6d65800d2c68f5c9a5f7e6834f913af19a3dbd05364d6619d611c1204d9fb4",
+      "config": [
+        {
+          "tag": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641",
+          "cell": "swiglu_h3_s30_headq010",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.3,
+            "head_ratio": 0.1,
+            "h": 0.01,
+            "dt_max": 500.0,
+            "t_max": 30000.0,
+            "L_stop": 0.01,
+            "max_steps": 15000,
+            "cp_ratio": 1.06,
+            "cp_min": 5.0,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.0001,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.1
+        ],
+        "dt_max": [
+          50.0,
+          500.0
+        ],
+        "t_max": [
+          3000.0,
+          30000.0
+        ],
+        "cp_min": [
+          0.5,
+          5.0
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0001
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642",
+      "cell": "swiglu_h3_s30_headq010",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 642,
+      "q": 0.1,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq010",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed642",
+      "config_path": "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642.json",
+      "configuration_sha256": "bc56d307b7fc073d403e51d9b89d8f68d43743ef154142c14bffcd698ed3966f",
+      "config": [
+        {
+          "tag": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642",
+          "cell": "swiglu_h3_s30_headq010",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.3,
+            "head_ratio": 0.1,
+            "h": 0.01,
+            "dt_max": 500.0,
+            "t_max": 30000.0,
+            "L_stop": 0.01,
+            "max_steps": 15000,
+            "cp_ratio": 1.06,
+            "cp_min": 5.0,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.0001,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.1
+        ],
+        "dt_max": [
+          50.0,
+          500.0
+        ],
+        "t_max": [
+          3000.0,
+          30000.0
+        ],
+        "cp_min": [
+          0.5,
+          5.0
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0001
+        ]
+      }
+    }
+  ],
+  "arms": [
+    {
+      "id": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+      "cell": "swiglu_h3_s30_headq100",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 641,
+      "q": 1.0,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq100",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed641",
+      "config_path": "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json",
+      "configuration_sha256": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642",
+      "cell": "swiglu_h3_s30_headq100",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 642,
+      "q": 1.0,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq100",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed642",
+      "config_path": "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json",
+      "configuration_sha256": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641",
+      "cell": "swiglu_h3_s30_headq030",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 641,
+      "q": 0.3,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq030",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed641",
+      "config_path": "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641.json",
+      "configuration_sha256": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.3
+        ],
+        "dt_max": [
+          50.0,
+          166.66666666666669
+        ],
+        "t_max": [
+          3000.0,
+          10000.0
+        ],
+        "cp_min": [
+          0.5,
+          1.6666666666666667
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0009
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642",
+      "cell": "swiglu_h3_s30_headq030",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 642,
+      "q": 0.3,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq030",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed642",
+      "config_path": "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642.json",
+      "configuration_sha256": "f4981bf12a33ae4448b60f6ebf2a6bb42d3c8eb26507dcfe05bb0719caf06cf1",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.3
+        ],
+        "dt_max": [
+          50.0,
+          166.66666666666669
+        ],
+        "t_max": [
+          3000.0,
+          10000.0
+        ],
+        "cp_min": [
+          0.5,
+          1.6666666666666667
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0009
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641",
+      "tag": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641",
+      "cell": "swiglu_h3_s30_headq010",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 641,
+      "q": 0.1,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq010",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed641",
+      "config_path": "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641.json",
+      "configuration_sha256": "5e6d65800d2c68f5c9a5f7e6834f913af19a3dbd05364d6619d611c1204d9fb4",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.1
+        ],
+        "dt_max": [
+          50.0,
+          500.0
+        ],
+        "t_max": [
+          3000.0,
+          30000.0
+        ],
+        "cp_min": [
+          0.5,
+          5.0
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0001
+        ]
+      }
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642",
+      "tag": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642",
+      "cell": "swiglu_h3_s30_headq010",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h3",
+      "rank": 8,
+      "seed": 642,
+      "q": 0.1,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h3_s30_headq010",
+      "normalized_clock": "tau=q*t",
+      "parent_run_id": "v8_swiglu_h3_scale30_r8_d64_m64_seed642",
+      "config_path": "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642.json",
+      "configuration_sha256": "bc56d307b7fc073d403e51d9b89d8f68d43743ef154142c14bffcd698ed3966f",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.1
+        ],
+        "dt_max": [
+          50.0,
+          500.0
+        ],
+        "t_max": [
+          3000.0,
+          30000.0
+        ],
+        "cp_min": [
+          0.5,
+          5.0
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0001
+        ]
+      }
+    }
+  ],
+  "source_sha256": {
+    "DESIGN.snapshot.json": "f7769bd338ee43de91d4cdc53fcb76a34e7ad76623a2fe7615b6156c02d3fa5d",
+    "INDEPENDENT_SCALING_REVIEW.snapshot.md": "e8f2c3433f9b6b36c2080634764711b6a2cf83e0a76f1dbcaafabe31ce23fc8c",
+    "LAUNCHER.diff": "7da25cdb557f7574fbb1a3eb9479bd5997c11f4a050f81e9663e86f52d4b03a7",
+    "PROTOCOL.snapshot.md": "4b3452f3ce4983c53d45e3fc592ed733fee34a93474a16ddf686c2945d1ba838",
+    "README.md": "d2ae1900b558164344e7c57a90f3549ce33d285858f945466801ed81087973dd",
+    "SOURCE_LINEAGE.json": "c0b651e9d7caa8d41506ed2f4f81e9ff916dcfd819b65a86191022060bad66af",
+    "SOURCE_REVIEW.json": "f5828f67f5898e0fb3d675f4fadb896405ccad02644e7f9064487116ba7d98de",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641.json": "5e6d65800d2c68f5c9a5f7e6834f913af19a3dbd05364d6619d611c1204d9fb4",
+    "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642.json": "bc56d307b7fc073d403e51d9b89d8f68d43743ef154142c14bffcd698ed3966f",
+    "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641.json": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+    "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642.json": "f4981bf12a33ae4448b60f6ebf2a6bb42d3c8eb26507dcfe05bb0719caf06cf1",
+    "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816",
+    "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b",
+    "launcher/launch.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "launcher/test_launch.py": "4b20d1fc1002d0bf3a53cf811a56718ae8f235132f44356cdd563a3604e4b9cb",
+    "reference/rank_MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "reference/rank_REVIEW.json": "130bdc3fcc7d3fd3ef324b48c8dffa961b4d639bf531d6b3ad830d1721d5284b",
+    "reference/rank_launch.py": "05e8b437642a0ba4f92f090f175751c7b1a6b3359dc6678d95149d12404ccc6d",
+    "reference/rank_test_launch.py": "317b04223053a865cb66f465cb7e6ced39a3910ff4e1d142666cacfa5774cbc1",
+    "reference/v8_MANIFEST.json": "ce71d19034ba2c20b6d47b9a7ba78350cabb44ec9916c93dce028912e588681f",
+    "reference/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+    "reference/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "pinned_sources": {
+    "DESIGN.snapshot.json": "f7769bd338ee43de91d4cdc53fcb76a34e7ad76623a2fe7615b6156c02d3fa5d",
+    "INDEPENDENT_SCALING_REVIEW.snapshot.md": "e8f2c3433f9b6b36c2080634764711b6a2cf83e0a76f1dbcaafabe31ce23fc8c",
+    "LAUNCHER.diff": "7da25cdb557f7574fbb1a3eb9479bd5997c11f4a050f81e9663e86f52d4b03a7",
+    "PROTOCOL.snapshot.md": "4b3452f3ce4983c53d45e3fc592ed733fee34a93474a16ddf686c2945d1ba838",
+    "README.md": "d2ae1900b558164344e7c57a90f3549ce33d285858f945466801ed81087973dd",
+    "SOURCE_LINEAGE.json": "c0b651e9d7caa8d41506ed2f4f81e9ff916dcfd819b65a86191022060bad66af",
+    "SOURCE_REVIEW.json": "f5828f67f5898e0fb3d675f4fadb896405ccad02644e7f9064487116ba7d98de",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641.json": "5e6d65800d2c68f5c9a5f7e6834f913af19a3dbd05364d6619d611c1204d9fb4",
+    "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642.json": "bc56d307b7fc073d403e51d9b89d8f68d43743ef154142c14bffcd698ed3966f",
+    "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641.json": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+    "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642.json": "f4981bf12a33ae4448b60f6ebf2a6bb42d3c8eb26507dcfe05bb0719caf06cf1",
+    "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816",
+    "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b",
+    "launcher/launch.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "launcher/test_launch.py": "4b20d1fc1002d0bf3a53cf811a56718ae8f235132f44356cdd563a3604e4b9cb",
+    "reference/rank_MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "reference/rank_REVIEW.json": "130bdc3fcc7d3fd3ef324b48c8dffa961b4d639bf531d6b3ad830d1721d5284b",
+    "reference/rank_launch.py": "05e8b437642a0ba4f92f090f175751c7b1a6b3359dc6678d95149d12404ccc6d",
+    "reference/rank_test_launch.py": "317b04223053a865cb66f465cb7e6ced39a3910ff4e1d142666cacfa5774cbc1",
+    "reference/v8_MANIFEST.json": "ce71d19034ba2c20b6d47b9a7ba78350cabb44ec9916c93dce028912e588681f",
+    "reference/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+    "reference/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "queue_order": "Frozen design order: q1,.3,.1; seed641/642 within each q; all6 in one wave",
+  "resource_note": "Parent must review v9 and verifyothertraining<=24 before manualdispatch;6headscale+other<=30total;2CPUsfree on32allocation; no automaticdispatch/localtraining/GPU;1990sarm/2150sglobal.",
+  "source_note": "All11 scientific v8 files,including SOURCE_MANIFEST,unchanged. Scheduler resource/protocol adapter only.",
+  "analysis_note": "No success-rule change;compare physicalt andtau=q*t while preservingrawloss andloss/VarY;two reusedseeds;quadrature provisional."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "training_runs": 0,
+  "model_evaluations": 0,
+  "test_count": 12,
+  "tests_returncode": 0,
+  "all_shell_blocks_syntax_checked": true,
+  "canonical_v8_plot_copy_unchanged": true,
+  "sources_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/plot_coverage.py": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/analysis/plot_coverage.py": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/summarize_coverage.py": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/plot_rank.py": "d77eccaccffc9ed19adb1591c3056f36a3bb369ef60c5688c8cc9a41948c7f15",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/test_rank.py": "0dd7b41d370031322e4a358f09b2f50dde6a17ea9a3e8f77a5500d8456a96763",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/make_fixture.py": "ae0690e410ba566985153f6e157794f0ba73af749f72304490f7856decfc8c5f"
+  },
+  "synthetic_visual_path": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/fixture/FINAL_VISUAL.png",
+  "synthetic_visual_sha256": "f8316d7cb81db7a7209a789b12a048d0ba0b22d17d75d93a47b341d2a3e137b0",
+  "synthetic_gallery_artifact_hashes_verified": 28,
+  "final_change_since_gallery": "Only retained unavailable-source expected hashes in provenance; final visual uses current wrapper.",
+  "visual_review": "PASS: inspected raw-ReLU full and final5%zoom, quadratic1%zoom; parent independently inspected quadratic5%zoom. Blacklabels, naturalrankorder, missingpanels, gaps, flags, axes/legend/footer readable without overlap.",
+  "independent_review": "Read-only schema and wrapper review passed after preserving full original source hash mapping; no live results accessed",
+  "readme_sha256": "4642fada3b4268b764d92c6bc330d075ee98a6de0a7f6ef69177a410a53967f7"
+}

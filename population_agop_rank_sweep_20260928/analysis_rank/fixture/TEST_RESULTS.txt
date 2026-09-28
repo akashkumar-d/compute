@@ -1,0 +1,17 @@
+test_all_planned_ids_and_natural_rank_order (test_rank.RankPresentationTest.test_all_planned_ids_and_natural_rank_order) ... ok
+test_dropped_duplicate_and_unknown_ids_rejected (test_rank.RankPresentationTest.test_dropped_duplicate_and_unknown_ids_rejected) ... ok
+test_duplicate_manifest_cells_and_swiglu_rank_rejected (test_rank.RankPresentationTest.test_duplicate_manifest_cells_and_swiglu_rank_rejected) ... ok
+test_exact_imported_aggregation_and_gaps (test_rank.RankPresentationTest.test_exact_imported_aggregation_and_gaps) ... ok
+test_existing_output_preserved (test_rank.RankPresentationTest.test_existing_output_preserved) ... ok
+test_loss_only_two_zoom_rules (test_rank.RankPresentationTest.test_loss_only_two_zoom_rules) ... ok
+test_no_one_seed_median_or_zoom (test_rank.RankPresentationTest.test_no_one_seed_median_or_zoom) ... ok
+test_rank_seed_recipe_clock_and_config_mismatch_rejected (test_rank.RankPresentationTest.test_rank_seed_recipe_clock_and_config_mismatch_rejected) ... ok
+test_report_keeps_all_arms_and_flags (test_rank.RankPresentationTest.test_report_keeps_all_arms_and_flags) ... ok
+test_unchanged_canonical_missing_execution_summary (test_rank.RankPresentationTest.test_unchanged_canonical_missing_execution_summary) ... ok
+test_unstable_summary_rejected (test_rank.RankPresentationTest.test_unstable_summary_rejected) ... ok
+test_variance_normalization_and_no_extrapolation (test_rank.RankPresentationTest.test_variance_normalization_and_no_extrapolation) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.998s
+
+OK

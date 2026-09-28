@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-09-28T21:59:31.221717+00:00",
+  "title": "SYNTHETIC rank presentation fixture",
+  "synthetic_fixture_only": true,
+  "input_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/fixture/SYNTHETIC_SUMMARY.json": "293e1038737c4244525f5bbb111501584acd44da508cb9d01325b7ca66e2322e",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/bundle/MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/plot_rank.py": "cce50d7a76ead0ca2e29610a655bde1b9ac3314f1cc39e56b4f22a9926be984e",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/plot_coverage.py": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/analysis/plot_coverage.py": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/summarize_coverage.py": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166"
+  },
+  "source_paths_unavailable_for_local_recheck": [],
+  "fixture_provenance": {
+    "kind": "synthetic",
+    "description": "Deterministic artificial curves, gaps, flags, unequal tails and absent seed arms. No rank experiment result read.",
+    "generated_by": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/make_fixture.py",
+    "manifest_sha256": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01"
+  },
+  "colors": {
+    "loss": "#25395B",
+    "A_min": "#007C83",
+    "A_mean": "#BB7518",
+    "refit": "#814B9C",
+    "prefix5": "#DDEDEC",
+    "prefix1": "#598C89",
+    "warning": "#A32C28"
+  },
+  "label_color": "black",
+  "output_sha256": {
+    "h2_full.png": "4fcc713ef01270d7a31729b6cf10c56363335b3b3d2800106c0d526830b3a74d",
+    "h2_full.svg": "52299c795ce008f1501fdabd4a537de91d94903ba7f87c2717d45c2f57035ca7",
+    "h2_initial_1pct.png": "45ec4b1e5554278e311aad22bd05bfb88c6081a6d8cde1416b4f3e45becdf4e1",
+    "h2_initial_1pct.svg": "ccb2a6c7ff4cf2dd99e2ae1cdd40abdbdebb36c5508f1857da22ea136d2969e4",
+    "h2_initial_5pct.png": "c1024b45923e597280b666cbeaadf5ae7ce6974b825034aae4d713e721885a64",
+    "h2_initial_5pct.svg": "91535373a8e2bad9c03bdc0157b7a63e15cbb3a36f59cea1ec59e04ed3bd23fd",
+    "h2_rank_sheets.pdf": "7980321abb39cf04dac657c7d5e0331a8473ff4d0d4b8ed78be62876be507c7b",
+    "relu_full.png": "5bcf2b7e39f6445874ebf1f0ab36ff99ccc2e642de34c64584e8bacc70120ae4",
+    "relu_full.svg": "5aea8bc0d8b8a51bf5ad2431024efe5b71165d1927d0307515fb52c28e7e9694",
+    "relu_initial_1pct.png": "7b7a6627867e7b59e0ccf070a97618f86f5b51e196295cb99a151bb3f320854c",
+    "relu_initial_1pct.svg": "0fe5b6e442407250dc50399decb143a296322586d28fdd4a6480b69ae01b445b",
+    "relu_initial_5pct.png": "f8316d7cb81db7a7209a789b12a048d0ba0b22d17d75d93a47b341d2a3e137b0",
+    "relu_initial_5pct.svg": "2498025a2f93cb525a70c5d0a43b54141ba718f100f761aed7ee282f66aa94be",
+    "relu_rank_sheets.pdf": "c82a36217da543d95f3362c1697db126e8f3102f9bb01624aabef313291bddf5",
+    "aggregate_h2_relu_r02.npz": "fde9044b291b3ad5f1dbe0e034161a9111065def9611d9de060c662b19ba9586",
+    "aggregate_h2_relu_r04.npz": "12e9be147c1be718801a6621b887b781b73d44b1e15355a57a367979aff35241",
+    "aggregate_h2_relu_r08.npz": "841ad40c22d491b6d6310b5e31c5a5eff3c30964478b1c04a4d0828d750e8389",
+    "aggregate_h2_swiglu_r02.npz": "708c94a288415e8c8c5f8a2c091b724b8386fb762166b8997f248d2996807267",
+    "aggregate_h2_swiglu_r04.npz": "0843b0e812561ef4bc69e90e1c08300836b741def9545dca3078cbc2933cc59b",
+    "aggregate_h2_swiglu_r08.npz": "a402fa8484fdab76f9d126c72d1caf32eb5475a8755f18673fdecfec67b51417",
+    "aggregate_relu_relu_r02.npz": "b1af2386c59da3bd01c3e2d9a5621de1a1e1a290e2cff2ea5e59479ba72e3f87",
+    "aggregate_relu_relu_r04.npz": "94678220db9e0222ec2faabd43c55a83d97a272b6bc04cc7dd1ee77205de53cf",
+    "aggregate_relu_relu_r08.npz": "d704cb09f72de73f88e0a0f4dcdf9218136a55ad17556155cf263f82c493099f",
+    "aggregate_relu_swiglu_r02.npz": "6855210751aed117a8a9a8b07f2cf543b39dafb382c27db070aac3a3391e16b9",
+    "aggregate_relu_swiglu_r04.npz": "337a6e75490dcb4551d5f18b5ad0bed82eda7897eb1117234db8394457eafb1f",
+    "aggregate_relu_swiglu_r08.npz": "4239a8cc82982088489e252a9b49e08f088c59ea4862c06c8310e8870ae834ba",
+    "RANK_REPORT.md": "b13ca15c587b882dc41a1fde6140f05538c01b0bd933d23e932609e384ccd903",
+    "RANK_RECORDS.json": "3fe1355339da3057a30b1e382382731d6ed45aa382280c5d2d1950b5b9d9b7da"
+  }
+}

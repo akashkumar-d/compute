@@ -1,0 +1,6573 @@
+{
+  "schema": "breadth14_saved_coverage_v1",
+  "snapshot_usable": true,
+  "inputs_unchanged": true,
+  "planned_arms": 32,
+  "canonical_arms": 32,
+  "supplemental_arms": 0,
+  "arms": [
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+      "cell": "v10_rank_relu_h2_r16",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 16,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 16,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.08,
+          "A_mean": 0.32,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.165,
+          "A_mean": 0.385,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.25,
+          "A_mean": 0.45,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.335,
+          "A_mean": 0.515,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.42000000000000004,
+          "A_mean": 0.5800000000000001,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.505,
+          "A_mean": 0.645,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.59,
+          "A_mean": 0.71,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.675,
+          "A_mean": 0.775,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_h2_r16",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 16,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r16",
+          "rank": 16,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.08,
+          "A_mean": 0.32,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.165,
+          "A_mean": 0.385,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.25,
+          "A_mean": 0.45,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.335,
+          "A_mean": 0.515,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.42000000000000004,
+          "A_mean": 0.5800000000000001,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.505,
+          "A_mean": 0.645,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.59,
+          "A_mean": 0.71,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.675,
+          "A_mean": 0.775,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+      "cell": "v10_rank_relu_relu_r16",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 16,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 16,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0011804876751909774,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.9391225865034353,
+      "target_variance": 0.11804876751909774,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.11804876751909774,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.11793071875157864,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.11769462121654044,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.11734047491398315,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.11663218230886856,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.1146253532610439,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.11096584146795187,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.10034145239123307,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.08,
+          "A_mean": 0.32,
+          "refit_raw": 0.1097853537927609,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.165,
+          "A_mean": 0.385,
+          "refit_raw": 0.10152194006642407,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.25,
+          "A_mean": 0.45,
+          "refit_raw": 0.09325852634008722,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.335,
+          "A_mean": 0.515,
+          "refit_raw": 0.08499511261375037,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.42000000000000004,
+          "A_mean": 0.5800000000000001,
+          "refit_raw": 0.07673169888741353,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.505,
+          "A_mean": 0.645,
+          "refit_raw": 0.0684682851610767,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.59,
+          "A_mean": 0.71,
+          "refit_raw": 0.06020487143473985,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.675,
+          "A_mean": 0.775,
+          "refit_raw": 0.051941457708403006,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r16",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 16,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r16",
+          "rank": 16,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.9391225865034353,
+      "target_variance": 0.11804876751909774,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.11804876751909774,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.11793071875157864,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.11769462121654044,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.11734047491398315,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.11663218230886856,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.1146253532610439,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.11096584146795187,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.10034145239123307,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.08,
+          "A_mean": 0.32,
+          "refit_raw": 0.1097853537927609,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.165,
+          "A_mean": 0.385,
+          "refit_raw": 0.10152194006642407,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.25,
+          "A_mean": 0.45,
+          "refit_raw": 0.09325852634008722,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.335,
+          "A_mean": 0.515,
+          "refit_raw": 0.08499511261375037,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.42000000000000004,
+          "A_mean": 0.5800000000000001,
+          "refit_raw": 0.07673169888741353,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.505,
+          "A_mean": 0.645,
+          "refit_raw": 0.0684682851610767,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.59,
+          "A_mean": 0.71,
+          "refit_raw": 0.06020487143473985,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.675,
+          "A_mean": 0.775,
+          "refit_raw": 0.051941457708403006,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+      "cell": "v10_rank_relu_h2_r16",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 642,
+      "supplemental": false,
+      "target_mean": null,
+      "target_variance": null,
+      "process_state": "not_started",
+      "stop_reason": null,
+      "diagnostics_complete": false,
+      "has_result": false,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [],
+      "checkpoints": [],
+      "prefixes": {
+        "1.01": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_h2_r16",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 642,
+      "supplemental": false,
+      "target_mean": null,
+      "target_variance": null,
+      "process_state": "not_started",
+      "stop_reason": null,
+      "diagnostics_complete": false,
+      "has_result": false,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [],
+      "checkpoints": [],
+      "prefixes": {
+        "1.01": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+      "cell": "v10_rank_relu_relu_r16",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 642,
+      "supplemental": false,
+      "target_mean": null,
+      "target_variance": null,
+      "process_state": "not_started",
+      "stop_reason": null,
+      "diagnostics_complete": false,
+      "has_result": false,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [],
+      "checkpoints": [],
+      "prefixes": {
+        "1.01": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_relu_r16",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 642,
+      "supplemental": false,
+      "target_mean": null,
+      "target_variance": null,
+      "process_state": "not_started",
+      "stop_reason": null,
+      "diagnostics_complete": false,
+      "has_result": false,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [],
+      "checkpoints": [],
+      "prefixes": {
+        "1.01": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": null,
+          "end_time": null,
+          "right_censored": true,
+          "exit_observed": false,
+          "assessment": "SYNTHETIC_unavailable",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+      "cell": "v10_rank_relu_h2_r8",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 8,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.04,
+          "A_mean": 0.16,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.125,
+          "A_mean": 0.225,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.21000000000000002,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.295,
+          "A_mean": 0.355,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.38,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.465,
+          "A_mean": 0.485,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.55,
+          "A_mean": 0.55,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6350000000000001,
+          "A_mean": 0.615,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_h2_r8",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 8,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r8",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.04,
+          "A_mean": 0.16,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.125,
+          "A_mean": 0.225,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.21000000000000002,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.295,
+          "A_mean": 0.355,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.38,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.465,
+          "A_mean": 0.485,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.55,
+          "A_mean": 0.55,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6350000000000001,
+          "A_mean": 0.615,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+      "cell": "v10_rank_relu_relu_r8",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 8,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.002111692637183312,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.8881614359347455,
+      "target_variance": 0.21116926371833114,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.21116926371833114,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.2109580944546128,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.21053575592717616,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.20990224813602115,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.20863523255371116,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.20504535507049954,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.19849910789523126,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.17949387416058146,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.04,
+          "A_mean": 0.16,
+          "refit_raw": 0.19638741525804798,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.125,
+          "A_mean": 0.225,
+          "refit_raw": 0.1816055667977648,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.21000000000000002,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.1668237183374816,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.295,
+          "A_mean": 0.355,
+          "refit_raw": 0.15204186987719842,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.38,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.13726002141691523,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.465,
+          "A_mean": 0.485,
+          "refit_raw": 0.12247817295663208,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.55,
+          "A_mean": 0.55,
+          "refit_raw": 0.10769632449634889,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6350000000000001,
+          "A_mean": 0.615,
+          "refit_raw": 0.0929144760360657,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r8",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 8,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.8881614359347455,
+      "target_variance": 0.21116926371833114,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.21116926371833114,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.2109580944546128,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.21053575592717616,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.20990224813602115,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.20863523255371116,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.20504535507049954,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.19849910789523126,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.17949387416058146,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.04,
+          "A_mean": 0.16,
+          "refit_raw": 0.19638741525804798,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.125,
+          "A_mean": 0.225,
+          "refit_raw": 0.1816055667977648,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.21000000000000002,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.1668237183374816,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.295,
+          "A_mean": 0.355,
+          "refit_raw": 0.15204186987719842,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.38,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.13726002141691523,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.465,
+          "A_mean": 0.485,
+          "refit_raw": 0.12247817295663208,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.55,
+          "A_mean": 0.55,
+          "refit_raw": 0.10769632449634889,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6350000000000001,
+          "A_mean": 0.615,
+          "refit_raw": 0.0929144760360657,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+      "cell": "v10_rank_relu_h2_r8",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 642,
+      "r": 8,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.05,
+          "A_mean": 0.16,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.135,
+          "A_mean": 0.225,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.22000000000000003,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.305,
+          "A_mean": 0.355,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.39,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.47500000000000003,
+          "A_mean": 0.485,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.56,
+          "A_mean": 0.55,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_h2_r8",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 642,
+      "r": 8,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r8",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.05,
+          "A_mean": 0.16,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.135,
+          "A_mean": 0.225,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.22000000000000003,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.305,
+          "A_mean": 0.355,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.39,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.47500000000000003,
+          "A_mean": 0.485,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.56,
+          "A_mean": 0.55,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+      "cell": "v10_rank_relu_relu_r8",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 642,
+      "r": 8,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.002111692637183312,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.8881614359347455,
+      "target_variance": 0.21116926371833114,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.21116926371833114,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.2109580944546128,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.21053575592717616,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.20990224813602115,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.20863523255371116,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.20504535507049954,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.19849910789523126,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.05,
+          "A_mean": 0.16,
+          "refit_raw": 0.19638741525804798,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.135,
+          "A_mean": 0.225,
+          "refit_raw": 0.1816055667977648,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.22000000000000003,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.1668237183374816,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.305,
+          "A_mean": 0.355,
+          "refit_raw": 0.15204186987719842,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.39,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.13726002141691523,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.47500000000000003,
+          "A_mean": 0.485,
+          "refit_raw": 0.12247817295663208,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.56,
+          "A_mean": 0.55,
+          "refit_raw": 0.10769632449634889,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_relu_r8",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 642,
+      "r": 8,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.8881614359347455,
+      "target_variance": 0.21116926371833114,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.21116926371833114,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.2109580944546128,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.21053575592717616,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.20990224813602115,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.20863523255371116,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.20504535507049954,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.19849910789523126,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.05,
+          "A_mean": 0.16,
+          "refit_raw": 0.19638741525804798,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.135,
+          "A_mean": 0.225,
+          "refit_raw": 0.1816055667977648,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.22000000000000003,
+          "A_mean": 0.29000000000000004,
+          "refit_raw": 0.1668237183374816,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.305,
+          "A_mean": 0.355,
+          "refit_raw": 0.15204186987719842,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.39,
+          "A_mean": 0.42000000000000004,
+          "refit_raw": 0.13726002141691523,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.47500000000000003,
+          "A_mean": 0.485,
+          "refit_raw": 0.12247817295663208,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.56,
+          "A_mean": 0.55,
+          "refit_raw": 0.10769632449634889,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+      "cell": "v10_rank_relu_h2_r4",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 4,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": false,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.08,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.10500000000000001,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "SYNTHETIC_missing",
+          "A_min": null,
+          "A_mean": null,
+          "refit_raw": null,
+          "agop_screen": null,
+          "refit_screen": null,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.275,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.34,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.405,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6150000000000001,
+          "A_mean": 0.535,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_h2_r4",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 4,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": false,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.08,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.10500000000000001,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "SYNTHETIC_missing",
+          "A_min": null,
+          "A_mean": null,
+          "refit_raw": null,
+          "agop_screen": null,
+          "refit_screen": null,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.275,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.34,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.405,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6150000000000001,
+          "A_mean": 0.535,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+      "cell": "v10_rank_relu_relu_r4",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 4,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0034870314173930453,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.8070296514135621,
+      "target_variance": 0.3487031417393045,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": false,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.3487031417393045,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.3483544385975652,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.34765703231408657,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.3466109228888687,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.3445187040384328,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.3385907506288647,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.3277809532349462,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.2963976704784088,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.08,
+          "refit_raw": 0.3242939218175532,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.10500000000000001,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.2998847018958019,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "SYNTHETIC_missing",
+          "A_min": null,
+          "A_mean": null,
+          "refit_raw": null,
+          "agop_screen": null,
+          "refit_screen": null,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.275,
+          "refit_raw": 0.2510662620522992,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.34,
+          "refit_raw": 0.22665704213054794,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.405,
+          "refit_raw": 0.20224782220879664,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.1778386022870453,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6150000000000001,
+          "A_mean": 0.535,
+          "refit_raw": 0.153429382365294,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r4",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 4,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r4",
+          "rank": 4,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.8070296514135621,
+      "target_variance": 0.3487031417393045,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": false,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.3487031417393045,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.3483544385975652,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.34765703231408657,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.3466109228888687,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.3445187040384328,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.3385907506288647,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.3277809532349462,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.2963976704784088,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.08,
+          "refit_raw": 0.3242939218175532,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.10500000000000001,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.2998847018958019,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "SYNTHETIC_missing",
+          "A_min": null,
+          "A_mean": null,
+          "refit_raw": null,
+          "agop_screen": null,
+          "refit_screen": null,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.275,
+          "refit_raw": 0.2510662620522992,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.34,
+          "refit_raw": 0.22665704213054794,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.405,
+          "refit_raw": 0.20224782220879664,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.1778386022870453,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6150000000000001,
+          "A_mean": 0.535,
+          "refit_raw": 0.153429382365294,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+      "cell": "v10_rank_relu_h2_r4",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 642,
+      "r": 4,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.03,
+          "A_mean": 0.08,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.115,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.2,
+          "A_mean": 0.21000000000000002,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.28500000000000003,
+          "A_mean": 0.275,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.37000000000000005,
+          "A_mean": 0.34,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.45500000000000007,
+          "A_mean": 0.405,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.54,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_h2_r4",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 642,
+      "r": 4,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.03,
+          "A_mean": 0.08,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.115,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.2,
+          "A_mean": 0.21000000000000002,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.28500000000000003,
+          "A_mean": 0.275,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.37000000000000005,
+          "A_mean": 0.34,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.45500000000000007,
+          "A_mean": 0.405,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.54,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+      "cell": "v10_rank_relu_relu_r4",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 642,
+      "r": 4,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0034870314173930453,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.8070296514135621,
+      "target_variance": 0.3487031417393045,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.3487031417393045,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.3483544385975652,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.34765703231408657,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.3466109228888687,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.3445187040384328,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.3385907506288647,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.3277809532349462,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.03,
+          "A_mean": 0.08,
+          "refit_raw": 0.3242939218175532,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.115,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.2998847018958019,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.2,
+          "A_mean": 0.21000000000000002,
+          "refit_raw": 0.2754754819740506,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.28500000000000003,
+          "A_mean": 0.275,
+          "refit_raw": 0.2510662620522992,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.37000000000000005,
+          "A_mean": 0.34,
+          "refit_raw": 0.22665704213054794,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.45500000000000007,
+          "A_mean": 0.405,
+          "refit_raw": 0.20224782220879664,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.54,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.1778386022870453,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_relu_r4",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 642,
+      "r": 4,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r4",
+          "rank": 4,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.8070296514135621,
+      "target_variance": 0.3487031417393045,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.3487031417393045,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.3483544385975652,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.34765703231408657,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.3466109228888687,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.3445187040384328,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.3385907506288647,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.3277809532349462,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.03,
+          "A_mean": 0.08,
+          "refit_raw": 0.3242939218175532,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.115,
+          "A_mean": 0.14500000000000002,
+          "refit_raw": 0.2998847018958019,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.2,
+          "A_mean": 0.21000000000000002,
+          "refit_raw": 0.2754754819740506,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.28500000000000003,
+          "A_mean": 0.275,
+          "refit_raw": 0.2510662620522992,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.37000000000000005,
+          "A_mean": 0.34,
+          "refit_raw": 0.22665704213054794,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.45500000000000007,
+          "A_mean": 0.405,
+          "refit_raw": 0.20224782220879664,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.54,
+          "A_mean": 0.47000000000000003,
+          "refit_raw": 0.1778386022870453,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+      "cell": "v10_rank_relu_h2_r2",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 2,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.01,
+          "A_mean": 0.04,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.095,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.18000000000000002,
+          "A_mean": 0.17,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.265,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.35000000000000003,
+          "A_mean": 0.3,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.43500000000000005,
+          "A_mean": 0.365,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.52,
+          "A_mean": 0.43,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6050000000000001,
+          "A_mean": 0.495,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_h2_r2",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 641,
+      "r": 2,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.85,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.01,
+          "A_mean": 0.04,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.095,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.18000000000000002,
+          "A_mean": 0.17,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.265,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.35000000000000003,
+          "A_mean": 0.3,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.43500000000000005,
+          "A_mean": 0.365,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.52,
+          "A_mean": 0.43,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6050000000000001,
+          "A_mean": 0.495,
+          "refit_raw": 0.44,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+      "cell": "v10_rank_relu_relu_r2",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 2,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.005170939859895522,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.6949143932963597,
+      "target_variance": 0.5170939859895523,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.5170939859895523,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.5165768920035627,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.5155427040315836,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.5139914220736149,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.5108888581576776,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.5020982603958553,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.4860683468301791,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "loss_raw": 0.4395298880911194,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.01,
+          "A_mean": 0.04,
+          "refit_raw": 0.4808974069702836,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.095,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.444700827951015,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.18000000000000002,
+          "A_mean": 0.17,
+          "refit_raw": 0.4085042489317463,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.265,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.3723076699124776,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.35000000000000003,
+          "A_mean": 0.3,
+          "refit_raw": 0.33611109089320895,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.43500000000000005,
+          "A_mean": 0.365,
+          "refit_raw": 0.29991451187394036,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.52,
+          "A_mean": 0.43,
+          "refit_raw": 0.26371793285467166,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 35.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6050000000000001,
+          "A_mean": 0.495,
+          "refit_raw": 0.22752135383540298,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r2",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 641,
+      "r": 2,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r2",
+          "rank": 2,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.6949143932963597,
+      "target_variance": 0.5170939859895523,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.5170939859895523,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.5165768920035627,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.5155427040315836,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.5139914220736149,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.5108888581576776,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.5020982603958553,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.4860683468301791,
+          "loss_over_target_variance": 0.94
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "loss_raw": 0.4395298880911194,
+          "loss_over_target_variance": 0.85
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.01,
+          "A_mean": 0.04,
+          "refit_raw": 0.4808974069702836,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.095,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.444700827951015,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.18000000000000002,
+          "A_mean": 0.17,
+          "refit_raw": 0.4085042489317463,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.265,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.3723076699124776,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.35000000000000003,
+          "A_mean": 0.3,
+          "refit_raw": 0.33611109089320895,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.43500000000000005,
+          "A_mean": 0.365,
+          "refit_raw": 0.29991451187394036,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.52,
+          "A_mean": 0.43,
+          "refit_raw": 0.26371793285467166,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 7,
+          "time": 175.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.6050000000000001,
+          "A_mean": 0.495,
+          "refit_raw": 0.22752135383540298,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+      "cell": "v10_rank_relu_h2_r2",
+      "student": "relu",
+      "teacher": "h2",
+      "seed": 642,
+      "r": 2,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.04,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.105,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.19000000000000003,
+          "A_mean": 0.17,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.3,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.365,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.43,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_h2_r2",
+      "student": "swiglu",
+      "teacher": "h2",
+      "seed": 642,
+      "r": 2,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.0,
+      "target_variance": 1.0,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 1.0,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.999,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.997,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.994,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.988,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.971,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.94,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.04,
+          "refit_raw": 0.93,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.105,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.8600000000000001,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.19000000000000003,
+          "A_mean": 0.17,
+          "refit_raw": 0.79,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.72,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.3,
+          "refit_raw": 0.65,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.365,
+          "refit_raw": 0.5800000000000001,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.43,
+          "refit_raw": 0.51,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+      "cell": "v10_rank_relu_relu_r2",
+      "student": "relu",
+      "teacher": "relu",
+      "seed": 642,
+      "r": 2,
+      "d": 64,
+      "m": 256,
+      "scale": 0.01,
+      "head_lr": null,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "accepted_force_time",
+      "config": {
+        "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.005170939859895522,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "target_mean": 0.6949143932963597,
+      "target_variance": 0.5170939859895523,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.5170939859895523,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "loss_raw": 0.5165768920035627,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "loss_raw": 0.5155427040315836,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "loss_raw": 0.5139914220736149,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "loss_raw": 0.5108888581576776,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "loss_raw": 0.5020982603958553,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "loss_raw": 0.4860683468301791,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.04,
+          "refit_raw": 0.4808974069702836,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 5.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.105,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.444700827951015,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 10.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.19000000000000003,
+          "A_mean": 0.17,
+          "refit_raw": 0.4085042489317463,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 15.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.3723076699124776,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 20.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.3,
+          "refit_raw": 0.33611109089320895,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.365,
+          "refit_raw": 0.29991451187394036,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 30.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.43,
+          "refit_raw": 0.26371793285467166,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 15.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 25.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+      "cell": "v10_rank_swiglu_relu_r2",
+      "student": "swiglu",
+      "teacher": "relu",
+      "seed": 642,
+      "r": 2,
+      "d": 64,
+      "m": 64,
+      "scale": 0.1,
+      "head_lr": 0.01,
+      "profiled_intercept": true,
+      "supplemental": false,
+      "time_unit": "adaptive_population_flow_time",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r2",
+          "rank": 2,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "target_mean": 0.6949143932963597,
+      "target_variance": 0.5170939859895523,
+      "process_state": "SYNTHETIC_fixture_exit_zero",
+      "stop_reason": "SYNTHETIC_training_cap",
+      "diagnostics_complete": true,
+      "has_result": true,
+      "issues": [
+        "SYNTHETIC_DATA_NOT_OBSERVATIONS"
+      ],
+      "history": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "loss_raw": 0.5170939859895523,
+          "loss_over_target_variance": 1.0
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "loss_raw": 0.5165768920035627,
+          "loss_over_target_variance": 0.999
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "loss_raw": 0.5155427040315836,
+          "loss_over_target_variance": 0.997
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "loss_raw": 0.5139914220736149,
+          "loss_over_target_variance": 0.994
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "loss_raw": 0.5108888581576776,
+          "loss_over_target_variance": 0.988
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "loss_raw": 0.5020982603958553,
+          "loss_over_target_variance": 0.971
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "loss_raw": 0.4860683468301791,
+          "loss_over_target_variance": 0.94
+        }
+      ],
+      "checkpoints": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.02,
+          "A_mean": 0.04,
+          "refit_raw": 0.4808974069702836,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 1,
+          "time": 25.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.105,
+          "A_mean": 0.10500000000000001,
+          "refit_raw": 0.444700827951015,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 2,
+          "time": 50.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.19000000000000003,
+          "A_mean": 0.17,
+          "refit_raw": 0.4085042489317463,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 3,
+          "time": 75.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.275,
+          "A_mean": 0.23500000000000001,
+          "refit_raw": 0.3723076699124776,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 4,
+          "time": 100.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.36000000000000004,
+          "A_mean": 0.3,
+          "refit_raw": 0.33611109089320895,
+          "agop_screen": false,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 5,
+          "time": 125.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.44500000000000006,
+          "A_mean": 0.365,
+          "refit_raw": 0.29991451187394036,
+          "agop_screen": true,
+          "refit_screen": false,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "step": 6,
+          "time": 150.0,
+          "diagnostic_status": "ok",
+          "A_min": 0.53,
+          "A_mean": 0.43,
+          "refit_raw": 0.26371793285467166,
+          "agop_screen": true,
+          "refit_screen": true,
+          "issues": [
+            "SYNTHETIC"
+          ]
+        }
+      ],
+      "prefixes": {
+        "1.01": {
+          "end_step": 3,
+          "end_time": 75.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        },
+        "1.05": {
+          "end_step": 5,
+          "end_time": 125.0,
+          "right_censored": false,
+          "exit_observed": true,
+          "assessment": "SYNTHETIC_no_candidate",
+          "first_material_candidate": null,
+          "first_numerically_qualified_candidate": null,
+          "first_complete_sequence": null,
+          "first_qualified_complete_sequence": null
+        }
+      }
+    }
+  ],
+  "input_sha256": {},
+  "fixture_provenance": {
+    "kind": "synthetic",
+    "description": "Deterministic artificial curves, gaps, flags, unequal tails and absent seed arms. No rank experiment result read.",
+    "generated_by": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/make_fixture.py",
+    "manifest_sha256": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01"
+  }
+}

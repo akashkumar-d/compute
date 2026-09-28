@@ -1,0 +1,281 @@
+{
+  "created_utc": "2026-09-28T21:17:03.786060+00:00",
+  "status": "prepared_design_not_launchable",
+  "hypothesis": "Coupled Gaussian head scaling and rate scaling may delay prediction relative to useful representation change; it need not prevent single-neuron escape or ensure all-direction learning.",
+  "prerequisite": "Complete v9 higher-order trajectory check before interpreting new positives; separate source/runtime review required before dispatch.",
+  "planned_arms": 6,
+  "independent_seeds": false,
+  "teacher": "raw additive h3 normalized to E[Y^2]=1, r8,d64,m64 SwiGLU",
+  "head_base_rate": 0.01,
+  "head_q_values": [
+    1,
+    0.3,
+    0.1
+  ],
+  "quadrature_orders": [
+    32,
+    96,
+    48,
+    24
+  ],
+  "source_science": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/swiglu/code",
+  "arms": [
+    {
+      "id": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641",
+      "q": 1.0,
+      "seed": 641,
+      "cell": "swiglu_h3_s30_headq100",
+      "config_path": "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json",
+      "config_sha256": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ]
+      },
+      "normalized_clock": "tau=q*t"
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642",
+      "q": 1.0,
+      "seed": 642,
+      "cell": "swiglu_h3_s30_headq100",
+      "config_path": "configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json",
+      "config_sha256": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ]
+      },
+      "normalized_clock": "tau=q*t"
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641",
+      "q": 0.3,
+      "seed": 641,
+      "cell": "swiglu_h3_s30_headq030",
+      "config_path": "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641.json",
+      "config_sha256": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.3
+        ],
+        "dt_max": [
+          50.0,
+          166.66666666666669
+        ],
+        "t_max": [
+          3000.0,
+          10000.0
+        ],
+        "cp_min": [
+          0.5,
+          1.6666666666666667
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0009
+        ]
+      },
+      "normalized_clock": "tau=q*t"
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642",
+      "q": 0.3,
+      "seed": 642,
+      "cell": "swiglu_h3_s30_headq030",
+      "config_path": "configs/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed642.json",
+      "config_sha256": "f4981bf12a33ae4448b60f6ebf2a6bb42d3c8eb26507dcfe05bb0719caf06cf1",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.3
+        ],
+        "dt_max": [
+          50.0,
+          166.66666666666669
+        ],
+        "t_max": [
+          3000.0,
+          10000.0
+        ],
+        "cp_min": [
+          0.5,
+          1.6666666666666667
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0009
+        ]
+      },
+      "normalized_clock": "tau=q*t"
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641",
+      "q": 0.1,
+      "seed": 641,
+      "cell": "swiglu_h3_s30_headq010",
+      "config_path": "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed641.json",
+      "config_sha256": "5e6d65800d2c68f5c9a5f7e6834f913af19a3dbd05364d6619d611c1204d9fb4",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed641.json",
+      "base_config_sha256": "3e7a44c4db27ef580304fd1b3fdb48a4c9eaad0a71a0eb46dde2140557a80f84",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.1
+        ],
+        "dt_max": [
+          50.0,
+          500.0
+        ],
+        "t_max": [
+          3000.0,
+          30000.0
+        ],
+        "cp_min": [
+          0.5,
+          5.0
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0001
+        ]
+      },
+      "normalized_clock": "tau=q*t"
+    },
+    {
+      "id": "v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642",
+      "q": 0.1,
+      "seed": 642,
+      "cell": "swiglu_h3_s30_headq010",
+      "config_path": "configs/v10_swiglu_h3_s30_headq010_r8_d64_m64_seed642.json",
+      "config_sha256": "bc56d307b7fc073d403e51d9b89d8f68d43743ef154142c14bffcd698ed3966f",
+      "base_config": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v8/targeted30/bundle/configs/v8_swiglu_h3_scale30_r8_d64_m64_seed642.json",
+      "base_config_sha256": "44d0640557cad5cf2b2534d7cd658fb3372ac7674ddbece86167346360bb3103",
+      "changes": {
+        "head_ratio": [
+          1.0,
+          0.1
+        ],
+        "dt_max": [
+          50.0,
+          500.0
+        ],
+        "t_max": [
+          3000.0,
+          30000.0
+        ],
+        "cp_min": [
+          0.5,
+          5.0
+        ],
+        "n_pair": [
+          16,
+          32
+        ],
+        "n_diag": [
+          48,
+          96
+        ],
+        "n_z": [
+          24,
+          48
+        ],
+        "n_x": [
+          12,
+          24
+        ],
+        "head_lr": [
+          0.01,
+          0.0001
+        ]
+      },
+      "normalized_clock": "tau=q*t"
+    }
+  ],
+  "compute": "No training, launcher, new runtime or resource amendment is authorized by this file. Existing CPU authorization applies only after concrete bundle/resource review.",
+  "primary_criteria": "Original all-update initial1%/5%maxmin windows, same-state minimum-alignment gain>=.5, cutoff refit gain>=.1Var, later release>=.1Var; keep all failures/censoring.",
+  "not_a_positive_result": true
+}

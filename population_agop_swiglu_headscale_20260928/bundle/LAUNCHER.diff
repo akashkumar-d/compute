@@ -1,0 +1,120 @@
+--- reference/rank_launch.py
++++ launcher/launch.py
+@@ -1,6 +1,6 @@
+-"""Bounded v10 rank-sweep SERVER-only wrapper; dry-run is static.
+-
+-Fork of the reviewed v9 scheduler; pinned v7/v8 scientific sources unchanged.
++"""Bounded v10 cubic head-scaling SERVER-only wrapper; dry-run is static.
++
++Fork of the reviewed rank scheduler; all pinned v8 scientific sources unchanged.
+ """
+ from __future__ import annotations
+ 
+@@ -94,14 +94,14 @@
+     manifest = load_json(manifest_path)
+     runtime = manifest["runtime"]
+     workers = runtime["workers"]
+-    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 28:
+-        raise ValueError("runtime.workers must be an integer from 1 to 28")
++    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 6:
++        raise ValueError("runtime.workers must be an integer from 1 to 6")
+     total = positive_number(runtime["global_seconds"], "global_seconds")
+     arm = positive_number(runtime["per_arm_seconds"], "per_arm_seconds")
+     reserve = positive_number(runtime["diagnostic_reserve_seconds"],
+                               "diagnostic_reserve_seconds", allow_zero=True)
+-    if total > 3600 or arm > 1990 or arm > total or arm <= reserve + CLEANUP_SECONDS:
+-        raise ValueError("Require reserve + 10 < per_arm <= 1990 and per_arm <= global <= 3600 seconds")
++    if total > 2150 or arm > 1990 or arm > total or arm <= reserve + CLEANUP_SECONDS:
++        raise ValueError("Require reserve + 10 < per_arm <= 1990 and per_arm <= global <= 2150 seconds")
+     hashes = manifest["source_sha256"]
+     if not isinstance(hashes, dict) or not hashes:
+         raise ValueError("source_sha256 must be a nonempty relative-path/hash mapping")
+@@ -148,7 +148,7 @@
+ 
+ 
+ def require_server():
+-    """Rank sweep has no local execution mode."""
++    """Head-scaling comparison has no local execution mode."""
+     if sys.platform.startswith('linux') and os.environ.get('AGOP_EXECUTION_SITE') == 'SERVER':
+         return 'SERVER'
+     raise RuntimeError('Execution requires Linux and AGOP_EXECUTION_SITE=SERVER')
+@@ -547,44 +547,38 @@
+ 
+ 
+ def validate_protocol(manifest, root=ROOT):
+-    """Only the independently designed, fixed rank sweep is admitted."""
+-    expected = dict(workers=28, reserved_cpus=4, min_available_memory_gib=32,
+-                    min_free_disk_gib=10, global_seconds=3600, per_arm_seconds=1990,
++    """Admit only the six unchanged, independently reviewed design configs."""
++    expected = dict(workers=6, reserved_cpus=26, min_available_memory_gib=12,
++                    min_free_disk_gib=5, global_seconds=2150, per_arm_seconds=1990,
+                     diagnostic_reserve_seconds=180)
+     if manifest['runtime'] != expected or manifest.get('dependency') is not None:
+-        raise ValueError('Runtime must equal the frozen v10 rank-sweep bounds')
++        raise ValueError('Runtime must equal the frozen six-arm head-scaling bounds')
+     design = load_json(root / 'DESIGN.snapshot.json')
+     if sha256(root / 'DESIGN.snapshot.json') != manifest['design_sha256']:
+         raise ValueError('Design hash changed')
+-    jobs = {j['id']: j for j in design['jobs']}
+-    if len(jobs) != 32 or len(manifest['configs']) != 32:
+-        raise ValueError('Exactly32 designed arms are required')
+-    expected_cells = {(student, teacher, rank, seed)
+-                      for student in ('relu','swiglu') for teacher in ('h2','relu')
+-                      for rank in (2,4,8,16) for seed in (641,642)}
++    if design['planned_arms'] != 6 or len(design['arms']) != 6 or len(manifest['configs']) != 6:
++        raise ValueError('Exactly six independently designed arms are required')
+     observed = set()
+-    queue = []
+-    for entry in manifest['configs']:
+-        job = jobs.get(entry['id'])
+-        if job is None or entry['config'] != job['planned_config']:
+-            raise ValueError('Config differs from the independently declared design')
+-        key = (job['student'],job['teacher'],job['rank'],job['seed'])
+-        if key in observed or key not in expected_cells:
+-            raise ValueError('Missing or duplicate designed rank/teacher/student/seed')
+-        observed.add(key)
+-        if (entry['engine'] != job['student'] or entry['student'] != job['student'] or
+-                entry['teacher'] != job['teacher'] or entry['rank'] != job['rank'] or
+-                entry['seed'] != job['seed']):
+-            raise ValueError('Manifest labels do not match designed config')
+-        cfg = entry['config']
+-        tag = cfg['id'] if entry['engine'] == 'relu' else cfg[0]['tag']
+-        if tag != entry['id']:
+-            raise ValueError('Output id must match scientific config id')
+-        queue.append((-job['rank'],job['seed'],job['teacher'],job['student']))
+-    if observed != expected_cells or queue != sorted(queue):
+-        raise ValueError('Require descending rank then seed/teacher/student interleaved queue')
+-    if manifest.get('criterion') != design['criterion']:
+-        raise ValueError('Success criteria must remain exactly the design criteria')
++    for entry, arm in zip(manifest['configs'], design['arms']):
++        if entry['id'] != arm['id'] or entry['config_path'] != arm['config_path']:
++            raise ValueError('Arm identities and order must match the frozen design')
++        path = relative_file(root, arm['config_path'])
++        if sha256(path) != arm['config_sha256'] or entry['config'] != load_json(path):
++            raise ValueError('Config differs from the independently reviewed original bytes')
++        if entry['configuration_sha256'] != arm['config_sha256']:
++            raise ValueError('Configuration hash differs from design')
++        if (entry['engine'] != 'swiglu' or entry['student'] != 'swiglu' or
++                entry['teacher'] != 'h3' or entry['rank'] != 8 or entry['q'] != arm['q'] or
++                entry['seed'] != arm['seed'] or entry['cell'] != arm['cell']):
++            raise ValueError('Manifest labels do not match the designed head-scaling arm')
++        cfg = entry['config'][0]
++        if cfg['tag'] != entry['id'] or cfg['cell'] != arm['cell']:
++            raise ValueError('Output id/cell must match scientific configuration')
++        observed.add((entry['q'], entry['seed']))
++    if observed != {(q,seed) for q in (1.,.3,.1) for seed in (641,642)}:
++        raise ValueError('Require the complete three-head-ratio by two-seed design')
++    if manifest.get('criterion') != design['primary_criteria']:
++        raise ValueError('Success criteria must remain exactly the reviewed design criteria')
+ 
+ 
+ def require_review(root, manifest_hash):
+@@ -602,7 +596,7 @@
+ 
+     def __enter__(self):
+         import fcntl
+-        self.stream = (self.root / '.rank_sweep.lock').open('a+')
++        self.stream = (self.root / '.headscale.lock').open('a+')
+         try:
+             fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+             self.stream.seek(0)
