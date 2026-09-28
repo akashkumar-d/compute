@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-28T23:42:47.645471+00:00",
+  "scope": "Preparation-only independent review of display-clock adapter; no measured pilot results read.",
+  "input_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/analysis/plot_headscale.py": "3ce147ca77ac4a3c707573ad8e909667415b5d3410d4f29e8677b3e484166705",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/PROTOCOL.md": "4b3452f3ce4983c53d45e3fc592ed733fee34a93474a16ddf686c2945d1ba838",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/bundle/PROTOCOL.snapshot.md": "4b3452f3ce4983c53d45e3fc592ed733fee34a93474a16ddf686c2945d1ba838",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/bundle/MANIFEST.json": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis_rank/plot_rank.py": "30b86e5324157e5af06c82d11f6d55432e036fe8bb17e28fcc7eb8ea699c6d83",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/plot_coverage.py": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/rank_sweep/analysis/summarize_coverage.py": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/analysis/preparation/SYNTHETIC_SUMMARY.json": "891b3266a0928d596eb0849a310ab3b0872ffaedb9501514ebac7f8a089e4ee9"
+  },
+  "clock_checks": {
+    "1.0": {
+      "source_unchanged": true,
+      "only_history_checkpoint_times_and_prefix_end_scaled": true,
+      "physical_candidate_objects_unchanged": true,
+      "raw_values_and_counts_unchanged": true,
+      "aggregate_metrics_flags_byte_identical": true,
+      "shared_support_preserved": true,
+      "missing_gaps_and_finite_unresolved_flags_preserved": true
+    },
+    "0.3": {
+      "source_unchanged": true,
+      "only_history_checkpoint_times_and_prefix_end_scaled": true,
+      "physical_candidate_objects_unchanged": true,
+      "raw_values_and_counts_unchanged": true,
+      "aggregate_metrics_flags_byte_identical": true,
+      "shared_support_preserved": true,
+      "missing_gaps_and_finite_unresolved_flags_preserved": true
+    },
+    "0.1": {
+      "source_unchanged": true,
+      "only_history_checkpoint_times_and_prefix_end_scaled": true,
+      "physical_candidate_objects_unchanged": true,
+      "raw_values_and_counts_unchanged": true,
+      "aggregate_metrics_flags_byte_identical": true,
+      "shared_support_preserved": true,
+      "missing_gaps_and_finite_unresolved_flags_preserved": true
+    }
+  },
+  "aggregate_computed_once_per_q_before_clock_rendering": true,
+  "cells": 3,
+  "planned_arms": 6,
+  "seeds": [
+    641,
+    642
+  ],
+  "q_pooling": false,
+  "source_recipe_guards": [
+    "outer/config seed, link, rank, tag and cell agreement",
+    "fixed head amplitude, head rate, quadrature orders, loss stop, update cap, horizons and clock caps"
+  ],
+  "resolved_findings": [
+    {
+      "finding": "Original recipe guard accepted inconsistent outer/config seed, link or rank, while labels remained fixed.",
+      "resolution": "Parent added exact identity agreement and additional frozen recipe checks.",
+      "independent_verification": "Using matching mutated summaries, seed, link, rank, tag and cell mutations each raise Outer/config manifest identity disagreement before summary/config comparison."
+    }
+  ],
+  "unresolved_findings": [],
+  "parent_focused_test_log": {
+    "path": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/analysis/preparation/CLOCK_TEST_RESULTS.txt",
+    "observed_result": "6 tests passed; independent review did not rerun unchanged tests"
+  },
+  "visual_review": "Not part of this source/clock preparation audit; synthetic gallery reviewed separately by parent.",
+  "model_evaluations": 0,
+  "training_runs": 0,
+  "network_calls": 0,
+  "measured_results_read": false
+}

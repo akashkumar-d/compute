@@ -1,0 +1,86 @@
+{
+  "created_utc": "2026-09-28T23:44:41.505715+00:00",
+  "pass_check": true,
+  "scope": "Preparation only: synthetic saved records. No pilot results read or inferred.",
+  "planned_arms": 6,
+  "q_cells": [
+    1.0,
+    0.3,
+    0.1
+  ],
+  "reused_seeds": [
+    641,
+    642
+  ],
+  "source_sha256": {
+    "plot_headscale.py": "3ce147ca77ac4a3c707573ad8e909667415b5d3410d4f29e8677b3e484166705",
+    "paired_initialization.py": "3c7457dfe8256d679a0d825fa9fe536b761dbcafdac72cbaefd06b0b61bf5702",
+    "test_clock_display.py": "dedc46b4bbd6d39f4efc091d963ed9a859051f1bdacbd9e2785e1ed9fc834e79",
+    "test_paired_initialization.py": "74fe8cd918305ce6e87e0ad9de9dc2bf8d4d1c70ddf6ab5bb2c020b53f3315a5",
+    "README.md": "2521672b8c9134e86562bf2913062c7a415a63e570eff07f442bd45fad94ae7a"
+  },
+  "clock_adapter_tests": {
+    "passed": 6,
+    "log": "CLOCK_TEST_RESULTS.txt",
+    "identity_guard_isolation_strengthened_after_initial_run": true,
+    "strengthened_identity_test_passed": true
+  },
+  "paired_initialization_tests": {
+    "passed": 6,
+    "reported_by": "rank_recovery_review",
+    "reported_elapsed_seconds": 0.702,
+    "no_redundant_rerun": true
+  },
+  "independent_clock_review": "INDEPENDENT_CLOCK_REVIEW.md",
+  "canonical_numerical_sources_unchanged": true,
+  "display_scaling": "Physical aggregation once; only copied x/support and plotting times/prefix endpoints scaled by q.",
+  "raw_values_flags_and_candidate_membership_unchanged": true,
+  "synthetic_gallery": "preparation/synthetic_gallery_v1",
+  "artifact_hashes_verified": 21,
+  "visual_review": {
+    "passed": true,
+    "scope": "Synthetic physical and normalized initial 1% sheets; other modes generated with the same layout but not individually visually inspected.",
+    "images_inspected": [
+      "physical_initial_1pct.png",
+      "normalized_initial_1pct.png"
+    ],
+    "findings": [
+      "Synthetic label prominent; q order 1, 0.3, 0.1 and original colors/black labels retained.",
+      "Normalized clock changes horizontal coordinates only; gaps and numerical warning/censoring headers visible.",
+      "No header/legend/footnote overlap; paired support and seed range, not confidence interval, labels clear."
+    ]
+  },
+  "readme_shell_blocks_parse": 3,
+  "readme_links_resolve": true,
+  "no_training": true,
+  "no_model_evaluation": true,
+  "network_calls": 0,
+  "output_sha256": {
+    "CLOCK_TEST_RESULTS.txt": "a67a34aef35a9024e2a4db63fd598b00b77325f552e4f03f1aa483448eea6fb5",
+    "INDEPENDENT_CLOCK_REVIEW.json": "6fcbec9cf409f05173d37d0de020222ff3d6f76b9b83d310e3f6a287cb960bef",
+    "INDEPENDENT_CLOCK_REVIEW.md": "7c09cf73597ecc9c493bf924edb08d5e7fbe300785a8260ec5bb0824f9c81e50",
+    "SYNTHETIC_SUMMARY.json": "891b3266a0928d596eb0849a310ab3b0872ffaedb9501514ebac7f8a089e4ee9",
+    "synthetic_gallery_v1/INITIALIZATION_AUDIT.json": "699c8a87d9ca16f8a0e3aa0b3b93457a3edc80426c294b33d34f12e9f705da2e",
+    "synthetic_gallery_v1/PLOT_QA.json": "3daa80c61a34bd99e0850dc20f113c1a0003870e8291e9eecaca58eab05d8251",
+    "synthetic_gallery_v1/PROVENANCE.json": "a5b3bc34b3d775eaec2b4ac38e2e499c81e671dedf8b0acfdf2cccc0dbbc2f0e",
+    "synthetic_gallery_v1/RECORDS.json": "277b0ac490b5fa216a072e785ad12d4a37683f0ef0808c1651ed03b1f64db3d2",
+    "synthetic_gallery_v1/REPORT.md": "c1e6b10630cbce739068b793f10a3cc835846fe607bba6e97d40ad67d16e76ad",
+    "synthetic_gallery_v1/aggregate_q010.npz": "8054528bc02a17e352de3dfea8331db1d5fa6a9155ee40c870d0036adb05828e",
+    "synthetic_gallery_v1/aggregate_q030.npz": "a3c1c2cda93c54a93fb56ec89297f94b05ff0256a45729193ffbc96974465268",
+    "synthetic_gallery_v1/aggregate_q100.npz": "c6f3ed5584197598891e30708f329b2e81f9dd5269da738e0bcc6406026bd0ec",
+    "synthetic_gallery_v1/normalized_full.png": "071c42d4a6ecfe4e5d9858119234d5ad11e22b0bbc284a47b55b84a411fffd20",
+    "synthetic_gallery_v1/normalized_full.svg": "85b646a9418d71dd50cf52c3fa198d972481174993bf4fbcfc4a9c66481bee78",
+    "synthetic_gallery_v1/normalized_initial_1pct.png": "5dbf2cc476eeb74e9caeb665c778a0e8190ae66546fd7bb47cd0a4b6b157a24c",
+    "synthetic_gallery_v1/normalized_initial_1pct.svg": "a4f0ac9af1f10347fe8ece1da44c32de27be89cddb4742aae9a2e85b90283dbb",
+    "synthetic_gallery_v1/normalized_initial_5pct.png": "8fb96603670a4e2a96c1ce908992a494cdc0e5c13fec40438b5976c20bf6fc7b",
+    "synthetic_gallery_v1/normalized_initial_5pct.svg": "eba77661dc261c3431439465fc9fb4f93a1550e1c53e4d70a10e1d0fac2ce505",
+    "synthetic_gallery_v1/normalized_sheets.pdf": "1ed1d55cdf6432c9145332259ea53ed81468871e88185047d157bde57d197cec",
+    "synthetic_gallery_v1/physical_full.png": "fdae8f6852c8b87e0614eca71c8a11515763496d2db25d30db0b151f85c07796",
+    "synthetic_gallery_v1/physical_full.svg": "912e29531ef0fb4cbf943ada8be5c5773593117d076b3d566d0d513a09adc39d",
+    "synthetic_gallery_v1/physical_initial_1pct.png": "abd20641a4475f94a7021191b40f7a1f450fdc28340fbcae05379a8d3cf2ad36",
+    "synthetic_gallery_v1/physical_initial_1pct.svg": "74303a2bbfbccf11ffaf2cadb2e1461681fc630d57cc59fd89319e02349d2b34",
+    "synthetic_gallery_v1/physical_initial_5pct.png": "d88f481461b7b2176536de62c756fb7a0bf1526eead6ba1cc5b1a5949ead69d3",
+    "synthetic_gallery_v1/physical_initial_5pct.svg": "5928d2e91f5c32dda6752e733b0742bd1b90e0ade4c6e5ecfe1cbc251f8c07bc",
+    "synthetic_gallery_v1/physical_sheets.pdf": "6ed985967b18ae9de7bfddb4e95987b6bfe5e7551b703efc98f40ff195dd8f34"
+  }
+}
