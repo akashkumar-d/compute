@@ -1,0 +1,11 @@
+# Separate-host deployment review
+
+Independent reviewer: /root/new_cpu_dispatch_review. Verdict: PASS for preparation; dispatch requires confirmedtargetidentity/capacity.
+
+All28configurations,order,runtimelimits,launcher andscientificsources remainbyte-identical tov2. Changesaredependency:null,deploymentmetadata,protocoladdendum,isolatedenvironment andthreepinnedpackages. Allmanifesthashesmatch. StaticdryrunandshellsyntaxchecksPASS;notraining.
+
+Oldattemptcloseoutwasindependentlyverified:queue_timeout,exit124at2026-09-28T10:54:37Z,28pending,0active/completed,nullcomputetime.
+
+ReviewedmanifestSHA256:38eded8ee2924b85856d53b54cfe8938a3f05d387c28e9bb3d038be1708f3cce.
+
+Beforeexecution,identifytheintendednewhost,verifyCPUcapacityandPythoncompatibility;recordresolvedhost/refreshmanifestifmetadatachanges. Newhostmustpassitsownnumericalpreflight. No hardwarewasstarted,andcandidatechosen-blush-blzpwasnotassumedtobetheintendedinstance.

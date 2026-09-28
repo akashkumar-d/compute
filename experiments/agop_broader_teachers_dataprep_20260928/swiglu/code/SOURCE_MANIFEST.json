@@ -1,0 +1,76 @@
+{
+  "schema": "higher-rank-swiglu-source-v1",
+  "created_utc": "2026-09-27T09:06:02.309327+00:00",
+  "origin": "population_agop_scaling_1h_v1/swiglu/code",
+  "numerical_method": "adaptive Euler approximation to population gradient flow; not fixed-step GD",
+  "engine_changes": "none: all four engine files are byte-identical",
+  "wrapper_changes": [
+    "generic safe unique-tag and rank/dimension/width validation",
+    "mandatory timezone-aware deadline",
+    "Linux and AGOP_EXECUTION_SITE=SERVER production guard",
+    "actual source/config/diagnostic-schema hashes in launch records"
+  ],
+  "diagnostic_changes": [
+    "original corrected refit and alignment calculations unchanged",
+    "full AGOP spectrum, principal cosines, teacher-axis captures and teacher-energy geometry",
+    "separate full-rank and leading numerical resolution flags at 1e-9 with PSD guard"
+  ],
+  "spectral_formula_origin": "population_agop_scaling_1h_v1/analysis/audit_swiglu_frozen.py:high_metrics",
+  "configuration_policy": "Parent owns frozen configs; each launch hashes the supplied configuration file.",
+  "files": {
+    "README.md": {
+      "current_sha256": "4e9434b1346285f595be1cee256dc2c1c0477fc41ec54283940fa7c9879344f1",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/README.md",
+      "source_sha256": "88452247f6918a69fa5a834fa5b56dc70b6bf3bde1308bc1e6fc7d83c3171b1a",
+      "byte_identical_to_source": false
+    },
+    "diagnostics.py": {
+      "current_sha256": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/diagnostics.py",
+      "source_sha256": "3ab1739653636b1a112b575084c35e5d34eb48e1f162b3da5c8923638803a027",
+      "byte_identical_to_source": false
+    },
+    "engine/swpop.py": {
+      "current_sha256": "696b23f9e4dcf5736ed47998388e649f499f1f5be73791f1e5af718bf4f7f328",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/engine/swpop.py",
+      "source_sha256": "696b23f9e4dcf5736ed47998388e649f499f1f5be73791f1e5af718bf4f7f328",
+      "byte_identical_to_source": true
+    },
+    "engine/swsmall.py": {
+      "current_sha256": "4fe256b4d8154f4f075c73df8c0b8717a1fb4bb023d599b95011268a99e44040",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/engine/swsmall.py",
+      "source_sha256": "4fe256b4d8154f4f075c73df8c0b8717a1fb4bb023d599b95011268a99e44040",
+      "byte_identical_to_source": true
+    },
+    "engine/swsmall_periodic.py": {
+      "current_sha256": "dd9a18d6bb21d9ff953fba08e334c8e4119304e6305017a23a972f7711639355",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/engine/swsmall_periodic.py",
+      "source_sha256": "dd9a18d6bb21d9ff953fba08e334c8e4119304e6305017a23a972f7711639355",
+      "byte_identical_to_source": true
+    },
+    "engine/vlab.py": {
+      "current_sha256": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/engine/vlab.py",
+      "source_sha256": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+      "byte_identical_to_source": true
+    },
+    "requirements.txt": {
+      "current_sha256": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/requirements.txt",
+      "source_sha256": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+      "byte_identical_to_source": true
+    },
+    "run_one.py": {
+      "current_sha256": "0b4c3739548c544142945333eb5101d659fd2ac2c8e9727674e627481f21bb6e",
+      "source_path": "population_agop_scaling_1h_v1/swiglu/code/run_one.py",
+      "source_sha256": "5bb87963e9b2e3cf471592c61176bb6ef9ef80539ef9322f12815a05db556f77",
+      "byte_identical_to_source": false
+    },
+    "smoke_configs.json": {
+      "current_sha256": "74e0b1923cbdec9b41e7f6eaa136c245d1589eda36638fff072ca98167352eb2",
+      "source_path": null,
+      "source_sha256": null,
+      "byte_identical_to_source": false
+    }
+  }
+}

@@ -1,0 +1,784 @@
+{
+  "protocol_version": "broader_teachers_v2",
+  "created_before_outcomes": true,
+  "phase": "rank8_development_screen",
+  "runtime": {
+    "workers": 4,
+    "global_seconds": 3300,
+    "per_arm_seconds": 480,
+    "diagnostic_reserve_seconds": 140
+  },
+  "dependency": null,
+  "source_sha256": {
+    "PROTOCOL.md": "00fb1bc61c3a9aa89ae252107f92c63c9dbe4c7a0c5dfb7e2d96d8a021cb6bc2",
+    "analysis/summarize.py": "91cc5c9f8d8d151fa5e68d1d49d18bcf9b09afb6bc78204d1cfdb21846ed3ae0",
+    "analysis/test_summarize.py": "e3e760bece9220d1af77e59d7b0cc96f801555748fadfe8ccf455903803e076b",
+    "checks/server_preflight.py": "01c5700cd67eabaa0ea7063d50119b5f18b068d3b8aa661c08e4cd8dcaa31948",
+    "code/frames.py": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+    "code/population.py": "dfb863648efaccac9f4be3d103c6d920dcb1f59cd9458bff4a000c7dbbbea488",
+    "code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "code/scaling_run.py": "e941d0b71dbf11fa56257b71b1aeea7bd4aa13281328c0b4a5891436f4d424a7",
+    "code/teachers_extra.py": "a0e9d12035a3fbe57b47a292a95a88fbe19355aee8b06ffa75e55a99a4b7cb11",
+    "code/teachers_product.py": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1",
+    "configs/relu_abs_r8_d64_m128_s1e-4_seed501.json": "def45e8caabae792349eef9ca33c0a102a5f4895f275d8bbbad09f57ce9ec16e",
+    "configs/relu_abs_r8_d64_m128_s1e-4_seed502.json": "776e7a8a76dcbceb811fa0971fb37098a27f69373c6c643c50d98d440f2643ae",
+    "configs/relu_damped_2_3_r8_d64_m128_s1e-4_seed501.json": "434faeed59b87f288cbe05d137ace290d05fc33793709c4ed826fefc96fa5dc6",
+    "configs/relu_damped_2_3_r8_d64_m128_s1e-4_seed502.json": "2b1369d66a64553d036a8a056133b479d23ba449bb8da787f5c2d2da5a316c65",
+    "configs/relu_h2_r8_d64_m128_s1e-4_seed501.json": "9ff9d18fb8ff817b7a56c615d3d7738735afc7d4ad9e09b28093dcef40003ece",
+    "configs/relu_h2_r8_d64_m128_s1e-4_seed502.json": "24ac55620a23fcc139c6db7721a18c38b87d982638ea7e810d351fcc05736a6b",
+    "configs/relu_h3_plus_h5_r8_d64_m128_s1e-4_seed501.json": "9a15c99b6208f58d6a967ace1cdb22a8046ff3f26385d45d3b2c3b4091e8e2f7",
+    "configs/relu_h3_plus_h5_r8_d64_m128_s1e-4_seed502.json": "467eb2cda72bf884213ab2185b45b8522a7e82d704931e5d8050c6f511f399ce",
+    "configs/relu_h3_plus_sine_r8_d64_m128_s1e-4_seed501.json": "5e04e0b8ab6802b0c74ce8e63581cb63138e05ac33c3a8f6dc7182e3d3e0570c",
+    "configs/relu_h3_plus_sine_r8_d64_m128_s1e-4_seed502.json": "f01dab07e13e587777e7ff25bc5c0c214dafcc0e2d3ce9d9e1062c1138fe212d",
+    "configs/relu_h3_r8_d64_m128_s1e-4_seed501.json": "48a3bc27bd58c9fe64c11699d0efe9238890c485915236cc50246fa5c72b23fb",
+    "configs/relu_h3_r8_d64_m128_s1e-4_seed502.json": "416f3cb764cd41e86dd163c3dd276b85d44f836c767f5c5e9105d98ee610a171",
+    "configs/relu_h4_r8_d64_m128_s1e-4_seed501.json": "7905962ea8acadeabef365f3a4a325ff5f3f9a58a833d05d3fc7fcbfb45f6ee6",
+    "configs/relu_h4_r8_d64_m128_s1e-4_seed502.json": "3c86c1c32294c0ce21956803f58c116d64496a0d4e992f2314625c86fd7180f1",
+    "configs/relu_relu_r8_d64_m128_s1e-4_seed501.json": "dc6f77d999b5bc09aa8db746726acd3e3be0cc0b064777cb73b8c4c7646c748e",
+    "configs/relu_relu_r8_d64_m128_s1e-4_seed502.json": "ca0e154ba254a7fa43f6696cc966ce835a18e67e6903fcf572bbf16acf2bfe32",
+    "configs/relu_sine_r8_d64_m128_s1e-4_seed501.json": "7c34a88e29f0a3ae74ce67df6b650d880c4b169c75a567a2e1662d0e2d18ae32",
+    "configs/relu_sine_r8_d64_m128_s1e-4_seed502.json": "c116db12444f3964b998740248816998aab4540b981d4f1d1daa5fd8b8d810f1",
+    "configs/relu_three_atom_r8_d64_m128_s1e-4_seed501.json": "b3adba9973611f62975fb13034b474bd3b2be47ab144cd42f77032a43fa6dfce",
+    "configs/relu_three_atom_r8_d64_m128_s1e-4_seed502.json": "89222c348644c4702d3fd1efed7c39df2bb8642253292367091cadf3fb637719",
+    "configs/swiglu_he2_r8_d64_m64_s0p05_seed501.json": "06aeb4ae015fd843e077ffab45ed58558995c1a59fb09fbd005c97f55a2cbc95",
+    "configs/swiglu_he2_r8_d64_m64_s0p05_seed502.json": "1233e94ebf4fbdac49703eb72cc58b61f113cb0ecee4cd9fb45a5a7af32ffd3d",
+    "configs/swiglu_he3_r8_d64_m64_s0p05_seed501.json": "fb3e12d05e31f2a07cba2f1281d5894f26b5f135b754288dd17d0e61253f1353",
+    "configs/swiglu_he3_r8_d64_m64_s0p05_seed502.json": "5de1e37f3d7d04051ca2eac6ca9da1f89a634cfafb10fbc27eafac8cee81b771",
+    "configs/swiglu_relu_r8_d64_m64_s0p05_seed501.json": "dd0b1d588b5d76f6bcad31e13e55a403e5e9f9254de215df2b81b101ffbf1153",
+    "configs/swiglu_relu_r8_d64_m64_s0p05_seed502.json": "ab3e08d8fbb52557caed08c1ded951863b34bc45fff5aaddeaf54ab36f521491",
+    "configs/swiglu_tanh_r8_d64_m64_s0p05_seed501.json": "87a1e6130594c69262b076f2ca6bde9ed6a52907a847dadf4ead073b7198a5d6",
+    "configs/swiglu_tanh_r8_d64_m64_s0p05_seed502.json": "dcbeeddc61c294ab0cfd32cf60f03efb5e3891cd27e228fc33a9e0a22eaa06e0",
+    "dispatch_server.sh": "6f806402c82a0a0924423b56aa23ae6116dcf7b1c0acbfd3123b3e4baeae4727",
+    "launcher/launch.py": "7667508a90bb5905f7bfc52c0e98f6d66eb4a3ed686a8cb942eb83b0a2fd6244",
+    "launcher/test_launch.py": "ca96f1ec63a63a31f24a5925c3b4c450e4788c09de167af94870c240f0e6e1e3",
+    "requirements.txt": "c9a6956dbf73f5e73d70afa303c851c246d87533cf02d563a8aac1cc7290629d",
+    "swiglu/code/SOURCE_MANIFEST.json": "0a183543847933bb4cfeb4da3ed9b10c99a11b228b459d4fa85d0a871ac6c748",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/swpop.py": "696b23f9e4dcf5736ed47998388e649f499f1f5be73791f1e5af718bf4f7f328",
+    "swiglu/code/engine/swsmall.py": "4fe256b4d8154f4f075c73df8c0b8717a1fb4bb023d599b95011268a99e44040",
+    "swiglu/code/engine/swsmall_periodic.py": "dd9a18d6bb21d9ff953fba08e334c8e4119304e6305017a23a972f7711639355",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/run_one.py": "0b4c3739548c544142945333eb5101d659fd2ac2c8e9727674e627481f21bb6e",
+    "swiglu/code/smoke_configs.json": "74e0b1923cbdec9b41e7f6eaa136c245d1589eda36638fff072ca98167352eb2"
+  },
+  "configs": [
+    {
+      "id": "relu_h3_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_h3_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_h3_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h3_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_h3_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_h3_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "swiglu_he3_r8_d64_m64_s0p05_seed501",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_he3_r8_d64_m64_s0p05_seed501.json",
+      "config": [
+        {
+          "tag": "swiglu_he3_r8_d64_m64_s0p05_seed501",
+          "cell": "he3_rank8",
+          "rank": 8,
+          "args": {
+            "link": "he3",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 501
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiglu_he3_r8_d64_m64_s0p05_seed502",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_he3_r8_d64_m64_s0p05_seed502.json",
+      "config": [
+        {
+          "tag": "swiglu_he3_r8_d64_m64_s0p05_seed502",
+          "cell": "he3_rank8",
+          "rank": 8,
+          "args": {
+            "link": "he3",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 502
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_damped_2_3_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_damped_2_3_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_damped_2_3_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "damped_2_3",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_damped_2_3_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_damped_2_3_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_damped_2_3_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "damped_2_3",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "swiglu_he2_r8_d64_m64_s0p05_seed501",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_he2_r8_d64_m64_s0p05_seed501.json",
+      "config": [
+        {
+          "tag": "swiglu_he2_r8_d64_m64_s0p05_seed501",
+          "cell": "he2_rank8",
+          "rank": 8,
+          "args": {
+            "link": "he2",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 501
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiglu_he2_r8_d64_m64_s0p05_seed502",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_he2_r8_d64_m64_s0p05_seed502.json",
+      "config": [
+        {
+          "tag": "swiglu_he2_r8_d64_m64_s0p05_seed502",
+          "cell": "he2_rank8",
+          "rank": 8,
+          "args": {
+            "link": "he2",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 502
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_three_atom_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_three_atom_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_three_atom_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "three_atom",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_three_atom_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_three_atom_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_three_atom_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "three_atom",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "swiglu_relu_r8_d64_m64_s0p05_seed501",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_relu_r8_d64_m64_s0p05_seed501.json",
+      "config": [
+        {
+          "tag": "swiglu_relu_r8_d64_m64_s0p05_seed501",
+          "cell": "relu_rank8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 501
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiglu_relu_r8_d64_m64_s0p05_seed502",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_relu_r8_d64_m64_s0p05_seed502.json",
+      "config": [
+        {
+          "tag": "swiglu_relu_r8_d64_m64_s0p05_seed502",
+          "cell": "relu_rank8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 502
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h3_plus_h5_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_h3_plus_h5_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_h3_plus_h5_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3_plus_h5",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h3_plus_h5_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_h3_plus_h5_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_h3_plus_h5_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3_plus_h5",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "swiglu_tanh_r8_d64_m64_s0p05_seed501",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_tanh_r8_d64_m64_s0p05_seed501.json",
+      "config": [
+        {
+          "tag": "swiglu_tanh_r8_d64_m64_s0p05_seed501",
+          "cell": "tanh_rank8",
+          "rank": 8,
+          "args": {
+            "link": "tanh",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 501
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiglu_tanh_r8_d64_m64_s0p05_seed502",
+      "engine": "swiglu",
+      "config_path": "configs/swiglu_tanh_r8_d64_m64_s0p05_seed502.json",
+      "config": [
+        {
+          "tag": "swiglu_tanh_r8_d64_m64_s0p05_seed502",
+          "cell": "tanh_rank8",
+          "rank": 8,
+          "args": {
+            "link": "tanh",
+            "alpha": 1.0,
+            "s": 0.05,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 1000000.0,
+            "L_stop": 0.5,
+            "max_steps": 1000,
+            "cp_ratio": 1.15,
+            "cp_min": 1.0,
+            "dl_ratio": 2.0,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 502
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h3_plus_sine_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_h3_plus_sine_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_h3_plus_sine_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3_plus_sine",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h3_plus_sine_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_h3_plus_sine_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_h3_plus_sine_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3_plus_sine",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h2_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_h2_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_h2_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h2_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_h2_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_h2_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h4_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_h4_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_h4_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h4",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_h4_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_h4_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_h4_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h4",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_sine_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_sine_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_sine_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_sine_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_sine_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_sine_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_relu_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_relu_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_relu_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_relu_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_relu_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_relu_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_abs_r8_d64_m128_s1e-4_seed501",
+      "engine": "relu",
+      "config_path": "configs/relu_abs_r8_d64_m128_s1e-4_seed501.json",
+      "config": {
+        "id": "relu_abs_r8_d64_m128_s1e-4_seed501",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "abs",
+        "seed": 501,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    },
+    {
+      "id": "relu_abs_r8_d64_m128_s1e-4_seed502",
+      "engine": "relu",
+      "config_path": "configs/relu_abs_r8_d64_m128_s1e-4_seed502.json",
+      "config": {
+        "id": "relu_abs_r8_d64_m128_s1e-4_seed502",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "abs",
+        "seed": 502,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000
+      }
+    }
+  ],
+  "deployment": {
+    "revision": "separate_dataprep_cpu_v3",
+    "previous_manifest_sha256": "bfd255e877bb010f3266a23fb88c3fee7a4480014f67d1d98eae6c4774e1d4b3",
+    "previous_attempt": "agop-broader-teachers-20260928-v2",
+    "previous_terminal_status": "queue_timeout_no_training",
+    "new_host": {
+      "studio": "scratch-studio-devbox",
+      "studio_id": "01m38pn3v7v1zpfya02kwdyz3m",
+      "machine": "DATA_PREP",
+      "verified_cpu_count": 32,
+      "host": "computeinstance-e00q87ta26vg1hxsbn"
+    },
+    "capacity_release": "User-authorized p61 pause; new machine has no prior training PIDs. No p61 completion is inferred."
+  }
+}
