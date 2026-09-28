@@ -1,0 +1,11 @@
+{
+  "issue": "Inherited summary grouped repeated recipes by teacher; per-arm records and figures already kept recipes separate.",
+  "fixed_scope": "Group by student,teacher,declaredcell; no per-arm calculation change",
+  "changed_function_only": "build_cells",
+  "v7_all28cells_exactly_unchanged": true,
+  "v8_distinct_cells": 15,
+  "all_pairs_exact641642": true,
+  "all_planned_denominators2": true,
+  "old_sha256": "fe0aedb926eafff5adcc966c3dc5042e2263da83e7e33ff6b5210f36a9e6ae0c",
+  "new_sha256": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166"
+}

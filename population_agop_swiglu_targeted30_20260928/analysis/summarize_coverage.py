@@ -367,8 +367,8 @@ def build_cells(arms):
     groups={}
     for a in arms:
         if a['supplemental']:continue
-        groups.setdefault(a['student']+'_'+a['teacher'],[]).append(a)
-    return [dict(cell=k,student=v[0]['student'],teacher=v[0]['teacher'],comparison_class=v[0].get('comparison_class'),certificate=v[0].get('certificate'),planned_seeds=[a['seed'] for a in v],run_ids=[a['id'] for a in v],windows={str(r):dict(planned=len(v),material_candidates=sum(bool(a['prefixes'][str(r)].get('first_material_candidate')) for a in v),numerically_qualified_candidates=sum(bool(a['prefixes'][str(r)].get('first_numerically_qualified_candidate')) for a in v),complete_sequences=sum(bool(a['prefixes'][str(r)].get('first_complete_sequence')) for a in v),assessments=dict(collections.Counter(a['prefixes'][str(r)]['assessment'] for a in v))) for r in RATIOS}) for k,v in groups.items()]
+        groups.setdefault((a['student'],a['teacher'],a['cell']),[]).append(a)
+    return [dict(cell=k[2],student=v[0]['student'],teacher=v[0]['teacher'],comparison_class=v[0].get('comparison_class'),certificate=v[0].get('certificate'),planned_seeds=[a['seed'] for a in v],run_ids=[a['id'] for a in v],windows={str(r):dict(planned=len(v),material_candidates=sum(bool(a['prefixes'][str(r)].get('first_material_candidate')) for a in v),numerically_qualified_candidates=sum(bool(a['prefixes'][str(r)].get('first_numerically_qualified_candidate')) for a in v),complete_sequences=sum(bool(a['prefixes'][str(r)].get('first_complete_sequence')) for a in v),assessments=dict(collections.Counter(a['prefixes'][str(r)]['assessment'] for a in v))) for r in RATIOS}) for k,v in groups.items()]
 
 def summarize(manifest_path,execution_path):
     manifest_path=Path(manifest_path).resolve();execution_path=Path(execution_path).resolve();reader=Reader();m=reader.read(manifest_path)
