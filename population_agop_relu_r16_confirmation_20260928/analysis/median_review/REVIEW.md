@@ -1,0 +1,12 @@
+# Independent four-seed median adapter review
+
+**PASS — no actionable findings.** Reviewed `../report_confirmation.py` and the completed `../report_a01/` against the saved canonical summary. This is a reporting review, with no model evaluation, training, network activity or source modification.
+
+- Every aggregate requires all four prescribed fresh seeds 9351–9354 in order. Missing, reordered and development-seed cohorts are rejected. The fixed manifest/recipe checks retain the confirmation denominator of four and exclude development seeds 641/642.
+- Independently checked 48 per-seed saved arrays and 20 aggregate arrays across loss, minimum/mean AGOP alignment and refit. Each metric has 625 common-grid points with four finite supporting values in this completed cohort. Every plotted median equals the mean of the middle two sorted values; the range is the minimum/maximum. These are not four-seed means: the maximum actual median–mean difference is 0.1156804855 for minimum AGOP alignment.
+- Seven bounded synthetic adapter cases passed: asymmetric median-versus-mean arithmetic; finite unresolved values retained with false flags; a missing seed diagnostic removing adjacent aggregate intervals; shorter diagnostic support preventing extrapolation; one absent history; disjoint history support; and cohort validation. A missing value in just one seed leaves the aggregate missing even when the other three are finite.
+- All 648 tracked input hashes and 18 output hashes matched the saved provenance. There are no unavailable source paths. The canonical plotter and summarizer match their pinned hashes; they were not modified. Detailed source hashes are in `REVIEW.json`.
+- Visually inspected `four_seed_median.png` and `seeds_initial_1pct.png`. Headers and labels are readable; singleton columns show 1/1, median columns show 4/4, and diagnostic coverage and loss censoring are distinct. SVG text checks cover all four sheets and confirm no inherited /2 denominator remains.
+- The figures state that bands are seed ranges, not confidence intervals; their medians require four-seed finite support; counts come from saved checkpoints; and four runs do not establish high probability. The full sheet preserves individual observed tails, while shared median zooms use the minimum of the four loss-only prefix endpoints.
+
+This review confirms saved-data aggregation and presentation. It does not add numerical certificates, quadrature checks or independent scientific validation of the underlying training runs.
