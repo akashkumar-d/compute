@@ -18,3 +18,4 @@ Format: `UTC time | B | task | status | key numbers | where`
 2026-09-28T02:19Z | B | T22 | started | Claude Code cloud container (Intel Xeon 2.1 GHz, 4 cores, numpy 2.4.6), 4 workers, 1 BLAS thread each | results/T22_depth5_recipe_stage1/
 2026-09-28T03:32Z | B | T22 | done | flat window 16.3k / 16.1k / 17.8k / 16.6k steps (s1 / s2 / s3 / s4) at 0.59–0.60·log p, test inside it 0.02→0.60 / 0.03→0.71 / 0.07→0.83 / 0.10→0.72; t10 = 31,940 / 30,120 / 28,160 / 27,320; CE range over grokking 7.4% / 5.8% / 4.9% / 6.5% (drift −7.3% / −5.3% / −3.0% / −3.7%) | results/T22_depth5_recipe_stage1/SUMMARY.md
 2026-09-28T03:32Z | B | queue | waiting | ready for T23 once A lists its batch file | TASKS.md
+2026-09-28T04:29Z | B | T23 | started | Claude Code cloud container (Intel Xeon 2.1 GHz, 4 cores, numpy 2.4.6), 4 workers, 1 BLAS thread each | results/T23_depth5_recipe_stage2/
