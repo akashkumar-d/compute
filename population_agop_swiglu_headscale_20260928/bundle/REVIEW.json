@@ -1,9 +1,24 @@
 {
-  "status": "pending_independent_runtime_review",
+  "status": "approved_for_execution",
+  "manifest_sha256": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+  "reviewer": "codex/root, following independent scaling/runtime review and completed v9 audit",
+  "reviewed_utc": "2026-09-28T23:27:56.722288+00:00",
   "execution_launched": false,
-  "dispatch_prerequisites": [
-    "v9 validation reviewed",
-    "Other task training workers<=24, combined<=30, checked immediately before launch",
-    "Source/config/runtime review against exact manifest hash"
+  "checks": [
+    "Read independent concrete-bundle review: unchanged11scientificfiles, exact6configs,34pins and24already-passing mocktests; no changes since review",
+    "Independently rechecked all34 frozen file hashes and exact manifest7042a395; no scientific evaluation locally",
+    "Completed v9 higher-order trajectory and independent arithmetic reviewed; 5%jointcandidate/laterrelease retained,1%nonobserved,54/54diagnostics,88inputs unchanged",
+    "Fresh live32CPU capacity check: zero other taskworkers, six additional <=30; runtime requires12GiB,5GiB,verifiednice10,singlethread",
+    "Allsixdevelopment outcomes retained; two reusedseeds, fixed q1/.3/.1, unchanged criteria, physical andq-scaledclocks both reported"
+  ],
+  "dependency_evidence": {
+    "v9_report_sha256": "40454ea194ef677bd066f7abba3a4052a6f74426648dcf3c8aff07ef4ffcc655",
+    "v9_qa_sha256": "7a20fce6bf6e04ac7b5afe62759172eb28e0b645f88c4fb74fffbbcc4dd6618d",
+    "capacity_sha256": "e58e0d7feae8a7e05396adb49bd2608c50ac896ac3da8908e04c88f6a16f2dcb"
+  },
+  "limitations": [
+    "Approval of bounded numericalpilot only; newcubictrajectories needtheir own numericalaudit",
+    "No claim of populationcertificate, stepconvergence, or highprobability",
+    "Physicalclockrescaling alone is notfeaturelearning; same-stateAmin/refitgain required"
   ]
 }

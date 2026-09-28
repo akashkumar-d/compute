@@ -1,0 +1,71 @@
+{
+  "review": {
+    "status": "approved_for_execution",
+    "manifest_sha256": "7042a39550d2499d656dd6ae5a3d8a7795d40df83641ae603518a795f98477e0",
+    "reviewer": "codex/root, following independent scaling/runtime review and completed v9 audit",
+    "reviewed_utc": "2026-09-28T23:27:56.722288+00:00",
+    "execution_launched": false,
+    "checks": [
+      "Read independent concrete-bundle review: unchanged11scientificfiles, exact6configs,34pins and24already-passing mocktests; no changes since review",
+      "Independently rechecked all34 frozen file hashes and exact manifest7042a395; no scientific evaluation locally",
+      "Completed v9 higher-order trajectory and independent arithmetic reviewed; 5%jointcandidate/laterrelease retained,1%nonobserved,54/54diagnostics,88inputs unchanged",
+      "Fresh live32CPU capacity check: zero other taskworkers, six additional <=30; runtime requires12GiB,5GiB,verifiednice10,singlethread",
+      "Allsixdevelopment outcomes retained; two reusedseeds, fixed q1/.3/.1, unchanged criteria, physical andq-scaledclocks both reported"
+    ],
+    "dependency_evidence": {
+      "v9_report_sha256": "40454ea194ef677bd066f7abba3a4052a6f74426648dcf3c8aff07ef4ffcc655",
+      "v9_qa_sha256": "7a20fce6bf6e04ac7b5afe62759172eb28e0b645f88c4fb74fffbbcc4dd6618d",
+      "capacity_sha256": "e58e0d7feae8a7e05396adb49bd2608c50ac896ac3da8908e04c88f6a16f2dcb"
+    },
+    "limitations": [
+      "Approval of bounded numericalpilot only; newcubictrajectories needtheir own numericalaudit",
+      "No claim of populationcertificate, stepconvergence, or highprobability",
+      "Physicalclockrescaling alone is notfeaturelearning; same-stateAmin/refitgain required"
+    ]
+  },
+  "capacity": {
+    "checked_utc": "2026-09-28T23:27:09.119808+00:00",
+    "affinity_cpus": 32,
+    "other_task_workers": [],
+    "other_task_worker_count": 0,
+    "six_additional_within30": true
+  },
+  "v9_qa": {
+    "status": "PASS",
+    "created_utc": "2026-09-28T23:19:26.607557+00:00",
+    "scope": "Saved-data audit and independent arithmetic agreement",
+    "canonical_reader_unchanged": true,
+    "full_prefixes_cross_checked": 4,
+    "independent_candidate_fields_exactly_match": true,
+    "order4_preserved_old_dense_states": 438,
+    "order4_preserved_old_snapshots": 45,
+    "order4_preserved_successful_diagnostics": 29,
+    "order4_completed_diagnostics": 54,
+    "common_parameter_states": 53,
+    "input_files_hashed": 88,
+    "all_inputs_still_unchanged": true,
+    "syntax_pass": true,
+    "formal_certificate": false,
+    "model_evaluations": 0,
+    "training_runs": 0,
+    "network_calls": 0,
+    "old_data_edits": 0,
+    "notes": [
+      "One reused development seed. Two quadrature trajectories; continuation not an extra run.",
+      "Independent report uses order2 parameter-norm denominator; main report uses order4, explicitly labeled.",
+      "Original interrupted execution summary retained separately, not silently rewritten."
+    ],
+    "output_sha256": {
+      "COMMON_SNAPSHOT_COMPARISON.json": "afda6c17b762756e38d90bbd69ea902dd8fd7a586d3bf7e20ab22a9e958b4116",
+      "INDEPENDENT_ARITHMETIC.json": "890f7a8ec06e58a43bec50c764d943bd54580c34795db0b4690183cf2b2816fa",
+      "INDEPENDENT_ARITHMETIC.md": "3f4bfb52a89642faf93cdc1af9b7e5570e8a851291f0032d9eed7df56871fe1c",
+      "ORDER4_SUMMARY.json": "ccf58c31a1a76d551fd1c7eb78bc55ba2f5be305d9532189caefee0bd43236a4",
+      "ORDER4_SUMMARY.md": "7cdfdb3474d1ef32bab531da4341ab14a04d99aa39ef8251caed87d930fab165",
+      "ORIGINAL_EXECUTION_SUMMARY.json": "6c72ade4d96a13d12e1a2a4a10e7881db8bd84f05d799b69a6249174adb70db3",
+      "ORIGINAL_EXECUTION_SUMMARY.md": "d37a3ae5b46604083b928b9639a22b03517000aa4d140bd9700f7a0ad07e8e8e",
+      "REPORT.md": "40454ea194ef677bd066f7abba3a4052a6f74426648dcf3c8aff07ef4ffcc655",
+      "VALIDATION.json": "e551a7a5dea8f68957bdcb156e7926ea420c49284d276f3b05320be4f5150032",
+      "reproduce.py": "83882432f100a65610991a2d9c7378a2fc3ad8544ae78f02a407c0d1967d357c"
+    }
+  }
+}
