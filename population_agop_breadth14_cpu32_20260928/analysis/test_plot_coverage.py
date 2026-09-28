@@ -58,11 +58,16 @@ assert len(p.grouping({'arms':unstarted},True))==1 and p.aggregate(unstarted) is
 for key in ('r','d','m','scale','head_lr','profiled_intercept'):unstarted[0].pop(key,None)
 unstarted[0]['time_unit']=None
 assert len(p.grouping({'arms':unstarted},True))==1 and p.aggregate(unstarted) is None
+p.configure();fig=p.plt.figure();slot=fig.add_gridspec(1,1)[0,0]
+axes=p.cell_axes(fig,slot,'swiglu','h3',cell,agg,False)
+assert all(not ax.texts for ax in axes), 'Data panels must contain no annotation text'
+assert len(fig.axes)==4 and len(fig.axes[0].texts)==2
+p.plt.close(fig)
 result=dict(pass_check=True,model_evaluations=0,training_runs=0,synthetic_only=True,
  missing_expected_points_remain_nan=True,no_interpolation_bridges=True,common_support_only=True,
  unresolved_flags_propagate=True,no_extrapolation=True,zoom_invariant_to_alignment_and_refit=True,
  no_one_seed_median=True,raw_variance_units_checked=True,ambiguous_duplicate_times_become_nan=True,
- input_records_unchanged=True,stop_reason_preserved=True,clock_mismatch_rejected=True,recipe_mismatch_rejected=True,missing_arm_normalization_retained=True,exception_fallback_arm_metadata_retained=True)
+ input_records_unchanged=True,stop_reason_preserved=True,clock_mismatch_rejected=True,recipe_mismatch_rejected=True,missing_arm_normalization_retained=True,exception_fallback_arm_metadata_retained=True,annotations_outside_data_panels=True)
 out=HERE/'plot_validation';out.mkdir(exist_ok=True)
 (out/'SYNTHETIC_QA.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result))

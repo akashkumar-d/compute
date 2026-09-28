@@ -1,0 +1,155 @@
+{
+  "status": "passed_and_frozen",
+  "supersedes": "../PLOT_VALIDATION_RECEIPT.json",
+  "model_evaluations": 0,
+  "training_updates": 0,
+  "scientific_sources_or_configs_changed": false,
+  "changes": "Counts moved into dedicated header axes; in-panel stop text removed; stop reason, seed, and final clock retained in PLOT_QA.json. Numerical functions unchanged.",
+  "source_backup_sha256": {
+    "README_PLOTS.md": "9cad5547d4d11a888414ec868f64a9b5bf2bade1709580b61d1b2191ab1cdc3e",
+    "test_plot_coverage.py": "2e3c98d6e9bc52169d96134b00bf04c752be1f692771759e67ce8dbd3f67f999",
+    "plot_coverage.py": "26242fe29a26f76eb7ea34e9825fe220d0d87ca6f6a67f3a3cb5daf37cf73ca0"
+  },
+  "files_sha256": {
+    "plot_coverage.py": "a9b301c156441951e93b0c50906409ff5ee789c22e0427080ec5b498a36bc398",
+    "test_plot_coverage.py": "d13eab677d448daf92cafd84c94cf75b6067794bd54b42befc8e853ef5359566",
+    "README_PLOTS.md": "7e56dd3d3902710547637d08315df845b92ddf7227a710f56f129a1afe0a2df8"
+  },
+  "fixture_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/analysis/plot_validation/HISTORICAL_FIXTURE_V3.json": "f537131cef9449e380498d754686bbff33a2728744069a9ffeafc8ca53f10630",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/analysis/plot_validation/SYNTHETIC_LAYOUT_FIXTURE.json": "d7b43e8d9b304f46948252aca6582367b13aa054777a78dde6c327a7e3a3881b"
+  },
+  "unchanged_numerical_function_ast": [
+    "prefix",
+    "status_text",
+    "grouping",
+    "collapse_duplicate_times",
+    "metric",
+    "interpolate",
+    "independent_interpolation",
+    "support",
+    "aggregate",
+    "zoom_end",
+    "normalized_units_check",
+    "draw_metric",
+    "limits"
+  ],
+  "aggregate_equality_checks": [
+    {
+      "cell": [
+        "relu",
+        "h3",
+        "h3_confirm"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "relu",
+        "h3",
+        "h3_smaller_scale"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "relu",
+        "h3_plus_h5",
+        "h3_h5_breadth"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "h2",
+        "he2_headlr0p01"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "h3",
+        "he3_headlr0p01"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 1",
+        "SYNTHETIC_1"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 2",
+        "SYNTHETIC_2"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 3",
+        "SYNTHETIC_3"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 4",
+        "SYNTHETIC_4"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 5",
+        "SYNTHETIC_5"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 6",
+        "SYNTHETIC_6"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    },
+    {
+      "cell": [
+        "swiglu",
+        "SYNTHETIC panel 7",
+        "SYNTHETIC_7"
+      ],
+      "all_plotted_arrays_exactly_equal": true
+    }
+  ],
+  "test_qa_sha256": "d476fd15698dcc26ce6d253a7e820ce82782d8de6eb2b3d06ad8023051dbac65",
+  "output_sha256": {
+    "historical_swiglu_full.png": "0a40ce7b7cdb308d0c050d6c5ed75fb8298e4386a32372e7dd99d234052b07c5",
+    "synthetic_seven_cell_full.png": "1cd6c8c9f451d11d142390ad1dcf33d5695f08bf1520b1a0bc59ecf774bd38af",
+    "PLOT_QA.json": "cc82df2d87351e934957824746cbdc9eb69ddcce2ebccd7ac45155aa50a5ec91"
+  },
+  "frozen_utc": "2026-09-28T17:14:52.986963+00:00",
+  "visual_review": {
+    "status": "passed",
+    "images": [
+      "historical_swiglu_full.png",
+      "synthetic_seven_cell_full.png"
+    ],
+    "findings": [
+      "Historical cubic refit visible continuously from time zero",
+      "No criterion or stop text covers any data panel",
+      "Seven-cell headings and criteria fit without overlap",
+      "Black labels, colors, missing-data gaps and unresolved markers retained"
+    ]
+  }
+}

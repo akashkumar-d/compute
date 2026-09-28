@@ -203,7 +203,9 @@ def limits(cell,name,right,zoom):
  return min(-.04*span,low-.025*span),max(var*1.04,high+.025*span)
 
 def cell_axes(fig,slot,student,teacher,cell,agg,zoom):
- inner=slot.subgridspec(3,1,hspace=.13);axes=[fig.add_subplot(inner[i,0]) for i in range(3)]
+ inner=slot.subgridspec(4,1,height_ratios=[.6,1,1,1],hspace=.13)
+ header=fig.add_subplot(inner[0,0]);header.set_axis_off()
+ axes=[fig.add_subplot(inner[i+1,0]) for i in range(3)]
  for ax in axes[:-1]:ax.tick_params(labelbottom=False)
  ends=[a['history'][-1]['time'] for a in cell if a.get('history')]
  end=zoom_end(cell) if zoom else max(ends,default=0)*1.02
@@ -232,17 +234,10 @@ def cell_axes(fig,slot,student,teacher,cell,agg,zoom):
             if all('first_numerically_qualified_candidate' in prefix(a,r) for a in cell) else None for r in (1.01,1.05)]
  qualified_text=', '.join(f'{q}/2' if q is not None else 'unavailable' for q in qualified)
  censored=[sum(not prefix(a,r) or bool(prefix(a,r).get('right_censored')) for a in cell) for r in (1.01,1.05)]
- axes[0].set_title(f'{label}\n{recipe}',fontsize=9,pad=5)
- axes[0].text(.025,.055,f"Original criterion 1%/5%: {counts[0]}/2, {counts[1]}/2\nNumerically qualified 1%/5%: {qualified_text}\nCensored/unavailable 1%/5%: {censored[0]}/2, {censored[1]}/2",transform=axes[0].transAxes,fontsize=6.2,
-              bbox=dict(facecolor='white',edgecolor='none',alpha=.78))
+ header.text(.5,1,f'{label}\n{recipe}',ha='center',va='top',fontsize=9,color='black')
+ header.text(.5,.46,f"Original criterion 1%/5%: {counts[0]}/2, {counts[1]}/2\nNumerically qualified 1%/5%: {qualified_text}\nCensored/unavailable 1%/5%: {censored[0]}/2, {censored[1]}/2",ha='center',va='top',fontsize=6.4,linespacing=1.15,color='black')
  for ax,text in zip(axes,('Raw MSE',r'$A_{\min}, A_{\rm mean}$','Refit raw MSE')):ax.set_ylabel(text,color='black',fontsize=8)
  axes[-1].set_xlabel('Accepted force clock'+r' $\sum h_k$' if student=='relu' else 'Adaptive flow time'+r' $\sum\Delta t_k$',fontsize=8)
- stop_lines=[]
- for arm in cell:
-  end_time=arm['history'][-1]['time'] if arm.get('history') else None
-  stop_lines.append(f"{arm['seed']}: {status_text(arm)}, t={fmt(end_time)}")
- axes[-1].text(.02,.94,'\n'.join(stop_lines),va='top',transform=axes[-1].transAxes,fontsize=6.1,
-               bbox=dict(facecolor='white',edgecolor='none',alpha=.8))
  return axes
 
 def information_card(fig,slot,student,zoom,historical):
@@ -258,7 +253,7 @@ def information_card(fig,slot,student,zoom,historical):
  ax.legend(handles=handles,loc='upper left',frameon=False,fontsize=8,handlelength=2.7,labelspacing=.45)
  readout='ReLU refits retain the saved bounded head class.' if student=='relu' else 'SwiGLU uses unrestricted cutoff 10⁻¹² refits.'
  text=('Bold: two planned seeds’ median.\nBands: seed range, not confidence intervals.\nFaint curves: individual observed tails.\nMedians end at each cell’s shared support.\nMissing points remain NaN gaps.\n\n'
-       'Original counts use saved per-run criteria.\nQualification adds numerical screens.\nNeither is a median-curve claim.\nAll failed/censored runs remain planned.\n\n'+readout+'\nRaw MSE uses the stored teacher variance.\nClocks/readout classes differ by student.\n\n')
+       'Original counts use saved per-run criteria.\nQualification adds numerical screens.\nNeither is a median-curve claim.\nAll failed/censored runs remain planned.\nStops and final clocks: PLOT_QA.json.\n\n'+readout+'\nRaw MSE uses the stored teacher variance.\nClocks/readout classes differ by student.\n\n')
  text+=('Zoom ends at the two-seed common initial\n5% loss-prefix endpoint; no alignment selection.' if zoom else 'Loss-only initial 1%/5% shading uses all\nrecorded updates, retaining right-censoring.')
  if historical:text+='\n\nHISTORICAL VALIDATION: no new batch results.'
  ax.text(.02,.68,text,va='top',fontsize=7.6,linespacing=1.26)
@@ -331,7 +326,7 @@ def write_plots(summary_path,out,title=None,historical=False):
  cells=[]
  for key,cell in groups.items():
   agg=aggregates[key]
-  cells.append(dict(student=key[0],teacher=key[1],cell=key[2],planned_ids=[a['id'] for a in cell],planned_seeds=[a['seed'] for a in cell],stops=[dict(id=a['id'],reason=status_text(a),process_state=a.get('process_state')) for a in cell],
+  cells.append(dict(student=key[0],teacher=key[1],cell=key[2],planned_ids=[a['id'] for a in cell],planned_seeds=[a['seed'] for a in cell],stops=[dict(id=a['id'],seed=a['seed'],reason=status_text(a),process_state=a.get('process_state'),final_time=a['history'][-1]['time'] if a.get('history') else None) for a in cell],
    support=agg['support'] if agg else None,initial_zoom_end=zoom_end(cell),
    metric_support=None if agg is None else {name:dict(paired_finite_points=int(info['valid'].all(axis=0).sum()),duplicate_time_points=info['duplicate_time_points']) for name,info in agg['metrics'].items()},
    per_run_criteria_passed_through=[dict(id=a['id'],prefixes=a.get('prefixes',{})) for a in cell]))
