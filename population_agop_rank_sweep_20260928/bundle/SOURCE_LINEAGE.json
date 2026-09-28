@@ -1,0 +1,196 @@
+{
+  "relu_source": "goal_followup_v7/breadth14/cpu32/bundle",
+  "swiglu_source": "goal_followup_v8/targeted30/bundle",
+  "scientific_files": [
+    {
+      "path": "code/ADAPTER_REVIEW.md",
+      "sha256": "cd5b173b0e82eb822a90b4dfd02bd182ab9184b7860d64f31478a50295575491",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/ADAPTER_REVIEW.md",
+      "byte_identical": true
+    },
+    {
+      "path": "code/DIAGNOSTIC_PRIORITY_VERIFICATION.json",
+      "sha256": "2f2e13655f82f839ddc236c2329f726dbc5705fbebced24f05269dfbfb41d458",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/DIAGNOSTIC_PRIORITY_VERIFICATION.json",
+      "byte_identical": true
+    },
+    {
+      "path": "code/ORDER12_STRESS.json",
+      "sha256": "1007ece3a8431f6eb4625b5cab1bbf6cf7b3c9e897ef351efc9a889de4b7c93f",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/ORDER12_STRESS.json",
+      "byte_identical": true
+    },
+    {
+      "path": "code/SOURCE_MANIFEST.json",
+      "sha256": "cfa5cc3aba1757df40e141deaad0c819931cc581547911ecd65b2dd2c8070cfa",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/SOURCE_MANIFEST.json",
+      "byte_identical": true
+    },
+    {
+      "path": "code/VERIFICATION.json",
+      "sha256": "f35155e528ea23f8a8164982f6f5f82b2557565a59a5aa7d37f73b5e74cbff73",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/VERIFICATION.json",
+      "byte_identical": true
+    },
+    {
+      "path": "code/VERIFICATION_SUMMARY.json",
+      "sha256": "1215251ab8829c0a4eb89b655c4055e812495f40934c30309b08d3e753a67679",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/VERIFICATION_SUMMARY.json",
+      "byte_identical": true
+    },
+    {
+      "path": "code/canonical14_moments.json",
+      "sha256": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/canonical14_moments.json",
+      "byte_identical": true
+    },
+    {
+      "path": "code/diagnostic_priority.py",
+      "sha256": "6427ad389b6ec1955c58ba27e21a9eb9dbcc69843149f72cc6ab96a2157bff1d",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/diagnostic_priority.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/frames.py",
+      "sha256": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/frames.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/population.py",
+      "sha256": "82dc6d9849531a208ae31ebaf4c95fb23bf0d56af5e9e60fd52f7b6dbb69ea34",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/population.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/refit.py",
+      "sha256": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/refit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/scaling_run.py",
+      "sha256": "a818f58a4a64774815c3fd029ad296db3f8ad2168a2cfde0e90dfa29e17950cf",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/scaling_run.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/teachers_extra.py",
+      "sha256": "108d0352b0ff1d72c85ba725622dbe932b2de138d9d4ffbeb144f9c0c327330e",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/teachers_extra.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/teachers_product.py",
+      "sha256": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/teachers_product.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/teachers_smooth.py",
+      "sha256": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/teachers_smooth.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/verify_adapter.py",
+      "sha256": "ac69ee83d7ca27445b5284367c7f78337e5b9fed1ff46af6f3374b3bd6f0294e",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/verify_adapter.py",
+      "byte_identical": true
+    },
+    {
+      "path": "code/verify_diagnostic_priority.py",
+      "sha256": "607bd86ca36040732dbb7683598acd3bf870f6f7399156da3d7d80a7a681b211",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/code/verify_diagnostic_priority.py",
+      "byte_identical": true
+    },
+    {
+      "path": "diagnostics/audit_saved.py",
+      "sha256": "964a34a6e69e5f98b22d9bdbb1dcdad3ea13ec84bbb932be1f06d11578dab34b",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/diagnostics/audit_saved.py",
+      "byte_identical": true
+    },
+    {
+      "path": "diagnostics/stable_relu.py",
+      "sha256": "23ff122d3d4c62a2a620f23fc8d05a9308b716ab5a7a77ef3c22ea8a496fd299",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/diagnostics/stable_relu.py",
+      "byte_identical": true
+    },
+    {
+      "path": "diagnostics/test_stable_relu.py",
+      "sha256": "be5d06ca81cf81b6a2dedaaa75d100694caf120b517062b0c93c1898ab750f7e",
+      "origin": "goal_followup_v7/breadth14/cpu32/bundle/diagnostics/test_stable_relu.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/SOURCE_MANIFEST.json",
+      "sha256": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/SOURCE_MANIFEST.json",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/diagnostics.py",
+      "sha256": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/diagnostics.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/canonical_links.py",
+      "sha256": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/canonical_links.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/swpop.py",
+      "sha256": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/swpop.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/swsmall.py",
+      "sha256": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/swsmall.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/swsmall_periodic.py",
+      "sha256": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/swsmall_periodic.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/engine/vlab.py",
+      "sha256": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/engine/vlab.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/requirements.txt",
+      "sha256": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/requirements.txt",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/run_one.py",
+      "sha256": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/run_one.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/validate_breadth.py",
+      "sha256": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/validate_breadth.py",
+      "byte_identical": true
+    },
+    {
+      "path": "swiglu/code/validate_diagnostic_order.py",
+      "sha256": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77",
+      "origin": "goal_followup_v8/targeted30/bundle/swiglu/code/validate_diagnostic_order.py",
+      "byte_identical": true
+    }
+  ],
+  "scientific_byte_changes": 0,
+  "v7_manifest_sha256": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+  "v8_manifest_sha256": "ce71d19034ba2c20b6d47b9a7ba78350cabb44ec9916c93dce028912e588681f",
+  "paired_initialization_status": "Source-based only; post-run bitwise verification required"
+}

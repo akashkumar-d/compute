@@ -1,0 +1,1538 @@
+[
+  {
+    "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+    "rank": 16,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+    "base_template_sha256": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+    "configuration_sha256": "5342412ee84415f9573b36a087dd76ad95f15c0a0918592c5308e1bec485a442",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_h2_r16_d64_m256_seed641"
+      },
+      "r": {
+        "before": 8,
+        "after": 16
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+    "rank": 16,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+    "base_template_sha256": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+    "configuration_sha256": "b0400c9e503d1136011e701350ae228067f6ba3dce84892cfeb8fff1391b81dd",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_h2_r16_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r16"
+        },
+        "rank": {
+          "before": 8,
+          "after": 16
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+    "rank": 16,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+    "base_template_sha256": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+    "configuration_sha256": "428d7edc664072305d4555572b437df30e4a5e73d53a455b36e70571044bb95b",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_relu_r16_d64_m256_seed641"
+      },
+      "r": {
+        "before": 8,
+        "after": 16
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.0011804876751909774
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+    "rank": 16,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+    "base_template_sha256": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+    "configuration_sha256": "6d0467eccd63854e99f95948466b5ea386b570c6510017cf6db119ff0c419744",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_relu_r16_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r16"
+        },
+        "rank": {
+          "before": 8,
+          "after": 16
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+    "rank": 16,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+    "base_template_sha256": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+    "configuration_sha256": "53838cae8031e58fb9719efc332e4bd3514dd50c1334fd71f09920ce9fde4695",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_h2_r16_d64_m256_seed642"
+      },
+      "r": {
+        "before": 8,
+        "after": 16
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+    "rank": 16,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+    "base_template_sha256": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "configuration_sha256": "083441e4273f2426cd08625e37e82b7c00c81d997256150b6ce75faa99314107",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_h2_r16_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r16"
+        },
+        "rank": {
+          "before": 8,
+          "after": 16
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+    "rank": 16,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+    "base_template_sha256": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+    "configuration_sha256": "51e0a9adf258aa92419a682d4dafe09b4985a1a7c4afc507b77c1bcec5cb3178",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_relu_r16_d64_m256_seed642"
+      },
+      "r": {
+        "before": 8,
+        "after": 16
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.0011804876751909774
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+    "rank": 16,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+    "base_template_sha256": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+    "configuration_sha256": "37980b88fb6a4f6e072762643a9bcb6cdb50dcd89b718cbbbaa8f63366b713fa",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_relu_r16_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r16"
+        },
+        "rank": {
+          "before": 8,
+          "after": 16
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+    "rank": 8,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+    "base_template_sha256": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+    "configuration_sha256": "9ccf0c4b48e3bfcdf26f170fdc55235049995fb15fe9d105fddba14fe6f42a7b",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_h2_r8_d64_m256_seed641"
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+    "rank": 8,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+    "base_template_sha256": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+    "configuration_sha256": "104012739701fe85f1953dce8c181d8751ef005973019dfd83781e0d9b91069d",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_h2_r8_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r8"
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+    "rank": 8,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+    "base_template_sha256": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+    "configuration_sha256": "156a65db0406c0a672a6bdf5d86676162185fd4cad690082ea868aea7a52ab71",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_relu_r8_d64_m256_seed641"
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.002111692637183312
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+    "rank": 8,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+    "base_template_sha256": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+    "configuration_sha256": "f6700bad3228446a529ecf09d5422c590b5ed76feb825313504d33d2fe219399",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_relu_r8_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r8"
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+    "rank": 8,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+    "base_template_sha256": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+    "configuration_sha256": "69f82da6bff0c40babba6753e10ad3fae4e910caa451b709aca257598e25a44f",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_h2_r8_d64_m256_seed642"
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+    "rank": 8,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+    "base_template_sha256": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "configuration_sha256": "bbde9775b0faf9194e2bc97f41bbe1858f43f91c93ddec014ca54dc160a3d796",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_h2_r8_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r8"
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+    "rank": 8,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+    "base_template_sha256": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+    "configuration_sha256": "274c44cb6a1ac8060c9b684f7c30ec1f7bee3515b40a8226255bc5a16b645b88",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_relu_r8_d64_m256_seed642"
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.002111692637183312
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+    "rank": 8,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+    "base_template_sha256": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+    "configuration_sha256": "7df7883ec4499e665ba1d2c678a4d463ba26bdbc78fe913904186f18acf8d817",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_relu_r8_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r8"
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+    "rank": 4,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+    "base_template_sha256": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+    "configuration_sha256": "700f59d55db2db9de08f26d1b4946c946644d69494af289a6a185c337bf7c634",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_h2_r4_d64_m256_seed641"
+      },
+      "r": {
+        "before": 8,
+        "after": 4
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+    "rank": 4,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+    "base_template_sha256": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+    "configuration_sha256": "a23fcf2dc22fbfb7bae0bff5af7827f7e477cfe09a6f767537a73b544eded4d1",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_h2_r4_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r4"
+        },
+        "rank": {
+          "before": 8,
+          "after": 4
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+    "rank": 4,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+    "base_template_sha256": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+    "configuration_sha256": "e4a949b5853b38b2f87e839c85339a9702b0a8234372dcd72658c76a02df2fe1",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_relu_r4_d64_m256_seed641"
+      },
+      "r": {
+        "before": 8,
+        "after": 4
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.0034870314173930453
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+    "rank": 4,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+    "base_template_sha256": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+    "configuration_sha256": "06d7a8e3aa96de68357d109a30232c949a8d649670ba072acb1f20fde62d1c5c",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_relu_r4_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r4"
+        },
+        "rank": {
+          "before": 8,
+          "after": 4
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+    "rank": 4,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+    "base_template_sha256": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+    "configuration_sha256": "0989ac1e86a3f2c157573f17d977afdd001988e66891e0a18b808a423d1dd43f",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_h2_r4_d64_m256_seed642"
+      },
+      "r": {
+        "before": 8,
+        "after": 4
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+    "rank": 4,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+    "base_template_sha256": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "configuration_sha256": "1c04fbf531df63eface58e91ed12114a5faa8b080d6ab214f94d8c81573558da",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_h2_r4_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r4"
+        },
+        "rank": {
+          "before": 8,
+          "after": 4
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+    "rank": 4,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+    "base_template_sha256": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+    "configuration_sha256": "640b24e8024d04bcfffee39edead4beca1c0d012a0523c9ab3c19219d5f1405a",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_relu_r4_d64_m256_seed642"
+      },
+      "r": {
+        "before": 8,
+        "after": 4
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.0034870314173930453
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+    "rank": 4,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+    "base_template_sha256": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+    "configuration_sha256": "71979ff0bdb299b5b83d2c8646ba7581a0a8bfd839b1e7f93513ef2fff3676df",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_relu_r4_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r4"
+        },
+        "rank": {
+          "before": 8,
+          "after": 4
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+    "rank": 2,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+    "base_template_sha256": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+    "configuration_sha256": "4c5be991af3bb5338b34cc920610721ec2a9e43b3f8bf2634de81d041baf8d5c",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_h2_r2_d64_m256_seed641"
+      },
+      "r": {
+        "before": 8,
+        "after": 2
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+    "rank": 2,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+    "base_template_sha256": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+    "configuration_sha256": "1561862230c27dfc98991859fe1e4c4c2a846658732e24f3589df4635a851c92",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_h2_r2_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r2"
+        },
+        "rank": {
+          "before": 8,
+          "after": 2
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+    "rank": 2,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+    "base_template_sha256": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+    "configuration_sha256": "89c114b090ab01aebc5c86871a012f1ebae2f4378cda560a5293b660d3060a8b",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed641",
+        "after": "v10_rank_relu_relu_r2_d64_m256_seed641"
+      },
+      "r": {
+        "before": 8,
+        "after": 2
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.005170939859895522
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+    "rank": 2,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 641,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+    "base_template_sha256": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+    "configuration_sha256": "c8b738fb7c61e784fa6d6725f64a9d5a7b2b27a308d8f833741ec844b0bedff9",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed641",
+          "after": "v10_rank_swiglu_relu_r2_d64_m64_seed641"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r2"
+        },
+        "rank": {
+          "before": 8,
+          "after": 2
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+    "rank": 2,
+    "teacher": "h2",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+    "base_template_sha256": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+    "configuration_sha256": "5d10c84d6c717b9d439e28297b96fcd2baa58bc244a2c49ebd254cbd749ac87d",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_h2_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_h2_r2_d64_m256_seed642"
+      },
+      "r": {
+        "before": 8,
+        "after": 2
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.01
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+    "rank": 2,
+    "teacher": "h2",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+    "base_template_sha256": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "configuration_sha256": "ab671b53b629243f669d9eaaf653f80fc2f41ca28aa067e8209097254f714173",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_h2_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_h2_r2_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_h2",
+          "after": "v10_rank_swiglu_h2_r2"
+        },
+        "rank": {
+          "before": 8,
+          "after": 2
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+    "rank": 2,
+    "teacher": "relu",
+    "student": "relu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+    "base_template_sha256": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+    "configuration_sha256": "6397c0de76c096ff36edb24f1b5cfd37d83c0aca3d1e76260e2d748e5130cdc7",
+    "changes_from_historical_rank8": {
+      "id": {
+        "before": "relu_relu_r8_d64_m256_seed642",
+        "after": "v10_rank_relu_relu_r2_d64_m256_seed642"
+      },
+      "r": {
+        "before": 8,
+        "after": 2
+      },
+      "loss_stop": {
+        "before": 0.001,
+        "after": 0.005170939859895522
+      }
+    },
+    "normalized_loss_stop": 0.01
+  },
+  {
+    "id": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+    "rank": 2,
+    "teacher": "relu",
+    "student": "swiglu",
+    "seed": 642,
+    "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+    "base_template_sha256": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+    "configuration_sha256": "c3a8a4412dc124175ef22978b820ea6da4876d7f834568e10b4f27ec9ad42edb",
+    "changes_from_historical_rank8": {
+      "outer": {
+        "tag": {
+          "before": "swiglu_relu_r8_d64_m64_seed642",
+          "after": "v10_rank_swiglu_relu_r2_d64_m64_seed642"
+        },
+        "cell": {
+          "before": "swiglu_relu",
+          "after": "v10_rank_swiglu_relu_r2"
+        },
+        "rank": {
+          "before": 8,
+          "after": 2
+        }
+      },
+      "args": {
+        "t_max": {
+          "before": 600.0,
+          "after": 3000.0
+        },
+        "L_stop": {
+          "before": 0.1,
+          "after": 0.01
+        },
+        "max_steps": {
+          "before": 5000,
+          "after": 20000
+        },
+        "n_pair": {
+          "before": 16,
+          "after": 32
+        },
+        "n_diag": {
+          "before": 48,
+          "after": 96
+        },
+        "n_z": {
+          "before": 24,
+          "after": 48
+        },
+        "n_x": {
+          "before": 12,
+          "after": 24
+        },
+        "c": {
+          "before": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "after": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "normalized_loss_stop": 0.01
+  }
+]
