@@ -1,0 +1,2 @@
+# NumPy and SciPy are inherited from the server environment and their versions recorded.
+clarabel==0.11.1
