@@ -1,0 +1,940 @@
+{
+  "no_model_evaluation": true,
+  "no_training": true,
+  "rank": 8,
+  "rows": [
+    {
+      "teacher": "h2",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 0.0,
+      "nonlinear_energy": 1.0,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "degree2_energy": 1.0,
+      "degree3_energy": 0.0,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 9.028589541066412e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 1.0,
+          "quadrature_error_estimate": 1.1691556340489432e-14,
+          "additive_target_energy": 1.0
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.108746819677944e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -1.8516140226979005e-18,
+          "quadrature_error_estimate": 1.4879757269217166e-14,
+          "additive_target_energy": 3.4284744890515013e-36
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 2.443468263595382e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 6.8575787409708155e-18,
+          "quadrature_error_estimate": 4.24100303613695e-14,
+          "additive_target_energy": 4.7026386188614876e-35
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 3.5543624602630046e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -9.161508357502512e-18,
+          "quadrature_error_estimate": 4.0098127359687e-14,
+          "additive_target_energy": 8.393323538458838e-35
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 0.0,
+      "smallest_observed_nonconstant_degree": 2
+    },
+    {
+      "teacher": "h3",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 2.6253410235303534e-33,
+      "nonlinear_energy": 1.0,
+      "linear_fraction_of_variance": 2.6253410235303534e-33,
+      "nonlinear_fraction_of_variance": 1.0,
+      "degree2_energy": 0.0,
+      "degree3_energy": 1.0000000000000004,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 5.1238081770596695e-17,
+          "quadrature_error_estimate": 8.864008303245753e-15,
+          "additive_target_energy": 2.6253410235303534e-33
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.1087468308565147e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 1.0000000000000002,
+          "quadrature_error_estimate": 1.8565057117662365e-14,
+          "additive_target_energy": 1.0000000000000004
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 3.2560360832199927e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 1.0638733817514012e-17,
+          "quadrature_error_estimate": 1.745052861954282e-14,
+          "additive_target_energy": 1.1318265723991627e-34
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.652060251892993e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 4.981908982570893e-17,
+          "quadrature_error_estimate": 1.4933509839395324e-14,
+          "additive_target_energy": 2.481941711062055e-33
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 5.725036003107609e-14,
+          "additive_target_energy": 0.0
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": -4.440892098500626e-16,
+      "smallest_observed_nonconstant_degree": 3
+    },
+    {
+      "teacher": "h4",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 0.0,
+      "nonlinear_energy": 1.0,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "degree2_energy": 3.434750871242049e-36,
+      "degree3_energy": 0.0,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 8.797343548000103e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": -1.853308088592409e-18,
+          "quadrature_error_estimate": 1.4879757068160578e-14,
+          "additive_target_energy": 3.434750871242049e-36
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 3.2560239910491686e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 1.0000000000000004,
+          "quadrature_error_estimate": 2.0507120997691765e-14,
+          "additive_target_energy": 1.0000000000000009
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.7362409730210924e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 5.431852884152377e-17,
+          "quadrature_error_estimate": 1.866109542547896e-14,
+          "additive_target_energy": 2.95050257550745e-33
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.127899227105415e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 2.6020852139652106e-18,
+          "quadrature_error_estimate": 9.536849660830939e-15,
+          "additive_target_energy": 6.770847460736376e-36
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": -8.881784197001252e-16,
+      "smallest_observed_nonconstant_degree": 4
+    },
+    {
+      "teacher": "h5",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 2.074497839966721e-33,
+      "nonlinear_energy": 1.0,
+      "linear_fraction_of_variance": 2.074497839966721e-33,
+      "nonlinear_fraction_of_variance": 1.0,
+      "degree2_energy": 0.0,
+      "degree3_energy": 6.010598326051985e-34,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": -4.554665563975824e-17,
+          "quadrature_error_estimate": 1.0776633183157638e-14,
+          "additive_target_energy": 2.074497839966721e-33
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 2.4434683201900457e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 2.451652162532847e-17,
+          "quadrature_error_estimate": 1.745052861954282e-14,
+          "additive_target_energy": 6.010598326051985e-34
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.736240968285448e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 1.0000000000000002,
+          "quadrature_error_estimate": 2.091237323369452e-14,
+          "additive_target_energy": 1.0000000000000004
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 6.280827624893867e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 9.237402509576498e-17,
+          "quadrature_error_estimate": 1.8728485114853882e-14,
+          "additive_target_energy": 8.532960512393018e-33
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.0239163670116401e-14,
+          "additive_target_energy": 0.0
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": -4.440892098500626e-16,
+      "smallest_observed_nonconstant_degree": 5
+    },
+    {
+      "teacher": "relu",
+      "rank": 8,
+      "raw_teacher_mean": 0.8881614359347455,
+      "target_second_moment": 1.0,
+      "target_variance": 0.21116926371833114,
+      "mean_energy": 0.7888307362816688,
+      "linear_energy": 0.1548865528767699,
+      "nonlinear_energy": 0.05628271084156125,
+      "linear_fraction_of_variance": 0.7334711034621301,
+      "nonlinear_fraction_of_variance": 0.26652889653786993,
+      "degree2_energy": 0.04930192101760429,
+      "degree3_energy": 2.8280925604899465e-36,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.5,
+          "quadrature_error_estimate": 5.563693646116348e-15,
+          "additive_target_energy": 0.1548865528767699
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.28209479177387814,
+          "quadrature_error_estimate": 4.514294770533206e-15,
+          "additive_target_energy": 0.04930192101760429
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": -2.136534730330566e-18,
+          "quadrature_error_estimate": 4.432004136888721e-15,
+          "additive_target_energy": 2.8280925604899465e-36
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -0.08143375198382,
+          "quadrature_error_estimate": 4.398671774636593e-15,
+          "additive_target_energy": 0.004108493418133692
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": -3.318166867573996e-17,
+          "quadrature_error_estimate": 5.3883165915885124e-15,
+          "additive_target_energy": 6.821347127564768e-34
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.04460310290381921,
+          "quadrature_error_estimate": 7.127455819713853e-15,
+          "additive_target_energy": 0.0012325480254401036
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 4.323256162785949e-18,
+          "quadrature_error_estimate": 1.0035055212649927e-14,
+          "additive_target_energy": 1.1579655632696214e-35
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -0.029801701688055987,
+          "quadrature_error_estimate": 1.704143996508881e-14,
+          "additive_target_energy": 0.000550244654214333
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 0.0010895037261688667,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "leaky_relu",
+      "rank": 8,
+      "raw_teacher_mean": 0.8560270329833208,
+      "target_second_moment": 1.0,
+      "target_variance": 0.26721771880177275,
+      "mean_energy": 0.7327822811982274,
+      "linear_energy": 0.2149340394957312,
+      "nonlinear_energy": 0.05228367930604155,
+      "linear_fraction_of_variance": 0.8043405222509717,
+      "nonlinear_fraction_of_variance": 0.19565947774902828,
+      "degree2_energy": 0.0457988925748892,
+      "degree3_energy": 4.5825006367111394e-36,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.55,
+          "quadrature_error_estimate": 2.0990386636402744e-14,
+          "additive_target_energy": 0.2149340394957312
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.25388531259649033,
+          "quadrature_error_estimate": 4.965724247951672e-15,
+          "additive_target_energy": 0.0457988925748892
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 2.5395768294358034e-18,
+          "quadrature_error_estimate": 4.875204553167935e-15,
+          "additive_target_energy": 4.5825006367111394e-36
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -0.073290376785438,
+          "quadrature_error_estimate": 4.8385389534777826e-15,
+          "additive_target_energy": 0.0038165743812407673
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": -3.3897729153525066e-17,
+          "quadrature_error_estimate": 5.9271482530865725e-15,
+          "additive_target_energy": 8.164339063262372e-34
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.04014279261343729,
+          "quadrature_error_estimate": 7.840201415137586e-15,
+          "additive_target_energy": 0.0011449723143722266
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 5.471409322789153e-18,
+          "quadrature_error_estimate": 1.1038560705439227e-14,
+          "additive_target_energy": 2.1270526216203977e-35
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -0.02682153151925039,
+          "quadrature_error_estimate": 1.8745577185755513e-14,
+          "additive_target_energy": 0.0005111483546304591
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 0.0010120916809088776,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "abs",
+      "rank": 8,
+      "raw_teacher_mean": 0.9661274154206928,
+      "target_second_moment": 1.0,
+      "target_variance": 0.06659781717253213,
+      "mean_energy": 0.9334021828274678,
+      "linear_energy": 0.0,
+      "nonlinear_energy": 0.06659781717253213,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "degree2_energy": 0.05833763642671673,
+      "degree3_energy": 0.0,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.1127387292232697e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.5641895835477563,
+          "quadrature_error_estimate": 9.028589541066412e-15,
+          "additive_target_energy": 0.05833763642671673
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 8.864008273777442e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -0.16286750396764,
+          "quadrature_error_estimate": 8.797343549273186e-15,
+          "additive_target_energy": 0.004861469702226395
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.0776633183177025e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.08920620580763843,
+          "quadrature_error_estimate": 1.4254911639427705e-14,
+          "additive_target_energy": 0.001458440910667914
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 2.0070110425299854e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -0.059603403376111974,
+          "quadrature_error_estimate": 3.408287993017762e-14,
+          "additive_target_energy": 0.0006510896922624627
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 0.0012891804406586355,
+      "smallest_observed_nonconstant_degree": 2
+    },
+    {
+      "teacher": "softplus",
+      "rank": 8,
+      "raw_teacher_mean": 0.9748626690588285,
+      "target_second_moment": 1.0,
+      "target_variance": 0.04964277647549685,
+      "mean_energy": 0.950357223524503,
+      "linear_energy": 0.04570913905729615,
+      "nonlinear_energy": 0.0039336374182007,
+      "linear_fraction_of_variance": 0.9207611318810441,
+      "nonlinear_fraction_of_variance": 0.07923886811895588,
+      "degree2_energy": 0.0039028494993568726,
+      "degree3_energy": 2.4021076811354258e-35,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.5,
+          "quadrature_error_estimate": 8.095354246419436e-15,
+          "additive_target_energy": 0.04570913905729615
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.14610308488004495,
+          "quadrature_error_estimate": 7.09479155937984e-15,
+          "additive_target_energy": 0.0039028494993568726
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 1.1462113897043877e-17,
+          "quadrature_error_estimate": 6.605884732022984e-15,
+          "additive_target_energy": 2.4021076811354258e-35
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -0.012736628953661702,
+          "quadrature_error_estimate": 6.872546134135105e-15,
+          "additive_target_energy": 2.9660060100743895e-05
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": -2.1710809566766233e-17,
+          "quadrature_error_estimate": 8.984459750325233e-15,
+          "additive_target_energy": 8.618170239056016e-35
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.0023992999429079723,
+          "quadrature_error_estimate": 1.5633307793068115e-14,
+          "additive_target_energy": 1.0525242725508535e-06
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 9.339207432594217e-18,
+          "quadrature_error_estimate": 1.1878288626827302e-14,
+          "additive_target_energy": 1.5947149875126243e-35
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -0.0006104651848588876,
+          "quadrature_error_estimate": 2.0414225354873535e-14,
+          "additive_target_energy": 6.813728655123618e-08
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 7.197183980733879e-09,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "silu",
+      "rank": 8,
+      "raw_teacher_mean": 0.7223112586162606,
+      "target_second_moment": 1.0,
+      "target_variance": 0.47826644567619364,
+      "mean_energy": 0.5217335543238064,
+      "linear_energy": 0.3819003203520596,
+      "nonlinear_energy": 0.09636612532413402,
+      "linear_fraction_of_variance": 0.7985095417097734,
+      "nonlinear_fraction_of_variance": 0.2014904582902266,
+      "degree2_energy": 0.09401815007444458,
+      "degree3_energy": 5.0963528891510866e-36,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.5,
+          "quadrature_error_estimate": 5.563703832650964e-15,
+          "additive_target_energy": 0.3819003203520596
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.24808519283030012,
+          "quadrature_error_estimate": 4.567381423074906e-15,
+          "additive_target_energy": 0.09401815007444458
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": -1.8265212920209513e-18,
+          "quadrature_error_estimate": 5.033423408442484e-15,
+          "additive_target_energy": 5.0963528891510866e-36
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -0.037805008805131074,
+          "quadrature_error_estimate": 9.493828145345605e-15,
+          "additive_target_energy": 0.0021832763034115286
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": -1.493613727743523e-17,
+          "quadrature_error_estimate": 2.1956295427447803e-14,
+          "additive_target_energy": 3.407898152535014e-34
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.009827496520856639,
+          "quadrature_error_estimate": 2.5914836365725723e-14,
+          "additive_target_energy": 0.00014753525494432332
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 1.0203279473286497e-17,
+          "quadrature_error_estimate": 1.3637842756050813e-14,
+          "additive_target_energy": 1.590338521899148e-34
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -0.0031203539752360163,
+          "quadrature_error_estimate": 1.3550268499116298e-14,
+          "additive_target_energy": 1.4873656279216999e-05
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 2.2900350543642034e-06,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "gelu",
+      "rank": 8,
+      "raw_teacher_mean": 0.8050558230550638,
+      "target_second_moment": 1.0,
+      "target_variance": 0.35188512176513376,
+      "mean_energy": 0.6481148782348662,
+      "linear_energy": 0.25451411751811237,
+      "nonlinear_energy": 0.09737100424702139,
+      "linear_fraction_of_variance": 0.7232875213405249,
+      "nonlinear_fraction_of_variance": 0.2767124786594751,
+      "degree2_energy": 0.0911411547517781,
+      "degree3_energy": 2.0241769647607775e-34,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.49999999999999994,
+          "quadrature_error_estimate": 5.563715749400125e-15,
+          "additive_target_energy": 0.25451411751811237
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.29920671030107454,
+          "quadrature_error_estimate": 8.77051138329915e-15,
+          "additive_target_energy": 0.0911411547517781
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": -1.410062311977992e-17,
+          "quadrature_error_estimate": 6.2565679699187254e-15,
+          "additive_target_energy": 2.0241769647607775e-34
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": -0.07197794780652825,
+          "quadrature_error_estimate": 1.610691167597275e-14,
+          "additive_target_energy": 0.0052743723814686425
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": -1.9672477136969692e-17,
+          "quadrature_error_estimate": 1.646324365655262e-14,
+          "additive_target_energy": 3.9399432540227955e-34
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.027596761959595498,
+          "quadrature_error_estimate": 7.256554896612062e-15,
+          "additive_target_energy": 0.0007753327400758897
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 4.015124910496339e-18,
+          "quadrature_error_estimate": 1.5049400229276598e-14,
+          "additive_target_energy": 1.6412320518648007e-35
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": -0.011853554261919193,
+          "quadrature_error_estimate": 1.547800408518471e-14,
+          "additive_target_energy": 0.00014304380454206278
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 3.7100569156678365e-05,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "sine",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 0.8509181282393216,
+      "nonlinear_energy": 0.14908187176067844,
+      "linear_fraction_of_variance": 0.8509181282393216,
+      "nonlinear_fraction_of_variance": 0.14908187176067844,
+      "degree2_energy": 0.0,
+      "degree3_energy": 0.14181968803988698,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.6065306597126334,
+          "quadrature_error_estimate": 6.770566553637956e-15,
+          "additive_target_energy": 0.8509181282393216
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.327554798006668e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": -0.24761510494160166,
+          "quadrature_error_estimate": 4.472144365475379e-15,
+          "additive_target_energy": 0.14181968803988698
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.125195681099746e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.055368420690516514,
+          "quadrature_error_estimate": 9.719206771632711e-15,
+          "additive_target_energy": 0.00709098440199434
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 1.9153485042370407e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": -0.008543532794657097,
+          "quadrature_error_estimate": 1.5220612980866163e-14,
+          "additive_target_energy": 0.0001688329619522461
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 7.836185197640347e-14,
+          "additive_target_energy": 0.0
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 2.3663568449183714e-06,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "tanh",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 0.9304699236152952,
+      "nonlinear_energy": 0.06953007638470476,
+      "linear_fraction_of_variance": 0.9304699236152952,
+      "nonlinear_fraction_of_variance": 0.06953007638470476,
+      "degree2_energy": 0.0,
+      "degree3_energy": 0.05588107403323188,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.605705509602159,
+          "quadrature_error_estimate": 4.34310071793979e-14,
+          "additive_target_energy": 0.9304699236152952
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.822449617565838e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": -0.14843719078727272,
+          "quadrature_error_estimate": 4.8927290722931156e-15,
+          "additive_target_energy": 0.05588107403323188
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.295677218183116e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.06254752375270362,
+          "quadrature_error_estimate": 4.683351790916855e-15,
+          "additive_target_energy": 0.00992200708573848
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 5.005605308976827e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": -0.03144541928767861,
+          "quadrature_error_estimate": 6.145183760207213e-15,
+          "additive_target_energy": 0.002507806774525815
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 7.41608560204943e-15,
+          "additive_target_energy": 0.0
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 0.0012191884912087225,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "erf",
+      "rank": 8,
+      "raw_teacher_mean": 0.0,
+      "target_second_moment": 1.0,
+      "target_variance": 1.0,
+      "mean_energy": 0.0,
+      "linear_energy": 0.9135828428288513,
+      "nonlinear_energy": 0.08641715717114873,
+      "linear_fraction_of_variance": 0.9135828428288513,
+      "nonlinear_fraction_of_variance": 0.08641715717114873,
+      "degree2_energy": 0.0,
+      "degree3_energy": 0.06767280317250751,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.6514700158705599,
+          "quadrature_error_estimate": 5.387438515624103e-14,
+          "additive_target_energy": 0.9135828428288513
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 5.116007006691262e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": -0.17730768017841453,
+          "quadrature_error_estimate": 1.9439011834890158e-14,
+          "additive_target_energy": 0.06767280317250751
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.57507001534386e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.07929440516234537,
+          "quadrature_error_estimate": 4.990261573654379e-15,
+          "additive_target_energy": 0.013534560634501498
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 5.450166027221926e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": -0.040784641166004276,
+          "quadrature_error_estimate": 6.4218873193996765e-15,
+          "additive_target_energy": 0.0035805715964289664
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 9.90197688073328e-15,
+          "additive_target_energy": 0.0
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 0.0016292217677106313,
+      "smallest_observed_nonconstant_degree": 1
+    },
+    {
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "raw_teacher_mean": 0.9904692222739754,
+      "target_second_moment": 1.0,
+      "target_variance": 0.018970719727986318,
+      "mean_energy": 0.9810292802720136,
+      "linear_energy": 0.0,
+      "nonlinear_energy": 0.018970719727986318,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "degree2_energy": 0.015328582504250217,
+      "degree3_energy": 0.0,
+      "degrees1_to8": [
+        {
+          "degree": 1,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 4.429291312915719e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 2,
+          "raw_scalar_coefficient": -0.25,
+          "quadrature_error_estimate": 1.1072284306767367e-14,
+          "additive_target_energy": 0.015328582504250217
+        },
+        {
+          "degree": 3,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 9.381740217002493e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 4,
+          "raw_scalar_coefficient": 0.10825317547305485,
+          "quadrature_error_estimate": 5.026062583446838e-15,
+          "additive_target_energy": 0.002874109219546917
+        },
+        {
+          "degree": 5,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 7.067825485225126e-15,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 6,
+          "raw_scalar_coefficient": -0.049410588440130944,
+          "quadrature_error_estimate": 3.287124857804553e-15,
+          "additive_target_energy": 0.0005987727540722745
+        },
+        {
+          "degree": 7,
+          "raw_scalar_coefficient": 0.0,
+          "quadrature_error_estimate": 2.4961388967664065e-14,
+          "additive_target_energy": 0.0
+        },
+        {
+          "degree": 8,
+          "raw_scalar_coefficient": 0.023109686652732882,
+          "quadrature_error_estimate": 1.542673852100113e-14,
+          "additive_target_energy": 0.00013098153995331002
+        }
+      ],
+      "unresolved_higher_degree_energy_raw": 3.827371016359993e-05,
+      "smallest_observed_nonconstant_degree": 2
+    }
+  ],
+  "formula": "Degree k>=1 additive target energy is qhat_k^2/[E q\u00b2+(r-1)(E q)\u00b2]. Constant energy is r(E q)\u00b2 divided by the same denominator.",
+  "interpretation": "The nonlinear energy is the oracle residual after fitting an unrestricted intercept and linear predictor. It is not an upper bound on improvement of an arbitrary finite student refit from its actual initialization.",
+  "primary_criterion_unchanged": true,
+  "threshold_note": "If actual feasible initial refit MSE is already below0.1 Var(Y), a nonnegative final MSE cannot improve it by0.1 Var(Y). Mark this effect-size ineligibility, without changing the frozen threshold.",
+  "input_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/bundle/swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/bundle/TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/audit/teacher_energy.py": "17df73ce7bafc75003c87ab16feef7925646dc143ad467698ef4efc43189db3b"
+  }
+}

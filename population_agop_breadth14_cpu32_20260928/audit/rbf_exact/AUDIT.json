@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "candidate_selection": "Original first numerically qualified1percent candidate from frozen partial summary; no state reselection",
+  "arm": "relu_gaussian_rbf_r8_d64_m256_seed641",
+  "selected_steps": [
+    0,
+    250
+  ],
+  "source_hashes_match_run": true,
+  "states": [
+    {
+      "step": 0,
+      "quadrature_vs_exact": {
+        "order16": {
+          "cross_max_abs": 1.734723475976807e-18,
+          "spatial_gradient_max_abs": 5.551115123125783e-17,
+          "bias_gradient_max_abs": 2.220446049250313e-16
+        },
+        "order32": {
+          "cross_max_abs": 2.6020852139652106e-18,
+          "spatial_gradient_max_abs": 8.326672684688674e-17,
+          "bias_gradient_max_abs": 2.7755575615628914e-16
+        }
+      },
+      "raw_loss_exact": 0.01897071895818203,
+      "raw_loss_order16": 0.01897071895818203,
+      "raw_loss_saved": 0.01897071895818203,
+      "loss_exact_vs_saved_abs": 0.0,
+      "full_loss_force_max_abs_difference": 1.734723475976807e-18,
+      "refit_exact_feasible_upper": 0.016380727909558468,
+      "refit_exact_numerical_lower": 0.016380727841311615,
+      "refit_exact_gap": 6.824685261364039e-11,
+      "refit_saved_upper": 0.016380727909558468,
+      "refit_saved_lower": 0.016380727841312615,
+      "refit_exact_vs_saved_abs": 0.0,
+      "refit_optimizer_success": true,
+      "refit_method": "spectral l2 solution",
+      "A_min_recomputed": 0.0008027583658579485,
+      "A_min_saved": 0.0008027583658579758,
+      "agop_screen_recomputed": true,
+      "agop_screen_saved": true
+    },
+    {
+      "step": 250,
+      "quadrature_vs_exact": {
+        "order16": {
+          "cross_max_abs": 1.734723475976807e-18,
+          "spatial_gradient_max_abs": 8.326672684688674e-17,
+          "bias_gradient_max_abs": 2.220446049250313e-16
+        },
+        "order32": {
+          "cross_max_abs": 2.6020852139652106e-18,
+          "spatial_gradient_max_abs": 1.6653345369377348e-16,
+          "bias_gradient_max_abs": 3.3306690738754696e-16
+        }
+      },
+      "raw_loss_exact": 0.018970298399180185,
+      "raw_loss_order16": 0.018970298399180185,
+      "raw_loss_saved": 0.018970298399180185,
+      "loss_exact_vs_saved_abs": 0.0,
+      "full_loss_force_max_abs_difference": 1.734723475976807e-18,
+      "refit_exact_feasible_upper": 0.007042638667535739,
+      "refit_exact_numerical_lower": 0.007042638578001248,
+      "refit_exact_gap": 8.953449093240806e-11,
+      "refit_saved_upper": 0.007042638667535739,
+      "refit_saved_lower": 0.007042638578002025,
+      "refit_exact_vs_saved_abs": 0.0,
+      "refit_optimizer_success": true,
+      "refit_method": "spectral l2 solution",
+      "A_min_recomputed": 0.5255391187213215,
+      "A_min_saved": 0.5255391187213215,
+      "agop_screen_recomputed": true,
+      "agop_screen_saved": true
+    }
+  ],
+  "created_utc": "2026-09-28T17:06:22.880979+00:00",
+  "target_mean": 0.9904692222739754,
+  "target_variance": 0.018970719727986363,
+  "target_second_moment": 1.0,
+  "candidate_check": {
+    "same_saved_step": 250,
+    "all_update_prefix_ratio": 1.0000221693403548,
+    "A_min_gain": 0.5247363603554636,
+    "refit_gain_lower_raw_exact": 0.009338089173775876,
+    "refit_gain_lower_over_variance_exact": 0.4922369476578137,
+    "material_threshold_raw": 0.0018970719727986363,
+    "candidate_still_passes": true
+  },
+  "input_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/analysis/partial_cpu32_20260928T165920Z.json": "d8084d91031864d8fb8527f47f913842eabe1370402d70069e102c8209890cb5",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/rows.jsonl": "f6c06b2b1124391c5fd8e7859232f296e9c6d454c84583ca2d3ec701917f589f",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/meta.json": "d9a30150b15b1e8e71ef7bede98aa318b8f5b1ba3fea20539734d4c37d962046",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/DONE.json": "02e40093569a777cd4cfd7750eabc36ae5cc0fc9330f40c9a9ee0eb6a2356b16",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/checkpoint_manifest.json": "b6978f7af9b713ccae27485561a34c68c33467242c1dfab4fdd5d5afa55550e5",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/loss_every_step.npy": "11413e54f4ba525e603d9b176edf12289e9007db0e311652b04f13d2c67c915e",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/states/step00000000.npz": "558601c0094b24b0c81d96c6fae1d3039d91f8758732357818441c509782b997",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/partial_20260928T165920Z/population_agop_breadth14_cpu32_20260928/bundle/execution/data/relu_gaussian_rbf_r8_d64_m256_seed641/states/step00000250.npz": "211a1cdfdde710601c64cbb960e54c2486623c11623862d4507f0d5a85ec9b77",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/bundle/code/population.py": "82dc6d9849531a208ae31ebaf4c95fb23bf0d56af5e9e60fd52f7b6dbb69ea34",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/bundle/code/teachers_smooth.py": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/bundle/code/canonical14_moments.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/bundle/code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/cpu32/bundle/diagnostics/stable_relu.py": "23ff122d3d4c62a2a620f23fc8d05a9308b716ab5a7a77ef3c22ea8a496fd299"
+  },
+  "inputs_unchanged": true,
+  "training_steps": 0,
+  "monte_carlo_samples": 0,
+  "network_calls": 0,
+  "elapsed_seconds": 9.831726468000852,
+  "cpu_seconds": 4.792664,
+  "scope": "Only initialization and original first1percent candidate checked. No whole-trajectory or formal rounding/population certificate.",
+  "audit_script_sha256": "42a23f4eefb4847e66671bda9f58b5aedfe92b9f589b46cdafc95fd691727beb"
+}

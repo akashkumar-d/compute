@@ -1,0 +1,26 @@
+{
+  "training_commit": "f7b170c83c353f3ddaf4cd829972ea2f26f39c8b",
+  "training_bundle_manifest_sha256": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+  "training_inputs_unchanged": true,
+  "files": {
+    "analysis/summarize_coverage.py": "fe0aedb926eafff5adcc966c3dc5042e2263da83e7e33ff6b5210f36a9e6ae0c",
+    "analysis/test_summarize_coverage.py": "e5d5d3fcd682434212413413a3c2ec5e0dbfa16ff955d0bc0802baf63360c363",
+    "analysis/README_SUMMARIZER.md": "ea0b0d7929efb24db32136c6dfc67b6d0ebb97ff9003f83293ba8a82eee96d7c",
+    "analysis/plot_coverage.py": "26242fe29a26f76eb7ea34e9825fe220d0d87ca6f6a67f3a3cb5daf37cf73ca0",
+    "analysis/test_plot_coverage.py": "2e3c98d6e9bc52169d96134b00bf04c752be1f692771759e67ce8dbd3f67f999",
+    "analysis/README_PLOTS.md": "9cad5547d4d11a888414ec868f64a9b5bf2bade1709580b61d1b2191ab1cdc3e",
+    "analysis/later_loss_windows.py": "0c21207b0599bc8dbc36b8c7d794625d5dd95f525d5854de5da801ce65772094",
+    "analysis/test_later_loss_windows.py": "74b3eb95c1314270a63c09dcec3953a8d42a7917246cb23050924c706b6c2d80",
+    "analysis/README_LATER_WINDOWS.md": "0b6c8b32f2a98564c138281309f56fc6adb5c5701a28107b4dc93b030cce552b",
+    "analysis/validation/SUMMARIZER_QA.json": "007799eb0d3310b4ff59e5a26a918c724493cd495358ec5b66e1ee123527f103",
+    "analysis/validation/INDEPENDENT_REVIEW.json": "aaa3a4f22669beb6168d47e666ebb40c8291c2129e5181f864d4e8ea64d4eb5e",
+    "analysis/plot_validation/PLOT_VALIDATION_RECEIPT.json": "c6abf236ebe1a359c09741b334a13e84e9cc3330d478874e908a39359d1c24f9",
+    "audit/TEACHER_ENERGIES.json": "88b957fa344eed8617b52b912cfca685adda25cff1db17ba395eee8edcb89bee",
+    "audit/TEACHER_ENERGIES.md": "78459c70a2951ef9545806c71a999e184f9068f5dcfa862e301a7284660619a7",
+    "audit/SECONDARY_REFIT.md": "c15214c9b14c93edeaf8daa0f366261e4d25f1be76ad0cfa9dc486ac427f7f6b",
+    "audit/BOUNDED_SWIGLU_REFIT_OLD_H2.json": "f7a3ef05402f649150e5110c8d038e709ee2f78011e8d19cf1b79ae9482e6041",
+    "audit/rbf_exact/AUDIT.json": "ec67244f535409a0a9b963474d47f6fd87d4d34bf53f7615543786fc4a78c2d9",
+    "audit/rbf_exact/REVIEW.md": "bba482a9d71a84de5c9eaa8f87f9efd8c61952bc8d9925b317a71a3c90eee00d"
+  },
+  "note": "Saved-data tools and secondary audit reports only. Historical model-state fixtures and original audit execution scripts remain in the durable Mac workstream; do not claim standalone reproduction of those old audits from these reports alone."
+}

@@ -1,0 +1,87 @@
+{
+  "created_utc": "2026-09-28T17:01:57.615688+00:00",
+  "status": "PASS",
+  "tests_passed": 32,
+  "tests_failed": 0,
+  "last_test_elapsed_seconds": 57.734,
+  "saved_backcompat_runs": 16,
+  "saved_backcompat_exact_windows": 32,
+  "all_old_original_counts_endpoints_and_first_candidates_match": true,
+  "old_inputs_unchanged_in_every_saved_run_report": true,
+  "old_input_files_hashed_including_states": 2189,
+  "reader_errors": 0,
+  "historical_original_vs_additional_qualification": {
+    "v6_relu": {
+      "1.01": {
+        "original": 4,
+        "additional_qualified": 4
+      },
+      "1.05": {
+        "original": 8,
+        "additional_qualified": 6
+      }
+    },
+    "v6_swiglu": {
+      "1.01": {
+        "original": 2,
+        "additional_qualified": 2
+      },
+      "1.05": {
+        "original": 2,
+        "additional_qualified": 2
+      }
+    },
+    "v6_h3_sine": {
+      "1.01": {
+        "original": 4,
+        "additional_qualified": 4
+      },
+      "1.05": {
+        "original": 4,
+        "additional_qualified": 4
+      }
+    }
+  },
+  "fixture_metadata": [
+    "Historical v6 fixtures are not new breadth14 outcomes",
+    "New64CPU and32CPU smoke tables retain60 unstarted attempts and28 canonical cells; runtime is read from each manifest"
+  ],
+  "integrity_fix_status": {
+    "invalid_bound_order": "closed",
+    "missing_or_corrupt_state_integrity": "closed",
+    "unknown_required_grid_negative": "closed",
+    "relu_horizon_flags": "closed",
+    "first_read_digest_and_changed_back_reread": "closed",
+    "changed_input_cell_aggregate_reset": "closed",
+    "missing_snapshot_blocks_extra_qualification": "closed"
+  },
+  "model_evaluations": 0,
+  "training_runs": 0,
+  "network_calls": 0,
+  "prior_data_edits": 0,
+  "output_sha256": {
+    "summarize_coverage.py": "fe0aedb926eafff5adcc966c3dc5042e2263da83e7e33ff6b5210f36a9e6ae0c",
+    "test_summarize_coverage.py": "e5d5d3fcd682434212413413a3c2ec5e0dbfa16ff955d0bc0802baf63360c363",
+    "README_SUMMARIZER.md": "ea0b0d7929efb24db32136c6dfc67b6d0ebb97ff9003f83293ba8a82eee96d7c",
+    "validation/v6_swiglu_summary.json": "50a21e4939bd5cfe5c6227236dbd99a3e01e95e97a3969f4c71cd532dcec3afe",
+    "validation/v6_h3_sine_summary.json": "d9a53a9810a38ba1f8f5ee355df88b27fa3d88c63f695e8a10c16d036d677635",
+    "validation/not_started_summary.json": "877647bbd1de49b588713dd3f8e3d0f93b8a99a8e7b3cdd5b554ab8caebe0a64",
+    "validation/v6_relu_summary.json": "80e0310ee56c160bd6e7ec5bfefff2d202706b02c5e54548f430c7db3060c365",
+    "validation/not_started_cpu32_summary.json": "113711bbb0df9e8a6b03bda9f4e1acd443242447094e1ee3f0d3b5baff877338",
+    "validation/v6_swiglu_summary.md": "49d1ebd40d8b8e8673065e200e799eb1fffbc4c98c6e7d535b02d58291e66ad4",
+    "validation/not_started_cpu32_summary.md": "485899242378973fb50a36ead58aeaf19b95e38647abcf89c69dc6640ac79f16",
+    "validation/v6_relu_summary.md": "2f1387423d6c9e20e177aff2195aa1d805c6b33d7e042b4dc519ced2e93f2b50",
+    "validation/v6_h3_sine_summary.md": "29b9ebf93fe2217f069acedacbe45995099e0428c38fe6af9d02bf22c9b4ea49",
+    "validation/not_started_summary.md": "485899242378973fb50a36ead58aeaf19b95e38647abcf89c69dc6640ac79f16",
+    "validation/INDEPENDENT_REVIEW.json": "aaa3a4f22669beb6168d47e666ebb40c8291c2129e5181f864d4e8ea64d4eb5e"
+  },
+  "independent_review": "validation/INDEPENDENT_REVIEW.json",
+  "portable_verification": {
+    "exit_code": 0,
+    "self_contained_edge_tests_passed": 25,
+    "optional_manifest_methods_skipped": 2,
+    "historical_class_skipped": true,
+    "unittest_report": "Ran 27 tests; OK (skipped=3); historical class skip represents five local regression methods",
+    "elapsed_seconds": 0.133
+  }
+}

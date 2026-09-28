@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-09-28T17:05:29.077766+00:00",
+  "status": "passed_and_frozen_for_saved_data_use",
+  "supersedes": "PLOT_CODE_FREEZE.json",
+  "files_sha256": {
+    "plot_coverage.py": "26242fe29a26f76eb7ea34e9825fe220d0d87ca6f6a67f3a3cb5daf37cf73ca0",
+    "test_plot_coverage.py": "2e3c98d6e9bc52169d96134b00bf04c752be1f692771759e67ce8dbd3f67f999",
+    "README_PLOTS.md": "9cad5547d4d11a888414ec868f64a9b5bf2bade1709580b61d1b2191ab1cdc3e"
+  },
+  "test_qa_sha256": "41849dd01f95c344a02aa064211e6846fd48017d481932ba928a0a4019cfabc3",
+  "historical_fixture_sha256": "f537131cef9449e380498d754686bbff33a2728744069a9ffeafc8ca53f10630",
+  "new_experiment_results": false,
+  "model_evaluations": 0,
+  "training_runs": 0,
+  "final_outputs": {
+    "historical_render_v3": {
+      "qa_sha256": "62f2eae22a57c5be33847b93d3db368d5a725472aed7697ab7b23d918a460b8e",
+      "provenance_sha256": "93d332313633fcd7a4cbfcccca4a39c8c712d0bd29f1527731a88b79ceeb8264",
+      "verified_output_count": 17,
+      "pngs_reviewed": [
+        "relu_full_page01.png",
+        "relu_initial_prefix_zoom_page01.png",
+        "swiglu_full_page01.png",
+        "swiglu_initial_prefix_zoom_page01.png"
+      ]
+    },
+    "synthetic_layout_v3": {
+      "qa_sha256": "379b4225afa093742baf28c512fba74f4b973b1e7d19bb0844b81361471efacd",
+      "provenance_sha256": "86436863c377adef2d5dcc7076daafc96dbc542d51275aea3cbe41e64cfe9ad5",
+      "verified_output_count": 13,
+      "pngs_reviewed": [
+        "swiglu_full_page01.png",
+        "swiglu_initial_prefix_zoom_page01.png"
+      ]
+    }
+  },
+  "historical_criteria": [
+    {
+      "cell": "h3_confirm",
+      "support": [
+        0.0,
+        820.75
+      ],
+      "zoom_end": 429.5,
+      "original_counts": {
+        "1.01": 1,
+        "1.05": 2
+      },
+      "qualified_counts": {
+        "1.01": 1,
+        "1.05": 2
+      }
+    },
+    {
+      "cell": "h3_smaller_scale",
+      "support": [
+        0.0,
+        926.8125
+      ],
+      "zoom_end": 548.5,
+      "original_counts": {
+        "1.01": 0,
+        "1.05": 2
+      },
+      "qualified_counts": {
+        "1.01": 0,
+        "1.05": 0
+      }
+    },
+    {
+      "cell": "h3_h5_breadth",
+      "support": [
+        0.0,
+        826.15625
+      ],
+      "zoom_end": 451.5,
+      "original_counts": {
+        "1.01": 1,
+        "1.05": 2
+      },
+      "qualified_counts": {
+        "1.01": 1,
+        "1.05": 2
+      }
+    },
+    {
+      "cell": "he2_headlr0p01",
+      "support": [
+        0.0,
+        36.966888045266856
+      ],
+      "zoom_end": 34.30857571113658,
+      "original_counts": {
+        "1.01": 2,
+        "1.05": 2
+      },
+      "qualified_counts": {
+        "1.01": 2,
+        "1.05": 2
+      }
+    },
+    {
+      "cell": "he3_headlr0p01",
+      "support": [
+        0.0,
+        350.0213318868777
+      ],
+      "zoom_end": 350.0213318868777,
+      "original_counts": {
+        "1.01": 0,
+        "1.05": 0
+      },
+      "qualified_counts": {
+        "1.01": 0,
+        "1.05": 0
+      }
+    }
+  ],
+  "input_hash_guard_observed_rejection": "historical_render_v2 rejected when underlying summaries changed during rendering; marked invalid and preserved",
+  "prior_results_and_plots_preserved": true,
+  "scientific_sources_or_configurations_edited": false
+}

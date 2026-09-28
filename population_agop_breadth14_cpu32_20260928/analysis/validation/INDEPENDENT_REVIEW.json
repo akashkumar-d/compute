@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-28T17:01:39.627212+00:00",
+  "status": "PASS",
+  "reviewer": "/root/loss_windows_v6/criteria_schema_audit",
+  "scope": "Targeted read-only inspection of all reported reader integrity findings; no model evaluation or new data.",
+  "reviewed_source_sha256": "fe0aedb926eafff5adcc966c3dc5042e2263da83e7e33ff6b5210f36a9e6ae0c",
+  "closed_findings": [
+    "Invalid refit ordering blocks original criteria",
+    "Unknown required grid cannot resolve negative",
+    "ReLU stop and horizon labels use saved flags and actual limits",
+    "Saved snapshot hashes and metadata verified",
+    "First hashes preserved and reread conflicts survive restoration",
+    "Numerical qualification requires verified snapshot integrity",
+    "Changed-input invalidation retains denominators and clears candidate aggregates"
+  ],
+  "remaining_blockers_within_scope": []
+}

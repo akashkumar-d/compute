@@ -1,0 +1,359 @@
+{
+  "secondary_audit": true,
+  "no_training": true,
+  "original_data_unchanged": true,
+  "protocol": "Fixed coefficient budget32 L2,64sqrt(r) L1 on centered gate-value features divided by product of augmented parameter norms; profiled intercept. Applied at initialization and identical original candidate states, no candidate reselection.",
+  "certainty": "Numerical primal/lower optimization checks at two quadrature orders; not a formal Gaussian integration certificate.",
+  "analytic_profiled_scaling_test_passed": true,
+  "arms": [
+    {
+      "id": "swiglu_he2_headlr0p01_r8_d64_m64_seed501",
+      "states": [
+        {
+          "step": 0,
+          "orders": [
+            {
+              "quadrature_multiplier": 1,
+              "raw_upper": 0.9709115602732343,
+              "raw_lower": 0.9709115602627347,
+              "raw_unclipped_lower": 0.9709115602627347,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.3446707709348407,
+              "coefficient_l1": 2.174450709875715,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 2.174450709875715,
+                "l2": 0.3446707709348407,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.1760950343830013,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.9709115602627347,
+                "numerical_lower_bound": 0.9709115602627347,
+                "objective_gap_bound": 1.049960118848503e-11,
+                "first_order_gap": 9.523517969201972e-15,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 1.0490071644324549e-11,
+                "eigenvalue_guard": 1.571649335582162e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.035805753999738954
+              }
+            },
+            {
+              "quadrature_multiplier": 2,
+              "raw_upper": 0.9709115602732343,
+              "raw_lower": 0.9709115602627353,
+              "raw_unclipped_lower": 0.9709115602627353,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.34467077093484094,
+              "coefficient_l1": 2.1744507098757166,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 2.1744507098757166,
+                "l2": 0.34467077093484094,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.17609503438300123,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.9709115602627353,
+                "numerical_lower_bound": 0.9709115602627353,
+                "objective_gap_bound": 1.0499046076972718e-11,
+                "first_order_gap": 8.947319368596906e-15,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 1.0490071644324543e-11,
+                "eigenvalue_guard": 1.571649335582161e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.0032361180001316825
+              }
+            }
+          ]
+        },
+        {
+          "step": 97,
+          "orders": [
+            {
+              "quadrature_multiplier": 1,
+              "raw_upper": 0.3495202108918176,
+              "raw_lower": 0.34952021086337764,
+              "raw_unclipped_lower": 0.34952021086337764,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.9567224205581675,
+              "coefficient_l1": 5.74718429287984,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 5.74718429287984,
+                "l2": 0.9567224205581675,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.1556844480433343,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.34952021086337764,
+                "numerical_lower_bound": 0.34952021086337764,
+                "objective_gap_bound": 2.843997259915909e-11,
+                "first_order_gap": 6.845690842249158e-14,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 2.8371496133578443e-11,
+                "eigenvalue_guard": 3.97748135895798e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.0021095360007166164
+              }
+            },
+            {
+              "quadrature_multiplier": 2,
+              "raw_upper": 0.3495202108918165,
+              "raw_lower": 0.3495202108633942,
+              "raw_unclipped_lower": 0.3495202108633942,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.9567224205581689,
+              "coefficient_l1": 5.747184292879849,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 5.747184292879849,
+                "l2": 0.9567224205581689,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.1556844480433342,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.3495202108633942,
+                "numerical_lower_bound": 0.3495202108633942,
+                "objective_gap_bound": 2.842232005306755e-11,
+                "first_order_gap": 5.08139717003646e-14,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 2.837149613357845e-11,
+                "eigenvalue_guard": 3.977481358957979e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.0015809679989615688
+              }
+            }
+          ]
+        }
+      ],
+      "raw_lower_gain_over_tested_orders": 0.6213913493709171,
+      "gain_at_least_point1_variance": true,
+      "original_candidate_step": 97,
+      "original_AGOP_gain": 0.5419201674212389,
+      "original_cutoff_gain": 0.6213913493814169
+    },
+    {
+      "id": "swiglu_he2_headlr0p01_r8_d64_m64_seed502",
+      "states": [
+        {
+          "step": 0,
+          "orders": [
+            {
+              "quadrature_multiplier": 1,
+              "raw_upper": 0.9740932270642538,
+              "raw_lower": 0.9740932270535607,
+              "raw_unclipped_lower": 0.9740932270535607,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.3204492155991959,
+              "coefficient_l1": 2.025314326338587,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 2.025314326338587,
+                "l2": 0.3204492155991959,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.17593262212581695,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.9740932270535607,
+                "numerical_lower_bound": 0.9740932270535607,
+                "objective_gap_bound": 1.0693113061677195e-11,
+                "first_order_gap": 9.567026903114653e-15,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 1.0683503615584577e-11,
+                "eigenvalue_guard": 1.6044797149065725e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.0015737499998067506
+              }
+            },
+            {
+              "quadrature_multiplier": 2,
+              "raw_upper": 0.9740932270642537,
+              "raw_lower": 0.9740932270535625,
+              "raw_unclipped_lower": 0.9740932270535625,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.3204492155991963,
+              "coefficient_l1": 2.025314326338589,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 2.025314326338589,
+                "l2": 0.3204492155991963,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.1759326221258168,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.9740932270535625,
+                "numerical_lower_bound": 0.9740932270535625,
+                "objective_gap_bound": 1.0691225682535332e-11,
+                "first_order_gap": 7.672357079158871e-15,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 1.0683503615584568e-11,
+                "eigenvalue_guard": 1.604479714906571e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.0021735789996455424
+              }
+            }
+          ]
+        },
+        {
+          "step": 58,
+          "orders": [
+            {
+              "quadrature_multiplier": 1,
+              "raw_upper": 0.4504395813693539,
+              "raw_lower": 0.4504395813458943,
+              "raw_unclipped_lower": 0.4504395813458943,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.9653162666763634,
+              "coefficient_l1": 6.115473225508848,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 6.115473225508848,
+                "l2": 0.9653162666763634,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.16311507814866738,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.4504395813458943,
+                "numerical_lower_bound": 0.4504395813458943,
+                "objective_gap_bound": 2.34596231329931e-11,
+                "first_order_gap": 2.5160509603331243e-14,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 2.3434459938717054e-11,
+                "eigenvalue_guard": 3.278618946867535e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.005426978999821586
+              }
+            },
+            {
+              "quadrature_multiplier": 2,
+              "raw_upper": 0.4504395813693537,
+              "raw_lower": 0.4504395813458916,
+              "raw_unclipped_lower": 0.4504395813458916,
+              "variance": 1.0,
+              "nonnegative_primal": true,
+              "coefficient_l2": 0.9653162666763648,
+              "coefficient_l1": 6.115473225508857,
+              "l2_cap": 32.0,
+              "l1_cap": 181.01933598375618,
+              "info": {
+                "l1": 6.115473225508857,
+                "l2": 0.9653162666763648,
+                "l1_cap": 181.01933598375618,
+                "l2_cap": 32.0,
+                "success": true,
+                "message": "first-order gap tolerance met",
+                "method": "spectral l2 solution",
+                "iterations": 0,
+                "gram_min": 0.16311507814866733,
+                "active_face_steps": 0,
+                "conic": {
+                  "available": false,
+                  "used": false
+                },
+                "convex_lower_bound": 0.4504395813458916,
+                "numerical_lower_bound": 0.4504395813458916,
+                "objective_gap_bound": 2.3462065623647277e-11,
+                "first_order_gap": 2.7593810428497525e-14,
+                "negative_curvature_allowance": -0.0,
+                "roundoff_allowance": 2.3434459938717057e-11,
+                "eigenvalue_guard": 3.278618946867534e-13,
+                "gap_tolerance": 1e-08,
+                "elapsed_seconds": 0.0024176529987016693
+              }
+            }
+          ]
+        }
+      ],
+      "raw_lower_gain_over_tested_orders": 0.5236536456842068,
+      "gain_at_least_point1_variance": true,
+      "original_candidate_step": 58,
+      "original_AGOP_gain": 0.5176627717321357,
+      "original_cutoff_gain": 0.5236536456948999
+    }
+  ],
+  "input_sha256": {
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v6/swiglu_head_rate_v1/output_compare/COMPARISON.json": "b2e60d1b48e74c612391138e30fb59c18e641c9005052ad44d861e7957443cb7",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v6/swiglu_head_rate_v1/execution/swiglu_he2_headlr0p01_r8_d64_m64_seed501/swiglu_he2_headlr0p01_r8_d64_m64_seed501.json": "01b27a16ef6dfa70efcf325ff598d67243c00d6d87e008553115aec78c3d083f",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v6/swiglu_head_rate_v1/execution/swiglu_he2_headlr0p01_r8_d64_m64_seed501/swiglu_he2_headlr0p01_r8_d64_m64_seed501_snaps.npz": "4f47b1b5e87fa8bf51f4d974b5da700b427e8854a32cdc800bd8d9e7a6caed3e",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v6/swiglu_head_rate_v1/execution/swiglu_he2_headlr0p01_r8_d64_m64_seed502/swiglu_he2_headlr0p01_r8_d64_m64_seed502.json": "de5b3bcf2216f19b9ec1a58e5ec948211fd9edb997d4310332b7c527b2624d1c",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v6/swiglu_head_rate_v1/execution/swiglu_he2_headlr0p01_r8_d64_m64_seed502/swiglu_he2_headlr0p01_r8_d64_m64_seed502_snaps.npz": "84915d4b9f07f2c186eeeee9a7b4f2943f4ac19920d40014aecd722ba1e31600",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/bundle/code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/bundle/swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/bundle/swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/bundle/swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v7/breadth14/audit/bounded_swiglu_refit.py": "7de14c70e1c59ae45a7ab5997585a6274084300b25e00d9db2672d6f4208e33e"
+  },
+  "elapsed_seconds": 17.92918511300013
+}
