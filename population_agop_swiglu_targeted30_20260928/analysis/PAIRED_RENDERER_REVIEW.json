@@ -1,0 +1,15 @@
+{
+  "old_sha256": "a9b301c156441951e93b0c50906409ff5ee789c22e0427080ec5b498a36bc398",
+  "new_sha256": "8362da196bb7ec04cd928fa8f88acb8b903de3b7bae6a73c0bb7a59f877db3fb",
+  "changed_functions": [
+    "grouping",
+    "write_plots",
+    "main"
+  ],
+  "all_numerical_and_layout_helpers_ast_unchanged": true,
+  "no_training_or_model_evaluations": true,
+  "synthetic_regressions_pass": true,
+  "paired_cell_checks_pass": true,
+  "test_runtime": "/Users/legendkiller/anaconda3/bin/python3",
+  "note": "SystemPython lacksNumPy; bundleddocumentPython lacksMatplotlib; existingAnaconda used successfully. No dependency installation or model calls."
+}
