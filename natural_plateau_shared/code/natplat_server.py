@@ -173,8 +173,9 @@ def run(cfg, out, ckpt_every=5000):
     R = Run(cfg); T = cfg['steps']; t0 = time.time(); ck = out + '.ckpt.npz'
     loss = np.empty(T + 1); obs = []; t_start = 0
     if os.path.exists(ck):
-        z = np.load(ck, allow_pickle=False); t_start = int(z['t_next'])
-        loss[:t_start] = z['loss']; obs = json.loads(str(z['obs'])); R.V = z['V']; R.Ws = [z[f'W{l}'] for l in range(int(z['nW']))]
+        with np.load(ck, allow_pickle=False) as z:  # close the file, so replacing it later leaves no .nfs copy on NFS
+            t_start = int(z['t_next'])
+            loss[:t_start] = z['loss']; obs = json.loads(str(z['obs'])); R.V = z['V']; R.Ws = [z[f'W{l}'] for l in range(int(z['nW']))]
     for t in range(t_start, T + 1):
         if ckpt_every and t > t_start and t % ckpt_every == 0: _save_ckpt(ck, R, t, loss, obs)
         L, gWs, gV = R.loss_and_grads(); loss[t] = L

@@ -2,6 +2,8 @@
 *.ckpt.npz
 *.tmp
 *.tmp.npz
+# NFS keeps a deleted-but-open file as .nfsXXXX (e.g. the checkpoint a resumed run still holds open)
+.nfs*
 # nohup output next to results/<TASK>/
 results/*.out
 __pycache__/
