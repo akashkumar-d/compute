@@ -1,0 +1,3669 @@
+{
+  "schema": "rank_sweep_predeclared_design_v1",
+  "status": "design_only_no_training_no_launcher_changes",
+  "ranks": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "dimension": 64,
+  "students": {
+    "relu": {
+      "width": 256,
+      "initial_scale": 0.01,
+      "optimizer": "Armijo population GD"
+    },
+    "swiglu": {
+      "width": 64,
+      "initial_scale": 0.1,
+      "head_lr": 0.01,
+      "optimizer": "block-rate adaptive Euler"
+    }
+  },
+  "teachers_first_batch": [
+    "h2",
+    "relu"
+  ],
+  "seeds": [
+    641,
+    642
+  ],
+  "seed_status": "Reused development seeds, paired within architecture; no fresh-confirmation claim",
+  "total_arms": 32,
+  "normalization": {
+    "formula": "Y_r=sum_{i=1}^r q(X_i)/sqrt(r Var(q)+r^2 E[q]^2)",
+    "raw_mean_retained": true,
+    "target_second_moment": 1.0,
+    "profiled_output_intercept": true,
+    "teacher_axes": "nested coordinate axes e1,...,er",
+    "variance_formula": "Var(Y_r)=Var(q)/(Var(q)+r E[q]^2)",
+    "rank_comparison_estimand": "Vary rank at fixed raw-link, second-moment normalization, dimension, width, initialization, and optimizer recipe. Rank-induced raw target amplitude and readout-budget differences remain explicit."
+  },
+  "paired_initialization": {
+    "student_arrays_identical_across_ranks": true,
+    "student_arrays_identical_across_teachers": true,
+    "cross_architecture_arrays_matched": false,
+    "source_based_only_not_generated_here": true,
+    "verification_before_claim": "Hash initial arrays for all within-student same-seed cells; no rank-dependent RNG offsets."
+  },
+  "criterion": {
+    "initial_whole_update_loss_max_min": [
+      1.01,
+      1.05
+    ],
+    "same_checkpoint_minimum_alignment_gain": 0.5,
+    "same_checkpoint_refit_gain_over_variance": 0.1,
+    "later_same_run_loss_drop_over_variance": 0.1,
+    "relative_agop_guard": 1e-09,
+    "refit_sensitivity_or_solver_tolerance": 1e-07,
+    "no_threshold_changes": true,
+    "swiglu_refit": "four-cutoff sensitivity envelope; not formal oracle improvement bound",
+    "relu_refit": "bounded normalized readout; l2=32, l1=64sqrt(r); numerical solver lower difference",
+    "authoritative_aggregation": "Canonical summarize_coverage.py .1Var same-state criterion; do not use ReLU native legacy primary_event_rule/refit flags based on raw >1e-5."
+  },
+  "rank_geometry": [
+    {
+      "rank": 2,
+      "dimension": 64,
+      "expected_random_subspace_mean_alignment": 0.03125,
+      "expected_random_top1_capture": 0.03125,
+      "min_alignment_note": "Not r/d; use actual measured initial weakest principal cosine. No forced intersection since 2r<=d.",
+      "relu_width_per_rank": 128.0,
+      "swiglu_width_per_rank": 32.0,
+      "relu_refit_l2_cap": 32.0,
+      "relu_refit_l1_cap": 90.50966799187809
+    },
+    {
+      "rank": 4,
+      "dimension": 64,
+      "expected_random_subspace_mean_alignment": 0.0625,
+      "expected_random_top1_capture": 0.0625,
+      "min_alignment_note": "Not r/d; use actual measured initial weakest principal cosine. No forced intersection since 2r<=d.",
+      "relu_width_per_rank": 64.0,
+      "swiglu_width_per_rank": 16.0,
+      "relu_refit_l2_cap": 32.0,
+      "relu_refit_l1_cap": 128.0
+    },
+    {
+      "rank": 8,
+      "dimension": 64,
+      "expected_random_subspace_mean_alignment": 0.125,
+      "expected_random_top1_capture": 0.125,
+      "min_alignment_note": "Not r/d; use actual measured initial weakest principal cosine. No forced intersection since 2r<=d.",
+      "relu_width_per_rank": 32.0,
+      "swiglu_width_per_rank": 8.0,
+      "relu_refit_l2_cap": 32.0,
+      "relu_refit_l1_cap": 181.01933598375618
+    },
+    {
+      "rank": 16,
+      "dimension": 64,
+      "expected_random_subspace_mean_alignment": 0.25,
+      "expected_random_top1_capture": 0.25,
+      "min_alignment_note": "Not r/d; use actual measured initial weakest principal cosine. No forced intersection since 2r<=d.",
+      "relu_width_per_rank": 16.0,
+      "swiglu_width_per_rank": 4.0,
+      "relu_refit_l2_cap": 32.0,
+      "relu_refit_l1_cap": 256.0
+    }
+  ],
+  "quadrature": {
+    "swiglu_training": {
+      "n_pair": 32,
+      "n_diag": 96,
+      "n_z": 48,
+      "n_x": 24
+    },
+    "status": "Provisional common order2 recipe, not numerical validation at any rank",
+    "saved_state_comparison": {
+      "n_pair": 64,
+      "n_diag": 192,
+      "n_z": 96,
+      "n_x": 48
+    },
+    "audit_states": "Each rank: initialization, both initial-loss boundaries, first putative candidate, and terminal; prioritize exact selected candidates; compare actual block-weighted update and adaptive dt.",
+    "relu_first_batch": "Existing analytic h2/raw-ReLU teacher cross formulas and angular student kernel; no new tensor-product-in-r rule.",
+    "on_failure": "Keep rank/arm unresolved; revise precision in a separate matched recipe across affected ranks, never silently mix orders."
+  },
+  "compute_plan": {
+    "launch_authorized_by_parent_not_this_artifact": true,
+    "admission_required_effective_cpus": 32,
+    "max_rank_workers_while_v9_pair_runs": 28,
+    "max_total_workstream_workers": 30,
+    "reserved_cpus": 2,
+    "single_thread_children": true,
+    "per_arm_seconds": 1990,
+    "training_seconds": 1800,
+    "diagnostic_seconds": 180,
+    "cleanup_seconds": 10,
+    "global_rank_batch_seconds": 3600,
+    "separate_setup_seconds": 120,
+    "max_waves": 2,
+    "no_gpu": true,
+    "note": "Parent final ceiling3600seconds;1990perarm unchanged. Rank batch max28 while two validation workers run; total<=30. At most2waves, but3600<2*1990, so later starts may have shorter global-cutoff budgets. Retain every capped, pending or unstarted arm.",
+    "reserved_cpus_for_rank_launcher": 4,
+    "reservation_breakdown": {
+      "other_validation_workers": 2,
+      "free_cpus": 2
+    }
+  },
+  "teacher_rank_energies": [
+    {
+      "teacher": "h2",
+      "rank": 2,
+      "gamma": 0.7071067811865475,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.5,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 1.0,
+      "teacher_agop_transverse_eigenvalue": 1.0,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h2",
+      "rank": 4,
+      "gamma": 0.5,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.25,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.5,
+      "teacher_agop_transverse_eigenvalue": 0.5,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h2",
+      "rank": 8,
+      "gamma": 0.35355339059327373,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.125,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.25,
+      "teacher_agop_transverse_eigenvalue": 0.25,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h2",
+      "rank": 16,
+      "gamma": 0.25,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.0625,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.125,
+      "teacher_agop_transverse_eigenvalue": 0.125,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h3",
+      "rank": 2,
+      "gamma": 0.7071067811865475,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.5,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 1.5,
+      "teacher_agop_transverse_eigenvalue": 1.5,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h3",
+      "rank": 4,
+      "gamma": 0.5,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.25,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.75,
+      "teacher_agop_transverse_eigenvalue": 0.75,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h3",
+      "rank": 8,
+      "gamma": 0.35355339059327373,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.125,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.375,
+      "teacher_agop_transverse_eigenvalue": 0.375,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h3",
+      "rank": 16,
+      "gamma": 0.25,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.0625,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.1875,
+      "teacher_agop_transverse_eigenvalue": 0.1875,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h4",
+      "rank": 2,
+      "gamma": 0.7071067811865475,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.5,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 2.0,
+      "teacher_agop_transverse_eigenvalue": 2.0,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h4",
+      "rank": 4,
+      "gamma": 0.5,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.25,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 1.0,
+      "teacher_agop_transverse_eigenvalue": 1.0,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h4",
+      "rank": 8,
+      "gamma": 0.35355339059327373,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.125,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.5,
+      "teacher_agop_transverse_eigenvalue": 0.5,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h4",
+      "rank": 16,
+      "gamma": 0.25,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.0625,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.25,
+      "teacher_agop_transverse_eigenvalue": 0.25,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h5",
+      "rank": 2,
+      "gamma": 0.7071067811865475,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.5,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 2.5,
+      "teacher_agop_transverse_eigenvalue": 2.5,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h5",
+      "rank": 4,
+      "gamma": 0.5,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.25,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 1.25,
+      "teacher_agop_transverse_eigenvalue": 1.25,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h5",
+      "rank": 8,
+      "gamma": 0.35355339059327373,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.125,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.625,
+      "teacher_agop_transverse_eigenvalue": 0.625,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "h5",
+      "rank": 16,
+      "gamma": 0.25,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.0625,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.3125,
+      "teacher_agop_transverse_eigenvalue": 0.3125,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "relu",
+      "rank": 2,
+      "gamma": 0.8709460333423513,
+      "target_variance": 0.5170939859895523,
+      "target_mean": 0.6949143932963597,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.2585469929947761,
+      "per_axis_nonlinear_energy": 0.06891024474608207,
+      "linear_fraction_of_variance": 0.7334711034621301,
+      "nonlinear_fraction_of_variance": 0.26652889653786993,
+      "teacher_agop_aggregate_eigenvalue": 0.5689102447460822,
+      "teacher_agop_transverse_eigenvalue": 0.18963674824869406,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "relu",
+      "rank": 4,
+      "gamma": 0.5057308356747087,
+      "target_variance": 0.3487031417393045,
+      "target_mean": 0.8070296514135621,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.08717578543482613,
+      "per_axis_nonlinear_energy": 0.02323486589676632,
+      "linear_fraction_of_variance": 0.7334711034621301,
+      "nonlinear_fraction_of_variance": 0.26652889653786993,
+      "teacher_agop_aggregate_eigenvalue": 0.319704597690299,
+      "teacher_agop_transverse_eigenvalue": 0.0639409195380598,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "relu",
+      "rank": 8,
+      "gamma": 0.27828632096886285,
+      "target_variance": 0.21116926371833117,
+      "target_mean": 0.8881614359347455,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.026396157964791396,
+      "per_axis_nonlinear_energy": 0.00703533885519516,
+      "linear_fraction_of_variance": 0.73347110346213,
+      "nonlinear_fraction_of_variance": 0.26652889653787004,
+      "teacher_agop_aggregate_eigenvalue": 0.17424737198636614,
+      "teacher_agop_transverse_eigenvalue": 0.019360819109596236,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "relu",
+      "rank": 16,
+      "gamma": 0.14712695179213178,
+      "target_variance": 0.11804876751909774,
+      "target_mean": 0.9391225865034354,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0073780479699436085,
+      "per_axis_nonlinear_energy": 0.0019664629840325416,
+      "linear_fraction_of_variance": 0.7334711034621301,
+      "nonlinear_fraction_of_variance": 0.26652889653787,
+      "teacher_agop_aggregate_eigenvalue": 0.09199694476048813,
+      "teacher_agop_transverse_eigenvalue": 0.005411584985911067,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "leaky_relu",
+      "rank": 2,
+      "gamma": 0.8881152252288304,
+      "target_variance": 0.5932722796321773,
+      "target_mean": 0.637752083781639,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.29663613981608866,
+      "per_axis_nonlinear_energy": 0.05803967219790365,
+      "linear_fraction_of_variance": 0.8043405222509716,
+      "nonlinear_fraction_of_variance": 0.1956594777490283,
+      "teacher_agop_aggregate_eigenvalue": 0.6369145375262294,
+      "teacher_agop_transverse_eigenvalue": 0.15972160228985932,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "leaky_relu",
+      "rank": 4,
+      "gamma": 0.5294796763913676,
+      "target_variance": 0.42173923996965956,
+      "target_mean": 0.7604345862928255,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.10543480999241489,
+      "per_axis_nonlinear_energy": 0.02062931985968393,
+      "linear_fraction_of_variance": 0.8043405222509717,
+      "nonlinear_fraction_of_variance": 0.1956594777490283,
+      "teacher_agop_aggregate_eigenvalue": 0.3959925778925041,
+      "teacher_agop_transverse_eigenvalue": 0.05677061736158021,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "leaky_relu",
+      "rank": 8,
+      "gamma": 0.2980196617672883,
+      "target_variance": 0.2672177188017727,
+      "target_mean": 0.8560270329833207,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.03340221485022159,
+      "per_axis_nonlinear_energy": 0.006535459913255191,
+      "linear_fraction_of_variance": 0.8043405222509717,
+      "nonlinear_fraction_of_variance": 0.19565947774902823,
+      "teacher_agop_aggregate_eigenvalue": 0.23291922255270867,
+      "teacher_agop_transverse_eigenvalue": 0.017985183056977497,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "leaky_relu",
+      "rank": 16,
+      "gamma": 0.1600876835470518,
+      "target_variance": 0.15421309514833587,
+      "target_mean": 0.9196667357535903,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.009638318446770992,
+      "per_axis_nonlinear_energy": 0.001885828353674037,
+      "linear_fraction_of_variance": 0.8043405222509717,
+      "nonlinear_fraction_of_variance": 0.19565947774902823,
+      "teacher_agop_aggregate_eigenvalue": 0.1292295249403021,
+      "teacher_agop_transverse_eigenvalue": 0.005189683450750852,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "abs",
+      "rank": 2,
+      "gamma": 0.5527275415390739,
+      "target_variance": 0.22203094070331453,
+      "target_mean": 0.882025543449103,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.11101547035165726,
+      "per_axis_nonlinear_energy": 0.11101547035165726,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.30550773517582863,
+      "teacher_agop_transverse_eigenvalue": 0.30550773517582863,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "abs",
+      "rank": 4,
+      "gamma": 0.29311227616938595,
+      "target_variance": 0.12487896768639144,
+      "target_mean": 0.9354790389493548,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.03121974192159786,
+      "per_axis_nonlinear_energy": 0.03121974192159786,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.0859148064411984,
+      "teacher_agop_transverse_eigenvalue": 0.0859148064411984,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "abs",
+      "rank": 8,
+      "gamma": 0.15135764352435493,
+      "target_variance": 0.06659781717253213,
+      "target_mean": 0.9661274154206928,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.008324727146566516,
+      "per_axis_nonlinear_energy": 0.008324727146566516,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.022909136253245702,
+      "teacher_agop_transverse_eigenvalue": 0.022909136253245702,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "abs",
+      "rank": 16,
+      "gamma": 0.07697120002136515,
+      "target_variance": 0.0344459201319083,
+      "target_mean": 0.982626113976263,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.002152870008244269,
+      "per_axis_nonlinear_energy": 0.002152870008244269,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.005924565632729002,
+      "teacher_agop_transverse_eigenvalue": 0.005924565632729002,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "softplus",
+      "rank": 2,
+      "gamma": 0.5641570830405296,
+      "target_variance": 0.1728315864585809,
+      "target_mean": 0.9094879952706463,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.08641579322929045,
+      "per_axis_nonlinear_energy": 0.006847489643090718,
+      "linear_fraction_of_variance": 0.920761131881044,
+      "nonlinear_fraction_of_variance": 0.07923886811895602,
+      "teacher_agop_aggregate_eigenvalue": 0.17294299235013302,
+      "teacher_agop_transverse_eigenvalue": 0.013806385177733553,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "softplus",
+      "rank": 4,
+      "gamma": 0.2951180399435193,
+      "target_variance": 0.09458985016252476,
+      "target_mean": 0.9515304250718815,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.02364746254063119,
+      "per_axis_nonlinear_energy": 0.0018737981656050257,
+      "linear_fraction_of_variance": 0.920761131881044,
+      "nonlinear_fraction_of_variance": 0.07923886811895595,
+      "teacher_agop_aggregate_eigenvalue": 0.09087273977085003,
+      "teacher_agop_transverse_eigenvalue": 0.0037780822707453683,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "softplus",
+      "rank": 8,
+      "gamma": 0.15117727848009463,
+      "target_variance": 0.04964277647549686,
+      "target_mean": 0.9748626690588287,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.006205347059437107,
+      "per_axis_nonlinear_energy": 0.0004917046772750875,
+      "linear_fraction_of_variance": 0.9207611318810441,
+      "nonlinear_fraction_of_variance": 0.07923886811895586,
+      "teacher_agop_aggregate_eigenvalue": 0.04670054824840066,
+      "teacher_agop_transverse_eigenvalue": 0.0009914091911045046,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "softplus",
+      "rank": 16,
+      "gamma": 0.07654457982359773,
+      "target_variance": 0.025453171284072297,
+      "target_mean": 0.987191384036514,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0015908232052545186,
+      "per_axis_nonlinear_energy": 0.0001260550301617376,
+      "linear_fraction_of_variance": 0.920761131881044,
+      "nonlinear_fraction_of_variance": 0.07923886811895596,
+      "teacher_agop_aggregate_eigenvalue": 0.02369045172624907,
+      "teacher_agop_transverse_eigenvalue": 0.0002541609247645727,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "silu",
+      "rank": 2,
+      "gamma": 1.1201815554043566,
+      "target_variance": 0.7857180481408674,
+      "target_mean": 0.46290598598325844,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.3928590240704337,
+      "per_axis_nonlinear_energy": 0.07915734480340286,
+      "linear_fraction_of_variance": 0.7985095417097734,
+      "nonlinear_fraction_of_variance": 0.20149045829022663,
+      "teacher_agop_aggregate_eigenvalue": 0.7898786831047128,
+      "teacher_agop_transverse_eigenvalue": 0.16247532457065098,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "silu",
+      "rank": 4,
+      "gamma": 0.7188092373714422,
+      "target_variance": 0.6470639269058472,
+      "target_mean": 0.5940842306391851,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.1617659817264618,
+      "per_axis_nonlinear_energy": 0.032594301793833186,
+      "linear_fraction_of_variance": 0.7985095417097735,
+      "nonlinear_fraction_of_variance": 0.20149045829022644,
+      "teacher_agop_aggregate_eigenvalue": 0.583588531258674,
+      "teacher_agop_transverse_eigenvalue": 0.06690181152815962,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "silu",
+      "rank": 8,
+      "gamma": 0.43697844360566557,
+      "target_variance": 0.47826644567619364,
+      "target_mean": 0.7223112586162606,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.059783305709524205,
+      "per_axis_nonlinear_energy": 0.012045765665516753,
+      "linear_fraction_of_variance": 0.7985095417097734,
+      "nonlinear_fraction_of_variance": 0.2014904582902266,
+      "teacher_agop_aggregate_eigenvalue": 0.4066249961363174,
+      "teacher_agop_transverse_eigenvalue": 0.02472467578425778,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "silu",
+      "rank": 16,
+      "gamma": 0.2504815298917465,
+      "target_variance": 0.31429053024247394,
+      "target_mean": 0.8280757632955611,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.01964315814015462,
+      "per_axis_nonlinear_energy": 0.003957908935927148,
+      "linear_fraction_of_variance": 0.7985095417097735,
+      "nonlinear_fraction_of_variance": 0.2014904582902265,
+      "teacher_agop_aggregate_eigenvalue": 0.2590878390792809,
+      "teacher_agop_transverse_eigenvalue": 0.008123851811641353,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gelu",
+      "rank": 2,
+      "gamma": 0.9952353168258972,
+      "target_variance": 0.6847161789973822,
+      "target_mean": 0.5615013989320222,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.3423580894986911,
+      "per_axis_nonlinear_energy": 0.09473475553430516,
+      "linear_fraction_of_variance": 0.7232875213405251,
+      "nonlinear_fraction_of_variance": 0.2767124786594749,
+      "teacher_agop_aggregate_eigenvalue": 0.6991405785348974,
+      "teacher_agop_transverse_eigenvalue": 0.20389391060612547,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gelu",
+      "rank": 4,
+      "gamma": 0.6136221699433615,
+      "target_variance": 0.5205843545429115,
+      "target_mean": 0.6923984730320313,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.13014608863572788,
+      "per_axis_nonlinear_energy": 0.03601304677422798,
+      "linear_fraction_of_variance": 0.7232875213405251,
+      "nonlinear_fraction_of_variance": 0.2767124786594749,
+      "teacher_agop_aggregate_eigenvalue": 0.454041640059561,
+      "teacher_agop_transverse_eigenvalue": 0.07750947261356134,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gelu",
+      "rank": 8,
+      "gamma": 0.3567310734419644,
+      "target_variance": 0.35188512176513376,
+      "target_mean": 0.8050558230550638,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.04398564022064172,
+      "per_axis_nonlinear_energy": 0.012171375530877666,
+      "linear_fraction_of_variance": 0.723287521340525,
+      "nonlinear_fraction_of_variance": 0.27671247865947496,
+      "teacher_agop_aggregate_eigenvalue": 0.2807100932236464,
+      "teacher_agop_transverse_eigenvalue": 0.02619597570553392,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gelu",
+      "rank": 16,
+      "gamma": 0.19648626754240317,
+      "target_variance": 0.2135076422233402,
+      "target_mean": 0.8868440436608117,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.013344227638958763,
+      "per_axis_nonlinear_energy": 0.0036925143057725523,
+      "linear_fraction_of_variance": 0.7232875213405251,
+      "nonlinear_fraction_of_variance": 0.27671247865947496,
+      "teacher_agop_aggregate_eigenvalue": 0.16237466750951998,
+      "teacher_agop_transverse_eigenvalue": 0.007947254178540591,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "sine",
+      "rank": 2,
+      "gamma": 1.0754151025300258,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.07454093588033922,
+      "linear_fraction_of_variance": 0.8509181282393216,
+      "nonlinear_fraction_of_variance": 0.14908187176067844,
+      "teacher_agop_aggregate_eigenvalue": 1.0819767068693265,
+      "teacher_agop_transverse_eigenvalue": 0.23105857863000495,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "sine",
+      "rank": 4,
+      "gamma": 0.7604333115894075,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.03727046794016961,
+      "linear_fraction_of_variance": 0.8509181282393216,
+      "nonlinear_fraction_of_variance": 0.14908187176067844,
+      "teacher_agop_aggregate_eigenvalue": 0.9664474175543241,
+      "teacher_agop_transverse_eigenvalue": 0.11552928931500248,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "sine",
+      "rank": 8,
+      "gamma": 0.5377075512650129,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.018635233970084805,
+      "linear_fraction_of_variance": 0.8509181282393216,
+      "nonlinear_fraction_of_variance": 0.14908187176067844,
+      "teacher_agop_aggregate_eigenvalue": 0.9086827728968229,
+      "teacher_agop_transverse_eigenvalue": 0.05776464465750124,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "sine",
+      "rank": 16,
+      "gamma": 0.38021665579470376,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.009317616985042403,
+      "linear_fraction_of_variance": 0.8509181282393216,
+      "nonlinear_fraction_of_variance": 0.14908187176067844,
+      "teacher_agop_aggregate_eigenvalue": 0.8798004505680721,
+      "teacher_agop_transverse_eigenvalue": 0.02888232232875062,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "tanh",
+      "rank": 2,
+      "gamma": 1.1260940087793412,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.03476503819235249,
+      "linear_fraction_of_variance": 0.930469923615295,
+      "nonlinear_fraction_of_variance": 0.06953007638470499,
+      "teacher_agop_aggregate_eigenvalue": 1.0541385779597374,
+      "teacher_agop_transverse_eigenvalue": 0.12366865434444237,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "tanh",
+      "rank": 4,
+      "gamma": 0.7962687098614156,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.017382519096176247,
+      "linear_fraction_of_variance": 0.930469923615295,
+      "nonlinear_fraction_of_variance": 0.06953007638470499,
+      "teacher_agop_aggregate_eigenvalue": 0.9923042507875162,
+      "teacher_agop_transverse_eigenvalue": 0.06183432717222118,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "tanh",
+      "rank": 8,
+      "gamma": 0.5630470043896706,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.008691259548088123,
+      "linear_fraction_of_variance": 0.930469923615295,
+      "nonlinear_fraction_of_variance": 0.06953007638470499,
+      "teacher_agop_aggregate_eigenvalue": 0.9613870872014055,
+      "teacher_agop_transverse_eigenvalue": 0.03091716358611059,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "tanh",
+      "rank": 16,
+      "gamma": 0.3981343549307078,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.004345629774044062,
+      "linear_fraction_of_variance": 0.930469923615295,
+      "nonlinear_fraction_of_variance": 0.06953007638470499,
+      "teacher_agop_aggregate_eigenvalue": 0.9459285054083504,
+      "teacher_agop_transverse_eigenvalue": 0.015458581793055296,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "erf",
+      "rank": 2,
+      "gamma": 1.0374436998236576,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.5,
+      "per_axis_nonlinear_energy": 0.043208578585574364,
+      "linear_fraction_of_variance": 0.9135828428288513,
+      "nonlinear_fraction_of_variance": 0.08641715717114873,
+      "teacher_agop_aggregate_eigenvalue": 1.069641423307271,
+      "teacher_agop_transverse_eigenvalue": 0.1560585804784197,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "erf",
+      "rank": 4,
+      "gamma": 0.7335834752445692,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.25,
+      "per_axis_nonlinear_energy": 0.021604289292787182,
+      "linear_fraction_of_variance": 0.9135828428288513,
+      "nonlinear_fraction_of_variance": 0.08641715717114873,
+      "teacher_agop_aggregate_eigenvalue": 0.9916121330680611,
+      "teacher_agop_transverse_eigenvalue": 0.07802929023920985,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "erf",
+      "rank": 8,
+      "gamma": 0.5187218499118288,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.125,
+      "per_axis_nonlinear_energy": 0.010802144646393591,
+      "linear_fraction_of_variance": 0.9135828428288513,
+      "nonlinear_fraction_of_variance": 0.08641715717114873,
+      "teacher_agop_aggregate_eigenvalue": 0.9525974879484562,
+      "teacher_agop_transverse_eigenvalue": 0.039014645119604924,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "erf",
+      "rank": 16,
+      "gamma": 0.3667917376222846,
+      "target_variance": 1.0,
+      "target_mean": 0.0,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0625,
+      "per_axis_nonlinear_energy": 0.0054010723231967955,
+      "linear_fraction_of_variance": 0.9135828428288513,
+      "nonlinear_fraction_of_variance": 0.08641715717114873,
+      "teacher_agop_aggregate_eigenvalue": 0.9330901653886537,
+      "teacher_agop_transverse_eigenvalue": 0.019507322559802462,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gaussian_rbf",
+      "rank": 2,
+      "gamma": 0.6812500386332133,
+      "target_variance": 0.071796769724491,
+      "target_mean": 0.9634330440022851,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0358983848622455,
+      "per_axis_nonlinear_energy": 0.0358983848622455,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.08931639747704091,
+      "teacher_agop_transverse_eigenvalue": 0.08931639747704091,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gaussian_rbf",
+      "rank": 4,
+      "gamma": 0.346908658096368,
+      "target_variance": 0.03723506350221829,
+      "target_mean": 0.9812058583690692,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.009308765875554572,
+      "per_axis_nonlinear_energy": 0.009308765875554572,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.023160524802221975,
+      "teacher_agop_transverse_eigenvalue": 0.023160524802221975,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "gamma": 0.17509187590662348,
+      "target_variance": 0.018970719727986318,
+      "target_mean": 0.9904692222739755,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0023713399659982897,
+      "per_axis_nonlinear_energy": 0.0023713399659982897,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.0058999741567495,
+      "teacher_agop_transverse_eigenvalue": 0.0058999741567495,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    },
+    {
+      "teacher": "gaussian_rbf",
+      "rank": 16,
+      "gamma": 0.08796411761757247,
+      "target_variance": 0.009576193505520254,
+      "target_mean": 0.9952003850956247,
+      "target_second_moment": 1.0,
+      "per_axis_centered_energy": 0.0005985120940950159,
+      "per_axis_nonlinear_energy": 0.0005985120940950159,
+      "linear_fraction_of_variance": 0.0,
+      "nonlinear_fraction_of_variance": 1.0,
+      "teacher_agop_aggregate_eigenvalue": 0.0014891183627380256,
+      "teacher_agop_transverse_eigenvalue": 0.0014891183627380256,
+      "teacher_agop_eigenvalue_note": "Teacher population AGOP formula; not a student diagnostic. r-1 transverse eigenvalues; d-r zeros."
+    }
+  ],
+  "jobs": [
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 16,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 16,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_h2_r16_d64_m256_seed641"
+        },
+        "r": {
+          "before": 8,
+          "after": 16
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 16,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r16",
+          "rank": 16,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_h2_r16_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r16"
+          },
+          "rank": {
+            "before": 8,
+            "after": 16
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 16,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 16,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0011804876751909774,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_relu_r16_d64_m256_seed641"
+        },
+        "r": {
+          "before": 8,
+          "after": 16
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.0011804876751909774
+        }
+      },
+      "target_variance": 0.11804876751909774,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 16,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r16",
+          "rank": 16,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_relu_r16_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r16"
+          },
+          "rank": {
+            "before": 8,
+            "after": 16
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 0.11804876751909774,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 16,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 16,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_h2_r16_d64_m256_seed642"
+        },
+        "r": {
+          "before": 8,
+          "after": 16
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 16,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r16",
+          "rank": 16,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_h2_r16_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r16"
+          },
+          "rank": {
+            "before": 8,
+            "after": 16
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 16,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 16,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0011804876751909774,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_relu_r16_d64_m256_seed642"
+        },
+        "r": {
+          "before": 8,
+          "after": 16
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.0011804876751909774
+        }
+      },
+      "target_variance": 0.11804876751909774,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 16,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r16",
+          "rank": 16,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_relu_r16_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r16"
+          },
+          "rank": {
+            "before": 8,
+            "after": 16
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 0.11804876751909774,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 8,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_h2_r8_d64_m256_seed641"
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 8,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r8",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_h2_r8_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r8"
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.002111692637183312,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_relu_r8_d64_m256_seed641"
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.002111692637183312
+        }
+      },
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_relu_r8_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r8"
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          }
+        }
+      },
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 8,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_h2_r8_d64_m256_seed642"
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 8,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r8",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_h2_r8_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r8"
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.002111692637183312,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_relu_r8_d64_m256_seed642"
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.002111692637183312
+        }
+      },
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 8,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r8",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_relu_r8_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r8"
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          }
+        }
+      },
+      "target_variance": 0.21116926371833117,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_h2_r4_d64_m256_seed641"
+        },
+        "r": {
+          "before": 8,
+          "after": 4
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_h2_r4_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r4"
+          },
+          "rank": {
+            "before": 8,
+            "after": 4
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 4,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0034870314173930453,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_relu_r4_d64_m256_seed641"
+        },
+        "r": {
+          "before": 8,
+          "after": 4
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.0034870314173930453
+        }
+      },
+      "target_variance": 0.3487031417393045,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 4,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r4",
+          "rank": 4,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_relu_r4_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r4"
+          },
+          "rank": {
+            "before": 8,
+            "after": 4
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 0.3487031417393045,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_h2_r4_d64_m256_seed642"
+        },
+        "r": {
+          "before": 8,
+          "after": 4
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_h2_r4_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r4"
+          },
+          "rank": {
+            "before": 8,
+            "after": 4
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 4,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 4,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.0034870314173930453,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_relu_r4_d64_m256_seed642"
+        },
+        "r": {
+          "before": 8,
+          "after": 4
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.0034870314173930453
+        }
+      },
+      "target_variance": 0.3487031417393045,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 4,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r4_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r4",
+          "rank": 4,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_relu_r4_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r4"
+          },
+          "rank": {
+            "before": 8,
+            "after": 4
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 0.3487031417393045,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_h2_r2_d64_m256_seed641"
+        },
+        "r": {
+          "before": 8,
+          "after": 2
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_h2_r2_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r2"
+          },
+          "rank": {
+            "before": 8,
+            "after": 2
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 2,
+      "seed": 641,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.005170939859895522,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed641",
+          "after": "v10_rank_relu_relu_r2_d64_m256_seed641"
+        },
+        "r": {
+          "before": 8,
+          "after": 2
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.005170939859895522
+        }
+      },
+      "target_variance": 0.5170939859895523,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 2,
+      "seed": 641,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r2",
+          "rank": 2,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed641",
+            "after": "v10_rank_swiglu_relu_r2_d64_m64_seed641"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r2"
+          },
+          "rank": {
+            "before": 8,
+            "after": 2
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 0.5170939859895523,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.01,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_h2_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_h2_r2_d64_m256_seed642"
+        },
+        "r": {
+          "before": 8,
+          "after": 2
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.01
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_h2_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_h2_r2_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_h2",
+            "after": "v10_rank_swiglu_h2_r2"
+          },
+          "rank": {
+            "before": 8,
+            "after": 2
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 1.0,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+      "student": "relu",
+      "teacher": "relu",
+      "rank": 2,
+      "seed": 642,
+      "width": 256,
+      "planned_config": {
+        "id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 2,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.005170939859895522,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json",
+      "changes_from_historical_rank8": {
+        "id": {
+          "before": "relu_relu_r8_d64_m256_seed642",
+          "after": "v10_rank_relu_relu_r2_d64_m256_seed642"
+        },
+        "r": {
+          "before": 8,
+          "after": 2
+        },
+        "loss_stop": {
+          "before": 0.001,
+          "after": 0.005170939859895522
+        }
+      },
+      "target_variance": 0.5170939859895523,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+      "student": "swiglu",
+      "teacher": "relu",
+      "rank": 2,
+      "seed": 642,
+      "width": 64,
+      "planned_config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+          "cell": "v10_rank_swiglu_relu_r2",
+          "rank": 2,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "base_template": "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json",
+      "changes_from_historical_rank8": {
+        "outer": {
+          "tag": {
+            "before": "swiglu_relu_r8_d64_m64_seed642",
+            "after": "v10_rank_swiglu_relu_r2_d64_m64_seed642"
+          },
+          "cell": {
+            "before": "swiglu_relu",
+            "after": "v10_rank_swiglu_relu_r2"
+          },
+          "rank": {
+            "before": 8,
+            "after": 2
+          }
+        },
+        "args": {
+          "t_max": {
+            "before": 600.0,
+            "after": 3000.0
+          },
+          "L_stop": {
+            "before": 0.1,
+            "after": 0.01
+          },
+          "max_steps": {
+            "before": 5000,
+            "after": 20000
+          },
+          "n_pair": {
+            "before": 16,
+            "after": 32
+          },
+          "n_diag": {
+            "before": 48,
+            "after": 96
+          },
+          "n_z": {
+            "before": 24,
+            "after": 48
+          },
+          "n_x": {
+            "before": 12,
+            "after": 24
+          },
+          "c": {
+            "before": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "after": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "target_variance": 0.5170939859895523,
+      "normalized_loss_stop": 0.01,
+      "status": "planned_unlaunched_unvalidated"
+    }
+  ],
+  "expansion": {
+    "first_batch_links": [
+      "h2",
+      "relu"
+    ],
+    "remaining_links": [
+      "h3",
+      "h4",
+      "h5",
+      "leaky_relu",
+      "abs",
+      "softplus",
+      "silu",
+      "gelu",
+      "sine",
+      "tanh",
+      "erf",
+      "gaussian_rbf"
+    ],
+    "remaining_arms_if_all_12_added": 192,
+    "full_14_link_arms": 224,
+    "small_next_block": [
+      "softplus",
+      "sine"
+    ],
+    "h3_status": "Defer pending quadrature checks; no large-scale extrapolation",
+    "frozen_queue": "Keep 2 seeds, 4 ranks, and both students for each added teacher; add teachers in reviewed waves rather than one blind all14 launch",
+    "triggers": "Readiness/numerical validity and scientific diagnostic need, never dropping unsuccessful ranks; all initial outcomes retained"
+  },
+  "input_sha256": {
+    "goal_followup_v7/breadth14/cpu32/bundle/TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed641.json": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed641.json": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed641.json": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed641.json": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_h2_r8_d64_m256_seed642.json": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_h2_r8_d64_m64_seed642.json": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/relu_relu_r8_d64_m256_seed642.json": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+    "goal_followup_v7/breadth14/cpu32/bundle/configs/swiglu_relu_r8_d64_m64_seed642.json": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+    "goal_followup_v7/breadth14/cpu32/bundle/swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "goal_followup_v7/breadth14/cpu32/bundle/swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "goal_followup_v7/breadth14/cpu32/bundle/swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "goal_followup_v7/breadth14/cpu32/bundle/code/scaling_run.py": "a818f58a4a64774815c3fd029ad296db3f8ad2168a2cfde0e90dfa29e17950cf",
+    "goal_followup_v7/breadth14/cpu32/bundle/code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "goal_followup_v7/breadth14/cpu32/bundle/code/teachers_extra.py": "108d0352b0ff1d72c85ba725622dbe932b2de138d9d4ffbeb144f9c0c327330e",
+    "goal_followup_v7/breadth14/cpu32/bundle/code/teachers_smooth.py": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695"
+  },
+  "queue_order": {
+    "rank_order": [
+      16,
+      8,
+      4,
+      2
+    ],
+    "within_rank": "seed641 then642; each seed teacherh2 thenrelu; each teacher ReLU student then SwiGLU",
+    "outcome_independent": true,
+    "global_cap_censoring_retained": true
+  }
+}

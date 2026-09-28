@@ -1,0 +1,8 @@
+{
+  "max_scalar_moment_error": 4.440892098500626e-16,
+  "max_independent_cross_error": 1.7763568394002505e-15,
+  "max_finite_difference_error": 2.6678259601453647e-10,
+  "max_order16_vs32_error": 8.881784197001252e-16,
+  "independent_cross_cases": 216,
+  "all_14_teachers_gradient_checked": 14
+}

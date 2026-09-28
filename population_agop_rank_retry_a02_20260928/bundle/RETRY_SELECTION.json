@@ -1,0 +1,169 @@
+{
+  "schema": "rank_retry_selection_v1",
+  "original_manifest_sha256": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+  "stop_inventory_sha256": "1307b4d1c51cbb757e765db10bb29d366a8a20b03fc3a7a5df40c29e456177eb",
+  "original_inventory_files": 1572,
+  "study_denominator": 32,
+  "attempt_number": 2,
+  "new_independent_seeds": 0,
+  "retry_ids": [
+    "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+    "v10_rank_swiglu_relu_r16_d64_m64_seed641",
+    "v10_rank_swiglu_h2_r16_d64_m64_seed642",
+    "v10_rank_swiglu_relu_r16_d64_m64_seed642",
+    "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+    "v10_rank_swiglu_relu_r8_d64_m64_seed641",
+    "v10_rank_swiglu_h2_r8_d64_m64_seed642",
+    "v10_rank_swiglu_relu_r8_d64_m64_seed642",
+    "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+    "v10_rank_swiglu_relu_r4_d64_m64_seed641",
+    "v10_rank_swiglu_h2_r4_d64_m64_seed642",
+    "v10_rank_swiglu_relu_r4_d64_m64_seed642"
+  ],
+  "retained_completion_ids": [
+    "v10_rank_relu_h2_r16_d64_m256_seed641",
+    "v10_rank_relu_relu_r16_d64_m256_seed641",
+    "v10_rank_relu_h2_r16_d64_m256_seed642",
+    "v10_rank_relu_relu_r16_d64_m256_seed642",
+    "v10_rank_relu_h2_r8_d64_m256_seed641",
+    "v10_rank_relu_relu_r8_d64_m256_seed641",
+    "v10_rank_relu_h2_r8_d64_m256_seed642",
+    "v10_rank_relu_relu_r8_d64_m256_seed642",
+    "v10_rank_relu_h2_r4_d64_m256_seed641",
+    "v10_rank_relu_relu_r4_d64_m256_seed641",
+    "v10_rank_relu_h2_r4_d64_m256_seed642",
+    "v10_rank_relu_relu_r4_d64_m256_seed642",
+    "v10_rank_relu_h2_r2_d64_m256_seed641",
+    "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+    "v10_rank_relu_relu_r2_d64_m256_seed641",
+    "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+    "v10_rank_relu_h2_r2_d64_m256_seed642",
+    "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+    "v10_rank_relu_relu_r2_d64_m256_seed642",
+    "v10_rank_swiglu_relu_r2_d64_m64_seed642"
+  ],
+  "retained_completion_markers": [
+    {
+      "original_id": "v10_rank_relu_h2_r16_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_h2_r16_d64_m256_seed641/DONE.json",
+      "size": 8220,
+      "sha256": "7ba6157bc9df4075e439bf1e0f95bfe07994c249344d6019b2d49254f7504014"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r16_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_relu_r16_d64_m256_seed641/DONE.json",
+      "size": 6487,
+      "sha256": "f8ed4b9046ec5c75d561c31a7581660628655c0aa72c30c288d67b37651253f8"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r16_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_h2_r16_d64_m256_seed642/DONE.json",
+      "size": 8224,
+      "sha256": "63123cfe9449a1e514745d5faf3b99c0158537bce39081df0b8fc38c97d0a500"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r16_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_relu_r16_d64_m256_seed642/DONE.json",
+      "size": 6550,
+      "sha256": "cd11ece5f1991bb92b96dbf2874d50edaa4aede7ed538f081cd6fb485bdfd56f"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r8_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_h2_r8_d64_m256_seed641/DONE.json",
+      "size": 8218,
+      "sha256": "915d112fe34fcfe4343a1b0ddaf66bb9d684b8a8b3b7cc2b3e2f21af5bf07177"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r8_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_relu_r8_d64_m256_seed641/DONE.json",
+      "size": 5187,
+      "sha256": "6d294bd5d269c9cfb00e7774c9052416d63427e9b239c42881d152b0d26f305d"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r8_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_h2_r8_d64_m256_seed642/DONE.json",
+      "size": 8225,
+      "sha256": "afaf0507369170d36f19189150af185bbcdcbaacdd7f4e8870e2eec64476deee"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r8_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_relu_r8_d64_m256_seed642/DONE.json",
+      "size": 5209,
+      "sha256": "53a90b4b1e31f383bc1ab11eb3ed0689630b04b833f4e082b589cf43b3d702ab"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r4_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_h2_r4_d64_m256_seed641/DONE.json",
+      "size": 6076,
+      "sha256": "0a824ffff2da001a21e0c67a92805f19d80b550cd55104398eed023cde503257"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r4_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_relu_r4_d64_m256_seed641/DONE.json",
+      "size": 4822,
+      "sha256": "9e32618f6b99767867bba00243792ecf0a3ec6257071104d631cc5707f2db80b"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r4_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_h2_r4_d64_m256_seed642/DONE.json",
+      "size": 5867,
+      "sha256": "3077b57439368c1b376172c5e1491e8d8445bd0f2e7aa73b84bf3a5b5aa04015"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r4_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_relu_r4_d64_m256_seed642/DONE.json",
+      "size": 4827,
+      "sha256": "b347af2e49d6fb8e0bc0aab23440f17c66ec69517f71a498fc0378a3f0755bb9"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r2_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_h2_r2_d64_m256_seed641/DONE.json",
+      "size": 5241,
+      "sha256": "4d9a783da900f292fc17a876f378abb7fec6e6fb0ac157d3dd2cff6f213bdb32"
+    },
+    {
+      "original_id": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+      "marker": "data/v10_rank_swiglu_h2_r2_d64_m64_seed641/result.json",
+      "size": 405521,
+      "sha256": "d07c6bb303e1809c3bd9a235917f198ddd7d88e3419aad8b18777bbb1cf4691d"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r2_d64_m256_seed641",
+      "marker": "data/v10_rank_relu_relu_r2_d64_m256_seed641/DONE.json",
+      "size": 4607,
+      "sha256": "f450900fc5a7cfb8198071a891543b9a8829a0953787d62ed7e6b7de93f6cb96"
+    },
+    {
+      "original_id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "marker": "data/v10_rank_swiglu_relu_r2_d64_m64_seed641/result.json",
+      "size": 426651,
+      "sha256": "7936d4fd5853d1bc5ab59940a549c509e11fbacae39b2f6d6ebe52e61f87d838"
+    },
+    {
+      "original_id": "v10_rank_relu_h2_r2_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_h2_r2_d64_m256_seed642/DONE.json",
+      "size": 5161,
+      "sha256": "10ba8d95b612e6ccc75f19036759b50832d6b00003a2c6d9c3de1800508030e9"
+    },
+    {
+      "original_id": "v10_rank_swiglu_h2_r2_d64_m64_seed642",
+      "marker": "data/v10_rank_swiglu_h2_r2_d64_m64_seed642/result.json",
+      "size": 101966,
+      "sha256": "9e948fe7874c334573b199dad4c89212485377fbc734ad26caa3be27baf758c7"
+    },
+    {
+      "original_id": "v10_rank_relu_relu_r2_d64_m256_seed642",
+      "marker": "data/v10_rank_relu_relu_r2_d64_m256_seed642/DONE.json",
+      "size": 4632,
+      "sha256": "2916d472af10c969322daf4c286e4d3e3823260528648c262d5c26bff89af823"
+    },
+    {
+      "original_id": "v10_rank_swiglu_relu_r2_d64_m64_seed642",
+      "marker": "data/v10_rank_swiglu_relu_r2_d64_m64_seed642/result.json",
+      "size": 411726,
+      "sha256": "10cfb0fc30a0af555fae3be7a43f7cc624821b0bef7eeb460dcd1d8f3ee60631"
+    }
+  ],
+  "inclusion_rule": "Absence of the engine completion indicator in the frozen remote file inventory; not stale scheduler status or scientific outcome.",
+  "original_artifacts": "Preserved under rank_sweep and the original a01 remote job; no old output is modified."
+}

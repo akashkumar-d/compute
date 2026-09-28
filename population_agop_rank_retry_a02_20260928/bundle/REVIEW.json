@@ -1,0 +1,19 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "0b5058b12bc75d0f86276b1dac65c2416a27b9de31ab917f06175a3238a4aac6",
+  "reviewer": "codex/root independent of preparer",
+  "reviewed_utc": "2026-09-28T22:39:29.316220+00:00",
+  "checks": [
+    "Read full launcher diff; execution/cleanup architecture unchanged; retry subset and resource bounds only",
+    "All59 frozen hashes independently verified; exactly12 original configs retained;59hashes and28mocktests independently PASS plus static dry run",
+    "Frozen inventory selects12 missing terminal markers, preserves20 completed markers; original32 denominator and attempt2 metadata enforced",
+    "User explicitly requested rerun; existing jobs report stopped, fresh22:38:55Z remote scan shows no task compute and32 CPUs",
+    "12singlethreadworkers leave capacity for1 validation continuation; combined<=30;32GiB/10GiB memory/disk andnice10 checked on actual server admission",
+    "1990secondsperarm/2150secondsbatch; existingattempts preserved; newleaf/job/output only"
+  ],
+  "limitations": [
+    "This approves execution only, not science outcomes",
+    "Reused development seeds, no new independent confirmation",
+    "All interrupted attempts and unresolved numerical results retained"
+  ]
+}
