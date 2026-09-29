@@ -1,0 +1,59 @@
+{
+ "branch": "claude/optimistic-goldberg-a22718",
+ "code": {
+  "manifest": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "59eb9e2bdaa22a51eab67f46a1d6d8a488ab3977fe48990153c992ca653cfb8d"
+ },
+ "cohort": "D_p97",
+ "depth": 4,
+ "dial": {
+  "r": 0.15
+ },
+ "done": true,
+ "family": "D",
+ "files": {
+  "run.json.gz": {
+   "bytes": 150855,
+   "sha256": "ec93acb2345acaf3efa1d0ad712db139374bd37fe912f0bdb388f4d4942a2eb4"
+  }
+ },
+ "finished": "2026-09-29T21:51:41Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "D4_p97_r0.15_s1",
+ "init_seed": 5001,
+ "instance": "e34fca",
+ "owner": "S1",
+ "p": 97,
+ "ran_by": "S1",
+ "run": {
+  "final_loss": 3.2519354967224516,
+  "final_test": 0.9994686503719448,
+  "final_train": 1.0,
+  "horizon": 100000,
+  "last_layer_rate": 0.14999999999999997,
+  "resumed_from": 0,
+  "seconds": 5152.0,
+  "steps": 30840,
+  "stop_reason": "generalized",
+  "stopped_at": 30840,
+  "t10": 14220,
+  "t90": 17880,
+  "x": 0.9598
+ },
+ "seed": 1,
+ "split_seed": 6001,
+ "stage": "D4",
+ "started": "2026-09-29T20:25:48Z",
+ "stolen_from": null,
+ "threads": 4,
+ "version": "campaign-D worker 1.0 (2026-09-29)",
+ "width": 256
+}
