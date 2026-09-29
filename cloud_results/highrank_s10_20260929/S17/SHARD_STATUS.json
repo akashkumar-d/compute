@@ -2,23 +2,18 @@
   "job": "highrank_s10_20260929",
   "shard": "S17",
   "state": "running",
-  "updated_utc": "2026-09-29T06:03:41.431777+00:00",
-  "elapsed_seconds": 1232.469795435,
+  "updated_utc": "2026-09-29T06:14:14.848347+00:00",
+  "elapsed_seconds": 1865.886381917,
   "workers": 4,
   "arms_total": 10,
-  "arms_done": 2,
+  "arms_done": 6,
   "arms_active": [
-    "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
-    "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
-    "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
-    "v11_hr_swiglu_h2_r2_d64_m64_seed9356"
-  ],
-  "arms_pending": [
     "v11_hr_swiglu_h2_r2_d64_m64_seed9357",
     "v11_hr_swiglu_h2_r2_d64_m64_seed9358",
     "v11_hr_swiglu_h2_r2_d64_m64_seed9359",
     "v11_hr_swiglu_h2_r2_d64_m64_seed9360"
   ],
+  "arms_pending": [],
   "outcomes": [
     {
       "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
@@ -43,6 +38,58 @@
       "term_sent": false,
       "kill_sent": false,
       "finished_utc": "2026-09-29T06:03:39.710657+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 821.7913942819999,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:10:46.460939+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9356",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 466.5303324800002,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:11:27.961314+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1835.626694696,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:13:44.589199+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1859.481746646,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:14:08.445744+00:00",
       "completion_indicator": "result.json",
       "completion_indicator_exists": true
     }
