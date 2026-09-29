@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/practical-turing-cj2ip6",
  "broken": null,
- "campaign_left": 10,
+ "campaign_left": 9,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -25,9 +25,10 @@
   "C2_D5_s015",
   "C3_D4p23_s045",
   "C3_D4p23_s053",
-  "C5_D3ngd_s001"
+  "C5_D3ngd_s001",
+  "C5_D3ngd_s005"
  ],
- "est_hours_left": 0.28,
+ "est_hours_left": 0.14,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -40,25 +41,16 @@
  },
  "instance": "771e22",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 2,
+ "own_left": 1,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C5_D3ngd_s005": {
-   "phase": "main",
-   "since": "2026-09-29T13:57:50Z",
-   "step": 78000,
-   "steps": 80000,
-   "steps_per_s": 45.95,
-   "stolen_from": null,
-   "threads": 1
-  },
   "C5_D3ngd_s013": {
    "phase": "main",
    "since": "2026-09-29T14:23:47Z",
-   "step": 8000,
+   "step": 10000,
    "steps": 80000,
-   "steps_per_s": 51.34,
+   "steps_per_s": 48.84,
    "stolen_from": null,
    "threads": 1
   }
@@ -66,7 +58,7 @@
  "started": "2026-09-29T02:40:37Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T14:29:26Z",
+ "updated": "2026-09-29T14:30:15Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S3"
 }
