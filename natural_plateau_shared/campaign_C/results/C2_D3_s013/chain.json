@@ -1,0 +1,72 @@
+{
+ "branch": "claude/sleepy-brahmagupta-fc09i8",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D3",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 366254,
+   "sha256": "746406dce0f97e30d119e24246f85909899b243abfcf0b40787d985fe60d58c8"
+  },
+  "pilot.json.gz": {
+   "bytes": 364901,
+   "sha256": "cd4eca40511b90e354647756cf4d26885d978f0299e0af6516ec7fb209ee81e2"
+  }
+ },
+ "finished": "2026-09-29T17:07:15Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C2_D3_s013",
+ "init_seed": 1013,
+ "instance": "88de0e",
+ "main": {
+  "eta_last": 0.003246428571428571,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.505,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 2683.1,
+  "steps": 80000,
+  "t10": 17060,
+  "t90": 28560,
+  "x": 3.8769
+ },
+ "owner": "S7",
+ "pilot": {
+  "censored": false,
+  "final_test": 1.0,
+  "kind": "full",
+  "rate": 0.5,
+  "resumed_from": 0,
+  "seconds": 2770.3,
+  "steps_run": 80000,
+  "stopped_at": null,
+  "t10": 16900
+ },
+ "ran_by": "S6",
+ "recipe": {
+  "r0": 0.5,
+  "rate": 0.505,
+  "t10_used": 16900,
+  "x_pred": 3.8405,
+  "x_target": 3.85
+ },
+ "seed": 13,
+ "split_seed": 2013,
+ "stage": "C2",
+ "started": "2026-09-29T15:36:19Z",
+ "stolen_from": "S7",
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}

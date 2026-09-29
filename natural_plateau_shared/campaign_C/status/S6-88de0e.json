@@ -7,7 +7,7 @@
  ],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 4,
+ "campaign_left": 3,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -24,6 +24,7 @@
   "C1_D5_s036",
   "C2_D3_s004",
   "C2_D3_s012",
+  "C2_D3_s013",
   "C2_D3_s020",
   "C2_D4_s004",
   "C2_D4_s008",
@@ -63,36 +64,27 @@
   "C1_D4_s022": {
    "phase": "main",
    "since": "2026-09-29T16:32:50Z",
-   "step": 12000,
+   "step": 22000,
    "steps": 100000,
-   "steps_per_s": 18.51,
+   "steps_per_s": 19.16,
    "stolen_from": "S4",
    "threads": 1
   },
   "C1_D4_s030": {
    "phase": "main",
    "since": "2026-09-29T16:18:27Z",
-   "step": 26000,
+   "step": 36000,
    "steps": 100000,
-   "steps_per_s": 20.77,
+   "steps_per_s": 20.55,
    "stolen_from": "S4",
    "threads": 1
   },
-  "C2_D3_s013": {
-   "phase": "main",
-   "since": "2026-09-29T15:36:19Z",
-   "step": 64000,
-   "steps": 80000,
-   "steps_per_s": 29.15,
-   "stolen_from": "S7",
-   "threads": 1
-  },
   "C5_D3ngd_s013": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T16:59:08Z",
-   "step": 0,
+   "step": 20000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 57.68,
    "stolen_from": "S3",
    "threads": 1
   }
@@ -118,7 +110,7 @@
   "C5_D3ngd_s019": "S1",
   "C5_D3ngd_s020": "S2"
  },
- "updated": "2026-09-29T16:59:08Z",
+ "updated": "2026-09-29T17:07:29Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
