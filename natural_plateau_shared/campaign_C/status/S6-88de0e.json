@@ -65,7 +65,7 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T02:40:39Z",
- "state": "finished",
+ "state": "running",
  "stolen": {
   "C1_D3_s021": "S7",
   "C1_D3_s029": "S7",
@@ -85,7 +85,7 @@
   "C5_D3ngd_s019": "S1",
   "C5_D3ngd_s020": "S2"
  },
- "updated": "2026-09-29T18:09:26Z",
+ "updated": "2026-09-29T18:09:39Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
