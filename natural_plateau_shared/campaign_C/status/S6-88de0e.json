@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 79,
+ "campaign_left": 73,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -22,9 +22,10 @@
   "C2_D5_s012",
   "C2_D5_s018",
   "C3_D4p23_s048",
-  "C3_D4p23_s056"
+  "C3_D4p23_s056",
+  "C5_D3ngd_s004"
  ],
- "est_hours_left": 0.91,
+ "est_hours_left": 0.77,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -37,40 +38,40 @@
  },
  "instance": "88de0e",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 5,
+ "own_left": 4,
  "own_total": 22,
  "push_error": null,
  "running": {
   "C1_D3_s028": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T11:23:05Z",
-   "step": 18000,
+   "step": 36000,
    "steps": 80000,
-   "steps_per_s": 25.35,
+   "steps_per_s": 25.49,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D3_s036": {
-   "phase": "pilot",
-   "since": "2026-09-29T11:26:27Z",
-   "step": 12000,
-   "steps": 80000,
-   "steps_per_s": 23.6,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "C5_D3ngd_s004": {
    "phase": "main",
-   "since": "2026-09-29T11:29:22Z",
-   "step": 8000,
+   "since": "2026-09-29T11:26:27Z",
+   "step": 34000,
    "steps": 80000,
-   "steps_per_s": 43.63,
+   "steps_per_s": 25.72,
    "stolen_from": null,
    "threads": 1
   },
   "C5_D3ngd_s008": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T11:35:14Z",
+   "step": 62000,
+   "steps": 80000,
+   "steps_per_s": 49.12,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C5_D3ngd_s016": {
+   "phase": "pilot",
+   "since": "2026-09-29T11:59:07Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
@@ -81,7 +82,7 @@
  "started": "2026-09-29T02:40:39Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T11:35:14Z",
+ "updated": "2026-09-29T11:59:07Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
