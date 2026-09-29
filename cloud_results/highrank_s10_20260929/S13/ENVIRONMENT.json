@@ -1,0 +1,36 @@
+{
+  "utc": "2026-09-29T05:42:25.393490+00:00",
+  "hostname": "vm",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "affinity_cpus": 4,
+  "jobs_commit": "4ab4e6f73a33c0f365a39d46cbfc897f15e65da0",
+  "runner_sha256": "fd587de168cc396dac386d80e9650ff0752f9c1f9778ccf2b67dc0a823c104fe",
+  "runner_python": "3.12.3",
+  "engine_python": "/tmp/agopenv/bin/python",
+  "engine_python_version": "3.12.3",
+  "numpy": "1.26.4",
+  "scipy": "1.11.4",
+  "cpu_model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "memory": "MemTotal:       16481980 kB",
+  "plan": {
+    "job": "highrank_s10_20260929",
+    "shard": "S13",
+    "arms": [
+      "v11_hr_swiglu_abs_r8_d64_m64_seed9359",
+      "v11_hr_swiglu_abs_r8_d64_m64_seed9360",
+      "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9351",
+      "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9352"
+    ],
+    "workers": 4,
+    "cpus": 4,
+    "per_arm_seconds": {
+      "a02": 1990
+    },
+    "global_seconds": 5400.0,
+    "expected_minutes": 70,
+    "manifests": {
+      "a02": "e087ad456b5bfa4aa654ae237cccfc470b8f8a8a63ab6dd3404a1646e81f644e"
+    },
+    "results": "/home/user/compute/cloud_results/highrank_s10_20260929/S13"
+  }
+}
