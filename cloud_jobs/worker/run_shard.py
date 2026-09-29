@@ -122,24 +122,33 @@ def package_arm(arm, data_dir, logs_dir, out_dir, exclude):
                      tar_sha256=sha256(tar_path), tar_bytes=tar_path.stat().st_size))
 
 
-def canonical_records(summarizer, python, manifest_path, exec_dir, arms, out_dir, scratch, bundle):
-    """Run the unchanged canonical summarizer on this bundle's execution directory and
-    write one gzip JSON record per newly finished arm (written once, never rewritten)."""
+def canonical_records(summarizer, python, manifest_path, exec_dir, arms, out_dir, scratch, bundle, receipts=()):
+    """Run the unchanged canonical summarizer on a frozen view that contains ONLY finished arms
+    (symlinks), so files of still-running arms can never change underneath the reader; write one
+    gzip JSON record per newly finished arm (written once, never rewritten)."""
     import gzip
+    import shutil
     todo = [a for a in arms if not (out_dir / f'{a}.json.gz').exists()]
     if not todo:
         return 0
-    scratch.mkdir(parents=True, exist_ok=True)
+    view = scratch / f'{bundle}_view'
+    if view.exists():
+        shutil.rmtree(view)
+    (view / 'data').mkdir(parents=True)
+    for a in arms:
+        (view / 'data' / a).symlink_to((exec_dir / 'data' / a).resolve(), target_is_directory=True)
+    atomic_json(view / 'STATUS.json', dict(status='completed', pending=[], active=[],
+                                          completed=[r for r in receipts if r['id'] in arms]))
     target = scratch / f'{bundle}_SUMMARY.json'
     env = dict(os.environ, OPENBLAS_NUM_THREADS='1', OMP_NUM_THREADS='1', MKL_NUM_THREADS='1',
                PYTHONDONTWRITEBYTECODE='1')
     proc = subprocess.run([python, str(summarizer), '--manifest', str(manifest_path), '--execution',
-                           str(exec_dir), '--output', str(target)], capture_output=True, text=True,
+                           str(view), '--output', str(target)], capture_output=True, text=True,
                           timeout=1800, env=env)
     out_dir.mkdir(parents=True, exist_ok=True)
     common = dict(created_utc=utc(), bundle=bundle, summarizer=str(summarizer),
                   summarizer_sha256=sha256(summarizer), manifest_sha256=sha256(manifest_path),
-                  summarizer_returncode=proc.returncode)
+                  summarizer_returncode=proc.returncode, view='finished arms only')
     if proc.returncode != 0 or not target.exists():
         atomic_json(out_dir / f'_summarizer_error_{int(time.time())}.json',
                     dict(common, stderr_tail=proc.stderr[-4000:], arms=todo))
@@ -273,7 +282,8 @@ def main():
         exec_status(bundle)
         finished_here = [d['id'] for d in done if d['bundle'] == bundle]
         canonical_records(summarizer, args.python, v['root'] / 'MANIFEST.json', v['exec_dir'],
-                          finished_here, out / 'canonical', args.work / 'summaries', bundle)
+                          finished_here, out / 'canonical', args.work / 'summaries', bundle,
+                          receipts=[d for d in done if d['bundle'] == bundle])
         shard_status('running')
 
     shard_status('running')
