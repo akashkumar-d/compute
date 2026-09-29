@@ -1,0 +1,67 @@
+{
+  "arm": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
+  "created_utc": "2026-09-29T05:57:04.252674+00:00",
+  "files": [
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/diagnostics_partial.json",
+      "bytes": 425812,
+      "sha256": "a595b25ef851d4e623b922299c491a58b55b71bb281abfab35c68af4fa580ef1",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/launch.json",
+      "bytes": 2154,
+      "sha256": "5275de97314e90e12c8c9c1ed79c1ce6afef987165aba9fc7336768b1edbdfaa",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/partials/v11_hr_swiglu_h2_r4_d64_m64_seed9358.json",
+      "bytes": 323808,
+      "sha256": "75b042e47ab9af84396e0bfbf8ab24ae1403a2704f2d3ced4ea2448e63a566c8",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/partials/v11_hr_swiglu_h2_r4_d64_m64_seed9358_snaps.npz",
+      "bytes": 6877796,
+      "sha256": "8915e81bdfa3ba452c4fca1d1df3a28534787e6f1108f6572090c838134fa5da",
+      "packed": false
+    },
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/result.json",
+      "bytes": 430835,
+      "sha256": "e8ef598552237fe751599a9997e8118ff2e83443806acff94c4c4ae65324cd0d",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/v11_hr_swiglu_h2_r4_d64_m64_seed9358.json",
+      "bytes": 324502,
+      "sha256": "3b18b29a73dba7e6d0ddbe0311ec843f80dd34c4c7e161a6e45decff64d3563b",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_h2_r4_d64_m64_seed9358/v11_hr_swiglu_h2_r4_d64_m64_seed9358_snaps.npz",
+      "bytes": 6877796,
+      "sha256": "8915e81bdfa3ba452c4fca1d1df3a28534787e6f1108f6572090c838134fa5da",
+      "packed": false
+    },
+    {
+      "path": "logs/v11_hr_swiglu_h2_r4_d64_m64_seed9358.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packed": true
+    },
+    {
+      "path": "logs/v11_hr_swiglu_h2_r4_d64_m64_seed9358.stdout.log",
+      "bytes": 17905,
+      "sha256": "384a1612bd353d528d9b6f92343e01be12ef96ce8fca2a2a764e1ec397587757",
+      "packed": true
+    }
+  ],
+  "excluded_patterns": [
+    "states/*",
+    "resume.npz",
+    "*_snaps.npz"
+  ],
+  "tar_sha256": "d2ee5ac67d2f7d4a0b136551b4bf86a5f4a4300fcc452aa582cebbae907d7cf6",
+  "tar_bytes": 459187
+}
