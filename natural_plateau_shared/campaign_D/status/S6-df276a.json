@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/laughing-newton-adrtig",
  "broken": null,
- "campaign_left": 119,
+ "campaign_left": 115,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -29,36 +29,36 @@
   "D3_p47_r0.45_s1": {
    "phase": "run",
    "since": "2026-09-29T23:08:51Z",
-   "step": 0,
+   "step": 26000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 14.53,
    "stolen_from": null,
    "threads": 1
   },
   "D3_p61_r0.20_s1": {
    "phase": "run",
    "since": "2026-09-29T23:08:51Z",
-   "step": 0,
+   "step": 16000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 8.94,
    "stolen_from": null,
    "threads": 1
   },
   "D3_p61_r0.65_s2": {
    "phase": "run",
    "since": "2026-09-29T23:08:51Z",
-   "step": 0,
+   "step": 16000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 8.94,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p47_r0.32_s2": {
    "phase": "run",
    "since": "2026-09-29T23:08:51Z",
-   "step": 0,
+   "step": 18000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 10.06,
    "stolen_from": null,
    "threads": 1
   }
@@ -66,7 +66,7 @@
  "started": "2026-09-29T20:25:55Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T23:08:51Z",
+ "updated": "2026-09-29T23:38:58Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
