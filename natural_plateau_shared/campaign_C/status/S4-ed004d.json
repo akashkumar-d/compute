@@ -22,11 +22,120 @@
  "own_left": 22,
  "own_total": 22,
  "push_error": null,
- "running": {},
+ "running": {
+  "C1_D4_s022": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:24Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C1_D4_s030": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:24Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C1_D4_s038": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:24Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C1_D5_s026": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C1_D5_s034": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D4_s002": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D4_s006": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D4_s012": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D4_s018": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s004": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s010": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s016": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:35:23Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-29T02:32:36Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T02:35:20Z",
+ "updated": "2026-09-29T02:35:24Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S4"
 }
