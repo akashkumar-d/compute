@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sharp-babbage-gax1f8",
  "broken": null,
- "campaign_left": 159,
+ "campaign_left": 152,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -26,18 +26,18 @@
   "C4_D4w512_s063": {
    "phase": "main",
    "since": "2026-09-29T02:42:12Z",
-   "step": 28000,
+   "step": 40000,
    "steps": 100000,
-   "steps_per_s": 6.08,
+   "steps_per_s": 6.24,
    "stolen_from": null,
    "threads": 2
   },
   "C4_D4w512_s064": {
    "phase": "main",
    "since": "2026-09-29T02:42:12Z",
-   "step": 26000,
+   "step": 36000,
    "steps": 100000,
-   "steps_per_s": 6.23,
+   "steps_per_s": 6.02,
    "stolen_from": null,
    "threads": 2
   }
@@ -45,7 +45,7 @@
  "started": "2026-09-29T02:42:02Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T05:13:14Z",
+ "updated": "2026-09-29T05:43:20Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
