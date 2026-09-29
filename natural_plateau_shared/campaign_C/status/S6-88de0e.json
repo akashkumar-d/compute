@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 20,
+ "campaign_left": 137,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -36,7 +36,7 @@
  ],
  "est_hours_left": 0.0,
  "failed": [],
- "fetch_error": null,
+ "fetch_error": "git ls-remote --heads origin: remote: credential service temporarily unavailable; retry shortly\nfatal: unable to access 'https://github.com/akashkumar-d/compute/': The requested URL returned error: 503",
  "host": {
   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
@@ -52,7 +52,7 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T02:40:39Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
   "C1_D3_s034": "S4",
   "C1_D4_s038": "S4",
@@ -60,7 +60,7 @@
   "C5_D3ngd_s006": "S4",
   "C5_D3ngd_s014": "S4"
  },
- "updated": "2026-09-29T14:16:46Z",
+ "updated": "2026-09-29T14:39:13Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
