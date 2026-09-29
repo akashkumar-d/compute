@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/practical-turing-cj2ip6",
  "broken": null,
- "campaign_left": 70,
+ "campaign_left": 58,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -17,9 +17,10 @@
   "C2_D4_s017",
   "C2_D5_s003",
   "C2_D5_s009",
-  "C2_D5_s015"
+  "C2_D5_s015",
+  "C3_D4p23_s045"
  ],
- "est_hours_left": 2.94,
+ "est_hours_left": 2.53,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -32,43 +33,43 @@
  },
  "instance": "771e22",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 10,
+ "own_left": 9,
  "own_total": 22,
  "push_error": null,
  "running": {
   "C2_D3_s001": {
    "phase": "main",
    "since": "2026-09-29T11:25:52Z",
-   "step": 4000,
+   "step": 14000,
    "steps": 80000,
-   "steps_per_s": 22.03,
+   "steps_per_s": 21.08,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D3_s009": {
    "phase": "main",
    "since": "2026-09-29T11:27:10Z",
-   "step": 2000,
+   "step": 12000,
    "steps": 80000,
-   "steps_per_s": 19.04,
+   "steps_per_s": 20.42,
    "stolen_from": null,
    "threads": 1
   },
-  "C3_D4p23_s045": {
-   "phase": "main",
-   "since": "2026-09-29T10:38:54Z",
-   "step": 108000,
-   "steps": 120000,
-   "steps_per_s": 21.4,
+  "C2_D3_s017": {
+   "phase": "pilot",
+   "since": "2026-09-29T12:35:22Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s053": {
    "phase": "main",
    "since": "2026-09-29T11:19:00Z",
-   "step": 56000,
+   "step": 68000,
    "steps": 120000,
-   "steps_per_s": 20.94,
+   "steps_per_s": 21.54,
    "stolen_from": null,
    "threads": 1
   }
@@ -76,7 +77,7 @@
  "started": "2026-09-29T02:40:37Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T12:27:19Z",
+ "updated": "2026-09-29T12:35:22Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S3"
 }
