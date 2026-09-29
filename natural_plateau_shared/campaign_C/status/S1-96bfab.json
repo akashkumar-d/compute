@@ -2,11 +2,13 @@
  "abandoned": [],
  "branch": "claude/beautiful-meitner-zrn95n",
  "broken": null,
- "campaign_left": 22,
+ "campaign_left": 15,
  "commit_error": null,
  "cores": 4,
  "done": [
   "C1_D3_s023",
+  "C1_D3_s031",
+  "C1_D3_s039",
   "C1_D4_s027",
   "C1_D4_s035",
   "C1_D5_s021",
@@ -25,7 +27,7 @@
   "C3_D4p23_s059",
   "C5_D3ngd_s011"
  ],
- "est_hours_left": 1.03,
+ "est_hours_left": 0.54,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -38,39 +40,21 @@
  },
  "instance": "96bfab",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 4,
+ "own_left": 2,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C1_D3_s031": {
-   "phase": "main",
-   "since": "2026-09-29T13:11:38Z",
-   "step": 74000,
-   "steps": 80000,
-   "steps_per_s": 23.17,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "C1_D3_s039": {
-   "phase": "main",
-   "since": "2026-09-29T13:11:57Z",
-   "step": 74000,
-   "steps": 80000,
-   "steps_per_s": 23.17,
-   "stolen_from": null,
-   "threads": 1
-  },
   "C2_D3_s015": {
    "phase": "main",
    "since": "2026-09-29T12:32:10Z",
-   "step": 68000,
+   "step": 74000,
    "steps": 80000,
-   "steps_per_s": 23.26,
+   "steps_per_s": 23.55,
    "stolen_from": null,
    "threads": 1
   },
   "C5_D3ngd_s019": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T14:18:29Z",
    "step": 0,
    "steps": 80000,
@@ -82,7 +66,7 @@
  "started": "2026-09-29T02:39:44Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T14:18:29Z",
+ "updated": "2026-09-29T14:22:09Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S1"
 }
