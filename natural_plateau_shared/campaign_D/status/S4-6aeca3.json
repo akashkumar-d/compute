@@ -14,7 +14,7 @@
   "cpus": 4,
   "node": "5bce98f7",
   "numpy": "2.4.6",
-  "platform": "Linux-6.18.44-fc-v49-x86_64-with-glibc2.39",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
   "python": "3.11.15"
  },
  "instance": "6aeca3",
@@ -22,21 +22,11 @@
  "own_left": 17,
  "own_total": 17,
  "push_error": null,
- "running": {
-  "D4_p97_r0.45_s1": {
-   "phase": "run",
-   "since": "2026-09-29T20:26:01Z",
-   "step": 10000,
-   "steps": 100000,
-   "steps_per_s": 5.61,
-   "stolen_from": null,
-   "threads": 4
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:25:04Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T20:56:02Z",
+ "updated": "2026-09-29T21:03:18Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S4"
 }
