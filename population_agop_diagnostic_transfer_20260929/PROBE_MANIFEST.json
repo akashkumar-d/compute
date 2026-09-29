@@ -1,0 +1,49 @@
+{
+  "status": "prepared_unlaunched",
+  "states": [
+    472,
+    473,
+    2260,
+    2261
+  ],
+  "full_width": 64,
+  "rank": 8,
+  "dimension": 64,
+  "max_evaluations": 8,
+  "workers": 1,
+  "soft_seconds": 350,
+  "external_term_seconds": 355,
+  "hard_seconds": 360,
+  "no_training": true,
+  "reference": {
+    "order": 16,
+    "limit": 12
+  },
+  "candidate": {
+    "hermite_degree": 128,
+    "scalar_order": 24,
+    "diagonal_teacher_order": 16,
+    "limit": 12
+  },
+  "input_sha256": {
+    "DESIGN_PROTOCOL.md": "0321b077d22d34eba879379aeb8a4ea78699f6a1701b6999ab7f74153155994d",
+    "DISPATCH_PROTOCOL.md": "7e5150e2a123d44a86c0fb5f800f15d559a002c6b7fe5f0628582926c245bcac",
+    "diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "hermite_pairs.py": "8bc2f640c3a91daa6f488471902618b71f5c34c28f635862220ee2c4ece6f7e6",
+    "probe.py": "d752129f42ac491d0c0e5e22b4178f72e96fd3c186a200e31c322ced16fed510",
+    "probe_inputs/PROVENANCE.json": "55206268426ebc9d6a52f98c3c674ae1213a448b6d8825941902e90d9900017a",
+    "probe_inputs/config.json": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+    "probe_inputs/states.npz": "0f49982b6d14c9f707994708655b4837e6236d0a3b3c720b66f9de034129e5d9",
+    "probe_resources.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "student_transition.py": "80e71575831bab3cb26e549c09d19f8674d21bbb8fcce1a65c89fe78b940eb38",
+    "student_transition_fast.py": "f1fd866732f096b47301fd48c754493c0c3f40e0f1b7d6a948371934857c8838",
+    "teacher_h3.py": "ecbb1752b9e97243a82521c62b8ff75fa534a69768d960ad692ac84a7aba6400",
+    "transition_batch.py": "667567f88ffeacf06b33f5fc8fcb0d494425d0c3419f7709f6367f8dec7b4293",
+    "transition_rule.py": "707aa9f82fb0cbba945dada10b725bcc3644c75b591950d2207fa0e67f5409dc"
+  }
+}

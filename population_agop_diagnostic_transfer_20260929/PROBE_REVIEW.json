@@ -1,0 +1,47 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "f7ff7c1cb682fec6f0ea51574b170192e3ae06da09ead2c40f25e74b018c80b6",
+  "reviewed_utc": "2026-09-29T03:22:56.558433+00:00",
+  "reviewer": "codex/quadrature_trajectory_design_v9",
+  "scope": "One SERVER-only single-CPU 360-second numerical diagnostic at four pinned full-width states; no training or learning-success approval",
+  "execution_launched": false,
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "verified_pins": 19,
+  "source_compilation_passed": true,
+  "pure_array_mock_validation": {
+    "status": "PASS",
+    "method": "AST-extracted cache and arithmetic functions with artificial arrays and a fake engine; no scientific module imported",
+    "unexpected_evaluate_calls": 0,
+    "cached_metric_agop_calls": 1,
+    "cached_metric_refit_calls": 1,
+    "checks": [
+      "cached object identity",
+      "changed-state refusal",
+      "need_grad=False refusal",
+      "all four cutoff weights/masks match unchanged metrics",
+      "canonical screens on synthetic resolved case",
+      "distinct-objective cross-risk orientation"
+    ]
+  },
+  "findings": [
+    "All 19 source/input pins match the requested manifest. Frozen Hermite core, transition reference, diagnostics.py and engine copies retain their previously reviewed hashes. All package Python files compile without importing or executing scientific code.",
+    "The fixed loop contains exactly four states times reference/candidate, with one guarded evaluate wrapper call per pair. There are no adaptive choices or retries. The wrapper rejects a ninth call, a stopped process or admission at elapsed>=350 seconds. EVALUATIONS.jsonl records started/returned calls.",
+    "Unchanged diagnostics.metrics calls Cached.evaluate, which checks exact parameter values and returns the existing ev. Delegated E.agop receives ev explicitly; E.refit also receives ev and only solves algebraically. The separate E.agop call also passes ev. Neither hidden path evaluates a model. The fake engine raises on any real evaluate call and observed zero calls.",
+    "AGOP assembly uses original ordered Cp fields and inherited D diagonal replacements, alpha/m and a products. Canonical full-rank resolution includes the original positive-leading, PSD, rank-eigenvalue and rank-gap 1e-9 screens. Frobenius, spectral-gap, projector and alignment comparisons preserve separate fields; unresolved reference geometry cannot satisfy the gap screen.",
+    "Refit weights exactly reproduce the authoritative equilibrated four-cutoff solve and actual normalized quadratic risk. Legacy ridge source remains separately labeled in original metrics. Canonical normalized cutoff spread<=1e-7, risks>=-1e-8, residual<=1e-7 and positive equilibrated minimum/maximum ratio remain unchanged. All four cutoff ranks, masks, spectra and coefficients are retained.",
+    "Cross-risk orientation is correct: candidate_on_reference evaluates candidate coefficients in reference G/t/V; reference_on_candidate evaluates reference coefficients in candidate G/t/V. Same-head errors compare each against its own-objective risk. Prospective agreement gates use self and both cross-risk discrepancies<=1e-7 plus retained-rank equality; no unfavorable cutoff is removed.",
+    "Saved V denotes the original parameter matrix; scalar ev[V] is saved separately as teacher_variance. G and t remain centered exactly once, without an extra alpha/m factor. Original P/V/a, complete Cp/D, AGOP, gradients and candidate energy/tail arrays are separately labeled. Signed scalar residuals and invalidity flags are retained.",
+    "Original head-weighted directions use m*(gP,gV,head_lr*ga). Common slopes use the reference unit direction with a common minus sign; comparisons use the already declared variance-scaled loss/direction/slope tolerances. No parameter update is executed.",
+    "Source/input/review checks precede scientific imports. Admission requires Linux plus SERVER marker, at least32 effective allocated CPUs, at least8GiB available memory and5GiB free disk. Niceness>=10 is set and verified, the process is pinned to one CPU, numerical libraries are single-threaded, and CUDA visibility is disabled.",
+    "The cooperative 350-second gate bounds new admissions, not an in-flight evaluation; the mandatory external TERM355/KILL360 wrapper must supply the hard limit. Output must be a fresh direct-child path. JSON output distinguishes execution completion from comparison success, and exceptions/caps leave incomplete or failed status. Exit0 is not a numerical or scientific pass.",
+    "The additional alignment<=1e-4 and bidirectional cross-risk tests are explicitly prospective engineering checks in pinned DISPATCH_PROTOCOL.md. They do not change the canonical learning criteria. Four noninitial states cannot establish initial refit improvement, all-update plateau or trajectory success."
+  ],
+  "mandatory_dispatch_conditions": [
+    "Root verifies authorized Studio identity, live task concurrency and actual runtime capacity; no dispatch performed by reviewer.",
+    "Publish reviewed code only. Copy states.npz from the existing authorized Studio run and verify pinned SHA256 before startup; never publish state NPZ to GitHub.",
+    "Use a fresh isolated output and an external timeout --signal=TERM --kill-after=5s 355s around the verified server Python invocation, with AGOP_EXECUTION_SITE=SERVER.",
+    "Retain every failed/unresolved comparison and incomplete state. No automatic training, threshold relaxation or alternate recipe selection follows this diagnostic."
+  ]
+}

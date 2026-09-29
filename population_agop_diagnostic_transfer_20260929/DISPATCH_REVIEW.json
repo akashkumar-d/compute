@@ -1,0 +1,38 @@
+{
+  "status": "approved_for_dispatch",
+  "manifest_sha256": "f7ff7c1cb682fec6f0ea51574b170192e3ae06da09ead2c40f25e74b018c80b6",
+  "helper_sha256": {
+    "prepare_runtime.py": "076ddd934594126dc273d5cc1730383716f4a4a73598d417fd035e25209c2b20",
+    "run_server.sh": "372851c51c8bf2cdb5cd6c0f91848ec4fe65c0e09e731612849ac7bda26d9689",
+    "REMOTE_INPUTS.md": "0e5dc0299804987d63046f65605460dbdd047096583f17bd6ef465e53f4de5bd"
+  },
+  "reviewed_utc": "2026-09-29T03:29:02.375362+00:00",
+  "reviewer": "codex/quadrature_trajectory_design_v9",
+  "scope": "Source-only review of three dispatch helpers; original eight-evaluation probe approval unchanged",
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "runtime_copy_executed": false,
+  "dispatch_executed": false,
+  "checks": {
+    "all_three_hashes_match": true,
+    "probe_manifest_unchanged": true,
+    "python_syntax": true,
+    "shell_syntax_bash_n": true,
+    "remote_path_arithmetic": true
+  },
+  "findings": [
+    "Given the documented invocation from the new lrun checkout root, the bundle path and shared Python path resolve to the intended new bundle and existing sibling runtime. prepare_runtime uses its own resolved file location; HERE.parent.parent reaches the runs directory and the source is the completed Hermite sibling run, not this new checkout.",
+    "prepare_runtime rejects non-Linux or missing SERVER marker before reading states. It reads existing input bytes, compares SHA256 to the pinned manifest value before opening the destination, uses exclusive xb creation and checks the copied bytes. It neither regenerates states nor overwrites an existing destination; a failed or partial preparation is preserved and a repeat refuses overwrite.",
+    "The shell sets strict error handling. A failed copy stops dispatch. Numerical libraries are all single-threaded; CUDA visibility is empty and bytecode writing disabled. The probe independently repeats its reviewed SERVER/capacity/priority/one-CPU-affinity/review/source checks before scientific imports.",
+    "External timeout sends TERM355 then KILL five seconds later around nice10 and the probe, meeting the360-second hard evaluation-process limit. The tiny preparatory copy occurs before this timeout and is not a model evaluation. The probe retains its cooperative350-second admission cap and maximum8calls.",
+    "probe_a01 is fixed and probe.py refuses existing output. Both source input and any previous output stay unchanged. No helper contains a publication/network command; REMOTE_INPUTS.md explicitly excludes state NPZ and outputs from code publication.",
+    "These new helpers are intentionally outside the unchanged scientific manifest. This separate review binds their exact hashes and the approved manifest; root must verify those bytes when publishing and dispatching. No automatic execution or retry is authorized by this review."
+  ],
+  "dispatch_conditions": [
+    "Studio must be running; root verifies authorized account, allocation, live task concurrency and existing shared Python runtime. Do not dispatch while stopped or before those checks.",
+    "Publish code and small metadata only, excluding probe_inputs/states.npz and all outputs. Preserve the19-pin manifest and PROBE_REVIEW.json unchanged.",
+    "Invoke run_server.sh from the fresh lrun checkout root containing population_agop_diagnostic_transfer_20260929. Do not reuse a populated target or delete an existing input/output to force a retry.",
+    "Retain explicit helper hashes, preparation receipt and exit status. Completion or exit0 does not imply numerical comparison success; no training follows automatically."
+  ]
+}
