@@ -55,21 +55,52 @@
  "own_left": 0,
  "own_total": 22,
  "push_error": null,
- "running": {},
+ "running": {
+  "C1_D3_s021": {
+   "phase": "pilot",
+   "since": "2026-09-29T15:36:19Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S7",
+   "threads": 1
+  },
+  "C1_D3_s029": {
+   "phase": "pilot",
+   "since": "2026-09-29T15:36:19Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S7",
+   "threads": 1
+  },
+  "C2_D3_s013": {
+   "phase": "pilot",
+   "since": "2026-09-29T15:36:19Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S7",
+   "threads": 1
+  }
+ },
  "started": "2026-09-29T02:40:39Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
+  "C1_D3_s021": "S7",
+  "C1_D3_s029": "S7",
   "C1_D3_s034": "S4",
   "C1_D3_s039": "S1",
   "C1_D4_s038": "S4",
   "C1_D5_s032": "S2",
   "C2_D3_s005": "S7",
+  "C2_D3_s013": "S7",
   "C5_D3ngd_s002": "S4",
   "C5_D3ngd_s006": "S4",
   "C5_D3ngd_s014": "S4",
   "C5_D3ngd_s018": "S8"
  },
- "updated": "2026-09-29T15:30:00Z",
+ "updated": "2026-09-29T15:36:19Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
