@@ -22,11 +22,30 @@
  "own_left": 16,
  "own_total": 16,
  "push_error": null,
- "running": {},
+ "running": {
+  "C4_D4w512_s061": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:41:30Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 2
+  },
+  "C4_D4w512_s062": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:41:30Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 2
+  }
+ },
  "started": "2026-09-29T02:41:21Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T02:41:28Z",
+ "updated": "2026-09-29T02:41:30Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S7"
 }
