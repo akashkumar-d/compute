@@ -2,7 +2,10 @@
 
 **Owner:** `claude/plateau-review` (session_011vNRtJNdeKePn3Gex5aRg7).
 
-**Status:** registered 2026-09-29, before any run.
+**Status:** registered 2026-09-29 at 02:17 UTC, before any run. Finished at 18:09 UTC: 164/164 chains, none failed.
+
+**Result:** the primary endpoint is **confirmed at depths 3, 4 and 5**, with 40/40, 39/40 and 38/40 runs passing (37/40
+needed). The report is `ANALYSIS.md`; the per-run fields are in `analysis.json`.
 
 **What it tests.** Development (README v1.2) found, at depths 3–5, a training-loss plateau:
 
@@ -32,6 +35,8 @@ Campaign C tests this, with preregistered endpoints, on 40 fresh seeds per depth
 | `endpoints.py`, `analyze.py` | the preregistered per-run fields and the report (`collect`, `report`, `dev`, `status`) |
 | `tests/test_runner.py` | runner checks (bit-exact against the development runner, observers read-only, stop-at-t₁₀, NGD) |
 | `HASHES.json` | SHA-256 of the registered files; the selftest checks them |
+| `ANALYSIS.md`, `analysis.json` | the final report (2026-09-29, 164/164 chains) and every run's preregistered fields |
+| `results_archive/` | raw results of all 164 chains, one tar per cohort, collected from the worker branches; not pushed to GitHub |
 | `results/<chain>/`, `status/` | written by the workers on their own branches (not on the default branch) |
 
 ## Running it

@@ -21,9 +21,12 @@ PRIMARY_COHORTS = ['D3', 'D4', 'D5']
 def collect(fetch=True):
     import worker as Wk
     g = Wk.Git(HERE)
-    br = g.remote_branches() if fetch else [b.split('refs/remotes/origin/', 1)[1] for b in
-                                            g.run('for-each-ref', '--format=%(refname)', 'refs/remotes/origin/').stdout.split() if b.split('refs/remotes/origin/', 1)[1].startswith(Wk.BRANCH_PREFIXES)]
-    if fetch: g.fetch(br)
+    if fetch:                     # worker.py 1.1 renamed remote_branches()/fetch() to remote_heads()/fetch_changed() (deviation 1)
+        br, errs = g.fetch_changed(g.remote_heads())
+        if errs: print('fetch errors (branches skipped):', '; '.join(errs)[:400])
+    else:
+        br = [b.split('refs/remotes/origin/', 1)[1] for b in g.run('for-each-ref', '--format=%(refname)', 'refs/remotes/origin/').stdout.split()
+              if b.split('refs/remotes/origin/', 1)[1].startswith(Wk.BRANCH_PREFIXES)]
     copies = {}
     for b in br:
         ref = f'refs/remotes/origin/{b}'

@@ -1,0 +1,13 @@
+{
+ "campaign": "D",
+ "registered_by": "claude/plateau-review (session_011vNRtJNdeKePn3Gex5aRg7)",
+ "note": "SHA-256 of the files the campaign-D workers run; worker.py selftest checks them. analyze.py is not listed: it only reads results.",
+ "files": {
+  "manifest.json": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+  "make_manifest.py": "367ae1b37a7357e6f441a487e05d8318ff8eb9a3d7cc6bc3cded959b1cfae4fa",
+  "natplat_campaign.py": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker.py": "59eb9e2bdaa22a51eab67f46a1d6d8a488ab3977fe48990153c992ca653cfb8d",
+  "endpoints.py": "08c18b7f8d211d09361173de3d658e4c1dbe154247baf0c92dbc59126b330f8b",
+  "tests/test_runner.py": "0c8eb12b351c4353511713ece5a859cd24f0b89717250020575dd237af95784d"
+ }
+}

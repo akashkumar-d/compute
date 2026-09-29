@@ -9,7 +9,14 @@
   "recipe.py": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
   "worker.py": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf",
   "endpoints.py": "08c18b7f8d211d09361173de3d658e4c1dbe154247baf0c92dbc59126b330f8b",
-  "analyze.py": "0afaa3330b2f6ea4ee95b1d420b838b74726453c86b0b4270c645e4770e82b14",
+  "analyze.py": "a6931455698e3ca92aff2322ecb927982daaab2c069e59b8c7fa4f98676027cd",
   "tests/test_runner.py": "9098914f03769630f3ab5eda9e0ead9ed7166f008d11b6357be786104e6d8aea"
+ },
+ "deviations": {
+  "analyze.py": {
+   "registered": "0afaa3330b2f6ea4ee95b1d420b838b74726453c86b0b4270c645e4770e82b14",
+   "now": "a6931455698e3ca92aff2322ecb927982daaab2c069e59b8c7fa4f98676027cd",
+   "why": "Deviation 1 (PREREGISTRATION.md section 9): collect() called two git helpers that worker.py 1.1 had renamed; no definition changed. Updated here when the campaign closed, 2026-09-29."
+  }
  }
 }

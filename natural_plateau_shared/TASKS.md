@@ -21,6 +21,15 @@ Times are rough, for one CPU core per run:
 - Each session runs its share of `campaign_C/manifest.json` with `campaign_C/worker.py` and pushes only to its own branch. No claims or log lines are needed.
 - B: do not start tasks from this file while campaign C runs unless the user asks.
 
+**Campaign C finished 2026-09-29 18:09 UTC** (164/164 chains; confirmed at depths 3, 4 and 5). The report is `campaign_C/ANALYSIS.md`.
+
+**Campaign D (set up 2026-09-29): the same learner across p = 23, 31, 47, 61, 97; eight worker sessions S1–S8 again.**
+- It is a development sweep, not a preregistered test. It lives in `campaign_D/` (`README.md`, `START_PROMPTS.md`, `WORKER.md`).
+- 127 runs: one hidden layer (λ_W dial at every p, plus width 1024/2048 at p = 97), and depths 3 and 4 (last-layer rate dial
+  at p = 23, 47, 61 and 97).
+- Each session pushes only to its own branch. No claims or log lines are needed.
+- B: do not start tasks from this file while campaign D runs unless the user asks.
+
 **Delta node (user's request, 01:20 UTC on 2026-09-28): no new tasks there.** T20 and T21, already running, finish; nothing else is assigned to the Delta allocation. After T20 the user stops the push loop on dt-login04 (`pkill -f 'results/T20_depth4'`).
 
 A plans to use a 32-core Lightning AI CPU Studio once the user starts it. The files `code/tasks/L1_<TASK>.json` are the subsets of A's tasks that the Studio runs (batch L1, 25 runs); their results go to `results/<TASK>/` as usual. A second batch, `L2_<TASK>.json` (6 runs), moves A's cloud-session runs of T10 (width-512 cascade, tuning seed and seed 0) and four paused T14 runs to the Studio. They are A's; B should ignore them.

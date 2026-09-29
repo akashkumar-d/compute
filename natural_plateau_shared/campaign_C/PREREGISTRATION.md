@@ -175,7 +175,16 @@ a threshold, or a stage added or dropped. Each change is also logged in `log/A.m
   in sections 4, 5 and 7 takes precedence over the code.
 - **Exploratory analyses.** Anything beyond sections 5 and 7 is labelled exploratory.
 
-(No deviations yet.)
+1. **2026-09-29 15:45 UTC, analysis code only (no definition changed).**
+   - `analyze.py collect` called `Git.remote_branches()` and `Git.fetch()`. `worker.py` 1.1 had renamed these to
+     `remote_heads()` and `fetch_changed()` before registration, so `collect` crashed at its first use (156 of 164 chains finished).
+   - The fix calls the new names. No endpoint, threshold or window changed.
+   - `analyze.py` sha256: 0afaa3330b2f6ea4ee95b1d420b838b74726453c86b0b4270c645e4770e82b14 (registered) ->
+     a6931455698e3ca92aff2322ecb927982daaab2c069e59b8c7fa4f98676027cd (used for the analysis).
+   - `HASHES.json` keeps the registered hash until the campaign closes, so a worker session restarted from the default branch
+     still passes its selftest.
+   - The campaign closed on 2026-09-29 at 18:09 UTC (164/164 chains). `HASHES.json` now lists the fixed hash and keeps the
+     registered one under `deviations`.
 
 ## 10. Registered files
 
