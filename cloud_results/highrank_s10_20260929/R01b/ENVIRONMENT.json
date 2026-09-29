@@ -1,0 +1,52 @@
+{
+  "utc": "2026-09-29T02:31:13.285098+00:00",
+  "hostname": "vm",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "affinity_cpus": 2,
+  "jobs_commit": "d26affef73a46196127f9239f47168d8a70d8dab",
+  "runner_sha256": "8ed8ce0bd647e36005cf9ff22ad913ff59faea0f00b4fd6a3ba0ccc3b2484c87",
+  "runner_python": "3.12.3",
+  "engine_python": "/tmp/agopenv/bin/python",
+  "engine_python_version": "3.12.3",
+  "numpy": "1.26.4",
+  "scipy": "1.11.4",
+  "cpu_model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "memory": "MemTotal:        8224868 kB",
+  "plan": {
+    "job": "highrank_s10_20260929",
+    "shard": "R01b",
+    "arms": [
+      "v11_hr_relu_h2_r4_d64_m256_seed9351",
+      "v11_hr_relu_h2_r4_d64_m256_seed9352",
+      "v11_hr_relu_h2_r4_d64_m256_seed9353",
+      "v11_hr_relu_h2_r4_d64_m256_seed9354",
+      "v11_hr_relu_h2_r4_d64_m256_seed9355",
+      "v11_hr_relu_h2_r4_d64_m256_seed9356",
+      "v11_hr_relu_h2_r4_d64_m256_seed9357",
+      "v11_hr_relu_h2_r4_d64_m256_seed9358",
+      "v11_hr_relu_h2_r4_d64_m256_seed9359",
+      "v11_hr_relu_h2_r4_d64_m256_seed9360",
+      "v11_hr_relu_h2_r2_d64_m256_seed9351",
+      "v11_hr_relu_h2_r2_d64_m256_seed9352",
+      "v11_hr_relu_h2_r2_d64_m256_seed9353",
+      "v11_hr_relu_h2_r2_d64_m256_seed9354",
+      "v11_hr_relu_h2_r2_d64_m256_seed9355",
+      "v11_hr_relu_h2_r2_d64_m256_seed9356",
+      "v11_hr_relu_h2_r2_d64_m256_seed9357",
+      "v11_hr_relu_h2_r2_d64_m256_seed9358",
+      "v11_hr_relu_h2_r2_d64_m256_seed9359",
+      "v11_hr_relu_h2_r2_d64_m256_seed9360"
+    ],
+    "workers": 2,
+    "cpus": 2,
+    "per_arm_seconds": {
+      "a01": 1990
+    },
+    "global_seconds": 5400.0,
+    "expected_minutes": 12,
+    "manifests": {
+      "a01": "bdcc6c833a4526e6852d1cfc1a5a029f3abbd75e9275ed524f1c1478bd603fdc"
+    },
+    "results": "/home/claude/r01_session/cloud_results/highrank_s10_20260929/R01b"
+  }
+}

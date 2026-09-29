@@ -1,0 +1,25 @@
+{
+  "arm": "v11_hr_relu_h2_r2_d64_m256_seed9360",
+  "created_utc": "2026-09-29T02:25:26.005939+00:00",
+  "files": [
+    {
+      "path": "logs/v11_hr_relu_h2_r2_d64_m256_seed9360.stderr.log",
+      "bytes": 775,
+      "sha256": "98c02aa8e30a0ecb50b8481e26d4222e8a7862e5b4faa6c6139320f4ebc7c377",
+      "packed": true
+    },
+    {
+      "path": "logs/v11_hr_relu_h2_r2_d64_m256_seed9360.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packed": true
+    }
+  ],
+  "excluded_patterns": [
+    "states/*",
+    "resume.npz",
+    "*_snaps.npz"
+  ],
+  "tar_sha256": "bcc30af72a4885a3a37983d2b2d853629e91bf0d4e1a3f92e283fbbbbc4fdf51",
+  "tar_bytes": 735
+}
