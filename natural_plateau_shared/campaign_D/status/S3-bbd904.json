@@ -14,7 +14,7 @@
   "cpus": 4,
   "node": "5bce98f7",
   "numpy": "2.4.6",
-  "platform": "Linux-6.18.44-fc-v49-x86_64-with-glibc2.39",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
   "python": "3.11.15"
  },
  "instance": "bbd904",
@@ -22,21 +22,11 @@
  "own_left": 16,
  "own_total": 16,
  "push_error": null,
- "running": {
-  "D4_p97_r0.32_s1": {
-   "phase": "run",
-   "since": "2026-09-29T20:25:53Z",
-   "step": 12000,
-   "steps": 100000,
-   "steps_per_s": 6.72,
-   "stolen_from": null,
-   "threads": 4
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:24:58Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T20:55:55Z",
+ "updated": "2026-09-29T20:57:41Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S3"
 }
