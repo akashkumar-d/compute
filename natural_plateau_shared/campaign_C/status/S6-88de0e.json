@@ -57,30 +57,39 @@
  "push_error": null,
  "running": {
   "C1_D3_s021": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T15:36:19Z",
-   "step": 0,
+   "step": 8000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 25.27,
    "stolen_from": "S7",
    "threads": 1
   },
   "C1_D3_s029": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T15:36:19Z",
-   "step": 0,
+   "step": 8000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 28.06,
    "stolen_from": "S7",
    "threads": 1
   },
   "C2_D3_s013": {
    "phase": "pilot",
    "since": "2026-09-29T15:36:19Z",
+   "step": 26000,
+   "steps": 80000,
+   "steps_per_s": 28.71,
+   "stolen_from": "S7",
+   "threads": 1
+  },
+  "C5_D3ngd_s020": {
+   "phase": "pilot",
+   "since": "2026-09-29T15:51:44Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
-   "stolen_from": "S7",
+   "stolen_from": "S2",
    "threads": 1
   }
  },
@@ -98,9 +107,10 @@
   "C5_D3ngd_s002": "S4",
   "C5_D3ngd_s006": "S4",
   "C5_D3ngd_s014": "S4",
-  "C5_D3ngd_s018": "S8"
+  "C5_D3ngd_s018": "S8",
+  "C5_D3ngd_s020": "S2"
  },
- "updated": "2026-09-29T15:36:19Z",
+ "updated": "2026-09-29T15:51:44Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
