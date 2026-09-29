@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 38,
+ "campaign_left": 27,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -53,9 +53,9 @@
   "C1_D4_s038": {
    "phase": "main",
    "since": "2026-09-29T12:33:16Z",
-   "step": 40000,
+   "step": 76000,
    "steps": 100000,
-   "steps_per_s": 18.23,
+   "steps_per_s": 18.96,
    "stolen_from": "S4",
    "threads": 1
   }
@@ -69,7 +69,7 @@
   "C5_D3ngd_s006": "S4",
   "C5_D3ngd_s014": "S4"
  },
- "updated": "2026-09-29T13:27:15Z",
+ "updated": "2026-09-29T13:57:29Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
