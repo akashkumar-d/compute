@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/dazzling-pasteur-p6hptu",
  "broken": null,
- "campaign_left": 139,
+ "campaign_left": 138,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -26,18 +26,18 @@
   "C4_D4w512_s061": {
    "phase": "main",
    "since": "2026-09-29T02:41:30Z",
-   "step": 60000,
+   "step": 70000,
    "steps": 100000,
-   "steps_per_s": 5.26,
+   "steps_per_s": 5.3,
    "stolen_from": null,
    "threads": 2
   },
   "C4_D4w512_s062": {
    "phase": "main",
    "since": "2026-09-29T02:41:30Z",
-   "step": 58000,
+   "step": 66000,
    "steps": 100000,
-   "steps_per_s": 5.38,
+   "steps_per_s": 5.24,
    "stolen_from": null,
    "threads": 2
   }
@@ -45,7 +45,7 @@
  "started": "2026-09-29T02:41:21Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T07:12:37Z",
+ "updated": "2026-09-29T07:42:42Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S7"
 }
