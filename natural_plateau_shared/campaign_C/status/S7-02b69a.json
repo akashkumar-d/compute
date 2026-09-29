@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/dazzling-pasteur-p6hptu",
  "broken": null,
- "campaign_left": 111,
+ "campaign_left": 106,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -27,38 +27,38 @@
  "push_error": null,
  "running": {
   "C1_D4_s025": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T09:26:38Z",
-   "step": 0,
+   "step": 4000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 12.41,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D4_s033": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T09:26:38Z",
-   "step": 0,
+   "step": 10000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 15.93,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D5_s029": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T09:18:01Z",
-   "step": 6000,
+   "step": 2000,
    "steps": 80000,
-   "steps_per_s": 12.02,
+   "steps_per_s": 7.84,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D5_s037": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T09:18:01Z",
-   "step": 6000,
+   "step": 0,
    "steps": 80000,
-   "steps_per_s": 12.02,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -66,7 +66,7 @@
  "started": "2026-09-29T02:41:21Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T09:26:39Z",
+ "updated": "2026-09-29T09:56:50Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S7"
 }
