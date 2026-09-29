@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/dazzling-pasteur-p6hptu",
  "broken": null,
- "campaign_left": 38,
+ "campaign_left": 36,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -11,11 +11,12 @@
   "C1_D5_s029",
   "C1_D5_s037",
   "C3_D4p23_s041",
+  "C3_D4p23_s049",
   "C3_D4p23_s057",
   "C4_D4w512_s061",
   "C4_D4w512_s062"
  ],
- "est_hours_left": 2.09,
+ "est_hours_left": 1.68,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -28,13 +29,22 @@
  },
  "instance": "02b69a",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 7,
+ "own_left": 6,
  "own_total": 16,
  "push_error": null,
  "running": {
   "C1_D3_s021": {
    "phase": "pilot",
    "since": "2026-09-29T13:29:26Z",
+   "step": 4000,
+   "steps": 80000,
+   "steps_per_s": 20.13,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C1_D3_s029": {
+   "phase": "pilot",
+   "since": "2026-09-29T13:33:03Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
@@ -44,27 +54,18 @@
   "C2_D3_s005": {
    "phase": "main",
    "since": "2026-09-29T11:40:57Z",
-   "step": 70000,
+   "step": 76000,
    "steps": 80000,
-   "steps_per_s": 22.83,
+   "steps_per_s": 23.14,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D3_s013": {
    "phase": "pilot",
    "since": "2026-09-29T13:24:49Z",
-   "step": 6000,
+   "step": 10000,
    "steps": 80000,
-   "steps_per_s": 23.26,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "C3_D4p23_s049": {
-   "phase": "main",
-   "since": "2026-09-29T11:32:58Z",
-   "step": 114000,
-   "steps": 120000,
-   "steps_per_s": 21.49,
+   "steps_per_s": 21.04,
    "stolen_from": null,
    "threads": 1
   }
@@ -72,7 +73,7 @@
  "started": "2026-09-29T02:41:21Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T13:29:26Z",
+ "updated": "2026-09-29T13:33:03Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S7"
 }
