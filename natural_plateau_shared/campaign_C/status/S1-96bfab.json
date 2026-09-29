@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/beautiful-meitner-zrn95n",
  "broken": null,
- "campaign_left": 163,
+ "campaign_left": 159,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -26,36 +26,36 @@
   "C2_D5_s001": {
    "phase": "main",
    "since": "2026-09-29T02:39:48Z",
-   "step": 18000,
+   "step": 42000,
    "steps": 80000,
-   "steps_per_s": 12.91,
+   "steps_per_s": 13.13,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s007": {
    "phase": "main",
    "since": "2026-09-29T02:39:48Z",
-   "step": 18000,
+   "step": 44000,
    "steps": 80000,
-   "steps_per_s": 12.91,
+   "steps_per_s": 13.75,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s013": {
    "phase": "main",
    "since": "2026-09-29T02:39:48Z",
-   "step": 18000,
+   "step": 42000,
    "steps": 80000,
-   "steps_per_s": 13.05,
+   "steps_per_s": 13.19,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s019": {
    "phase": "main",
    "since": "2026-09-29T02:39:48Z",
-   "step": 18000,
+   "step": 42000,
    "steps": 80000,
-   "steps_per_s": 13.35,
+   "steps_per_s": 13.31,
    "stolen_from": null,
    "threads": 1
   }
@@ -63,7 +63,7 @@
  "started": "2026-09-29T02:39:44Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T04:40:05Z",
+ "updated": "2026-09-29T05:10:11Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S1"
 }
