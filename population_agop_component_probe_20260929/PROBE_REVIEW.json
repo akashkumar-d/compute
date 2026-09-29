@@ -1,0 +1,22 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "37ba071ff8fc859c6e94ca77c119e844bff5e3c44d7cf60d6d56a61c2a802c1b",
+  "reviewer": "codex/root independent source review",
+  "approved_utc": "2026-09-29T01:06:06.980783+00:00",
+  "checks": [
+    "All13pinsverified and original numerical kernels unchanged",
+    "Canonicalh3/EY0/Var1 scope matches exact teacher-gradient decomposition",
+    "Teacher/student components sum to normalized total minusconstant1",
+    "Full weighted D held fixed across perturbations within each order",
+    "Correct -D slopes; head rate and variance appear once",
+    "Student nominal defined by subtraction, not independent student derivative",
+    "Component signs unrestricted; signed mismatches and cancellation retained",
+    "OneCPU,24kernelcalls, mandatory175TERM/180KILL",
+    "JSON scalar regression test passed"
+  ],
+  "limitations": [
+    "No model evaluated locally",
+    "Component attribution alone is not population accuracy certification",
+    "No training trajectory approved"
+  ]
+}

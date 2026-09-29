@@ -1,0 +1,38 @@
+{
+  "integrator_probe_manifest_sha256": "cf54f970abb3c6b7e4d067b96f78a2498703e5f695158f37fad3e0284435fc43",
+  "copied_byte_identically": {
+    "probe_resources.py": {
+      "source_relative_to_integrator_quality": "probe_resources.py",
+      "sha256": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d"
+    },
+    "probe_inputs/config.json": {
+      "source_relative_to_integrator_quality": "probe_inputs/config.json",
+      "sha256": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26"
+    },
+    "probe_inputs/states.npz": {
+      "source_relative_to_integrator_quality": "probe_inputs/states.npz",
+      "sha256": "0f49982b6d14c9f707994708655b4837e6236d0a3b3c720b66f9de034129e5d9"
+    },
+    "probe_inputs/PROVENANCE.json": {
+      "source_relative_to_integrator_quality": "probe_inputs/PROVENANCE.json",
+      "sha256": "55206268426ebc9d6a52f98c3c674ae1213a448b6d8825941902e90d9900017a"
+    },
+    "engine/swsmall_periodic.py": {
+      "source_relative_to_integrator_quality": "fork/swiglu/code/engine/swsmall_periodic.py",
+      "sha256": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae"
+    },
+    "engine/swpop.py": {
+      "source_relative_to_integrator_quality": "fork/swiglu/code/engine/swpop.py",
+      "sha256": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7"
+    },
+    "engine/canonical_links.py": {
+      "source_relative_to_integrator_quality": "fork/swiglu/code/engine/canonical_links.py",
+      "sha256": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69"
+    },
+    "engine/vlab.py": {
+      "source_relative_to_integrator_quality": "fork/swiglu/code/engine/vlab.py",
+      "sha256": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0"
+    }
+  },
+  "original_integrator_inputs_unchanged": true
+}

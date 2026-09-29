@@ -1,0 +1,30 @@
+{
+  "status": "prepared_pending_independent_review",
+  "created_utc": "2026-09-29T01:03:43.315244+00:00",
+  "manifest_sha256": "37ba071ff8fc859c6e94ca77c119e844bff5e3c44d7cf60d6d56a61c2a802c1b",
+  "probe_sha256": "6eee1f72f3b26129879d7779ff5f236f64cae0bb8292ac11934f3f8b773f316e",
+  "pinned_files_verified": 13,
+  "byte_identical_copied_files": 8,
+  "integrator_original_pins_reverified_unchanged": 21,
+  "source_compile_checks": 8,
+  "source_pins_and_guards_precede_scientific_imports": true,
+  "scientific_import_lines": [
+    91,
+    93
+  ],
+  "synthetic_test": {
+    "count": 1,
+    "status": "passed",
+    "path": "test_component_report.py",
+    "log": "SYNTHETIC_TEST.log",
+    "log_sha256": "b974c89939782e5c7b785218e8ca167e17687160a6bf1b80a1f1d038c8935e53",
+    "scope": "Scalar quadratic signed T/S decomposition, cancellation, two-scale agreement and NumPy-scalar JSON round-trip; no model imports"
+  },
+  "initial_default_python_test_attempt": "Could not import NumPy; rerun passed with existing bundled Python, without package installation",
+  "model_imports_locally": 0,
+  "model_evaluations_locally": 0,
+  "remote_calls": 0,
+  "training_updates": 0,
+  "probe_launched": false,
+  "interpretation": "Component signs unrestricted; numerical mismatch does not make a completed measurement missing or imply a kernel cause"
+}
