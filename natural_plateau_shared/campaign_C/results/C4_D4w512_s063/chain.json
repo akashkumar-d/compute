@@ -1,0 +1,72 @@
+{
+ "branch": "claude/sharp-babbage-gax1f8",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D4w512",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 430162,
+   "sha256": "d8aac206e68149d04c746c7c7c97b1df743dcede7307c36eb126cabc9416a828"
+  },
+  "pilot.json.gz": {
+   "bytes": 156394,
+   "sha256": "667868a5c3d68614928b848bd7919ef329e5f4d5f55a98d4d8ca59a6f252c034"
+  }
+ },
+ "finished": "2026-09-29T08:43:55Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C4_D4w512_s063",
+ "init_seed": 1063,
+ "instance": "f970c5",
+ "main": {
+  "eta_last": 0.002346428571428571,
+  "final_test": 0.9481865284974094,
+  "final_train": 1.0,
+  "rate": 0.365,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 17258.4,
+  "steps": 100000,
+  "t10": 28080,
+  "t90": 79140,
+  "x": 4.6121
+ },
+ "owner": "S8",
+ "pilot": {
+  "censored": false,
+  "final_test": 0.10362694300518134,
+  "kind": "short",
+  "rate": 0.4,
+  "resumed_from": 0,
+  "seconds": 4443.4,
+  "steps_run": 28160,
+  "stopped_at": 28160,
+  "t10": 28160
+ },
+ "ran_by": "S8",
+ "recipe": {
+  "r0": 0.4,
+  "rate": 0.365,
+  "t10_used": 28160,
+  "x_pred": 4.6253,
+  "x_target": 4.5
+ },
+ "seed": 63,
+ "split_seed": 2063,
+ "stage": "C4",
+ "started": "2026-09-29T02:42:12Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
