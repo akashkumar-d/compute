@@ -26,9 +26,9 @@
   "D3_p97_r0.45_s1": {
    "phase": "run",
    "since": "2026-09-29T20:26:42Z",
-   "step": 0,
+   "step": 8000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 4.48,
    "stolen_from": null,
    "threads": 4
   }
@@ -36,7 +36,7 @@
  "started": "2026-09-29T20:25:45Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T20:26:42Z",
+ "updated": "2026-09-29T20:56:44Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S8"
 }
