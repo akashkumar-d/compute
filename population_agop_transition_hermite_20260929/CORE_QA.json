@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic scalar/polynomial Gaussian algebra only; no population model import",
+  "tests": 10,
+  "root_verified_after_same_directory_path_change": true,
+  "root_elapsed_seconds": 0.731,
+  "agent_reported_prior_elapsed_seconds": 1.073,
+  "model_evaluations": 0,
+  "training_updates": 0,
+  "core_sha256": "8bc2f640c3a91daa6f488471902618b71f5c34c28f635862220ee2c4ece6f7e6",
+  "test_sha256": "85df50f5c85b311d5417be5e93001d1027c92d9be7ea7da7845a05a4cfb3743f",
+  "limitation": "N128/q16 cubic high-degree aliases~6.28e-9 despite valid energy flags; q24~5.62e-14. No model-state accuracy/runtime claim."
+}

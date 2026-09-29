@@ -1,0 +1,39 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "b40edcee9c73790e52985094fbbe573587e2913230adee7f867c0bcb3cf166ee",
+  "reviewed_utc": "2026-09-29T02:58:07.532368+00:00",
+  "reviewer": "codex/headscale_flow_review_v10",
+  "scope": "One SERVER-only oneCPU180s fixed-state Hermite comparison; no training, AGOP or refit authorization",
+  "execution_launched": false,
+  "source_only": true,
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "verified_pins": 19,
+  "core_sha256": "8bc2f640c3a91daa6f488471902618b71f5c34c28f635862220ee2c4ece6f7e6",
+  "test_sha256": "85df50f5c85b311d5417be5e93001d1027c92d9be7ea7da7845a05a4cfb3743f",
+  "synthetic_validation": {
+    "test_sources_reviewed": 10,
+    "reported_root_rerun": "10 tests PASS in0.731s after same-directory scalar import path change",
+    "independently_rerun": false,
+    "source_compilation_passed": true
+  },
+  "findings": [
+    "All19 pins match the intact updated manifest. Core8bc2f640 is unchanged from the provisional algebra review; probe and protocol bytes unchanged. The test now loads same-directory transition_rule.py and is self-contained.",
+    "Normalized Hermite contraction and all ten ordered affine Gaussian-value moment fields are algebraically consistent with swpop covariance conventions. Total derivative order4 suffices. Zero-scale gates, signed correlations and row selection are handled without adding a physical variance floor.",
+    "Reviewed ten synthetic test sources: normalized recurrence/orthogonality, exact cubic coefficients and finite-order alias detection, all ten fields against independent direct Gaussian polynomial quadrature, rows/zero gates, tail propagation, invalid negative energy, underflow/setting rejection, inherited-method semantics and no-model-import check. Existing tests are not redundantly rerun.",
+    "Residual-energy tail estimates are finite quadrature diagnostics, not certified bounds. Materially negative scalar energies retain raw signed values and invalidate the estimates; NaN estimates are saved in NPZ, never silently repaired into valid estimates. Passing the nonnegative-energy screen alone does not imply convergence.",
+    "The prospective recipe is fixedN128/order24. Six bases cover two original full-width states times N64/q16,N128/q16,N128/q24. The alternatives assess convergence; they cannot be selected based on outcomes. Diagonal/teacher reference order16/limit12 and original alpha,m64,head rate remain unchanged.",
+    "Base screens at both final-recipe states use the declared loss1e-7*V bound and weighted-direction/common-slope relative1e-4 bounds plus their protocol-declared1e-10 absolute allowances. Common slopes use the pinned reference unit direction. Scalar-energy validity is additionally required.",
+    "Only if both fixed final bases pass does the probe make eight stencil calls, giving at most14 total. FD uses the same reference unit direction, minusD central sign, declared1e-4/1e-5 parameter-norm scales and relative threshold0.001. Perturbed scalar invalidity makes its FD screen fail. Settings do not adapt within a stencil.",
+    "A failed base screen can terminate this diagnostic with status complete and FD explicitly skipped. This denotes measurement completion, not numerical success; downstream reporting must inspect screen flags. Missing/capped observations are never passes.",
+    "Every returned call has loss/runtime journal records. All six returned bases save loss,Gram,t,gradients,original parameters,Cp,raw signed scalar energy fields and pair-tail estimates. Finite-series loss gradients are explicitly labeled nonexact; full-model comparison and FD are needed before any subsequent use.",
+    "Source/input/approval checks precede scientific imports. Existing SERVER32CPU/8GiB/5GiB admission,nice>=10,oneCPU affinity,singlethread libraries and noGPU remain.170s limits new calls; externalTERM175/KILL180 must bound in-flight work. No trajectory,AGOP or refit is evaluated."
+  ],
+  "mandatory_dispatch_conditions": [
+    "Root publishes exact reviewed bundle and verifies live capacity",
+    "Fresh isolated direct-child output",
+    "External timeout --signal=TERM --kill-after=5s 175s with verified server Python",
+    "Retain all settings/outcomes and invalid flags; no automatic follow-on training or threshold changes"
+  ]
+}

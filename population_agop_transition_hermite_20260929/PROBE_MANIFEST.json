@@ -1,0 +1,71 @@
+{
+  "status": "prepared_unlaunched",
+  "scope": "Fixed-state comparison only; no training/AGOP/refit claim",
+  "states": [
+    {
+      "name": "last_valid_5pct",
+      "step": 472,
+      "extracted_index": 0
+    },
+    {
+      "name": "old_bad_step",
+      "step": 2260,
+      "extracted_index": 2
+    }
+  ],
+  "settings": [
+    [
+      64,
+      16
+    ],
+    [
+      128,
+      16
+    ],
+    [
+      128,
+      24
+    ]
+  ],
+  "fixed_final_setting": [
+    128,
+    24
+  ],
+  "reference_order": 16,
+  "reference_limit": 12,
+  "workers": 1,
+  "max_evaluations": 14,
+  "soft_seconds": 170,
+  "external_term_seconds": 175,
+  "hard_seconds": 180,
+  "no_training": true,
+  "epsilon_fractions": [
+    0.0001,
+    1e-05
+  ],
+  "loss_abs_var_fraction": 1e-07,
+  "direction_relative": 0.0001,
+  "slope_relative": 0.0001,
+  "finite_difference_relative": 0.001,
+  "input_sha256": {
+    "PROBE_PROTOCOL.md": "7d850dc817b7a0e82b15a365915d570e435920c4a792ea476c083fd90012efd9",
+    "engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "hermite_pairs.py": "8bc2f640c3a91daa6f488471902618b71f5c34c28f635862220ee2c4ece6f7e6",
+    "probe.py": "2791b6498779f11fdbc8bb5e4e6ea5ca2c2d367fd5f8612a6cdc3f2367b319f4",
+    "probe_inputs/PROVENANCE.json": "55206268426ebc9d6a52f98c3c674ae1213a448b6d8825941902e90d9900017a",
+    "probe_inputs/config.json": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+    "probe_inputs/states.npz": "0f49982b6d14c9f707994708655b4837e6236d0a3b3c720b66f9de034129e5d9",
+    "probe_resources.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "reference_saved/last_valid_5pct_order16.npz": "8749fee3de0239209df89501762f1df92034d8842c24d9813f2323fd9da7cb8e",
+    "reference_saved/old_bad_step_order16.npz": "cb63560987aba7b5ae8f77b7edfc33663972636ff4e59869e20cb7afb006626b",
+    "student_transition.py": "80e71575831bab3cb26e549c09d19f8674d21bbb8fcce1a65c89fe78b940eb38",
+    "student_transition_fast.py": "f1fd866732f096b47301fd48c754493c0c3f40e0f1b7d6a948371934857c8838",
+    "teacher_h3.py": "ecbb1752b9e97243a82521c62b8ff75fa534a69768d960ad692ac84a7aba6400",
+    "test_hermite_pairs.py": "85df50f5c85b311d5417be5e93001d1027c92d9be7ea7da7845a05a4cfb3743f",
+    "transition_batch.py": "667567f88ffeacf06b33f5fc8fcb0d494425d0c3419f7709f6367f8dec7b4293",
+    "transition_rule.py": "707aa9f82fb0cbba945dada10b725bcc3644c75b591950d2207fa0e67f5409dc"
+  }
+}
