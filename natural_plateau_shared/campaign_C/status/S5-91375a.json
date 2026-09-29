@@ -49,21 +49,12 @@
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C1_D3_s026": {
-   "phase": "done",
-   "since": "2026-09-29T12:43:31Z",
-   "step": null,
-   "steps": 80000,
-   "steps_per_s": 25.71,
-   "stolen_from": "S4",
-   "threads": 1
-  },
   "C2_D3_s018": {
    "phase": "main",
    "since": "2026-09-29T12:34:44Z",
    "step": 32000,
    "steps": 80000,
-   "steps_per_s": 25.91,
+   "steps_per_s": 25.41,
    "stolen_from": "S4",
    "threads": 1
   }
@@ -76,7 +67,7 @@
   "C2_D3_s018": "S4",
   "C5_D3ngd_s017": "S7"
  },
- "updated": "2026-09-29T13:46:39Z",
+ "updated": "2026-09-29T13:46:58Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
