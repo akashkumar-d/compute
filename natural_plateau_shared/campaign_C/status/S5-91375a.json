@@ -22,11 +22,48 @@
  "own_left": 22,
  "own_total": 22,
  "push_error": null,
- "running": {},
+ "running": {
+  "C2_D4_s003": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:40:59Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s005": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:40:59Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s011": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:40:59Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s017": {
+   "phase": "pilot",
+   "since": "2026-09-29T02:40:59Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-29T02:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T02:40:57Z",
+ "updated": "2026-09-29T02:40:59Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
