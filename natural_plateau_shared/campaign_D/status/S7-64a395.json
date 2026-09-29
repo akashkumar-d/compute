@@ -25,11 +25,48 @@
  "own_left": 14,
  "own_total": 16,
  "push_error": null,
- "running": {},
+ "running": {
+  "D3_p47_r0.45_s2": {
+   "phase": "run",
+   "since": "2026-09-29T23:13:51Z",
+   "step": 2000,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "D3_p61_r0.20_s2": {
+   "phase": "run",
+   "since": "2026-09-29T23:13:51Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "D3_p61_r0.90_s1": {
+   "phase": "run",
+   "since": "2026-09-29T23:13:51Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "D4_p47_r0.45_s1": {
+   "phase": "run",
+   "since": "2026-09-29T23:13:51Z",
+   "step": 2000,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-29T20:25:39Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T23:13:42Z",
+ "updated": "2026-09-29T23:13:51Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S7"
 }
