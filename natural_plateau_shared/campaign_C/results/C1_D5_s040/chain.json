@@ -1,0 +1,72 @@
+{
+ "branch": "claude/keen-dirac-q6ybl7",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D5",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 388695,
+   "sha256": "14fa14d8bf9768c1db4225f9976a9821ef1e2827b01c7233819148480616aff0"
+  },
+  "pilot.json.gz": {
+   "bytes": 151160,
+   "sha256": "ce5bb2561bac459d2507b575548edbf0cf7d1efb26e412f0114d5d9529731299"
+  }
+ },
+ "finished": "2026-09-29T10:31:13Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C1_D5_s040",
+ "init_seed": 1040,
+ "instance": "32485f",
+ "main": {
+  "eta_last": 0.0021535714285714283,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.335,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 6271.2,
+  "steps": 80000,
+  "t10": 25040,
+  "t90": 41940,
+  "x": 3.7748
+ },
+ "owner": "S2",
+ "pilot": {
+  "censored": false,
+  "final_test": 0.10362694300518134,
+  "kind": "short",
+  "rate": 0.35,
+  "resumed_from": 0,
+  "seconds": 2077.7,
+  "steps_run": 25720,
+  "stopped_at": 25720,
+  "t10": 25720
+ },
+ "ran_by": "S2",
+ "recipe": {
+  "r0": 0.35,
+  "rate": 0.335,
+  "t10_used": 25720,
+  "x_pred": 3.8773,
+  "x_target": 3.85
+ },
+ "seed": 40,
+ "split_seed": 2040,
+ "stage": "C1",
+ "started": "2026-09-29T08:12:02Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
