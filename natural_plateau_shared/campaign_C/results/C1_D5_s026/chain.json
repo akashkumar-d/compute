@@ -1,0 +1,72 @@
+{
+ "branch": "claude/busy-mayer-b7103n",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D5",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 392004,
+   "sha256": "9a1b6b101c3fbbd34c9f0d6278f8de70a3e16cc728d20909e486f5b8af7fbef6"
+  },
+  "pilot.json.gz": {
+   "bytes": 165332,
+   "sha256": "ea1194a2b510b30820d66b9091d3d29da42969e8018ec88d3c587d607828e262"
+  }
+ },
+ "finished": "2026-09-29T11:44:12Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C1_D5_s026",
+ "init_seed": 1026,
+ "instance": "55c113",
+ "main": {
+  "eta_last": 0.0019607142857142853,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.305,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 7443.5,
+  "steps": 80000,
+  "t10": 27360,
+  "t90": 46960,
+  "x": 3.7552
+ },
+ "owner": "S4",
+ "pilot": {
+  "censored": false,
+  "final_test": 0.10362694300518134,
+  "kind": "short",
+  "rate": 0.35,
+  "resumed_from": 0,
+  "seconds": 2834.6,
+  "steps_run": 29000,
+  "stopped_at": 29000,
+  "t10": 29000
+ },
+ "ran_by": "S4",
+ "recipe": {
+  "r0": 0.35,
+  "rate": 0.305,
+  "t10_used": 29000,
+  "x_pred": 3.9802,
+  "x_target": 3.85
+ },
+ "seed": 26,
+ "split_seed": 2026,
+ "stage": "C1",
+ "started": "2026-09-29T08:52:52Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
