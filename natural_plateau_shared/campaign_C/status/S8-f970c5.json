@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sharp-babbage-gax1f8",
  "broken": null,
- "campaign_left": 31,
+ "campaign_left": 25,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -18,9 +18,10 @@
   "C3_D4p23_s050",
   "C3_D4p23_s058",
   "C4_D4w512_s063",
-  "C4_D4w512_s064"
+  "C4_D4w512_s064",
+  "C5_D3ngd_s010"
  ],
- "est_hours_left": 0.68,
+ "est_hours_left": 0.54,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -33,34 +34,25 @@
  },
  "instance": "f970c5",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 3,
+ "own_left": 2,
  "own_total": 16,
  "push_error": null,
  "running": {
   "C2_D3_s014": {
    "phase": "main",
    "since": "2026-09-29T12:31:24Z",
-   "step": 34000,
+   "step": 66000,
    "steps": 80000,
-   "steps_per_s": 25.22,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "C5_D3ngd_s010": {
-   "phase": "main",
-   "since": "2026-09-29T13:35:21Z",
-   "step": 22000,
-   "steps": 80000,
-   "steps_per_s": 47.84,
+   "steps_per_s": 25.55,
    "stolen_from": null,
    "threads": 1
   },
   "C5_D3ngd_s018": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T13:45:04Z",
-   "step": 2000,
+   "step": 52000,
    "steps": 80000,
-   "steps_per_s": 44.44,
+   "steps_per_s": 46.41,
    "stolen_from": null,
    "threads": 1
   }
@@ -68,7 +60,7 @@
  "started": "2026-09-29T02:42:02Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T13:46:10Z",
+ "updated": "2026-09-29T14:06:44Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
