@@ -2,10 +2,11 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 76,
+ "campaign_left": 70,
  "commit_error": null,
  "cores": 4,
  "done": [
+  "C1_D3_s027",
   "C1_D4_s023",
   "C1_D4_s031",
   "C1_D4_s039",
@@ -21,9 +22,10 @@
   "C2_D5_s011",
   "C2_D5_s017",
   "C3_D4p23_s047",
-  "C3_D4p23_s055"
+  "C3_D4p23_s055",
+  "C5_D3ngd_s003"
  ],
- "est_hours_left": 1.31,
+ "est_hours_left": 0.93,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -36,40 +38,40 @@
  },
  "instance": "91375a",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 6,
+ "own_left": 4,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C1_D3_s027": {
-   "phase": "main",
-   "since": "2026-09-29T11:10:19Z",
-   "step": 32000,
-   "steps": 80000,
-   "steps_per_s": 24.03,
-   "stolen_from": null,
-   "threads": 1
-  },
   "C1_D3_s035": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T11:37:32Z",
-   "step": 8000,
+   "step": 38000,
    "steps": 80000,
-   "steps_per_s": 21.94,
+   "steps_per_s": 26.31,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D3_s019": {
    "phase": "main",
    "since": "2026-09-29T10:51:31Z",
+   "step": 46000,
+   "steps": 80000,
+   "steps_per_s": 25.61,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C5_D3ngd_s007": {
+   "phase": "pilot",
+   "since": "2026-09-29T12:13:22Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
-  "C5_D3ngd_s003": {
+  "C5_D3ngd_s015": {
    "phase": "pilot",
-   "since": "2026-09-29T11:43:56Z",
+   "since": "2026-09-29T12:13:22Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
@@ -80,7 +82,7 @@
  "started": "2026-09-29T02:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T11:43:56Z",
+ "updated": "2026-09-29T12:13:22Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
