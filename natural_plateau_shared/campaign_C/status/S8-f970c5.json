@@ -1,0 +1,32 @@
+{
+ "abandoned": [],
+ "branch": "claude/sharp-babbage-gax1f8",
+ "broken": null,
+ "campaign_left": 164,
+ "commit_error": null,
+ "cores": 4,
+ "done": [],
+ "est_hours_left": 10.67,
+ "failed": [],
+ "fetch_error": null,
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "instance": "f970c5",
+ "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+ "own_left": 16,
+ "own_total": 16,
+ "push_error": null,
+ "running": {},
+ "started": "2026-09-29T02:42:02Z",
+ "state": "running",
+ "stolen": {},
+ "updated": "2026-09-29T02:42:10Z",
+ "version": "campaign-C worker 1.1 (2026-09-29)",
+ "worker": "S8"
+}
