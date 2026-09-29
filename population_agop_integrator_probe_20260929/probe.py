@@ -100,7 +100,7 @@ def main():
                         check();return value
 
                     base=evaluate(theta,'base');D=engine.update_directions(base,cfg['m'],cfg['head_lr'])
-                    slope=raw_metric_slope([float(np.sum(base[k]**2)) for k in ('gP','gV','ga')],cfg['m'],cfg['head_lr'],teacher.V)
+                    slope=float(raw_metric_slope([float(np.sum(base[k]**2)) for k in ('gP','gV','ga')],cfg['m'],cfg['head_lr'],teacher.V))
                     dt=spec['old_proposed_dt'];F0=float(base['L']/teacher.V)
                     gn=np.sqrt((D[0]**2).sum(0)+(D[1]**2).sum(0)+D[2]**2)
                     norms=np.sqrt((theta[0]**2).sum(0)+(theta[1]**2).sum(0)+theta[2]**2)
@@ -114,19 +114,19 @@ def main():
                         eps=dt*fraction
                         lower=evaluate(tuple(x-eps*g for x,g in zip(theta,D)),f'fd_minus_{fraction}',False)['L']/teacher.V
                         upper=evaluate(tuple(x+eps*g for x,g in zip(theta,D)),f'fd_plus_{fraction}',False)['L']/teacher.V
-                        fd=float((lower-upper)/(2*eps));floor=128*np.finfo(float).eps*max(1.,abs(F0))/eps
+                        fd=float((lower-upper)/(2*eps));floor=float(128*np.finfo(float).eps*max(1.,abs(F0))/eps)
                         if not np.isfinite([lower,upper,fd,floor]).all():raise ValueError('Nonfinite directional difference')
                         slot['directional_differences'].append(dict(epsilon=eps,minus_loss=float(lower),plus_loss=float(upper),
                             derivative=fd,nominal_slope=slope,absolute_difference=abs(fd-slope),
                             relative_difference=abs(fd-slope)/max(abs(fd),abs(slope),1e-300),
-                            roundoff_scale=floor,negative=fd<0,agreement=abs(fd-slope)<=1e-3*max(abs(fd),abs(slope))+floor))
+                            roundoff_scale=floor,negative=bool(fd<0),agreement=bool(abs(fd-slope)<=1e-3*max(abs(fd),abs(slope))+floor)))
                         write()
                     differences=slot['directional_differences'];f0,f1=[d['derivative'] for d in differences]
                     floor=max(d['roundoff_scale'] for d in differences)
                     slot['nominal_slope_check']=dict(all_negative=all(d['negative'] for d in differences),
                         both_agree=all(d['agreement'] for d in differences),
                         finite_difference_absolute_change=abs(f0-f1),
-                        finite_difference_stable=abs(f0-f1)<=1e-3*max(abs(f0),abs(f1))+floor,
+                        finite_difference_stable=bool(abs(f0-f1)<=1e-3*max(abs(f0),abs(f1))+floor),
                         roundoff_dominated=any(abs(d['derivative'])<=d['roundoff_scale'] for d in differences))
                     old_state=tuple(x-dt*g for x,g in zip(theta,D));old_ev=evaluate(old_state,'old_proposal')
                     slot['old_proposal']=dict(status='evaluated',loss=float(old_ev['L']/teacher.V) if np.isfinite(old_ev['L']/teacher.V) else None,strict_descent=bool(old_ev['L']<base['L']))

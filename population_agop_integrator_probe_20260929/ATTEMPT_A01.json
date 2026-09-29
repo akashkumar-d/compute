@@ -1,0 +1,14 @@
+{
+  "status": "terminal_exit1_logging_type_error_preserved",
+  "source_commit": "0a90134",
+  "run": "agop-swiglu-integrator-probe-20260929-a01",
+  "files": {
+    "EVALUATIONS.jsonl": "5fc7ab28b1bc41a813203693f104476e79d10c603212c870a508ff0bab19970a",
+    "RESULTS.json": "df9e4da06de556def05370d37dd2bf9f207bc42cdb2788039debb2846429aa63"
+  },
+  "verified_utc": "2026-09-29T00:50:56.506565+00:00",
+  "completed_numeric_slots": 0,
+  "model_evaluations_logged": 3,
+  "new_training_updates": 0,
+  "reason": "NumPy bool_ in directional-difference reporting not JSON serializable; no numerical validation outcome claimed"
+}

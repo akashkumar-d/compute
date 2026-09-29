@@ -40,7 +40,7 @@
   "external_hard_kill_seconds": 180,
   "max_model_evaluations": 64,
   "input_sha256": {
-    "probe.py": "42bc427ebb7ac39968a99432583be8e7e4286e7784a95165f4c8065fa497b500",
+    "probe.py": "b3d6353ea723b833400381f944670b6cb42b7ba077f8f3eb081e0240008036f7",
     "probe_resources.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
     "probe_inputs/PROVENANCE.json": "55206268426ebc9d6a52f98c3c674ae1213a448b6d8825941902e90d9900017a",
     "probe_inputs/config.json": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",

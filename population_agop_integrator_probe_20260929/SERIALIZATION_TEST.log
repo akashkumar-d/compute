@@ -1,0 +1,6 @@
+test_actual_fd_fragment_round_trips_numpy_scalar_inputs (test_probe_serialization.SerializationTest.test_actual_fd_fragment_round_trips_numpy_scalar_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.044s
+
+OK

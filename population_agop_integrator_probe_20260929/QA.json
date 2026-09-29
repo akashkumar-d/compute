@@ -1,8 +1,8 @@
 {
-  "status": "source_and_probe_ready_pending_review_no_execution",
+  "status": "serialization_fix_ready_pending_delta_review",
   "created_utc": "2026-09-29T00:31:11.380281+00:00",
-  "probe_manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
-  "probe_source_sha256": "42bc427ebb7ac39968a99432583be8e7e4286e7784a95165f4c8065fa497b500",
+  "probe_manifest_sha256": "cf54f970abb3c6b7e4d067b96f78a2498703e5f695158f37fad3e0284435fc43",
+  "probe_source_sha256": "b3d6353ea723b833400381f944670b6cb42b7ba077f8f3eb081e0240008036f7",
   "source_draft_manifest_sha256": "a4d341b520b7f93cea6c3d4fbf8bdd9fc165293c0282c8d8c8c19fc50a0eac46",
   "original_files_preserved": 11,
   "unchanged_scientific_functions": [
@@ -53,5 +53,23 @@
   "training_updates": 0,
   "probe_launched": false,
   "training_launch_gate": "draft",
-  "probe_launch_gate": "pending"
+  "probe_launch_gate": "pending",
+  "updated_utc": "2026-09-29T00:50:59.022923+00:00",
+  "serialization_fix": {
+    "prior_attempt": "a01",
+    "prior_attempt_exit_code": 1,
+    "prior_source_snapshot": "prior_attempts/a01_serialization_20260929T005021Z",
+    "prior_probe_manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
+    "diff_path": "SERIALIZATION_FIX.diff",
+    "test_path": "test_probe_serialization.py",
+    "test_log_sha256": "2d94f6687e24f43ff800a5b4946a57869b5371bed2bfab135b7a113047829b78",
+    "lightweight_roundtrip_checks": 1,
+    "previous_fragment_reproduces_serialization_failure": true,
+    "patched_fragment_roundtrips_numpy_scalars": true,
+    "engine_and_other_pinned_files_unchanged": true,
+    "states_orders_budget_unchanged": true,
+    "model_imports": 0,
+    "model_evaluations": 0,
+    "network_actions": 0
+  }
 }

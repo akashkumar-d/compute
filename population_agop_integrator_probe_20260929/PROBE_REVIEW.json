@@ -1,14 +1,15 @@
 {
   "status": "approved_for_execution",
-  "manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
-  "reviewer": "codex/loss_windows_v6 with codex/root source review",
-  "approved_utc": "2026-09-29T00:39:05.452258+00:00",
-  "independent_review_sha256": "e1b38edf4291d5613d660b9408c6f372a82b79bf2b7b3328a7fcd77df36c88c7",
+  "manifest_sha256": "cf54f970abb3c6b7e4d067b96f78a2498703e5f695158f37fad3e0284435fc43",
+  "reviewer": "codex/root serialization delta review following independent original review",
+  "approved_utc": "2026-09-29T00:52:06.627164+00:00",
+  "prior_approved_manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
+  "changes": "Only Python scalar casts in probe reporting; scientific kernels, states, orders and budgets unchanged",
   "checks": [
-    "fixed native dt at both quadrature orders explicitly scoped",
-    "source/input planes pinned before imports",
-    "server only; one CPU; mandatory GNU timeout TERM175/KILL180",
-    "no trajectory or training authorized"
+    "Reviewed four-line diff",
+    "20 other pins unchanged",
+    "Actual FD reporting fragment JSON regression passes; old fragment reproduces failure",
+    "Failed a01 preserved/hashverified with3loggedmodel evaluations and0completedslots"
   ],
   "execution_launched": false
 }
