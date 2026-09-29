@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sharp-babbage-gax1f8",
  "broken": null,
- "campaign_left": 108,
+ "campaign_left": 103,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -29,25 +29,25 @@
   "C1_D4_s026": {
    "phase": "main",
    "since": "2026-09-29T08:51:15Z",
-   "step": 42000,
+   "step": 74000,
    "steps": 100000,
-   "steps_per_s": 17.45,
+   "steps_per_s": 17.55,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D4_s034": {
    "phase": "main",
    "since": "2026-09-29T08:51:15Z",
-   "step": 42000,
+   "step": 74000,
    "steps": 100000,
-   "steps_per_s": 17.34,
+   "steps_per_s": 17.49,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D5_s030": {
    "phase": "main",
    "since": "2026-09-29T08:44:06Z",
-   "step": 26000,
+   "step": 50000,
    "steps": 80000,
    "steps_per_s": 13.27,
    "stolen_from": null,
@@ -56,9 +56,9 @@
   "C1_D5_s038": {
    "phase": "main",
    "since": "2026-09-29T08:44:06Z",
-   "step": 26000,
+   "step": 52000,
    "steps": 80000,
-   "steps_per_s": 12.46,
+   "steps_per_s": 13.35,
    "stolen_from": null,
    "threads": 1
   }
@@ -66,7 +66,7 @@
  "started": "2026-09-29T02:42:02Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T09:51:37Z",
+ "updated": "2026-09-29T10:21:47Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
