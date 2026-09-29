@@ -24,21 +24,11 @@
  "own_left": 12,
  "own_total": 13,
  "push_error": null,
- "running": {
-  "D3_p97_r0.65_s1": {
-   "phase": "run",
-   "since": "2026-09-29T21:31:46Z",
-   "step": 24000,
-   "steps": 100000,
-   "steps_per_s": 6.64,
-   "stolen_from": null,
-   "threads": 4
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:25:55Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T22:32:19Z",
+ "updated": "2026-09-29T22:36:51Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
