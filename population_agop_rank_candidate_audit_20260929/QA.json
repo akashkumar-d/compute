@@ -1,0 +1,22 @@
+{
+  "status": "prepared_awaiting_independent_review",
+  "manifest_sha256": "0b519c67b3a99af63afab53b3e97c2e52f6fe105c8234f01bf011a99fc165fd9",
+  "source_pins_verified": 23,
+  "external_local_inputs_verified": 9,
+  "unchanged_scientific_support_files": 11,
+  "selected_cases": 3,
+  "selected_states": 9,
+  "delta_synthetic_tests": 4,
+  "tests_passed": true,
+  "static_dry_run_passed": true,
+  "model_evaluations": 0,
+  "training_updates": 0,
+  "network_access": false,
+  "dispatched": false,
+  "original_inputs_modified": false,
+  "notes": [
+    "Runtime scheduler reused; only new audit protocol/retention delta reviewed. Existing broad scheduler tests were not repeated.",
+    "Four synthetic tests use artificial arrays and AST-extracted pure update math; no scientific module was imported.",
+    "Last post-test change only propagates already-recorded native-reproduction flags into the all-state index."
+  ]
+}

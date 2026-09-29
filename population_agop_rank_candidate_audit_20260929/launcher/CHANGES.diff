@@ -1,0 +1,176 @@
+--- reviewed diagnostics-completion launcher
++++ two-worker fixed-state audit launcher
+@@ -1,6 +1,6 @@
+-"""Bounded original-rank2 diagnostics completion; SERVER-only; dry-run is static.
+-
+-Fork of the reviewed scheduler; frozen scientific kernels and diagnostics-only adapter.
++"""Bounded three-arm, nine-state order audit; SERVER-only; dry-run is static.
++
++Fork of the reviewed scheduler; frozen scientific kernels and fixed-state audit adapter.
+ """
+ from __future__ import annotations
+ 
+@@ -22,7 +22,7 @@
+ ROOT = Path(__file__).resolve().parent.parent
+ QUEUE_POLL_SECONDS = 30.0
+ CLEANUP_SECONDS = 10.0
+-ENGINES = {"diagnostics": ("adapter/complete_diagnostics.py", "DIAGNOSTICS_COMPLETION.json")}
++ENGINES = {"fixed_audit": ("adapter/audit.py", "FIXED_STATE_AUDIT.json")}
+ THREAD_VARIABLES = (
+     "OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS",
+     "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS",
+@@ -91,14 +91,14 @@
+     manifest = load_json(manifest_path)
+     runtime = manifest["runtime"]
+     workers = runtime["workers"]
+-    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 1:
+-        raise ValueError("runtime.workers must be an integer from 1 to 1")
++    if isinstance(workers, bool) or not isinstance(workers, int) or not 1 <= workers <= 2:
++        raise ValueError("runtime.workers must be an integer from 1 to 2")
+     total = positive_number(runtime["global_seconds"], "global_seconds")
+     arm = positive_number(runtime["per_arm_seconds"], "per_arm_seconds")
+     reserve = positive_number(runtime["diagnostic_reserve_seconds"],
+                               "diagnostic_reserve_seconds", allow_zero=True)
+-    if total > 1300 or arm > 1300 or arm > total or arm <= reserve + CLEANUP_SECONDS:
+-        raise ValueError("Require reserve + 10 < per_arm <= 1300 and per_arm <= global <= 1300 seconds")
++    if total > 600 or arm > 270 or arm > total or arm <= reserve + CLEANUP_SECONDS:
++        raise ValueError("Require reserve + 10 < per_arm <= 270 and per_arm <= global <= 600 seconds")
+     hashes = manifest["source_sha256"]
+     if not isinstance(hashes, dict) or not hashes:
+         raise ValueError("source_sha256 must be a nonempty relative-path/hash mapping")
+@@ -265,7 +265,7 @@
+     env = os.environ.copy()
+     env.update({key: "1" for key in THREAD_VARIABLES})
+     env.update(AGOP_EXECUTION_SITE=require_server(), PYTHONDONTWRITEBYTECODE="1", PYTHONUNBUFFERED="1",
+-               CUDA_VISIBLE_DEVICES="", AGOP_DIAGNOSTIC_LAUNCHER_PID=str(os.getpid()))
++               CUDA_VISIBLE_DEVICES="", AGOP_AUDIT_LAUNCHER_PID=str(os.getpid()))
+     return env
+ 
+ 
+@@ -334,6 +334,8 @@
+                             effective_nice=os.nice(0), expected_child_nice='inherits parent >=10')
+     # Never resume, truncate or overwrite an existing attempt.
+     output.mkdir(exist_ok=False)
++    atomic_json(output / "EXTERNAL_INPUTS_BEFORE.json", verify_external(root))
++    collect_outcomes(root, output)
+     atomic_json(output / "RESOURCES.json", resource_receipt)
+     (output / "logs").mkdir()
+     (output / "data").mkdir()
+@@ -535,34 +537,67 @@
+ 
+ 
+ def validate_protocol(manifest, root=ROOT):
+-    """One completed training trajectory, original grid, no new training."""
+-    expected = dict(workers=1,reserved_cpus=31,min_available_memory_gib=8,
+-                    min_free_disk_gib=5,global_seconds=1300,per_arm_seconds=1300,
+-                    diagnostic_reserve_seconds=1200)
++    expected = dict(workers=2,reserved_cpus=30,min_available_memory_gib=8,
++                    min_free_disk_gib=5,global_seconds=600,per_arm_seconds=270,
++                    diagnostic_reserve_seconds=250)
+     if manifest['runtime'] != expected or manifest.get('dependency') is not None:
+-        raise ValueError('Runtime must equal the frozen one-worker diagnostics bounds')
+-    if len(manifest['configs']) != 1:
+-        raise ValueError('Exactly one original-rank2 diagnostics case is allowed')
+-    entry = manifest['configs'][0]
+-    spec = load_json(root/'INPUT_SPEC.json')
+-    original = spec['source_job_config']
+-    if entry['id'] != spec['tag'] or entry['config'] != original['config']:
+-        raise ValueError('Original scientific configuration must remain unchanged')
+-    if entry['engine'] != 'diagnostics' or entry['config'][0]['args'] != spec['cfg']:
+-        raise ValueError('Require the pinned diagnostic recipe')
+-    cfg=spec['cfg']
+-    if (spec['tag'] != 'v10_rank_swiglu_h2_r2_d64_m64_seed642' or
+-            cfg['link'] != 'h2' or cfg['seed'] != 642 or cfg['c'] != [1.,1.] or
+-            [cfg[k] for k in ('n_pair','n_diag','n_z','n_x')] != [32,96,48,24]):
+-        raise ValueError('Only the reviewed original rank2 case is authorized')
+-    if manifest['external_input_spec_sha256'] != sha256(root/'INPUT_SPEC.json'):
+-        raise ValueError('Pinned external input specification changed')
+-    if spec['termination']['reason'] != 'loss_stop' or spec['termination']['step'] != 1244:
+-        raise ValueError('Require original completed training trajectory')
+-    plan=load_json(root/'COMPLETION_PLAN.json')
+-    if (plan['checkpoint_count'] != 269 or plan['preserved_success_indices'] != [0,25,26,30,31]
+-            or len(plan['full_compute_order']) != 264 or plan['new_training_updates'] != 0):
+-        raise ValueError('Require the original diagnostic grid and exact reuse set')
++        raise ValueError('Require frozen two-worker/600-second audit bounds')
++    selection = load_json(root/'SELECTION.json')
++    if (selection['multipliers'] != [1,2] or selection['selected_states'] != 9
++            or len(selection['cases']) != 3 or selection['new_training_updates'] != 0
++            or selection['summary_sha256'] != '960a0a0e1fe21bea6af4747986cae92ec31f5df354996cca6d7d1ef975d0a6d0'):
++        raise ValueError('Only the pinned three-arm nine-state development audit is supported')
++    if manifest['selection_sha256'] != sha256(root/'SELECTION.json'):
++        raise ValueError('Selection pin changed')
++    expected_cases = [('h2',8,[0,102,350]),('h2',16,[0,247,372]),('relu',2,[0,111,298])]
++    if len(manifest['configs']) != 3: raise ValueError('Exactly three cases required')
++    for entry, case, expected_case in zip(manifest['configs'],selection['cases'],expected_cases):
++        cfg = case['config'][0]['args']
++        if (entry['id'] != case['id'] or entry['config'] != case['config']
++                or entry['config_path'] != case['config_path'] or entry['engine'] != 'fixed_audit'
++                or (case['teacher'],case['rank'],[s['step'] for s in case['states']]) != expected_case
++                or cfg['seed'] != 641 or cfg['head_lr'] != case['head_lr']
++                or [cfg[k] for k in ('n_pair','n_diag','n_z','n_x')] != [32,96,48,24]):
++            raise ValueError('Only frozen selected states/configurations are supported')
++
++
++def verify_external(root):
++    receipts = {}
++    for case in load_json(root/'SELECTION.json')['cases']:
++        folder = Path(case['remote_source_folder']).resolve(strict=True)
++        receipts[case['id']] = {}
++        for name, expected in case['files'].items():
++            path = (folder/name).resolve(strict=True)
++            if Path(name).name != name or path.parent != folder:
++                raise ValueError('External input escaped pinned folder')
++            actual = dict(size=path.stat().st_size,sha256=sha256(path))
++            if actual != expected: raise ValueError('External input hash mismatch: '+str(path))
++            receipts[case['id']][name] = actual
++    return receipts
++
++
++def collect_outcomes(root, output):
++    """Preserve all nine slots even if a child was capped, failed, or unstarted."""
++    rows, reports = [], {}
++    for case in load_json(root/'SELECTION.json')['cases']:
++        path = output/'data'/case['id']/'FIXED_STATE_AUDIT.json'
++        report = load_json(path) if path.is_file() else {}
++        reports[case['id']] = dict(path=str(path.relative_to(output)),
++            sha256=sha256(path) if path.is_file() else None, completed=report.get('completed',False),
++            inputs_unchanged_after=report.get('inputs_unchanged_after'),
++            native_reproduction_all_pass=report.get('native_reproduction_all_pass'),
++            audit_flags=report.get('audit_flags',[]))
++        found = {r['step']:r for r in report.get('rows',[])}
++        for selected in case['states']:
++            row = found.get(selected['step'],dict(tag=case['id'],step=selected['step'],
++                index=selected['index'],time=selected['time'],roles=selected['roles'],
++                status='not_evaluated_no_child_record',orders={},comparisons={}))
++            rows.append(row)
++    atomic_json(output/'ALL_STATES.json',dict(scope='All preselected states; no outcome filtering or trajectory certificate',
++        selected_states=9, rows=rows, case_reports=reports,
++        audit_flags=[dict(tag=tag,**flag) for tag,r in reports.items() for flag in r['audit_flags']],
++        all_case_reports_complete=all(r['completed'] and r['inputs_unchanged_after'] is True for r in reports.values()),
++        new_training_updates=0,updated_utc=utc()))
+ 
+ 
+ def require_review(root, manifest_hash):
+@@ -580,7 +615,7 @@
+ 
+     def __enter__(self):
+         import fcntl
+-        self.stream = (self.root / '.diagnostics_completion.lock').open('a+')
++        self.stream = (self.root / '.fixed_order_audit.lock').open('a+')
+         try:
+             fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+             self.stream.seek(0)
+@@ -638,8 +673,12 @@
+     require_review(root, manifest_hash)
+     require_capacity(manifest["runtime"])
+     require_priority()
++    verify_external(root)
+     with attempt_lock(root, output):
+-        return execute(root, output, manifest, manifest_hash)
++        try:
++            return execute(root, output, manifest, manifest_hash)
++        finally:
++            if output.is_dir(): collect_outcomes(root, output)
+ 
+ 
+ if __name__ == "__main__":

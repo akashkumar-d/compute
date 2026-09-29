@@ -1,0 +1,197 @@
+{
+  "schema": "selected_fixed_state_order_audit_v1",
+  "purpose": "Nine frozen development states; native/doubled order, zero updates",
+  "runtime": {
+    "workers": 2,
+    "reserved_cpus": 30,
+    "min_available_memory_gib": 8,
+    "min_free_disk_gib": 5,
+    "global_seconds": 600,
+    "per_arm_seconds": 270,
+    "diagnostic_reserve_seconds": 250
+  },
+  "dependency": null,
+  "selection_sha256": "fec584826646cffa738fd333cea45b827b73be911cb4d07ca6bfd241852f90df",
+  "configs": [
+    {
+      "id": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+      "tag": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_h2_r8",
+      "engine": "fixed_audit",
+      "config_path": "configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r8",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+      "tag": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_h2_r16",
+      "engine": "fixed_audit",
+      "config_path": "configs/v10_rank_swiglu_h2_r16_d64_m64_seed641.json",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_h2_r16_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_h2_r16",
+          "rank": 16,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "tag": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+      "cell": "v10_rank_swiglu_relu_r2",
+      "engine": "fixed_audit",
+      "config_path": "configs/v10_rank_swiglu_relu_r2_d64_m64_seed641.json",
+      "config": [
+        {
+          "tag": "v10_rank_swiglu_relu_r2_d64_m64_seed641",
+          "cell": "v10_rank_swiglu_relu_r2",
+          "rank": 2,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "PREPARATION.md": "d2caecb7030c387221841fd948d6c47af86ba36c91ffd812128465696a7e34f0",
+    "SELECTION.json": "fec584826646cffa738fd333cea45b827b73be911cb4d07ca6bfd241852f90df",
+    "adapter/audit.py": "94d30fa81991a928abe7602b3b101039455094ff05900d1caa0b49481f18a171",
+    "adapter/test_delta.py": "83050e70d14d3f9b582bd97469026e10997eade6cfbf7b0ee457e4d8d7d34bd6",
+    "configs/v10_rank_swiglu_h2_r16_d64_m64_seed641.json": "b0400c9e503d1136011e701350ae228067f6ba3dce84892cfeb8fff1391b81dd",
+    "configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json": "104012739701fe85f1953dce8c181d8751ef005973019dfd83781e0d9b91069d",
+    "configs/v10_rank_swiglu_relu_r2_d64_m64_seed641.json": "c8b738fb7c61e784fa6d6725f64a9d5a7b2b27a308d8f833741ec844b0bedff9",
+    "launcher/CHANGES.diff": "ced363bd6cb7cda2e83aa543bf31595378e7f87efaa44e285a58b80a73962562",
+    "launcher/launch.py": "9dc0758eb7a7ed9e0f0cbe4aec28395054b0a6ad1815b69cfd05b87b7bfedceb",
+    "reference/canonical_summary.py": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166",
+    "reference/reviewed_launch.py": "ff4f3ebb7559d94302c24c775113f953197c3e98b561ae002c8370cc3719a1b5",
+    "reference/weighted_update_audit.py": "c46a8b6b60414ea70bdd18ea3f8c96f0ed692ac2314c97111f116b0bc4a21fbf",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  }
+}

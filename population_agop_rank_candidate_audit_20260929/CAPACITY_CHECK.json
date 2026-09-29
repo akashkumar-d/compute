@@ -1,0 +1,27 @@
+{
+  "observed_utc": "2026-09-29T00:04:39.838514+00:00",
+  "affinity_cpus": 32,
+  "mem_available_gib": 119.61670303344727,
+  "free_disk_gib": 5778.543621063232,
+  "jobs": {
+    "agop-swiglu-headscale-20260928-a01": {
+      "status": "completed",
+      "verified_live": []
+    },
+    "agop-rawrelu-headslow-20260928-a01": {
+      "status": "running",
+      "verified_live": [
+        {
+          "pid": 38661,
+          "cmd": "/teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/../agop-breadth14-r8-cpu64-20260928-v1/agop_runtime/bin/python /teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/population_agop_raw_relu_headslow_20260928/bundle/swiglu/code/run_one.py --config /teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/population_agop_raw_relu_headslow_20260928/bundle/configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed641.json --tag v10_swiglu_relu_headlr001_r8_d64_m64_seed641 --out-dir /teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/population_agop_raw_relu_headslow_20260928/bundle/execution_headslow_a01/data/v10_swiglu_relu_headlr001_r8_d64_m64_seed641 --wall-seconds 1800.0 --diagnostic-seconds 180.0 --deadline-utc 2026-09-29T00:19:00.325491+00:00 "
+        },
+        {
+          "pid": 38662,
+          "cmd": "/teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/../agop-breadth14-r8-cpu64-20260928-v1/agop_runtime/bin/python /teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/population_agop_raw_relu_headslow_20260928/bundle/swiglu/code/run_one.py --config /teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/population_agop_raw_relu_headslow_20260928/bundle/configs/v10_swiglu_relu_headlr001_r8_d64_m64_seed642.json --tag v10_swiglu_relu_headlr001_r8_d64_m64_seed642 --out-dir /teamspace/studios/this_studio/compute/runs/agop-rawrelu-headslow-20260928-a01/population_agop_raw_relu_headslow_20260928/bundle/execution_headslow_a01/data/v10_swiglu_relu_headlr001_r8_d64_m64_seed642 --wall-seconds 1800.0 --diagnostic-seconds 180.0 --deadline-utc 2026-09-29T00:19:00.340876+00:00 "
+        }
+      ]
+    }
+  },
+  "task_live_workers": 2,
+  "planned_audit_workers": 2
+}
