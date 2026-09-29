@@ -35,7 +35,7 @@
  ],
  "est_hours_left": 0.0,
  "failed": [],
- "fetch_error": "git ls-remote --heads origin: remote: credential service temporarily unavailable; retry shortly\nfatal: unable to access 'https://github.com/akashkumar-d/compute/': The requested URL returned error: 503",
+ "fetch_error": null,
  "host": {
   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
@@ -48,7 +48,7 @@
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
  "own_left": 0,
  "own_total": 22,
- "push_error": "remote: credential service temporarily unavailable; retry shortly\nfatal: unable to access 'https://github.com/akashkumar-d/compute/': The requested URL returned error: 503",
+ "push_error": null,
  "running": {},
  "started": "2026-09-29T02:40:51Z",
  "state": "standby",
@@ -58,7 +58,7 @@
   "C2_D3_s018": "S4",
   "C5_D3ngd_s017": "S7"
  },
- "updated": "2026-09-29T14:50:47Z",
+ "updated": "2026-09-29T15:20:54Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
