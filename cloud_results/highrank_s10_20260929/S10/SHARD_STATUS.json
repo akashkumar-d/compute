@@ -1,18 +1,66 @@
 {
   "job": "highrank_s10_20260929",
   "shard": "S10",
-  "state": "running",
-  "updated_utc": "2026-09-29T05:42:08.000315+00:00",
-  "elapsed_seconds": 0.008888102000000231,
+  "state": "finished",
+  "updated_utc": "2026-09-29T06:15:13.197831+00:00",
+  "elapsed_seconds": 1985.206419066,
   "workers": 4,
   "arms_total": 4,
-  "arms_done": 0,
-  "arms_active": [
-    "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9357",
-    "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9358",
-    "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9359",
-    "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9360"
-  ],
+  "arms_done": 4,
+  "arms_active": [],
   "arms_pending": [],
-  "outcomes": []
+  "outcomes": [
+    {
+      "id": "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9357",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1920.156910146,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:14:08.148962+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9358",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1925.9850699830001,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:14:13.978665+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9360",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1927.130107718,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:14:15.129225+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9359",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1978.476955518,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:15:06.472251+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    }
+  ]
 }
