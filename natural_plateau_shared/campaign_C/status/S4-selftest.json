@@ -1,0 +1,14 @@
+{
+ "at": "2026-09-29T02:32:23Z",
+ "branch": "claude/focused-gauss-cy16t3",
+ "host": {
+  "cpu": "",
+  "cpus": 12,
+  "node": "e97ff538",
+  "numpy": "1.24.3",
+  "platform": "macOS-26.5.2-x86_64-i386-64bit",
+  "python": "3.11.4"
+ },
+ "version": "campaign-C worker 1.1 (2026-09-29)",
+ "worker": "S4"
+}
