@@ -28,36 +28,36 @@
   "D3_p61_r0.45_s1": {
    "phase": "run",
    "since": "2026-09-29T21:55:07Z",
-   "step": 20000,
+   "step": 40000,
    "steps": 100000,
-   "steps_per_s": 11.2,
+   "steps_per_s": 11.14,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.15_s1": {
    "phase": "run",
    "since": "2026-09-29T21:55:07Z",
-   "step": 14000,
+   "step": 28000,
    "steps": 100000,
-   "steps_per_s": 7.84,
+   "steps_per_s": 7.8,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.32_s1": {
    "phase": "run",
    "since": "2026-09-29T21:55:07Z",
-   "step": 14000,
+   "step": 28000,
    "steps": 100000,
-   "steps_per_s": 7.84,
+   "steps_per_s": 7.8,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.65_s1": {
    "phase": "run",
    "since": "2026-09-29T21:55:07Z",
-   "step": 14000,
+   "step": 28000,
    "steps": 100000,
-   "steps_per_s": 7.84,
+   "steps_per_s": 7.8,
    "stolen_from": null,
    "threads": 1
   }
@@ -65,7 +65,7 @@
  "started": "2026-09-29T20:24:59Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T22:25:11Z",
+ "updated": "2026-09-29T22:55:17Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S2"
 }
