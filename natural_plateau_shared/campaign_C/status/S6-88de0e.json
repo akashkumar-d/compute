@@ -1,8 +1,13 @@
 {
- "abandoned": [],
+ "abandoned": [
+  "C1_D3_s039",
+  "C1_D5_s032",
+  "C2_D3_s005",
+  "C5_D3ngd_s018"
+ ],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 137,
+ "campaign_left": 8,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -36,7 +41,7 @@
  ],
  "est_hours_left": 0.0,
  "failed": [],
- "fetch_error": "git ls-remote --heads origin: remote: credential service temporarily unavailable; retry shortly\nfatal: unable to access 'https://github.com/akashkumar-d/compute/': The requested URL returned error: 503",
+ "fetch_error": null,
  "host": {
   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
@@ -49,47 +54,10 @@
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
  "own_left": 0,
  "own_total": 22,
- "push_error": "remote: credential service temporarily unavailable; retry shortly\nfatal: unable to access 'https://github.com/akashkumar-d/compute/': The requested URL returned error: 503",
- "running": {
-  "C1_D3_s039": {
-   "phase": "pilot",
-   "since": "2026-09-29T14:39:21Z",
-   "step": 8000,
-   "steps": 80000,
-   "steps_per_s": 29.62,
-   "stolen_from": "S1",
-   "threads": 1
-  },
-  "C1_D5_s032": {
-   "phase": "pilot",
-   "since": "2026-09-29T14:39:21Z",
-   "step": 4000,
-   "steps": 80000,
-   "steps_per_s": 14.81,
-   "stolen_from": "S2",
-   "threads": 1
-  },
-  "C2_D3_s005": {
-   "phase": "pilot",
-   "since": "2026-09-29T14:39:21Z",
-   "step": 8000,
-   "steps": 80000,
-   "steps_per_s": 29.62,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "C5_D3ngd_s018": {
-   "phase": "main",
-   "since": "2026-09-29T14:39:21Z",
-   "step": 10000,
-   "steps": 80000,
-   "steps_per_s": 53.32,
-   "stolen_from": "S8",
-   "threads": 1
-  }
- },
+ "push_error": null,
+ "running": {},
  "started": "2026-09-29T02:40:39Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "C1_D3_s034": "S4",
   "C1_D3_s039": "S1",
@@ -101,7 +69,7 @@
   "C5_D3ngd_s014": "S4",
   "C5_D3ngd_s018": "S8"
  },
- "updated": "2026-09-29T14:44:24Z",
+ "updated": "2026-09-29T14:49:39Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
