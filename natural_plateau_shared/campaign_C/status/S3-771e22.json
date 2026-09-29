@@ -26,36 +26,36 @@
   "C2_D4_s001": {
    "phase": "pilot",
    "since": "2026-09-29T02:40:43Z",
-   "step": 0,
+   "step": 30000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 16.81,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s003": {
    "phase": "pilot",
    "since": "2026-09-29T02:40:43Z",
-   "step": 0,
+   "step": 22000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 12.33,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s009": {
    "phase": "pilot",
    "since": "2026-09-29T02:40:43Z",
-   "step": 0,
+   "step": 22000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 12.33,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s015": {
    "phase": "pilot",
    "since": "2026-09-29T02:40:43Z",
-   "step": 0,
+   "step": 22000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 12.33,
    "stolen_from": null,
    "threads": 1
   }
@@ -63,7 +63,7 @@
  "started": "2026-09-29T02:40:37Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T02:40:43Z",
+ "updated": "2026-09-29T03:10:45Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S3"
 }
