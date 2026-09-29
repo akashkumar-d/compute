@@ -2,11 +2,13 @@
  "abandoned": [],
  "branch": "claude/busy-mayer-b7103n",
  "broken": null,
- "campaign_left": 163,
+ "campaign_left": 162,
  "commit_error": null,
  "cores": 4,
- "done": [],
- "est_hours_left": 10.67,
+ "done": [
+  "C2_D3_s002"
+ ],
+ "est_hours_left": 10.27,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -19,43 +21,43 @@
  },
  "instance": "55c113",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 22,
+ "own_left": 21,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C2_D3_s002": {
-   "phase": "main",
-   "since": "2026-09-29T02:41:16Z",
-   "step": 74000,
-   "steps": 80000,
-   "steps_per_s": 21.11,
-   "stolen_from": null,
-   "threads": 1
-  },
   "C2_D3_s010": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 72000,
+   "step": 78000,
    "steps": 80000,
-   "steps_per_s": 20.81,
+   "steps_per_s": 21.19,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D5_s004": {
+   "phase": "pilot",
+   "since": "2026-09-29T04:45:43Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s046": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 108000,
+   "step": 112000,
    "steps": 120000,
-   "steps_per_s": 19.56,
+   "steps_per_s": 19.5,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s054": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 108000,
+   "step": 114000,
    "steps": 120000,
-   "steps_per_s": 19.45,
+   "steps_per_s": 19.75,
    "stolen_from": null,
    "threads": 1
   }
@@ -63,7 +65,7 @@
  "started": "2026-09-29T02:41:08Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T04:42:03Z",
+ "updated": "2026-09-29T04:45:43Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S4"
 }
