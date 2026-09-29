@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 57,
+ "campaign_left": 55,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -25,9 +25,11 @@
   "C2_D5_s017",
   "C3_D4p23_s047",
   "C3_D4p23_s055",
-  "C5_D3ngd_s003"
+  "C5_D3ngd_s003",
+  "C5_D3ngd_s007",
+  "C5_D3ngd_s015"
  ],
- "est_hours_left": 0.28,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -40,43 +42,43 @@
  },
  "instance": "91375a",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 2,
+ "own_left": 0,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C2_D3_s018": {
+  "C1_D3_s026": {
    "phase": "pilot",
-   "since": "2026-09-29T12:34:44Z",
-   "step": 8000,
+   "since": "2026-09-29T12:43:31Z",
+   "step": 0,
    "steps": 80000,
-   "steps_per_s": 23.51,
+   "steps_per_s": 0.0,
    "stolen_from": "S4",
    "threads": 1
   },
-  "C5_D3ngd_s007": {
-   "phase": "main",
-   "since": "2026-09-29T12:13:22Z",
-   "step": 72000,
+  "C1_D3_s037": {
+   "phase": "pilot",
+   "since": "2026-09-29T12:43:31Z",
+   "step": 0,
    "steps": 80000,
-   "steps_per_s": 49.06,
-   "stolen_from": null,
+   "steps_per_s": 0.0,
+   "stolen_from": "S7",
    "threads": 1
   },
-  "C5_D3ngd_s015": {
-   "phase": "main",
-   "since": "2026-09-29T12:13:22Z",
-   "step": 70000,
+  "C2_D3_s018": {
+   "phase": "pilot",
+   "since": "2026-09-29T12:34:44Z",
+   "step": 12000,
    "steps": 80000,
-   "steps_per_s": 48.19,
-   "stolen_from": null,
+   "steps_per_s": 23.57,
+   "stolen_from": "S4",
    "threads": 1
   },
   "C5_D3ngd_s017": {
    "phase": "pilot",
    "since": "2026-09-29T12:40:42Z",
-   "step": 0,
+   "step": 8000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 53.32,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -84,10 +86,12 @@
  "started": "2026-09-29T02:40:51Z",
  "state": "running",
  "stolen": {
+  "C1_D3_s026": "S4",
+  "C1_D3_s037": "S7",
   "C2_D3_s018": "S4",
   "C5_D3ngd_s017": "S7"
  },
- "updated": "2026-09-29T12:40:42Z",
+ "updated": "2026-09-29T12:43:31Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
