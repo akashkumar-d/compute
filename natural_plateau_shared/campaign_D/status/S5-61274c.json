@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/trusting-rubin-8x9f47",
  "broken": null,
- "campaign_left": 122,
+ "campaign_left": 118,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -26,9 +26,9 @@
   "D4_p97_r0.65_s1": {
    "phase": "run",
    "since": "2026-09-29T20:26:20Z",
-   "step": 44000,
+   "step": 54000,
    "steps": 100000,
-   "steps_per_s": 4.88,
+   "steps_per_s": 4.99,
    "stolen_from": null,
    "threads": 4
   }
@@ -36,7 +36,7 @@
  "started": "2026-09-29T20:25:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T22:56:45Z",
+ "updated": "2026-09-29T23:26:50Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S5"
 }
