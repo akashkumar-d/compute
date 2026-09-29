@@ -1,0 +1,32 @@
+{
+ "abandoned": [],
+ "branch": "claude/focused-gauss-cy16t3",
+ "broken": null,
+ "campaign_left": 164,
+ "commit_error": null,
+ "cores": 12,
+ "done": [],
+ "est_hours_left": 3.56,
+ "failed": [],
+ "fetch_error": null,
+ "host": {
+  "cpu": "",
+  "cpus": 12,
+  "node": "e97ff538",
+  "numpy": "1.24.3",
+  "platform": "macOS-26.5.2-x86_64-i386-64bit",
+  "python": "3.11.4"
+ },
+ "instance": "ed004d",
+ "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+ "own_left": 22,
+ "own_total": 22,
+ "push_error": null,
+ "running": {},
+ "started": "2026-09-29T02:32:36Z",
+ "state": "running",
+ "stolen": {},
+ "updated": "2026-09-29T02:32:38Z",
+ "version": "campaign-C worker 1.1 (2026-09-29)",
+ "worker": "S4"
+}
