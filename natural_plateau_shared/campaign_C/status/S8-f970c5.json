@@ -26,18 +26,18 @@
   "C4_D4w512_s063": {
    "phase": "main",
    "since": "2026-09-29T02:42:12Z",
-   "step": 60000,
+   "step": 70000,
    "steps": 100000,
-   "steps_per_s": 5.99,
+   "steps_per_s": 5.92,
    "stolen_from": null,
    "threads": 2
   },
   "C4_D4w512_s064": {
    "phase": "main",
    "since": "2026-09-29T02:42:12Z",
-   "step": 58000,
+   "step": 68000,
    "steps": 100000,
-   "steps_per_s": 6.05,
+   "steps_per_s": 5.97,
    "stolen_from": null,
    "threads": 2
   }
@@ -45,7 +45,7 @@
  "started": "2026-09-29T02:42:02Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T06:43:24Z",
+ "updated": "2026-09-29T07:13:28Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
