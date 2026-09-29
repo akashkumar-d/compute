@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sharp-babbage-gax1f8",
  "broken": null,
- "campaign_left": 86,
+ "campaign_left": 74,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -31,38 +31,38 @@
  "push_error": null,
  "running": {
   "C2_D3_s006": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T10:56:22Z",
-   "step": 44000,
+   "step": 12000,
    "steps": 80000,
-   "steps_per_s": 24.51,
+   "steps_per_s": 26.26,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s042": {
    "phase": "main",
    "since": "2026-09-29T10:44:22Z",
-   "step": 26000,
+   "step": 70000,
    "steps": 120000,
-   "steps_per_s": 22.16,
+   "steps_per_s": 23.54,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s050": {
    "phase": "main",
    "since": "2026-09-29T10:44:55Z",
-   "step": 26000,
+   "step": 68000,
    "steps": 120000,
-   "steps_per_s": 22.44,
+   "steps_per_s": 22.98,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s058": {
    "phase": "main",
    "since": "2026-09-29T10:54:48Z",
-   "step": 14000,
+   "step": 56000,
    "steps": 120000,
-   "steps_per_s": 22.92,
+   "steps_per_s": 23.23,
    "stolen_from": null,
    "threads": 1
   }
@@ -70,7 +70,7 @@
  "started": "2026-09-29T02:42:02Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T11:26:35Z",
+ "updated": "2026-09-29T11:56:35Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
