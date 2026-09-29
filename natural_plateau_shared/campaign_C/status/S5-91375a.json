@@ -24,38 +24,38 @@
  "push_error": null,
  "running": {
   "C2_D4_s003": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T02:40:59Z",
-   "step": 72000,
+   "step": 10000,
    "steps": 100000,
-   "steps_per_s": 19.96,
+   "steps_per_s": 20.06,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s005": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T02:40:59Z",
-   "step": 56000,
+   "step": 2000,
    "steps": 80000,
-   "steps_per_s": 15.52,
+   "steps_per_s": 7.74,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s011": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T02:40:59Z",
-   "step": 56000,
+   "step": 4000,
    "steps": 80000,
-   "steps_per_s": 15.52,
+   "steps_per_s": 15.48,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D5_s017": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T02:40:59Z",
-   "step": 56000,
+   "step": 4000,
    "steps": 80000,
-   "steps_per_s": 15.52,
+   "steps_per_s": 14.63,
    "stolen_from": null,
    "threads": 1
   }
@@ -63,7 +63,7 @@
  "started": "2026-09-29T02:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T03:41:25Z",
+ "updated": "2026-09-29T04:11:27Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
