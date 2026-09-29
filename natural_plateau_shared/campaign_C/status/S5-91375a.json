@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 55,
+ "campaign_left": 47,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -27,7 +27,8 @@
   "C3_D4p23_s055",
   "C5_D3ngd_s003",
   "C5_D3ngd_s007",
-  "C5_D3ngd_s015"
+  "C5_D3ngd_s015",
+  "C5_D3ngd_s017"
  ],
  "est_hours_left": 0.0,
  "failed": [],
@@ -47,39 +48,30 @@
  "push_error": null,
  "running": {
   "C1_D3_s026": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T12:43:31Z",
-   "step": 0,
+   "step": 22000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 24.93,
    "stolen_from": "S4",
    "threads": 1
   },
   "C1_D3_s037": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T12:43:31Z",
-   "step": 0,
+   "step": 22000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 24.93,
    "stolen_from": "S7",
    "threads": 1
   },
   "C2_D3_s018": {
    "phase": "pilot",
    "since": "2026-09-29T12:34:44Z",
-   "step": 12000,
+   "step": 54000,
    "steps": 80000,
-   "steps_per_s": 23.57,
+   "steps_per_s": 25.41,
    "stolen_from": "S4",
-   "threads": 1
-  },
-  "C5_D3ngd_s017": {
-   "phase": "pilot",
-   "since": "2026-09-29T12:40:42Z",
-   "step": 8000,
-   "steps": 80000,
-   "steps_per_s": 53.32,
-   "stolen_from": "S7",
    "threads": 1
   }
  },
@@ -91,7 +83,7 @@
   "C2_D3_s018": "S4",
   "C5_D3ngd_s017": "S7"
  },
- "updated": "2026-09-29T12:43:31Z",
+ "updated": "2026-09-29T13:10:27Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
