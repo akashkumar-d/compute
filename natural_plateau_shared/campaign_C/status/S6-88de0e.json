@@ -7,7 +7,7 @@
  ],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 2,
+ "campaign_left": 1,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -17,6 +17,7 @@
   "C1_D3_s034",
   "C1_D3_s036",
   "C1_D4_s024",
+  "C1_D4_s030",
   "C1_D4_s032",
   "C1_D4_s038",
   "C1_D4_s040",
@@ -65,18 +66,9 @@
   "C1_D4_s022": {
    "phase": "main",
    "since": "2026-09-29T16:32:50Z",
-   "step": 82000,
+   "step": 86000,
    "steps": 100000,
-   "steps_per_s": 20.33,
-   "stolen_from": "S4",
-   "threads": 1
-  },
-  "C1_D4_s030": {
-   "phase": "main",
-   "since": "2026-09-29T16:18:27Z",
-   "step": 94000,
-   "steps": 100000,
-   "steps_per_s": 20.28,
+   "steps_per_s": 20.11,
    "stolen_from": "S4",
    "threads": 1
   }
@@ -102,7 +94,7 @@
   "C5_D3ngd_s019": "S1",
   "C5_D3ngd_s020": "S2"
  },
- "updated": "2026-09-29T17:55:32Z",
+ "updated": "2026-09-29T17:59:36Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
