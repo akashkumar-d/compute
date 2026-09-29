@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/optimistic-goldberg-a22718",
  "broken": null,
- "campaign_left": 122,
+ "campaign_left": 118,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,9 +28,9 @@
   "HW_p97_w2048_lw0.0150_s1": {
    "phase": "run",
    "since": "2026-09-29T21:51:45Z",
-   "step": 6000,
+   "step": 10000,
    "steps": 50000,
-   "steps_per_s": 1.67,
+   "steps_per_s": 1.86,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +38,7 @@
  "started": "2026-09-29T20:24:53Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T22:51:50Z",
+ "updated": "2026-09-29T23:21:54Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S1"
 }
