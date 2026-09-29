@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 24,
+ "campaign_left": 8,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -35,7 +35,7 @@
  ],
  "est_hours_left": 0.0,
  "failed": [],
- "fetch_error": null,
+ "fetch_error": "git ls-remote --heads origin: remote: credential service temporarily unavailable; retry shortly\nfatal: unable to access 'https://github.com/akashkumar-d/compute/': The requested URL returned error: 503",
  "host": {
   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
@@ -58,7 +58,7 @@
   "C2_D3_s018": "S4",
   "C5_D3ngd_s017": "S7"
  },
- "updated": "2026-09-29T14:15:35Z",
+ "updated": "2026-09-29T14:45:44Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
