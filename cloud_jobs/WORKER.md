@@ -57,5 +57,5 @@ Replace JOB and SHARD in every command.
 
 - `arms/<arm>.tar.gz`: the arm's small result files and logs. Large parameter snapshots are not committed.
 - `arms/<arm>.inventory.json`: sha256 and size of every file, including the snapshots that were left out.
-- `canonical/<bundle>.json`: canonical per-arm records, computed in this session while the snapshots still exist.
+- `canonical/<arm>.json.gz`: the canonical per-arm record, computed in this session while the snapshots still exist.
 - `SHARD_STATUS.json` and `ENVIRONMENT.json`: progress, return codes, versions, CPU and the jobs commit.

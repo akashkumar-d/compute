@@ -75,8 +75,10 @@ def main():
                 elif rel.startswith('arms/') and rel.endswith('.inventory.json'):
                     (out / 'inventory').mkdir(exist_ok=True)
                     (out / 'inventory' / Path(rel).name).write_bytes(data)
-                elif rel.startswith('canonical/'):
-                    (out / 'canonical' / f'{shard}_{Path(rel).name}').write_bytes(data)
+                elif rel.startswith('canonical/') and rel.endswith('.json.gz'):
+                    (out / 'canonical' / Path(rel).name).write_bytes(data)       # one record per arm
+                elif rel.startswith('canonical/') and rel.endswith('.json'):
+                    (out / 'canonical' / f'{shard}_{Path(rel).name}').write_bytes(data)  # bundle list form
                 elif rel in ('SHARD_STATUS.json', 'ENVIRONMENT.json'):
                     (out / 'status' / f'{shard}_{rel}').write_bytes(data)
         for o in f['status'].get('outcomes', []):

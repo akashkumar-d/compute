@@ -13,8 +13,8 @@ Each finished arm is packaged immediately into the session repository:
   <results>/<job>/<shard>/arms/<arm>.tar.gz   small raw files + logs
   <results>/<job>/<shard>/arms/<arm>.inventory.json  sha256/size of every file,
       including large parameter snapshots that are NOT committed
-  <results>/<job>/<shard>/canonical/<bundle>.json    canonical v10 per-arm records,
-      computed here while the snapshots still exist
+  <results>/<job>/<shard>/canonical/<arm>.json.gz   canonical v10 per-arm record,
+      computed here while the snapshots still exist (written once per arm)
 Standard library only in this process; no scientific import.
 """
 from __future__ import annotations
@@ -122,27 +122,38 @@ def package_arm(arm, data_dir, logs_dir, out_dir, exclude):
                      tar_sha256=sha256(tar_path), tar_bytes=tar_path.stat().st_size))
 
 
-def canonical_records(summarizer, python, manifest_path, exec_dir, arms, out_path, scratch):
-    """Run the unchanged canonical summarizer on this bundle; keep this shard's arms."""
+def canonical_records(summarizer, python, manifest_path, exec_dir, arms, out_dir, scratch, bundle):
+    """Run the unchanged canonical summarizer on this bundle's execution directory and
+    write one gzip JSON record per newly finished arm (written once, never rewritten)."""
+    import gzip
+    todo = [a for a in arms if not (out_dir / f'{a}.json.gz').exists()]
+    if not todo:
+        return 0
     scratch.mkdir(parents=True, exist_ok=True)
-    target = scratch / (out_path.stem + '_SUMMARY.json')
+    target = scratch / f'{bundle}_SUMMARY.json'
     env = dict(os.environ, OPENBLAS_NUM_THREADS='1', OMP_NUM_THREADS='1', MKL_NUM_THREADS='1',
                PYTHONDONTWRITEBYTECODE='1')
     proc = subprocess.run([python, str(summarizer), '--manifest', str(manifest_path), '--execution',
                            str(exec_dir), '--output', str(target)], capture_output=True, text=True,
                           timeout=1800, env=env)
-    record = dict(created_utc=utc(), summarizer=str(summarizer), summarizer_sha256=sha256(summarizer),
-                  manifest_sha256=sha256(manifest_path), returncode=proc.returncode,
-                  stderr_tail=proc.stderr[-2000:])
-    if proc.returncode == 0 and target.exists():
-        full = json.loads(target.read_text())
-        record['arms'] = [a for a in full['arms'] if a['id'] in arms]
-        record['inputs_unchanged'] = full.get('inputs_unchanged')
-        record['snapshot_usable'] = full.get('snapshot_usable')
-        record['reader_errors_for_shard'] = [e for e in full.get('reader_errors', [])
-                                             if any(a in json.dumps(e) for a in arms)]
-    atomic_json(out_path, record)
-    return proc.returncode
+    out_dir.mkdir(parents=True, exist_ok=True)
+    common = dict(created_utc=utc(), bundle=bundle, summarizer=str(summarizer),
+                  summarizer_sha256=sha256(summarizer), manifest_sha256=sha256(manifest_path),
+                  summarizer_returncode=proc.returncode)
+    if proc.returncode != 0 or not target.exists():
+        atomic_json(out_dir / f'_summarizer_error_{int(time.time())}.json',
+                    dict(common, stderr_tail=proc.stderr[-4000:], arms=todo))
+        return proc.returncode
+    full = json.loads(target.read_text())
+    for rec in full['arms']:
+        if rec['id'] in todo:
+            payload = dict(common, inputs_unchanged=full.get('inputs_unchanged'),
+                           snapshot_usable=full.get('snapshot_usable'), record=rec)
+            tmp = out_dir / f"{rec['id']}.json.gz.tmp"
+            with gzip.open(tmp, 'wt') as f:
+                json.dump(payload, f, allow_nan=False, default=str)
+            os.replace(tmp, out_dir / f"{rec['id']}.json.gz")
+    return 0
 
 
 def main():
@@ -262,7 +273,7 @@ def main():
         exec_status(bundle)
         finished_here = [d['id'] for d in done if d['bundle'] == bundle]
         canonical_records(summarizer, args.python, v['root'] / 'MANIFEST.json', v['exec_dir'],
-                          finished_here, out / 'canonical' / f'{bundle}.json', args.work / 'summaries')
+                          finished_here, out / 'canonical', args.work / 'summaries', bundle)
         shard_status('running')
 
     shard_status('running')
