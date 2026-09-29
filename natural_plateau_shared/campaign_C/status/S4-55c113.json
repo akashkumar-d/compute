@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/busy-mayer-b7103n",
  "broken": null,
- "campaign_left": 164,
+ "campaign_left": 163,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -26,36 +26,36 @@
   "C2_D3_s002": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 36000,
+   "step": 74000,
    "steps": 80000,
-   "steps_per_s": 21.3,
+   "steps_per_s": 21.11,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D3_s010": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 34000,
+   "step": 72000,
    "steps": 80000,
-   "steps_per_s": 20.67,
+   "steps_per_s": 20.81,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s046": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 72000,
+   "step": 108000,
    "steps": 120000,
-   "steps_per_s": 19.42,
+   "steps_per_s": 19.56,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s054": {
    "phase": "main",
    "since": "2026-09-29T02:41:16Z",
-   "step": 72000,
+   "step": 108000,
    "steps": 120000,
-   "steps_per_s": 19.27,
+   "steps_per_s": 19.45,
    "stolen_from": null,
    "threads": 1
   }
@@ -63,7 +63,7 @@
  "started": "2026-09-29T02:41:08Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T04:11:48Z",
+ "updated": "2026-09-29T04:42:03Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S4"
 }
