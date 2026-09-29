@@ -1,0 +1,32 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "e6f619d8174488f20032800a3d1c0a82f9ebbd759e6b51bd6d2cf9dc2c748050",
+  "reviewed_utc": "2026-09-29T01:26:18.961558+00:00",
+  "reviewer": "codex/headscale_flow_review_v10",
+  "scope": "One separately dispatched SERVER-only 180-second fixed-state subset diagnostic; no training authorization",
+  "source_only": true,
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "execution_launched": false,
+  "verified_pins": 12,
+  "expected_evaluate_calls": 33,
+  "expected_complete_slots": 6,
+  "findings": [
+    "All 12 input/source pins match the exact manifest. Scientific imports follow pin, approval, SERVER, capacity, priority and affinity gates.",
+    "Three four-neuron cases are deterministic: largest four spatial gate norms at each pinned state, plus a copy of the late subset with one zero spatial gate and two collinear/anticollinear spatial gates. Biases remain retained; this does not set the entire biased gate to zero.",
+    "Subset alpha is alpha_original*4/64, so the inherited alpha/m at width4 equals original alpha/64. This preserves per-neuron scaling but removes other neurons: the subset loss is not the original full-width loss.",
+    "The full subset gradient forms D with original m64 and head_lr once, followed by one Euclidean normalization. Nominal slope and central differences both use minus this same D at each order. Pure h3 has EY0 and Var1, so raw and variance-normalized loss agree here.",
+    "Each case uses 5 evaluate calls at order8, 5 at order12, and 1 tail-limit10 call at order12: 3*(5+5+1)=33. Six order slots are expected. Epsilon is max(1,norm(theta)) times 1e-4 and 1e-5, not the old saved Euler step.",
+    "G and p11 symmetry, base-state order refinement, tail sensitivity and saved gradients/directions are recorded. The order-specific FD directions may differ. Relative-only mismatch flags have no roundoff allowance and are diagnostic, not accuracy certificates.",
+    "One CPU affinity, single-thread libraries, no GPU, nice>=10 and 32CPU/8GiB/5GiB admission reuse the pinned guard. The 170-second check controls admission to new evaluate calls; the required external timeout TERM175/KILL180 bounds an in-flight call.",
+    "A failure or cap can leave a running slot and omit not-yet-started slots. Compare the receipt against the fixed six-slot/33-call manifest; omitted or unfinished slots are missing work, never successful or negative numerical findings.",
+    "Student prototype differs from the previous reviewed source only by its clarified docstring about small residual approximation, per source inspection. No source-level numerical blocker found. Full-width behavior, convergence, AGOP/refit and training remain unvalidated."
+  ],
+  "mandatory_dispatch_conditions": [
+    "Fresh direct-child output directory",
+    "Live capacity check by root",
+    "External timeout --signal=TERM --kill-after=5s 175s around the verified server interpreter",
+    "Retain incomplete/capped outputs; no inferred missing results"
+  ]
+}
