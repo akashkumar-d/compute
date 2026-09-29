@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/loving-ride-hxrko3",
  "broken": null,
- "campaign_left": 119,
+ "campaign_left": 118,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -17,7 +17,7 @@
   "cpus": 4,
   "node": "5bce98f7",
   "numpy": "2.4.6",
-  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
   "python": "3.11.15"
  },
  "instance": "64a395",
@@ -25,48 +25,11 @@
  "own_left": 14,
  "own_total": 16,
  "push_error": null,
- "running": {
-  "D3_p47_r0.45_s2": {
-   "phase": "run",
-   "since": "2026-09-29T23:10:14Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "D3_p61_r0.20_s2": {
-   "phase": "run",
-   "since": "2026-09-29T23:10:14Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "D3_p61_r0.90_s1": {
-   "phase": "run",
-   "since": "2026-09-29T23:10:14Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "D4_p47_r0.45_s1": {
-   "phase": "run",
-   "since": "2026-09-29T23:10:14Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:25:39Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T23:10:14Z",
+ "updated": "2026-09-29T23:13:42Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S7"
 }
