@@ -1,0 +1,72 @@
+{
+ "branch": "claude/practical-turing-cj2ip6",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D5",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 392927,
+   "sha256": "1643ab2ed11445bba6f52aabef474e1ccb94f71ab4eadeed65c835f89923db22"
+  },
+  "pilot.json.gz": {
+   "bytes": 390735,
+   "sha256": "bb0a2a3bad55192813ffc6216b0d83972e6be6eb17121c0216772ea127896811"
+  }
+ },
+ "finished": "2026-09-29T06:01:11Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C2_D5_s015",
+ "init_seed": 1015,
+ "instance": "771e22",
+ "main": {
+  "eta_last": 0.0018,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.28,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 6009.0,
+  "steps": 80000,
+  "t10": 31760,
+  "t90": 53400,
+  "x": 4.0018
+ },
+ "owner": "S3",
+ "pilot": {
+  "censored": false,
+  "final_test": 1.0,
+  "kind": "full",
+  "rate": 0.35,
+  "resumed_from": 0,
+  "seconds": 6016.8,
+  "steps_run": 80000,
+  "stopped_at": null,
+  "t10": 32800
+ },
+ "ran_by": "S3",
+ "recipe": {
+  "r0": 0.35,
+  "rate": 0.28,
+  "t10_used": 32800,
+  "x_pred": 4.1328,
+  "x_target": 3.85
+ },
+ "seed": 15,
+ "split_seed": 2015,
+ "stage": "C2",
+ "started": "2026-09-29T02:40:43Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
