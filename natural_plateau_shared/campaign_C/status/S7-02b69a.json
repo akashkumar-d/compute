@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/dazzling-pasteur-p6hptu",
  "broken": null,
- "campaign_left": 106,
+ "campaign_left": 103,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -29,36 +29,36 @@
   "C1_D4_s025": {
    "phase": "main",
    "since": "2026-09-29T09:26:38Z",
-   "step": 4000,
+   "step": 34000,
    "steps": 100000,
-   "steps_per_s": 12.41,
+   "steps_per_s": 15.97,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D4_s033": {
    "phase": "main",
    "since": "2026-09-29T09:26:38Z",
-   "step": 10000,
+   "step": 40000,
    "steps": 100000,
-   "steps_per_s": 15.93,
+   "steps_per_s": 16.43,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D5_s029": {
    "phase": "main",
    "since": "2026-09-29T09:18:01Z",
-   "step": 2000,
+   "step": 26000,
    "steps": 80000,
-   "steps_per_s": 7.84,
+   "steps_per_s": 12.61,
    "stolen_from": null,
    "threads": 1
   },
   "C1_D5_s037": {
    "phase": "main",
    "since": "2026-09-29T09:18:01Z",
-   "step": 0,
+   "step": 24000,
    "steps": 80000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 12.65,
    "stolen_from": null,
    "threads": 1
   }
@@ -66,7 +66,7 @@
  "started": "2026-09-29T02:41:21Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T09:56:50Z",
+ "updated": "2026-09-29T10:26:57Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S7"
 }
