@@ -2,24 +2,61 @@
   "job": "highrank_s10_20260929",
   "shard": "S16",
   "state": "running",
-  "updated_utc": "2026-09-29T05:42:55.198010+00:00",
-  "elapsed_seconds": 0.021313441000003763,
+  "updated_utc": "2026-09-29T05:56:37.342034+00:00",
+  "elapsed_seconds": 822.165342387,
   "workers": 4,
   "arms_total": 10,
-  "arms_done": 0,
+  "arms_done": 3,
   "arms_active": [
-    "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
-    "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
     "v11_hr_swiglu_h2_r4_d64_m64_seed9353",
-    "v11_hr_swiglu_h2_r4_d64_m64_seed9354"
-  ],
-  "arms_pending": [
     "v11_hr_swiglu_h2_r4_d64_m64_seed9355",
     "v11_hr_swiglu_h2_r2_d64_m64_seed9351",
-    "v11_hr_swiglu_h2_r2_d64_m64_seed9352",
+    "v11_hr_swiglu_h2_r2_d64_m64_seed9352"
+  ],
+  "arms_pending": [
     "v11_hr_swiglu_h2_r2_d64_m64_seed9353",
     "v11_hr_swiglu_h2_r2_d64_m64_seed9354",
     "v11_hr_swiglu_h2_r2_d64_m64_seed9355"
   ],
-  "outcomes": []
+  "outcomes": [
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 680.066473466,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T05:54:15.243606+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 820.5477149679999,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T05:56:35.726854+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9354",
+      "bundle": "a03",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 821.128416897,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T05:56:36.313093+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    }
+  ]
 }
