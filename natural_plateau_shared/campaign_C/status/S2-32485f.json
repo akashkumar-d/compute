@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/keen-dirac-q6ybl7",
  "broken": null,
- "campaign_left": 69,
+ "campaign_left": 65,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -18,9 +18,10 @@
   "C2_D5_s008",
   "C2_D5_s014",
   "C2_D5_s020",
-  "C3_D4p23_s044"
+  "C3_D4p23_s044",
+  "C3_D4p23_s052"
  ],
- "est_hours_left": 2.65,
+ "est_hours_left": 2.23,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -33,43 +34,43 @@
  },
  "instance": "32485f",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 9,
+ "own_left": 8,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C2_D3_s008": {
-   "phase": "main",
-   "since": "2026-09-29T11:17:03Z",
-   "step": 14000,
-   "steps": 80000,
-   "steps_per_s": 21.26,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "C2_D3_s016": {
+  "C1_D3_s024": {
    "phase": "pilot",
-   "since": "2026-09-29T12:24:55Z",
+   "since": "2026-09-29T12:31:34Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
-  "C3_D4p23_s052": {
+  "C2_D3_s008": {
    "phase": "main",
-   "since": "2026-09-29T10:31:23Z",
-   "step": 110000,
-   "steps": 120000,
-   "steps_per_s": 21.92,
+   "since": "2026-09-29T11:17:03Z",
+   "step": 24000,
+   "steps": 80000,
+   "steps_per_s": 22.69,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D3_s016": {
+   "phase": "pilot",
+   "since": "2026-09-29T12:24:55Z",
+   "step": 8000,
+   "steps": 80000,
+   "steps_per_s": 21.01,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s060": {
    "phase": "main",
    "since": "2026-09-29T11:16:00Z",
-   "step": 54000,
+   "step": 64000,
    "steps": 120000,
-   "steps_per_s": 21.5,
+   "steps_per_s": 21.99,
    "stolen_from": null,
    "threads": 1
   }
@@ -77,7 +78,7 @@
  "started": "2026-09-29T02:40:15Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T12:24:55Z",
+ "updated": "2026-09-29T12:31:34Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S2"
 }
