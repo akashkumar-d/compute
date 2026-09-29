@@ -1,0 +1,72 @@
+{
+ "branch": "claude/beautiful-meitner-zrn95n",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D4p23",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 588649,
+   "sha256": "0b2bb11e5c9cee21bbcf3833e5a046b432344997715683539cb398123a5a05b3"
+  },
+  "pilot.json.gz": {
+   "bytes": 194553,
+   "sha256": "17bc5aa6fc38aff2d2798ddd5285da302b22fb760e0370c9d0b77e5c2ac974ec"
+  }
+ },
+ "finished": "2026-09-29T12:33:08Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C3_D4p23_s051",
+ "init_seed": 1051,
+ "instance": "96bfab",
+ "main": {
+  "eta_last": 0.0017357142857142855,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.27,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 5459.1,
+  "steps": 120000,
+  "t10": 25620,
+  "t90": 65500,
+  "x": 3.1128
+ },
+ "owner": "S1",
+ "pilot": {
+  "censored": false,
+  "final_test": 0.10377358490566038,
+  "kind": "short",
+  "rate": 0.35,
+  "resumed_from": 0,
+  "seconds": 1547.4,
+  "steps_run": 33740,
+  "stopped_at": 33740,
+  "t10": 33740
+ },
+ "ran_by": "S1",
+ "recipe": {
+  "r0": 0.35,
+  "rate": 0.27,
+  "t10_used": 33740,
+  "x_pred": 4.0994,
+  "x_target": 3.85
+ },
+ "seed": 51,
+ "split_seed": 2051,
+ "stage": "C3",
+ "started": "2026-09-29T10:36:20Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
