@@ -1,0 +1,47 @@
+{
+  "status": "approved_for_execution",
+  "scope": "One bounded fixed-state server probe only; no trajectory approval or numerical pass inferred",
+  "reviewed_utc": "2026-09-29T00:38:09.670309+00:00",
+  "manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
+  "probe_sha256": "42bc427ebb7ac39968a99432583be8e7e4286e7784a95165f4c8065fa497b500",
+  "design_sha256": "d4cc9d60e86e5f574e5879a2bb8c2fec9b683bba9828d1d5b0299ced8119b8f2",
+  "blockers": [],
+  "resolved_scope_question": "Both quadrature orders intentionally use the native saved initial dt; doubled relative-cap dt is informational only.",
+  "pin_checks_passed": 56,
+  "saved_planes_verified": 16,
+  "required_external_bound": {
+    "command": "timeout --signal=TERM --kill-after=5s 175s",
+    "term_seconds": 175,
+    "hard_kill_seconds": 180,
+    "includes_admission_and_import_time": true
+  },
+  "internal_limits": {
+    "soft_seconds": 170,
+    "model_evaluation_ceiling": 64,
+    "single_cpu_affinity": true
+  },
+  "completion_is_numerical_validation": false,
+  "training_gate_unchanged": "draft_requires_independent_review_and_numerical_validation",
+  "required_outcome_review": [
+    "All four slots complete; missing/capped/running remain unresolved",
+    "FD negative, stable, both nominal agreements and not roundoff dominated",
+    "Native saved-next array/loss reproduction and saved-base loss checked",
+    "Old bad step rejected",
+    "Accepted trial strictly descends and satisfies Armijo; full cached evaluation matches fresh check",
+    "Base arrays and pinned files unchanged"
+  ],
+  "limits": [
+    "Finite-order evaluated-loss descent does not prove population descent",
+    "Nominal slope may differ from derivative of parameter-dependent quadrature objective",
+    "Doubled common-step probe is not an integrated trajectory",
+    "Hard deadline is externally enforced; in-progress callback soft check cannot preempt",
+    "No future numerical check is claimed passed"
+  ],
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "source_edits": 0,
+  "further_agents": 0,
+  "static_receipt_sha256": "55ec8ff01b2bc9c8b5835ce42a2cd79a6fe7cd61b4cd5737a2d0baf89415c20e",
+  "review_markdown_sha256": "b1639b6f9c41f0594c0b37cbbc785535aa86f2766653bc2ea9f4d2d0652189af"
+}

@@ -1,0 +1,215 @@
+--- original/swsmall_periodic.py
++++ fork/engine/swsmall_armijo.py
+@@ -1,17 +1,7 @@
+-"""Small-initialization SwiGLU flow with a declared head-rate multiplier.
+-
+-Population expectations use finite-order deterministic Gaussian quadrature.
+-All blocks train; the head uses a separately declared positive learning-rate factor:
+-    p <- p - dt*m*grad_p L, v <- v - dt*m*grad_v L,
+-    a <- a - dt*head_lr*m*grad_a L.
+-head_lr=1 recovers the original common-rate arithmetic. The scaled head direction
+-also enters the relative per-neuron update cap. This is block-specific flow when
+-head_lr != 1, not common-rate gradient descent.
+-dt adaptive (relative per-neuron change <= h per step, dt <= dt_max); the physical time
+-t = sum dt is recorded.  Init: p_j, v_j ~ N(0, s^2 I_{d+1}/(d+1)), a_j ~ N(0, s^2) (balanced in expectation; head variance
+-independent of m).  Metrics: loss/V, AGOP top-r alignment (A = mean cos^2, A_min = min cos^2, eigengap), A_top = |U^T e|^2
+-for the top AGOP eigenvector e, weight mass in U,
+-per-neuron alignment of p and v, norm-weighted alignment, raw-feature refit, norms, balancedness drift.
++"""Opt-in Armijo fork of the pinned engine; see integrator_quality/DESIGN.md.
++
++Old swsmall_periodic.py remains unchanged. No success or population certificate
++is implied by descent of the fixed finite-order quadrature loss.
+ """
+ import argparse, json, math, sys, time
+ import numpy as np
+@@ -21,6 +11,7 @@
+     if _os.path.exists(_os.path.join(_p, 'vlab.py')) and _p not in _sys.path:
+         _sys.path.insert(0, _p)
+ import swpop, vlab
++from armijo_step import Settings, take_step, raw_metric_slope
+ 
+ 
+ _STOP_REQUESTED = False
+@@ -30,13 +21,14 @@
+     global _STOP_REQUESTED
+     _STOP_REQUESTED = True
+ 
+-def _write_partial(cfg, rows, Lhist, step_history, snaps, teacher, force=False):
++def _write_partial(cfg, rows, Lhist, step_history, snaps, teacher, force=False, trial_history=None):
+     """Atomic durable checkpoint sidecars, without altering any numerical state."""
+     global _LAST_PARTIAL_WALL
+     if not cfg.get('out'):
+         return
+     last = step_history[-1]
+-    force = force or not np.isfinite(last['dt']) or last['dt'] <= 0 or last['t'] + last['dt'] == last['t']
++    pending_dt = last.get('proposed_dt', last['dt'])
++    force = force or not np.isfinite(pending_dt) or pending_dt <= 0 or last['t'] + pending_dt == last['t']
+     if not force and time.time() - _LAST_PARTIAL_WALL < 15.0:
+         return
+     import hashlib
+@@ -45,7 +37,7 @@
+     tag = _os.path.basename(cfg['out']).removesuffix('.json')
+     target = _os.path.join(root, tag+'.json')
+     data = dict(cfg=cfg, rows=rows, Lhist=Lhist, step_history=step_history,
+-                gamma=teacher.gamma, EY=teacher.EY, V=teacher.V, partial=True,
++                gamma=teacher.gamma, EY=teacher.EY, V=teacher.V, partial=True, trial_history=trial_history or [],
+                 recording_engine_sha256=hashlib.sha256(open(__file__, 'rb').read()).hexdigest(),
+                 pid=_os.getpid())
+     with open(target+'.tmp', 'w') as fh:
+@@ -101,7 +93,17 @@
+     """Loss-only first-exit rule; has no feedback into parameter updates."""
+     return not already_crossed and (not np.isfinite(loss) or loss <= 0 or high > ratio * low)
+ 
++def _finite_evaluation(value):
++    if isinstance(value, dict):
++        return all(_finite_evaluation(v) for v in value.values())
++    return bool(np.isfinite(value).all())
++
+ def run(cfg):
++    if cfg.get('integrator') != 'armijo_relative_euler_v1':
++        raise ValueError('This fork requires explicit integrator=armijo_relative_euler_v1')
++    settings = Settings(c1=cfg.get('armijo_c1', 1e-4),
++                        shrink=cfg.get('armijo_shrink', 0.5),
++                        max_trials=cfg.get('armijo_max_trials', 25))
+     head_lr = validate_head_lr(cfg.get('head_lr', 1.0))
+     d, r, m = cfg["d"], len(cfg["c"]), cfg["m"]
+     f, brk = make_link(cfg["link"])
+@@ -116,6 +118,7 @@
+     bal0 = a ** 2 - (V ** 2).sum(0)
+     weighted_bal0 = a ** 2 / head_lr - (V ** 2).sum(0)
+     t = 0.0; step = 0; rows = []; Lhist = []; step_history = []; snaps = []
++    trial_history = []; integrator_failure = None
+     next_cp = 0.0; t0 = time.time(); last_dL = 1e-8; last_L = 1.0
+     prefix_exits = {}; loss_low = float('inf'); loss_high = -float('inf'); previous = None
+     def checkpoint(P, V, a, ev, step, t, L, dt, role):
+@@ -126,7 +129,8 @@
+         al = vlab.top_r_alignment(M, r)
+         e_top = np.linalg.eigh(0.5 * (M + M.T))[1][:, -1]
+         row = dict(step=step, t=t, L=L, A=al['A'], Amin=al['cos2_min'], Atop=float((e_top[:r] ** 2).sum()),
+-            gap=al['gap'], agop_tr=float(np.trace(M)), refit=E.refit(ev) / T.V, dt=dt,
++            gap=al['gap'], agop_tr=float(np.trace(M)), refit=E.refit(ev) / T.V,
++            dt=step_history[step]['dt'], proposed_dt=step_history[step]['proposed_dt'],
+             bal_drift=float(np.abs(a ** 2 - (V ** 2).sum(0) - bal0).max() / max(s * s, 1e-300)),
+             weighted_bal_drift=float(np.abs(a ** 2 / head_lr - (V ** 2).sum(0) - weighted_bal0).max() / max(s * s, 1e-300)),
+             balance_invariant='a^2/head_lr - sum(V^2), including value bias',
+@@ -135,8 +139,12 @@
+         row.update(alignment_stats(P, V, a, d, r))
+         rows.append(row); snaps.append((t, P.copy(), V.copy(), a.copy()))
+         return row
++    # Full trial evaluations are cached on acceptance, including G/D/Cp for
++    # diagnostics. No evaluation of an accepted base state is repeated.
++    ev = E.evaluate(P, V, a, need_grad=True)
++    if not _finite_evaluation(ev) or ev['L'] < 0 or not np.isfinite(T.V) or T.V <= 0:
++        raise ValueError('invalid_initial_evaluation_or_variance')
+     while True:
+-        ev = E.evaluate(P, V, a, need_grad=True)
+         L = ev["L"] / T.V
+         Lhist.append((t, L))
+         GP, GV, Ga = update_directions(ev, m, head_lr)
+@@ -144,7 +152,8 @@
+         th = np.sqrt((P ** 2).sum(0) + (V ** 2).sum(0) + a ** 2)
+         rel = float((gn / np.maximum(th, 1e-300)).max())
+         dt = min(cfg["dt_max"], cfg["h"] / max(rel, 1e-300))
+-        step_history.append(dict(step=step, t=t, L=L, dt=dt, rel=rel))
++        step_history.append(dict(step=step, t=t, L=L, dt=0.0, proposed_dt=dt, rel=rel,
++                                 accepted_outgoing_step=False, trial_count=0))
+         loss_low = min(loss_low, L); loss_high = max(loss_high, L)
+         crossed_names = []
+         for name, ratio in [('ratio_1pct', 1.01), ('ratio_5pct', 1.05)]:
+@@ -157,14 +166,14 @@
+                     checkpoint(*previous, role=name+'_last_valid')
+         if crossed_names:
+             checkpoint(P, V, a, ev, step, t, L, dt, role='+'.join(crossed_names)+'_first_crossing')
+-            _write_partial(cfg, rows, Lhist, step_history, snaps, T, force=True)
++            _write_partial(cfg, rows, Lhist, step_history, snaps, T, force=True, trial_history=trial_history)
+         stop = _STOP_REQUESTED or (t >= cfg["t_max"]) or (L <= cfg["L_stop"]) or (step >= cfg["max_steps"]) or not np.isfinite(L)
+         dL = 1.0 - L
+         if (t >= next_cp or stop or (dL > 1e-8 and dL > cfg["dl_ratio"] * last_dL and L > cfg["L_stop"])
+                 or abs(L - last_L) > 0.02):
+             last_dL = max(dL, 1e-8); last_L = L
+             row = checkpoint(P, V, a, ev, step, t, L, dt, role='original_grid_or_stop')
+-            _write_partial(cfg, rows, Lhist, step_history, snaps, T, force=stop)
++            _write_partial(cfg, rows, Lhist, step_history, snaps, T, force=stop, trial_history=trial_history)
+             if cfg["verbose"]:
+                 print("t=%9.1f st=%6d L=%.6f A=%.3f Amin=%.3f gap=%7.3g refit=%.4f pU=%.3f vU=%.3f p50=%.3f pw=%.3f "
+                       "nmax=%.3g nmed=%.3g spec=%s dt=%.3g [%.0fs]" % (
+@@ -175,23 +184,65 @@
+             next_cp = max(t * cfg["cp_ratio"], t + cfg["cp_min"])
+         if stop:
+             break
+-        previous = (P, V, a, ev, step, t, L, dt)
+-        P = P - dt * GP; V = V - dt * GV; a = a - dt * Ga
+-        t += dt; step += 1
++        slope = raw_metric_slope([float(np.sum(ev[k] ** 2)) for k in ('gP','gV','ga')],
++                                 m, head_lr, T.V)
++        def record_trial(event):
++            event = dict(event, base_step=step, base_t=t, proposed_dt=dt)
++            trial_history.append(event)
++            if cfg.get('out'):
++                path = cfg['out'].removesuffix('.json') + '_trials.jsonl'
++                with open(path, 'a') as stream:
++                    stream.write(json.dumps(event, allow_nan=False) + '\n')
++        result = take_step((P,V,a), ev, dt=dt, time=t, slope=slope,
++            make_trial=lambda state, amount: tuple(x-amount*g for x,g in zip(state,(GP,GV,Ga))),
++            evaluate=lambda state: E.evaluate(*state, need_grad=True),
++            loss=lambda value: value['L']/T.V,
++            valid_evaluation=_finite_evaluation,
++            valid_state=lambda state: all(np.isfinite(x).all() for x in state),
++            same_state=lambda left,right: all(np.array_equal(x,y) for x,y in zip(left,right)),
++            stop=lambda: _STOP_REQUESTED, record=record_trial, settings=settings)
++        step_history[-1].update(dt=result.accepted_dt, accepted_outgoing_step=result.accepted,
++            trial_count=len(result.trials), line_search_reason=result.reason,
++            nominal_normalized_directional_slope=slope)
++        for row in reversed(rows):
++            if row['step'] != step: break
++            row['dt'] = result.accepted_dt
++        if not result.accepted:
++            integrator_failure = result.reason
++            checkpoint(P,V,a,ev,step,t,L,dt,role='integrator_failure_or_censoring')
++            _write_partial(cfg, rows, Lhist, step_history, snaps, T, force=True, trial_history=trial_history)
++            break
++        previous = (P, V, a, ev, step, t, L, result.accepted_dt)
++        P, V, a = result.state
++        ev = result.evaluation  # Cache is for exactly these accepted arrays.
++        t += result.accepted_dt; step += 1
+     out = dict(cfg=cfg, rows=rows, Lhist=Lhist, step_history=step_history, gamma=T.gamma, EY=T.EY, V=T.V)
+     out['head_lr'] = head_lr
+-    out['dynamics'] = 'block-specific adaptive Euler population flow; finite-order quadrature; all P,V,a train'
++    out['dynamics'] = 'Armijo-safeguarded relative-cap Euler; same block direction; finite-order quadrature'
++    out['trial_history'] = trial_history
++    out['integrator'] = dict(name='armijo_relative_euler_v1', c1=settings.c1,
++        shrink=settings.shrink, max_trials=settings.max_trials,
++        optimization_metric='M=diag(m I_P,m I_V,m head_lr I_a), metric M^-1 for raw L',
++        nominal_normalized_slope='-m*(norm(gP)^2+norm(gV)^2+head_lr*norm(ga)^2)/VarY',
++        acceptance='finite nonnegative Ftrial < Fbase and Ftrial <= Fbase+c1*dt*slope; F=Lraw/VarY',
++        accepted_trials=sum(e['accepted'] for e in trial_history),
++        rejected_trials=sum(not e['accepted'] for e in trial_history),
++        accepted_evaluations_reused=True, numerical_failure_or_censoring=integrator_failure)
+     out['balance_invariant'] = 'a^2/head_lr - sum(V^2), including value bias'
+     out['ratio_prefixes'] = {name: prefix_exits.get(name, dict(ratio=ratio, first_exit_step=None,
+         first_exit_t=None, last_valid_step=step, last_valid_t=t, previous_state_saved=False,
+         crossing_state_saved=False, right_censored=True)) for name, ratio in [('ratio_1pct', 1.01), ('ratio_5pct', 1.05)]}
+     for value in out['ratio_prefixes'].values(): value.setdefault('right_censored', False)
+-    out["termination"] = dict(step=step, t=t, L=L, wall_seconds=time.time()-t0, reason=("external_stop" if _STOP_REQUESTED else "nonfinite_loss" if not np.isfinite(L) else "loss_stop" if L <= cfg["L_stop"] else "max_steps" if step >= cfg["max_steps"] else "t_max"))
++    out["termination"] = dict(step=step, t=t, L=L, wall_seconds=time.time()-t0, reason=integrator_failure or ("external_stop" if _STOP_REQUESTED else "nonfinite_loss" if not np.isfinite(L) else "loss_stop" if L <= cfg["L_stop"] else "max_steps" if step >= cfg["max_steps"] else "t_max"))
+     out["_snaps"] = snaps
+     return out
+ 
+ def main(argv=None):
+     ap = argparse.ArgumentParser()
++    ap.add_argument('--integrator', choices=['armijo_relative_euler_v1'], required=True)
++    ap.add_argument('--armijo_c1', type=float, default=1e-4)
++    ap.add_argument('--armijo_shrink', type=float, default=0.5)
++    ap.add_argument('--armijo_max_trials', type=int, default=25)
+     ap.add_argument("--d", type=int, default=16); ap.add_argument("--m", type=int, default=128)
+     ap.add_argument("--c", type=str, default="1.0"); ap.add_argument("--link", type=str, default="he3")
+     ap.add_argument("--alpha", type=float, default=1.0); ap.add_argument("--s", type=float, default=0.1)
+@@ -234,7 +285,7 @@
+     signal.signal(signal.SIGINT, _request_stop)
+     out = run(cfg)
+     import datetime, hashlib
+-    reproduction = dict(engine_version='recording-v4-periodic-partials-graceful-stop',
++    reproduction = dict(engine_version='draft-armijo-relative-euler-v1-opt-in',
+                         engine_sha256=hashlib.sha256(open(__file__, 'rb').read()).hexdigest(),
+                         effective_command=[sys.executable]+list(sys.argv),
+                         raw_launch_command=[sys.executable]+list(sys.argv), override_reason=None,

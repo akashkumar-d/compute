@@ -1,0 +1,14 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
+  "reviewer": "codex/loss_windows_v6 with codex/root source review",
+  "approved_utc": "2026-09-29T00:39:05.452258+00:00",
+  "independent_review_sha256": "e1b38edf4291d5613d660b9408c6f372a82b79bf2b7b3328a7fcd77df36c88c7",
+  "checks": [
+    "fixed native dt at both quadrature orders explicitly scoped",
+    "source/input planes pinned before imports",
+    "server only; one CPU; mandatory GNU timeout TERM175/KILL180",
+    "no trajectory or training authorized"
+  ],
+  "execution_launched": false
+}

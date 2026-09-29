@@ -1,0 +1,66 @@
+{
+  "status": "prepared_unlaunched_fixed_state_probe",
+  "states": [
+    {
+      "name": "last_valid_5pct",
+      "step": 472,
+      "source_snapshot_index": 43,
+      "extracted_index": 0,
+      "t": 147.40763866670704,
+      "saved_loss": 0.9528468742666656,
+      "old_proposed_dt": 0.2441632677378478,
+      "next_step": 473,
+      "next_extracted_index": 1,
+      "next_saved_loss": 0.9523053495248996
+    },
+    {
+      "name": "old_bad_step",
+      "step": 2260,
+      "source_snapshot_index": 673,
+      "extracted_index": 2,
+      "t": 566.5272355485674,
+      "saved_loss": 0.0967187558763789,
+      "old_proposed_dt": 0.46444123148065264,
+      "next_step": 2261,
+      "next_extracted_index": 3,
+      "next_saved_loss": 0.6925173772423037
+    }
+  ],
+  "order_multipliers": [
+    1,
+    2
+  ],
+  "epsilon_fractions": [
+    0.001,
+    0.0001
+  ],
+  "single_cpu_affinity": true,
+  "internal_soft_seconds": 170,
+  "external_term_seconds": 175,
+  "external_hard_kill_seconds": 180,
+  "max_model_evaluations": 64,
+  "input_sha256": {
+    "probe.py": "42bc427ebb7ac39968a99432583be8e7e4286e7784a95165f4c8065fa497b500",
+    "probe_resources.py": "5395fdf0341534e40792033bf07713ff296fe2f6a1d686d630c846faa7459d2d",
+    "probe_inputs/PROVENANCE.json": "55206268426ebc9d6a52f98c3c674ae1213a448b6d8825941902e90d9900017a",
+    "probe_inputs/config.json": "e7c6ef5cd9388a4083d7e82170b7c803db5838a24644c2165108556c4d412d26",
+    "probe_inputs/states.npz": "0f49982b6d14c9f707994708655b4837e6236d0a3b3c720b66f9de034129e5d9",
+    "fork/swiglu/code/SOURCE_MANIFEST.json": "a4d341b520b7f93cea6c3d4fbf8bdd9fc165293c0282c8d8c8c19fc50a0eac46",
+    "fork/swiglu/code/SOURCE_MANIFEST.original.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "fork/swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "fork/swiglu/code/engine/armijo_step.py": "8b07fadd504ec892ed9ee2b5f0daf1a9f57756d3daff36ce23a91604f664fd09",
+    "fork/swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "fork/swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "fork/swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "fork/swiglu/code/engine/swsmall_armijo.py": "edd0c2f3cec6814050d4d20ee478d1502659d2e9ebe89b40d399e031df9bf7d1",
+    "fork/swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "fork/swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "fork/swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "fork/swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "fork/swiglu/code/run_one_armijo.py": "63864a70c0ca516b46a4c0f8e775ffbaa776aa9b3043019ffa8638b5a3658fb0",
+    "fork/swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "fork/swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77",
+    "DESIGN.md": "d4cc9d60e86e5f574e5879a2bb8c2fec9b683bba9828d1d5b0299ced8119b8f2"
+  },
+  "no_training": true
+}

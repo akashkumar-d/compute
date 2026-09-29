@@ -1,0 +1,13 @@
+test_accepted_full_evaluation_is_reused_without_base_reevaluation (test_armijo_step.ArmijoTests.test_accepted_full_evaluation_is_reused_without_base_reevaluation) ... ok
+test_backtracking_records_trials_without_mutating_base (test_armijo_step.ArmijoTests.test_backtracking_records_trials_without_mutating_base) ... ok
+test_exhaustion_preserves_state_cache_and_zero_clock_advance (test_armijo_step.ArmijoTests.test_exhaustion_preserves_state_cache_and_zero_clock_advance) ... ok
+test_external_stop_discards_even_a_descent_trial (test_armijo_step.ArmijoTests.test_external_stop_discards_even_a_descent_trial) ... ok
+test_metric_uses_head_rate_once_and_normalizes_variance_once (test_armijo_step.ArmijoTests.test_metric_uses_head_rate_once_and_normalizes_variance_once) ... ok
+test_nonfinite_loss_or_gradient_rejected (test_armijo_step.ArmijoTests.test_nonfinite_loss_or_gradient_rejected) ... ok
+test_settings_and_base_validation (test_armijo_step.ArmijoTests.test_settings_and_base_validation) ... ok
+test_stagnation_and_exception_are_explicit (test_armijo_step.ArmijoTests.test_stagnation_and_exception_are_explicit) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

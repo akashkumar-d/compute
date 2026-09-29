@@ -1,0 +1,31 @@
+{
+  "status": "static_source_review_pass_probe_required_before_training",
+  "reviewer": "codex/root",
+  "checked_utc": "2026-09-29T00:37:04.652123+00:00",
+  "manifest_sha256": "a7a789194b8a07328292becbca4fe206fd077529ee55eac4dafdc99d88dc37a5",
+  "pins_verified": 21,
+  "checks": [
+    "Same block direction and relative-cap proposal as original engine",
+    "Correct nominal directional slope: head rate once, raw-to-variance normalization once",
+    "Loss-decrease acceptance without allowance for an increase",
+    "Accepted evaluation cache reused for the exact accepted arrays",
+    "Rejected trials do not advance accepted history or clock",
+    "Retrospective checkpoint proposed_dt reads step_history, not accepted dt",
+    "Partial-checkpoint cadence uses proposed_dt rather than initially zero outgoing dt",
+    "Training manifest remains draft; no trajectory approved",
+    "Native saved proposal intentionally shared across quadrature orders in fixed-state probe"
+  ],
+  "limitations": [
+    "No scientific model evaluated locally",
+    "Exact derivative of finite-order objective not established",
+    "No full-trajectory or population-integral certificate",
+    "Eight scalar synthetic tests are narrow unit evidence; they do not validate numerical kernels"
+  ],
+  "source_hashes": {
+    "ENGINE.diff": "6f1d29b88d49fe8a8f6656723a79d717dcc0d0bac300c6f3c049924ef0649d56",
+    "RUNNER.diff": "929c331724ae3d99a9949038a488aa908e5d00b673175d8d65a888798ccf57b5",
+    "fork/swiglu/code/engine/armijo_step.py": "8b07fadd504ec892ed9ee2b5f0daf1a9f57756d3daff36ce23a91604f664fd09",
+    "fork/swiglu/code/engine/swsmall_armijo.py": "edd0c2f3cec6814050d4d20ee478d1502659d2e9ebe89b40d399e031df9bf7d1",
+    "probe.py": "42bc427ebb7ac39968a99432583be8e7e4286e7784a95165f4c8065fa497b500"
+  }
+}

@@ -1,0 +1,47 @@
+--- original/run_one.py
++++ fork/run_one_armijo.py
+@@ -48,6 +48,8 @@
+             raise ValueError('Each configuration requires a safe nonempty tag')
+         tags.append(tag)
+         cfg = job['args']
++        if cfg.get('integrator') != 'armijo_relative_euler_v1':
++            raise ValueError('Explicit opt-in integrator=armijo_relative_euler_v1 required')
+         validate_diagnostic_priority_fractions(cfg.get('diagnostic_priority_fractions', []))
+         head_lr = cfg.get('head_lr', 1.0)
+         if isinstance(head_lr, bool) or not isinstance(head_lr, (int, float)) or not math.isfinite(head_lr) or head_lr <= 0:
+@@ -161,7 +163,7 @@
+         os.environ[key] = '1'
+     import numpy as np
+     sys.path.insert(0, str(CODE / 'engine'))
+-    import swsmall_periodic as engine
++    import swsmall_armijo as engine
+     import diagnostics
+ 
+     jobs = json.loads(args.config.read_text())
+@@ -187,7 +189,7 @@
+     train_seconds = min(args.wall_seconds, max(0., deadline - now - reserve))
+     state = {'stop_cause': None}
+     report = {'tag': job['tag'], 'cell': job['cell'], 'rank': job['rank'], 'cfg': job['args'],
+-              'method': 'block-specific adaptive Euler population flow with finite-order quadrature; all P,V,a train; head multiplier declared separately',
++              'method': 'opt-in Armijo-safeguarded relative-cap Euler; same block direction; finite-order quadrature',
+               'head_lr': job['args'].get('head_lr', 1.0),
+               'balance_invariant': 'a^2/head_lr - sum(V^2), including value bias',
+               'started_utc': datetime.now(timezone.utc).isoformat(),
+@@ -266,6 +268,8 @@
+         return 0
+ 
+     report['termination'] = raw['termination']
++    report['integrator'] = raw.get('integrator')
++    report['trial_record_count'] = len(raw.get('trial_history', []))
+     report['raw_partial'] = raw.get('partial', False)
+     report['all_update_count'] = len(raw['Lhist'])
+     report['checkpoint_count'] = len(raw['rows'])
+@@ -313,6 +317,8 @@
+     report['diagnostic_success_count'] = sum(row['status'] == 'ok' for row in computed)
+     report['status'] = 'loss_stop' if raw['termination']['reason'] == 'loss_stop' else 'censored_or_failed'
+     report['raw_files'] = {raw_path.name: sha(raw_path), snaps_path.name: sha(snaps_path)}
++    trials_path = raw_path.with_name(raw_path.stem + '_trials.jsonl')
++    if trials_path.exists(): report['raw_files'][trials_path.name] = sha(trials_path)
+     report.update(completed=True, wall_seconds=time.time()-now, ended_utc=datetime.now(timezone.utc).isoformat())
+     atomic_json(result_path, report, finite=True)
+     print(json.dumps({'event': 'completed', 'tag': job['tag'], 'status': report['status'],

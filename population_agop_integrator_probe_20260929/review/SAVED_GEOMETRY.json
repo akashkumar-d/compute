@@ -1,0 +1,56 @@
+{
+  "status": "saved_arrays_geometry_only_no_model_evaluation",
+  "created_utc": "2026-09-29T00:38:11.657447+00:00",
+  "input_sha256": "0f49982b6d14c9f707994708655b4837e6236d0a3b3c720b66f9de034129e5d9",
+  "states": [
+    {
+      "extracted_index": 0,
+      "gate_norm_min": 0.25564105604449733,
+      "gate_norm_median": 0.3188721999307056,
+      "gate_norm_max": 5.655366882713561,
+      "gate_bias_abs_max": 2.616486346601475,
+      "value_norm_max": 6.354373566201595,
+      "head_abs_max": 0.2917333699056375,
+      "minimum_offdiag_sine_squared": 0.39978052880044157,
+      "offdiag_pairs_below_kernel_floor": 0,
+      "maximum_abs_offdiag_gate_cosine": 0.7747383243389722
+    },
+    {
+      "extracted_index": 1,
+      "gate_norm_min": 0.25563905021760197,
+      "gate_norm_median": 0.3188963557505481,
+      "gate_norm_max": 5.6672171777865,
+      "gate_bias_abs_max": 2.6374034542618237,
+      "value_norm_max": 6.370402184690842,
+      "head_abs_max": 0.2921470944228538,
+      "minimum_offdiag_sine_squared": 0.39685610136192484,
+      "offdiag_pairs_below_kernel_floor": 0,
+      "maximum_abs_offdiag_gate_cosine": 0.7766233956288435
+    },
+    {
+      "extracted_index": 2,
+      "gate_norm_min": 0.2546703221427587,
+      "gate_norm_median": 0.4859457384924446,
+      "gate_norm_max": 48.592204152604765,
+      "gate_bias_abs_max": 9.210148258630621,
+      "value_norm_max": 29.816298383745202,
+      "head_abs_max": 0.5697795930816723,
+      "minimum_offdiag_sine_squared": 0.07393365500653382,
+      "offdiag_pairs_below_kernel_floor": 0,
+      "maximum_abs_offdiag_gate_cosine": 0.9623234097710947
+    },
+    {
+      "extracted_index": 3,
+      "gate_norm_min": 0.25467172390239384,
+      "gate_norm_median": 0.4861055297915197,
+      "gate_norm_max": 48.817272376564596,
+      "gate_bias_abs_max": 9.23420732495539,
+      "value_norm_max": 29.856041953809857,
+      "head_abs_max": 0.5697202291940727,
+      "minimum_offdiag_sine_squared": 0.07391519905819066,
+      "offdiag_pairs_below_kernel_floor": 0,
+      "maximum_abs_offdiag_gate_cosine": 0.9623329989882968
+    }
+  ],
+  "interpretation": "Gate norm and collinearity diagnostics only; do not establish quadrature accuracy or cause of non-descent."
+}
