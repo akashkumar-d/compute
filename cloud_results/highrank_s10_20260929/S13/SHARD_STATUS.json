@@ -2,17 +2,42 @@
   "job": "highrank_s10_20260929",
   "shard": "S13",
   "state": "running",
-  "updated_utc": "2026-09-29T05:42:25.632151+00:00",
-  "elapsed_seconds": 0.016156089999995515,
+  "updated_utc": "2026-09-29T05:56:31.698035+00:00",
+  "elapsed_seconds": 846.0820538319999,
   "workers": 4,
   "arms_total": 4,
-  "arms_done": 0,
+  "arms_done": 2,
   "arms_active": [
     "v11_hr_swiglu_abs_r8_d64_m64_seed9359",
-    "v11_hr_swiglu_abs_r8_d64_m64_seed9360",
-    "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9351",
-    "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9352"
+    "v11_hr_swiglu_abs_r8_d64_m64_seed9360"
   ],
   "arms_pending": [],
-  "outcomes": []
+  "outcomes": [
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9352",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 840.057719191,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T05:56:25.685976+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9351",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 845.522428578,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T05:56:31.142161+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    }
+  ]
 }
