@@ -2,11 +2,12 @@
  "abandoned": [],
  "branch": "claude/sleepy-brahmagupta-fc09i8",
  "broken": null,
- "campaign_left": 69,
+ "campaign_left": 68,
  "commit_error": null,
  "cores": 4,
  "done": [
   "C1_D3_s028",
+  "C1_D3_s036",
   "C1_D4_s024",
   "C1_D4_s032",
   "C1_D4_s040",
@@ -27,7 +28,7 @@
   "C5_D3ngd_s004",
   "C5_D3ngd_s008"
  ],
- "est_hours_left": 0.39,
+ "est_hours_left": 0.14,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -40,43 +41,43 @@
  },
  "instance": "88de0e",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 2,
+ "own_left": 1,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C1_D3_s036": {
-   "phase": "main",
-   "since": "2026-09-29T11:26:27Z",
-   "step": 78000,
-   "steps": 80000,
-   "steps_per_s": 26.28,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "C5_D3ngd_s002": {
+  "C1_D3_s034": {
    "phase": "pilot",
-   "since": "2026-09-29T12:26:29Z",
+   "since": "2026-09-29T12:27:33Z",
    "step": 0,
    "steps": 80000,
    "steps_per_s": 0.0,
    "stolen_from": "S4",
    "threads": 1
   },
+  "C5_D3ngd_s002": {
+   "phase": "pilot",
+   "since": "2026-09-29T12:26:29Z",
+   "step": 2000,
+   "steps": 80000,
+   "steps_per_s": 44.44,
+   "stolen_from": "S4",
+   "threads": 1
+  },
   "C5_D3ngd_s006": {
    "phase": "main",
    "since": "2026-09-29T12:04:42Z",
-   "step": 58000,
+   "step": 62000,
    "steps": 80000,
-   "steps_per_s": 50.28,
+   "steps_per_s": 50.94,
    "stolen_from": "S4",
    "threads": 1
   },
   "C5_D3ngd_s016": {
    "phase": "main",
    "since": "2026-09-29T11:59:07Z",
-   "step": 76000,
+   "step": 78000,
    "steps": 80000,
-   "steps_per_s": 51.56,
+   "steps_per_s": 50.73,
    "stolen_from": null,
    "threads": 1
   }
@@ -84,10 +85,11 @@
  "started": "2026-09-29T02:40:39Z",
  "state": "running",
  "stolen": {
+  "C1_D3_s034": "S4",
   "C5_D3ngd_s002": "S4",
   "C5_D3ngd_s006": "S4"
  },
- "updated": "2026-09-29T12:26:30Z",
+ "updated": "2026-09-29T12:27:33Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
