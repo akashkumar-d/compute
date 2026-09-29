@@ -50,7 +50,13 @@ def main():
     (out / 'canonical').mkdir(exist_ok=True)
     (out / 'status').mkdir(exist_ok=True)
     report = dict(job=a.job, jobs_ref=a.jobs_ref, jobs_commit=git('rev-parse', a.jobs_ref).strip(), shards={})
-    for shard, s in spec['shards'].items():
+    # Superseding (declared rerun) shards are extracted last, so their arms replace the originals.
+    order = sorted(spec['shards'], key=lambda k: 'supersedes' in spec['shards'][k])
+    superseded = {arm: s['supersedes']['shard'] for s in spec['shards'].values() if 'supersedes' in s
+                  for arm in s['supersedes']['arms']}
+    report['superseded_arms'] = superseded
+    for shard in order:
+        s = spec['shards'][shard]
         expected = [arm for _, arm in s['arms']]
         if shard not in found:
             report['shards'][shard] = dict(state='not_found', done=[], missing=expected)
@@ -86,8 +92,13 @@ def main():
         report['shards'][shard] = dict(state=f['status'].get('state'), branch=f['ref'], commit=f['commit'],
                                        done=done, failed=failed,
                                        missing=[x for x in expected if x not in done and x not in failed])
-    total = sum(len(s['arms']) for s in spec['shards'].values())
-    report['arms_done'] = sum(len(v['done']) for v in report['shards'].values())
+    total = len({arm for s in spec['shards'].values() for _, arm in s['arms']})
+    final = {}
+    for shard in order:
+        for arm in report['shards'][shard]['done']:
+            final[arm] = shard
+    report['arm_source_shard'] = final
+    report['arms_done'] = len(final)
     report['arms_total'] = total
     (out / 'COLLECTION.json').write_text(json.dumps(report, indent=1) + '\n')
     for shard, v in report['shards'].items():

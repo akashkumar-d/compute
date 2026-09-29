@@ -52,6 +52,17 @@ def main():
     listed = [a for s in shards.values() for _, a in s['arms']]
     total = sum(v['arms'] for v in bundles.values())
     assert len(listed) == len(set(listed)) == total == 136, (len(listed), total)
+    # Declared reruns (never overwrite): R01's last 20 ReLU arms. 18 failed at import because the
+    # engine environment was modified on disk mid-shard (a plotting install upgraded numpy); r4 seeds
+    # 9351/9352 were finishing during that change and are rerun for provenance. Arms are unchanged.
+    rerun = get('v11_hr_relu_h2_r4') + get('v11_hr_relu_h2_r2')
+    shards['R01b'] = dict(arms=rerun, expected_minutes=12,
+                          note='Declared rerun of 20 ReLU h2 r4/r2 arms from R01 (environment modified during R01).',
+                          supersedes=dict(shard='R01', arms=[a for _, a in rerun]))
+    for sid, sh in shards.items():
+        if 'supersedes' in sh:
+            prior = {a for _, a in shards[sh['supersedes']['shard']]['arms']}
+            assert set(sh['supersedes']['arms']) <= prior and [a for _, a in sh['arms']] == sh['supersedes']['arms']
     spec = dict(job=JOB, leaf=LEAF, bundles=bundles, global_seconds=5400,
                 summarizer=dict(path=SUMMARIZER, sha256=sha(REPO / SUMMARIZER)),
                 pack_exclude=['states/*', 'resume.npz', '*_snaps.npz'],
@@ -66,6 +77,8 @@ def main():
              '| Shard | Arms | Expected | Contents |', '|---|---:|---:|---|']
     for sid, s in shards.items():
         lines.append(f"| {sid} | {len(s['arms'])} | ~{s['expected_minutes']} min | {s['note']} |")
+    lines += ['', 'R01 and R01b already ran in the setup session (R01b is a declared rerun of 20 R01 arms). '
+              'Start sessions only for S01-S17.']
     for sid in shards:
         lines += ['', f'## {sid}', '', '```text',
                   f'Compute worker for job {JOB}, shard {sid}. In this repository run: '

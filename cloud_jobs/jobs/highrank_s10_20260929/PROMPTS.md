@@ -22,6 +22,9 @@ Start one Claude Code session per shard with the repository `akashkumar-d/comput
 | S15 | 4 | ~70 min | Four SwiGLU abs/RBF r8 arms, up to 1990 s each. |
 | S16 | 10 | ~45 min | SwiGLU h2 r4/r2, seeds 9351-9355. |
 | S17 | 10 | ~45 min | SwiGLU h2 r4/r2, seeds 9356-9360. |
+| R01b | 20 | ~12 min | Declared rerun of 20 ReLU h2 r4/r2 arms from R01 (environment modified during R01). |
+
+R01 and R01b already ran in the setup session (R01b is a declared rerun of 20 R01 arms). Start sessions only for S01-S17.
 
 ## R01
 
@@ -129,4 +132,10 @@ Compute worker for job highrank_s10_20260929, shard S16. In this repository run:
 
 ```text
 Compute worker for job highrank_s10_20260929, shard S17. In this repository run: git fetch origin claude-workers && git worktree add /tmp/jobs origin/claude-workers . Then follow /tmp/jobs/cloud_jobs/WORKER.md exactly with JOB=highrank_s10_20260929 and SHARD=S17. Do not change any code or configuration. Keep this session alive by polling until the shard finishes, push the results to this session's branch, and reply with the branch name and the final status.
+```
+
+## R01b
+
+```text
+Compute worker for job highrank_s10_20260929, shard R01b. In this repository run: git fetch origin claude-workers && git worktree add /tmp/jobs origin/claude-workers . Then follow /tmp/jobs/cloud_jobs/WORKER.md exactly with JOB=highrank_s10_20260929 and SHARD=R01b. Do not change any code or configuration. Keep this session alive by polling until the shard finishes, push the results to this session's branch, and reply with the branch name and the final status.
 ```

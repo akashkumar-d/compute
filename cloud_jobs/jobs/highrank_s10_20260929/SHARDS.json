@@ -684,6 +684,117 @@
    ],
    "expected_minutes": 45,
    "note": "SwiGLU h2 r4/r2, seeds 9356-9360."
+  },
+  "R01b": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9360"
+    ]
+   ],
+   "expected_minutes": 12,
+   "note": "Declared rerun of 20 ReLU h2 r4/r2 arms from R01 (environment modified during R01).",
+   "supersedes": {
+    "shard": "R01",
+    "arms": [
+     "v11_hr_relu_h2_r4_d64_m256_seed9351",
+     "v11_hr_relu_h2_r4_d64_m256_seed9352",
+     "v11_hr_relu_h2_r4_d64_m256_seed9353",
+     "v11_hr_relu_h2_r4_d64_m256_seed9354",
+     "v11_hr_relu_h2_r4_d64_m256_seed9355",
+     "v11_hr_relu_h2_r4_d64_m256_seed9356",
+     "v11_hr_relu_h2_r4_d64_m256_seed9357",
+     "v11_hr_relu_h2_r4_d64_m256_seed9358",
+     "v11_hr_relu_h2_r4_d64_m256_seed9359",
+     "v11_hr_relu_h2_r4_d64_m256_seed9360",
+     "v11_hr_relu_h2_r2_d64_m256_seed9351",
+     "v11_hr_relu_h2_r2_d64_m256_seed9352",
+     "v11_hr_relu_h2_r2_d64_m256_seed9353",
+     "v11_hr_relu_h2_r2_d64_m256_seed9354",
+     "v11_hr_relu_h2_r2_d64_m256_seed9355",
+     "v11_hr_relu_h2_r2_d64_m256_seed9356",
+     "v11_hr_relu_h2_r2_d64_m256_seed9357",
+     "v11_hr_relu_h2_r2_d64_m256_seed9358",
+     "v11_hr_relu_h2_r2_d64_m256_seed9359",
+     "v11_hr_relu_h2_r2_d64_m256_seed9360"
+    ]
+   }
   }
  }
 }
