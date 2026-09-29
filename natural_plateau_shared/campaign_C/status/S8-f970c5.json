@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sharp-babbage-gax1f8",
  "broken": null,
- "campaign_left": 23,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -27,7 +27,7 @@
  "failed": [],
  "fetch_error": null,
  "host": {
-  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
   "cpus": 4,
   "node": "5bce98f7",
   "numpy": "2.4.6",
@@ -41,9 +41,9 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T02:42:02Z",
- "state": "standby",
+ "state": "running",
  "stolen": {},
- "updated": "2026-09-29T14:16:25Z",
+ "updated": "2026-09-29T20:23:30Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
