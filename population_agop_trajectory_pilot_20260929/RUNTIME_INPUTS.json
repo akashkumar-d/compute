@@ -1,0 +1,11 @@
+{
+  "source_sibling_run": "agop-diagnostic-transfer-20260929-a01",
+  "source_bundle": "population_agop_diagnostic_transfer_20260929",
+  "source_output": "probe_a01",
+  "files": {
+    "step472_reference.npz": "b1f6cce0d83a2be748cfb59c905c30cc59bbd41560e81242e46283b0a82d2973",
+    "step473_reference.npz": "bff0efdf91d6c0a8cc6bbb6d712bd880cf52adccc2313a6d685f241d2365c840",
+    "step2260_reference.npz": "81d691931e58fbc60a4df8d5852cc76efafd257f8ced5ba0f7e4c206adbd3e6d",
+    "step2261_reference.npz": "90f130ec19b3b7f04314d12fb58a68527fe7e6a6ea526b48cd42ddc126459fe8"
+  }
+}

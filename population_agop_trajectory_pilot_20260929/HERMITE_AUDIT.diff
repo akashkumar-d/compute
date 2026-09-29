@@ -1,0 +1,36 @@
+--- hermite_pairs.py
++++ hermite_audit_only.py
+@@ -1,4 +1,4 @@
+-"""Diagnostic-only scalar Hermite and Gaussian pair moments; no model imports.
++"""Audit-only N256/q32 clone of reviewed Hermite moments; never the training evaluator.
+ 
+ Requires the pinned scalar transition_rule on the caller's import path.
+ Finite-series moments approximate the intended Gaussian expectations. Inherited
+@@ -44,11 +44,11 @@
+     return H
+ 
+ 
+-def scalar_bank(biases, scales, degree=64, order=16, limit=12.,
++def scalar_bank(biases, scales, degree=256, order=32, limit=12.,
+                 derivative_fn=silu_derivatives, rule_fn=transition_nodes):
+     """O(m) marginal banks. Raw signed energy residuals are always retained."""
+-    degree=_integer(degree,(64,128),'degree')
+-    order=_integer(order,(16,24),'order')
++    degree=_integer(degree,(256,),'degree')
++    order=_integer(order,(32,),'order')
+     biases,scales=np.asarray(biases,float),np.asarray(scales,float)
+     if (biases.ndim!=1 or scales.shape!=biases.shape or not np.isfinite(biases).all()
+             or not np.isfinite(scales).all() or np.any(scales<0)
+@@ -178,9 +178,9 @@
+         gradient_semantics='Inherited population-gradient formulas approximate intended gradient; NOT exact finite-series-loss derivatives'
+         training_authorized=False
+ 
+-        def __init__(self,*args,hermite_degree=64,hermite_quad_order=16,**kwargs):
+-            self.hermite_degree=_integer(hermite_degree,(64,128),'hermite_degree')
+-            self.hermite_quad_order=_integer(hermite_quad_order,(16,24),'hermite_quad_order')
++        def __init__(self,*args,hermite_degree=256,hermite_quad_order=32,**kwargs):
++            self.hermite_degree=_integer(hermite_degree,(256,),'hermite_degree')
++            self.hermite_quad_order=_integer(hermite_quad_order,(32,),'hermite_quad_order')
+             super().__init__(*args,**kwargs)
+             self._hermite_context=None;self._hermite_in_evaluate=False
+             self.hermite_diagnostics=None

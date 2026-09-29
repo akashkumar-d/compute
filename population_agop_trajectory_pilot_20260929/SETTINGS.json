@@ -1,0 +1,99 @@
+{
+  "schema": "matched_h3_safeguarded_pilot_v1",
+  "status": "prepared_NOT_LAUNCHED",
+  "matched_protocol_sha256": "bd603132e15d647bbb3335ac34f05eb1f06575a3a95e4990b326dafd22ca4a64",
+  "numerics": {
+    "base_degree": 128,
+    "base_scalar_order": 24,
+    "audit_degree": 256,
+    "audit_scalar_order": 32,
+    "diagonal_teacher_order": 16,
+    "reference_order": 16,
+    "gaussian_limit": 12.0,
+    "adaptive_method_switching": false
+  },
+  "controller": {
+    "armijo_c1": 0.0001,
+    "backtrack_factor": 0.5,
+    "maximum_backtracks": 20,
+    "roundoff_factor": 8,
+    "roundoff_scale_floor": 1.0,
+    "numerical_stall_if_required_decrease_le_roundoff": true
+  },
+  "audits": {
+    "accepted_step_cadence": 25,
+    "degree_events": [
+      "initial",
+      "prefix_previous",
+      "prefix_crossing",
+      "first_candidate",
+      "first_release",
+      "final"
+    ],
+    "full_reference_events": [
+      "initial",
+      "first_candidate",
+      "first_release",
+      "final"
+    ],
+    "loss_over_variance_tolerance": 1e-07,
+    "weighted_direction_relative": 0.0001,
+    "common_slope_relative": 0.0001,
+    "gradient_absolute_factor": 1e-10,
+    "agop_F_relative": 1e-06,
+    "agop_error_over_gap": 0.001,
+    "alignment_absolute": 0.0001,
+    "refit_normalized_risk": 1e-07,
+    "unresolved_agop_or_refit": "retain invalid metrics; do not halt solely for absent resolution",
+    "material_negative_energy": "halt; preserve signed values",
+    "raw_loss_negative_tolerance_over_variance": 1e-10,
+    "resolution_or_refit_stability_disagreement": "halt; both-invalid may continue but cannot qualify"
+  },
+  "runtime": {
+    "server_only": true,
+    "worker_cpus": 1,
+    "minimum_allocated_cpus": 32,
+    "minimum_available_memory_gib": 8,
+    "minimum_free_disk_gib": 5,
+    "nice_minimum": 10,
+    "arm_admission_seconds": 1800,
+    "arm_final_diagnostic_deadline_seconds": 1980,
+    "arm_external_term_seconds": 1985,
+    "arm_hard_seconds": 1990,
+    "smoke_admission_seconds": 170,
+    "smoke_external_term_seconds": 175,
+    "smoke_hard_seconds": 180,
+    "smoke_max_model_calls": 80
+  },
+  "smoke": {
+    "saved_states": [
+      472,
+      473,
+      2260,
+      2261
+    ],
+    "fresh_reference_calls": 0,
+    "initial_arms": [
+      "h3_scale_0.3_seed641",
+      "h3_scale_1.0_seed641",
+      "h3_scale_0.3_seed642",
+      "h3_scale_1.0_seed642"
+    ],
+    "initial_directional_epsilon_relative": [
+      0.0001,
+      1e-05
+    ],
+    "slope_relative_tolerance": 0.001,
+    "checked_updates_per_initial": 2,
+    "purpose": "Engineering check only; all four arms retained if capped; no automatic trajectory"
+  },
+  "output_policy": {
+    "publish_code_only": true,
+    "fresh_output_only": true,
+    "all_accepted_loss_and_metrics": true,
+    "all_rejected_trial_records": true,
+    "planned_and_event_snapshots": true,
+    "no_overwrite_prior_outputs": true
+  },
+  "training_authorization": "Requires source review, complete smoke, and independent SMOKE_REVIEW bound to manifest and smoke result"
+}

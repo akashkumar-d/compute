@@ -1,0 +1,22 @@
+{
+  "status": "PREPARATION_QA_PASS_NOT_LAUNCHED",
+  "checked_utc": "2026-09-29T06:26:10.615757+00:00",
+  "manifest_sha256": "7a9dcf5eb484df8f2b357f44588f7176e073fbf070edd0d7a0d705a7a224a6cf",
+  "pinned_files": 33,
+  "frozen_scientific_support_files": 13,
+  "frozen_sources_all_byte_identical": true,
+  "mock_and_scalar_tests": 17,
+  "tests_passed": true,
+  "last_test_seconds": 0.437,
+  "all_20_python_sources_syntax_valid": true,
+  "shell_syntax_valid": true,
+  "source_only_dry_run_passed": true,
+  "local_model_imports": 0,
+  "local_model_evaluations": 0,
+  "training_updates": 0,
+  "network_calls": 0,
+  "dispatches": 0,
+  "source_review": "pending independent review",
+  "remote_smoke": "NOT_LAUNCHED; requires live authorized Studio",
+  "pilot": "requires complete independently reviewed smoke before any arm"
+}

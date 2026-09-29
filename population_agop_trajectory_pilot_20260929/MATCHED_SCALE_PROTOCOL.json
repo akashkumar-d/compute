@@ -1,0 +1,215 @@
+{
+  "status": "conditional_plan_only_NOT_LAUNCHED",
+  "purpose": "Test whether larger initial gates reduce early concentration across teacher directions at fixed rank and actual initial heads.",
+  "arms": [
+    {
+      "id": "h3_scale_0.3_seed641",
+      "role": "matched_control",
+      "configuration": {
+        "link": "h3",
+        "alpha": 1.0,
+        "s": 0.3,
+        "head_ratio": 1.0,
+        "h": 0.01,
+        "dt_max": 50.0,
+        "t_max": 3000.0,
+        "L_stop": 0.01,
+        "max_steps": 15000,
+        "cp_ratio": 1.06,
+        "cp_min": 0.5,
+        "dl_ratio": 1.5,
+        "n_pair": 32,
+        "n_diag": 96,
+        "n_z": 48,
+        "n_x": 24,
+        "d": 64,
+        "m": 64,
+        "c": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 641,
+        "head_lr": 0.01,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "control_source": "headscale/bundle/configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json",
+      "control_sha256": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816"
+    },
+    {
+      "id": "h3_scale_1.0_seed641",
+      "role": "larger_inner_scale",
+      "configuration": {
+        "link": "h3",
+        "alpha": 1.0,
+        "s": 1.0,
+        "head_ratio": 0.3,
+        "h": 0.01,
+        "dt_max": 50.0,
+        "t_max": 3000.0,
+        "L_stop": 0.01,
+        "max_steps": 15000,
+        "cp_ratio": 1.06,
+        "cp_min": 0.5,
+        "dl_ratio": 1.5,
+        "n_pair": 32,
+        "n_diag": 96,
+        "n_z": 48,
+        "n_x": 24,
+        "d": 64,
+        "m": 64,
+        "c": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 641,
+        "head_lr": 0.01,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "control_source": "headscale/bundle/configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed641.json",
+      "control_sha256": "0ea239e14468e8149d73560661384bf07c4c2b8745614bd883edd6aece87b816"
+    },
+    {
+      "id": "h3_scale_0.3_seed642",
+      "role": "matched_control",
+      "configuration": {
+        "link": "h3",
+        "alpha": 1.0,
+        "s": 0.3,
+        "head_ratio": 1.0,
+        "h": 0.01,
+        "dt_max": 50.0,
+        "t_max": 3000.0,
+        "L_stop": 0.01,
+        "max_steps": 15000,
+        "cp_ratio": 1.06,
+        "cp_min": 0.5,
+        "dl_ratio": 1.5,
+        "n_pair": 32,
+        "n_diag": 96,
+        "n_z": 48,
+        "n_x": 24,
+        "d": 64,
+        "m": 64,
+        "c": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 642,
+        "head_lr": 0.01,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "control_source": "headscale/bundle/configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json",
+      "control_sha256": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b"
+    },
+    {
+      "id": "h3_scale_1.0_seed642",
+      "role": "larger_inner_scale",
+      "configuration": {
+        "link": "h3",
+        "alpha": 1.0,
+        "s": 1.0,
+        "head_ratio": 0.3,
+        "h": 0.01,
+        "dt_max": 50.0,
+        "t_max": 3000.0,
+        "L_stop": 0.01,
+        "max_steps": 15000,
+        "cp_ratio": 1.06,
+        "cp_min": 0.5,
+        "dl_ratio": 1.5,
+        "n_pair": 32,
+        "n_diag": 96,
+        "n_z": 48,
+        "n_x": 24,
+        "d": 64,
+        "m": 64,
+        "c": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 642,
+        "head_lr": 0.01,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "control_source": "headscale/bundle/configs/v10_swiglu_h3_s30_headq100_r8_d64_m64_seed642.json",
+      "control_sha256": "3ed6dc773dc6c2c4a1488eb86ded7a60c74920699b88b266c30f995e42a2bb3b"
+    }
+  ],
+  "student": "SwiGLU",
+  "teacher": "normalized additive h3",
+  "rank": 8,
+  "dimension": 64,
+  "width": 64,
+  "development_seeds": [
+    641,
+    642
+  ],
+  "fresh_confirmation": false,
+  "changed_scientific_fields": [
+    "s:0.3->1",
+    "head_ratio:1->0.3, preserving s*head_ratio"
+  ],
+  "unchanged_fields": "all other original configuration fields; numerical method must be the SAME validated method for all four arms",
+  "numerics_unresolved": "Original quadrature and Euler are NOT approved for these arms. Exact validated integration/backtracking settings and runtime viability remain to be fixed and reviewed before any run configuration can execute.",
+  "gates": [
+    "Full-width numerical accuracy review",
+    "Batched/reference output agreement and feasible measured cost",
+    "Full-gradient descent safeguard tested with chosen evaluator",
+    "Declare numerical settings and hard budgets before outcomes",
+    "Verify paired Gaussian initialization and retained head arrays"
+  ],
+  "criteria": {
+    "initial_loss_ratio_tolerances": [
+      1.01,
+      1.05
+    ],
+    "delta_Amin_min": 0.5,
+    "refit_gain_over_variance_min": 0.1,
+    "later_raw_loss_drop_over_variance_min": 0.1,
+    "all_same_checkpoint_for_alignment_and_refit": true,
+    "whole_update_loss_prefixes": true
+  },
+  "max_allocated_seconds_per_arm_proposed": 1990,
+  "wall_budget_is_not_physical_horizon": true,
+  "negative_and_censored_arms_retained": true
+}

@@ -1,0 +1,10 @@
+{
+  "status": "approved_for_execution",
+  "reviewer": "codex/root with independent codex/headscale_flow_review_v10 source audit",
+  "manifest_sha256": "7a9dcf5eb484df8f2b357f44588f7176e073fbf070edd0d7a0d705a7a224a6cf",
+  "approved_utc": "2026-09-29T06:29:28.869424+00:00",
+  "scope": "Smoke only: one CPU, admission170s, TERM175/KILL180s, at most80model calls; no automatic pilot training. Any pilot requires a separate successful smoke review tied to exact output/manifest.",
+  "independent_review_sha256": "80921e902dc3974c0136e48cf8a5e881ee399b27e510e7a7671ed5689acc722b",
+  "root_controller_review": "Six independent adversarial pure-array cases PASS; original four matched configurations preserved.",
+  "published_model_states": false
+}
