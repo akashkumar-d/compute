@@ -1,0 +1,72 @@
+{
+ "branch": "claude/dazzling-pasteur-p6hptu",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D4",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 453297,
+   "sha256": "e58f574f6446e1a8bce1afb6db1c059d5acab3ed2c17b25fa3a09fc58fe264f3"
+  },
+  "pilot.json.gz": {
+   "bytes": 119158,
+   "sha256": "476d78f9b159228c2a1437d0c7fdad8e33843f97cba286d1957660b3481e8e28"
+  }
+ },
+ "finished": "2026-09-29T11:27:13Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C1_D4_s033",
+ "init_seed": 1033,
+ "instance": "02b69a",
+ "main": {
+  "eta_last": 0.0026678571428571424,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.415,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 6054.3,
+  "steps": 100000,
+  "t10": 21100,
+  "t90": 35580,
+  "x": 3.9404
+ },
+ "owner": "S7",
+ "pilot": {
+  "censored": false,
+  "final_test": 0.10362694300518134,
+  "kind": "short",
+  "rate": 0.35,
+  "resumed_from": 0,
+  "seconds": 1178.2,
+  "steps_run": 19380,
+  "stopped_at": 19380,
+  "t10": 19380
+ },
+ "ran_by": "S7",
+ "recipe": {
+  "r0": 0.35,
+  "rate": 0.415,
+  "t10_used": 19380,
+  "x_pred": 3.6192,
+  "x_target": 3.85
+ },
+ "seed": 33,
+ "split_seed": 2033,
+ "stage": "C1",
+ "started": "2026-09-29T09:26:39Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
