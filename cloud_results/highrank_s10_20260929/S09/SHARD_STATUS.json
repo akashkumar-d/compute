@@ -1,16 +1,13 @@
 {
   "job": "highrank_s10_20260929",
   "shard": "S09",
-  "state": "running",
-  "updated_utc": "2026-09-29T06:04:39.199196+00:00",
-  "elapsed_seconds": 1376.405676807,
+  "state": "finished",
+  "updated_utc": "2026-09-29T06:14:47.753794+00:00",
+  "elapsed_seconds": 1984.960318226,
   "workers": 4,
   "arms_total": 4,
-  "arms_done": 2,
-  "arms_active": [
-    "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9353",
-    "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9354"
-  ],
+  "arms_done": 4,
+  "arms_active": [],
   "arms_pending": [],
   "outcomes": [
     {
@@ -36,6 +33,32 @@
       "term_sent": false,
       "kill_sent": false,
       "finished_utc": "2026-09-29T06:04:38.535565+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9353",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1976.437215545,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:14:39.231202+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9354",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1977.7905169849998,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:14:40.586386+00:00",
       "completion_indicator": "result.json",
       "completion_indicator_exists": true
     }
