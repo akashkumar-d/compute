@@ -2,11 +2,12 @@
  "abandoned": [],
  "branch": "claude/keen-dirac-q6ybl7",
  "broken": null,
- "campaign_left": 91,
+ "campaign_left": 90,
  "commit_error": null,
  "cores": 4,
  "done": [
   "C1_D4_s028",
+  "C1_D4_s036",
   "C1_D5_s022",
   "C1_D5_s024",
   "C1_D5_s032",
@@ -18,7 +19,7 @@
   "C2_D5_s014",
   "C2_D5_s020"
  ],
- "est_hours_left": 3.52,
+ "est_hours_left": 3.07,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -31,16 +32,16 @@
  },
  "instance": "32485f",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 11,
+ "own_left": 10,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C1_D4_s036": {
-   "phase": "main",
-   "since": "2026-09-29T09:12:26Z",
-   "step": 98000,
-   "steps": 100000,
-   "steps_per_s": 16.26,
+  "C2_D3_s008": {
+   "phase": "pilot",
+   "since": "2026-09-29T11:17:03Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
@@ -49,7 +50,7 @@
    "since": "2026-09-29T10:29:50Z",
    "step": 28000,
    "steps": 120000,
-   "steps_per_s": 22.43,
+   "steps_per_s": 21.34,
    "stolen_from": null,
    "threads": 1
   },
@@ -58,7 +59,7 @@
    "since": "2026-09-29T10:31:23Z",
    "step": 20000,
    "steps": 120000,
-   "steps_per_s": 22.68,
+   "steps_per_s": 21.15,
    "stolen_from": null,
    "threads": 1
   },
@@ -75,7 +76,7 @@
  "started": "2026-09-29T02:40:15Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T11:16:00Z",
+ "updated": "2026-09-29T11:17:03Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S2"
 }
