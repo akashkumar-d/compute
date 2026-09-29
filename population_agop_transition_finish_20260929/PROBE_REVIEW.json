@@ -1,0 +1,31 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "2b263e753e34f667edcefaee346c1f839a463abfe3685f6abf0b58f8f7c755a6",
+  "reviewed_utc": "2026-09-29T02:36:35.562169+00:00",
+  "reviewer": "codex/headscale_flow_review_v10",
+  "scope": "Only the two missing late order16 fixed-state observations; no training or repeat22call probe",
+  "source_only": true,
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "execution_launched": false,
+  "verified_pins": 17,
+  "byte_identical_shared_files": 13,
+  "byte_identical_reused_saved_files": 3,
+  "exact_evaluate_call_sites": 2,
+  "findings": [
+    "All17 pins match. Thirteen shared source/input/guard files are byte-identical to the approved fast bundle; all3 reused files are byte-identical to its verified downloaded output. The immutable parent capped artifact is retained.",
+    "The late order16 NPZ contains gP,gV,ga, sufficient for unchanged update_directions, plus P/V/a,DP/DV/Da,L,G,t. The helper recomputes normalized weighted D and checks exact array equality, and checks P/V/a against original snapshot index2 before model calls.",
+    "Epsilon0.0011061292987083811 matches the independently audited parent stencil. Exactly one returned minus label is required from the pinned journal. Nominal slope uses saved gradients and the saved normalized direction; plus is theta+epsilonD and FD=(saved_minus-new_plus)/(2epsilon), preserving the minusD convention.",
+    "First call is only missing plus at order16/limit12 with need_gradFalse. Second call is unchanged base at order16/limit10 with need_gradTrue. Original d64/m64/alpha/head rate/pureh3 teacher and intercept/bias convention remain unchanged. No base/minus reevaluation or parameter update is present.",
+    "Tail NPZ saves L,G,t,gP,gV,ga and original P,V,a, permitting independent loss and gradient sensitivity recomputation against the pinned limit12 base. Late12\u219216 comparison is already derivable from pinned saved arrays; it needs no new evaluation.",
+    "Source/input pins and independent exact-manifest approval precede scientific imports. SERVER capacity32CPU/8GiB/5GiB,nice>=10,oneCPU affinity,singlethread libraries,noGPU remain enforced by the unchanged guard/source.170s limits new-call admission; externalTERM175/KILL180 is mandatory for in-flight calls.",
+    "Results are a separate completion sidecar. Completion can resolve the two missing measurements only when joined with verified parent provenance; it does not retroactively mark the original capped attempt complete or certify training/trajectory/AGOP/refit."
+  ],
+  "mandatory_dispatch_conditions": [
+    "Root publishes exact reviewed bundle and verifies live capacity",
+    "Fresh isolated direct-child output",
+    "External timeout --signal=TERM --kill-after=5s 175s with verified server Python",
+    "Two calls only; retain capped/missing results and original artifacts unchanged"
+  ]
+}

@@ -1,0 +1,41 @@
+{"call": 1, "label": "last_valid_5pct/order12/base", "status": "started"}
+{"call": 1, "label": "last_valid_5pct/order12/base", "status": "returned", "L": 0.9528435004315685, "wall_seconds": 15.390841086000364}
+{"call": 2, "label": "last_valid_5pct/o12/minus0.0001", "status": "started"}
+{"call": 2, "label": "last_valid_5pct/o12/minus0.0001", "status": "returned", "L": 0.95283552608606, "wall_seconds": 15.207751687999917}
+{"call": 3, "label": "last_valid_5pct/o12/plus0.0001", "status": "started"}
+{"call": 3, "label": "last_valid_5pct/o12/plus0.0001", "status": "returned", "L": 0.9528514745930261, "wall_seconds": 15.250600698999733}
+{"call": 4, "label": "last_valid_5pct/o12/minus1e-05", "status": "started"}
+{"call": 4, "label": "last_valid_5pct/o12/minus1e-05", "status": "returned", "L": 0.9528427030052907, "wall_seconds": 15.40908011800002}
+{"call": 5, "label": "last_valid_5pct/o12/plus1e-05", "status": "started"}
+{"call": 5, "label": "last_valid_5pct/o12/plus1e-05", "status": "returned", "L": 0.9528442978560059, "wall_seconds": 15.37775175600018}
+{"call": 6, "label": "last_valid_5pct/order16/base", "status": "started"}
+{"call": 6, "label": "last_valid_5pct/order16/base", "status": "returned", "L": 0.9528435004315685, "wall_seconds": 27.388322646999768}
+{"call": 7, "label": "last_valid_5pct/o16/minus0.0001", "status": "started"}
+{"call": 7, "label": "last_valid_5pct/o16/minus0.0001", "status": "returned", "L": 0.9528355260860599, "wall_seconds": 27.039659149999352}
+{"call": 8, "label": "last_valid_5pct/o16/plus0.0001", "status": "started"}
+{"call": 8, "label": "last_valid_5pct/o16/plus0.0001", "status": "returned", "L": 0.9528514745930259, "wall_seconds": 26.083763566000016}
+{"call": 9, "label": "last_valid_5pct/o16/minus1e-05", "status": "started"}
+{"call": 9, "label": "last_valid_5pct/o16/minus1e-05", "status": "returned", "L": 0.9528427030052906, "wall_seconds": 26.054007300000194}
+{"call": 10, "label": "last_valid_5pct/o16/plus1e-05", "status": "started"}
+{"call": 10, "label": "last_valid_5pct/o16/plus1e-05", "status": "returned", "L": 0.9528442978560059, "wall_seconds": 26.042355653000413}
+{"call": 11, "label": "last_valid_5pct/tail_limit10", "status": "started"}
+{"call": 11, "label": "last_valid_5pct/tail_limit10", "status": "returned", "L": 0.9528435004315685, "wall_seconds": 28.5017053269994}
+{"call": 12, "label": "old_bad_step/order12/base", "status": "started"}
+{"call": 12, "label": "old_bad_step/order12/base", "status": "returned", "L": 0.0995550887315253, "wall_seconds": 27.463064012999894}
+{"call": 13, "label": "old_bad_step/o12/minus0.0001", "status": "started"}
+{"call": 13, "label": "old_bad_step/o12/minus0.0001", "status": "returned", "L": 0.0981235244416041, "wall_seconds": 26.796060263000072}
+{"call": 14, "label": "old_bad_step/o12/plus0.0001", "status": "started"}
+{"call": 14, "label": "old_bad_step/o12/plus0.0001", "status": "returned", "L": 0.10213101174994343, "wall_seconds": 26.902473856999677}
+{"call": 15, "label": "old_bad_step/o12/minus1e-05", "status": "started"}
+{"call": 15, "label": "old_bad_step/o12/minus1e-05", "status": "returned", "L": 0.09936044459758797, "wall_seconds": 26.57723121500021}
+{"call": 16, "label": "old_bad_step/o12/plus1e-05", "status": "started"}
+{"call": 16, "label": "old_bad_step/o12/plus1e-05", "status": "returned", "L": 0.09976117645280835, "wall_seconds": 26.48043428299934}
+{"call": 17, "label": "old_bad_step/order16/base", "status": "started"}
+{"call": 17, "label": "old_bad_step/order16/base", "status": "returned", "L": 0.09955501625307095, "wall_seconds": 49.681351596999775}
+{"call": 18, "label": "old_bad_step/o16/minus0.0001", "status": "started"}
+{"call": 18, "label": "old_bad_step/o16/minus0.0001", "status": "returned", "L": 0.09812342659084483, "wall_seconds": 49.82229001600081}
+{"call": 19, "label": "old_bad_step/o16/plus0.0001", "status": "started"}
+{"call": 19, "label": "old_bad_step/o16/plus0.0001", "status": "returned", "L": 0.10213103884446229, "wall_seconds": 49.93025501600005}
+{"call": 20, "label": "old_bad_step/o16/minus1e-05", "status": "started"}
+{"call": 20, "label": "old_bad_step/o16/minus1e-05", "status": "returned", "L": 0.09936036622987632, "wall_seconds": 49.205024715000036}
+{"call": 21, "label": "old_bad_step/o16/plus1e-05", "status": "started"}
