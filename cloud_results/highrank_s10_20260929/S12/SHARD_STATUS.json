@@ -1,18 +1,66 @@
 {
   "job": "highrank_s10_20260929",
   "shard": "S12",
-  "state": "running",
-  "updated_utc": "2026-09-29T05:42:20.990479+00:00",
-  "elapsed_seconds": 0.014543403000004673,
+  "state": "finished",
+  "updated_utc": "2026-09-29T06:08:39.701183+00:00",
+  "elapsed_seconds": 1578.7252640759998,
   "workers": 4,
   "arms_total": 4,
-  "arms_done": 0,
-  "arms_active": [
-    "v11_hr_swiglu_abs_r8_d64_m64_seed9355",
-    "v11_hr_swiglu_abs_r8_d64_m64_seed9356",
-    "v11_hr_swiglu_abs_r8_d64_m64_seed9357",
-    "v11_hr_swiglu_abs_r8_d64_m64_seed9358"
-  ],
+  "arms_done": 4,
+  "arms_active": [],
   "arms_pending": [],
-  "outcomes": []
+  "outcomes": [
+    {
+      "id": "v11_hr_swiglu_abs_r8_d64_m64_seed9355",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1200.081114809,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:02:21.057399+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_abs_r8_d64_m64_seed9356",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1265.713137144,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:03:26.690645+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_abs_r8_d64_m64_seed9358",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1331.43684216,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:04:32.419734+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    },
+    {
+      "id": "v11_hr_swiglu_abs_r8_d64_m64_seed9357",
+      "bundle": "a02",
+      "engine": "swiglu",
+      "returncode": 0,
+      "elapsed_seconds": 1572.4749021119999,
+      "stop_reason": null,
+      "term_sent": false,
+      "kill_sent": false,
+      "finished_utc": "2026-09-29T06:08:33.453547+00:00",
+      "completion_indicator": "result.json",
+      "completion_indicator_exists": true
+    }
+  ]
 }
