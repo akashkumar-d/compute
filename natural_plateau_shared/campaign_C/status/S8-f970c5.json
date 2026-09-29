@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/sharp-babbage-gax1f8",
  "broken": null,
- "campaign_left": 24,
+ "campaign_left": 23,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -20,9 +20,10 @@
   "C3_D4p23_s058",
   "C4_D4w512_s063",
   "C4_D4w512_s064",
-  "C5_D3ngd_s010"
+  "C5_D3ngd_s010",
+  "C5_D3ngd_s018"
  ],
- "est_hours_left": 0.14,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -35,24 +36,14 @@
  },
  "instance": "f970c5",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 1,
+ "own_left": 0,
  "own_total": 16,
  "push_error": null,
- "running": {
-  "C5_D3ngd_s018": {
-   "phase": "main",
-   "since": "2026-09-29T13:45:04Z",
-   "step": 76000,
-   "steps": 80000,
-   "steps_per_s": 46.83,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-29T02:42:02Z",
- "state": "running",
+ "state": "standby",
  "stolen": {},
- "updated": "2026-09-29T14:15:07Z",
+ "updated": "2026-09-29T14:16:25Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S8"
 }
