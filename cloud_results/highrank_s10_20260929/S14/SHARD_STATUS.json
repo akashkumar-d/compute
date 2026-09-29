@@ -1,0 +1,18 @@
+{
+  "job": "highrank_s10_20260929",
+  "shard": "S14",
+  "state": "running",
+  "updated_utc": "2026-09-29T05:42:36.011184+00:00",
+  "elapsed_seconds": 0.016926849000000743,
+  "workers": 4,
+  "arms_total": 4,
+  "arms_done": 0,
+  "arms_active": [
+    "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9353",
+    "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9354",
+    "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9355",
+    "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9356"
+  ],
+  "arms_pending": [],
+  "outcomes": []
+}
