@@ -1,0 +1,18 @@
+{
+  "job": "highrank_s10_20260929",
+  "shard": "S02",
+  "state": "running",
+  "updated_utc": "2026-09-29T03:23:23.981893+00:00",
+  "elapsed_seconds": 0.01541838500000381,
+  "workers": 4,
+  "arms_total": 4,
+  "arms_done": 0,
+  "arms_active": [
+    "v11_hr_swiglu_h2_r16_d64_m64_seed9355",
+    "v11_hr_swiglu_h2_r16_d64_m64_seed9356",
+    "v11_hr_swiglu_h2_r16_d64_m64_seed9357",
+    "v11_hr_swiglu_h2_r16_d64_m64_seed9358"
+  ],
+  "arms_pending": [],
+  "outcomes": []
+}
