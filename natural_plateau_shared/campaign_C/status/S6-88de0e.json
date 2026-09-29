@@ -65,18 +65,18 @@
   "C1_D4_s022": {
    "phase": "main",
    "since": "2026-09-29T16:32:50Z",
-   "step": 44000,
+   "step": 82000,
    "steps": 100000,
-   "steps_per_s": 19.8,
+   "steps_per_s": 20.33,
    "stolen_from": "S4",
    "threads": 1
   },
   "C1_D4_s030": {
    "phase": "main",
    "since": "2026-09-29T16:18:27Z",
-   "step": 58000,
+   "step": 94000,
    "steps": 100000,
-   "steps_per_s": 20.53,
+   "steps_per_s": 20.28,
    "stolen_from": "S4",
    "threads": 1
   }
@@ -102,7 +102,7 @@
   "C5_D3ngd_s019": "S1",
   "C5_D3ngd_s020": "S2"
  },
- "updated": "2026-09-29T17:25:21Z",
+ "updated": "2026-09-29T17:55:32Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S6"
 }
