@@ -1,0 +1,69 @@
+{
+  "source_snapshot": "/Users/legendkiller/Downloads/Local generalization runs/Gptcode_consolidated_experiments copy/plateau_reset_v1/efficient_200_v1/population_agop_higher_rank_v1/goal_followup_v10/headscale/remote_results/population_agop_swiglu_headscale_20260928/bundle/execution_remote_a01/data/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641/v10_swiglu_h3_s30_headq030_r8_d64_m64_seed641_snaps.npz",
+  "source_sha256": "3d8fb42989b711160f1e5896032de5eeb4f7e2d90e328509d27370b649de10ce",
+  "source_raw_sha256": "6b0d3aa9f14d7521e03205020ac4daba3246690cc114d5c89a9b88ee80f858a2",
+  "source_summary_sha256": "3ea0b68191ce46ef27826857f28cd5eaf4f8fbf8686b2ef692cc9f1d54e9bce0",
+  "saved_steps": [
+    472,
+    473,
+    2260,
+    2261
+  ],
+  "saved_indices": [
+    43,
+    44,
+    673,
+    674
+  ],
+  "arrays": {
+    "t": {
+      "shape": [
+        4
+      ],
+      "saved_plane_sha256": [
+        "656c72a674248aff4f72952483ced0204cc9c26477c075bb728667c500b0837d",
+        "59cfcb2ee8e78b347ca5e5496b1eb20d4fa9c24994463d909c1874f027fe5703",
+        "be03584b7489ace5a482442c0765b8419505b9887765820ca58f928f8458cceb",
+        "ef03386149d3fab448d4a565af389a8bb3351107633297c220aa453a1e83b043"
+      ]
+    },
+    "P": {
+      "shape": [
+        4,
+        65,
+        64
+      ],
+      "saved_plane_sha256": [
+        "a87222d9eb45fe1bada31507317defdf6fcd47353e72c9c53f7aa28a881ab6f5",
+        "762cd34a6e680fc157f6b5159deebe7ff7fd74127ee9d513a9fa1c07d495119c",
+        "b8b797826adb434338b3e11af26b44335dff002dfa2aa6735ad8a001d39f1e78",
+        "c61a7a6c1ccb7723e878128b157d84ad5ff36af0d7e6c2f19ccb832d4d7a8a81"
+      ]
+    },
+    "V": {
+      "shape": [
+        4,
+        65,
+        64
+      ],
+      "saved_plane_sha256": [
+        "e1c5653ef6cbd47fb8e56fae8c94b04300647fb74c01c8903ea78605c6f0aec4",
+        "603a60af8f2bad24865ba9b584f7a11a264db2c3205cb8af84d8188001b2c2c5",
+        "2a17f05684f0515ad9a675268347bb52daf53f4b71557fa248ff7c447b70bde2",
+        "1b527a4bd283a256c367392927c089a19141e4df4dbb5b335e0c3fe70c839c26"
+      ]
+    },
+    "a": {
+      "shape": [
+        4,
+        64
+      ],
+      "saved_plane_sha256": [
+        "f0009b251ac45913733cf21d902499b114ca36c0cbe39953118b200fb516ee2e",
+        "047ea9ad28604414a79e13432e9a260e40f307e319e92cce257fcff29b2ae1e3",
+        "12c96b54b4de201734e973fe2ad74834120e78d82d8f95d9617b23adb5b0a82b",
+        "303f27cdfa997b08614ddbfdc4726d59db4abd08bfa835a67655054d445fee2d"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "f0b4999cd69a43bc51e15d1ae4b96c7c503b805b480d9483148b0c743153d080",
+  "reviewed_utc": "2026-09-29T01:38:35.524741+00:00",
+  "reviewer": "codex/headscale_flow_review_v10",
+  "scope": "One SERVER-only full-width fixed-state diagnostic with external hard900s bound; no training authorization",
+  "source_only": true,
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "execution_launched": false,
+  "verified_pins": 12,
+  "unchanged_pinned_files_against_subset": 11,
+  "expected_evaluate_calls": 22,
+  "expected_complete_order_slots": 4,
+  "findings": [
+    "Exact manifest hash and all12 source/input pins verified. All11 files other than probe.py are byte-identical to the reviewed subset bundle; numerical kernels, guard, config and saved state archive are unchanged.",
+    "Reviewed full probe diff: remove four-neuron selection and synthetic geometry; retain all original64 columns and order; restore original alpha; use orders12/16; set22-call/890s soft admission caps; record per-call elapsed wall time; use order16 for the limit10 tail check. No other executable changes.",
+    "Original d64/r8/m64 pure-h3 configuration and exact saved update472/2260 states are retained. Original alpha/m, teacher normalization and head rate are preserved. No initialization or training update occurs.",
+    "Each state requires5 calls at order12,5 at order16,1 order16 limit10 call:2*(5+5+1)=22. Four order slots and two tail comparisons are required for completion.",
+    "The unchanged convention forms the m64/head_lr weighted full gradient, normalizes D once by its Euclidean norm, and compares -dot(g,D) with [L(theta-epsilon*D)-L(theta+epsilon*D)]/(2epsilon). Epsilon=max(1,norm(theta))*fraction with pinned fractions1e-4 and1e-5. Original pure-h3 Var1 makes raw and variance-normalized slopes identical here.",
+    "Per-order D may differ. Order refinement compares unnormalized base gradients/loss/G/t; tail comparison holds order16 and the original full state fixed. Relative-only directional flags retain small-slope/roundoff limitations.",
+    "Source/input pins and exact-manifest approval precede scientific imports. SERVER,32CPU/8GiB/5GiB admission,nice>=10,single-thread libraries,noGPU and oneCPU affinity are unchanged. Soft890s stops admission of new calls; only the mandatory external TERM895/KILL900 bounds an in-flight evaluation.",
+    "All completed measurements and started/returned call journal must be retained. A cap may leave a running slot or omit later slots: compare against the22-call/four-slot manifest and mark missing work censored. Slow full-width reference completion is not guaranteed.",
+    "Successful checks validate only the two measured fixed states under these finite quadrature/tail comparisons. They do not certify a trajectory, AGOP/refit, early plateau timing or training safety."
+  ],
+  "mandatory_dispatch_conditions": [
+    "Fresh isolated direct-child output directory; preserve original subset data",
+    "Root verifies current live capacity and publishes the exact reviewed bundle",
+    "Verified server Python invoked with AGOP_EXECUTION_SITE=SERVER and external timeout --signal=TERM --kill-after=5s 895s",
+    "No training or automatic follow-on computation; preserve and report all incomplete/capped measurements"
+  ]
+}
