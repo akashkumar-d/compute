@@ -1,0 +1,20 @@
+{
+  "status": "scalar_equivalence_pass_only",
+  "test_count": 8,
+  "model_imports": false,
+  "model_evaluations": 0,
+  "training_updates": 0,
+  "benchmarks": false,
+  "network": false,
+  "dispatched": false,
+  "reference_kernel_edits": false,
+  "files_sha256": {
+    "transition_batch.py": "667567f88ffeacf06b33f5fc8fcb0d494425d0c3419f7709f6367f8dec7b4293",
+    "test_transition_batch.py": "40709d2bde54bfb56273f06c386156ac4c84738674eeb8a9c61f0ac0d57a77c1",
+    "BATCH_README.md": "0405309ad6165b1eccc7ebffe0853dd866198007defa614542e7a9d730d362b4"
+  },
+  "reference_transition_rule_sha256": "707aa9f82fb0cbba945dada10b725bcc3644c75b591950d2207fa0e67f5409dc",
+  "copied_transition_rule_sha256": "707aa9f82fb0cbba945dada10b725bcc3644c75b591950d2207fa0e67f5409dc",
+  "exact_scalar_and_outer_packing_bytes": true,
+  "full_model_equivalence": "not_evaluated; root-owned bounded server validation pending"
+}

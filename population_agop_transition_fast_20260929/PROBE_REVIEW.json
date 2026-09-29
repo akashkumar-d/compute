@@ -1,0 +1,29 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "380c88f1359e5ebef8a5061c66c8a7a1f9cae0e3aedf2c32874dafe9019bf88b",
+  "reviewed_utc": "2026-09-29T02:16:57.592662+00:00",
+  "reviewer": "codex/headscale_flow_review_v10",
+  "scope": "One SERVER-only full-width fixed-state batched-rule diagnostic, external600s hard cap; no training authorization",
+  "execution_launched": false,
+  "source_only": true,
+  "model_imports": 0,
+  "model_evaluations": 0,
+  "network_calls": 0,
+  "verified_pins": 15,
+  "unchanged_parent_pins": 11,
+  "scalar_test_receipt": "8 existing tests pass; source and QA pins inspected, tests not redundantly rerun",
+  "findings": [
+    "Batched helper sorts the same clipped base-plus-gate edges per bias, removes only exact duplicates, preserves signed-zero scalar convention, forms identical interval/node/weight expressions, and returns row-major owners matching scalar concatenation. Scale0/empty/invalid cases are handled; no renormalization or tolerance change.",
+    "AST comparison confirms wrapper pair_terms is identical to the reference after replacing only the b2>0 inner partition packing branch. Geometry, rank branches, outer rule, values, orientations and ordered reductions are unchanged. Teacher and diagonal routines are inherited unchanged.",
+    "Probe diff changes only its descriptive docstring, imported/class constructor names and soft deadline890->590. Original64-neuron inputs, alpha, two states, orders12/16, two FDscales and order16 limit10 tail check remain identical:22 evaluate calls,4 required order slots.",
+    "All15 manifest pins verified; all11 shared non-probe files byte-identical to reference. The existing eight scalar tests cover bitwise node/weight equivalence and outer packing, including boundaries/tiny intervals/tails. Full-model equivalence still needs comparison against matching returned reference arrays/journal after dispatch.",
+    "Same source/input/approval gates before scientific imports, SERVER requirement,32CPU/8GiB/5GiB admission,nice>=10,oneCPU affinity,single-thread libraries and noGPU. External timeout must bound any in-flight evaluation;590s is only an admission deadline.",
+    "Completion or directional-screen success does not certify the entire trajectory, AGOP/refit, population error or early plateau. Preserve every partial output and distinguish numerical discrepancies from censoring or runtime failure."
+  ],
+  "mandatory_dispatch_conditions": [
+    "Root publication and live capacity verification",
+    "Fresh isolated output",
+    "External timeout --signal=TERM --kill-after=5s 595s around verified server Python",
+    "No automatic follow-on computation or training; retain missing/capped checks explicitly"
+  ]
+}
