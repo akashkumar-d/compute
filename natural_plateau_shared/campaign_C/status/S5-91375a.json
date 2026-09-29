@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 47,
+ "campaign_left": 33,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -50,27 +50,27 @@
   "C1_D3_s026": {
    "phase": "main",
    "since": "2026-09-29T12:43:31Z",
-   "step": 22000,
+   "step": 70000,
    "steps": 80000,
-   "steps_per_s": 24.93,
+   "steps_per_s": 26.08,
    "stolen_from": "S4",
    "threads": 1
   },
   "C1_D3_s037": {
    "phase": "main",
    "since": "2026-09-29T12:43:31Z",
-   "step": 22000,
+   "step": 70000,
    "steps": 80000,
-   "steps_per_s": 24.93,
+   "steps_per_s": 26.08,
    "stolen_from": "S7",
    "threads": 1
   },
   "C2_D3_s018": {
-   "phase": "pilot",
+   "phase": "main",
    "since": "2026-09-29T12:34:44Z",
-   "step": 54000,
+   "step": 22000,
    "steps": 80000,
-   "steps_per_s": 25.41,
+   "steps_per_s": 25.29,
    "stolen_from": "S4",
    "threads": 1
   }
@@ -83,7 +83,7 @@
   "C2_D3_s018": "S4",
   "C5_D3ngd_s017": "S7"
  },
- "updated": "2026-09-29T13:10:27Z",
+ "updated": "2026-09-29T13:40:29Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
