@@ -1,0 +1,67 @@
+{
+  "arm": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359",
+  "created_utc": "2026-09-29T05:57:07.071466+00:00",
+  "files": [
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/diagnostics_partial.json",
+      "bytes": 460407,
+      "sha256": "5f925b13d83089bc412e7d34a91c3b198ec6041524c9b592c62daf9944faa153",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/launch.json",
+      "bytes": 2204,
+      "sha256": "f9ed547ae836fd8dcd4539d7f4c49adc7ed5b5c6cab79035f10de4067c426018",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/partials/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.json",
+      "bytes": 305411,
+      "sha256": "5513368937a776f1bd03f662903195977218951e3893b5d94239e37abdcd06cc",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/partials/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359_snaps.npz",
+      "bytes": 6812677,
+      "sha256": "55d4a82be785bd42028ddfc85e004668cffed47c9a73c4ae55b88dc8fd7a275b",
+      "packed": false
+    },
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/result.json",
+      "bytes": 465482,
+      "sha256": "3c10717e271b8350bb8450df556ad38161c3575cd5c5d22a536cc78b56f08467",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.json",
+      "bytes": 306103,
+      "sha256": "c71804180e55d298e603e8f184cf575a46a2ae4ee3d1b14138b813b84a82e6e4",
+      "packed": true
+    },
+    {
+      "path": "data/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359_snaps.npz",
+      "bytes": 6812677,
+      "sha256": "55d4a82be785bd42028ddfc85e004668cffed47c9a73c4ae55b88dc8fd7a275b",
+      "packed": false
+    },
+    {
+      "path": "logs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packed": true
+    },
+    {
+      "path": "logs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.stdout.log",
+      "bytes": 18685,
+      "sha256": "0076c52941564098a4f8036e6d8b43ca4dcb4a3179c6aa121241e2daa05ca441",
+      "packed": true
+    }
+  ],
+  "excluded_patterns": [
+    "states/*",
+    "resume.npz",
+    "*_snaps.npz"
+  ],
+  "tar_sha256": "5f9637a1c68c31c0db42d777e34e2d7a24a1da415bdee3a560ffcc20b36d9136",
+  "tar_bytes": 480655
+}
