@@ -34,11 +34,20 @@ for c in "$SRC"/claims/*.A; do
     find "$SRC/results/$t" -type f ! -name '*.ckpt.npz' -size -50M -exec cp {} "$DST/results/$t/" \;
   fi
 done
+# campaign C: A-owned code, docs and manifest (the worker sessions' results/ and status/ live on their own branches)
+mkdir -p "$DST/campaign_C/tests"
+for f in .gitignore README.md PREREGISTRATION.md WORKER.md START_PROMPTS.md HASHES.json manifest.json make_manifest.py \
+         natplat_campaign.py recipe.py worker.py endpoints.py analyze.py tests/test_runner.py; do
+  cp "$SRC/campaign_C/$f" "$DST/campaign_C/$f"
+done
+for f in ANALYSIS.md analysis.json; do
+  if [ -e "$SRC/campaign_C/$f" ]; then cp "$SRC/campaign_C/$f" "$DST/campaign_C/$f"; fi
+done
 # B's log: create only if it does not exist yet (never overwrite B's)
 [ -e "$DST/log/B.md" ] || cp "$SRC/log/B.md" "$DST/log/B.md"
 
 git add natural_plateau_shared
 if git diff --cached --quiet; then echo "Nothing new to push."; exit 0; fi
-git commit -m "A: sync natural_plateau_shared (protocol, tasks, code, A log/claims/results)"
+git commit -m "A: sync natural_plateau_shared (protocol, tasks, code, campaign C, A log/claims/results)"
 git push origin "$BRANCH"
 echo "Pushed to $BRANCH."

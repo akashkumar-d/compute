@@ -1,0 +1,15 @@
+{
+ "campaign": "C",
+ "registered_by": "claude/plateau-review (session_011vNRtJNdeKePn3Gex5aRg7)",
+ "note": "SHA-256 of the files that define campaign C; worker.py selftest checks them.",
+ "files": {
+  "manifest.json": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "make_manifest.py": "449d69e0621cfd0c3dd17aad99923a72a0531a463d60747ef28f40632634fc25",
+  "natplat_campaign.py": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "recipe.py": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "worker.py": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf",
+  "endpoints.py": "08c18b7f8d211d09361173de3d658e4c1dbe154247baf0c92dbc59126b330f8b",
+  "analyze.py": "0afaa3330b2f6ea4ee95b1d420b838b74726453c86b0b4270c645e4770e82b14",
+  "tests/test_runner.py": "9098914f03769630f3ab5eda9e0ead9ed7166f008d11b6357be786104e6d8aea"
+ }
+}

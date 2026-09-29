@@ -31,6 +31,7 @@ The full research write-up lives on the user's computer, not in this repo. Ask t
 - `log/A.md` and `log/B.md`: append-only progress logs, one per account.
 - `inbox/`: messages between A and B, one new file per message.
 - `results/<TASK>/`: `*.json.gz` runs, `SUMMARY.md` and `queue.log`, written by whoever claimed the task.
+- `campaign_C/`: the eight-session confirmation campaign, registered 2026-09-29. It is separate from `TASKS.md`; its own `README.md`, `PREREGISTRATION.md`, `START_PROMPTS.md` and `WORKER.md` explain everything. Its worker sessions push only to their own branches.
 
 ## Git rules
 
