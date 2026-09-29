@@ -1,0 +1,72 @@
+{
+ "branch": "claude/inspiring-archimedes-qapdb2",
+ "code": {
+  "manifest": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
+  "recipe": "a7dde475972359f8b7bf44733d3a990fa4335f7733b2e985cb59d8d428c6cc67",
+  "runner": "6837fb3fae2abfbbd75d2c7f58f8c6dfdfe660d513823b6f33d194b23729817e",
+  "worker": "d8cd361bba90022c6846a2536754f8e641d4e38e42662601594da8a3010739cf"
+ },
+ "cohort": "D3",
+ "done": true,
+ "files": {
+  "main.json.gz": {
+   "bytes": 366330,
+   "sha256": "4ac38b4ca4ef61b5f7418f041ce7156274d49ecc9fa55391d0a1961b10db5d63"
+  },
+  "pilot.json.gz": {
+   "bytes": 366565,
+   "sha256": "6ee39886dc796e3984a158320466f4573feff6de108ee7e9ef75e3cd93ec0f59"
+  }
+ },
+ "finished": "2026-09-29T11:43:46Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "C2_D3_s011",
+ "init_seed": 1011,
+ "instance": "91375a",
+ "main": {
+  "eta_last": 0.002957142857142857,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "rate": 0.46,
+  "resumed_from": 0,
+  "reused_pilot": false,
+  "seconds": 3090.0,
+  "steps": 80000,
+  "t10": 19780,
+  "t90": 29060,
+  "x": 4.0945
+ },
+ "owner": "S5",
+ "pilot": {
+  "censored": false,
+  "final_test": 1.0,
+  "kind": "full",
+  "rate": 0.5,
+  "resumed_from": 0,
+  "seconds": 3034.8,
+  "steps_run": 80000,
+  "stopped_at": null,
+  "t10": 19180
+ },
+ "ran_by": "S5",
+ "recipe": {
+  "r0": 0.5,
+  "rate": 0.46,
+  "t10_used": 19180,
+  "x_pred": 3.9703,
+  "x_target": 3.85
+ },
+ "seed": 11,
+ "split_seed": 2011,
+ "stage": "C2",
+ "started": "2026-09-29T10:01:39Z",
+ "stolen_from": null,
+ "version": "campaign-C worker 1.1 (2026-09-29)"
+}
