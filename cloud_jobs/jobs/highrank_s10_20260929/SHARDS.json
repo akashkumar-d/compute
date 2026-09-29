@@ -1,0 +1,689 @@
+{
+ "job": "highrank_s10_20260929",
+ "leaf": "population_agop_highrank_seeds10_20260929",
+ "bundles": {
+  "a01": {
+   "path": "bundle_a01",
+   "manifest_sha256": "bdcc6c833a4526e6852d1cfc1a5a029f3abbd75e9275ed524f1c1478bd603fdc",
+   "execution_dir": "execution_a01_cloud",
+   "arms": 84
+  },
+  "a02": {
+   "path": "bundle_a02",
+   "manifest_sha256": "e087ad456b5bfa4aa654ae237cccfc470b8f8a8a63ab6dd3404a1646e81f644e",
+   "execution_dir": "execution_a02_cloud",
+   "arms": 28
+  },
+  "a03": {
+   "path": "bundle_a03",
+   "manifest_sha256": "6c31cf360106edfd0a18bd07ebc43f483753f5373bc5e943991be31915d731dd",
+   "execution_dir": "execution_a03_cloud",
+   "arms": 24
+  }
+ },
+ "global_seconds": 5400,
+ "summarizer": {
+  "path": "population_agop_rank_sweep_20260928/analysis/summarize_coverage.py",
+  "sha256": "57ca1a05e364a9798e3a04a63968c9994ac26ec8cf96f8f127174d3c02cd2166"
+ },
+ "pack_exclude": [
+  "states/*",
+  "resume.npz",
+  "*_snaps.npz"
+ ],
+ "engine_environment": "cloud_jobs/worker/setup_env.sh (CPython 3.12, numpy 1.26.4, scipy 1.11.4, clarabel 0.11.1)",
+ "shards": {
+  "R01": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_relu_h2_r16_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r16_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r16_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r16_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r16_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r16_d64_m256_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r8_d64_m256_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_abs_r8_d64_m256_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r4_d64_m256_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_relu_h2_r2_d64_m256_seed9360"
+    ]
+   ],
+   "expected_minutes": 40,
+   "note": "All 56 ReLU arms (~70-200 s each on a 2-CPU container)."
+  },
+  "S01": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9354"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S02": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9358"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S03": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r16_d64_m64_seed9360"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9352"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S04": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9354"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9356"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S05": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9358"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9359"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_headslow_r16_d64_m64_seed9360"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S06": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9351"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9352"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9353"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9354"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S07": {
+   "arms": [
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9355"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9356"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9357"
+    ],
+    [
+     "a01",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9358"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S08": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9359"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_r8_d64_m64_seed9360"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9351"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9352"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S09": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9353"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9354"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9355"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9356"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S10": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9357"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9358"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9359"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_h2_headslow_r8_d64_m64_seed9360"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU r8/r16 arms, up to 1990 s each (two waves)."
+  },
+  "S11": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9351"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9352"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9353"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9354"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU abs/RBF r8 arms, up to 1990 s each."
+  },
+  "S12": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9355"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9356"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9357"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9358"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU abs/RBF r8 arms, up to 1990 s each."
+  },
+  "S13": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9359"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_abs_r8_d64_m64_seed9360"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9351"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9352"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU abs/RBF r8 arms, up to 1990 s each."
+  },
+  "S14": {
+   "arms": [
+    [
+     "a02",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9353"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9354"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9355"
+    ],
+    [
+     "a02",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9356"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU abs/RBF r8 arms, up to 1990 s each."
+  },
+  "S15": {
+   "arms": [
+    [
+     "a03",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360"
+    ]
+   ],
+   "expected_minutes": 70,
+   "note": "Four SwiGLU abs/RBF r8 arms, up to 1990 s each."
+  },
+  "S16": {
+   "arms": [
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9351"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9352"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9353"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9354"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9355"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9351"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9352"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9353"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9354"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9355"
+    ]
+   ],
+   "expected_minutes": 45,
+   "note": "SwiGLU h2 r4/r2, seeds 9351-9355."
+  },
+  "S17": {
+   "arms": [
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9356"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9357"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9358"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9359"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r4_d64_m64_seed9360"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9356"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9357"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9358"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9359"
+    ],
+    [
+     "a03",
+     "v11_hr_swiglu_h2_r2_d64_m64_seed9360"
+    ]
+   ],
+   "expected_minutes": 45,
+   "note": "SwiGLU h2 r4/r2, seeds 9356-9360."
+  }
+ }
+}

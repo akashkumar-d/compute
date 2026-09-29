@@ -1,0 +1,28 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "e087ad456b5bfa4aa654ae237cccfc470b8f8a8a63ab6dd3404a1646e81f644e",
+  "reviewer": "independent review subagent (Claude, separate context)",
+  "reviewed_utc": "2026-09-29T01:15:45+00:00",
+  "bundle": "a02",
+  "checks": [
+    "1 Seeds PASS: all new arms use 9351-9360; relu_h2_r16 new arms are 9355-9360 only; the 4 confirmation configs (9351-9354) equal rank-sweep v10_rank_relu_h2_r16_d64_m256_seed641 except id/seed (type-exact) under an approved confirmation review; 641/642 absent from all 136 new configs",
+    "2 ReLU configs PASS: all 56 (all in a01) rebuilt from reference files; key-level type-sensitive diff shows only id and seed changed",
+    "3 SwiGLU configs PASS: all 80 rebuilt from rank-sweep h2 r2/r4/r8/r16 singleton templates; every args key compared; only tag, cell, args.seed changed plus declared args.link h2->abs/gaussian_rbf (r8) and args.head_lr 0.01->0.001 (headslow r8/r16); a02 holds h2 r8 x2, headslow r8 x10, abs r8 x10, gaussian_rbf r8 x6",
+    "4 Coverage/order PASS: each (cell, seed) new arm appears exactly once across bundles; 136 arms (56 ReLU, 80 SwiGLU); sizes 84/28/24; a02 queue order equals DESIGN.json jobs order",
+    "5 Sources PASS: code/, diagnostics/, swiglu/, TEACHERS.json, requirements.txt are the same 33 files with sha256 identical to the rank-sweep bundle (none extra or missing); source_sha256 lists all 82 bundle files except MANIFEST/REVIEW with correct hashes",
+    "6 Runtime/dependency PASS: runtime exactly workers 28, reserved 4, 32 GiB, 10 GiB, global 3600, per-arm 1990, reserve 180; dependency {run: agop-highrank-s10-20260929-a01, max_wait_seconds: 4500} matches the REMOTE_RUN.md a01 name; the a02 command targets bundle_a02 and execution_a02",
+    "7 Criterion PASS: manifest and DESIGN criterion canonically identical to rank-sweep manifest e9a0a074 criterion",
+    "8 Launcher PASS: own diff vs reference rank_launch.py changes only module docstring, require_server docstring, new build_config, replaced validate_protocol, lock filename, --execution-dir default; scheduler/caps/review/capacity/priority/dependency/process control unchanged; gate rejected 24/24 in-memory mutations",
+    "9 Seed audit PASS: seeds 9351-9360, 2168 files, no read errors, no undeclared collisions; all 60 collisions are confirmation-cohort ReLU h2 r16 files at 9351-9354; independent repo-wide grep finds no other experiment use",
+    "10 Engine support PASS: CANONICAL_NAMES includes abs and gaussian_rbf; head_lr is validated in run_one.validate_jobs and applied in swsmall_periodic.run/update_directions",
+    "11 Static runs PASS: dry-run printed valid true, 28 arms, a01 dependency, this manifest hash, created nothing; 26/26 mocked unittests pass; leaf byte-identical before/after; git status shows only the untracked leaf; no stray files",
+    "12 Timing PASS: 28 arms fill 28 workers in one wave; worst case makespan 1990 s < 3600 s; no arm cut by the global cap"
+  ],
+  "timing_note": "After the a01 dependency resolves, all 28 SwiGLU r8 arms (h2, headslow, abs, gaussian_rbf) start together on 28 workers. Even at the full 1990 s per-arm cap the job ends by about 1990 s, well under the 3600 s global cap, so no arm is cut by the global cap. The queue wait does not use compute budget. a01's worst case of about 2630 s (hard cap 3600 s) fits inside the 4500 s wait window.",
+  "non_blocking_observations": [
+    "validate_protocol compares configs with Python ==, so a type-only int->float edit would pass the gate (same as the reviewed rank-sweep gate). This is mitigated because this review pins the manifest hash, validate() pins config hashes and compares files to the manifest canonically, and every current config was verified type-exact.",
+    "Neither validate() nor validate_protocol rejects extra unlisted files under code/, diagnostics/ or swiglu/ (inherited behaviour). The file sets matched the reference at review time, so dispatch the committed leaf unmodified.",
+    "This is the first live use of the named dependency chain. The lrun ~/compute/runs/<run>/.lrun/{pid,exit_code} layout could not be checked here. If the dependency never resolves, this job ends with queue_timeout and runs no arms. Capacity is checked only at dispatch, before the wait, so keep other task workers at 2 or fewer until a03 finishes."
+  ],
+  "scope_note": "Approves dispatch of this exact manifest only; not numerical correctness or scientific outcomes."
+}

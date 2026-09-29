@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-29T01:03:32.885192+00:00",
+  "design_sha256": "4f389032de5eefa9d457044b504bdea214481cfd3426ff284c7d9d5872d72456",
+  "fresh_seed_audit_sha256": "61193c2afdda447f070aa1d1c7b556504fcc4a0468faab03d0996cfdbe619555",
+  "reference_rank_manifest_sha256": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+  "reference_breadth_manifest_sha256": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+  "bundles": {
+    "a01": {
+      "manifest_sha256": "bdcc6c833a4526e6852d1cfc1a5a029f3abbd75e9275ed524f1c1478bd603fdc",
+      "arms": 84,
+      "cells": {
+        "v11_hr_relu_h2_r16": 6,
+        "v11_hr_relu_h2_r8": 10,
+        "v11_hr_relu_gaussian_rbf_r8": 10,
+        "v11_hr_relu_abs_r8": 10,
+        "v11_hr_relu_h2_r4": 10,
+        "v11_hr_relu_h2_r2": 10,
+        "v11_hr_swiglu_h2_r16": 10,
+        "v11_hr_swiglu_h2_headslow_r16": 10,
+        "v11_hr_swiglu_h2_r8": 8
+      }
+    },
+    "a02": {
+      "manifest_sha256": "e087ad456b5bfa4aa654ae237cccfc470b8f8a8a63ab6dd3404a1646e81f644e",
+      "arms": 28,
+      "cells": {
+        "v11_hr_swiglu_h2_r8": 2,
+        "v11_hr_swiglu_h2_headslow_r8": 10,
+        "v11_hr_swiglu_abs_r8": 10,
+        "v11_hr_swiglu_gaussian_rbf_r8": 6
+      }
+    },
+    "a03": {
+      "manifest_sha256": "6c31cf360106edfd0a18bd07ebc43f483753f5373bc5e943991be31915d731dd",
+      "arms": 24,
+      "cells": {
+        "v11_hr_swiglu_gaussian_rbf_r8": 4,
+        "v11_hr_swiglu_h2_r4": 10,
+        "v11_hr_swiglu_h2_r2": 10
+      }
+    }
+  },
+  "model_evaluations": 0,
+  "network_calls": 0
+}

@@ -1,0 +1,22 @@
+{
+  "id": "v11_hr_relu_gaussian_rbf_r8_d64_m256_seed9358",
+  "student": "relu",
+  "optimizer": "gd",
+  "teacher": "gaussian_rbf",
+  "seed": 9358,
+  "m": 256,
+  "d": 64,
+  "r": 8,
+  "scale": 0.01,
+  "h": 0.5,
+  "steps": 20000,
+  "profile_intercept": true,
+  "force_time_max": 1500.0,
+  "loss_stop": 0.001,
+  "diagnostic_stride": 25,
+  "diagnostic_priority_fractions": [
+    0.25,
+    0.5,
+    0.75
+  ]
+}

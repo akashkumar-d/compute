@@ -1,0 +1,2700 @@
+{
+  "protocol_version": "breadth14_v7_screen1",
+  "created_utc": "2026-09-28T16:23:27.844213+00:00",
+  "created_before_outcomes": true,
+  "phase": "exploratory_common_fourteen_link_screen",
+  "runtime": {
+    "workers": 30,
+    "reserved_cpus": 2,
+    "min_available_memory_gib": 24,
+    "min_free_disk_gib": 10,
+    "global_seconds": 2100,
+    "per_arm_seconds": 900,
+    "diagnostic_reserve_seconds": 180
+  },
+  "dependency": null,
+  "total_arms": 60,
+  "common_grid_arms": 56,
+  "supplemental_arms": 4,
+  "teacher_student_cells": 28,
+  "canonical_teachers": [
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "relu",
+    "leaky_relu",
+    "abs",
+    "softplus",
+    "silu",
+    "gelu",
+    "sine",
+    "tanh",
+    "erf",
+    "gaussian_rbf"
+  ],
+  "paired_fresh_seeds": [
+    641,
+    642
+  ],
+  "configs": [
+    {
+      "id": "relu_h2_r8_d64_m256_seed641",
+      "cell": "relu_h2",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h2",
+      "seed": 641,
+      "config_path": "configs/relu_h2_r8_d64_m256_seed641.json",
+      "configuration_sha256": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+      "config": {
+        "id": "relu_h2_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h2_r8_d64_m64_seed641",
+      "cell": "swiglu_h2",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h2",
+      "seed": 641,
+      "config_path": "configs/swiglu_h2_r8_d64_m64_seed641.json",
+      "configuration_sha256": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+      "config": [
+        {
+          "tag": "swiglu_h2_r8_d64_m64_seed641",
+          "cell": "swiglu_h2",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h3_r8_d64_m256_seed641",
+      "cell": "relu_h3",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h3",
+      "seed": 641,
+      "config_path": "configs/relu_h3_r8_d64_m256_seed641.json",
+      "configuration_sha256": "26ccdad02f3c8f43640b50fe37b0f3e5bcd638bf2ffeee8e6df841fa0d91196b",
+      "config": {
+        "id": "relu_h3_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h3_r8_d64_m64_seed641",
+      "cell": "swiglu_h3",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h3",
+      "seed": 641,
+      "config_path": "configs/swiglu_h3_r8_d64_m64_seed641.json",
+      "configuration_sha256": "1b52252718b6c65870c4507b8f9c967f9e6e9d5e02ccd183eb3a53b030ccc7ac",
+      "config": [
+        {
+          "tag": "swiglu_h3_r8_d64_m64_seed641",
+          "cell": "swiglu_h3",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h4_r8_d64_m256_seed641",
+      "cell": "relu_h4",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h4",
+      "seed": 641,
+      "config_path": "configs/relu_h4_r8_d64_m256_seed641.json",
+      "configuration_sha256": "a53a40ab4b5a1559e8bc95fde965da48637d51fdcf09c46ab4139d6d9d02f7c8",
+      "config": {
+        "id": "relu_h4_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h4",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h4_r8_d64_m64_seed641",
+      "cell": "swiglu_h4",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h4",
+      "seed": 641,
+      "config_path": "configs/swiglu_h4_r8_d64_m64_seed641.json",
+      "configuration_sha256": "d850e746a1fae175f5198c075a1c3b0b09b119fcc1cf6846028137362170c9cf",
+      "config": [
+        {
+          "tag": "swiglu_h4_r8_d64_m64_seed641",
+          "cell": "swiglu_h4",
+          "rank": 8,
+          "args": {
+            "link": "h4",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h5_r8_d64_m256_seed641",
+      "cell": "relu_h5",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h5",
+      "seed": 641,
+      "config_path": "configs/relu_h5_r8_d64_m256_seed641.json",
+      "configuration_sha256": "681b194073e253c37767951caa0a4a666905b01114c10404e007ed1c1e2089dc",
+      "config": {
+        "id": "relu_h5_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h5",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h5_r8_d64_m64_seed641",
+      "cell": "swiglu_h5",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h5",
+      "seed": 641,
+      "config_path": "configs/swiglu_h5_r8_d64_m64_seed641.json",
+      "configuration_sha256": "75339370053e7c730d6b143fb5d72040b7d4f83692bf6d7b179abb7d6f89df04",
+      "config": [
+        {
+          "tag": "swiglu_h5_r8_d64_m64_seed641",
+          "cell": "swiglu_h5",
+          "rank": 8,
+          "args": {
+            "link": "h5",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_relu_r8_d64_m256_seed641",
+      "cell": "relu_relu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "relu",
+      "seed": 641,
+      "config_path": "configs/relu_relu_r8_d64_m256_seed641.json",
+      "configuration_sha256": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+      "config": {
+        "id": "relu_relu_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_relu_r8_d64_m64_seed641",
+      "cell": "swiglu_relu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "relu",
+      "seed": 641,
+      "config_path": "configs/swiglu_relu_r8_d64_m64_seed641.json",
+      "configuration_sha256": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+      "config": [
+        {
+          "tag": "swiglu_relu_r8_d64_m64_seed641",
+          "cell": "swiglu_relu",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_leaky_relu_r8_d64_m256_seed641",
+      "cell": "relu_leaky_relu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "leaky_relu",
+      "seed": 641,
+      "config_path": "configs/relu_leaky_relu_r8_d64_m256_seed641.json",
+      "configuration_sha256": "9e0522d301cbb4500cb41f75e729725e49cfb3472789c1d562140476a04daddb",
+      "config": {
+        "id": "relu_leaky_relu_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "leaky_relu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_leaky_relu_r8_d64_m64_seed641",
+      "cell": "swiglu_leaky_relu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "leaky_relu",
+      "seed": 641,
+      "config_path": "configs/swiglu_leaky_relu_r8_d64_m64_seed641.json",
+      "configuration_sha256": "b9518fe3c7d0173e815d79e14d49c5f7b77e9f254be4b9e0bb9048d90d2e4106",
+      "config": [
+        {
+          "tag": "swiglu_leaky_relu_r8_d64_m64_seed641",
+          "cell": "swiglu_leaky_relu",
+          "rank": 8,
+          "args": {
+            "link": "leaky_relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_abs_r8_d64_m256_seed641",
+      "cell": "relu_abs",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "abs",
+      "seed": 641,
+      "config_path": "configs/relu_abs_r8_d64_m256_seed641.json",
+      "configuration_sha256": "d0de9e453111f1bdb047257fdb1b3e1838937eb7ec3226d8ca0f35f8a3733eb0",
+      "config": {
+        "id": "relu_abs_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "abs",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_abs_r8_d64_m64_seed641",
+      "cell": "swiglu_abs",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "abs",
+      "seed": 641,
+      "config_path": "configs/swiglu_abs_r8_d64_m64_seed641.json",
+      "configuration_sha256": "bea0935ec6de1ce33e2b9292bd8d71bdc7f7f5079230a238f5368820a41d6243",
+      "config": [
+        {
+          "tag": "swiglu_abs_r8_d64_m64_seed641",
+          "cell": "swiglu_abs",
+          "rank": 8,
+          "args": {
+            "link": "abs",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_softplus_r8_d64_m256_seed641",
+      "cell": "relu_softplus",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "softplus",
+      "seed": 641,
+      "config_path": "configs/relu_softplus_r8_d64_m256_seed641.json",
+      "configuration_sha256": "dc7943ee9bd1bf82989df8ccbc186e2193ac46ca8c160cab1b3047b404f9a7ce",
+      "config": {
+        "id": "relu_softplus_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "softplus",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_softplus_r8_d64_m64_seed641",
+      "cell": "swiglu_softplus",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "softplus",
+      "seed": 641,
+      "config_path": "configs/swiglu_softplus_r8_d64_m64_seed641.json",
+      "configuration_sha256": "4a9ea2a2983eb008ecd2e44eb20bd080d47c4c98ac82fd4bd1b4b56ba9141308",
+      "config": [
+        {
+          "tag": "swiglu_softplus_r8_d64_m64_seed641",
+          "cell": "swiglu_softplus",
+          "rank": 8,
+          "args": {
+            "link": "softplus",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_silu_r8_d64_m256_seed641",
+      "cell": "relu_silu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "silu",
+      "seed": 641,
+      "config_path": "configs/relu_silu_r8_d64_m256_seed641.json",
+      "configuration_sha256": "69f840783008c43d0e15965c1ffdd49605e5329bd0df33a3f9fd6b87bb6264a1",
+      "config": {
+        "id": "relu_silu_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "silu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_silu_r8_d64_m64_seed641",
+      "cell": "swiglu_silu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "silu",
+      "seed": 641,
+      "config_path": "configs/swiglu_silu_r8_d64_m64_seed641.json",
+      "configuration_sha256": "e4a0dbdf73d934d12dbec81de228ed255d96af5213f35955d46d74b5ee9f0137",
+      "config": [
+        {
+          "tag": "swiglu_silu_r8_d64_m64_seed641",
+          "cell": "swiglu_silu",
+          "rank": 8,
+          "args": {
+            "link": "silu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_gelu_r8_d64_m256_seed641",
+      "cell": "relu_gelu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "gelu",
+      "seed": 641,
+      "config_path": "configs/relu_gelu_r8_d64_m256_seed641.json",
+      "configuration_sha256": "0b02ac65cee44f82fc0de85a93fb9aada422e56d48dc4a2d061af840c43a95cd",
+      "config": {
+        "id": "relu_gelu_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "gelu",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_gelu_r8_d64_m64_seed641",
+      "cell": "swiglu_gelu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "gelu",
+      "seed": 641,
+      "config_path": "configs/swiglu_gelu_r8_d64_m64_seed641.json",
+      "configuration_sha256": "a3db9a4cdd4d841e52502e280128e55f84843d137aeaf6667c775a4bcf021bc2",
+      "config": [
+        {
+          "tag": "swiglu_gelu_r8_d64_m64_seed641",
+          "cell": "swiglu_gelu",
+          "rank": 8,
+          "args": {
+            "link": "gelu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_sine_r8_d64_m256_seed641",
+      "cell": "relu_sine",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "sine",
+      "seed": 641,
+      "config_path": "configs/relu_sine_r8_d64_m256_seed641.json",
+      "configuration_sha256": "889ddc41832a0900b6fe08a8184eab1d744c705c4829eec14565b6fda1cb2892",
+      "config": {
+        "id": "relu_sine_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_sine_r8_d64_m64_seed641",
+      "cell": "swiglu_sine",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "sine",
+      "seed": 641,
+      "config_path": "configs/swiglu_sine_r8_d64_m64_seed641.json",
+      "configuration_sha256": "ff9bd13c0160fcb860962fefd76c6f0a6341591b4533178db3b287f79d1c0f5e",
+      "config": [
+        {
+          "tag": "swiglu_sine_r8_d64_m64_seed641",
+          "cell": "swiglu_sine",
+          "rank": 8,
+          "args": {
+            "link": "sine",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_tanh_r8_d64_m256_seed641",
+      "cell": "relu_tanh",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "tanh",
+      "seed": 641,
+      "config_path": "configs/relu_tanh_r8_d64_m256_seed641.json",
+      "configuration_sha256": "4a683bbb117b4f457235d267399e0ddbd0a431b3a27fab214e97f585783d393c",
+      "config": {
+        "id": "relu_tanh_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "tanh",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_tanh_r8_d64_m64_seed641",
+      "cell": "swiglu_tanh",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "tanh",
+      "seed": 641,
+      "config_path": "configs/swiglu_tanh_r8_d64_m64_seed641.json",
+      "configuration_sha256": "9576440fe21973574bf8df4666bce790979ea3bb2e9004112408f03fd2906780",
+      "config": [
+        {
+          "tag": "swiglu_tanh_r8_d64_m64_seed641",
+          "cell": "swiglu_tanh",
+          "rank": 8,
+          "args": {
+            "link": "tanh",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_erf_r8_d64_m256_seed641",
+      "cell": "relu_erf",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "erf",
+      "seed": 641,
+      "config_path": "configs/relu_erf_r8_d64_m256_seed641.json",
+      "configuration_sha256": "e6ab4acbf620f04ff40fd62c98a81b1639d623048a27758c9b121d4601fd7775",
+      "config": {
+        "id": "relu_erf_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "erf",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_erf_r8_d64_m64_seed641",
+      "cell": "swiglu_erf",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "erf",
+      "seed": 641,
+      "config_path": "configs/swiglu_erf_r8_d64_m64_seed641.json",
+      "configuration_sha256": "35702b78fa6c70cee63b90b1a3c0f5e91f0cdba0b0b63c95b8d1581aa30b9309",
+      "config": [
+        {
+          "tag": "swiglu_erf_r8_d64_m64_seed641",
+          "cell": "swiglu_erf",
+          "rank": 8,
+          "args": {
+            "link": "erf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_gaussian_rbf_r8_d64_m256_seed641",
+      "cell": "relu_gaussian_rbf",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "gaussian_rbf",
+      "seed": 641,
+      "config_path": "configs/relu_gaussian_rbf_r8_d64_m256_seed641.json",
+      "configuration_sha256": "265bbcc107338818ded94e3091bd8c4f9cebb030fbd651c4e1616cdb6d1ae697",
+      "config": {
+        "id": "relu_gaussian_rbf_r8_d64_m256_seed641",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "gaussian_rbf",
+        "seed": 641,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_gaussian_rbf_r8_d64_m64_seed641",
+      "cell": "swiglu_gaussian_rbf",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "gaussian_rbf",
+      "seed": 641,
+      "config_path": "configs/swiglu_gaussian_rbf_r8_d64_m64_seed641.json",
+      "configuration_sha256": "dec7969c952e593b9a8db7fb0362386c2e8ffc3bf4a4ed5f3d72a37363cb8455",
+      "config": [
+        {
+          "tag": "swiglu_gaussian_rbf_r8_d64_m64_seed641",
+          "cell": "swiglu_gaussian_rbf",
+          "rank": 8,
+          "args": {
+            "link": "gaussian_rbf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 641,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h2_r8_d64_m256_seed642",
+      "cell": "relu_h2",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h2",
+      "seed": 642,
+      "config_path": "configs/relu_h2_r8_d64_m256_seed642.json",
+      "configuration_sha256": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+      "config": {
+        "id": "relu_h2_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h2",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h2_r8_d64_m64_seed642",
+      "cell": "swiglu_h2",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h2",
+      "seed": 642,
+      "config_path": "configs/swiglu_h2_r8_d64_m64_seed642.json",
+      "configuration_sha256": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+      "config": [
+        {
+          "tag": "swiglu_h2_r8_d64_m64_seed642",
+          "cell": "swiglu_h2",
+          "rank": 8,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h3_r8_d64_m256_seed642",
+      "cell": "relu_h3",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h3",
+      "seed": 642,
+      "config_path": "configs/relu_h3_r8_d64_m256_seed642.json",
+      "configuration_sha256": "0f75397ef98b6d60ec83661d5d4868198a8212d7d2bb1af9152a2b8a3c21a012",
+      "config": {
+        "id": "relu_h3_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h3",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h3_r8_d64_m64_seed642",
+      "cell": "swiglu_h3",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h3",
+      "seed": 642,
+      "config_path": "configs/swiglu_h3_r8_d64_m64_seed642.json",
+      "configuration_sha256": "a186b9de66b50069d3a81640eeea6e10b43d888c03b70d5e879fd345b25c3abf",
+      "config": [
+        {
+          "tag": "swiglu_h3_r8_d64_m64_seed642",
+          "cell": "swiglu_h3",
+          "rank": 8,
+          "args": {
+            "link": "h3",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h4_r8_d64_m256_seed642",
+      "cell": "relu_h4",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h4",
+      "seed": 642,
+      "config_path": "configs/relu_h4_r8_d64_m256_seed642.json",
+      "configuration_sha256": "e9cc73799ada22ffc90c5b492caec1e72a53af89bba97b7291829466a032441a",
+      "config": {
+        "id": "relu_h4_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h4",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h4_r8_d64_m64_seed642",
+      "cell": "swiglu_h4",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h4",
+      "seed": 642,
+      "config_path": "configs/swiglu_h4_r8_d64_m64_seed642.json",
+      "configuration_sha256": "4c3164886b30fb93166359a68fde0bac3b4cab1fbc2c8648922683fb8c189d80",
+      "config": [
+        {
+          "tag": "swiglu_h4_r8_d64_m64_seed642",
+          "cell": "swiglu_h4",
+          "rank": 8,
+          "args": {
+            "link": "h4",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_h5_r8_d64_m256_seed642",
+      "cell": "relu_h5",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "h5",
+      "seed": 642,
+      "config_path": "configs/relu_h5_r8_d64_m256_seed642.json",
+      "configuration_sha256": "426bf004f03c2480125748f586832de2c30298a853a55e47be29a0339641a069",
+      "config": {
+        "id": "relu_h5_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "h5",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_h5_r8_d64_m64_seed642",
+      "cell": "swiglu_h5",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "h5",
+      "seed": 642,
+      "config_path": "configs/swiglu_h5_r8_d64_m64_seed642.json",
+      "configuration_sha256": "57370f6e34ac5de25d392220645ea4bae9a2ecc45e01090a821fa57c1848b72c",
+      "config": [
+        {
+          "tag": "swiglu_h5_r8_d64_m64_seed642",
+          "cell": "swiglu_h5",
+          "rank": 8,
+          "args": {
+            "link": "h5",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_relu_r8_d64_m256_seed642",
+      "cell": "relu_relu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "relu",
+      "seed": 642,
+      "config_path": "configs/relu_relu_r8_d64_m256_seed642.json",
+      "configuration_sha256": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+      "config": {
+        "id": "relu_relu_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_relu_r8_d64_m64_seed642",
+      "cell": "swiglu_relu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "relu",
+      "seed": 642,
+      "config_path": "configs/swiglu_relu_r8_d64_m64_seed642.json",
+      "configuration_sha256": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+      "config": [
+        {
+          "tag": "swiglu_relu_r8_d64_m64_seed642",
+          "cell": "swiglu_relu",
+          "rank": 8,
+          "args": {
+            "link": "relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_leaky_relu_r8_d64_m256_seed642",
+      "cell": "relu_leaky_relu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "leaky_relu",
+      "seed": 642,
+      "config_path": "configs/relu_leaky_relu_r8_d64_m256_seed642.json",
+      "configuration_sha256": "de5706e3443bba42653e4cd5adc0cb5d590894476eeec86a841485906460697f",
+      "config": {
+        "id": "relu_leaky_relu_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "leaky_relu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_leaky_relu_r8_d64_m64_seed642",
+      "cell": "swiglu_leaky_relu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "leaky_relu",
+      "seed": 642,
+      "config_path": "configs/swiglu_leaky_relu_r8_d64_m64_seed642.json",
+      "configuration_sha256": "00cd54a25f0fde28de4f720abd01e3bd48d43c528ba92b0399e1b2ac3665402e",
+      "config": [
+        {
+          "tag": "swiglu_leaky_relu_r8_d64_m64_seed642",
+          "cell": "swiglu_leaky_relu",
+          "rank": 8,
+          "args": {
+            "link": "leaky_relu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_abs_r8_d64_m256_seed642",
+      "cell": "relu_abs",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "abs",
+      "seed": 642,
+      "config_path": "configs/relu_abs_r8_d64_m256_seed642.json",
+      "configuration_sha256": "54f918e7e02c8b24f5094bc83a0909aa5e6ab95d106617065565891879a6872a",
+      "config": {
+        "id": "relu_abs_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "abs",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_abs_r8_d64_m64_seed642",
+      "cell": "swiglu_abs",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "abs",
+      "seed": 642,
+      "config_path": "configs/swiglu_abs_r8_d64_m64_seed642.json",
+      "configuration_sha256": "6dcf370d8a5ee73ccf4f2f73fc9a4e3a6b94492f4db58b8c27c9dd14c021892f",
+      "config": [
+        {
+          "tag": "swiglu_abs_r8_d64_m64_seed642",
+          "cell": "swiglu_abs",
+          "rank": 8,
+          "args": {
+            "link": "abs",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_softplus_r8_d64_m256_seed642",
+      "cell": "relu_softplus",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "softplus",
+      "seed": 642,
+      "config_path": "configs/relu_softplus_r8_d64_m256_seed642.json",
+      "configuration_sha256": "aa8a7da25fa13ffca13f1e5cb515ad1fc89581f036bde6e29ba801ad44ebfd6f",
+      "config": {
+        "id": "relu_softplus_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "softplus",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_softplus_r8_d64_m64_seed642",
+      "cell": "swiglu_softplus",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "softplus",
+      "seed": 642,
+      "config_path": "configs/swiglu_softplus_r8_d64_m64_seed642.json",
+      "configuration_sha256": "9e30dbaff05073536aa3abc727cdaae3c1279edaba0d55d048a7787225ade97e",
+      "config": [
+        {
+          "tag": "swiglu_softplus_r8_d64_m64_seed642",
+          "cell": "swiglu_softplus",
+          "rank": 8,
+          "args": {
+            "link": "softplus",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_silu_r8_d64_m256_seed642",
+      "cell": "relu_silu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "silu",
+      "seed": 642,
+      "config_path": "configs/relu_silu_r8_d64_m256_seed642.json",
+      "configuration_sha256": "e3bfdd6dd5a369cc55b37fd2ed114e47738228956b93ff76fe42db55841b2f5e",
+      "config": {
+        "id": "relu_silu_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "silu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_silu_r8_d64_m64_seed642",
+      "cell": "swiglu_silu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "silu",
+      "seed": 642,
+      "config_path": "configs/swiglu_silu_r8_d64_m64_seed642.json",
+      "configuration_sha256": "477236355377fd11958f8e153900142d9f9522220b5c3a718f20d8a2f5a6b507",
+      "config": [
+        {
+          "tag": "swiglu_silu_r8_d64_m64_seed642",
+          "cell": "swiglu_silu",
+          "rank": 8,
+          "args": {
+            "link": "silu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_gelu_r8_d64_m256_seed642",
+      "cell": "relu_gelu",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "gelu",
+      "seed": 642,
+      "config_path": "configs/relu_gelu_r8_d64_m256_seed642.json",
+      "configuration_sha256": "71bc74045c58ac6acaea50bd76d6fed1b6800fc5c315a2b21820febe9068bfd5",
+      "config": {
+        "id": "relu_gelu_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "gelu",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_gelu_r8_d64_m64_seed642",
+      "cell": "swiglu_gelu",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "gelu",
+      "seed": 642,
+      "config_path": "configs/swiglu_gelu_r8_d64_m64_seed642.json",
+      "configuration_sha256": "6626457a2856810ee41a87d0e053856228d2d2da26e243757b35f0bd3cd83870",
+      "config": [
+        {
+          "tag": "swiglu_gelu_r8_d64_m64_seed642",
+          "cell": "swiglu_gelu",
+          "rank": 8,
+          "args": {
+            "link": "gelu",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_sine_r8_d64_m256_seed642",
+      "cell": "relu_sine",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "sine",
+      "seed": 642,
+      "config_path": "configs/relu_sine_r8_d64_m256_seed642.json",
+      "configuration_sha256": "9172ec7b7b6529099ed6628ed330904c2abbb69ef0e91b98805e3a7ecc5c1604",
+      "config": {
+        "id": "relu_sine_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_sine_r8_d64_m64_seed642",
+      "cell": "swiglu_sine",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "sine",
+      "seed": 642,
+      "config_path": "configs/swiglu_sine_r8_d64_m64_seed642.json",
+      "configuration_sha256": "0337f93b2e4547c8a4cd7dc843aec76c3e0ad925943e840e95236a5a210fe4f0",
+      "config": [
+        {
+          "tag": "swiglu_sine_r8_d64_m64_seed642",
+          "cell": "swiglu_sine",
+          "rank": 8,
+          "args": {
+            "link": "sine",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_tanh_r8_d64_m256_seed642",
+      "cell": "relu_tanh",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "tanh",
+      "seed": 642,
+      "config_path": "configs/relu_tanh_r8_d64_m256_seed642.json",
+      "configuration_sha256": "897827c4be23705fd69a40d95b53920a7ac24645e41ff581c51662031a4bb2b9",
+      "config": {
+        "id": "relu_tanh_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "tanh",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_tanh_r8_d64_m64_seed642",
+      "cell": "swiglu_tanh",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "tanh",
+      "seed": 642,
+      "config_path": "configs/swiglu_tanh_r8_d64_m64_seed642.json",
+      "configuration_sha256": "d1976a3108023b93566ffce455c432b7fb10b4d7a8c2f2a3165e46ddf69174d6",
+      "config": [
+        {
+          "tag": "swiglu_tanh_r8_d64_m64_seed642",
+          "cell": "swiglu_tanh",
+          "rank": 8,
+          "args": {
+            "link": "tanh",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_erf_r8_d64_m256_seed642",
+      "cell": "relu_erf",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "erf",
+      "seed": 642,
+      "config_path": "configs/relu_erf_r8_d64_m256_seed642.json",
+      "configuration_sha256": "a3f3aeb6c171c916d8e0880f5962bfd47690456b7fdda528f0e82e82fe35ab88",
+      "config": {
+        "id": "relu_erf_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "erf",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_erf_r8_d64_m64_seed642",
+      "cell": "swiglu_erf",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "erf",
+      "seed": 642,
+      "config_path": "configs/swiglu_erf_r8_d64_m64_seed642.json",
+      "configuration_sha256": "ab366a744cc4cfb13f76b8d9b66bb00c001b89f7f0a8211b27e9c914ff74a12a",
+      "config": [
+        {
+          "tag": "swiglu_erf_r8_d64_m64_seed642",
+          "cell": "swiglu_erf",
+          "rank": 8,
+          "args": {
+            "link": "erf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "relu_gaussian_rbf_r8_d64_m256_seed642",
+      "cell": "relu_gaussian_rbf",
+      "engine": "relu",
+      "algorithm": "joint Armijo population GD, explicitly profiled output intercept",
+      "teacher": "gaussian_rbf",
+      "seed": 642,
+      "config_path": "configs/relu_gaussian_rbf_r8_d64_m256_seed642.json",
+      "configuration_sha256": "0c549be31536f1a0f8f9d2c36618aa76f6a4da9e263c98c460ffa5d4a5804bf9",
+      "config": {
+        "id": "relu_gaussian_rbf_r8_d64_m256_seed642",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "gaussian_rbf",
+        "seed": 642,
+        "m": 256,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.5,
+        "steps": 20000,
+        "profile_intercept": true,
+        "force_time_max": 1500.0,
+        "loss_stop": 0.001,
+        "diagnostic_stride": 25,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "swiglu_gaussian_rbf_r8_d64_m64_seed642",
+      "cell": "swiglu_gaussian_rbf",
+      "engine": "swiglu",
+      "algorithm": "block-rate adaptive Euler population flow, head multiplier .01, profiled output intercept",
+      "teacher": "gaussian_rbf",
+      "seed": 642,
+      "config_path": "configs/swiglu_gaussian_rbf_r8_d64_m64_seed642.json",
+      "configuration_sha256": "ab0499a99f90f597f329ee3807ea63e74c73343ed9b5557d6a556e0c67508041",
+      "config": [
+        {
+          "tag": "swiglu_gaussian_rbf_r8_d64_m64_seed642",
+          "cell": "swiglu_gaussian_rbf",
+          "rank": 8,
+          "args": {
+            "link": "gaussian_rbf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 600.0,
+            "L_stop": 0.1,
+            "max_steps": 5000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 16,
+            "n_diag": 48,
+            "n_z": 24,
+            "n_x": 12,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 642,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pure_sine_control_r8_d64_m128_seed631_b64",
+      "cell": "pure_sine_scale_control",
+      "engine": "relu",
+      "teacher": "sine",
+      "seed": 631,
+      "algorithm": "joint_GD_no_output_intercept",
+      "config_path": "configs/pure_sine_control_r8_d64_m128_seed631_b64.json",
+      "config": {
+        "id": "pure_sine_control_r8_d64_m128_seed631_b64",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 631,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000,
+        "profile_intercept": false,
+        "force_time_max": 1000.0,
+        "loss_stop": 0.02,
+        "diagnostic_stride": 10,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "configuration_sha256": "9b0f45008a5af6be8d07f4baaee1aacf6050cc59dde427501519859aa4dcf5d7",
+      "supplemental": true,
+      "parent_manifest_sha256": "d4cd4231ed810a97e5d72fb286c387bb4fb3ed8faed87e6c8e7d36d932b39239",
+      "parent_configuration_sha256": "8cd25cfe89be8b9bc6a1f5d2bd88e367365c667712b8a02d407bc67cac7320dd"
+    },
+    {
+      "id": "pure_sine_control_r8_d64_m128_seed632_b64",
+      "cell": "pure_sine_scale_control",
+      "engine": "relu",
+      "teacher": "sine",
+      "seed": 632,
+      "algorithm": "joint_GD_no_output_intercept",
+      "config_path": "configs/pure_sine_control_r8_d64_m128_seed632_b64.json",
+      "config": {
+        "id": "pure_sine_control_r8_d64_m128_seed632_b64",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 632,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.0001,
+        "h": 0.05,
+        "steps": 20000,
+        "profile_intercept": false,
+        "force_time_max": 1000.0,
+        "loss_stop": 0.02,
+        "diagnostic_stride": 10,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "configuration_sha256": "455ba76279a45ab9e028811a51a701e3dc632bb7265e65574e347cf1515b6d37",
+      "supplemental": true,
+      "parent_manifest_sha256": "d4cd4231ed810a97e5d72fb286c387bb4fb3ed8faed87e6c8e7d36d932b39239",
+      "parent_configuration_sha256": "298970e5d24eca01aec705a8f52eb03b916f9eaf29deac5f7e8043883d9fffca"
+    },
+    {
+      "id": "pure_sine_larger_r8_d64_m128_seed631_b64",
+      "cell": "pure_sine_scale_larger",
+      "engine": "relu",
+      "teacher": "sine",
+      "seed": 631,
+      "algorithm": "joint_GD_no_output_intercept",
+      "config_path": "configs/pure_sine_larger_r8_d64_m128_seed631_b64.json",
+      "config": {
+        "id": "pure_sine_larger_r8_d64_m128_seed631_b64",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 631,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.05,
+        "steps": 20000,
+        "profile_intercept": false,
+        "force_time_max": 1000.0,
+        "loss_stop": 0.02,
+        "diagnostic_stride": 10,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "configuration_sha256": "191af53df56cbcc4e2c33a78a6333dca8e0cda5317e2cebd60a12bd3e6b5abe3",
+      "supplemental": true,
+      "parent_manifest_sha256": "d4cd4231ed810a97e5d72fb286c387bb4fb3ed8faed87e6c8e7d36d932b39239",
+      "parent_configuration_sha256": "8d5fe51821ec67db05eaaf35c7abd0c23802f44f589dfcebddb5f0aa57ce7e4c"
+    },
+    {
+      "id": "pure_sine_larger_r8_d64_m128_seed632_b64",
+      "cell": "pure_sine_scale_larger",
+      "engine": "relu",
+      "teacher": "sine",
+      "seed": 632,
+      "algorithm": "joint_GD_no_output_intercept",
+      "config_path": "configs/pure_sine_larger_r8_d64_m128_seed632_b64.json",
+      "config": {
+        "id": "pure_sine_larger_r8_d64_m128_seed632_b64",
+        "student": "relu",
+        "optimizer": "gd",
+        "teacher": "sine",
+        "seed": 632,
+        "m": 128,
+        "d": 64,
+        "r": 8,
+        "scale": 0.01,
+        "h": 0.05,
+        "steps": 20000,
+        "profile_intercept": false,
+        "force_time_max": 1000.0,
+        "loss_stop": 0.02,
+        "diagnostic_stride": 10,
+        "diagnostic_priority_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "configuration_sha256": "2d09002ebe2ce8cc41bc9f5a651f86e9b82f40ac2d833b0c4ba3490c27439c02",
+      "supplemental": true,
+      "parent_manifest_sha256": "d4cd4231ed810a97e5d72fb286c387bb4fb3ed8faed87e6c8e7d36d932b39239",
+      "parent_configuration_sha256": "c4885bba949b679f11c1a6904855058de2908b87be7ffc51606df0fdb2bd0b60"
+    }
+  ],
+  "source_sha256": {
+    "GOAL.md": "684db9bf504d2356875561d4756f05baef2672de08b6a436cd6270be325c0b09",
+    "PROTOCOL.md": "47c6663c08dd4aa9203fca735896572ce93c550e4cd5a581718f5430830f5c1c",
+    "SOURCE_REVIEW.json": "f5828f67f5898e0fb3d675f4fadb896405ccad02644e7f9064487116ba7d98de",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "code/ADAPTER_REVIEW.md": "cd5b173b0e82eb822a90b4dfd02bd182ab9184b7860d64f31478a50295575491",
+    "code/DIAGNOSTIC_PRIORITY_VERIFICATION.json": "2f2e13655f82f839ddc236c2329f726dbc5705fbebced24f05269dfbfb41d458",
+    "code/ORDER12_STRESS.json": "1007ece3a8431f6eb4625b5cab1bbf6cf7b3c9e897ef351efc9a889de4b7c93f",
+    "code/SOURCE_MANIFEST.json": "cfa5cc3aba1757df40e141deaad0c819931cc581547911ecd65b2dd2c8070cfa",
+    "code/VERIFICATION.json": "f35155e528ea23f8a8164982f6f5f82b2557565a59a5aa7d37f73b5e74cbff73",
+    "code/VERIFICATION_SUMMARY.json": "1215251ab8829c0a4eb89b655c4055e812495f40934c30309b08d3e753a67679",
+    "code/canonical14_moments.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "code/diagnostic_priority.py": "6427ad389b6ec1955c58ba27e21a9eb9dbcc69843149f72cc6ab96a2157bff1d",
+    "code/frames.py": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+    "code/population.py": "82dc6d9849531a208ae31ebaf4c95fb23bf0d56af5e9e60fd52f7b6dbb69ea34",
+    "code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "code/scaling_run.py": "a818f58a4a64774815c3fd029ad296db3f8ad2168a2cfde0e90dfa29e17950cf",
+    "code/teachers_extra.py": "108d0352b0ff1d72c85ba725622dbe932b2de138d9d4ffbeb144f9c0c327330e",
+    "code/teachers_product.py": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1",
+    "code/teachers_smooth.py": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695",
+    "code/verify_adapter.py": "ac69ee83d7ca27445b5284367c7f78337e5b9fed1ff46af6f3374b3bd6f0294e",
+    "code/verify_diagnostic_priority.py": "607bd86ca36040732dbb7683598acd3bf870f6f7399156da3d7d80a7a681b211",
+    "configs/pure_sine_control_r8_d64_m128_seed631_b64.json": "9b0f45008a5af6be8d07f4baaee1aacf6050cc59dde427501519859aa4dcf5d7",
+    "configs/pure_sine_control_r8_d64_m128_seed632_b64.json": "455ba76279a45ab9e028811a51a701e3dc632bb7265e65574e347cf1515b6d37",
+    "configs/pure_sine_larger_r8_d64_m128_seed631_b64.json": "191af53df56cbcc4e2c33a78a6333dca8e0cda5317e2cebd60a12bd3e6b5abe3",
+    "configs/pure_sine_larger_r8_d64_m128_seed632_b64.json": "2d09002ebe2ce8cc41bc9f5a651f86e9b82f40ac2d833b0c4ba3490c27439c02",
+    "configs/relu_abs_r8_d64_m256_seed641.json": "d0de9e453111f1bdb047257fdb1b3e1838937eb7ec3226d8ca0f35f8a3733eb0",
+    "configs/relu_abs_r8_d64_m256_seed642.json": "54f918e7e02c8b24f5094bc83a0909aa5e6ab95d106617065565891879a6872a",
+    "configs/relu_erf_r8_d64_m256_seed641.json": "e6ab4acbf620f04ff40fd62c98a81b1639d623048a27758c9b121d4601fd7775",
+    "configs/relu_erf_r8_d64_m256_seed642.json": "a3f3aeb6c171c916d8e0880f5962bfd47690456b7fdda528f0e82e82fe35ab88",
+    "configs/relu_gaussian_rbf_r8_d64_m256_seed641.json": "265bbcc107338818ded94e3091bd8c4f9cebb030fbd651c4e1616cdb6d1ae697",
+    "configs/relu_gaussian_rbf_r8_d64_m256_seed642.json": "0c549be31536f1a0f8f9d2c36618aa76f6a4da9e263c98c460ffa5d4a5804bf9",
+    "configs/relu_gelu_r8_d64_m256_seed641.json": "0b02ac65cee44f82fc0de85a93fb9aada422e56d48dc4a2d061af840c43a95cd",
+    "configs/relu_gelu_r8_d64_m256_seed642.json": "71bc74045c58ac6acaea50bd76d6fed1b6800fc5c315a2b21820febe9068bfd5",
+    "configs/relu_h2_r8_d64_m256_seed641.json": "eeccac81c71808fa34596eb9947388104e30aa8c55d15eecca3604574c1d200a",
+    "configs/relu_h2_r8_d64_m256_seed642.json": "f674277b40071efb72feba1e3699bda72ba336c192470cd2b1d8bf6d537db809",
+    "configs/relu_h3_r8_d64_m256_seed641.json": "26ccdad02f3c8f43640b50fe37b0f3e5bcd638bf2ffeee8e6df841fa0d91196b",
+    "configs/relu_h3_r8_d64_m256_seed642.json": "0f75397ef98b6d60ec83661d5d4868198a8212d7d2bb1af9152a2b8a3c21a012",
+    "configs/relu_h4_r8_d64_m256_seed641.json": "a53a40ab4b5a1559e8bc95fde965da48637d51fdcf09c46ab4139d6d9d02f7c8",
+    "configs/relu_h4_r8_d64_m256_seed642.json": "e9cc73799ada22ffc90c5b492caec1e72a53af89bba97b7291829466a032441a",
+    "configs/relu_h5_r8_d64_m256_seed641.json": "681b194073e253c37767951caa0a4a666905b01114c10404e007ed1c1e2089dc",
+    "configs/relu_h5_r8_d64_m256_seed642.json": "426bf004f03c2480125748f586832de2c30298a853a55e47be29a0339641a069",
+    "configs/relu_leaky_relu_r8_d64_m256_seed641.json": "9e0522d301cbb4500cb41f75e729725e49cfb3472789c1d562140476a04daddb",
+    "configs/relu_leaky_relu_r8_d64_m256_seed642.json": "de5706e3443bba42653e4cd5adc0cb5d590894476eeec86a841485906460697f",
+    "configs/relu_relu_r8_d64_m256_seed641.json": "af8ad7bbfcef811da712a85afe70a677de88105daf2549b7d6f75fe17cf76352",
+    "configs/relu_relu_r8_d64_m256_seed642.json": "44fea58f941bfd1d7d2c9dbb8042c7d2182c95f0df20b1637e8ea384598b1861",
+    "configs/relu_silu_r8_d64_m256_seed641.json": "69f840783008c43d0e15965c1ffdd49605e5329bd0df33a3f9fd6b87bb6264a1",
+    "configs/relu_silu_r8_d64_m256_seed642.json": "e3bfdd6dd5a369cc55b37fd2ed114e47738228956b93ff76fe42db55841b2f5e",
+    "configs/relu_sine_r8_d64_m256_seed641.json": "889ddc41832a0900b6fe08a8184eab1d744c705c4829eec14565b6fda1cb2892",
+    "configs/relu_sine_r8_d64_m256_seed642.json": "9172ec7b7b6529099ed6628ed330904c2abbb69ef0e91b98805e3a7ecc5c1604",
+    "configs/relu_softplus_r8_d64_m256_seed641.json": "dc7943ee9bd1bf82989df8ccbc186e2193ac46ca8c160cab1b3047b404f9a7ce",
+    "configs/relu_softplus_r8_d64_m256_seed642.json": "aa8a7da25fa13ffca13f1e5cb515ad1fc89581f036bde6e29ba801ad44ebfd6f",
+    "configs/relu_tanh_r8_d64_m256_seed641.json": "4a683bbb117b4f457235d267399e0ddbd0a431b3a27fab214e97f585783d393c",
+    "configs/relu_tanh_r8_d64_m256_seed642.json": "897827c4be23705fd69a40d95b53920a7ac24645e41ff581c51662031a4bb2b9",
+    "configs/swiglu_abs_r8_d64_m64_seed641.json": "bea0935ec6de1ce33e2b9292bd8d71bdc7f7f5079230a238f5368820a41d6243",
+    "configs/swiglu_abs_r8_d64_m64_seed642.json": "6dcf370d8a5ee73ccf4f2f73fc9a4e3a6b94492f4db58b8c27c9dd14c021892f",
+    "configs/swiglu_erf_r8_d64_m64_seed641.json": "35702b78fa6c70cee63b90b1a3c0f5e91f0cdba0b0b63c95b8d1581aa30b9309",
+    "configs/swiglu_erf_r8_d64_m64_seed642.json": "ab366a744cc4cfb13f76b8d9b66bb00c001b89f7f0a8211b27e9c914ff74a12a",
+    "configs/swiglu_gaussian_rbf_r8_d64_m64_seed641.json": "dec7969c952e593b9a8db7fb0362386c2e8ffc3bf4a4ed5f3d72a37363cb8455",
+    "configs/swiglu_gaussian_rbf_r8_d64_m64_seed642.json": "ab0499a99f90f597f329ee3807ea63e74c73343ed9b5557d6a556e0c67508041",
+    "configs/swiglu_gelu_r8_d64_m64_seed641.json": "a3db9a4cdd4d841e52502e280128e55f84843d137aeaf6667c775a4bcf021bc2",
+    "configs/swiglu_gelu_r8_d64_m64_seed642.json": "6626457a2856810ee41a87d0e053856228d2d2da26e243757b35f0bd3cd83870",
+    "configs/swiglu_h2_r8_d64_m64_seed641.json": "86264ed3534032ee07ce2bae0ed2cfb7e5b28a80e297679c47fe4a47edbc5c43",
+    "configs/swiglu_h2_r8_d64_m64_seed642.json": "13f44941330720fce2210ed40eaf59eeb4ad2b14a4bc3a17265d4a9bc7fb82d0",
+    "configs/swiglu_h3_r8_d64_m64_seed641.json": "1b52252718b6c65870c4507b8f9c967f9e6e9d5e02ccd183eb3a53b030ccc7ac",
+    "configs/swiglu_h3_r8_d64_m64_seed642.json": "a186b9de66b50069d3a81640eeea6e10b43d888c03b70d5e879fd345b25c3abf",
+    "configs/swiglu_h4_r8_d64_m64_seed641.json": "d850e746a1fae175f5198c075a1c3b0b09b119fcc1cf6846028137362170c9cf",
+    "configs/swiglu_h4_r8_d64_m64_seed642.json": "4c3164886b30fb93166359a68fde0bac3b4cab1fbc2c8648922683fb8c189d80",
+    "configs/swiglu_h5_r8_d64_m64_seed641.json": "75339370053e7c730d6b143fb5d72040b7d4f83692bf6d7b179abb7d6f89df04",
+    "configs/swiglu_h5_r8_d64_m64_seed642.json": "57370f6e34ac5de25d392220645ea4bae9a2ecc45e01090a821fa57c1848b72c",
+    "configs/swiglu_leaky_relu_r8_d64_m64_seed641.json": "b9518fe3c7d0173e815d79e14d49c5f7b77e9f254be4b9e0bb9048d90d2e4106",
+    "configs/swiglu_leaky_relu_r8_d64_m64_seed642.json": "00cd54a25f0fde28de4f720abd01e3bd48d43c528ba92b0399e1b2ac3665402e",
+    "configs/swiglu_relu_r8_d64_m64_seed641.json": "c6c180e187dc44c9a6cb23176f2de9180f41ea62f89316ded032e4a1e5331282",
+    "configs/swiglu_relu_r8_d64_m64_seed642.json": "a5eb5e2b5782ba0a22e1d726605edc45a7ede0e5e74ace6ff665093a002f51d1",
+    "configs/swiglu_silu_r8_d64_m64_seed641.json": "e4a0dbdf73d934d12dbec81de228ed255d96af5213f35955d46d74b5ee9f0137",
+    "configs/swiglu_silu_r8_d64_m64_seed642.json": "477236355377fd11958f8e153900142d9f9522220b5c3a718f20d8a2f5a6b507",
+    "configs/swiglu_sine_r8_d64_m64_seed641.json": "ff9bd13c0160fcb860962fefd76c6f0a6341591b4533178db3b287f79d1c0f5e",
+    "configs/swiglu_sine_r8_d64_m64_seed642.json": "0337f93b2e4547c8a4cd7dc843aec76c3e0ad925943e840e95236a5a210fe4f0",
+    "configs/swiglu_softplus_r8_d64_m64_seed641.json": "4a9ea2a2983eb008ecd2e44eb20bd080d47c4c98ac82fd4bd1b4b56ba9141308",
+    "configs/swiglu_softplus_r8_d64_m64_seed642.json": "9e30dbaff05073536aa3abc727cdaae3c1279edaba0d55d048a7787225ade97e",
+    "configs/swiglu_tanh_r8_d64_m64_seed641.json": "9576440fe21973574bf8df4666bce790979ea3bb2e9004112408f03fd2906780",
+    "configs/swiglu_tanh_r8_d64_m64_seed642.json": "d1976a3108023b93566ffce455c432b7fb10b4d7a8c2f2a3165e46ddf69174d6",
+    "diagnostics/audit_saved.py": "964a34a6e69e5f98b22d9bdbb1dcdad3ea13ec84bbb932be1f06d11578dab34b",
+    "diagnostics/stable_relu.py": "23ff122d3d4c62a2a620f23fc8d05a9308b716ab5a7a77ef3c22ea8a496fd299",
+    "diagnostics/test_stable_relu.py": "be5d06ca81cf81b6a2dedaaa75d100694caf120b517062b0c93c1898ab750f7e",
+    "launcher/launch.py": "824490e5d5a717fae0f868429c31f33d67c135b86bfd21fcf2fbae09d9057f37",
+    "launcher/test_launch.py": "c972453f66356927d30987ee90fc214572601ee731afd4d83b45838ff310d64a",
+    "requirements.txt": "c9a6956dbf73f5e73d70afa303c851c246d87533cf02d563a8aac1cc7290629d",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "resource_note": "710s training +180s diagnostics +10s cleanup per arm;30 single-thread workers on verified32CPU with2free;60 arms in two waves;global2100s. Setup separately bounded120s. Original64CPU preparation retained.",
+  "comparison_note": "Both raw additive targets have identical E[Y\u00b2]=1 normalization and retained means. Both learners profile an intercept. Widths, scales and update rules differ; no matched-student superiority claim.",
+  "criterion": "Same checkpoint inside initial1%/5% all-update loss prefixes; Amin gain>=.5; unchanged original AGOP screens; numerical lower refit gain>=.1VarY; later rawloss drop>=.1VarY. Censoring and numerical uncertainty retained.",
+  "resource_variant": {
+    "name": "cpu32_workers30",
+    "parent_manifest_sha256": "179fbbddd2b1d216232da629775dad23ce6ace094d86f74c418d40bbbedbb390",
+    "created_utc": "2026-09-28T16:48:42.934365+00:00",
+    "authorization": "User switched to32 allocated CPUs and requested30 workers.",
+    "scientific_configs_unchanged": true
+  }
+}

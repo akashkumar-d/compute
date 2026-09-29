@@ -1,0 +1,21 @@
+{
+  "status": "approved_for_execution",
+  "manifest_sha256": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+  "reviewer": "codex/root; independent of preparer",
+  "reviewed_utc": "2026-09-28T21:46:26.010094+00:00",
+  "checks": [
+    "Independent design review PASS; all32 configs unchanged from reviewed design9af41b66",
+    "All79 frozen hashes and32 manifest/file objects verified;22 Python sciencefiles byte-identical v7/v8",
+    "Read launcher diff: Linux SERVER-only,32CPU/32GiB/10GiB admission,28singlethreadworkers+4reserved",
+    "24 mocked runtime tests independently rerun PASS; manifest dry-run PASS",
+    "1990sarm/3600sglobal, bounded task-owned cleanup, pending/censored retention, review and restart journals preserved",
+    "External concurrency coordinated with exactly2 live v9workers; no other task-owned training active",
+    "User-designated account verified privately;32CPU allocation and existing NumPy1.26.4/SciPy1.11.4 runtime verified"
+  ],
+  "limitations": [
+    "Static and mocked execution safety checks are not scientific outcome validation",
+    "SwiGLU order2 remains provisional; candidate state/update and trajectory precision review required",
+    "Two reused paired development seeds, varying rank changes signal/baseline/widthperdirection and ReLU refit budget",
+    "Last queued arms may be globally censored; preserve them"
+  ]
+}

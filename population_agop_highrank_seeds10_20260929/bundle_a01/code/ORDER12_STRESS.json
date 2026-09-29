@@ -1,0 +1,26 @@
+[
+  {
+    "teacher": "softplus",
+    "order12_vs32": 3.552713678800501e-15
+  },
+  {
+    "teacher": "silu",
+    "order12_vs32": 7.105427357601002e-15
+  },
+  {
+    "teacher": "gelu",
+    "order12_vs32": 7.105427357601002e-15
+  },
+  {
+    "teacher": "tanh",
+    "order12_vs32": 6.20725693067925e-13
+  },
+  {
+    "teacher": "erf",
+    "order12_vs32": 2.2426505097428162e-14
+  },
+  {
+    "teacher": "gaussian_rbf",
+    "order12_vs32": 7.105427357601002e-15
+  }
+]

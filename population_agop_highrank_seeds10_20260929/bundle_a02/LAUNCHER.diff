@@ -1,0 +1,158 @@
+--- reference/rank_launch.py
++++ launcher/launch.py
+@@ -1,4 +1,4 @@
+-"""Bounded v10 rank-sweep SERVER-only wrapper; dry-run is static.
++"""Bounded ten-seed high-rank cohort (bundle a02) SERVER-only wrapper; dry-run is static.
+ 
+ Fork of the reviewed v9 scheduler; pinned v7/v8 scientific sources unchanged.
+ """
+@@ -148,7 +148,7 @@
+ 
+ 
+ def require_server():
+-    """Rank sweep has no local execution mode."""
++    """High-rank cohort has no local execution mode."""
+     if sys.platform.startswith('linux') and os.environ.get('AGOP_EXECUTION_SITE') == 'SERVER':
+         return 'SERVER'
+     raise RuntimeError('Execution requires Linux and AGOP_EXECUTION_SITE=SERVER')
+@@ -546,45 +546,84 @@
+         raise RuntimeError('Reduced priority could not be established; do not launch')
+ 
+ 
++def build_config(engine, template, cid, cell, seed, changes):
++    """The only construction rule; duplicated verbatim from prepare.py."""
++    if engine == 'relu':
++        if changes:
++            raise ValueError('ReLU configs admit no recipe change')
++        return dict(template, id=cid, seed=seed)
++    (outer,) = template
++    args = dict(outer['args'], seed=seed)
++    for key, value in changes.items():
++        if key not in ('link', 'head_lr') or key not in args:
++            raise ValueError('Only link/head_lr may change in a SwiGLU recipe')
++        args[key] = value
++    return [dict(outer, tag=cid, cell=cell, args=args)]
++
++
+ def validate_protocol(manifest, root=ROOT):
+-    """Only the independently designed, fixed rank sweep is admitted."""
+-    expected = dict(workers=28, reserved_cpus=4, min_available_memory_gib=32,
+-                    min_free_disk_gib=10, global_seconds=3600, per_arm_seconds=1990,
+-                    diagnostic_reserve_seconds=180)
+-    if manifest['runtime'] != expected or manifest.get('dependency') is not None:
+-        raise ValueError('Runtime must equal the frozen v10 rank-sweep bounds')
+-    design = load_json(root / 'DESIGN.snapshot.json')
+-    if sha256(root / 'DESIGN.snapshot.json') != manifest['design_sha256']:
+-        raise ValueError('Design hash changed')
+-    jobs = {j['id']: j for j in design['jobs']}
+-    if len(jobs) != 32 or len(manifest['configs']) != 32:
+-        raise ValueError('Exactly32 designed arms are required')
+-    expected_cells = {(student, teacher, rank, seed)
+-                      for student in ('relu','swiglu') for teacher in ('h2','relu')
+-                      for rank in (2,4,8,16) for seed in (641,642)}
+-    observed = set()
+-    queue = []
+-    for entry in manifest['configs']:
+-        job = jobs.get(entry['id'])
+-        if job is None or entry['config'] != job['planned_config']:
+-            raise ValueError('Config differs from the independently declared design')
+-        key = (job['student'],job['teacher'],job['rank'],job['seed'])
+-        if key in observed or key not in expected_cells:
+-            raise ValueError('Missing or duplicate designed rank/teacher/student/seed')
+-        observed.add(key)
+-        if (entry['engine'] != job['student'] or entry['student'] != job['student'] or
+-                entry['teacher'] != job['teacher'] or entry['rank'] != job['rank'] or
+-                entry['seed'] != job['seed']):
+-            raise ValueError('Manifest labels do not match designed config')
+-        cfg = entry['config']
+-        tag = cfg['id'] if entry['engine'] == 'relu' else cfg[0]['tag']
+-        if tag != entry['id']:
+-            raise ValueError('Output id must match scientific config id')
+-        queue.append((-job['rank'],job['seed'],job['teacher'],job['student']))
+-    if observed != expected_cells or queue != sorted(queue):
+-        raise ValueError('Require descending rank then seed/teacher/student interleaved queue')
+-    if manifest.get('criterion') != design['criterion']:
+-        raise ValueError('Success criteria must remain exactly the design criteria')
++    """Only this bundle's slice of the preregistered ten-seed high-rank design."""
++    bundle_name = 'a02'
++    expected_runtime = dict(workers=28, reserved_cpus=4, min_available_memory_gib=32,
++                            min_free_disk_gib=10, global_seconds=3600, per_arm_seconds=1990,
++                            diagnostic_reserve_seconds=180)
++    if manifest['runtime'] != expected_runtime:
++        raise ValueError('Runtime must equal the frozen v10 rank-study bounds')
++    design_path = relative_file(root, 'DESIGN.json')
++    if sha256(design_path) != '4f389032de5eefa9d457044b504bdea214481cfd3426ff284c7d9d5872d72456' or manifest.get('design_sha256') != '4f389032de5eefa9d457044b504bdea214481cfd3426ff284c7d9d5872d72456':
++        raise ValueError('Preregistered design changed')
++    design = load_json(design_path)
++    declared = design['bundles'][bundle_name]
++    if manifest.get('dependency') != declared['dependency']:
++        raise ValueError('Dependency must equal the declared bundle chain')
++    audit_path = relative_file(root, 'FRESH_SEED_AUDIT.json')
++    if sha256(audit_path) != '61193c2afdda447f070aa1d1c7b556504fcc4a0468faab03d0996cfdbe619555' or manifest.get('fresh_seed_audit_sha256') != '61193c2afdda447f070aa1d1c7b556504fcc4a0468faab03d0996cfdbe619555':
++        raise ValueError('Precreation seed audit changed')
++    audit = load_json(audit_path)
++    seeds = list(range(9351, 9361))
++    if (design.get('seeds') != seeds or audit.get('seeds') != seeds or audit.get('read_errors') or
++            audit.get('undeclared_collisions')):
++        raise ValueError('Fresh-seed audit does not establish the fixed unused range')
++    reference_path = relative_file(root, 'reference/rank_MANIFEST.json')
++    if sha256(reference_path) != 'e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01':
++        raise ValueError('Reference rank-study manifest changed')
++    reference = load_json(reference_path)
++    templates = {}
++    for name, info in design['templates'].items():
++        path = relative_file(root, info['path'])
++        if sha256(path) != info['sha256']:
++            raise ValueError('Template configuration changed: ' + name)
++        templates[name] = load_json(path)
++    cells = {c['cell']: c for c in design['cells']}
++    jobs = [j for j in design['jobs'] if j['bundle'] == bundle_name]
++    if not jobs or [e['id'] for e in manifest['configs']] != [j['id'] for j in jobs]:
++        raise ValueError('Configs must equal this bundle slice in the declared queue order')
++    if manifest.get('total_arms') != len(jobs):
++        raise ValueError('Arm count differs from the declared slice')
++    for entry, job in zip(manifest['configs'], jobs):
++        cell = cells[job['cell']]
++        if job['seed'] not in seeds:
++            raise ValueError('Seed outside the preregistered fresh range')
++        if job['seed'] in cell.get('reused_existing_seeds', []):
++            raise ValueError('A reused existing outcome must not be rerun')
++        cid = '%s_d64_m%d_seed%d' % (cell['cell'], cell['width'], job['seed'])
++        cfg = build_config(cell['engine'], templates[cell['template']], cid, cell['cell'],
++                           job['seed'], cell['changes'])
++        if (job['id'] != cid or entry['id'] != cid or entry['config'] != cfg or
++                entry['engine'] != cell['engine'] or entry['student'] != cell['engine'] or
++                entry['teacher'] != cell['teacher'] or entry['rank'] != cell['rank'] or
++                entry['width'] != cell['width'] or entry['seed'] != job['seed'] or
++                entry['cell'] != cell['cell'] or entry['config_path'] != 'configs/%s.json' % cid):
++            raise ValueError('Configuration differs from template plus declared changes: ' + cid)
++        path = relative_file(root, entry['config_path'])
++        if sha256(path) != entry['configuration_sha256'] or load_json(path) != cfg:
++            raise ValueError('Configuration file differs from its frozen object/hash: ' + cid)
++    for name, digest in reference['source_sha256'].items():
++        if name.startswith(('code/', 'diagnostics/', 'swiglu/')) or name in ('TEACHERS.json', 'requirements.txt'):
++            if manifest['source_sha256'].get(name) != digest or sha256(relative_file(root, name)) != digest:
++                raise ValueError('Scientific source changed from the reviewed rank-study bundle: ' + name)
++    if manifest.get('criterion') != reference['criterion'] or design.get('criterion') != reference['criterion']:
++        raise ValueError('Original 1percent/5percent same-state criteria must remain unchanged')
+ 
+ 
+ def require_review(root, manifest_hash):
+@@ -602,7 +641,7 @@
+ 
+     def __enter__(self):
+         import fcntl
+-        self.stream = (self.root / '.rank_sweep.lock').open('a+')
++        self.stream = (self.root / '.highrank_s10_a02.lock').open('a+')
+         try:
+             fcntl.flock(self.stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
+             self.stream.seek(0)
+@@ -640,7 +679,7 @@
+ def main(argv=None, root=ROOT):
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--dry-run", action="store_true")
+-    parser.add_argument("--execution-dir", default="execution",
++    parser.add_argument("--execution-dir", default="execution_a02",
+                         help="New single directory name inside the bundle; existing names are refused")
+     args = parser.parse_args(argv)
+     if not NAME.fullmatch(args.execution_dir):

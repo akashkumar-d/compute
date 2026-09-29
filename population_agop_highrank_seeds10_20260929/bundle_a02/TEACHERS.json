@@ -1,0 +1,320 @@
+{
+  "schema": "raw_gaussian_scalar_moments_v1",
+  "normalization": "Uncentered q; E[Y\u00b2]=1 for additive normalized teacher",
+  "links": {
+    "h2": {
+      "name": "h2",
+      "terms": [
+        [
+          1.0,
+          "h2"
+        ]
+      ],
+      "definition": "He_2(z)/sqrt(2!) (probabilists Hermite)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 1.0,
+      "derivative_second": 2.0,
+      "raw_zq": 0.0,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "h3": {
+      "name": "h3",
+      "terms": [
+        [
+          1.0,
+          "h3"
+        ]
+      ],
+      "definition": "He_3(z)/sqrt(3!) (probabilists Hermite)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 1.0,
+      "derivative_second": 3.0,
+      "raw_zq": 0.0,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "h4": {
+      "name": "h4",
+      "terms": [
+        [
+          1.0,
+          "h4"
+        ]
+      ],
+      "definition": "He_4(z)/sqrt(4!) (probabilists Hermite)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 1.0,
+      "derivative_second": 4.0,
+      "raw_zq": 0.0,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "h5": {
+      "name": "h5",
+      "terms": [
+        [
+          1.0,
+          "h5"
+        ]
+      ],
+      "definition": "He_5(z)/sqrt(5!) (probabilists Hermite)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 1.0,
+      "derivative_second": 5.0,
+      "raw_zq": 0.0,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "relu": {
+      "name": "relu",
+      "terms": [
+        [
+          1.0,
+          "relu"
+        ]
+      ],
+      "definition": "max(z,0)",
+      "kinks": [
+        0.0
+      ],
+      "raw_mean": 0.3989422804014327,
+      "raw_second": 0.5,
+      "derivative_second": 0.5,
+      "raw_zq": 0.5,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "leaky_relu": {
+      "name": "leaky_relu",
+      "terms": [
+        [
+          1.0,
+          "leaky_relu"
+        ]
+      ],
+      "definition": "z for z>=0;0.1*z otherwise",
+      "kinks": [
+        0.0
+      ],
+      "raw_mean": 0.35904805236128945,
+      "raw_second": 0.505,
+      "derivative_second": 0.505,
+      "raw_zq": 0.55,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "abs": {
+      "name": "abs",
+      "terms": [
+        [
+          1.0,
+          "abs"
+        ]
+      ],
+      "definition": "abs(z)",
+      "kinks": [
+        0.0
+      ],
+      "raw_mean": 0.7978845608028654,
+      "raw_second": 1.0,
+      "derivative_second": 1.0,
+      "raw_zq": 0.0,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "softplus": {
+      "name": "softplus",
+      "terms": [
+        [
+          1.0,
+          "softplus"
+        ]
+      ],
+      "definition": "log(1+exp(z)), evaluated as logaddexp(0,z)",
+      "kinks": [],
+      "raw_mean": 0.80605918334744,
+      "raw_second": 0.9212459088593004,
+      "derivative_second": 0.293379035858093,
+      "raw_zq": 0.5,
+      "moment_source": "fixed independent full-line scalar quadrature",
+      "moment_error_estimate": [
+        3.035429189059209e-14,
+        1.0241295657452058e-14,
+        5.393642492499199e-15
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "silu": {
+      "name": "silu",
+      "terms": [
+        [
+          1.0,
+          "silu"
+        ]
+      ],
+      "definition": "z*sigmoid(z)",
+      "kinks": [],
+      "raw_mean": 0.20662096414190703,
+      "raw_second": 0.3557755198173522,
+      "derivative_second": 0.37948235163282934,
+      "raw_zq": 0.5,
+      "moment_source": "fixed independent full-line scalar quadrature",
+      "moment_error_estimate": [
+        2.279567635710098e-14,
+        4.286446062868017e-15,
+        6.520341964358688e-15
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "gelu": {
+      "name": "gelu",
+      "terms": [
+        [
+          1.0,
+          "gelu"
+        ]
+      ],
+      "definition": "z*Phi(z), exact Gaussian CDF",
+      "kinks": [],
+      "raw_mean": 0.28209479177387814,
+      "raw_second": 0.4252214825702987,
+      "derivative_second": 0.4558508656492871,
+      "raw_zq": 0.5,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "sine": {
+      "name": "sine",
+      "terms": [
+        [
+          1.0,
+          "sine"
+        ]
+      ],
+      "definition": "sin(z)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 0.43233235838169365,
+      "derivative_second": 0.5676676416183064,
+      "raw_zq": 0.6065306597126334,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "tanh": {
+      "name": "tanh",
+      "terms": [
+        [
+          1.0,
+          "tanh"
+        ]
+      ],
+      "definition": "tanh(z)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 0.3942944903978412,
+      "derivative_second": 0.4644029024482683,
+      "raw_zq": 0.6057055096021589,
+      "moment_source": "fixed independent full-line scalar quadrature",
+      "moment_error_estimate": [
+        1.0435674053257617e-14,
+        8.640628064177227e-15,
+        5.188695122299842e-15
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "erf": {
+      "name": "erf",
+      "terms": [
+        [
+          1.0,
+          "erf"
+        ]
+      ],
+      "definition": "erf(z)",
+      "kinks": [],
+      "raw_mean": 0.0,
+      "raw_second": 0.46455905439753997,
+      "derivative_second": 0.5694100347337416,
+      "raw_zq": 0.6514700158705599,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    },
+    "gaussian_rbf": {
+      "name": "gaussian_rbf",
+      "terms": [
+        [
+          1.0,
+          "gaussian_rbf"
+        ]
+      ],
+      "definition": "exp(-z^2/2)",
+      "kinks": [],
+      "raw_mean": 0.7071067811865475,
+      "raw_second": 0.5773502691896258,
+      "derivative_second": 0.19245008972987526,
+      "raw_zq": 0.0,
+      "moment_source": "closed Gaussian formula",
+      "moment_error_estimate": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalization": "Raw mean retained; additive target normalized to E[Y^2]=1; no centering"
+    }
+  }
+}

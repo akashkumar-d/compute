@@ -1,0 +1,2712 @@
+{
+  "protocol_version": "v11_highrank_ten_fresh_seeds",
+  "bundle": "a03",
+  "created_utc": "2026-09-29T01:03:32.882718+00:00",
+  "created_before_outcomes": true,
+  "phase": "ten_fresh_seed_publication_cohort_for_selected_highrank_cells",
+  "total_arms": 24,
+  "arms_per_cell_in_this_bundle": {
+    "v11_hr_swiglu_gaussian_rbf_r8": 4,
+    "v11_hr_swiglu_h2_r4": 10,
+    "v11_hr_swiglu_h2_r2": 10
+  },
+  "design_denominator_per_cell": 10,
+  "independent_seed_count": 10,
+  "development_seeds_not_pooled": [
+    641,
+    642
+  ],
+  "reused_existing_outcomes": {
+    "v11_hr_relu_h2_r16": {
+      "seeds": [
+        9351,
+        9352,
+        9353,
+        9354
+      ],
+      "source": "population_agop_relu_r16_confirmation_20260928 (remote run agop-relu-r16-confirm-20260928-a01)",
+      "note": "Identical recipe (v10 rank-16 h2 ReLU config with only id/seed changed); completed, verified outcomes are reused and not rerun."
+    }
+  },
+  "ranks": [
+    2,
+    4,
+    8
+  ],
+  "dimension": 64,
+  "runtime": {
+    "workers": 28,
+    "reserved_cpus": 4,
+    "min_available_memory_gib": 32,
+    "min_free_disk_gib": 10,
+    "global_seconds": 3600,
+    "per_arm_seconds": 1990,
+    "diagnostic_reserve_seconds": 180
+  },
+  "dependency": {
+    "run": "agop-highrank-s10-20260929-a02",
+    "max_wait_seconds": 9000
+  },
+  "design_sha256": "4f389032de5eefa9d457044b504bdea214481cfd3426ff284c7d9d5872d72456",
+  "fresh_seed_audit_sha256": "61193c2afdda447f070aa1d1c7b556504fcc4a0468faab03d0996cfdbe619555",
+  "criterion": {
+    "initial_whole_update_loss_max_min": [
+      1.01,
+      1.05
+    ],
+    "same_checkpoint_minimum_alignment_gain": 0.5,
+    "same_checkpoint_refit_gain_over_variance": 0.1,
+    "later_same_run_loss_drop_over_variance": 0.1,
+    "relative_agop_guard": 1e-09,
+    "refit_sensitivity_or_solver_tolerance": 1e-07,
+    "no_threshold_changes": true,
+    "swiglu_refit": "four-cutoff sensitivity envelope; not formal oracle improvement bound",
+    "relu_refit": "bounded normalized readout; l2=32, l1=64sqrt(r); numerical solver lower difference",
+    "authoritative_aggregation": "Canonical summarize_coverage.py .1Var same-state criterion; do not use ReLU native legacy primary_event_rule/refit flags based on raw >1e-5."
+  },
+  "configs": [
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9357,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357.json",
+      "configuration_sha256": "5cf431957c694de67fe9f162a99dacd369b6cfde8389ce0e00049ef42f8f084c",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357",
+          "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+          "rank": 8,
+          "args": {
+            "link": "gaussian_rbf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9357,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9357
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9358,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358.json",
+      "configuration_sha256": "ed591cb695bbd216a2867bdcfd6007c7396bba86de203d260aa8a1280706369c",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358",
+          "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+          "rank": 8,
+          "args": {
+            "link": "gaussian_rbf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9358,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9358
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9359,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.json",
+      "configuration_sha256": "ee30454468631012ac58d453e29ce49c87f0db87fcf2e30557c0938291651949",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359",
+          "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+          "rank": 8,
+          "args": {
+            "link": "gaussian_rbf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9359,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9359
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9360,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360.json",
+      "configuration_sha256": "faf58606eab45dbf2cd9da0cd7a0ecd9ab42d13100bcc82fde22ce71c393dd98",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360",
+          "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+          "rank": 8,
+          "args": {
+            "link": "gaussian_rbf",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9360,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9360
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9351,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9351.json",
+      "configuration_sha256": "d83a82dfab44199740166806aaa372607bf334cc372b614f5a2a69700e09e925",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9351,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9351
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9351"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9352,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9352.json",
+      "configuration_sha256": "8a64d819992339b939535fd266da9a5642980631e7adbc3a35d9ddc9da6f6cd0",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9352,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9352
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9352"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9353",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9353",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9353,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9353.json",
+      "configuration_sha256": "055fd056e26a17923ab843979e79f31225d819c36ef243b4f7117ace26a3e88d",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9353",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9353,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9353
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9353"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9354",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9354",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9354,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9354.json",
+      "configuration_sha256": "b15e23eb6d6c1075da5860e7e53b9579544a8d4fe4f8619b235d678f2859664f",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9354",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9354,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9354
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9354"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9355",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9355",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9355,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9355.json",
+      "configuration_sha256": "e5d5681fbb0a5945d50c4558e0df32cbe82d40bbf51226a266af730ab5f4e951",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9355",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9355,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9355
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9355"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9356,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9356.json",
+      "configuration_sha256": "e4859d3c5daba43fb2b4e10899533a5488d47890f41917bb4db65774c2ac9ef3",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9356,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9356
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9356"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9357,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9357.json",
+      "configuration_sha256": "d673af4fe93ed492a0da9e8b0d7550e878ecb62e4e18ebf590ced9bc873e1a87",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9357,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9357
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9357"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9358,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9358.json",
+      "configuration_sha256": "8d89097bb3aac4d2d821da2543944d8814c83dfd9371017b62a84038dbea430c",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9358,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9358
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9358"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9359",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9359",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9359,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9359.json",
+      "configuration_sha256": "5fcf08e3ffbf9e706484bf219bbb8206d7d9e1f558332678c4274352ea803023",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9359",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9359,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9359
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9359"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9360,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9360.json",
+      "configuration_sha256": "17a50428fa6f58eb268342accd20ebc12738ef33fc69f8b4219aefc0e0b22dab",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
+          "cell": "v11_hr_swiglu_h2_r4",
+          "rank": 4,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed": 9360,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9360
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9360"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9351",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9351",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9351,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9351.json",
+      "configuration_sha256": "ee227b0e9de0b6f0961ba352094d9803ccc327a2e4e3add06b4c898e62c3c2ba",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9351",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9351,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9351
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9351"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9352",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9352",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9352,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9352.json",
+      "configuration_sha256": "5845c5965a8d34c84cb3c3b4a2e849e4af10c8abfa9961d832eeaeddfabd34f3",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9352",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9352,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9352
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9352"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9353",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9353",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9353,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9353.json",
+      "configuration_sha256": "66ec3a8d12988f4ff7687b118ccc9de772b197d5b2372e7e05d1447dbc7233db",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9353",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9353,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9353
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9353"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9354",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9354",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9354,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9354.json",
+      "configuration_sha256": "70991e4c86b07eb6fb589b104338463fbfc9eddb000f2932bd01e4f040888c2f",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9354",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9354,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9354
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9354"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9355",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9355",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9355,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9355.json",
+      "configuration_sha256": "fbf653f5fdb9ed0ee2b406bd658a5684115e875550893a57a5c74a25d7d4e8e1",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9355",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9355,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9355
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9355"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9356",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9356",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9356,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9356.json",
+      "configuration_sha256": "5b1b1e335d4f5e3916e6f188999bbe6500d18692235a0427cf741556a4621f65",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9356",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9356,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9356
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9356"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9357",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9357",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9357,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9357.json",
+      "configuration_sha256": "7237bb259a5aaccbbfc8666b4e7bee541e6ff443dbd5ce3ad329c26a290ac269",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9357",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9357,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9357
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9357"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9358",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9358",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9358,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9358.json",
+      "configuration_sha256": "22b1b8d3c28b1b9b0e95167915a5f6174a34c48473a4b3eb923ab4ac4ef11d2d",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9358",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9358,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9358
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9358"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9359",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9359",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9359,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9359.json",
+      "configuration_sha256": "2be25e1f64788bf3729aa62d270ed33969edc80d51d1bed42be9870265fa2f27",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9359",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9359,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9359
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9359"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9360",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9360",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9360,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9360.json",
+      "configuration_sha256": "09bc51359c07fff640f440f30e2041095e3078393eb89dabd418beda887f6ceb",
+      "config": [
+        {
+          "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9360",
+          "cell": "v11_hr_swiglu_h2_r2",
+          "rank": 2,
+          "args": {
+            "link": "h2",
+            "alpha": 1.0,
+            "s": 0.1,
+            "head_ratio": 1.0,
+            "h": 0.01,
+            "dt_max": 50.0,
+            "t_max": 3000.0,
+            "L_stop": 0.01,
+            "max_steps": 20000,
+            "cp_ratio": 1.06,
+            "cp_min": 0.5,
+            "dl_ratio": 1.5,
+            "n_pair": 32,
+            "n_diag": 96,
+            "n_z": 48,
+            "n_x": 24,
+            "d": 64,
+            "m": 64,
+            "c": [
+              1.0,
+              1.0
+            ],
+            "seed": 9360,
+            "head_lr": 0.01,
+            "diagnostic_priority_fractions": [
+              0.25,
+              0.5,
+              0.75
+            ]
+          }
+        }
+      ],
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9360
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9360"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    }
+  ],
+  "arms": [
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9357,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357.json",
+      "configuration_sha256": "5cf431957c694de67fe9f162a99dacd369b6cfde8389ce0e00049ef42f8f084c",
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9357
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9358,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358.json",
+      "configuration_sha256": "ed591cb695bbd216a2867bdcfd6007c7396bba86de203d260aa8a1280706369c",
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9358
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9359,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.json",
+      "configuration_sha256": "ee30454468631012ac58d453e29ce49c87f0db87fcf2e30557c0938291651949",
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9359
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360",
+      "tag": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360",
+      "cell": "v11_hr_swiglu_gaussian_rbf_r8",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "gaussian_rbf",
+      "rank": 8,
+      "seed": 9360,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r8+link=gaussian_rbf",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r8_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360.json",
+      "configuration_sha256": "faf58606eab45dbf2cd9da0cd7a0ecd9ab42d13100bcc82fde22ce71c393dd98",
+      "changes_from_template": {
+        "link": {
+          "before": "h2",
+          "after": "gaussian_rbf"
+        },
+        "seed": {
+          "before": 641,
+          "after": 9360
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r8_d64_m64_seed641",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r8",
+          "after": "v11_hr_swiglu_gaussian_rbf_r8"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9351",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9351,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9351.json",
+      "configuration_sha256": "d83a82dfab44199740166806aaa372607bf334cc372b614f5a2a69700e09e925",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9351
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9351"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9352",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9352,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9352.json",
+      "configuration_sha256": "8a64d819992339b939535fd266da9a5642980631e7adbc3a35d9ddc9da6f6cd0",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9352
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9352"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9353",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9353",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9353,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9353.json",
+      "configuration_sha256": "055fd056e26a17923ab843979e79f31225d819c36ef243b4f7117ace26a3e88d",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9353
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9353"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9354",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9354",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9354,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9354.json",
+      "configuration_sha256": "b15e23eb6d6c1075da5860e7e53b9579544a8d4fe4f8619b235d678f2859664f",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9354
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9354"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9355",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9355",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9355,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9355.json",
+      "configuration_sha256": "e5d5681fbb0a5945d50c4558e0df32cbe82d40bbf51226a266af730ab5f4e951",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9355
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9355"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9356",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9356,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9356.json",
+      "configuration_sha256": "e4859d3c5daba43fb2b4e10899533a5488d47890f41917bb4db65774c2ac9ef3",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9356
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9356"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9357",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9357,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9357.json",
+      "configuration_sha256": "d673af4fe93ed492a0da9e8b0d7550e878ecb62e4e18ebf590ced9bc873e1a87",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9357
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9357"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9358",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9358,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9358.json",
+      "configuration_sha256": "8d89097bb3aac4d2d821da2543944d8814c83dfd9371017b62a84038dbea430c",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9358
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9358"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9359",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9359",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9359,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9359.json",
+      "configuration_sha256": "5fcf08e3ffbf9e706484bf219bbb8206d7d9e1f558332678c4274352ea803023",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9359
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9359"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
+      "tag": "v11_hr_swiglu_h2_r4_d64_m64_seed9360",
+      "cell": "v11_hr_swiglu_h2_r4",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 4,
+      "seed": 9360,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r4",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r4_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9360.json",
+      "configuration_sha256": "17a50428fa6f58eb268342accd20ebc12738ef33fc69f8b4219aefc0e0b22dab",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9360
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r4_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r4_d64_m64_seed9360"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r4",
+          "after": "v11_hr_swiglu_h2_r4"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9351",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9351",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9351,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9351.json",
+      "configuration_sha256": "ee227b0e9de0b6f0961ba352094d9803ccc327a2e4e3add06b4c898e62c3c2ba",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9351
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9351"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9352",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9352",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9352,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9352.json",
+      "configuration_sha256": "5845c5965a8d34c84cb3c3b4a2e849e4af10c8abfa9961d832eeaeddfabd34f3",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9352
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9352"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9353",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9353",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9353,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9353.json",
+      "configuration_sha256": "66ec3a8d12988f4ff7687b118ccc9de772b197d5b2372e7e05d1447dbc7233db",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9353
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9353"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9354",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9354",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9354,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9354.json",
+      "configuration_sha256": "70991e4c86b07eb6fb589b104338463fbfc9eddb000f2932bd01e4f040888c2f",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9354
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9354"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9355",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9355",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9355,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9355.json",
+      "configuration_sha256": "fbf653f5fdb9ed0ee2b406bd658a5684115e875550893a57a5c74a25d7d4e8e1",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9355
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9355"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9356",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9356",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9356,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9356.json",
+      "configuration_sha256": "5b1b1e335d4f5e3916e6f188999bbe6500d18692235a0427cf741556a4621f65",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9356
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9356"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9357",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9357",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9357,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9357.json",
+      "configuration_sha256": "7237bb259a5aaccbbfc8666b4e7bee541e6ff443dbd5ce3ad329c26a290ac269",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9357
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9357"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9358",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9358",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9358,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9358.json",
+      "configuration_sha256": "22b1b8d3c28b1b9b0e95167915a5f6174a34c48473a4b3eb923ab4ac4ef11d2d",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9358
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9358"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9359",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9359",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9359,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9359.json",
+      "configuration_sha256": "2be25e1f64788bf3729aa62d270ed33969edc80d51d1bed42be9870265fa2f27",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9359
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9359"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    },
+    {
+      "id": "v11_hr_swiglu_h2_r2_d64_m64_seed9360",
+      "tag": "v11_hr_swiglu_h2_r2_d64_m64_seed9360",
+      "cell": "v11_hr_swiglu_h2_r2",
+      "engine": "swiglu",
+      "student": "swiglu",
+      "teacher": "h2",
+      "rank": 2,
+      "seed": 9360,
+      "width": 64,
+      "supplemental": false,
+      "recipe": "swiglu_h2_r2",
+      "template": "population_agop_rank_sweep_20260928/bundle/configs/v10_rank_swiglu_h2_r2_d64_m64_seed641.json",
+      "config_path": "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9360.json",
+      "configuration_sha256": "09bc51359c07fff640f440f30e2041095e3078393eb89dabd418beda887f6ceb",
+      "changes_from_template": {
+        "seed": {
+          "before": 641,
+          "after": 9360
+        },
+        "tag": {
+          "before": "v10_rank_swiglu_h2_r2_d64_m64_seed641",
+          "after": "v11_hr_swiglu_h2_r2_d64_m64_seed9360"
+        },
+        "cell": {
+          "before": "v10_rank_swiglu_h2_r2",
+          "after": "v11_hr_swiglu_h2_r2"
+        }
+      },
+      "seed_status": "fresh_preregistered_unused_in_this_cell"
+    }
+  ],
+  "source_sha256": {
+    "DESIGN.json": "4f389032de5eefa9d457044b504bdea214481cfd3426ff284c7d9d5872d72456",
+    "FRESH_SEED_AUDIT.json": "61193c2afdda447f070aa1d1c7b556504fcc4a0468faab03d0996cfdbe619555",
+    "LAUNCHER.diff": "0b1945736fe22164e653a1998c992b20e62a546593d66eab9c3c5b54c931e630",
+    "SOURCE_REVIEW.json": "f5828f67f5898e0fb3d675f4fadb896405ccad02644e7f9064487116ba7d98de",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "code/ADAPTER_REVIEW.md": "cd5b173b0e82eb822a90b4dfd02bd182ab9184b7860d64f31478a50295575491",
+    "code/DIAGNOSTIC_PRIORITY_VERIFICATION.json": "2f2e13655f82f839ddc236c2329f726dbc5705fbebced24f05269dfbfb41d458",
+    "code/ORDER12_STRESS.json": "1007ece3a8431f6eb4625b5cab1bbf6cf7b3c9e897ef351efc9a889de4b7c93f",
+    "code/SOURCE_MANIFEST.json": "cfa5cc3aba1757df40e141deaad0c819931cc581547911ecd65b2dd2c8070cfa",
+    "code/VERIFICATION.json": "f35155e528ea23f8a8164982f6f5f82b2557565a59a5aa7d37f73b5e74cbff73",
+    "code/VERIFICATION_SUMMARY.json": "1215251ab8829c0a4eb89b655c4055e812495f40934c30309b08d3e753a67679",
+    "code/canonical14_moments.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "code/diagnostic_priority.py": "6427ad389b6ec1955c58ba27e21a9eb9dbcc69843149f72cc6ab96a2157bff1d",
+    "code/frames.py": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+    "code/population.py": "82dc6d9849531a208ae31ebaf4c95fb23bf0d56af5e9e60fd52f7b6dbb69ea34",
+    "code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "code/scaling_run.py": "a818f58a4a64774815c3fd029ad296db3f8ad2168a2cfde0e90dfa29e17950cf",
+    "code/teachers_extra.py": "108d0352b0ff1d72c85ba725622dbe932b2de138d9d4ffbeb144f9c0c327330e",
+    "code/teachers_product.py": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1",
+    "code/teachers_smooth.py": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695",
+    "code/verify_adapter.py": "ac69ee83d7ca27445b5284367c7f78337e5b9fed1ff46af6f3374b3bd6f0294e",
+    "code/verify_diagnostic_priority.py": "607bd86ca36040732dbb7683598acd3bf870f6f7399156da3d7d80a7a681b211",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357.json": "5cf431957c694de67fe9f162a99dacd369b6cfde8389ce0e00049ef42f8f084c",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358.json": "ed591cb695bbd216a2867bdcfd6007c7396bba86de203d260aa8a1280706369c",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.json": "ee30454468631012ac58d453e29ce49c87f0db87fcf2e30557c0938291651949",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360.json": "faf58606eab45dbf2cd9da0cd7a0ecd9ab42d13100bcc82fde22ce71c393dd98",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9351.json": "ee227b0e9de0b6f0961ba352094d9803ccc327a2e4e3add06b4c898e62c3c2ba",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9352.json": "5845c5965a8d34c84cb3c3b4a2e849e4af10c8abfa9961d832eeaeddfabd34f3",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9353.json": "66ec3a8d12988f4ff7687b118ccc9de772b197d5b2372e7e05d1447dbc7233db",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9354.json": "70991e4c86b07eb6fb589b104338463fbfc9eddb000f2932bd01e4f040888c2f",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9355.json": "fbf653f5fdb9ed0ee2b406bd658a5684115e875550893a57a5c74a25d7d4e8e1",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9356.json": "5b1b1e335d4f5e3916e6f188999bbe6500d18692235a0427cf741556a4621f65",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9357.json": "7237bb259a5aaccbbfc8666b4e7bee541e6ff443dbd5ce3ad329c26a290ac269",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9358.json": "22b1b8d3c28b1b9b0e95167915a5f6174a34c48473a4b3eb923ab4ac4ef11d2d",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9359.json": "2be25e1f64788bf3729aa62d270ed33969edc80d51d1bed42be9870265fa2f27",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9360.json": "09bc51359c07fff640f440f30e2041095e3078393eb89dabd418beda887f6ceb",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9351.json": "d83a82dfab44199740166806aaa372607bf334cc372b614f5a2a69700e09e925",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9352.json": "8a64d819992339b939535fd266da9a5642980631e7adbc3a35d9ddc9da6f6cd0",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9353.json": "055fd056e26a17923ab843979e79f31225d819c36ef243b4f7117ace26a3e88d",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9354.json": "b15e23eb6d6c1075da5860e7e53b9579544a8d4fe4f8619b235d678f2859664f",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9355.json": "e5d5681fbb0a5945d50c4558e0df32cbe82d40bbf51226a266af730ab5f4e951",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9356.json": "e4859d3c5daba43fb2b4e10899533a5488d47890f41917bb4db65774c2ac9ef3",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9357.json": "d673af4fe93ed492a0da9e8b0d7550e878ecb62e4e18ebf590ced9bc873e1a87",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9358.json": "8d89097bb3aac4d2d821da2543944d8814c83dfd9371017b62a84038dbea430c",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9359.json": "5fcf08e3ffbf9e706484bf219bbb8206d7d9e1f558332678c4274352ea803023",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9360.json": "17a50428fa6f58eb268342accd20ebc12738ef33fc69f8b4219aefc0e0b22dab",
+    "diagnostics/audit_saved.py": "964a34a6e69e5f98b22d9bdbb1dcdad3ea13ec84bbb932be1f06d11578dab34b",
+    "diagnostics/stable_relu.py": "23ff122d3d4c62a2a620f23fc8d05a9308b716ab5a7a77ef3c22ea8a496fd299",
+    "diagnostics/test_stable_relu.py": "be5d06ca81cf81b6a2dedaaa75d100694caf120b517062b0c93c1898ab750f7e",
+    "launcher/launch.py": "315c8a76e8043d6ba66bf1c2c8ca6ab674ca7a0fe85e00406c13e19c2551f806",
+    "launcher/test_launch.py": "892e6b7c5eb8a55de96d018d9f996753cc83d2856c196b056cf06066b2895dd2",
+    "reference/breadth14_cpu32_MANIFEST.json": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+    "reference/rank_MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "reference/rank_REVIEW.json": "046e9d36319f45fb11d86e4e13df3ff95574fa7141892e2c374c5c324d9d580b",
+    "reference/rank_launch.py": "05e8b437642a0ba4f92f090f175751c7b1a6b3359dc6678d95149d12404ccc6d",
+    "reference/rank_test_launch.py": "317b04223053a865cb66f465cb7e6ced39a3910ff4e1d142666cacfa5774cbc1",
+    "reference/templates/relu_abs_r8_d64_m256_seed641.json": "d0de9e453111f1bdb047257fdb1b3e1838937eb7ec3226d8ca0f35f8a3733eb0",
+    "reference/templates/relu_gaussian_rbf_r8_d64_m256_seed641.json": "265bbcc107338818ded94e3091bd8c4f9cebb030fbd651c4e1616cdb6d1ae697",
+    "reference/templates/v10_rank_relu_h2_r16_d64_m256_seed641.json": "5342412ee84415f9573b36a087dd76ad95f15c0a0918592c5308e1bec485a442",
+    "reference/templates/v10_rank_relu_h2_r2_d64_m256_seed641.json": "4c5be991af3bb5338b34cc920610721ec2a9e43b3f8bf2634de81d041baf8d5c",
+    "reference/templates/v10_rank_relu_h2_r4_d64_m256_seed641.json": "700f59d55db2db9de08f26d1b4946c946644d69494af289a6a185c337bf7c634",
+    "reference/templates/v10_rank_relu_h2_r8_d64_m256_seed641.json": "9ccf0c4b48e3bfcdf26f170fdc55235049995fb15fe9d105fddba14fe6f42a7b",
+    "reference/templates/v10_rank_swiglu_h2_r16_d64_m64_seed641.json": "b0400c9e503d1136011e701350ae228067f6ba3dce84892cfeb8fff1391b81dd",
+    "reference/templates/v10_rank_swiglu_h2_r2_d64_m64_seed641.json": "1561862230c27dfc98991859fe1e4c4c2a846658732e24f3589df4635a851c92",
+    "reference/templates/v10_rank_swiglu_h2_r4_d64_m64_seed641.json": "a23fcf2dc22fbfb7bae0bff5af7827f7e477cfe09a6f767537a73b544eded4d1",
+    "reference/templates/v10_rank_swiglu_h2_r8_d64_m64_seed641.json": "104012739701fe85f1953dce8c181d8751ef005973019dfd83781e0d9b91069d",
+    "requirements.txt": "c9a6956dbf73f5e73d70afa303c851c246d87533cf02d563a8aac1cc7290629d",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "pinned_sources": {
+    "DESIGN.json": "4f389032de5eefa9d457044b504bdea214481cfd3426ff284c7d9d5872d72456",
+    "FRESH_SEED_AUDIT.json": "61193c2afdda447f070aa1d1c7b556504fcc4a0468faab03d0996cfdbe619555",
+    "LAUNCHER.diff": "0b1945736fe22164e653a1998c992b20e62a546593d66eab9c3c5b54c931e630",
+    "SOURCE_REVIEW.json": "f5828f67f5898e0fb3d675f4fadb896405ccad02644e7f9064487116ba7d98de",
+    "TEACHERS.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "code/ADAPTER_REVIEW.md": "cd5b173b0e82eb822a90b4dfd02bd182ab9184b7860d64f31478a50295575491",
+    "code/DIAGNOSTIC_PRIORITY_VERIFICATION.json": "2f2e13655f82f839ddc236c2329f726dbc5705fbebced24f05269dfbfb41d458",
+    "code/ORDER12_STRESS.json": "1007ece3a8431f6eb4625b5cab1bbf6cf7b3c9e897ef351efc9a889de4b7c93f",
+    "code/SOURCE_MANIFEST.json": "cfa5cc3aba1757df40e141deaad0c819931cc581547911ecd65b2dd2c8070cfa",
+    "code/VERIFICATION.json": "f35155e528ea23f8a8164982f6f5f82b2557565a59a5aa7d37f73b5e74cbff73",
+    "code/VERIFICATION_SUMMARY.json": "1215251ab8829c0a4eb89b655c4055e812495f40934c30309b08d3e753a67679",
+    "code/canonical14_moments.json": "a2a17fbce607108635a1b6c2a52a11f5a9278534759084929c1610213ca4499d",
+    "code/diagnostic_priority.py": "6427ad389b6ec1955c58ba27e21a9eb9dbcc69843149f72cc6ab96a2157bff1d",
+    "code/frames.py": "bb19ea9ac3705304b1308e79e13798a916c34349a3962a77126f560d696a4037",
+    "code/population.py": "82dc6d9849531a208ae31ebaf4c95fb23bf0d56af5e9e60fd52f7b6dbb69ea34",
+    "code/refit.py": "1835b87dcb33149ddfbf4f4f34c901836ec0090e5f3f4a92de23d40fba7dac22",
+    "code/scaling_run.py": "a818f58a4a64774815c3fd029ad296db3f8ad2168a2cfde0e90dfa29e17950cf",
+    "code/teachers_extra.py": "108d0352b0ff1d72c85ba725622dbe932b2de138d9d4ffbeb144f9c0c327330e",
+    "code/teachers_product.py": "b36f03bbb8f7f3a1b24b420131ec882f95e13da224cdda63c131041e747f25d1",
+    "code/teachers_smooth.py": "0d79e42eae946b53159eb23935f6a974d9377ea57109eb09791b2fc5f3d7e695",
+    "code/verify_adapter.py": "ac69ee83d7ca27445b5284367c7f78337e5b9fed1ff46af6f3374b3bd6f0294e",
+    "code/verify_diagnostic_priority.py": "607bd86ca36040732dbb7683598acd3bf870f6f7399156da3d7d80a7a681b211",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9357.json": "5cf431957c694de67fe9f162a99dacd369b6cfde8389ce0e00049ef42f8f084c",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9358.json": "ed591cb695bbd216a2867bdcfd6007c7396bba86de203d260aa8a1280706369c",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9359.json": "ee30454468631012ac58d453e29ce49c87f0db87fcf2e30557c0938291651949",
+    "configs/v11_hr_swiglu_gaussian_rbf_r8_d64_m64_seed9360.json": "faf58606eab45dbf2cd9da0cd7a0ecd9ab42d13100bcc82fde22ce71c393dd98",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9351.json": "ee227b0e9de0b6f0961ba352094d9803ccc327a2e4e3add06b4c898e62c3c2ba",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9352.json": "5845c5965a8d34c84cb3c3b4a2e849e4af10c8abfa9961d832eeaeddfabd34f3",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9353.json": "66ec3a8d12988f4ff7687b118ccc9de772b197d5b2372e7e05d1447dbc7233db",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9354.json": "70991e4c86b07eb6fb589b104338463fbfc9eddb000f2932bd01e4f040888c2f",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9355.json": "fbf653f5fdb9ed0ee2b406bd658a5684115e875550893a57a5c74a25d7d4e8e1",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9356.json": "5b1b1e335d4f5e3916e6f188999bbe6500d18692235a0427cf741556a4621f65",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9357.json": "7237bb259a5aaccbbfc8666b4e7bee541e6ff443dbd5ce3ad329c26a290ac269",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9358.json": "22b1b8d3c28b1b9b0e95167915a5f6174a34c48473a4b3eb923ab4ac4ef11d2d",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9359.json": "2be25e1f64788bf3729aa62d270ed33969edc80d51d1bed42be9870265fa2f27",
+    "configs/v11_hr_swiglu_h2_r2_d64_m64_seed9360.json": "09bc51359c07fff640f440f30e2041095e3078393eb89dabd418beda887f6ceb",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9351.json": "d83a82dfab44199740166806aaa372607bf334cc372b614f5a2a69700e09e925",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9352.json": "8a64d819992339b939535fd266da9a5642980631e7adbc3a35d9ddc9da6f6cd0",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9353.json": "055fd056e26a17923ab843979e79f31225d819c36ef243b4f7117ace26a3e88d",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9354.json": "b15e23eb6d6c1075da5860e7e53b9579544a8d4fe4f8619b235d678f2859664f",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9355.json": "e5d5681fbb0a5945d50c4558e0df32cbe82d40bbf51226a266af730ab5f4e951",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9356.json": "e4859d3c5daba43fb2b4e10899533a5488d47890f41917bb4db65774c2ac9ef3",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9357.json": "d673af4fe93ed492a0da9e8b0d7550e878ecb62e4e18ebf590ced9bc873e1a87",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9358.json": "8d89097bb3aac4d2d821da2543944d8814c83dfd9371017b62a84038dbea430c",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9359.json": "5fcf08e3ffbf9e706484bf219bbb8206d7d9e1f558332678c4274352ea803023",
+    "configs/v11_hr_swiglu_h2_r4_d64_m64_seed9360.json": "17a50428fa6f58eb268342accd20ebc12738ef33fc69f8b4219aefc0e0b22dab",
+    "diagnostics/audit_saved.py": "964a34a6e69e5f98b22d9bdbb1dcdad3ea13ec84bbb932be1f06d11578dab34b",
+    "diagnostics/stable_relu.py": "23ff122d3d4c62a2a620f23fc8d05a9308b716ab5a7a77ef3c22ea8a496fd299",
+    "diagnostics/test_stable_relu.py": "be5d06ca81cf81b6a2dedaaa75d100694caf120b517062b0c93c1898ab750f7e",
+    "launcher/launch.py": "315c8a76e8043d6ba66bf1c2c8ca6ab674ca7a0fe85e00406c13e19c2551f806",
+    "launcher/test_launch.py": "892e6b7c5eb8a55de96d018d9f996753cc83d2856c196b056cf06066b2895dd2",
+    "reference/breadth14_cpu32_MANIFEST.json": "66e7723363b080b7bb535531f51f7faeb0d0acb88139f8626848e2df7d9ad194",
+    "reference/rank_MANIFEST.json": "e9a0a074a91c498784af86da59d6de440eb5d3baa208e955161b87484f9e3b01",
+    "reference/rank_REVIEW.json": "046e9d36319f45fb11d86e4e13df3ff95574fa7141892e2c374c5c324d9d580b",
+    "reference/rank_launch.py": "05e8b437642a0ba4f92f090f175751c7b1a6b3359dc6678d95149d12404ccc6d",
+    "reference/rank_test_launch.py": "317b04223053a865cb66f465cb7e6ced39a3910ff4e1d142666cacfa5774cbc1",
+    "reference/templates/relu_abs_r8_d64_m256_seed641.json": "d0de9e453111f1bdb047257fdb1b3e1838937eb7ec3226d8ca0f35f8a3733eb0",
+    "reference/templates/relu_gaussian_rbf_r8_d64_m256_seed641.json": "265bbcc107338818ded94e3091bd8c4f9cebb030fbd651c4e1616cdb6d1ae697",
+    "reference/templates/v10_rank_relu_h2_r16_d64_m256_seed641.json": "5342412ee84415f9573b36a087dd76ad95f15c0a0918592c5308e1bec485a442",
+    "reference/templates/v10_rank_relu_h2_r2_d64_m256_seed641.json": "4c5be991af3bb5338b34cc920610721ec2a9e43b3f8bf2634de81d041baf8d5c",
+    "reference/templates/v10_rank_relu_h2_r4_d64_m256_seed641.json": "700f59d55db2db9de08f26d1b4946c946644d69494af289a6a185c337bf7c634",
+    "reference/templates/v10_rank_relu_h2_r8_d64_m256_seed641.json": "9ccf0c4b48e3bfcdf26f170fdc55235049995fb15fe9d105fddba14fe6f42a7b",
+    "reference/templates/v10_rank_swiglu_h2_r16_d64_m64_seed641.json": "b0400c9e503d1136011e701350ae228067f6ba3dce84892cfeb8fff1391b81dd",
+    "reference/templates/v10_rank_swiglu_h2_r2_d64_m64_seed641.json": "1561862230c27dfc98991859fe1e4c4c2a846658732e24f3589df4635a851c92",
+    "reference/templates/v10_rank_swiglu_h2_r4_d64_m64_seed641.json": "a23fcf2dc22fbfb7bae0bff5af7827f7e477cfe09a6f767537a73b544eded4d1",
+    "reference/templates/v10_rank_swiglu_h2_r8_d64_m64_seed641.json": "104012739701fe85f1953dce8c181d8751ef005973019dfd83781e0d9b91069d",
+    "requirements.txt": "c9a6956dbf73f5e73d70afa303c851c246d87533cf02d563a8aac1cc7290629d",
+    "swiglu/code/SOURCE_MANIFEST.json": "6fa613b8118db0b1d3dcd0a74aba92f6404b754ffe91e50eed081837e20d5871",
+    "swiglu/code/diagnostics.py": "32270838b6282e6573450848432eb5edbb5b4adafabc8a91f801f170c4f693c2",
+    "swiglu/code/engine/canonical_links.py": "da04295d1cb79e9c789b88f6f1011fee7701c76259dbbfee4ca0332eb1ba5c69",
+    "swiglu/code/engine/swpop.py": "fa11dd787587be30b8427f6638ee71b164104e159f78b1fe81c19504c84714e7",
+    "swiglu/code/engine/swsmall.py": "22c9dac70f8d5ea9bbb04749a02359f28a505f11520f7aa3bb3cbccc147aa1ef",
+    "swiglu/code/engine/swsmall_periodic.py": "4ba79a4401cc89309f431c5e2f7fc54372174e19241f563eaf729366573fe9ae",
+    "swiglu/code/engine/vlab.py": "0a95eff9f2bf7c7279e907af3e7a1093f2bd58dea8bea032ce4ce9d681128bf0",
+    "swiglu/code/requirements.txt": "12aae20cb7e833d547116de268a53d95d50ed089e8dbdb65e24cdb24a7f99be1",
+    "swiglu/code/run_one.py": "f5e56838f37206da468822e39acb0ed3513464bb36da1930ba0e5d920224402e",
+    "swiglu/code/validate_breadth.py": "1e0f0c9e6c1b66cf2c9fc1a36d0540c7192e8a7a7651b142f65d37bc78c0c846",
+    "swiglu/code/validate_diagnostic_order.py": "09e1154747743253773941c3776e4532d8bb2b158814124bdc8b660a103bab77"
+  },
+  "queue_order": "Declared order: v11_hr_swiglu_gaussian_rbf_r8\u00d74; v11_hr_swiglu_h2_r4\u00d710; v11_hr_swiglu_h2_r2\u00d710",
+  "publication_leaf": "population_agop_highrank_seeds10_20260929",
+  "remote_run_name": "agop-highrank-s10-20260929-a03",
+  "default_execution_directory": "execution_a03",
+  "analysis_note": "All ten fresh seeds per cell kept in every denominator; development 641/642 separate; ReLU h2 r16 seeds 9351-9354 reuse the completed identical-recipe confirmation outcomes. No threshold change or seed replacement."
+}
