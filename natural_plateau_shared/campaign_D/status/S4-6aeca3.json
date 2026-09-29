@@ -1,0 +1,32 @@
+{
+ "abandoned": [],
+ "branch": "claude/inspiring-shannon-tcbd4p",
+ "broken": null,
+ "campaign_left": 127,
+ "commit_error": null,
+ "cores": 4,
+ "done": [],
+ "est_hours_left": 8.31,
+ "failed": [],
+ "fetch_error": null,
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v49-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "instance": "6aeca3",
+ "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+ "own_left": 17,
+ "own_total": 17,
+ "push_error": null,
+ "running": {},
+ "started": "2026-09-29T20:25:04Z",
+ "state": "running",
+ "stolen": {},
+ "updated": "2026-09-29T20:25:58Z",
+ "version": "campaign-D worker 1.0 (2026-09-29)",
+ "worker": "S4"
+}
