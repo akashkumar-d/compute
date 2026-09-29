@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 103,
+ "campaign_left": 95,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -11,6 +11,7 @@
   "C1_D4_s039",
   "C1_D5_s027",
   "C1_D5_s035",
+  "C2_D3_s003",
   "C2_D4_s003",
   "C2_D4_s007",
   "C2_D4_s013",
@@ -19,7 +20,7 @@
   "C2_D5_s011",
   "C2_D5_s017"
  ],
- "est_hours_left": 2.94,
+ "est_hours_left": 2.54,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -32,43 +33,43 @@
  },
  "instance": "91375a",
  "manifest_sha256": "39eb6593d8e1a14ca9ceae09ad98a005305e46610601e6a9b8c603a4fb472614",
- "own_left": 10,
+ "own_left": 9,
  "own_total": 22,
  "push_error": null,
  "running": {
-  "C2_D3_s003": {
-   "phase": "pilot",
-   "since": "2026-09-29T10:01:05Z",
-   "step": 48000,
-   "steps": 80000,
-   "steps_per_s": 26.34,
-   "stolen_from": null,
-   "threads": 1
-  },
   "C2_D3_s011": {
    "phase": "pilot",
    "since": "2026-09-29T10:01:39Z",
-   "step": 46000,
+   "step": 78000,
    "steps": 80000,
-   "steps_per_s": 25.71,
+   "steps_per_s": 26.22,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "C2_D3_s019": {
+   "phase": "pilot",
+   "since": "2026-09-29T10:51:31Z",
+   "step": 0,
+   "steps": 80000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s047": {
    "phase": "main",
    "since": "2026-09-29T09:23:16Z",
-   "step": 62000,
+   "step": 92000,
    "steps": 120000,
-   "steps_per_s": 23.52,
+   "steps_per_s": 24.08,
    "stolen_from": null,
    "threads": 1
   },
   "C3_D4p23_s055": {
    "phase": "main",
    "since": "2026-09-29T09:51:21Z",
-   "step": 24000,
+   "step": 54000,
    "steps": 120000,
-   "steps_per_s": 23.23,
+   "steps_per_s": 24.34,
    "stolen_from": null,
    "threads": 1
   }
@@ -76,7 +77,7 @@
  "started": "2026-09-29T02:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T10:31:46Z",
+ "updated": "2026-09-29T10:51:31Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
