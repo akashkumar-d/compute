@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-archimedes-qapdb2",
  "broken": null,
- "campaign_left": 142,
+ "campaign_left": 139,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -31,36 +31,36 @@
   "C1_D5_s027": {
    "phase": "main",
    "since": "2026-09-29T05:31:24Z",
-   "step": 2000,
+   "step": 32000,
    "steps": 80000,
-   "steps_per_s": 9.21,
+   "steps_per_s": 15.84,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D4_s007": {
    "phase": "pilot",
    "since": "2026-09-29T05:23:20Z",
-   "step": 48000,
+   "step": 88000,
    "steps": 100000,
-   "steps_per_s": 21.1,
+   "steps_per_s": 21.58,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D4_s013": {
    "phase": "pilot",
    "since": "2026-09-29T05:31:24Z",
-   "step": 38000,
+   "step": 76000,
    "steps": 100000,
-   "steps_per_s": 21.24,
+   "steps_per_s": 21.15,
    "stolen_from": null,
    "threads": 1
   },
   "C2_D4_s019": {
    "phase": "pilot",
    "since": "2026-09-29T05:31:24Z",
-   "step": 38000,
+   "step": 76000,
    "steps": 100000,
-   "steps_per_s": 21.24,
+   "steps_per_s": 21.15,
    "stolen_from": null,
    "threads": 1
   }
@@ -68,7 +68,7 @@
  "started": "2026-09-29T02:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T06:01:33Z",
+ "updated": "2026-09-29T06:31:36Z",
  "version": "campaign-C worker 1.1 (2026-09-29)",
  "worker": "S5"
 }
