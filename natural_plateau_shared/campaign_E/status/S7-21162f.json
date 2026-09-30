@@ -37,11 +37,11 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-30T07:36:47Z",
- "state": "running",
+ "state": "finished",
  "stolen": {
   "dev_L1_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T12:45:44Z",
+ "updated": "2026-09-30T12:45:47Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S7"
 }
