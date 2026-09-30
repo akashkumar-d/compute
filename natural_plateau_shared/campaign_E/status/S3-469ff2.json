@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/quirky-johnson-gfwlt0",
  "broken": null,
- "campaign_left": 11,
+ "campaign_left": 10,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -33,13 +33,32 @@
  "own_left": 2,
  "own_total": 11,
  "push_error": null,
- "running": {},
+ "running": {
+  "fresh_L2_paper_s01": {
+   "phase": "run",
+   "since": "2026-09-30T12:34:19Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L2_paper_s09": {
+   "phase": "run",
+   "since": "2026-09-30T12:34:19Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-30T07:36:03Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
   "dev_L2_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T12:26:13Z",
+ "updated": "2026-09-30T12:34:19Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
