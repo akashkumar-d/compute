@@ -4,7 +4,7 @@
  ],
  "branch": "claude/kind-brown-wuycon",
  "broken": null,
- "campaign_left": 53,
+ "campaign_left": 42,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -34,18 +34,18 @@
   "dev_L2_adamw_s1_wd1": {
    "phase": "run",
    "since": "2026-09-30T07:37:47Z",
-   "step": 16000,
+   "step": 30000,
    "steps": 40000,
-   "steps_per_s": 7.64,
+   "steps_per_s": 7.69,
    "stolen_from": null,
    "threads": 1
   },
   "dev_L2_hybrid_s1_lw0.015": {
    "phase": "run",
    "since": "2026-09-30T07:37:47Z",
-   "step": 14000,
+   "step": 26000,
    "steps": 40000,
-   "steps_per_s": 6.68,
+   "steps_per_s": 6.66,
    "stolen_from": null,
    "threads": 1
   }
@@ -55,7 +55,7 @@
  "stolen": {
   "dev_L1_adamw_s4_wd0.3": "S7"
  },
- "updated": "2026-09-30T08:13:00Z",
+ "updated": "2026-09-30T08:43:07Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
