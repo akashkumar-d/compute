@@ -34,9 +34,9 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:24:58Z",
- "state": "finished",
+ "state": "running",
  "stolen": {},
- "updated": "2026-09-30T04:48:18Z",
+ "updated": "2026-09-30T04:48:24Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S3"
 }
