@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/wonderful-edison-jgf6b7",
  "broken": null,
- "campaign_left": 8,
+ "campaign_left": 1,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -29,7 +29,7 @@
   "HW_p97_w1024_lw0.0150_s1": {
    "phase": "run",
    "since": "2026-09-30T02:30:08Z",
-   "step": 8000,
+   "step": 12000,
    "steps": 50000,
    "steps_per_s": 2.23,
    "stolen_from": null,
@@ -39,7 +39,7 @@
  "started": "2026-09-29T20:25:45Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T03:30:16Z",
+ "updated": "2026-09-30T04:00:18Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S8"
 }
