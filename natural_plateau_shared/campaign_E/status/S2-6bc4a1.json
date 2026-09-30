@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/brave-babbage-57y2wc",
  "broken": null,
- "campaign_left": 77,
+ "campaign_left": 71,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -32,7 +32,34 @@
    "since": "2026-09-30T07:37:08Z",
    "step": 12000,
    "steps": 40000,
-   "steps_per_s": 6.06,
+   "steps_per_s": 5.83,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_adamw_s02": {
+   "phase": "run",
+   "since": "2026-09-30T08:11:50Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_adamw_s10": {
+   "phase": "run",
+   "since": "2026-09-30T08:11:50Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s08": {
+   "phase": "run",
+   "since": "2026-09-30T08:11:50Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -42,7 +69,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T08:10:28Z",
+ "updated": "2026-09-30T08:11:50Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
