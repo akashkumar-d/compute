@@ -1,11 +1,12 @@
 {
  "abandoned": [
   "H_p61_lw0.0050_s1",
-  "H_p61_lw0.0100_s1"
+  "H_p61_lw0.0100_s1",
+  "H_p97_lw0.0025_s2"
  ],
  "branch": "claude/laughing-newton-adrtig",
  "broken": null,
- "campaign_left": 56,
+ "campaign_left": 54,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -45,10 +46,19 @@
   "D3_p23_r0.90_s1": {
    "phase": "run",
    "since": "2026-09-30T01:22:36Z",
-   "step": 40000,
+   "step": 44000,
    "steps": 120000,
-   "steps_per_s": 38.4,
+   "steps_per_s": 39.31,
    "stolen_from": "S3",
+   "threads": 1
+  },
+  "D3_p61_r0.65_s1": {
+   "phase": "run",
+   "since": "2026-09-30T01:41:36Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S8",
    "threads": 1
   },
   "H_p97_lw0.0025_s1": {
@@ -56,17 +66,8 @@
    "since": "2026-09-30T01:16:01Z",
    "step": 8000,
    "steps": 50000,
-   "steps_per_s": 5.57,
+   "steps_per_s": 5.28,
    "stolen_from": "S8",
-   "threads": 1
-  },
-  "H_p97_lw0.0025_s2": {
-   "phase": "run",
-   "since": "2026-09-30T01:40:16Z",
-   "step": 0,
-   "steps": 50000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S3",
    "threads": 1
   },
   "H_p97_lw0.0150_s2": {
@@ -83,6 +84,7 @@
  "state": "running",
  "stolen": {
   "D3_p23_r0.90_s1": "S3",
+  "D3_p61_r0.65_s1": "S8",
   "H_p31_lw0.0050_s2": "S8",
   "H_p47_lw0.0150_s2": "S3",
   "H_p61_lw0.0050_s1": "S8",
@@ -91,7 +93,7 @@
   "H_p97_lw0.0025_s2": "S3",
   "H_p97_lw0.0150_s2": "S3"
  },
- "updated": "2026-09-30T01:40:16Z",
+ "updated": "2026-09-30T01:41:36Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
