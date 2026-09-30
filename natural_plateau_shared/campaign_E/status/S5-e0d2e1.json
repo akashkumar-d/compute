@@ -42,7 +42,7 @@
   "dev_L2_adamw_s4_wd1": "S8",
   "dev_L2_hybrid_s1_lw0.015": "S6"
  },
- "updated": "2026-09-30T11:02:04Z",
+ "updated": "2026-09-30T11:32:05Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
