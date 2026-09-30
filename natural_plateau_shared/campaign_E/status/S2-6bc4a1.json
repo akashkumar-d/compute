@@ -2,20 +2,21 @@
  "abandoned": [],
  "branch": "claude/brave-babbage-57y2wc",
  "broken": null,
- "campaign_left": 29,
+ "campaign_left": 24,
  "commit_error": null,
  "cores": 4,
  "done": [
   "dev_L1_adamw_s1_wd0.3",
   "dev_L1_hybrid_s1_lw0.015",
   "dev_L1_paper_s1_lw0.015",
+  "dev_L2_paper_s1_lw0.015",
   "fresh_L1_adamw_s02",
   "fresh_L1_adamw_s10",
   "fresh_L1_hybrid_s08",
   "fresh_L1_paper_s06",
   "fresh_L2_adamw_s04"
  ],
- "est_hours_left": 1.1,
+ "est_hours_left": 0.81,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -28,26 +29,16 @@
  },
  "instance": "6bc4a1",
  "manifest_sha256": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
- "own_left": 4,
+ "own_left": 3,
  "own_total": 11,
  "push_error": null,
- "running": {
-  "dev_L2_paper_s1_lw0.015": {
-   "phase": "run",
-   "since": "2026-09-30T07:37:08Z",
-   "step": 32000,
-   "steps": 40000,
-   "steps_per_s": 5.3,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T07:36:02Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "dev_L1_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T09:18:01Z",
+ "updated": "2026-09-30T09:41:13Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
