@@ -4,13 +4,14 @@
  ],
  "branch": "claude/vibrant-wozniak-vo26in",
  "broken": null,
- "campaign_left": 77,
+ "campaign_left": 76,
  "commit_error": null,
  "cores": 4,
  "done": [
-  "dev_L1_adamw_s4_wd0.3"
+  "dev_L1_adamw_s4_wd0.3",
+  "fresh_L1_adamw_s07"
  ],
- "est_hours_left": 1.71,
+ "est_hours_left": 1.64,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -23,7 +24,7 @@
  },
  "instance": "21162f",
  "manifest_sha256": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
- "own_left": 9,
+ "own_left": 8,
  "own_total": 10,
  "push_error": null,
  "running": {
@@ -32,7 +33,7 @@
    "since": "2026-09-30T07:37:57Z",
    "step": 8000,
    "steps": 40000,
-   "steps_per_s": 4.48,
+   "steps_per_s": 4.44,
    "stolen_from": null,
    "threads": 1
   },
@@ -41,16 +42,7 @@
    "since": "2026-09-30T07:37:57Z",
    "step": 8000,
    "steps": 40000,
-   "steps_per_s": 4.48,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "fresh_L1_adamw_s07": {
-   "phase": "run",
-   "since": "2026-09-30T08:08:01Z",
-   "step": 0,
-   "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 4.44,
    "stolen_from": null,
    "threads": 1
   }
@@ -60,7 +52,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T08:08:01Z",
+ "updated": "2026-09-30T08:08:19Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S7"
 }
