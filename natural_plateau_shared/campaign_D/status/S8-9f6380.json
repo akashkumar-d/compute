@@ -24,11 +24,21 @@
  "own_left": 15,
  "own_total": 16,
  "push_error": null,
- "running": {},
+ "running": {
+  "HW_p97_w2048_lw0.0075_s1": {
+   "phase": "run",
+   "since": "2026-09-30T00:03:28Z",
+   "step": 8000,
+   "steps": 50000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 4
+  }
+ },
  "started": "2026-09-29T20:25:45Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T00:03:18Z",
+ "updated": "2026-09-30T00:03:28Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S8"
 }
