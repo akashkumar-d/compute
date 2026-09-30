@@ -6,7 +6,7 @@
  ],
  "branch": "claude/brave-einstein-qer93j",
  "broken": null,
- "campaign_left": 78,
+ "campaign_left": 59,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -32,7 +32,34 @@
    "since": "2026-09-30T07:37:44Z",
    "step": 12000,
    "steps": 40000,
-   "steps_per_s": 5.89,
+   "steps_per_s": 5.84,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_adamw_s05": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:22Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s03": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:22Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_paper_s01": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:22Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -44,7 +71,7 @@
   "dev_L2_adamw_s4_wd1": "S8",
   "dev_L2_hybrid_s1_lw0.015": "S6"
  },
- "updated": "2026-09-30T08:11:58Z",
+ "updated": "2026-09-30T08:12:22Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
