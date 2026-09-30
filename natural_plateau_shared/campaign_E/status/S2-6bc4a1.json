@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/brave-babbage-57y2wc",
  "broken": null,
- "campaign_left": 13,
+ "campaign_left": 11,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -40,7 +40,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T10:08:37Z",
+ "updated": "2026-09-30T10:38:51Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
