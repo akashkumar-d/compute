@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/zen-goldberg-tdcfzg",
  "broken": null,
- "campaign_left": 84,
+ "campaign_left": 81,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -23,6 +23,7 @@
   "H_p31_lw0.0200_s2",
   "H_p47_lw0.0050_s1",
   "H_p47_lw0.0075_s1",
+  "H_p47_lw0.0075_s2",
   "H_p47_lw0.0200_s1",
   "H_p97_lw0.0100_s2"
  ],
@@ -46,26 +47,26 @@
   "D3_p23_r0.30_s1": {
    "phase": "run",
    "since": "2026-09-30T00:55:14Z",
-   "step": 20000,
+   "step": 44000,
    "steps": 120000,
-   "steps_per_s": 44.77,
+   "steps_per_s": 44.61,
    "stolen_from": "S8",
    "threads": 1
   },
   "D4_p23_r0.32_s1": {
    "phase": "run",
    "since": "2026-09-30T00:56:32Z",
-   "step": 10000,
+   "step": 28000,
    "steps": 120000,
-   "steps_per_s": 27.14,
+   "steps_per_s": 30.84,
    "stolen_from": "S8",
    "threads": 1
   },
-  "H_p47_lw0.0075_s2": {
+  "H_p61_lw0.0050_s1": {
    "phase": "run",
-   "since": "2026-09-30T01:02:26Z",
+   "since": "2026-09-30T01:11:58Z",
    "step": 0,
-   "steps": 40000,
+   "steps": 50000,
    "steps_per_s": 0.0,
    "stolen_from": "S8",
    "threads": 1
@@ -73,9 +74,9 @@
   "H_p97_lw0.0150_s1": {
    "phase": "run",
    "since": "2026-09-30T01:03:04Z",
-   "step": 0,
+   "step": 2000,
    "steps": 50000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 3.87,
    "stolen_from": "S8",
    "threads": 1
   }
@@ -88,9 +89,10 @@
   "H_p23_lw0.0075_s2": "S8",
   "H_p31_lw0.0150_s1": "S8",
   "H_p47_lw0.0075_s2": "S8",
+  "H_p61_lw0.0050_s1": "S8",
   "H_p97_lw0.0150_s1": "S8"
  },
- "updated": "2026-09-30T01:03:04Z",
+ "updated": "2026-09-30T01:11:58Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S2"
 }
