@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/loving-ride-hxrko3",
  "broken": null,
- "campaign_left": 26,
+ "campaign_left": 21,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -13,6 +13,7 @@
   "D3_p61_r0.90_s1",
   "D3_p97_r0.30_s1",
   "D3_p97_r0.90_s1",
+  "D4_p47_r0.32_s1",
   "D4_p47_r0.45_s1",
   "H_p23_lw0.0150_s2",
   "H_p31_lw0.0050_s1",
@@ -42,26 +43,16 @@
  "own_left": 0,
  "own_total": 16,
  "push_error": null,
- "running": {
-  "D4_p47_r0.32_s1": {
-   "phase": "run",
-   "since": "2026-09-30T01:33:11Z",
-   "step": 38000,
-   "steps": 100000,
-   "steps_per_s": 10.53,
-   "stolen_from": "S8",
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:25:39Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "D4_p47_r0.32_s1": "S8",
   "H_p31_lw0.0150_s2": "S3",
   "H_p61_lw0.0100_s1": "S8",
   "H_p61_lw0.0150_s2": "S3"
  },
- "updated": "2026-09-30T02:33:38Z",
+ "updated": "2026-09-30T02:49:47Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S7"
 }
