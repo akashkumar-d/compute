@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/quirky-johnson-gfwlt0",
  "broken": null,
- "campaign_left": 8,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -37,11 +37,11 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-30T07:36:03Z",
- "state": "standby",
+ "state": "finished",
  "stolen": {
   "dev_L2_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T12:34:36Z",
+ "updated": "2026-09-30T12:44:33Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
