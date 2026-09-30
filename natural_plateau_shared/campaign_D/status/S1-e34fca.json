@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/optimistic-goldberg-a22718",
  "broken": null,
- "campaign_left": 38,
+ "campaign_left": 35,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -13,12 +13,13 @@
   "D4_p97_r0.15_s1",
   "HW_p97_w2048_lw0.0150_s1",
   "H_p23_lw0.0075_s1",
+  "H_p23_lw0.0200_s2",
   "H_p31_lw0.0100_s2",
   "H_p47_lw0.0050_s2",
   "H_p61_lw0.0075_s2",
   "H_p97_lw0.0075_s1"
  ],
- "est_hours_left": 0.44,
+ "est_hours_left": 0.43,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -31,43 +32,34 @@
  },
  "instance": "e34fca",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 4,
+ "own_left": 3,
  "own_total": 15,
  "push_error": null,
  "running": {
   "D3_p23_r0.45_s2": {
    "phase": "run",
    "since": "2026-09-30T01:32:17Z",
-   "step": 102000,
+   "step": 110000,
    "steps": 120000,
-   "steps_per_s": 41.1,
+   "steps_per_s": 41.46,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p23_r0.32_s2": {
    "phase": "run",
    "since": "2026-09-30T01:09:25Z",
-   "step": 110000,
+   "step": 114000,
    "steps": 120000,
-   "steps_per_s": 28.54,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "H_p23_lw0.0200_s2": {
-   "phase": "run",
-   "since": "2026-09-30T02:13:57Z",
-   "step": 0,
-   "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 28.32,
    "stolen_from": null,
    "threads": 1
   },
   "H_p47_lw0.0150_s1": {
    "phase": "run",
    "since": "2026-09-30T02:08:00Z",
-   "step": 12000,
+   "step": 20000,
    "steps": 40000,
-   "steps_per_s": 35.4,
+   "steps_per_s": 39.21,
    "stolen_from": null,
    "threads": 1
   }
@@ -75,7 +67,7 @@
  "started": "2026-09-29T20:24:53Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T02:13:57Z",
+ "updated": "2026-09-30T02:16:48Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S1"
 }
