@@ -1,0 +1,95 @@
+{
+ "branch": "claude/brave-babbage-57y2wc",
+ "cell": "L1_paper",
+ "cfg": {
+  "adamw": {
+   "b1": 0.9,
+   "b2": 0.98,
+   "eps": 1e-08,
+   "lr": 0.001,
+   "wd": 1.0
+  },
+  "d_mlp": 512,
+  "d_model": 128,
+  "dtype": "float32",
+  "eta_v": 0.03,
+  "eta_w": 0.03,
+  "frac": 0.8,
+  "heavy_every": 500,
+  "init": {
+   "emb": 1.0,
+   "head": 1.0,
+   "mat": 1.0
+  },
+  "init_seed": 101,
+  "lam_v": 0.2,
+  "lam_w": 0.015,
+  "n_heads": 4,
+  "n_layers": 1,
+  "obs_every": 20,
+  "opt": "paper",
+  "p": 31,
+  "split_seed": 201,
+  "steps": 40000,
+  "stop_generalized": {
+   "acc": 0.99,
+   "extra": 10000,
+   "factor": 1.5
+  }
+ },
+ "code": {
+  "manifest": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
+  "rule": "e9b88a7b0ddcde60b9deffa6837192a78ab8b631f3fad74b48ef77d2001db19b",
+  "runner": "6dcd67501071785db857a35aa3e1c8e306c97514899f88d5b7e488f71b5d4833",
+  "worker": "4d1ed99d3b765f683239d7a3d48d477a59585dcfa7bcf7623e8c457d8da46fc2"
+ },
+ "dial": {
+  "init": 1.0,
+  "lam_w": 0.015
+ },
+ "done": true,
+ "files": {
+  "run.json.gz": {
+   "bytes": 244604,
+   "sha256": "9586512a5f77b5283d671899cf4c2f5663bfe2c713f649a5211e7142b86553b1"
+  }
+ },
+ "finished": "2026-09-30T08:10:13Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "dev_L1_paper_s1_lw0.015",
+ "init_seed": 101,
+ "instance": "6bc4a1",
+ "n_layers": 1,
+ "opt": "paper",
+ "owner": "S2",
+ "p": 31,
+ "ran_by": "S2",
+ "run": {
+  "final_loss": 1.9357436542577489e-07,
+  "final_test": 0.9533678756476683,
+  "final_train": 1.0,
+  "horizon": 40000,
+  "resumed_from": 0,
+  "seconds": 1984.5,
+  "steps": 40000,
+  "stop_reason": null,
+  "stopped_at": null,
+  "t10": 480,
+  "t90": 39860
+ },
+ "seed": 0,
+ "selection": null,
+ "split_seed": 201,
+ "stage": "dev",
+ "started": "2026-09-30T07:37:08Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-E worker 1.0 (2026-09-30)"
+}
