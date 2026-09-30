@@ -4,7 +4,7 @@
  ],
  "branch": "claude/vibrant-wozniak-vo26in",
  "broken": null,
- "campaign_left": 39,
+ "campaign_left": 37,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -36,7 +36,25 @@
    "since": "2026-09-30T07:37:57Z",
    "step": 26000,
    "steps": 40000,
-   "steps_per_s": 4.6,
+   "steps_per_s": 4.56,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L2_adamw_s01": {
+   "phase": "run",
+   "since": "2026-09-30T09:13:25Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L2_adamw_s09": {
+   "phase": "run",
+   "since": "2026-09-30T09:13:25Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -46,7 +64,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T09:12:30Z",
+ "updated": "2026-09-30T09:13:25Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S7"
 }
