@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-shannon-tcbd4p",
  "broken": null,
- "campaign_left": 116,
+ "campaign_left": 109,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,36 +28,36 @@
   "D3_p61_r0.30_s1": {
    "phase": "run",
    "since": "2026-09-29T23:31:10Z",
-   "step": 0,
+   "step": 18000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 10.03,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.22_s1": {
    "phase": "run",
    "since": "2026-09-29T23:31:10Z",
-   "step": 0,
+   "step": 12000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.69,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.45_s1": {
    "phase": "run",
    "since": "2026-09-29T23:31:10Z",
-   "step": 0,
+   "step": 12000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.69,
    "stolen_from": null,
    "threads": 1
   },
   "HW_p97_w1024_lw0.0050_s1": {
    "phase": "run",
    "since": "2026-09-29T23:31:10Z",
-   "step": 0,
+   "step": 4000,
    "steps": 50000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 2.23,
    "stolen_from": null,
    "threads": 1
   }
@@ -65,7 +65,7 @@
  "started": "2026-09-29T20:25:04Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T23:31:10Z",
+ "updated": "2026-09-30T00:01:23Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S4"
 }
