@@ -10,7 +10,7 @@
  "failed": [],
  "fetch_error": null,
  "host": {
-  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
   "node": "5bce98f7",
   "numpy": "2.4.6",
@@ -22,21 +22,11 @@
  "own_left": 14,
  "own_total": 14,
  "push_error": null,
- "running": {
-  "HW_p97_w2048_lw0.0150_s5": {
-   "phase": "run",
-   "since": "2026-09-30T21:43:00Z",
-   "step": 2000,
-   "steps": 50000,
-   "steps_per_s": 1.12,
-   "stolen_from": null,
-   "threads": 4
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:41:05Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T22:13:04Z",
+ "updated": "2026-09-30T22:38:23Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
