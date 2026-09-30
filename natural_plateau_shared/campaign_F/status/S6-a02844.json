@@ -1,0 +1,32 @@
+{
+ "abandoned": [],
+ "branch": "claude/youthful-tesla-cxulx6",
+ "broken": null,
+ "campaign_left": 137,
+ "commit_error": null,
+ "cores": 4,
+ "done": [],
+ "est_hours_left": 10.4,
+ "failed": [],
+ "fetch_error": null,
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "instance": "a02844",
+ "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+ "own_left": 16,
+ "own_total": 16,
+ "push_error": null,
+ "running": {},
+ "started": "2026-09-30T21:41:24Z",
+ "state": "running",
+ "stolen": {},
+ "updated": "2026-09-30T21:42:59Z",
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "worker": "S6"
+}
