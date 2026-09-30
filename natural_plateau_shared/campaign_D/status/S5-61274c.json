@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/trusting-rubin-8x9f47",
  "broken": null,
- "campaign_left": 27,
+ "campaign_left": 22,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -13,9 +13,10 @@
   "D4_p61_r0.22_s2",
   "D4_p61_r0.45_s2",
   "D4_p97_r0.65_s1",
-  "HW_p97_w1024_lw0.0100_s1"
+  "HW_p97_w1024_lw0.0100_s1",
+  "H_p97_lw0.0100_s1"
  ],
- "est_hours_left": 1.12,
+ "est_hours_left": 0.8,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -28,43 +29,43 @@
  },
  "instance": "61274c",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 9,
+ "own_left": 8,
  "own_total": 17,
  "push_error": null,
  "running": {
   "D3_p23_r0.65_s2": {
    "phase": "run",
    "since": "2026-09-30T02:32:07Z",
-   "step": 0,
+   "step": 28000,
    "steps": 120000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 37.46,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p23_r0.22_s1": {
    "phase": "run",
    "since": "2026-09-30T02:12:04Z",
-   "step": 30000,
+   "step": 50000,
    "steps": 120000,
-   "steps_per_s": 25.3,
+   "steps_per_s": 25.63,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p23_r0.45_s2": {
    "phase": "run",
    "since": "2026-09-30T02:20:58Z",
-   "step": 16000,
+   "step": 36000,
    "steps": 120000,
-   "steps_per_s": 24.56,
+   "steps_per_s": 25.41,
    "stolen_from": null,
    "threads": 1
   },
-  "H_p97_lw0.0100_s1": {
+  "H_p61_lw0.0150_s1": {
    "phase": "run",
-   "since": "2026-09-30T01:33:39Z",
-   "step": 18000,
+   "since": "2026-09-30T02:44:53Z",
+   "step": 0,
    "steps": 50000,
-   "steps_per_s": 5.16,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -72,7 +73,7 @@
  "started": "2026-09-29T20:25:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T02:32:08Z",
+ "updated": "2026-09-30T02:44:53Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S5"
 }
