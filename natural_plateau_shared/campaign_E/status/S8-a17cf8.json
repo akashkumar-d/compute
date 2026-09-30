@@ -4,7 +4,7 @@
  ],
  "branch": "claude/modest-volta-812lsj",
  "broken": null,
- "campaign_left": 6,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -37,11 +37,11 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-30T07:36:55Z",
- "state": "standby",
+ "state": "finished",
  "stolen": {
   "dev_L2_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T12:35:13Z",
+ "updated": "2026-09-30T12:45:08Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
