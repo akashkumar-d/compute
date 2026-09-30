@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/optimistic-goldberg-a22718",
  "broken": null,
- "campaign_left": 1,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -40,9 +40,9 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:24:53Z",
- "state": "standby",
+ "state": "finished",
  "stolen": {},
- "updated": "2026-09-30T04:20:56Z",
+ "updated": "2026-09-30T04:51:13Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S1"
 }
