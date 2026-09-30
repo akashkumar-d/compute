@@ -22,11 +22,50 @@
  "own_left": 11,
  "own_total": 11,
  "push_error": null,
- "running": {},
+ "running": {
+  "dev_L1_adamw_s1_wd0.3": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:08Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S5",
+   "threads": 1
+  },
+  "dev_L1_hybrid_s1_lw0.015": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:08Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "dev_L1_paper_s1_lw0.015": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:08Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "dev_L2_paper_s1_lw0.015": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:08Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-30T07:36:02Z",
  "state": "running",
- "stolen": {},
- "updated": "2026-09-30T07:37:06Z",
+ "stolen": {
+  "dev_L1_adamw_s1_wd0.3": "S5"
+ },
+ "updated": "2026-09-30T07:37:08Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
