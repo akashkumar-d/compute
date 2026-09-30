@@ -22,11 +22,52 @@
  "own_left": 10,
  "own_total": 10,
  "push_error": null,
- "running": {},
+ "running": {
+  "dev_L1_adamw_s4_wd0.3": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:44Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S7",
+   "threads": 1
+  },
+  "dev_L2_adamw_s4_wd1": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:44Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S8",
+   "threads": 1
+  },
+  "dev_L2_hybrid_s1_lw0.005": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:44Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "dev_L2_hybrid_s1_lw0.015": {
+   "phase": "run",
+   "since": "2026-09-30T07:37:44Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S6",
+   "threads": 1
+  }
+ },
  "started": "2026-09-30T07:36:37Z",
  "state": "running",
- "stolen": {},
- "updated": "2026-09-30T07:37:42Z",
+ "stolen": {
+  "dev_L1_adamw_s4_wd0.3": "S7",
+  "dev_L2_adamw_s4_wd1": "S8",
+  "dev_L2_hybrid_s1_lw0.015": "S6"
+ },
+ "updated": "2026-09-30T07:37:44Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
