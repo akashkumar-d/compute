@@ -4,7 +4,7 @@
  ],
  "branch": "claude/kind-brown-wuycon",
  "broken": null,
- "campaign_left": 83,
+ "campaign_left": 57,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -30,18 +30,36 @@
   "dev_L2_adamw_s1_wd1": {
    "phase": "run",
    "since": "2026-09-30T07:37:47Z",
-   "step": 12000,
+   "step": 16000,
    "steps": 40000,
-   "steps_per_s": 7.75,
+   "steps_per_s": 7.8,
    "stolen_from": null,
    "threads": 1
   },
   "dev_L2_hybrid_s1_lw0.015": {
    "phase": "run",
    "since": "2026-09-30T07:37:47Z",
-   "step": 10000,
+   "step": 14000,
    "steps": 40000,
-   "steps_per_s": 6.45,
+   "steps_per_s": 5.85,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_adamw_s06": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:25Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s04": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:25Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -51,7 +69,7 @@
  "stolen": {
   "dev_L1_adamw_s4_wd0.3": "S7"
  },
- "updated": "2026-09-30T08:03:55Z",
+ "updated": "2026-09-30T08:12:25Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
