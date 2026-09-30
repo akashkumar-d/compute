@@ -2,15 +2,18 @@
  "abandoned": [],
  "branch": "claude/brave-babbage-57y2wc",
  "broken": null,
- "campaign_left": 71,
+ "campaign_left": 68,
  "commit_error": null,
  "cores": 4,
  "done": [
   "dev_L1_adamw_s1_wd0.3",
   "dev_L1_hybrid_s1_lw0.015",
-  "dev_L1_paper_s1_lw0.015"
+  "dev_L1_paper_s1_lw0.015",
+  "fresh_L1_adamw_s02",
+  "fresh_L1_adamw_s10",
+  "fresh_L1_hybrid_s08"
  ],
- "est_hours_left": 1.64,
+ "est_hours_left": 1.41,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -23,40 +26,22 @@
  },
  "instance": "6bc4a1",
  "manifest_sha256": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
- "own_left": 9,
+ "own_left": 6,
  "own_total": 11,
  "push_error": null,
  "running": {
   "dev_L2_paper_s1_lw0.015": {
    "phase": "run",
    "since": "2026-09-30T07:37:08Z",
-   "step": 12000,
+   "step": 14000,
    "steps": 40000,
-   "steps_per_s": 5.83,
+   "steps_per_s": 6.73,
    "stolen_from": null,
    "threads": 1
   },
-  "fresh_L1_adamw_s02": {
+  "fresh_L1_paper_s06": {
    "phase": "run",
-   "since": "2026-09-30T08:11:50Z",
-   "step": 0,
-   "steps": 40000,
-   "steps_per_s": 0.0,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "fresh_L1_adamw_s10": {
-   "phase": "run",
-   "since": "2026-09-30T08:11:50Z",
-   "step": 0,
-   "steps": 40000,
-   "steps_per_s": 0.0,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "fresh_L1_hybrid_s08": {
-   "phase": "run",
-   "since": "2026-09-30T08:11:50Z",
+   "since": "2026-09-30T08:12:08Z",
    "step": 0,
    "steps": 40000,
    "steps_per_s": 0.0,
@@ -69,7 +54,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T08:11:50Z",
+ "updated": "2026-09-30T08:12:08Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
