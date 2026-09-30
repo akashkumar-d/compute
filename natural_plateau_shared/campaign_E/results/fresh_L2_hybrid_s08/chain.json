@@ -1,0 +1,80 @@
+{
+ "branch": "claude/modest-volta-812lsj",
+ "cell": "L2_hybrid",
+ "code": {
+  "manifest": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
+  "rule": "e9b88a7b0ddcde60b9deffa6837192a78ab8b631f3fad74b48ef77d2001db19b",
+  "runner": "6dcd67501071785db857a35aa3e1c8e306c97514899f88d5b7e488f71b5d4833",
+  "worker": "4d1ed99d3b765f683239d7a3d48d477a59585dcfa7bcf7623e8c457d8da46fc2"
+ },
+ "dial": null,
+ "done": true,
+ "files": {},
+ "finished": "2026-09-30T10:03:49Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "fresh_L2_hybrid_s08",
+ "init_seed": 1008,
+ "instance": "a17cf8",
+ "n_layers": 2,
+ "opt": "hybrid",
+ "owner": "S8",
+ "p": 31,
+ "ran_by": "S8",
+ "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell",
+ "seed": 8,
+ "selection": {
+  "chosen": "dev_L2_hybrid_s1_lw0.015",
+  "missing": [],
+  "passed": false,
+  "rule": "PLAN.md",
+  "run": false,
+  "table": {
+   "dev_L2_hybrid_s1_lw0.005": {
+    "CE_peak_over_logp": 34.35290901664461,
+    "final_test": 0.9274611,
+    "primary": false,
+    "range_transition": 26016974608.561764,
+    "share": 0.0,
+    "why_not": "share, final, F02, fit"
+   },
+   "dev_L2_hybrid_s1_lw0.015": {
+    "CE_peak_over_logp": 24.163944143886493,
+    "final_test": 1.0,
+    "primary": false,
+    "range_transition": 9945218864.255482,
+    "share": 0.0,
+    "why_not": "share, F02, fit"
+   },
+   "dev_L2_hybrid_s4_lw0.005": {
+    "CE_peak_over_logp": 36.12851260422821,
+    "final_test": 0.9689119,
+    "primary": false,
+    "range_transition": 10468601972.354326,
+    "share": 0.0,
+    "why_not": "share, final, F02, fit"
+   },
+   "dev_L2_hybrid_s4_lw0.015": {
+    "CE_peak_over_logp": 21.119796225587162,
+    "final_test": 1.0,
+    "primary": false,
+    "range_transition": 1071456547.5239972,
+    "share": 0.0,
+    "why_not": "share, F02, fit"
+   }
+  }
+ },
+ "skipped": true,
+ "split_seed": 2008,
+ "stage": "fresh",
+ "started": "2026-09-30T10:03:49Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-E worker 1.0 (2026-09-30)"
+}
