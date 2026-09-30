@@ -4,7 +4,7 @@
  ],
  "branch": "claude/vibrant-wozniak-vo26in",
  "broken": null,
- "campaign_left": 76,
+ "campaign_left": 55,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -31,9 +31,9 @@
   "dev_L2_adamw_s4_wd0.3": {
    "phase": "run",
    "since": "2026-09-30T07:37:57Z",
-   "step": 8000,
+   "step": 10000,
    "steps": 40000,
-   "steps_per_s": 4.44,
+   "steps_per_s": 4.85,
    "stolen_from": null,
    "threads": 1
   },
@@ -42,7 +42,25 @@
    "since": "2026-09-30T07:37:57Z",
    "step": 8000,
    "steps": 40000,
-   "steps_per_s": 4.44,
+   "steps_per_s": 3.88,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s05": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:44Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_paper_s03": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:44Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -52,7 +70,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T08:08:19Z",
+ "updated": "2026-09-30T08:12:44Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S7"
 }
