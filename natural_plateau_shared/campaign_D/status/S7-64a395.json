@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/loving-ride-hxrko3",
  "broken": null,
- "campaign_left": 70,
+ "campaign_left": 69,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -15,10 +15,11 @@
   "D3_p97_r0.90_s1",
   "D4_p47_r0.45_s1",
   "H_p31_lw0.0050_s1",
+  "H_p31_lw0.0075_s1",
   "H_p97_lw0.0050_s2",
   "H_p97_lw0.0200_s2"
  ],
- "est_hours_left": 0.23,
+ "est_hours_left": 0.21,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -31,43 +32,43 @@
  },
  "instance": "64a395",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 5,
+ "own_left": 4,
  "own_total": 16,
  "push_error": null,
  "running": {
-  "H_p31_lw0.0075_s1": {
+  "H_p23_lw0.0150_s2": {
    "phase": "run",
-   "since": "2026-09-30T01:20:28Z",
-   "step": 4000,
-   "steps": 40000,
-   "steps_per_s": 107.76,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "H_p31_lw0.0200_s1": {
-   "phase": "run",
-   "since": "2026-09-30T01:21:05Z",
+   "since": "2026-09-30T01:24:07Z",
    "step": 0,
    "steps": 40000,
    "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
+  "H_p31_lw0.0200_s1": {
+   "phase": "run",
+   "since": "2026-09-30T01:21:05Z",
+   "step": 20000,
+   "steps": 40000,
+   "steps_per_s": 109.04,
+   "stolen_from": null,
+   "threads": 1
+  },
   "H_p61_lw0.0075_s1": {
    "phase": "run",
    "since": "2026-09-30T01:08:38Z",
-   "step": 12000,
+   "step": 16000,
    "steps": 50000,
-   "steps_per_s": 16.48,
+   "steps_per_s": 17.56,
    "stolen_from": null,
    "threads": 1
   },
   "H_p61_lw0.0200_s2": {
    "phase": "run",
    "since": "2026-09-30T01:16:37Z",
-   "step": 4000,
+   "step": 8000,
    "steps": 50000,
-   "steps_per_s": 16.02,
+   "steps_per_s": 18.5,
    "stolen_from": null,
    "threads": 1
   }
@@ -75,7 +76,7 @@
  "started": "2026-09-29T20:25:39Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T01:21:05Z",
+ "updated": "2026-09-30T01:24:07Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S7"
 }
