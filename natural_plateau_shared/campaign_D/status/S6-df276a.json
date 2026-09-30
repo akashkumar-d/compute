@@ -1,8 +1,10 @@
 {
- "abandoned": [],
+ "abandoned": [
+  "H_p61_lw0.0050_s1"
+ ],
  "branch": "claude/laughing-newton-adrtig",
  "broken": null,
- "campaign_left": 78,
+ "campaign_left": 74,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -15,10 +17,11 @@
   "D3_p97_r0.65_s1",
   "D4_p47_r0.32_s2",
   "H_p31_lw0.0050_s2",
+  "H_p61_lw0.0050_s2",
   "H_p97_lw0.0050_s1",
   "H_p97_lw0.0200_s1"
  ],
- "est_hours_left": 0.23,
+ "est_hours_left": 0.14,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -31,44 +34,44 @@
  },
  "instance": "df276a",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 3,
+ "own_left": 2,
  "own_total": 13,
  "push_error": null,
  "running": {
+  "H_p47_lw0.0150_s2": {
+   "phase": "run",
+   "since": "2026-09-30T01:16:01Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S3",
+   "threads": 1
+  },
   "H_p47_lw0.0200_s2": {
    "phase": "run",
    "since": "2026-09-30T01:04:08Z",
-   "step": 18000,
+   "step": 24000,
    "steps": 40000,
-   "steps_per_s": 34.42,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "H_p61_lw0.0050_s1": {
-   "phase": "run",
-   "since": "2026-09-30T01:13:09Z",
-   "step": 0,
-   "steps": 50000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S8",
-   "threads": 1
-  },
-  "H_p61_lw0.0050_s2": {
-   "phase": "run",
-   "since": "2026-09-30T00:52:55Z",
-   "step": 22000,
-   "steps": 50000,
-   "steps_per_s": 18.39,
+   "steps_per_s": 34.75,
    "stolen_from": null,
    "threads": 1
   },
   "H_p61_lw0.0200_s1": {
    "phase": "run",
    "since": "2026-09-30T00:58:30Z",
-   "step": 16000,
+   "step": 20000,
    "steps": 50000,
-   "steps_per_s": 18.58,
+   "steps_per_s": 19.44,
    "stolen_from": null,
+   "threads": 1
+  },
+  "H_p97_lw0.0025_s1": {
+   "phase": "run",
+   "since": "2026-09-30T01:16:01Z",
+   "step": 0,
+   "steps": 50000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S8",
    "threads": 1
   }
  },
@@ -76,9 +79,11 @@
  "state": "running",
  "stolen": {
   "H_p31_lw0.0050_s2": "S8",
-  "H_p61_lw0.0050_s1": "S8"
+  "H_p47_lw0.0150_s2": "S3",
+  "H_p61_lw0.0050_s1": "S8",
+  "H_p97_lw0.0025_s1": "S8"
  },
- "updated": "2026-09-30T01:13:09Z",
+ "updated": "2026-09-30T01:16:01Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
