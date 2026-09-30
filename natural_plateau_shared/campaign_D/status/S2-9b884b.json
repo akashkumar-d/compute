@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/zen-goldberg-tdcfzg",
  "broken": null,
- "campaign_left": 1,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -52,7 +52,7 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:24:59Z",
- "state": "standby",
+ "state": "finished",
  "stolen": {
   "D3_p23_r0.30_s1": "S8",
   "D3_p47_r0.30_s1": "S8",
@@ -65,7 +65,7 @@
   "H_p97_lw0.0025_s2": "S3",
   "H_p97_lw0.0150_s1": "S8"
  },
- "updated": "2026-09-30T04:36:41Z",
+ "updated": "2026-09-30T04:45:47Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S2"
 }
