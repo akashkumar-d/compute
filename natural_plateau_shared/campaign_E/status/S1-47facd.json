@@ -1,5 +1,7 @@
 {
- "abandoned": [],
+ "abandoned": [
+  "dev_L2_adamw_s1_wd0.3"
+ ],
  "branch": "claude/admiring-ptolemy-9ib2w8",
  "broken": null,
  "campaign_left": 84,
@@ -26,28 +28,19 @@
   "dev_L1_hybrid_s1_lw0.005": {
    "phase": "run",
    "since": "2026-09-30T07:36:58Z",
-   "step": 0,
+   "step": 4000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 17.77,
    "stolen_from": null,
    "threads": 1
   },
   "dev_L1_paper_s1_lw0.005": {
    "phase": "run",
    "since": "2026-09-30T07:36:58Z",
-   "step": 0,
+   "step": 2000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 8.88,
    "stolen_from": null,
-   "threads": 1
-  },
-  "dev_L2_adamw_s1_wd0.3": {
-   "phase": "run",
-   "since": "2026-09-30T07:36:58Z",
-   "step": 0,
-   "steps": 40000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S5",
    "threads": 1
   },
   "dev_L2_paper_s1_lw0.005": {
@@ -65,7 +58,7 @@
  "stolen": {
   "dev_L2_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T07:36:58Z",
+ "updated": "2026-09-30T07:41:10Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
