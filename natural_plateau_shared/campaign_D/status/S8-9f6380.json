@@ -2,14 +2,15 @@
  "abandoned": [],
  "branch": "claude/wonderful-edison-jgf6b7",
  "broken": null,
- "campaign_left": 1,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p97_r0.45_s1",
+  "HW_p97_w1024_lw0.0150_s1",
   "HW_p97_w2048_lw0.0075_s1"
  ],
- "est_hours_left": 0.63,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -22,24 +23,14 @@
  },
  "instance": "9f6380",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 1,
+ "own_left": 0,
  "own_total": 16,
  "push_error": null,
- "running": {
-  "HW_p97_w1024_lw0.0150_s1": {
-   "phase": "run",
-   "since": "2026-09-30T02:30:08Z",
-   "step": 18000,
-   "steps": 50000,
-   "steps_per_s": 2.5,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:25:45Z",
- "state": "running",
+ "state": "finished",
  "stolen": {},
- "updated": "2026-09-30T04:30:33Z",
+ "updated": "2026-09-30T04:42:11Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S8"
 }
