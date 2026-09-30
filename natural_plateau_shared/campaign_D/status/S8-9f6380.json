@@ -29,9 +29,9 @@
   "HW_p97_w1024_lw0.0150_s1": {
    "phase": "run",
    "since": "2026-09-30T02:30:08Z",
-   "step": 12000,
+   "step": 18000,
    "steps": 50000,
-   "steps_per_s": 2.23,
+   "steps_per_s": 2.5,
    "stolen_from": null,
    "threads": 1
   }
@@ -39,7 +39,7 @@
  "started": "2026-09-29T20:25:45Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T04:00:18Z",
+ "updated": "2026-09-30T04:30:33Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S8"
 }
