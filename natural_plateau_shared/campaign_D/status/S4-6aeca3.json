@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/inspiring-shannon-tcbd4p",
  "broken": null,
- "campaign_left": 10,
+ "campaign_left": 1,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -44,7 +44,7 @@
  "started": "2026-09-29T20:25:04Z",
  "state": "standby",
  "stolen": {},
- "updated": "2026-09-30T03:12:26Z",
+ "updated": "2026-09-30T03:42:26Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S4"
 }
