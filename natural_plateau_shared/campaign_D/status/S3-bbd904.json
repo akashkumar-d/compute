@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/optimistic-rubin-zfxumj",
  "broken": null,
- "campaign_left": 1,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -34,9 +34,9 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:24:58Z",
- "state": "standby",
+ "state": "finished",
  "stolen": {},
- "updated": "2026-09-30T04:21:33Z",
+ "updated": "2026-09-30T04:48:18Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S3"
 }
