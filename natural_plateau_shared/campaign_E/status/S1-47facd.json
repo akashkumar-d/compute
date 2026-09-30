@@ -4,7 +4,7 @@
  ],
  "branch": "claude/admiring-ptolemy-9ib2w8",
  "broken": null,
- "campaign_left": 19,
+ "campaign_left": 11,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -38,9 +38,9 @@
   "dev_L2_paper_s1_lw0.005": {
    "phase": "run",
    "since": "2026-09-30T07:36:58Z",
-   "step": 22000,
+   "step": 26000,
    "steps": 40000,
-   "steps_per_s": 2.51,
+   "steps_per_s": 2.46,
    "stolen_from": null,
    "threads": 1
   }
@@ -50,7 +50,7 @@
  "stolen": {
   "dev_L2_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T10:03:19Z",
+ "updated": "2026-09-30T10:33:21Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
