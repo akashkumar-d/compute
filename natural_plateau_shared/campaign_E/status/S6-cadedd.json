@@ -4,7 +4,7 @@
  ],
  "branch": "claude/kind-brown-wuycon",
  "broken": null,
- "campaign_left": 17,
+ "campaign_left": 11,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -40,7 +40,7 @@
  "stolen": {
   "dev_L1_adamw_s4_wd0.3": "S7"
  },
- "updated": "2026-09-30T10:04:09Z",
+ "updated": "2026-09-30T10:34:24Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
