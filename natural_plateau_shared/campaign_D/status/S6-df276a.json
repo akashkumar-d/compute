@@ -6,7 +6,7 @@
  ],
  "branch": "claude/laughing-newton-adrtig",
  "broken": null,
- "campaign_left": 19,
+ "campaign_left": 17,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -25,6 +25,7 @@
   "H_p47_lw0.0200_s2",
   "H_p61_lw0.0050_s2",
   "H_p61_lw0.0200_s1",
+  "H_p97_lw0.0025_s1",
   "H_p97_lw0.0050_s1",
   "H_p97_lw0.0150_s2",
   "H_p97_lw0.0200_s1"
@@ -45,19 +46,9 @@
  "own_left": 0,
  "own_total": 13,
  "push_error": null,
- "running": {
-  "H_p97_lw0.0025_s1": {
-   "phase": "run",
-   "since": "2026-09-30T01:16:01Z",
-   "step": 34000,
-   "steps": 50000,
-   "steps_per_s": 5.75,
-   "stolen_from": "S8",
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:25:55Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "D3_p23_r0.90_s1": "S3",
   "D3_p61_r0.65_s1": "S8",
@@ -69,7 +60,7 @@
   "H_p97_lw0.0025_s2": "S3",
   "H_p97_lw0.0150_s2": "S3"
  },
- "updated": "2026-09-30T02:54:49Z",
+ "updated": "2026-09-30T03:01:53Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
