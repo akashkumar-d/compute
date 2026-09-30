@@ -1,0 +1,5 @@
+# local scratch of the worker and the analysis (never committed)
+_work/
+_collected/
+__pycache__/
+*.pyc

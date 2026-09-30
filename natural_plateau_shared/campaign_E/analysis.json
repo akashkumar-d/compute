@@ -1,0 +1,4158 @@
+{
+ "summary": {
+  "L1_paper": {
+   "chosen": "dev_L1_paper_s1_lw0.005",
+   "dev_passed": false,
+   "fresh_pass": 0,
+   "fresh_done": 0,
+   "fresh_skipped": 10,
+   "wilson": null
+  },
+  "L1_hybrid": {
+   "chosen": "dev_L1_hybrid_s1_lw0.005",
+   "dev_passed": false,
+   "fresh_pass": 0,
+   "fresh_done": 0,
+   "fresh_skipped": 10,
+   "wilson": null
+  },
+  "L1_adamw": {
+   "chosen": "dev_L1_adamw_s1_wd0.3",
+   "dev_passed": false,
+   "fresh_pass": 0,
+   "fresh_done": 0,
+   "fresh_skipped": 10,
+   "wilson": null
+  },
+  "L2_paper": {
+   "chosen": "dev_L2_paper_s1_lw0.005",
+   "dev_passed": false,
+   "fresh_pass": 0,
+   "fresh_done": 0,
+   "fresh_skipped": 10,
+   "wilson": null
+  },
+  "L2_hybrid": {
+   "chosen": "dev_L2_hybrid_s1_lw0.015",
+   "dev_passed": false,
+   "fresh_pass": 0,
+   "fresh_done": 0,
+   "fresh_skipped": 10,
+   "wilson": null
+  },
+  "L2_adamw": {
+   "chosen": "dev_L2_adamw_s1_wd0.3",
+   "dev_passed": false,
+   "fresh_pass": 0,
+   "fresh_done": 0,
+   "fresh_skipped": 10,
+   "wilson": null
+  }
+ },
+ "rows": {
+  "dev_L1_paper_s1_lw0.005": {
+   "id": "dev_L1_paper_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9378238,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 420,
+    "t90": 39880,
+    "t90_first": 10440,
+    "T_fit_first": 400,
+    "CE_at_t10_over_logp": 0.04586339162658964,
+    "range_transition": 231264741109.04126,
+    "drift_transition": -37.112426695056826,
+    "refit90": 6500,
+    "refit_first": true,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     65
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.0043007718536527,
+    "v_band": 0.030320416853863833,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.02590674,
+    "test_W_end": 0.0,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L1_paper_s1_lw0.015": {
+   "id": "dev_L1_paper_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9533679,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 480,
+    "t90": 39860,
+    "t90_first": 4720,
+    "T_fit_first": 480,
+    "CE_at_t10_over_logp": 0.04443650803377944,
+    "range_transition": 3012265.4544184525,
+    "drift_transition": -141.36265721552326,
+    "refit90": 3500,
+    "refit_first": true,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     68
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.004298150993567,
+    "v_band": 0.030335488084981568,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.02590674,
+    "test_W_end": 0.0,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L1_paper_s4_lw0.005": {
+   "id": "dev_L1_paper_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.8860104,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 540,
+    "t90": null,
+    "t90_first": 25800,
+    "T_fit_first": 640,
+    "CE_at_t10_over_logp": 0.03411427970581616,
+    "range_transition": 2988457287793.373,
+    "drift_transition": -10.566771323204168,
+    "refit90": 24000,
+    "refit_first": true,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     0
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 54.074822922306325,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.02590674,
+    "test_W_end": 0.02590674,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L1_paper_s4_lw0.015": {
+   "id": "dev_L1_paper_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9689119,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 440,
+    "t90": 39820,
+    "t90_first": 12440,
+    "T_fit_first": 500,
+    "CE_at_t10_over_logp": 0.08969159803441319,
+    "range_transition": 10081294.224703377,
+    "drift_transition": -267.95828287216585,
+    "refit90": 11000,
+    "refit_first": true,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     0
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 54.031666092890525,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.02590674,
+    "test_W_end": 0.02590674,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L1_hybrid_s1_lw0.005": {
+   "id": "dev_L1_hybrid_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 220,
+    "t90": 39080,
+    "t90_first": 5280,
+    "T_fit_first": 260,
+    "CE_at_t10_over_logp": 0.1778701444205227,
+    "range_transition": 7145093340.863298,
+    "drift_transition": -0.6560380262903406,
+    "refit90": 6000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 260,
+    "W": [
+     3266,
+     3267
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 30.017788029427088,
+    "v_band": 0.04927919211948698,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.2020725,
+    "test_W_end": 0.2020725,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L1_hybrid_s1_lw0.015": {
+   "id": "dev_L1_hybrid_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.984456,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 240,
+    "t90": 39260,
+    "t90_first": 6500,
+    "T_fit_first": 260,
+    "CE_at_t10_over_logp": 0.1416569052338483,
+    "range_transition": 4567541285.46773,
+    "drift_transition": -1.370115992850191,
+    "refit90": 4000,
+    "refit_first": true,
+    "knee_kind": "first fit",
+    "knee": 260,
+    "W": [
+     6297,
+     6298
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 23.20654395447812,
+    "v_band": 0.12717304190164647,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.2435233,
+    "test_W_end": 0.2435233,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L1_hybrid_s4_lw0.005": {
+   "id": "dev_L1_hybrid_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 680,
+    "t90": 37520,
+    "t90_first": 7900,
+    "T_fit_first": 500,
+    "CE_at_t10_over_logp": 4.872659390851955e-05,
+    "range_transition": 5379996149.461945,
+    "drift_transition": 0.00039348575693681927,
+    "refit90": 7000,
+    "refit_first": true,
+    "knee_kind": "first fit",
+    "knee": 500,
+    "W": [
+     7612,
+     7612
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 16.685605271086224,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.4352332,
+    "test_W_end": 0.4352332,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L1_hybrid_s4_lw0.015": {
+   "id": "dev_L1_hybrid_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9896373,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 540,
+    "t90": 39320,
+    "t90_first": 7720,
+    "T_fit_first": 440,
+    "CE_at_t10_over_logp": 0.0013617986094683562,
+    "range_transition": 911820129.3783484,
+    "drift_transition": -0.09358729195355184,
+    "refit90": 5500,
+    "refit_first": true,
+    "knee_kind": "first fit",
+    "knee": 440,
+    "W": [
+     39227,
+     39228
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 17.899006705592942,
+    "v_band": 0.06479319553367456,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.1917098,
+    "test_W_end": 0.1917098,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L1_adamw_s1_wd0.3": {
+   "id": "dev_L1_adamw_s1_wd0.3",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 60,
+    "t90": 39220,
+    "t90_first": 2840,
+    "T_fit_first": 80,
+    "CE_at_t10_over_logp": 0.2636084371012442,
+    "range_transition": 12845425.836501399,
+    "drift_transition": -238.99941851714937,
+    "refit90": 6500,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 80,
+    "W": [
+     13727,
+     13727
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.8058436536689848,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 1.0,
+    "test_W_end": 1.0,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "wd": 0.3
+   }
+  },
+  "dev_L1_adamw_s1_wd1": {
+   "id": "dev_L1_adamw_s1_wd1",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 80,
+    "t90": 600,
+    "t90_first": 600,
+    "T_fit_first": 80,
+    "CE_at_t10_over_logp": 0.008947097985650895,
+    "range_transition": 1373.0159716361916,
+    "drift_transition": -20.280089979964334,
+    "refit90": 2000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 80,
+    "W": [
+     1503,
+     1503
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 0.1720995041065117,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 1.0,
+    "test_W_end": 1.0,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "wd": 1.0
+   }
+  },
+  "dev_L1_adamw_s4_wd0.3": {
+   "id": "dev_L1_adamw_s4_wd0.3",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 460,
+    "t90": 38680,
+    "t90_first": 6280,
+    "T_fit_first": 440,
+    "CE_at_t10_over_logp": 0.010209758485473605,
+    "range_transition": 24257797.920501325,
+    "drift_transition": -3.931268511522441,
+    "refit90": 9000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 440,
+    "W": [
+     22272,
+     22272
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.739400336785919,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.9015544,
+    "test_W_end": 0.9015544,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "wd": 0.3
+   }
+  },
+  "dev_L1_adamw_s4_wd1": {
+   "id": "dev_L1_adamw_s4_wd1",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 1,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 360,
+    "t90": 1400,
+    "t90_first": 1400,
+    "T_fit_first": 380,
+    "CE_at_t10_over_logp": 0.1054630021704749,
+    "range_transition": 300061.9690573366,
+    "drift_transition": -34.18077458903411,
+    "refit90": 2500,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 380,
+    "W": [
+     23420,
+     23421
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 0.08206555039923387,
+    "v_band": 0.39163870317281707,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.984456,
+    "test_W_end": 0.984456,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "wd": 1.0
+   }
+  },
+  "dev_L2_paper_s1_lw0.005": {
+   "id": "dev_L2_paper_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9637306,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 300,
+    "t90": 39980,
+    "t90_first": 9280,
+    "T_fit_first": 200,
+    "CE_at_t10_over_logp": 8.937252287927899e-08,
+    "range_transition": 41066061575577.51,
+    "drift_transition": 7.508579553891746,
+    "refit90": 11000,
+    "refit_first": false,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     18
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.0100315736383236,
+    "v_band": 0.03078742870630826,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.02072539,
+    "test_W_end": 0.0,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L2_paper_s1_lw0.015": {
+   "id": "dev_L2_paper_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9430052,
+    "final_train": 0.9986979,
+    "stop": null,
+    "t10": 320,
+    "t90": 39220,
+    "t90_first": 8480,
+    "T_fit_first": 220,
+    "CE_at_t10_over_logp": 6.787750976344916e-07,
+    "range_transition": 47572415.93017335,
+    "drift_transition": 0.06056770031043903,
+    "refit90": 6500,
+    "refit_first": true,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     19
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.0100196341645986,
+    "v_band": 0.03135535465326548,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.02072539,
+    "test_W_end": 0.0,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L2_paper_s4_lw0.005": {
+   "id": "dev_L2_paper_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9481865,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 11800,
+    "t90": 39980,
+    "t90_first": 36300,
+    "T_fit_first": 1740,
+    "CE_at_t10_over_logp": 3.629748527810484e-11,
+    "range_transition": 110268492716908.44,
+    "drift_transition": 4.732363227918478,
+    "refit90": 37000,
+    "refit_first": false,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     0
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 8648.70141659506,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.04145078,
+    "test_W_end": 0.04145078,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L2_paper_s4_lw0.015": {
+   "id": "dev_L2_paper_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "paper",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.3264249,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 14800,
+    "t90": null,
+    "t90_first": null,
+    "T_fit_first": 920,
+    "CE_at_t10_over_logp": 4.964471031730584e-09,
+    "range_transition": 493467123.5949858,
+    "drift_transition": -0.25799214717333824,
+    "refit90": null,
+    "refit_first": false,
+    "knee_kind": "head norm cap",
+    "knee": 0,
+    "W": [
+     0,
+     0
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 8634.806490039227,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.04145078,
+    "test_W_end": 0.04145078,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L2_hybrid_s1_lw0.005": {
+   "id": "dev_L2_hybrid_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9274611,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 180,
+    "t90": 39740,
+    "t90_first": 3040,
+    "T_fit_first": 140,
+    "CE_at_t10_over_logp": 0.0010337274976923562,
+    "range_transition": 26016974608.561764,
+    "drift_transition": -0.0055544317024483125,
+    "refit90": 4500,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 140,
+    "W": [
+     19826,
+     19826
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 34.35290901664461,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.6580311,
+    "test_W_end": 0.6580311,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L2_hybrid_s1_lw0.015": {
+   "id": "dev_L2_hybrid_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 200,
+    "t90": 39620,
+    "t90_first": 2740,
+    "T_fit_first": 160,
+    "CE_at_t10_over_logp": 0.0004812001040195337,
+    "range_transition": 9945218864.255482,
+    "drift_transition": -0.002102801143674659,
+    "refit90": 4000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 160,
+    "W": [
+     2318,
+     2319
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 24.163944143886493,
+    "v_band": 0.03925981894828984,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.1295337,
+    "test_W_end": 0.1295337,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L2_hybrid_s4_lw0.005": {
+   "id": "dev_L2_hybrid_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9689119,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 2540,
+    "t90": 38620,
+    "t90_first": 6660,
+    "T_fit_first": 1560,
+    "CE_at_t10_over_logp": 2.4428116648319576e-08,
+    "range_transition": 10468601972.354326,
+    "drift_transition": -5.272163424639669e-08,
+    "refit90": 29000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 1560,
+    "W": [
+     11636,
+     11636
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 36.12851260422821,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.0984456,
+    "test_W_end": 0.0984456,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   }
+  },
+  "dev_L2_hybrid_s4_lw0.015": {
+   "id": "dev_L2_hybrid_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "hybrid",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 2400,
+    "t90": 39700,
+    "t90_first": 6140,
+    "T_fit_first": 720,
+    "CE_at_t10_over_logp": 4.252858013252149e-08,
+    "range_transition": 1071456547.5239972,
+    "drift_transition": -1.5547077737854312e-07,
+    "refit90": 29000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 720,
+    "W": [
+     35876,
+     35876
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 21.119796225587162,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.1088083,
+    "test_W_end": 0.1088083,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   }
+  },
+  "dev_L2_adamw_s1_wd0.3": {
+   "id": "dev_L2_adamw_s1_wd0.3",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 40,
+    "t90": 38820,
+    "t90_first": 2660,
+    "T_fit_first": 60,
+    "CE_at_t10_over_logp": 0.11531609654304782,
+    "range_transition": 187401100.6017119,
+    "drift_transition": -14.663475733683352,
+    "refit90": 6500,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 60,
+    "W": [
+     31055,
+     31055
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 3.652712212677162,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.7668394,
+    "test_W_end": 0.7668394,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "wd": 0.3
+   }
+  },
+  "dev_L2_adamw_s1_wd1": {
+   "id": "dev_L2_adamw_s1_wd1",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 1.0,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 40,
+    "t90": 39980,
+    "t90_first": 700,
+    "T_fit_first": 60,
+    "CE_at_t10_over_logp": 0.15768390146962827,
+    "range_transition": 185801.14781764586,
+    "drift_transition": -140.84497364766085,
+    "refit90": 2500,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 60,
+    "W": [
+     8780,
+     8781
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.138759630464696,
+    "v_band": 0.7158755491845746,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.7512953,
+    "test_W_end": 0.7512953,
+    "primary": false,
+    "why_not": "share, F02, fit"
+   },
+   "dial": {
+    "init": 1.0,
+    "wd": 1.0
+   }
+  },
+  "dev_L2_adamw_s4_wd0.3": {
+   "id": "dev_L2_adamw_s4_wd0.3",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.9689119,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 3220,
+    "t90": 39880,
+    "t90_first": 5780,
+    "T_fit_first": 460,
+    "CE_at_t10_over_logp": 0.00010378055559861406,
+    "range_transition": 165544388.1182328,
+    "drift_transition": -0.0036193972533129217,
+    "refit90": 7500,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 460,
+    "W": [
+     470,
+     471
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 30.559592610868133,
+    "v_band": 0.06829871645838995,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.005181347,
+    "test_W_end": 0.0,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "wd": 0.3
+   }
+  },
+  "dev_L2_adamw_s4_wd1": {
+   "id": "dev_L2_adamw_s4_wd1",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "done",
+   "meta_selection": null,
+   "f": {
+    "opt": "adamw",
+    "depth": 2,
+    "p": 31,
+    "horizon": 40000,
+    "final_test": 0.984456,
+    "final_train": 1.0,
+    "stop": null,
+    "t10": 1260,
+    "t90": 33400,
+    "t90_first": 1740,
+    "T_fit_first": 420,
+    "CE_at_t10_over_logp": 0.0004652725548636828,
+    "range_transition": 213.63927613685306,
+    "drift_transition": -5.485583237503358,
+    "refit90": 3000,
+    "refit_first": false,
+    "knee_kind": "first fit",
+    "knee": 420,
+    "W": [
+     29361,
+     29361
+    ],
+    "share": 0.0,
+    "CE_peak_over_logp": 1.2165930596780914,
+    "v_band": 0.0,
+    "dAH_last": 0.0,
+    "fit_strict": false,
+    "test_W_start": 0.9740933,
+    "test_W_end": 0.9740933,
+    "primary": false,
+    "why_not": "share, final, F02, fit"
+   },
+   "dial": {
+    "init": 4.0,
+    "wd": 1.0
+   }
+  },
+  "fresh_L1_paper_s01": {
+   "id": "fresh_L1_paper_s01",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s02": {
+   "id": "fresh_L1_paper_s02",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s03": {
+   "id": "fresh_L1_paper_s03",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s04": {
+   "id": "fresh_L1_paper_s04",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s05": {
+   "id": "fresh_L1_paper_s05",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s06": {
+   "id": "fresh_L1_paper_s06",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s07": {
+   "id": "fresh_L1_paper_s07",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s08": {
+   "id": "fresh_L1_paper_s08",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s09": {
+   "id": "fresh_L1_paper_s09",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_paper_s10": {
+   "id": "fresh_L1_paper_s10",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0043007718536527,
+      "final_test": 0.9378238,
+      "primary": false,
+      "range_transition": 231264741109.04126,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.004298150993567,
+      "final_test": 0.9533679,
+      "primary": false,
+      "range_transition": 3012265.4544184525,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 54.074822922306325,
+      "final_test": 0.8860104,
+      "primary": false,
+      "range_transition": 2988457287793.373,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 54.031666092890525,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10081294.224703377,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s01": {
+   "id": "fresh_L1_hybrid_s01",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s02": {
+   "id": "fresh_L1_hybrid_s02",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s03": {
+   "id": "fresh_L1_hybrid_s03",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s04": {
+   "id": "fresh_L1_hybrid_s04",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s05": {
+   "id": "fresh_L1_hybrid_s05",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s06": {
+   "id": "fresh_L1_hybrid_s06",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s07": {
+   "id": "fresh_L1_hybrid_s07",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s08": {
+   "id": "fresh_L1_hybrid_s08",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s09": {
+   "id": "fresh_L1_hybrid_s09",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_hybrid_s10": {
+   "id": "fresh_L1_hybrid_s10",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_hybrid_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 30.017788029427088,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 7145093340.863298,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 23.20654395447812,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 4567541285.46773,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 16.685605271086224,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 5379996149.461945,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 17.899006705592942,
+      "final_test": 0.9896373,
+      "primary": false,
+      "range_transition": 911820129.3783484,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_hybrid_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s01": {
+   "id": "fresh_L1_adamw_s01",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s02": {
+   "id": "fresh_L1_adamw_s02",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s03": {
+   "id": "fresh_L1_adamw_s03",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s04": {
+   "id": "fresh_L1_adamw_s04",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s05": {
+   "id": "fresh_L1_adamw_s05",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s06": {
+   "id": "fresh_L1_adamw_s06",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s07": {
+   "id": "fresh_L1_adamw_s07",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s08": {
+   "id": "fresh_L1_adamw_s08",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s09": {
+   "id": "fresh_L1_adamw_s09",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L1_adamw_s10": {
+   "id": "fresh_L1_adamw_s10",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L1_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L1_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 1.8058436536689848,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 12845425.836501399,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s1_wd1": {
+      "CE_peak_over_logp": 0.1720995041065117,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1373.0159716361916,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 1.739400336785919,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 24257797.920501325,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L1_adamw_s4_wd1": {
+      "CE_peak_over_logp": 0.08206555039923387,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 300061.9690573366,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s01": {
+   "id": "fresh_L2_paper_s01",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s02": {
+   "id": "fresh_L2_paper_s02",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s03": {
+   "id": "fresh_L2_paper_s03",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s04": {
+   "id": "fresh_L2_paper_s04",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s05": {
+   "id": "fresh_L2_paper_s05",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s06": {
+   "id": "fresh_L2_paper_s06",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s07": {
+   "id": "fresh_L2_paper_s07",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s08": {
+   "id": "fresh_L2_paper_s08",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s09": {
+   "id": "fresh_L2_paper_s09",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_paper_s10": {
+   "id": "fresh_L2_paper_s10",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_paper_s1_lw0.005",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_paper_s1_lw0.005": {
+      "CE_peak_over_logp": 1.0100315736383236,
+      "final_test": 0.9637306,
+      "primary": false,
+      "range_transition": 41066061575577.51,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s1_lw0.015": {
+      "CE_peak_over_logp": 1.0100196341645986,
+      "final_test": 0.9430052,
+      "primary": false,
+      "range_transition": 47572415.93017335,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.005": {
+      "CE_peak_over_logp": 8648.70141659506,
+      "final_test": 0.9481865,
+      "primary": false,
+      "range_transition": 110268492716908.44,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_paper_s4_lw0.015": {
+      "CE_peak_over_logp": 8634.806490039227,
+      "final_test": 0.3264249,
+      "primary": false,
+      "range_transition": 493467123.5949858,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_paper_s1_lw0.005) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s01": {
+   "id": "fresh_L2_hybrid_s01",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s02": {
+   "id": "fresh_L2_hybrid_s02",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s03": {
+   "id": "fresh_L2_hybrid_s03",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s04": {
+   "id": "fresh_L2_hybrid_s04",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s05": {
+   "id": "fresh_L2_hybrid_s05",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s06": {
+   "id": "fresh_L2_hybrid_s06",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s07": {
+   "id": "fresh_L2_hybrid_s07",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s08": {
+   "id": "fresh_L2_hybrid_s08",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s09": {
+   "id": "fresh_L2_hybrid_s09",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_hybrid_s10": {
+   "id": "fresh_L2_hybrid_s10",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_hybrid_s1_lw0.015",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_hybrid_s1_lw0.005": {
+      "CE_peak_over_logp": 34.35290901664461,
+      "final_test": 0.9274611,
+      "primary": false,
+      "range_transition": 26016974608.561764,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s1_lw0.015": {
+      "CE_peak_over_logp": 24.163944143886493,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 9945218864.255482,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.005": {
+      "CE_peak_over_logp": 36.12851260422821,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 10468601972.354326,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_hybrid_s4_lw0.015": {
+      "CE_peak_over_logp": 21.119796225587162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 1071456547.5239972,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_hybrid_s1_lw0.015) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s01": {
+   "id": "fresh_L2_adamw_s01",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s02": {
+   "id": "fresh_L2_adamw_s02",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s03": {
+   "id": "fresh_L2_adamw_s03",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s04": {
+   "id": "fresh_L2_adamw_s04",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s05": {
+   "id": "fresh_L2_adamw_s05",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s06": {
+   "id": "fresh_L2_adamw_s06",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s07": {
+   "id": "fresh_L2_adamw_s07",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s08": {
+   "id": "fresh_L2_adamw_s08",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s09": {
+   "id": "fresh_L2_adamw_s09",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  },
+  "fresh_L2_adamw_s10": {
+   "id": "fresh_L2_adamw_s10",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "status": "skipped",
+   "meta_selection": {
+    "chosen": "dev_L2_adamw_s1_wd0.3",
+    "missing": [],
+    "passed": false,
+    "rule": "PLAN.md",
+    "run": false,
+    "table": {
+     "dev_L2_adamw_s1_wd0.3": {
+      "CE_peak_over_logp": 3.652712212677162,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 187401100.6017119,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s1_wd1": {
+      "CE_peak_over_logp": 1.138759630464696,
+      "final_test": 1.0,
+      "primary": false,
+      "range_transition": 185801.14781764586,
+      "share": 0.0,
+      "why_not": "share, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd0.3": {
+      "CE_peak_over_logp": 30.559592610868133,
+      "final_test": 0.9689119,
+      "primary": false,
+      "range_transition": 165544388.1182328,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     },
+     "dev_L2_adamw_s4_wd1": {
+      "CE_peak_over_logp": 1.2165930596780914,
+      "final_test": 0.984456,
+      "primary": false,
+      "range_transition": 213.63927613685306,
+      "share": 0.0,
+      "why_not": "share, final, F02, fit"
+     }
+    }
+   },
+   "reason": "the chosen development setting (dev_L2_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell"
+  }
+ }
+}

@@ -3,6 +3,19 @@
 Written by claude/plateau-review on 2026-09-30, at Akash's request: "can we have transformers as well?" and "let's do it on Claude
 Code". The plan, the endpoint and the selection rule are in `PLAN.md`; they were fixed before any result.
 
+## Result (2026-09-30)
+
+- **Completion.** 84/84 chains finished (08:03–12:40 UTC), none failed.
+- **Endpoint.** No development run passes the per-run endpoint. So the rule ran no fresh seeds, and the 60 fresh chains recorded skips.
+- **What the runs do.** The transformers fit the training set within 60–1,740 updates. Then they drive the training CE about 3 to 7
+  orders of magnitude below the MLP plateau level. The loss either swings from update to update (the paper's learner) or spikes
+  periodically (hybrid, AdamW). No run shows a flat loss while held-out accuracy rises.
+- **Where things are.**
+  - The report: `ANALYSIS.md`, `analysis.json`.
+  - A post hoc reading: `FINDINGS.md`, with its numbers from `describe.py`.
+  - The raw runs: `results_archive/`.
+  - The figures: the draft's `experiments/campaigns_CDE_20260930/`.
+
 ## What runs
 
 - **Cells.** 1- and 2-layer transformers × three optimizers = 6 cells:
@@ -28,6 +41,9 @@ Code". The plan, the endpoint and the selection rule are in `PLAN.md`; they were
 | `make_manifest.py`, `manifest.json`, `HASHES.json` | the 84 chains and the registered file hashes |
 | `analyze.py` | `collect` (from every session branch) and `report` (ANALYSIS.md, analysis.json) |
 | `tests/test_tfm.py` | runner tests, run by the worker's selftest |
+| `ANALYSIS.md`, `analysis.json` | the report (`analyze.py report`), 2026-09-30 |
+| `FINDINGS.md`, `describe.py` | the post hoc reading of the results and the script behind its numbers (not part of the plan) |
+| `results_archive/` | the 84 collected chains (2 deterministic tars, `SHA256SUMS`, `index.json`, `README.md`) |
 | `WORKER.md`, `START_PROMPTS.md` | instructions for the sessions and the prompts Akash pastes |
 
 ## Starting
