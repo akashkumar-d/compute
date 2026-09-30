@@ -52,11 +52,20 @@ done
 for f in ANALYSIS.md analysis.json; do
   if [ -e "$SRC/campaign_D/$f" ]; then cp "$SRC/campaign_D/$f" "$DST/campaign_D/$f"; fi
 done
+# campaign E (transformer pilot): A-owned code, docs and manifest (the worker sessions' results/ and status/ live on their own branches)
+mkdir -p "$DST/campaign_E/tests"
+for f in .gitignore README.md PLAN.md WORKER.md START_PROMPTS.md HASHES.json manifest.json make_manifest.py \
+         tfm_runner.py tfm_analyze.py endpoints.py worker.py analyze.py tests/test_tfm.py; do
+  cp "$SRC/campaign_E/$f" "$DST/campaign_E/$f"
+done
+for f in ANALYSIS.md analysis.json; do
+  if [ -e "$SRC/campaign_E/$f" ]; then cp "$SRC/campaign_E/$f" "$DST/campaign_E/$f"; fi
+done
 # B's log: create only if it does not exist yet (never overwrite B's)
 [ -e "$DST/log/B.md" ] || cp "$SRC/log/B.md" "$DST/log/B.md"
 
 git add natural_plateau_shared
 if git diff --cached --quiet; then echo "Nothing new to push."; exit 0; fi
-git commit -m "A: sync natural_plateau_shared (protocol, tasks, code, campaigns C and D, A log/claims/results)"
+git commit -m "A: sync natural_plateau_shared (protocol, tasks, code, campaigns C, D and E, A log/claims/results)"
 git push origin "$BRANCH"
 echo "Pushed to $BRANCH."

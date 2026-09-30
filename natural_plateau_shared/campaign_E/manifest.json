@@ -1,0 +1,2909 @@
+{
+ "campaign": "E",
+ "version": 1,
+ "created": "2026-09-30T07:12:59Z",
+ "author": "claude/plateau-review",
+ "kind": "transformer pilot (development + fresh seeds; rule fixed in PLAN.md before any result)",
+ "workers": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8"
+ ],
+ "cores_per_worker": 4,
+ "stop_generalized": {
+  "acc": 0.99,
+  "factor": 1.5,
+  "extra": 10000
+ },
+ "p": 31,
+ "seed_rule": "development: init 101, split 201; fresh: init 1001 + i, split 2001 + i (i = 0..9)",
+ "est_session_hours": {
+  "S1": 1.83,
+  "S2": 1.83,
+  "S3": 1.89,
+  "S4": 1.89,
+  "S5": 1.66,
+  "S6": 1.66,
+  "S7": 1.78,
+  "S8": 1.78
+ },
+ "chains": [
+  {
+   "id": "dev_L1_paper_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S1",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_paper_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S2",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_paper_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S3",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_paper_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S4",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_hybrid_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S1",
+   "order": 1
+  },
+  {
+   "id": "dev_L1_hybrid_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S2",
+   "order": 1
+  },
+  {
+   "id": "dev_L1_hybrid_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S3",
+   "order": 1
+  },
+  {
+   "id": "dev_L1_hybrid_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "worker": "S4",
+   "order": 1
+  },
+  {
+   "id": "dev_L1_adamw_s1_wd0.3",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "wd": 0.3
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 0.3,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "worker": "S5",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_adamw_s1_wd1",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "wd": 1.0
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "worker": "S6",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_adamw_s4_wd0.3",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "wd": 0.3
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 0.3,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "worker": "S7",
+   "order": 2
+  },
+  {
+   "id": "dev_L1_adamw_s4_wd1",
+   "stage": "dev",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "wd": 1.0
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 1,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "worker": "S8",
+   "order": 2
+  },
+  {
+   "id": "dev_L2_paper_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "worker": "S1",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_paper_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "worker": "S2",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_paper_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "worker": "S3",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_paper_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "paper",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "worker": "S4",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_hybrid_s1_lw0.005",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "worker": "S5",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_hybrid_s1_lw0.015",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "worker": "S6",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_hybrid_s4_lw0.005",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.005
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.005
+   },
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "worker": "S7",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_hybrid_s4_lw0.015",
+   "stage": "dev",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "lam_w": 0.015
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "hybrid",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    },
+    "lam_w": 0.015
+   },
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "worker": "S8",
+   "order": 0
+  },
+  {
+   "id": "dev_L2_adamw_s1_wd0.3",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "wd": 0.3
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 0.3,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "worker": "S5",
+   "order": 1
+  },
+  {
+   "id": "dev_L2_adamw_s1_wd1",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 1.0,
+    "wd": 1.0
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 1.0,
+     "mat": 1.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "worker": "S6",
+   "order": 1
+  },
+  {
+   "id": "dev_L2_adamw_s4_wd0.3",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "wd": 0.3
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 0.3,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "worker": "S7",
+   "order": 1
+  },
+  {
+   "id": "dev_L2_adamw_s4_wd1",
+   "stage": "dev",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": {
+    "init": 4.0,
+    "wd": 1.0
+   },
+   "seed": 0,
+   "init_seed": 101,
+   "split_seed": 201,
+   "cfg": {
+    "p": 31,
+    "frac": 0.8,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "dtype": "float32",
+    "steps": 40000,
+    "obs_every": 20,
+    "heavy_every": 500,
+    "stop_generalized": {
+     "acc": 0.99,
+     "factor": 1.5,
+     "extra": 10000
+    },
+    "eta_w": 0.03,
+    "eta_v": 0.03,
+    "lam_v": 0.2,
+    "adamw": {
+     "lr": 0.001,
+     "wd": 1.0,
+     "b1": 0.9,
+     "b2": 0.98,
+     "eps": 1e-08
+    },
+    "n_layers": 2,
+    "opt": "adamw",
+    "init_seed": 101,
+    "split_seed": 201,
+    "init": {
+     "emb": 4.0,
+     "mat": 4.0,
+     "head": 1.0
+    }
+   },
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "worker": "S8",
+   "order": 1
+  },
+  {
+   "id": "fresh_L1_paper_s01",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 1,
+   "init_seed": 1001,
+   "split_seed": 2001,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_paper_s02",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 2,
+   "init_seed": 1002,
+   "split_seed": 2002,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_paper_s03",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 3,
+   "init_seed": 1003,
+   "split_seed": 2003,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_paper_s04",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 4,
+   "init_seed": 1004,
+   "split_seed": 2004,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_paper_s05",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 5,
+   "init_seed": 1005,
+   "split_seed": 2005,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 6
+  },
+  {
+   "id": "fresh_L1_paper_s06",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 6,
+   "init_seed": 1006,
+   "split_seed": 2006,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 6
+  },
+  {
+   "id": "fresh_L1_paper_s07",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 7,
+   "init_seed": 1007,
+   "split_seed": 2007,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 6
+  },
+  {
+   "id": "fresh_L1_paper_s08",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 8,
+   "init_seed": 1008,
+   "split_seed": 2008,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 6
+  },
+  {
+   "id": "fresh_L1_paper_s09",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 9,
+   "init_seed": 1009,
+   "split_seed": 2009,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 6
+  },
+  {
+   "id": "fresh_L1_paper_s10",
+   "stage": "fresh",
+   "cell": "L1_paper",
+   "opt": "paper",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 10,
+   "init_seed": 1010,
+   "split_seed": 2010,
+   "after": [
+    "dev_L1_paper_s1_lw0.005",
+    "dev_L1_paper_s1_lw0.015",
+    "dev_L1_paper_s4_lw0.005",
+    "dev_L1_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 6
+  },
+  {
+   "id": "fresh_L1_hybrid_s01",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 1,
+   "init_seed": 1001,
+   "split_seed": 2001,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_hybrid_s02",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 2,
+   "init_seed": 1002,
+   "split_seed": 2002,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_hybrid_s03",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 3,
+   "init_seed": 1003,
+   "split_seed": 2003,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_hybrid_s04",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 4,
+   "init_seed": 1004,
+   "split_seed": 2004,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_hybrid_s05",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 5,
+   "init_seed": 1005,
+   "split_seed": 2005,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_hybrid_s06",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 6,
+   "init_seed": 1006,
+   "split_seed": 2006,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_hybrid_s07",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 7,
+   "init_seed": 1007,
+   "split_seed": 2007,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_hybrid_s08",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 8,
+   "init_seed": 1008,
+   "split_seed": 2008,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_hybrid_s09",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 9,
+   "init_seed": 1009,
+   "split_seed": 2009,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_hybrid_s10",
+   "stage": "fresh",
+   "cell": "L1_hybrid",
+   "opt": "hybrid",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 10,
+   "init_seed": 1010,
+   "split_seed": 2010,
+   "after": [
+    "dev_L1_hybrid_s1_lw0.005",
+    "dev_L1_hybrid_s1_lw0.015",
+    "dev_L1_hybrid_s4_lw0.005",
+    "dev_L1_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.38,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 5
+  },
+  {
+   "id": "fresh_L1_adamw_s01",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 1,
+   "init_seed": 1001,
+   "split_seed": 2001,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s02",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 2,
+   "init_seed": 1002,
+   "split_seed": 2002,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s03",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 3,
+   "init_seed": 1003,
+   "split_seed": 2003,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s04",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 4,
+   "init_seed": 1004,
+   "split_seed": 2004,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s05",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 5,
+   "init_seed": 1005,
+   "split_seed": 2005,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s06",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 6,
+   "init_seed": 1006,
+   "split_seed": 2006,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s07",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 7,
+   "init_seed": 1007,
+   "split_seed": 2007,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s08",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 8,
+   "init_seed": 1008,
+   "split_seed": 2008,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 3
+  },
+  {
+   "id": "fresh_L1_adamw_s09",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 9,
+   "init_seed": 1009,
+   "split_seed": 2009,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 4
+  },
+  {
+   "id": "fresh_L1_adamw_s10",
+   "stage": "fresh",
+   "cell": "L1_adamw",
+   "opt": "adamw",
+   "n_layers": 1,
+   "p": 31,
+   "dial": null,
+   "seed": 10,
+   "init_seed": 1010,
+   "split_seed": 2010,
+   "after": [
+    "dev_L1_adamw_s1_wd0.3",
+    "dev_L1_adamw_s1_wd1",
+    "dev_L1_adamw_s4_wd0.3",
+    "dev_L1_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.27,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 4
+  },
+  {
+   "id": "fresh_L2_paper_s01",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 1,
+   "init_seed": 1001,
+   "split_seed": 2001,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_paper_s02",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 2,
+   "init_seed": 1002,
+   "split_seed": 2002,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_paper_s03",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 3,
+   "init_seed": 1003,
+   "split_seed": 2003,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_paper_s04",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 4,
+   "init_seed": 1004,
+   "split_seed": 2004,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_paper_s05",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 5,
+   "init_seed": 1005,
+   "split_seed": 2005,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_paper_s06",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 6,
+   "init_seed": 1006,
+   "split_seed": 2006,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_paper_s07",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 7,
+   "init_seed": 1007,
+   "split_seed": 2007,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 10
+  },
+  {
+   "id": "fresh_L2_paper_s08",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 8,
+   "init_seed": 1008,
+   "split_seed": 2008,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 10
+  },
+  {
+   "id": "fresh_L2_paper_s09",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 9,
+   "init_seed": 1009,
+   "split_seed": 2009,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 10
+  },
+  {
+   "id": "fresh_L2_paper_s10",
+   "stage": "fresh",
+   "cell": "L2_paper",
+   "opt": "paper",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 10,
+   "init_seed": 1010,
+   "split_seed": 2010,
+   "after": [
+    "dev_L2_paper_s1_lw0.005",
+    "dev_L2_paper_s1_lw0.015",
+    "dev_L2_paper_s4_lw0.005",
+    "dev_L2_paper_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.17,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 10
+  },
+  {
+   "id": "fresh_L2_hybrid_s01",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 1,
+   "init_seed": 1001,
+   "split_seed": 2001,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s02",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 2,
+   "init_seed": 1002,
+   "split_seed": 2002,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s03",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 3,
+   "init_seed": 1003,
+   "split_seed": 2003,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s04",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 4,
+   "init_seed": 1004,
+   "split_seed": 2004,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s05",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 5,
+   "init_seed": 1005,
+   "split_seed": 2005,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s06",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 6,
+   "init_seed": 1006,
+   "split_seed": 2006,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s07",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 7,
+   "init_seed": 1007,
+   "split_seed": 2007,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s08",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 8,
+   "init_seed": 1008,
+   "split_seed": 2008,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 8
+  },
+  {
+   "id": "fresh_L2_hybrid_s09",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 9,
+   "init_seed": 1009,
+   "split_seed": 2009,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_hybrid_s10",
+   "stage": "fresh",
+   "cell": "L2_hybrid",
+   "opt": "hybrid",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 10,
+   "init_seed": 1010,
+   "split_seed": 2010,
+   "after": [
+    "dev_L2_hybrid_s1_lw0.005",
+    "dev_L2_hybrid_s1_lw0.015",
+    "dev_L2_hybrid_s4_lw0.005",
+    "dev_L2_hybrid_s4_lw0.015"
+   ],
+   "threads": 1,
+   "est_core_hours": 1.03,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 9
+  },
+  {
+   "id": "fresh_L2_adamw_s01",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 1,
+   "init_seed": 1001,
+   "split_seed": 2001,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 6
+  },
+  {
+   "id": "fresh_L2_adamw_s02",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 2,
+   "init_seed": 1002,
+   "split_seed": 2002,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 6
+  },
+  {
+   "id": "fresh_L2_adamw_s03",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 3,
+   "init_seed": 1003,
+   "split_seed": 2003,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S1",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s04",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 4,
+   "init_seed": 1004,
+   "split_seed": 2004,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S2",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s05",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 5,
+   "init_seed": 1005,
+   "split_seed": 2005,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S3",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s06",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 6,
+   "init_seed": 1006,
+   "split_seed": 2006,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S4",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s07",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 7,
+   "init_seed": 1007,
+   "split_seed": 2007,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S5",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s08",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 8,
+   "init_seed": 1008,
+   "split_seed": 2008,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S6",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s09",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 9,
+   "init_seed": 1009,
+   "split_seed": 2009,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S7",
+   "order": 7
+  },
+  {
+   "id": "fresh_L2_adamw_s10",
+   "stage": "fresh",
+   "cell": "L2_adamw",
+   "opt": "adamw",
+   "n_layers": 2,
+   "p": 31,
+   "dial": null,
+   "seed": 10,
+   "init_seed": 1010,
+   "split_seed": 2010,
+   "after": [
+    "dev_L2_adamw_s1_wd0.3",
+    "dev_L2_adamw_s1_wd1",
+    "dev_L2_adamw_s4_wd0.3",
+    "dev_L2_adamw_s4_wd1"
+   ],
+   "threads": 1,
+   "est_core_hours": 0.86,
+   "cfg": {
+    "steps": 40000,
+    "note": "resolved at run time: the development setting chosen by PLAN.md, on these seeds"
+   },
+   "worker": "S8",
+   "order": 7
+  }
+ ]
+}
