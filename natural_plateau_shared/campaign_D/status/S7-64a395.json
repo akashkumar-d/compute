@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/loving-ride-hxrko3",
  "broken": null,
- "campaign_left": 99,
+ "campaign_left": 83,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -33,36 +33,36 @@
   "D3_p23_r0.20_s2": {
    "phase": "run",
    "since": "2026-09-30T00:30:45Z",
-   "step": 12000,
+   "step": 82000,
    "steps": 120000,
-   "steps_per_s": 37.57,
+   "steps_per_s": 38.45,
    "stolen_from": null,
    "threads": 1
   },
   "D3_p23_r0.45_s1": {
    "phase": "run",
    "since": "2026-09-30T00:36:23Z",
-   "step": 0,
+   "step": 68000,
    "steps": 120000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 37.87,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0050_s2": {
    "phase": "run",
    "since": "2026-09-29T23:53:04Z",
-   "step": 14000,
+   "step": 24000,
    "steps": 50000,
-   "steps_per_s": 5.42,
+   "steps_per_s": 5.46,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0200_s2": {
    "phase": "run",
    "since": "2026-09-30T00:00:17Z",
-   "step": 10000,
+   "step": 20000,
    "steps": 50000,
-   "steps_per_s": 4.66,
+   "steps_per_s": 5.05,
    "stolen_from": null,
    "threads": 1
   }
@@ -70,7 +70,7 @@
  "started": "2026-09-29T20:25:39Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T00:36:23Z",
+ "updated": "2026-09-30T01:06:36Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S7"
 }
