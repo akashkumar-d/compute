@@ -1,0 +1,59 @@
+{
+ "branch": "claude/zen-goldberg-tdcfzg",
+ "code": {
+  "manifest": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "59eb9e2bdaa22a51eab67f46a1d6d8a488ab3977fe48990153c992ca653cfb8d"
+ },
+ "cohort": "H_p23",
+ "depth": 1,
+ "dial": {
+  "lam_w": 0.0075
+ },
+ "done": true,
+ "family": "H",
+ "files": {
+  "run.json.gz": {
+   "bytes": 134213,
+   "sha256": "956157517ee637313c09f03595fe4f35dfb8f638a79a35d44e0992e57d5f7647"
+  }
+ },
+ "finished": "2026-09-30T01:02:22Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "H_p23_lw0.0075_s2",
+ "init_seed": 5002,
+ "instance": "9b884b",
+ "owner": "S8",
+ "p": 23,
+ "ran_by": "S2",
+ "run": {
+  "final_loss": 0.07298109624006714,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 40000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 104.2,
+  "steps": 26520,
+  "stop_reason": "generalized",
+  "stopped_at": 26520,
+  "t10": 10560,
+  "t90": 14280,
+  "x": null
+ },
+ "seed": 2,
+ "split_seed": 6002,
+ "stage": "H",
+ "started": "2026-09-30T01:00:38Z",
+ "stolen_from": "S8",
+ "threads": 1,
+ "version": "campaign-D worker 1.0 (2026-09-29)",
+ "width": 512
+}
