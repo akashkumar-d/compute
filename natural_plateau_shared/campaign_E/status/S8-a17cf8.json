@@ -4,7 +4,7 @@
  ],
  "branch": "claude/modest-volta-812lsj",
  "broken": null,
- "campaign_left": 24,
+ "campaign_left": 18,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -33,13 +33,23 @@
  "own_left": 2,
  "own_total": 10,
  "push_error": null,
- "running": {},
+ "running": {
+  "fresh_L2_hybrid_s08": {
+   "phase": "run",
+   "since": "2026-09-30T10:03:48Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-30T07:36:55Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
   "dev_L2_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T09:57:54Z",
+ "updated": "2026-09-30T10:03:48Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
