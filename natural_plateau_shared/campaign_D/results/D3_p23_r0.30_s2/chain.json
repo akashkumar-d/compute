@@ -1,0 +1,59 @@
+{
+ "branch": "claude/laughing-newton-adrtig",
+ "code": {
+  "manifest": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "59eb9e2bdaa22a51eab67f46a1d6d8a488ab3977fe48990153c992ca653cfb8d"
+ },
+ "cohort": "D_p23",
+ "depth": 3,
+ "dial": {
+  "r": 0.3
+ },
+ "done": true,
+ "family": "D",
+ "files": {
+  "run.json.gz": {
+   "bytes": 444072,
+   "sha256": "1734c6e138367224638f80914f61863e4ea3ae503fb54207aaae19755eee7424"
+  }
+ },
+ "finished": "2026-09-30T00:52:50Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "D3_p23_r0.30_s2",
+ "init_seed": 5002,
+ "instance": "df276a",
+ "owner": "S6",
+ "p": 23,
+ "ran_by": "S6",
+ "run": {
+  "final_loss": 0.7198912958397974,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 120000,
+  "last_layer_rate": 0.29999999999999993,
+  "resumed_from": 0,
+  "seconds": 2258.6,
+  "steps": 88780,
+  "stop_reason": "generalized",
+  "stopped_at": 88780,
+  "t10": 17900,
+  "t90": 52400,
+  "x": 2.4165
+ },
+ "seed": 2,
+ "split_seed": 6002,
+ "stage": "D3",
+ "started": "2026-09-30T00:15:10Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-D worker 1.0 (2026-09-29)",
+ "width": 256
+}
