@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/trusting-rubin-8x9f47",
  "broken": null,
- "campaign_left": 61,
+ "campaign_left": 44,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -32,36 +32,36 @@
   "D3_p47_r0.90_s1": {
    "phase": "run",
    "since": "2026-09-30T01:22:27Z",
-   "step": 8000,
+   "step": 36000,
    "steps": 100000,
-   "steps_per_s": 12.22,
+   "steps_per_s": 14.66,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p47_r0.65_s1": {
    "phase": "run",
    "since": "2026-09-30T01:06:18Z",
-   "step": 16000,
+   "step": 36000,
    "steps": 100000,
-   "steps_per_s": 9.85,
+   "steps_per_s": 10.51,
    "stolen_from": null,
    "threads": 1
   },
   "HW_p97_w1024_lw0.0100_s1": {
    "phase": "run",
    "since": "2026-09-29T23:56:13Z",
-   "step": 14000,
+   "step": 18000,
    "steps": 50000,
-   "steps_per_s": 2.06,
+   "steps_per_s": 2.1,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0100_s1": {
    "phase": "run",
    "since": "2026-09-30T01:33:39Z",
-   "step": 0,
+   "step": 8000,
    "steps": 50000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 4.49,
    "stolen_from": null,
    "threads": 1
   }
@@ -69,7 +69,7 @@
  "started": "2026-09-29T20:25:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T01:33:39Z",
+ "updated": "2026-09-30T02:03:40Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S5"
 }
