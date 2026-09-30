@@ -2,20 +2,21 @@
  "abandoned": [],
  "branch": "claude/optimistic-rubin-zfxumj",
  "broken": null,
- "campaign_left": 16,
+ "campaign_left": 9,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p47_r0.20_s1",
   "D3_p47_r0.30_s2",
   "D3_p61_r0.45_s2",
+  "D4_p23_r0.65_s1",
   "D4_p47_r0.22_s2",
   "D4_p61_r0.15_s2",
   "D4_p61_r0.32_s2",
   "D4_p61_r0.65_s2",
   "D4_p97_r0.32_s1"
  ],
- "est_hours_left": 0.56,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -28,24 +29,14 @@
  },
  "instance": "bbd904",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 2,
+ "own_left": 0,
  "own_total": 16,
  "push_error": null,
- "running": {
-  "D4_p23_r0.65_s1": {
-   "phase": "run",
-   "since": "2026-09-30T02:12:42Z",
-   "step": 86000,
-   "steps": 120000,
-   "steps_per_s": 28.72,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-29T20:24:58Z",
- "state": "running",
+ "state": "standby",
  "stolen": {},
- "updated": "2026-09-30T03:02:55Z",
+ "updated": "2026-09-30T03:21:21Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S3"
 }
