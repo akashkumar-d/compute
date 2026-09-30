@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/trusting-rubin-8x9f47",
  "broken": null,
- "campaign_left": 1,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -42,9 +42,9 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:25:24Z",
- "state": "standby",
+ "state": "finished",
  "stolen": {},
- "updated": "2026-09-30T04:37:46Z",
+ "updated": "2026-09-30T04:45:22Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S5"
 }
