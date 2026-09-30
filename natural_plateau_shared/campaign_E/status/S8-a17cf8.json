@@ -4,7 +4,7 @@
  ],
  "branch": "claude/modest-volta-812lsj",
  "broken": null,
- "campaign_left": 83,
+ "campaign_left": 55,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -30,18 +30,36 @@
   "dev_L2_adamw_s4_wd1": {
    "phase": "run",
    "since": "2026-09-30T07:38:05Z",
-   "step": 12000,
+   "step": 14000,
    "steps": 40000,
-   "steps_per_s": 7.33,
+   "steps_per_s": 6.83,
    "stolen_from": null,
    "threads": 1
   },
   "dev_L2_hybrid_s4_lw0.015": {
    "phase": "run",
    "since": "2026-09-30T07:38:05Z",
-   "step": 8000,
+   "step": 12000,
    "steps": 40000,
-   "steps_per_s": 4.89,
+   "steps_per_s": 4.88,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_adamw_s08": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:42Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s06": {
+   "phase": "run",
+   "since": "2026-09-30T08:12:42Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -51,7 +69,7 @@
  "stolen": {
   "dev_L2_adamw_s1_wd1": "S6"
  },
- "updated": "2026-09-30T08:05:40Z",
+ "updated": "2026-09-30T08:12:42Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
