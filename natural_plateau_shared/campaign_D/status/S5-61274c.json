@@ -42,9 +42,9 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:25:24Z",
- "state": "finished",
+ "state": "running",
  "stolen": {},
- "updated": "2026-09-30T04:45:43Z",
+ "updated": "2026-09-30T04:46:14Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S5"
 }
