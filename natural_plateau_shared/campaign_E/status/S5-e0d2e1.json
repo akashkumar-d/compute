@@ -6,11 +6,11 @@
  ],
  "branch": "claude/brave-einstein-qer93j",
  "broken": null,
- "campaign_left": 84,
+ "campaign_left": 78,
  "commit_error": null,
  "cores": 4,
  "done": [],
- "est_hours_left": 1.66,
+ "est_hours_left": 1.59,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -23,16 +23,16 @@
  },
  "instance": "e0d2e1",
  "manifest_sha256": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
- "own_left": 10,
+ "own_left": 9,
  "own_total": 10,
  "push_error": null,
  "running": {
   "dev_L2_hybrid_s1_lw0.005": {
    "phase": "run",
    "since": "2026-09-30T07:37:44Z",
-   "step": 0,
+   "step": 12000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 5.89,
    "stolen_from": null,
    "threads": 1
   }
@@ -44,7 +44,7 @@
   "dev_L2_adamw_s4_wd1": "S8",
   "dev_L2_hybrid_s1_lw0.015": "S6"
  },
- "updated": "2026-09-30T07:41:57Z",
+ "updated": "2026-09-30T08:11:58Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
