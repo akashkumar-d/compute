@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/optimistic-rubin-zfxumj",
  "broken": null,
- "campaign_left": 101,
+ "campaign_left": 87,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,36 +28,36 @@
   "D3_p61_r0.45_s2": {
    "phase": "run",
    "since": "2026-09-30T00:32:39Z",
-   "step": 0,
+   "step": 18000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 10.03,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.15_s2": {
    "phase": "run",
    "since": "2026-09-30T00:32:39Z",
-   "step": 0,
+   "step": 12000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.68,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.32_s2": {
    "phase": "run",
    "since": "2026-09-30T00:32:39Z",
-   "step": 0,
+   "step": 12000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.68,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.65_s2": {
    "phase": "run",
    "since": "2026-09-30T00:32:39Z",
-   "step": 0,
+   "step": 12000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.68,
    "stolen_from": null,
    "threads": 1
   }
@@ -65,7 +65,7 @@
  "started": "2026-09-29T20:24:58Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T00:32:39Z",
+ "updated": "2026-09-30T01:02:52Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S3"
 }
