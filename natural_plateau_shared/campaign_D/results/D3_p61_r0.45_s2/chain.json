@@ -1,0 +1,59 @@
+{
+ "branch": "claude/optimistic-rubin-zfxumj",
+ "code": {
+  "manifest": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "59eb9e2bdaa22a51eab67f46a1d6d8a488ab3977fe48990153c992ca653cfb8d"
+ },
+ "cohort": "D_p61",
+ "depth": 3,
+ "dial": {
+  "r": 0.45
+ },
+ "done": true,
+ "family": "D",
+ "files": {
+  "run.json.gz": {
+   "bytes": 157191,
+   "sha256": "fd4bd0606bc50dd97a165d61d85627550effbc946c419beeb7a18b302ba5711e"
+  }
+ },
+ "finished": "2026-09-30T01:29:43Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "D3_p61_r0.45_s2",
+ "init_seed": 5002,
+ "instance": "bbd904",
+ "owner": "S3",
+ "p": 61,
+ "ran_by": "S3",
+ "run": {
+  "final_loss": 3.1290744224058753,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 100000,
+  "last_layer_rate": 0.45,
+  "resumed_from": 0,
+  "seconds": 3423.7,
+  "steps": 34140,
+  "stop_reason": "generalized",
+  "stopped_at": 34140,
+  "t10": 13140,
+  "t90": 18540,
+  "x": 2.6608
+ },
+ "seed": 2,
+ "split_seed": 6002,
+ "stage": "D3",
+ "started": "2026-09-30T00:32:39Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-D worker 1.0 (2026-09-29)",
+ "width": 256
+}
