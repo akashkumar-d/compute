@@ -4,7 +4,7 @@
  ],
  "branch": "claude/trusting-feynman-punoz7",
  "broken": null,
- "campaign_left": 14,
+ "campaign_left": 11,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -40,7 +40,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T10:08:44Z",
+ "updated": "2026-09-30T10:38:58Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
