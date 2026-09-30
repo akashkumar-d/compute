@@ -45,14 +45,14 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-29T20:25:39Z",
- "state": "running",
+ "state": "finished",
  "stolen": {
   "D4_p47_r0.32_s1": "S8",
   "H_p31_lw0.0150_s2": "S3",
   "H_p61_lw0.0100_s1": "S8",
   "H_p61_lw0.0150_s2": "S3"
  },
- "updated": "2026-09-30T04:48:32Z",
+ "updated": "2026-09-30T04:48:34Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S7"
 }
