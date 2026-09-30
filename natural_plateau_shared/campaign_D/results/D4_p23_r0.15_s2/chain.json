@@ -1,0 +1,59 @@
+{
+ "branch": "claude/inspiring-shannon-tcbd4p",
+ "code": {
+  "manifest": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "59eb9e2bdaa22a51eab67f46a1d6d8a488ab3977fe48990153c992ca653cfb8d"
+ },
+ "cohort": "D_p23",
+ "depth": 4,
+ "dial": {
+  "r": 0.15
+ },
+ "done": true,
+ "family": "D",
+ "files": {
+  "run.json.gz": {
+   "bytes": 600929,
+   "sha256": "c317ee8a45fae610c718193b8b7224decf2c7eb5a2cba6a101a23445ba258853"
+  }
+ },
+ "finished": "2026-09-30T03:05:20Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "D4_p23_r0.15_s2",
+ "init_seed": 5002,
+ "instance": "6aeca3",
+ "owner": "S4",
+ "p": 23,
+ "ran_by": "S4",
+ "run": {
+  "final_loss": 0.8029739371554878,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 120000,
+  "last_layer_rate": 0.14999999999999997,
+  "resumed_from": 0,
+  "seconds": 4222.6,
+  "steps": 120000,
+  "stop_reason": null,
+  "stopped_at": null,
+  "t10": 23920,
+  "t90": 48560,
+  "x": 1.6146
+ },
+ "seed": 2,
+ "split_seed": 6002,
+ "stage": "D4",
+ "started": "2026-09-30T01:54:56Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-D worker 1.0 (2026-09-29)",
+ "width": 256
+}
