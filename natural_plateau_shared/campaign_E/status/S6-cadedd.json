@@ -4,11 +4,13 @@
  ],
  "branch": "claude/kind-brown-wuycon",
  "broken": null,
- "campaign_left": 84,
+ "campaign_left": 83,
  "commit_error": null,
  "cores": 4,
- "done": [],
- "est_hours_left": 1.66,
+ "done": [
+  "dev_L1_adamw_s1_wd1"
+ ],
+ "est_hours_left": 1.59,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -21,34 +23,25 @@
  },
  "instance": "cadedd",
  "manifest_sha256": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
- "own_left": 10,
+ "own_left": 9,
  "own_total": 10,
  "push_error": null,
  "running": {
-  "dev_L1_adamw_s1_wd1": {
-   "phase": "run",
-   "since": "2026-09-30T07:37:47Z",
-   "step": 6000,
-   "steps": 40000,
-   "steps_per_s": 26.65,
-   "stolen_from": null,
-   "threads": 1
-  },
   "dev_L2_adamw_s1_wd1": {
    "phase": "run",
    "since": "2026-09-30T07:37:47Z",
-   "step": 2000,
+   "step": 12000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 7.75,
    "stolen_from": null,
    "threads": 1
   },
   "dev_L2_hybrid_s1_lw0.015": {
    "phase": "run",
    "since": "2026-09-30T07:37:47Z",
-   "step": 0,
+   "step": 10000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.45,
    "stolen_from": null,
    "threads": 1
   }
@@ -58,7 +51,7 @@
  "stolen": {
   "dev_L1_adamw_s4_wd0.3": "S7"
  },
- "updated": "2026-09-30T07:41:59Z",
+ "updated": "2026-09-30T08:03:55Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
