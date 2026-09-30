@@ -4,7 +4,7 @@
  ],
  "branch": "claude/admiring-ptolemy-9ib2w8",
  "broken": null,
- "campaign_left": 30,
+ "campaign_left": 29,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -13,9 +13,10 @@
   "fresh_L1_adamw_s01",
   "fresh_L1_adamw_s09",
   "fresh_L1_hybrid_s07",
-  "fresh_L1_paper_s05"
+  "fresh_L1_paper_s05",
+  "fresh_L2_adamw_s03"
  ],
- "est_hours_left": 1.31,
+ "est_hours_left": 1.1,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -28,7 +29,7 @@
  },
  "instance": "47facd",
  "manifest_sha256": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
- "own_left": 5,
+ "own_left": 4,
  "own_total": 11,
  "push_error": null,
  "running": {
@@ -37,16 +38,7 @@
    "since": "2026-09-30T07:36:58Z",
    "step": 18000,
    "steps": 40000,
-   "steps_per_s": 3.0,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "fresh_L2_adamw_s03": {
-   "phase": "run",
-   "since": "2026-09-30T09:17:32Z",
-   "step": 0,
-   "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 2.98,
    "stolen_from": null,
    "threads": 1
   }
@@ -56,7 +48,7 @@
  "stolen": {
   "dev_L2_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T09:17:32Z",
+ "updated": "2026-09-30T09:17:49Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
