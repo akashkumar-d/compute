@@ -2,16 +2,17 @@
  "abandoned": [],
  "branch": "claude/laughing-newton-adrtig",
  "broken": null,
- "campaign_left": 109,
+ "campaign_left": 106,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p47_r0.45_s1",
   "D3_p61_r0.20_s1",
+  "D3_p61_r0.65_s2",
   "D3_p97_r0.20_s1",
   "D3_p97_r0.65_s1"
  ],
- "est_hours_left": 2.07,
+ "est_hours_left": 1.58,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -24,15 +25,15 @@
  },
  "instance": "df276a",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 9,
+ "own_left": 8,
  "own_total": 13,
  "push_error": null,
  "running": {
-  "D3_p61_r0.65_s2": {
+  "D3_p23_r0.20_s1": {
    "phase": "run",
-   "since": "2026-09-29T23:59:55Z",
-   "step": 28000,
-   "steps": 100000,
+   "since": "2026-09-30T00:13:06Z",
+   "step": 0,
+   "steps": 120000,
    "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
@@ -40,27 +41,27 @@
   "D4_p47_r0.32_s2": {
    "phase": "run",
    "since": "2026-09-29T23:59:55Z",
-   "step": 32000,
+   "step": 40000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 10.35,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0050_s1": {
    "phase": "run",
    "since": "2026-09-29T23:59:55Z",
-   "step": 2000,
+   "step": 6000,
    "steps": 50000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 5.18,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0200_s1": {
    "phase": "run",
    "since": "2026-09-29T23:59:55Z",
-   "step": 0,
+   "step": 4000,
    "steps": 50000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 5.18,
    "stolen_from": null,
    "threads": 1
   }
@@ -68,7 +69,7 @@
  "started": "2026-09-29T20:25:55Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-29T23:59:55Z",
+ "updated": "2026-09-30T00:13:06Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
