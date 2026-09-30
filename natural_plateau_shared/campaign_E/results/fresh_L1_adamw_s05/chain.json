@@ -1,0 +1,80 @@
+{
+ "branch": "claude/brave-einstein-qer93j",
+ "cell": "L1_adamw",
+ "code": {
+  "manifest": "483432e994e3c6263efddaaf90dfa2fd6c1dc3b8e8cd4081c9595a53503b0945",
+  "rule": "e9b88a7b0ddcde60b9deffa6837192a78ab8b631f3fad74b48ef77d2001db19b",
+  "runner": "6dcd67501071785db857a35aa3e1c8e306c97514899f88d5b7e488f71b5d4833",
+  "worker": "4d1ed99d3b765f683239d7a3d48d477a59585dcfa7bcf7623e8c457d8da46fc2"
+ },
+ "dial": null,
+ "done": true,
+ "files": {},
+ "finished": "2026-09-30T08:12:22Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "fresh_L1_adamw_s05",
+ "init_seed": 1005,
+ "instance": "e0d2e1",
+ "n_layers": 1,
+ "opt": "adamw",
+ "owner": "S5",
+ "p": 31,
+ "ran_by": "S5",
+ "reason": "the chosen development setting (dev_L1_adamw_s1_wd0.3) did not pass, so PLAN.md runs no fresh seeds for this cell",
+ "seed": 5,
+ "selection": {
+  "chosen": "dev_L1_adamw_s1_wd0.3",
+  "missing": [],
+  "passed": false,
+  "rule": "PLAN.md",
+  "run": false,
+  "table": {
+   "dev_L1_adamw_s1_wd0.3": {
+    "CE_peak_over_logp": 1.8058436536689848,
+    "final_test": 1.0,
+    "primary": false,
+    "range_transition": 12845425.836501399,
+    "share": 0.0,
+    "why_not": "share, F02, fit"
+   },
+   "dev_L1_adamw_s1_wd1": {
+    "CE_peak_over_logp": 0.1720995041065117,
+    "final_test": 1.0,
+    "primary": false,
+    "range_transition": 1373.0159716361916,
+    "share": 0.0,
+    "why_not": "share, F02, fit"
+   },
+   "dev_L1_adamw_s4_wd0.3": {
+    "CE_peak_over_logp": 1.739400336785919,
+    "final_test": 1.0,
+    "primary": false,
+    "range_transition": 24257797.920501325,
+    "share": 0.0,
+    "why_not": "share, F02, fit"
+   },
+   "dev_L1_adamw_s4_wd1": {
+    "CE_peak_over_logp": 0.08206555039923387,
+    "final_test": 1.0,
+    "primary": false,
+    "range_transition": 300061.9690573366,
+    "share": 0.0,
+    "why_not": "share, F02, fit"
+   }
+  }
+ },
+ "skipped": true,
+ "split_seed": 2005,
+ "stage": "fresh",
+ "started": "2026-09-30T08:12:22Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-E worker 1.0 (2026-09-30)"
+}
