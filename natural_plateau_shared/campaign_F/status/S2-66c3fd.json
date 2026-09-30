@@ -22,11 +22,21 @@
  "own_left": 19,
  "own_total": 19,
  "push_error": null,
- "running": {},
+ "running": {
+  "HW_p97_w2048_lw0.0150_s2": {
+   "phase": "run",
+   "since": "2026-09-30T22:11:58Z",
+   "step": 2000,
+   "steps": 50000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 4
+  }
+ },
  "started": "2026-09-30T21:40:38Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T22:11:47Z",
+ "updated": "2026-09-30T22:11:58Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
