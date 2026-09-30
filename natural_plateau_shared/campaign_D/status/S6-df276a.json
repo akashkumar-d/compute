@@ -6,7 +6,7 @@
  ],
  "branch": "claude/laughing-newton-adrtig",
  "broken": null,
- "campaign_left": 8,
+ "campaign_left": 1,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -60,7 +60,7 @@
   "H_p97_lw0.0025_s2": "S3",
   "H_p97_lw0.0150_s2": "S3"
  },
- "updated": "2026-09-30T03:31:55Z",
+ "updated": "2026-09-30T04:02:06Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S6"
 }
