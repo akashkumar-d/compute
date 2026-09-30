@@ -6,7 +6,7 @@
  ],
  "branch": "claude/brave-einstein-qer93j",
  "broken": null,
- "campaign_left": 11,
+ "campaign_left": 1,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -34,15 +34,25 @@
  "own_left": 1,
  "own_total": 10,
  "push_error": null,
- "running": {},
+ "running": {
+  "fresh_L2_paper_s03": {
+   "phase": "run",
+   "since": "2026-09-30T12:40:20Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  }
+ },
  "started": "2026-09-30T07:36:37Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
   "dev_L1_adamw_s4_wd0.3": "S7",
   "dev_L2_adamw_s4_wd1": "S8",
   "dev_L2_hybrid_s1_lw0.015": "S6"
  },
- "updated": "2026-09-30T12:32:23Z",
+ "updated": "2026-09-30T12:40:20Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
