@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/zen-goldberg-tdcfzg",
  "broken": null,
- "campaign_left": 107,
+ "campaign_left": 104,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -35,36 +35,36 @@
   "D3_p23_r0.90_s2": {
    "phase": "run",
    "since": "2026-09-30T00:01:51Z",
-   "step": 0,
+   "step": 82000,
    "steps": 120000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 45.99,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p23_r0.22_s2": {
    "phase": "run",
    "since": "2026-09-29T23:50:47Z",
-   "step": 20000,
+   "step": 76000,
    "steps": 120000,
-   "steps_per_s": 31.18,
+   "steps_per_s": 31.06,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p23_r0.65_s2": {
    "phase": "run",
    "since": "2026-09-29T23:59:28Z",
-   "step": 4000,
+   "step": 60000,
    "steps": 120000,
-   "steps_per_s": 33.32,
+   "steps_per_s": 31.16,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0100_s2": {
    "phase": "run",
    "since": "2026-09-29T23:41:57Z",
-   "step": 8000,
+   "step": 20000,
    "steps": 50000,
-   "steps_per_s": 6.83,
+   "steps_per_s": 6.72,
    "stolen_from": null,
    "threads": 1
   }
@@ -72,7 +72,7 @@
  "started": "2026-09-29T20:24:59Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T00:01:51Z",
+ "updated": "2026-09-30T00:31:52Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S2"
 }
