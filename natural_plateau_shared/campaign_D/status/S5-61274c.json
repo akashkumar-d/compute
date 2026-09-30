@@ -2,13 +2,14 @@
  "abandoned": [],
  "branch": "claude/trusting-rubin-8x9f47",
  "broken": null,
- "campaign_left": 9,
+ "campaign_left": 7,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p23_r0.65_s2",
   "D3_p47_r0.90_s1",
   "D3_p61_r0.30_s2",
+  "D4_p23_r0.22_s1",
   "D4_p47_r0.15_s2",
   "D4_p47_r0.65_s1",
   "D4_p61_r0.22_s2",
@@ -17,7 +18,7 @@
   "HW_p97_w1024_lw0.0100_s1",
   "H_p97_lw0.0100_s1"
  ],
- "est_hours_left": 0.66,
+ "est_hours_left": 0.41,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -30,43 +31,43 @@
  },
  "instance": "61274c",
  "manifest_sha256": "cae7bd7c7a3210e478243d03138c739afc229b5babe50a5a05538f679e025f45",
- "own_left": 7,
+ "own_left": 6,
  "own_total": 17,
  "push_error": null,
  "running": {
-  "D4_p23_r0.22_s1": {
-   "phase": "run",
-   "since": "2026-09-30T02:12:04Z",
-   "step": 112000,
-   "steps": 120000,
-   "steps_per_s": 26.28,
-   "stolen_from": null,
-   "threads": 1
-  },
   "D4_p23_r0.45_s2": {
    "phase": "run",
    "since": "2026-09-30T02:20:58Z",
-   "step": 96000,
+   "step": 104000,
    "steps": 120000,
-   "steps_per_s": 25.75,
+   "steps_per_s": 25.77,
    "stolen_from": null,
    "threads": 1
   },
-  "H_p47_lw0.0100_s2": {
+  "H_p31_lw0.0100_s1": {
    "phase": "run",
-   "since": "2026-09-30T03:23:24Z",
+   "since": "2026-09-30T03:28:32Z",
    "step": 0,
    "steps": 40000,
    "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
+  "H_p47_lw0.0100_s2": {
+   "phase": "run",
+   "since": "2026-09-30T03:23:24Z",
+   "step": 10000,
+   "steps": 40000,
+   "steps_per_s": 34.43,
+   "stolen_from": null,
+   "threads": 1
+  },
   "H_p61_lw0.0150_s1": {
    "phase": "run",
    "since": "2026-09-30T02:44:53Z",
-   "step": 42000,
+   "step": 48000,
    "steps": 50000,
-   "steps_per_s": 18.31,
+   "steps_per_s": 18.45,
    "stolen_from": null,
    "threads": 1
   }
@@ -74,7 +75,7 @@
  "started": "2026-09-29T20:25:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T03:23:24Z",
+ "updated": "2026-09-30T03:28:32Z",
  "version": "campaign-D worker 1.0 (2026-09-29)",
  "worker": "S5"
 }
