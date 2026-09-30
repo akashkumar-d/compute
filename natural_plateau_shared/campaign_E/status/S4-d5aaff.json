@@ -4,7 +4,7 @@
  ],
  "branch": "claude/trusting-feynman-punoz7",
  "broken": null,
- "campaign_left": 77,
+ "campaign_left": 71,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -33,7 +33,34 @@
    "since": "2026-09-30T07:37:19Z",
    "step": 12000,
    "steps": 40000,
-   "steps_per_s": 6.31,
+   "steps_per_s": 5.84,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_adamw_s04": {
+   "phase": "run",
+   "since": "2026-09-30T08:11:58Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s02": {
+   "phase": "run",
+   "since": "2026-09-30T08:11:58Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "fresh_L1_hybrid_s10": {
+   "phase": "run",
+   "since": "2026-09-30T08:11:58Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -43,7 +70,7 @@
  "stolen": {
   "dev_L1_adamw_s1_wd0.3": "S5"
  },
- "updated": "2026-09-30T08:09:20Z",
+ "updated": "2026-09-30T08:11:58Z",
  "version": "campaign-E worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
