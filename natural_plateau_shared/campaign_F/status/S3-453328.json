@@ -8,7 +8,7 @@
  ],
  "branch": "claude/cool-thompson-gqo77f",
  "broken": null,
- "campaign_left": 3,
+ "campaign_left": 1,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -63,7 +63,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p97_lw0.0200_s8": "S6"
  },
- "updated": "2026-10-01T14:56:25Z",
+ "updated": "2026-10-01T15:26:34Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
