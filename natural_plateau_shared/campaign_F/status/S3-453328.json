@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/cool-thompson-gqo77f",
  "broken": null,
- "campaign_left": 108,
+ "campaign_left": 103,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -11,9 +11,10 @@
   "D4_p47_r0.45_s6",
   "D4_p97_r0.45_s2",
   "D4_p97_r0.45_s9",
-  "HW_p97_w2048_lw0.0150_s3"
+  "HW_p97_w2048_lw0.0150_s3",
+  "T16_D2_p23_lw0.015_r0.45_s5_T80k"
  ],
- "est_hours_left": 2.01,
+ "est_hours_left": 1.75,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -26,43 +27,43 @@
  },
  "instance": "453328",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 12,
+ "own_left": 11,
  "own_total": 18,
  "push_error": null,
  "running": {
   "D3_p61_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T07:43:38Z",
-   "step": 0,
+   "step": 6000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 7.19,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.45_s9": {
    "phase": "run",
    "since": "2026-10-01T06:16:51Z",
-   "step": 32000,
+   "step": 38000,
    "steps": 100000,
-   "steps_per_s": 6.17,
+   "steps_per_s": 6.29,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "H_p61_lw0.0200_s5": {
+   "phase": "run",
+   "since": "2026-10-01T07:57:51Z",
+   "step": 0,
+   "steps": 50000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0200_s5": {
    "phase": "run",
    "since": "2026-10-01T07:37:04Z",
-   "step": 2000,
+   "step": 6000,
    "steps": 50000,
-   "steps_per_s": 5.31,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "T16_D2_p23_lw0.015_r0.45_s5_T80k": {
-   "phase": "run",
-   "since": "2026-10-01T07:36:31Z",
-   "step": 26000,
-   "steps": 80000,
-   "steps_per_s": 63.53,
+   "steps_per_s": 4.88,
    "stolen_from": null,
    "threads": 1
   }
@@ -70,7 +71,7 @@
  "started": "2026-09-30T21:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T07:43:38Z",
+ "updated": "2026-10-01T07:57:51Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
