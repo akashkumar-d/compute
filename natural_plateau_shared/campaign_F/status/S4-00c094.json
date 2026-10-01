@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/focused-franklin-zgxj1m",
  "broken": null,
- "campaign_left": 92,
+ "campaign_left": 73,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -32,36 +32,36 @@
   "D3_p23_r0.45_s6": {
    "phase": "run",
    "since": "2026-10-01T08:44:46Z",
-   "step": 0,
+   "step": 54000,
    "steps": 120000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 30.27,
    "stolen_from": null,
    "threads": 1
   },
   "D3_p61_r0.45_s6": {
    "phase": "run",
    "since": "2026-10-01T08:22:14Z",
-   "step": 10000,
+   "step": 22000,
    "steps": 100000,
-   "steps_per_s": 7.5,
+   "steps_per_s": 7.02,
    "stolen_from": null,
    "threads": 1
   },
   "H_p61_lw0.0200_s6": {
    "phase": "run",
    "since": "2026-10-01T08:22:14Z",
-   "step": 20000,
+   "step": 46000,
    "steps": 50000,
-   "steps_per_s": 14.99,
+   "steps_per_s": 14.67,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0200_s6": {
    "phase": "run",
    "since": "2026-10-01T08:22:14Z",
-   "step": 6000,
+   "step": 14000,
    "steps": 50000,
-   "steps_per_s": 4.5,
+   "steps_per_s": 4.46,
    "stolen_from": null,
    "threads": 1
   }
@@ -69,7 +69,7 @@
  "started": "2026-09-30T21:40:44Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T08:44:46Z",
+ "updated": "2026-10-01T09:14:48Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
