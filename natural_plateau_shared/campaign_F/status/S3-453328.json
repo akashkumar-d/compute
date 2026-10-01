@@ -43,23 +43,23 @@
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
  "own_left": 0,
  "own_total": 18,
- "push_error": null,
+ "push_error": "fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 36593 after 0 ms: Couldn't connect to server",
  "running": {
   "D4_p23_r0.32_s4": {
    "phase": "run",
    "since": "2026-10-01T09:36:15Z",
-   "step": 92000,
+   "step": 98000,
    "steps": 120000,
-   "steps_per_s": 23.9,
+   "steps_per_s": 23.61,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p47_r0.45_s7": {
    "phase": "run",
    "since": "2026-10-01T09:38:23Z",
-   "step": 36000,
+   "step": 38000,
    "steps": 100000,
-   "steps_per_s": 9.67,
+   "steps_per_s": 9.45,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -72,7 +72,7 @@
   "D4_p23_r0.32_s4": "S7",
   "D4_p47_r0.45_s7": "S7"
  },
- "updated": "2026-10-01T10:40:42Z",
+ "updated": "2026-10-01T10:45:42Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
