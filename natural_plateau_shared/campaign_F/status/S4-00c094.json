@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/focused-franklin-zgxj1m",
  "broken": null,
- "campaign_left": 3,
+ "campaign_left": 2,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -12,6 +12,7 @@
   "D3_p97_r0.45_s10",
   "D3_p97_r0.45_s7",
   "D4_p47_r0.45_s10",
+  "D4_p61_r0.45_s5",
   "D4_p97_r0.45_s3",
   "HW_p97_w2048_lw0.0150_s4",
   "H_p23_lw0.0100_s7",
@@ -44,16 +45,7 @@
    "since": "2026-10-01T12:37:55Z",
    "step": 46000,
    "steps": 100000,
-   "steps_per_s": 5.53,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "D4_p61_r0.45_s5": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:55Z",
-   "step": 46000,
-   "steps": 100000,
-   "steps_per_s": 5.53,
+   "steps_per_s": 5.5,
    "stolen_from": "S7",
    "threads": 1
   },
@@ -62,7 +54,7 @@
    "since": "2026-10-01T12:55:33Z",
    "step": 32000,
    "steps": 50000,
-   "steps_per_s": 4.4,
+   "steps_per_s": 4.38,
    "stolen_from": "S6",
    "threads": 1
   }
@@ -75,7 +67,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p97_lw0.0200_s8": "S6"
  },
- "updated": "2026-10-01T14:56:56Z",
+ "updated": "2026-10-01T14:57:29Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }

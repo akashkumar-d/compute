@@ -1,0 +1,59 @@
+{
+ "branch": "claude/focused-franklin-zgxj1m",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "D_p61",
+ "depth": 4,
+ "dial": {
+  "r": 0.45
+ },
+ "done": true,
+ "family": "D",
+ "files": {
+  "run.json.gz": {
+   "bytes": 229538,
+   "sha256": "1ae20e326683fdf0a0065b4ef6acfba40e1e34ae5384cbf634b22aaf98d1303a"
+  }
+ },
+ "finished": "2026-10-01T14:57:15Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "D4_p61_r0.45_s5",
+ "init_seed": 5005,
+ "instance": "00c094",
+ "owner": "S7",
+ "p": 61,
+ "ran_by": "S4",
+ "run": {
+  "final_loss": 3.182223312677489,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 100000,
+  "last_layer_rate": 0.45,
+  "resumed_from": 0,
+  "seconds": 8358.6,
+  "steps": 46300,
+  "stop_reason": "generalized",
+  "stopped_at": 46300,
+  "t10": 17960,
+  "t90": 25020,
+  "x": 3.6369
+ },
+ "seed": 5,
+ "split_seed": 6005,
+ "stage": "D4",
+ "started": "2026-10-01T12:37:56Z",
+ "stolen_from": "S7",
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 256
+}
