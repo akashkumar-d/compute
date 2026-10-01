@@ -2,11 +2,12 @@
  "abandoned": [],
  "branch": "claude/focused-franklin-zgxj1m",
  "broken": null,
- "campaign_left": 32,
+ "campaign_left": 31,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p23_r0.45_s6",
+  "D3_p47_r0.45_s6",
   "D3_p61_r0.45_s6",
   "D3_p97_r0.45_s10",
   "D3_p97_r0.45_s7",
@@ -20,7 +21,7 @@
   "T3_D2_p47_r0.5_s5",
   "seedD2_r0.5_s8"
  ],
- "est_hours_left": 0.17,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -33,24 +34,14 @@
  },
  "instance": "00c094",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 1,
+ "own_left": 0,
  "own_total": 14,
  "push_error": null,
- "running": {
-  "D3_p47_r0.45_s6": {
-   "phase": "run",
-   "since": "2026-10-01T09:18:12Z",
-   "step": 38000,
-   "steps": 100000,
-   "steps_per_s": 12.24,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:40:44Z",
- "state": "running",
+ "state": "standby",
  "stolen": {},
- "updated": "2026-10-01T10:10:15Z",
+ "updated": "2026-10-01T10:13:02Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
