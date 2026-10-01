@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
- "campaign_left": 130,
+ "campaign_left": 129,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,9 +28,9 @@
   "D4_p97_r0.45_s4": {
    "phase": "run",
    "since": "2026-10-01T00:45:09Z",
-   "step": 34000,
+   "step": 46000,
    "steps": 100000,
-   "steps_per_s": 6.28,
+   "steps_per_s": 6.38,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +38,7 @@
  "started": "2026-09-30T21:41:05Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T02:15:39Z",
+ "updated": "2026-10-01T02:45:40Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
