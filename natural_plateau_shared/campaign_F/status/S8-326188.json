@@ -2,11 +2,12 @@
  "abandoned": [],
  "branch": "claude/peaceful-brown-0unlx3",
  "broken": null,
- "campaign_left": 28,
+ "campaign_left": 25,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p23_r0.45_s10",
+  "D3_p23_r0.45_s9",
   "D3_p47_r0.45_s10",
   "D3_p61_r0.45_s9",
   "D3_p97_r0.45_s5",
@@ -44,30 +45,21 @@
  "own_total": 19,
  "push_error": null,
  "running": {
-  "D3_p23_r0.45_s9": {
-   "phase": "run",
-   "since": "2026-10-01T09:35:10Z",
-   "step": 108000,
-   "steps": 120000,
-   "steps_per_s": 38.13,
-   "stolen_from": "S7",
-   "threads": 1
-  },
   "D4_p47_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T09:42:49Z",
-   "step": 26000,
+   "step": 28000,
    "steps": 100000,
-   "steps_per_s": 10.96,
+   "steps_per_s": 10.63,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p61_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T09:43:39Z",
-   "step": 16000,
+   "step": 18000,
    "steps": 100000,
-   "steps_per_s": 6.89,
+   "steps_per_s": 6.97,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -80,7 +72,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p47_lw0.0200_s8": "S7"
  },
- "updated": "2026-10-01T10:22:40Z",
+ "updated": "2026-10-01T10:27:00Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
