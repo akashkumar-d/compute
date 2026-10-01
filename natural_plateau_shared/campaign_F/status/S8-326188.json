@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/peaceful-brown-0unlx3",
  "broken": null,
- "campaign_left": 45,
+ "campaign_left": 28,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -47,27 +47,27 @@
   "D3_p23_r0.45_s9": {
    "phase": "run",
    "since": "2026-10-01T09:35:10Z",
-   "step": 38000,
+   "step": 108000,
    "steps": 120000,
-   "steps_per_s": 37.12,
+   "steps_per_s": 38.13,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p47_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T09:42:49Z",
-   "step": 6000,
+   "step": 26000,
    "steps": 100000,
-   "steps_per_s": 10.63,
+   "steps_per_s": 10.96,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p61_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T09:43:39Z",
-   "step": 2000,
+   "step": 16000,
    "steps": 100000,
-   "steps_per_s": 3.88,
+   "steps_per_s": 6.89,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -80,7 +80,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p47_lw0.0200_s8": "S7"
  },
- "updated": "2026-10-01T09:52:32Z",
+ "updated": "2026-10-01T10:22:40Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
