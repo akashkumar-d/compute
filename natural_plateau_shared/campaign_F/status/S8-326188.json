@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/peaceful-brown-0unlx3",
  "broken": null,
- "campaign_left": 49,
+ "campaign_left": 45,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -19,6 +19,7 @@
   "HW_p97_w2048_lw0.0150_s8",
   "H_p23_lw0.0100_s5",
   "H_p31_lw0.0150_s7",
+  "H_p47_lw0.0200_s8",
   "H_p97_lw0.0200_s9",
   "T16_D2_p23_lw0.015_r0.45_s2_T80k",
   "T16_D2_p23_lw0.015_r0.45_s9_T80k",
@@ -46,36 +47,27 @@
   "D3_p23_r0.45_s9": {
    "phase": "run",
    "since": "2026-10-01T09:35:10Z",
-   "step": 18000,
+   "step": 38000,
    "steps": 120000,
-   "steps_per_s": 36.79,
+   "steps_per_s": 37.12,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p47_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T09:42:49Z",
-   "step": 0,
+   "step": 6000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 10.63,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p61_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T09:43:39Z",
-   "step": 0,
+   "step": 2000,
    "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "H_p47_lw0.0200_s8": {
-   "phase": "run",
-   "since": "2026-10-01T09:34:07Z",
-   "step": 20000,
-   "steps": 40000,
-   "steps_per_s": 36.23,
+   "steps_per_s": 3.88,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -88,7 +80,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p47_lw0.0200_s8": "S7"
  },
- "updated": "2026-10-01T09:43:39Z",
+ "updated": "2026-10-01T09:52:32Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S8"
 }

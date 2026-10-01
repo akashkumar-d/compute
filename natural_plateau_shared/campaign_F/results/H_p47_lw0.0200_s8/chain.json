@@ -1,0 +1,59 @@
+{
+ "branch": "claude/peaceful-brown-0unlx3",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "H_p47",
+ "depth": 1,
+ "dial": {
+  "lam_w": 0.02
+ },
+ "done": true,
+ "family": "H",
+ "files": {
+  "run.json.gz": {
+   "bytes": 121779,
+   "sha256": "65bd0c1140cdfa9e0461ccd9f0c4443321d6222f2ee781ae8591603d4bed7da5"
+  }
+ },
+ "finished": "2026-10-01T09:52:23Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "H_p47_lw0.0200_s8",
+ "init_seed": 5008,
+ "instance": "326188",
+ "owner": "S7",
+ "p": 47,
+ "ran_by": "S8",
+ "run": {
+  "final_loss": 2.875629436017481,
+  "final_test": 0.9638009049773756,
+  "final_train": 1.0,
+  "horizon": 40000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 1095.0,
+  "steps": 40000,
+  "stop_reason": null,
+  "stopped_at": null,
+  "t10": 5900,
+  "t90": 8980,
+  "x": null
+ },
+ "seed": 8,
+ "split_seed": 6008,
+ "stage": "H",
+ "started": "2026-10-01T09:34:07Z",
+ "stolen_from": "S7",
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 512
+}
