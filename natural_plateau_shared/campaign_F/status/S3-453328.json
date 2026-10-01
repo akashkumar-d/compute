@@ -4,7 +4,7 @@
  ],
  "branch": "claude/cool-thompson-gqo77f",
  "broken": null,
- "campaign_left": 22,
+ "campaign_left": 21,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -13,6 +13,7 @@
   "D3_p61_r0.45_s10",
   "D3_p61_r0.45_s5",
   "D4_p23_r0.32_s3",
+  "D4_p23_r0.32_s4",
   "D4_p23_r0.32_s8",
   "D4_p47_r0.45_s6",
   "D4_p47_r0.45_s7",
@@ -45,26 +46,16 @@
  "own_left": 0,
  "own_total": 18,
  "push_error": "fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 36593 after 0 ms: Couldn't connect to server",
- "running": {
-  "D4_p23_r0.32_s4": {
-   "phase": "run",
-   "since": "2026-10-01T09:36:15Z",
-   "step": 116000,
-   "steps": 120000,
-   "steps_per_s": 23.96,
-   "stolen_from": "S7",
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:40:51Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "D3_p23_r0.45_s9": "S7",
   "D3_p61_r0.45_s10": "S7",
   "D4_p23_r0.32_s4": "S7",
   "D4_p47_r0.45_s7": "S7"
  },
- "updated": "2026-10-01T10:57:13Z",
+ "updated": "2026-10-01T10:59:58Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
