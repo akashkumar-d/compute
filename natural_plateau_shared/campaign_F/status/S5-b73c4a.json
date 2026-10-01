@@ -1,5 +1,9 @@
 {
- "abandoned": [],
+ "abandoned": [
+  "D4_p47_r0.45_s10",
+  "D4_p61_r0.45_s10",
+  "D4_p61_r0.45_s5"
+ ],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
  "campaign_left": 4,
@@ -44,37 +48,9 @@
  "own_left": 0,
  "own_total": 14,
  "push_error": null,
- "running": {
-  "D4_p47_r0.45_s10": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:53Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "D4_p61_r0.45_s10": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:53Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "D4_p61_r0.45_s5": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:53Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:41:05Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "D3_p47_r0.45_s9": "S7",
   "D4_p23_r0.32_s9": "S7",
@@ -87,7 +63,7 @@
   "H_p97_lw0.0200_s10": "S7",
   "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T12:37:53Z",
+ "updated": "2026-10-01T12:38:13Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
