@@ -2,11 +2,12 @@
  "abandoned": [],
  "branch": "claude/youthful-tesla-cxulx6",
  "broken": null,
- "campaign_left": 30,
+ "campaign_left": 29,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p23_r0.45_s8",
+  "D3_p61_r0.45_s8",
   "D3_p97_r0.45_s3",
   "D3_p97_r0.45_s9",
   "D4_p97_r0.45_s5",
@@ -14,7 +15,7 @@
   "H_p61_lw0.0200_s8",
   "T16_D2_p23_lw0.015_r0.45_s8_T80k"
  ],
- "est_hours_left": 0.95,
+ "est_hours_left": 0.69,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -27,25 +28,25 @@
  },
  "instance": "a02844",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 9,
+ "own_left": 8,
  "own_total": 16,
  "push_error": null,
  "running": {
   "D3_p47_r0.45_s8": {
    "phase": "run",
    "since": "2026-10-01T09:59:05Z",
-   "step": 14000,
+   "step": 16000,
    "steps": 100000,
-   "steps_per_s": 12.59,
+   "steps_per_s": 12.96,
    "stolen_from": null,
    "threads": 1
   },
-  "D3_p61_r0.45_s8": {
+  "H_p47_lw0.0200_s7": {
    "phase": "run",
-   "since": "2026-10-01T09:08:33Z",
-   "step": 34000,
-   "steps": 100000,
-   "steps_per_s": 8.21,
+   "since": "2026-10-01T10:19:58Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
@@ -54,16 +55,16 @@
    "since": "2026-10-01T09:08:33Z",
    "step": 20000,
    "steps": 50000,
-   "steps_per_s": 4.83,
+   "steps_per_s": 4.69,
    "stolen_from": null,
    "threads": 1
   },
   "T3_D2_p47_r0.5_s7": {
    "phase": "run",
    "since": "2026-10-01T10:17:55Z",
-   "step": 0,
+   "step": 2000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 19.04,
    "stolen_from": null,
    "threads": 1
   }
@@ -71,7 +72,7 @@
  "started": "2026-09-30T21:41:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T10:17:55Z",
+ "updated": "2026-10-01T10:19:58Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
