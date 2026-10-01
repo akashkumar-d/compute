@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
- "campaign_left": 48,
+ "campaign_left": 43,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -19,6 +19,7 @@
   "H_p31_lw0.0150_s6",
   "H_p47_lw0.0200_s6",
   "H_p61_lw0.0200_s7",
+  "H_p61_lw0.0200_s9",
   "H_p97_lw0.0200_s7",
   "T16_D2_p23_lw0.015_r0.45_s7_T80k",
   "T3_D2_p47_r0.5_s6",
@@ -45,27 +46,18 @@
   "D4_p23_r0.32_s9": {
    "phase": "run",
    "since": "2026-10-01T09:35:17Z",
-   "step": 18000,
+   "step": 30000,
    "steps": 120000,
-   "steps_per_s": 23.74,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "H_p61_lw0.0200_s9": {
-   "phase": "run",
-   "since": "2026-10-01T09:06:59Z",
-   "step": 42000,
-   "steps": 50000,
-   "steps_per_s": 17.1,
+   "steps_per_s": 24.96,
    "stolen_from": "S7",
    "threads": 1
   },
   "H_p97_lw0.0200_s10": {
    "phase": "run",
    "since": "2026-10-01T09:13:21Z",
-   "step": 10000,
+   "step": 12000,
    "steps": 50000,
-   "steps_per_s": 4.82,
+   "steps_per_s": 4.77,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -81,7 +73,7 @@
   "H_p97_lw0.0200_s10": "S7",
   "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T09:48:13Z",
+ "updated": "2026-10-01T09:55:36Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
