@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/peaceful-brown-0unlx3",
  "broken": null,
- "campaign_left": 59,
+ "campaign_left": 58,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -21,9 +21,10 @@
   "H_p31_lw0.0150_s7",
   "H_p97_lw0.0200_s9",
   "T16_D2_p23_lw0.015_r0.45_s2_T80k",
-  "T16_D2_p23_lw0.015_r0.45_s9_T80k"
+  "T16_D2_p23_lw0.015_r0.45_s9_T80k",
+  "T3_D2_p47_r0.5_s1"
  ],
- "est_hours_left": 0.31,
+ "est_hours_left": 0.18,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -36,43 +37,43 @@
  },
  "instance": "326188",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 3,
+ "own_left": 2,
  "own_total": 19,
  "push_error": null,
  "running": {
-  "H_p47_lw0.0200_s8": {
+  "D3_p23_r0.45_s9": {
    "phase": "run",
-   "since": "2026-10-01T09:34:07Z",
+   "since": "2026-10-01T09:35:10Z",
    "step": 0,
-   "steps": 40000,
+   "steps": 120000,
    "steps_per_s": 0.0,
    "stolen_from": "S7",
    "threads": 1
   },
-  "T3_D2_p47_r0.5_s1": {
+  "H_p47_lw0.0200_s8": {
    "phase": "run",
-   "since": "2026-10-01T09:04:15Z",
-   "step": 38000,
+   "since": "2026-10-01T09:34:07Z",
+   "step": 2000,
    "steps": 40000,
-   "steps_per_s": 21.42,
-   "stolen_from": null,
+   "steps_per_s": 44.41,
+   "stolen_from": "S7",
    "threads": 1
   },
   "T3_D2_p47_r0.5_s9": {
    "phase": "run",
    "since": "2026-10-01T09:12:37Z",
-   "step": 26000,
+   "step": 28000,
    "steps": 40000,
-   "steps_per_s": 20.42,
+   "steps_per_s": 20.96,
    "stolen_from": null,
    "threads": 1
   },
   "seedD2_r0.5_s7": {
    "phase": "run",
    "since": "2026-10-01T09:27:52Z",
-   "step": 16000,
+   "step": 18000,
    "steps": 40000,
-   "steps_per_s": 44.69,
+   "steps_per_s": 42.76,
    "stolen_from": null,
    "threads": 1
   }
@@ -80,9 +81,10 @@
  "started": "2026-09-30T21:41:06Z",
  "state": "running",
  "stolen": {
+  "D3_p23_r0.45_s9": "S7",
   "H_p47_lw0.0200_s8": "S7"
  },
- "updated": "2026-10-01T09:34:07Z",
+ "updated": "2026-10-01T09:35:10Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
