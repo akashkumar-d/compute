@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/cool-thompson-gqo77f",
  "broken": null,
- "campaign_left": 71,
+ "campaign_left": 65,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -17,9 +17,10 @@
   "HW_p97_w2048_lw0.0150_s3",
   "H_p47_lw0.0200_s4",
   "H_p61_lw0.0200_s5",
-  "T16_D2_p23_lw0.015_r0.45_s5_T80k"
+  "T16_D2_p23_lw0.015_r0.45_s5_T80k",
+  "T3_D2_p47_r0.5_s4"
  ],
- "est_hours_left": 0.64,
+ "est_hours_left": 0.51,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -32,43 +33,43 @@
  },
  "instance": "453328",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 6,
+ "own_left": 5,
  "own_total": 18,
  "push_error": null,
  "running": {
   "D3_p47_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T08:44:54Z",
-   "step": 24000,
+   "step": 34000,
    "steps": 100000,
-   "steps_per_s": 13.42,
+   "steps_per_s": 13.09,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "H_p31_lw0.0150_s5": {
+   "phase": "run",
+   "since": "2026-10-01T09:28:29Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "H_p97_lw0.0200_s5": {
    "phase": "run",
    "since": "2026-10-01T07:37:04Z",
-   "step": 30000,
+   "step": 34000,
    "steps": 50000,
-   "steps_per_s": 5.12,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "T3_D2_p47_r0.5_s4": {
-   "phase": "run",
-   "since": "2026-10-01T08:53:49Z",
-   "step": 24000,
-   "steps": 40000,
-   "steps_per_s": 19.13,
+   "steps_per_s": 5.1,
    "stolen_from": null,
    "threads": 1
   },
   "seedD2_r0.5_s6": {
    "phase": "run",
    "since": "2026-10-01T09:15:01Z",
-   "step": 0,
+   "step": 30000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 37.96,
    "stolen_from": null,
    "threads": 1
   }
@@ -76,7 +77,7 @@
  "started": "2026-09-30T21:40:51Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T09:15:01Z",
+ "updated": "2026-10-01T09:28:29Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
