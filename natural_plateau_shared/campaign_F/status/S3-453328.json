@@ -48,18 +48,18 @@
   "D4_p23_r0.32_s4": {
    "phase": "run",
    "since": "2026-10-01T09:36:15Z",
-   "step": 106000,
+   "step": 112000,
    "steps": 120000,
-   "steps_per_s": 23.82,
+   "steps_per_s": 23.58,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p47_r0.45_s7": {
    "phase": "run",
    "since": "2026-10-01T09:38:23Z",
-   "step": 42000,
+   "step": 44000,
    "steps": 100000,
-   "steps_per_s": 9.72,
+   "steps_per_s": 9.52,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -72,7 +72,7 @@
   "D4_p23_r0.32_s4": "S7",
   "D4_p47_r0.45_s7": "S7"
  },
- "updated": "2026-10-01T10:50:42Z",
+ "updated": "2026-10-01T10:55:43Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
