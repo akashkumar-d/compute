@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/vigilant-fermi-s8qf32",
  "broken": null,
- "campaign_left": 33,
+ "campaign_left": 30,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -19,12 +19,13 @@
   "HW_p97_w2048_lw0.0150_s9",
   "H_p31_lw0.0150_s9",
   "H_p47_lw0.0200_s10",
+  "H_p47_lw0.0200_s9",
   "H_p61_lw0.0200_s3",
   "H_p97_lw0.0200_s3",
   "T16_D2_p23_lw0.015_r0.45_s3_T80k",
   "T3_D2_p47_r0.5_s2"
  ],
- "est_hours_left": 0.07,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -37,24 +38,14 @@
  },
  "instance": "f48d98",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 1,
+ "own_left": 0,
  "own_total": 18,
  "push_error": null,
- "running": {
-  "H_p47_lw0.0200_s9": {
-   "phase": "run",
-   "since": "2026-10-01T09:51:32Z",
-   "step": 22000,
-   "steps": 40000,
-   "steps_per_s": 22.05,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:40:40Z",
- "state": "running",
+ "state": "standby",
  "stolen": {},
- "updated": "2026-10-01T10:08:28Z",
+ "updated": "2026-10-01T10:19:07Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
