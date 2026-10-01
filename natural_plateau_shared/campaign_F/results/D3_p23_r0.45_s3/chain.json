@@ -1,0 +1,59 @@
+{
+ "branch": "claude/vigilant-fermi-s8qf32",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "D_p23",
+ "depth": 3,
+ "dial": {
+  "r": 0.45
+ },
+ "done": true,
+ "family": "D",
+ "files": {
+  "run.json.gz": {
+   "bytes": 550070,
+   "sha256": "6c178f8d392d65e6250fcf91c9d6f716736f76a9c31949fe3605661249df97e1"
+  }
+ },
+ "finished": "2026-10-01T10:08:17Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "D3_p23_r0.45_s3",
+ "init_seed": 5003,
+ "instance": "f48d98",
+ "owner": "S1",
+ "p": 23,
+ "ran_by": "S1",
+ "run": {
+  "final_loss": 0.6458120646130008,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 120000,
+  "last_layer_rate": 0.45,
+  "resumed_from": 0,
+  "seconds": 4364.2,
+  "steps": 114460,
+  "stop_reason": "generalized",
+  "stopped_at": 114460,
+  "t10": 28200,
+  "t90": 57720,
+  "x": 5.7105
+ },
+ "seed": 3,
+ "split_seed": 6003,
+ "stage": "D3",
+ "started": "2026-10-01T08:55:31Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 256
+}
