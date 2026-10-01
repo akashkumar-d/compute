@@ -48,9 +48,19 @@
  "own_left": 0,
  "own_total": 14,
  "push_error": null,
- "running": {},
+ "running": {
+  "H_p97_lw0.0200_s8": {
+   "phase": "run",
+   "since": "2026-10-01T12:55:33Z",
+   "step": 0,
+   "steps": 50000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S6",
+   "threads": 1
+  }
+ },
  "started": "2026-09-30T21:41:05Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
   "D3_p47_r0.45_s9": "S7",
   "D4_p23_r0.32_s9": "S7",
@@ -61,9 +71,10 @@
   "H_p31_lw0.0150_s6": "S7",
   "H_p61_lw0.0200_s9": "S7",
   "H_p97_lw0.0200_s10": "S7",
+  "H_p97_lw0.0200_s8": "S6",
   "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T12:38:13Z",
+ "updated": "2026-10-01T12:55:33Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
