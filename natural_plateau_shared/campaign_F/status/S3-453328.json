@@ -1,6 +1,9 @@
 {
  "abandoned": [
-  "D3_p23_r0.45_s9"
+  "D3_p23_r0.45_s9",
+  "D4_p47_r0.45_s10",
+  "D4_p61_r0.45_s10",
+  "D4_p61_r0.45_s5"
  ],
  "branch": "claude/cool-thompson-gqo77f",
  "broken": null,
@@ -46,37 +49,9 @@
  "own_left": 0,
  "own_total": 18,
  "push_error": null,
- "running": {
-  "D4_p47_r0.45_s10": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:54Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "D4_p61_r0.45_s10": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:54Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  },
-  "D4_p61_r0.45_s5": {
-   "phase": "run",
-   "since": "2026-10-01T12:37:54Z",
-   "step": 0,
-   "steps": 100000,
-   "steps_per_s": 0.0,
-   "stolen_from": "S7",
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:40:51Z",
- "state": "running",
+ "state": "standby",
  "stolen": {
   "D3_p23_r0.45_s9": "S7",
   "D3_p61_r0.45_s10": "S7",
@@ -86,7 +61,7 @@
   "D4_p61_r0.45_s10": "S7",
   "D4_p61_r0.45_s5": "S7"
  },
- "updated": "2026-10-01T12:37:54Z",
+ "updated": "2026-10-01T12:39:44Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
