@@ -1,0 +1,59 @@
+{
+ "branch": "claude/magical-brahmagupta-im5xew",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "H_p97",
+ "depth": 1,
+ "dial": {
+  "lam_w": 0.02
+ },
+ "done": true,
+ "family": "H",
+ "files": {
+  "run.json.gz": {
+   "bytes": 82134,
+   "sha256": "93db3a0f7b57e06d0d42c23c0fa4fd3af930b0b621dd641d18d6fe40b40fd4f2"
+  }
+ },
+ "finished": "2026-10-01T10:04:27Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "H_p97_lw0.0200_s4",
+ "init_seed": 5004,
+ "instance": "66c3fd",
+ "owner": "S2",
+ "p": 97,
+ "ran_by": "S2",
+ "run": {
+  "final_loss": 4.103614371000292,
+  "final_test": 0.9968119022316685,
+  "final_train": 0.9997342898897303,
+  "horizon": 50000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 3609.7,
+  "steps": 19860,
+  "stop_reason": "generalized",
+  "stopped_at": 19860,
+  "t10": 5820,
+  "t90": 7340,
+  "x": null
+ },
+ "seed": 4,
+ "split_seed": 6004,
+ "stage": "H",
+ "started": "2026-10-01T09:04:17Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 512
+}
