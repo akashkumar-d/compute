@@ -2,15 +2,16 @@
  "abandoned": [],
  "branch": "claude/vigilant-gates-th8xut",
  "broken": null,
- "campaign_left": 16,
+ "campaign_left": 8,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p97_r0.45_s4",
   "D4_p97_r0.45_s6",
-  "HW_p97_w2048_lw0.0150_s7"
+  "HW_p97_w2048_lw0.0150_s7",
+  "H_p61_lw0.0200_s10"
  ],
- "est_hours_left": 2.7,
+ "est_hours_left": 2.24,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -23,25 +24,16 @@
  },
  "instance": "2bdea8",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 9,
+ "own_left": 7,
  "own_total": 19,
  "push_error": null,
  "running": {
   "D4_p61_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T09:46:04Z",
-   "step": 16000,
+   "step": 20000,
    "steps": 100000,
-   "steps_per_s": 4.44,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "H_p61_lw0.0200_s10": {
-   "phase": "run",
-   "since": "2026-10-01T09:46:04Z",
-   "step": 36000,
-   "steps": 50000,
-   "steps_per_s": 10.0,
+   "steps_per_s": 4.09,
    "stolen_from": null,
    "threads": 1
   }
@@ -49,7 +41,7 @@
  "started": "2026-09-30T21:41:10Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T10:46:23Z",
+ "updated": "2026-10-01T11:07:51Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S7"
 }
