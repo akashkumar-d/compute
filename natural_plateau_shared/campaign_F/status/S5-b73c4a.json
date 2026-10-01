@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
- "campaign_left": 82,
+ "campaign_left": 81,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -13,6 +13,7 @@
   "D3_p97_r0.45_s8",
   "D4_p97_r0.45_s4",
   "HW_p97_w2048_lw0.0150_s5",
+  "H_p23_lw0.0100_s4",
   "H_p23_lw0.0100_s8",
   "H_p47_lw0.0200_s6",
   "H_p61_lw0.0200_s7",
@@ -36,21 +37,21 @@
  "own_total": 14,
  "push_error": null,
  "running": {
-  "H_p23_lw0.0100_s4": {
+  "D3_p47_r0.45_s9": {
    "phase": "run",
-   "since": "2026-10-01T08:59:45Z",
-   "step": 26000,
-   "steps": 40000,
-   "steps_per_s": 228.46,
+   "since": "2026-10-01T09:02:21Z",
+   "step": 0,
+   "steps": 100000,
+   "steps_per_s": 0.0,
    "stolen_from": "S7",
    "threads": 1
   },
   "T3_D2_p47_r0.5_s6": {
    "phase": "run",
    "since": "2026-10-01T08:35:48Z",
-   "step": 32000,
+   "step": 34000,
    "steps": 40000,
-   "steps_per_s": 20.74,
+   "steps_per_s": 21.58,
    "stolen_from": null,
    "threads": 1
   },
@@ -66,9 +67,9 @@
   "seedD2_r0.5_s9": {
    "phase": "run",
    "since": "2026-10-01T08:52:46Z",
-   "step": 24000,
+   "step": 26000,
    "steps": 40000,
-   "steps_per_s": 45.8,
+   "steps_per_s": 46.7,
    "stolen_from": null,
    "threads": 1
   }
@@ -76,10 +77,11 @@
  "started": "2026-09-30T21:41:05Z",
  "state": "running",
  "stolen": {
+  "D3_p47_r0.45_s9": "S7",
   "H_p23_lw0.0100_s4": "S7",
   "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T09:01:48Z",
+ "updated": "2026-10-01T09:02:21Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
