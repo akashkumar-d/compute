@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/youthful-tesla-cxulx6",
  "broken": null,
- "campaign_left": 126,
+ "campaign_left": 123,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,9 +28,9 @@
   "D4_p97_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T01:04:31Z",
-   "step": 72000,
+   "step": 82000,
    "steps": 100000,
-   "steps_per_s": 5.71,
+   "steps_per_s": 5.69,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +38,7 @@
  "started": "2026-09-30T21:41:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T04:35:03Z",
+ "updated": "2026-10-01T05:05:03Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
