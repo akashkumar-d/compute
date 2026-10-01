@@ -2,11 +2,13 @@
  "abandoned": [],
  "branch": "claude/vigilant-fermi-s8qf32",
  "broken": null,
- "campaign_left": 134,
+ "campaign_left": 131,
  "commit_error": null,
  "cores": 4,
- "done": [],
- "est_hours_left": 10.4,
+ "done": [
+  "HW_p97_w2048_lw0.0150_s10"
+ ],
+ "est_hours_left": 7.8,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -19,16 +21,16 @@
  },
  "instance": "f48d98",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 18,
+ "own_left": 17,
  "own_total": 18,
  "push_error": null,
  "running": {
-  "HW_p97_w2048_lw0.0150_s10": {
+  "HW_p97_w2048_lw0.0150_s9": {
    "phase": "run",
-   "since": "2026-09-30T22:40:24Z",
-   "step": 16000,
+   "since": "2026-10-01T01:02:54Z",
+   "step": 0,
    "steps": 50000,
-   "steps_per_s": 1.66,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 4
   }
@@ -36,7 +38,7 @@
  "started": "2026-09-30T21:40:40Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T00:41:11Z",
+ "updated": "2026-10-01T01:02:54Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
