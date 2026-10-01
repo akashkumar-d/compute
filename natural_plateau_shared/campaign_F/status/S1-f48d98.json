@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/vigilant-fermi-s8qf32",
  "broken": null,
- "campaign_left": 130,
+ "campaign_left": 129,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,9 +28,9 @@
   "HW_p97_w2048_lw0.0150_s9": {
    "phase": "run",
    "since": "2026-10-01T01:02:54Z",
-   "step": 6000,
+   "step": 8000,
    "steps": 50000,
-   "steps_per_s": 1.67,
+   "steps_per_s": 1.48,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +38,7 @@
  "started": "2026-09-30T21:40:40Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T02:03:10Z",
+ "updated": "2026-10-01T02:33:10Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
