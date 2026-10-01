@@ -36,12 +36,12 @@
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
  "own_left": 0,
  "own_total": 14,
- "push_error": "fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 34061 after 0 ms: Couldn't connect to server",
+ "push_error": null,
  "running": {},
  "started": "2026-09-30T21:40:44Z",
- "state": "running",
+ "state": "standby",
  "stolen": {},
- "updated": "2026-10-01T10:46:48Z",
+ "updated": "2026-10-01T10:46:51Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
