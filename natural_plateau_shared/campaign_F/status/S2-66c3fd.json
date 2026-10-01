@@ -2,11 +2,12 @@
  "abandoned": [],
  "branch": "claude/magical-brahmagupta-im5xew",
  "broken": null,
- "campaign_left": 30,
+ "campaign_left": 24,
  "commit_error": null,
  "cores": 4,
  "done": [
   "D3_p23_r0.45_s4",
+  "D3_p61_r0.45_s4",
   "D4_p23_r0.32_s10",
   "D4_p23_r0.32_s7",
   "D4_p47_r0.45_s5",
@@ -18,7 +19,7 @@
   "H_p97_lw0.0200_s4",
   "T16_D2_p23_lw0.015_r0.45_s4_T80k"
  ],
- "est_hours_left": 0.71,
+ "est_hours_left": 0.45,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -31,43 +32,43 @@
  },
  "instance": "66c3fd",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 8,
+ "own_left": 7,
  "own_total": 19,
  "push_error": null,
  "running": {
   "D3_p47_r0.45_s4": {
    "phase": "run",
    "since": "2026-10-01T09:55:43Z",
-   "step": 20000,
+   "step": 30000,
    "steps": 100000,
-   "steps_per_s": 14.62,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "D3_p61_r0.45_s4": {
-   "phase": "run",
-   "since": "2026-10-01T09:18:03Z",
-   "step": 32000,
-   "steps": 100000,
-   "steps_per_s": 8.82,
+   "steps_per_s": 15.04,
    "stolen_from": null,
    "threads": 1
   },
   "H_p47_lw0.0200_s3": {
    "phase": "run",
    "since": "2026-10-01T10:18:48Z",
-   "step": 0,
+   "step": 24000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 36.1,
    "stolen_from": null,
    "threads": 1
   },
   "T3_D2_p47_r0.5_s3": {
    "phase": "run",
    "since": "2026-10-01T10:04:39Z",
-   "step": 18000,
+   "step": 32000,
    "steps": 40000,
-   "steps_per_s": 21.64,
+   "steps_per_s": 21.93,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "seedD2_r0.5_s5": {
+   "phase": "run",
+   "since": "2026-10-01T10:29:18Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   }
@@ -75,7 +76,7 @@
  "started": "2026-09-30T21:40:38Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T10:18:48Z",
+ "updated": "2026-10-01T10:29:18Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
