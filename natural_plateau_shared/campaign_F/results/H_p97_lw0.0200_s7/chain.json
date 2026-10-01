@@ -1,0 +1,59 @@
+{
+ "branch": "claude/clever-johnson-d0b4sn",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "H_p97",
+ "depth": 1,
+ "dial": {
+  "lam_w": 0.02
+ },
+ "done": true,
+ "family": "H",
+ "files": {
+  "run.json.gz": {
+   "bytes": 86999,
+   "sha256": "cfced411c7edc9d8ab4cfd332fb314bff609c0eeb61ea8fbf710e8dcf9ff5ba9"
+  }
+ },
+ "finished": "2026-10-01T08:35:37Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "H_p97_lw0.0200_s7",
+ "init_seed": 5007,
+ "instance": "b73c4a",
+ "owner": "S5",
+ "p": 97,
+ "ran_by": "S5",
+ "run": {
+  "final_loss": 4.10531180740065,
+  "final_test": 0.9941551540913921,
+  "final_train": 0.9998671449448652,
+  "horizon": 50000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 3939.6,
+  "steps": 21600,
+  "stop_reason": "generalized",
+  "stopped_at": 21600,
+  "t10": 5780,
+  "t90": 7260,
+  "x": null
+ },
+ "seed": 7,
+ "split_seed": 6007,
+ "stage": "H",
+ "started": "2026-10-01T07:29:56Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 512
+}
