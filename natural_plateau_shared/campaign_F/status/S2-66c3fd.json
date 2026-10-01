@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/magical-brahmagupta-im5xew",
  "broken": null,
- "campaign_left": 104,
+ "campaign_left": 98,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -30,36 +30,36 @@
   "D4_p23_r0.32_s10": {
    "phase": "run",
    "since": "2026-10-01T07:52:35Z",
-   "step": 0,
+   "step": 48000,
    "steps": 120000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 26.86,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p23_r0.32_s7": {
    "phase": "run",
    "since": "2026-10-01T07:52:35Z",
-   "step": 0,
+   "step": 48000,
    "steps": 120000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 26.86,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p47_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T07:52:35Z",
-   "step": 0,
+   "step": 20000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 11.19,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.45_s8": {
    "phase": "run",
    "since": "2026-10-01T07:52:35Z",
-   "step": 0,
+   "step": 12000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 6.71,
    "stolen_from": null,
    "threads": 1
   }
@@ -67,7 +67,7 @@
  "started": "2026-09-30T21:40:38Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T07:52:35Z",
+ "updated": "2026-10-01T08:22:40Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
