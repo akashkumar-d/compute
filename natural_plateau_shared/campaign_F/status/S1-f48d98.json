@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/vigilant-fermi-s8qf32",
  "broken": null,
- "campaign_left": 119,
+ "campaign_left": 116,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -30,36 +30,36 @@
   "D4_p47_r0.45_s4": {
    "phase": "run",
    "since": "2026-10-01T05:38:47Z",
-   "step": 14000,
+   "step": 30000,
    "steps": 100000,
-   "steps_per_s": 7.84,
+   "steps_per_s": 8.35,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p47_r0.45_s9": {
    "phase": "run",
    "since": "2026-10-01T05:38:47Z",
-   "step": 14000,
+   "step": 30000,
    "steps": 100000,
-   "steps_per_s": 7.84,
+   "steps_per_s": 8.35,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.45_s4": {
    "phase": "run",
    "since": "2026-10-01T05:38:47Z",
-   "step": 10000,
+   "step": 20000,
    "steps": 100000,
-   "steps_per_s": 5.6,
+   "steps_per_s": 5.57,
    "stolen_from": null,
    "threads": 1
   },
   "D4_p61_r0.45_s7": {
    "phase": "run",
    "since": "2026-10-01T05:38:47Z",
-   "step": 10000,
+   "step": 20000,
    "steps": 100000,
-   "steps_per_s": 5.6,
+   "steps_per_s": 5.57,
    "stolen_from": null,
    "threads": 1
   }
@@ -67,7 +67,7 @@
  "started": "2026-09-30T21:40:40Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T06:08:51Z",
+ "updated": "2026-10-01T06:38:57Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
