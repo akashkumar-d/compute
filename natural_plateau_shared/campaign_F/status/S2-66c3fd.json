@@ -28,9 +28,9 @@
   "D4_p97_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T00:27:07Z",
-   "step": 46000,
+   "step": 58000,
    "steps": 100000,
-   "steps_per_s": 6.39,
+   "steps_per_s": 6.44,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +38,7 @@
  "started": "2026-09-30T21:40:38Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T02:27:23Z",
+ "updated": "2026-10-01T02:57:23Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
