@@ -2,14 +2,15 @@
  "abandoned": [],
  "branch": "claude/youthful-tesla-cxulx6",
  "broken": null,
- "campaign_left": 116,
+ "campaign_left": 113,
  "commit_error": null,
  "cores": 4,
  "done": [
+  "D3_p97_r0.45_s3",
   "D4_p97_r0.45_s5",
   "HW_p97_w2048_lw0.0150_s6"
  ],
- "est_hours_left": 5.34,
+ "est_hours_left": 3.46,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -22,16 +23,16 @@
  },
  "instance": "a02844",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 14,
+ "own_left": 13,
  "own_total": 16,
  "push_error": null,
  "running": {
-  "D3_p97_r0.45_s3": {
+  "D3_p97_r0.45_s9": {
    "phase": "run",
-   "since": "2026-10-01T05:57:47Z",
-   "step": 24000,
+   "since": "2026-10-01T07:24:06Z",
+   "step": 0,
    "steps": 100000,
-   "steps_per_s": 6.69,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 4
   }
@@ -39,7 +40,7 @@
  "started": "2026-09-30T21:41:24Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T06:57:50Z",
+ "updated": "2026-10-01T07:24:06Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S6"
 }
