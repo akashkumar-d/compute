@@ -2,13 +2,14 @@
  "abandoned": [],
  "branch": "claude/peaceful-brown-0unlx3",
  "broken": null,
- "campaign_left": 126,
+ "campaign_left": 125,
  "commit_error": null,
  "cores": 4,
  "done": [
+  "D4_p97_r0.45_s7",
   "HW_p97_w2048_lw0.0150_s8"
  ],
- "est_hours_left": 7.8,
+ "est_hours_left": 5.34,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -21,16 +22,16 @@
  },
  "instance": "326188",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 18,
+ "own_left": 17,
  "own_total": 19,
  "push_error": null,
  "running": {
-  "D4_p97_r0.45_s7": {
+  "D3_p97_r0.45_s5": {
    "phase": "run",
-   "since": "2026-10-01T00:17:33Z",
-   "step": 92000,
+   "since": "2026-10-01T04:35:41Z",
+   "step": 0,
    "steps": 100000,
-   "steps_per_s": 6.34,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +39,7 @@
  "started": "2026-09-30T21:41:06Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T04:19:33Z",
+ "updated": "2026-10-01T04:35:41Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
