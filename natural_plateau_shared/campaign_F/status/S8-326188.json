@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/peaceful-brown-0unlx3",
  "broken": null,
- "campaign_left": 136,
+ "campaign_left": 133,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -28,9 +28,9 @@
   "D4_p97_r0.45_s7": {
    "phase": "run",
    "since": "2026-10-01T00:17:33Z",
-   "step": 0,
+   "step": 10000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 5.57,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +38,7 @@
  "started": "2026-09-30T21:41:06Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T00:17:33Z",
+ "updated": "2026-10-01T00:47:49Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S8"
 }
