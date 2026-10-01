@@ -2,13 +2,14 @@
  "abandoned": [],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
- "campaign_left": 128,
+ "campaign_left": 126,
  "commit_error": null,
  "cores": 4,
  "done": [
+  "D4_p97_r0.45_s4",
   "HW_p97_w2048_lw0.0150_s5"
  ],
- "est_hours_left": 7.8,
+ "est_hours_left": 5.34,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -21,16 +22,16 @@
  },
  "instance": "b73c4a",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 13,
+ "own_left": 12,
  "own_total": 14,
  "push_error": null,
  "running": {
-  "D4_p97_r0.45_s4": {
+  "D3_p97_r0.45_s2": {
    "phase": "run",
-   "since": "2026-10-01T00:45:09Z",
-   "step": 70000,
+   "since": "2026-10-01T04:10:51Z",
+   "step": 0,
    "steps": 100000,
-   "steps_per_s": 6.46,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 4
   }
@@ -38,7 +39,7 @@
  "started": "2026-09-30T21:41:05Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T03:46:09Z",
+ "updated": "2026-10-01T04:10:51Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
