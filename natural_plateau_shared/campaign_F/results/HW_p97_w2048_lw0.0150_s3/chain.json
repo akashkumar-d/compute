@@ -1,0 +1,59 @@
+{
+ "branch": "claude/cool-thompson-gqo77f",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "HW_p97_w2048",
+ "depth": 1,
+ "dial": {
+  "lam_w": 0.015
+ },
+ "done": true,
+ "family": "HW",
+ "files": {
+  "run.json.gz": {
+   "bytes": 81593,
+   "sha256": "6f1ac27f5d2338cedc5f321027793e857b746d5f8e8cff9ade93ff2c8c334ae6"
+  }
+ },
+ "finished": "2026-10-01T00:26:51Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "HW_p97_w2048_lw0.0150_s3",
+ "init_seed": 5003,
+ "instance": "453328",
+ "owner": "S3",
+ "p": 97,
+ "ran_by": "S3",
+ "run": {
+  "final_loss": 3.9609236884212695,
+  "final_test": 1.0,
+  "final_train": 1.0,
+  "horizon": 50000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 9868.6,
+  "steps": 19540,
+  "stop_reason": "generalized",
+  "stopped_at": 19540,
+  "t10": 7560,
+  "t90": 8700,
+  "x": null
+ },
+ "seed": 3,
+ "split_seed": 6003,
+ "stage": "HW",
+ "started": "2026-09-30T21:42:22Z",
+ "stolen_from": null,
+ "threads": 4,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 2048
+}
