@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/focused-franklin-zgxj1m",
  "broken": null,
- "campaign_left": 25,
+ "campaign_left": 16,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -23,7 +23,7 @@
  ],
  "est_hours_left": 0.0,
  "failed": [],
- "fetch_error": "git ls-remote --heads origin: fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 34061 after 0 ms: Couldn't connect to server",
+ "fetch_error": null,
  "host": {
   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
@@ -36,12 +36,12 @@
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
  "own_left": 0,
  "own_total": 14,
- "push_error": null,
+ "push_error": "fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 34061 after 0 ms: Couldn't connect to server",
  "running": {},
  "started": "2026-09-30T21:40:44Z",
- "state": "standby",
+ "state": "running",
  "stolen": {},
- "updated": "2026-10-01T10:43:15Z",
+ "updated": "2026-10-01T10:46:48Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
