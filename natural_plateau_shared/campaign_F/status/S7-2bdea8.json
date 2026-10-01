@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/vigilant-gates-th8xut",
  "broken": null,
- "campaign_left": 134,
+ "campaign_left": 130,
  "commit_error": null,
  "cores": 4,
  "done": [],
@@ -26,7 +26,7 @@
   "HW_p97_w2048_lw0.0150_s7": {
    "phase": "run",
    "since": "2026-09-30T22:13:04Z",
-   "step": 12000,
+   "step": 14000,
    "steps": 50000,
    "steps_per_s": 1.11,
    "stolen_from": null,
@@ -36,7 +36,7 @@
  "started": "2026-09-30T21:41:10Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T00:44:12Z",
+ "updated": "2026-10-01T01:14:12Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S7"
 }
