@@ -26,9 +26,9 @@
   "HW_p97_w2048_lw0.0150_s4": {
    "phase": "run",
    "since": "2026-09-30T21:42:04Z",
-   "step": 12000,
+   "step": 14000,
    "steps": 50000,
-   "steps_per_s": 1.66,
+   "steps_per_s": 1.55,
    "stolen_from": null,
    "threads": 4
   }
@@ -36,7 +36,7 @@
  "started": "2026-09-30T21:40:44Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-09-30T23:42:52Z",
+ "updated": "2026-10-01T00:12:52Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
