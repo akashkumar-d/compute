@@ -1,0 +1,59 @@
+{
+ "branch": "claude/youthful-tesla-cxulx6",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "H_p31",
+ "depth": 1,
+ "dial": {
+  "lam_w": 0.015
+ },
+ "done": true,
+ "family": "H",
+ "files": {
+  "run.json.gz": {
+   "bytes": 128346,
+   "sha256": "6438f186de52e81223e238fd35c7ba7c6338f7bba57d8464d96975b818f6b96d"
+  }
+ },
+ "finished": "2026-10-01T10:48:10Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "H_p31_lw0.0150_s10",
+ "init_seed": 5010,
+ "instance": "a02844",
+ "owner": "S6",
+ "p": 31,
+ "ran_by": "S6",
+ "run": {
+  "final_loss": 1.5328294680378496,
+  "final_test": 0.9740932642487047,
+  "final_train": 1.0,
+  "horizon": 40000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 368.1,
+  "steps": 40000,
+  "stop_reason": null,
+  "stopped_at": null,
+  "t10": 7200,
+  "t90": 10520,
+  "x": null
+ },
+ "seed": 10,
+ "split_seed": 6010,
+ "stage": "H",
+ "started": "2026-10-01T10:42:01Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 512
+}
