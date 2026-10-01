@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
- "campaign_left": 26,
+ "campaign_left": 13,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -12,6 +12,7 @@
   "D3_p61_r0.45_s7",
   "D3_p97_r0.45_s2",
   "D3_p97_r0.45_s8",
+  "D4_p23_r0.32_s9",
   "D4_p97_r0.45_s4",
   "HW_p97_w2048_lw0.0150_s5",
   "H_p23_lw0.0100_s4",
@@ -43,21 +44,12 @@
  "own_total": 14,
  "push_error": null,
  "running": {
-  "D4_p23_r0.32_s9": {
-   "phase": "run",
-   "since": "2026-10-01T09:35:17Z",
-   "step": 76000,
-   "steps": 120000,
-   "steps_per_s": 25.25,
-   "stolen_from": "S7",
-   "threads": 1
-  },
   "H_p97_lw0.0200_s10": {
    "phase": "run",
    "since": "2026-10-01T09:13:21Z",
-   "step": 22000,
+   "step": 32000,
    "steps": 50000,
-   "steps_per_s": 5.09,
+   "steps_per_s": 5.33,
    "stolen_from": "S7",
    "threads": 1
   }
@@ -73,7 +65,7 @@
   "H_p97_lw0.0200_s10": "S7",
   "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T10:25:46Z",
+ "updated": "2026-10-01T10:53:48Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
