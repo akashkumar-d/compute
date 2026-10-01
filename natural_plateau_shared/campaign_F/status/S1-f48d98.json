@@ -2,10 +2,11 @@
  "abandoned": [],
  "branch": "claude/vigilant-fermi-s8qf32",
  "broken": null,
- "campaign_left": 47,
+ "campaign_left": 41,
  "commit_error": null,
  "cores": 4,
  "done": [
+  "D3_p47_r0.45_s3",
   "D3_p61_r0.45_s3",
   "D3_p97_r0.45_s6",
   "D4_p23_r0.32_s6",
@@ -20,7 +21,7 @@
   "T16_D2_p23_lw0.015_r0.45_s3_T80k",
   "T3_D2_p47_r0.5_s2"
  ],
- "est_hours_left": 0.5,
+ "est_hours_left": 0.33,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -33,43 +34,43 @@
  },
  "instance": "f48d98",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 5,
+ "own_left": 4,
  "own_total": 18,
  "push_error": null,
  "running": {
   "D3_p23_r0.45_s3": {
    "phase": "run",
    "since": "2026-10-01T08:55:31Z",
-   "step": 88000,
+   "step": 98000,
    "steps": 120000,
-   "steps_per_s": 26.32,
+   "steps_per_s": 26.38,
    "stolen_from": null,
    "threads": 1
   },
-  "D3_p47_r0.45_s3": {
+  "H_p31_lw0.0150_s9": {
    "phase": "run",
-   "since": "2026-10-01T08:59:55Z",
-   "step": 34000,
-   "steps": 100000,
-   "steps_per_s": 11.04,
+   "since": "2026-10-01T09:57:43Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "H_p47_lw0.0200_s10": {
    "phase": "run",
    "since": "2026-10-01T09:34:45Z",
-   "step": 24000,
+   "step": 34000,
    "steps": 40000,
-   "steps_per_s": 24.26,
+   "steps_per_s": 24.99,
    "stolen_from": null,
    "threads": 1
   },
   "H_p47_lw0.0200_s9": {
    "phase": "run",
    "since": "2026-10-01T09:51:32Z",
-   "step": 0,
+   "step": 8000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 22.63,
    "stolen_from": null,
    "threads": 1
   }
@@ -77,7 +78,7 @@
  "started": "2026-09-30T21:40:40Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T09:51:32Z",
+ "updated": "2026-10-01T09:57:43Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
