@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/clever-johnson-d0b4sn",
  "broken": null,
- "campaign_left": 83,
+ "campaign_left": 82,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -14,11 +14,12 @@
   "D4_p97_r0.45_s4",
   "HW_p97_w2048_lw0.0150_s5",
   "H_p23_lw0.0100_s8",
+  "H_p47_lw0.0200_s6",
   "H_p61_lw0.0200_s7",
   "H_p97_lw0.0200_s7",
   "T16_D2_p23_lw0.015_r0.45_s7_T80k"
  ],
- "est_hours_left": 0.25,
+ "est_hours_left": 0.18,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -31,43 +32,43 @@
  },
  "instance": "b73c4a",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 3,
+ "own_left": 2,
  "own_total": 14,
  "push_error": null,
  "running": {
   "H_p23_lw0.0100_s4": {
    "phase": "run",
    "since": "2026-10-01T08:59:45Z",
+   "step": 26000,
+   "steps": 40000,
+   "steps_per_s": 228.46,
+   "stolen_from": "S7",
+   "threads": 1
+  },
+  "T3_D2_p47_r0.5_s6": {
+   "phase": "run",
+   "since": "2026-10-01T08:35:48Z",
+   "step": 32000,
+   "steps": 40000,
+   "steps_per_s": 20.74,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "T3_D2_p47_r0.5_s8": {
+   "phase": "run",
+   "since": "2026-10-01T09:01:48Z",
    "step": 0,
    "steps": 40000,
    "steps_per_s": 0.0,
    "stolen_from": "S7",
    "threads": 1
   },
-  "H_p47_lw0.0200_s6": {
-   "phase": "run",
-   "since": "2026-10-01T08:42:36Z",
-   "step": 36000,
-   "steps": 40000,
-   "steps_per_s": 35.62,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "T3_D2_p47_r0.5_s6": {
-   "phase": "run",
-   "since": "2026-10-01T08:35:48Z",
-   "step": 30000,
-   "steps": 40000,
-   "steps_per_s": 21.13,
-   "stolen_from": null,
-   "threads": 1
-  },
   "seedD2_r0.5_s9": {
    "phase": "run",
    "since": "2026-10-01T08:52:46Z",
-   "step": 18000,
+   "step": 24000,
    "steps": 40000,
-   "steps_per_s": 44.87,
+   "steps_per_s": 45.8,
    "stolen_from": null,
    "threads": 1
   }
@@ -75,9 +76,10 @@
  "started": "2026-09-30T21:41:05Z",
  "state": "running",
  "stolen": {
-  "H_p23_lw0.0100_s4": "S7"
+  "H_p23_lw0.0100_s4": "S7",
+  "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T08:59:45Z",
+ "updated": "2026-10-01T09:01:48Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
