@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/vigilant-fermi-s8qf32",
  "broken": null,
- "campaign_left": 16,
+ "campaign_left": 4,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -45,7 +45,7 @@
  "started": "2026-09-30T21:40:40Z",
  "state": "standby",
  "stolen": {},
- "updated": "2026-10-01T10:49:08Z",
+ "updated": "2026-10-01T11:19:20Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S1"
 }
