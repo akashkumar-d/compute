@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/focused-franklin-zgxj1m",
  "broken": null,
- "campaign_left": 1,
+ "campaign_left": 0,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -20,6 +20,7 @@
   "H_p47_lw0.0200_s5",
   "H_p61_lw0.0200_s6",
   "H_p97_lw0.0200_s6",
+  "H_p97_lw0.0200_s8",
   "T16_D2_p23_lw0.015_r0.45_s6_T80k",
   "T3_D2_p47_r0.5_s5",
   "seedD2_r0.5_s8"
@@ -40,26 +41,16 @@
  "own_left": 0,
  "own_total": 14,
  "push_error": null,
- "running": {
-  "H_p97_lw0.0200_s8": {
-   "phase": "run",
-   "since": "2026-10-01T12:55:33Z",
-   "step": 44000,
-   "steps": 50000,
-   "steps_per_s": 4.35,
-   "stolen_from": "S6",
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:40:44Z",
- "state": "running",
+ "state": "finished",
  "stolen": {
   "D4_p47_r0.45_s10": "S7",
   "D4_p61_r0.45_s10": "S7",
   "D4_p61_r0.45_s5": "S7",
   "H_p97_lw0.0200_s8": "S6"
  },
- "updated": "2026-10-01T15:44:34Z",
+ "updated": "2026-10-01T15:59:12Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
