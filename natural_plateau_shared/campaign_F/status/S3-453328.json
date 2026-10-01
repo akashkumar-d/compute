@@ -52,7 +52,7 @@
  "push_error": null,
  "running": {},
  "started": "2026-09-30T21:40:51Z",
- "state": "finished",
+ "state": "running",
  "stolen": {
   "D3_p23_r0.45_s9": "S7",
   "D3_p61_r0.45_s10": "S7",
@@ -63,7 +63,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p97_lw0.0200_s8": "S6"
  },
- "updated": "2026-10-01T16:06:47Z",
+ "updated": "2026-10-01T16:06:53Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S3"
 }
