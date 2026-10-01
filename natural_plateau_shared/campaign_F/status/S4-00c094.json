@@ -42,7 +42,7 @@
   "D4_p61_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T12:37:55Z",
-   "step": 36000,
+   "step": 46000,
    "steps": 100000,
    "steps_per_s": 5.53,
    "stolen_from": "S7",
@@ -51,7 +51,7 @@
   "D4_p61_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T12:37:55Z",
-   "step": 36000,
+   "step": 46000,
    "steps": 100000,
    "steps_per_s": 5.53,
    "stolen_from": "S7",
@@ -60,7 +60,7 @@
   "H_p97_lw0.0200_s8": {
    "phase": "run",
    "since": "2026-10-01T12:55:33Z",
-   "step": 24000,
+   "step": 32000,
    "steps": 50000,
    "steps_per_s": 4.4,
    "stolen_from": "S6",
@@ -75,7 +75,7 @@
   "D4_p61_r0.45_s5": "S7",
   "H_p97_lw0.0200_s8": "S6"
  },
- "updated": "2026-10-01T14:26:42Z",
+ "updated": "2026-10-01T14:56:56Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
