@@ -41,28 +41,37 @@
   "D4_p47_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T12:37:55Z",
-   "step": 0,
+   "step": 8000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 7.69,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p61_r0.45_s10": {
    "phase": "run",
    "since": "2026-10-01T12:37:55Z",
-   "step": 0,
+   "step": 4000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 3.85,
    "stolen_from": "S7",
    "threads": 1
   },
   "D4_p61_r0.45_s5": {
    "phase": "run",
    "since": "2026-10-01T12:37:55Z",
-   "step": 0,
+   "step": 4000,
    "steps": 100000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 3.85,
    "stolen_from": "S7",
+   "threads": 1
+  },
+  "H_p97_lw0.0200_s8": {
+   "phase": "run",
+   "since": "2026-10-01T12:55:33Z",
+   "step": 0,
+   "steps": 50000,
+   "steps_per_s": 0.0,
+   "stolen_from": "S6",
    "threads": 1
   }
  },
@@ -71,9 +80,10 @@
  "stolen": {
   "D4_p47_r0.45_s10": "S7",
   "D4_p61_r0.45_s10": "S7",
-  "D4_p61_r0.45_s5": "S7"
+  "D4_p61_r0.45_s5": "S7",
+  "H_p97_lw0.0200_s8": "S6"
  },
- "updated": "2026-10-01T12:37:55Z",
+ "updated": "2026-10-01T12:55:33Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S4"
 }
