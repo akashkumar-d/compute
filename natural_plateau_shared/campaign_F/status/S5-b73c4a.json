@@ -30,7 +30,7 @@
  ],
  "est_hours_left": 0.0,
  "failed": [],
- "fetch_error": "git ls-remote --heads origin: fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 34013 after 0 ms: Couldn't connect to server",
+ "fetch_error": null,
  "host": {
   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
   "cpus": 4,
@@ -46,7 +46,7 @@
  "push_error": "fatal: unable to access 'https://github.com/akashkumar-d/compute/': Failed to connect to 127.0.0.1 port 34013 after 0 ms: Couldn't connect to server",
  "running": {},
  "started": "2026-09-30T21:41:05Z",
- "state": "standby",
+ "state": "running",
  "stolen": {
   "D3_p47_r0.45_s9": "S7",
   "D4_p23_r0.32_s9": "S7",
@@ -56,7 +56,7 @@
   "H_p97_lw0.0200_s10": "S7",
   "T3_D2_p47_r0.5_s8": "S7"
  },
- "updated": "2026-10-01T11:47:51Z",
+ "updated": "2026-10-01T11:52:53Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S5"
 }
