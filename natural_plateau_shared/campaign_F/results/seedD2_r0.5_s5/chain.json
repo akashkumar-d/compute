@@ -1,0 +1,60 @@
+{
+ "branch": "claude/magical-brahmagupta-im5xew",
+ "code": {
+  "manifest": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
+  "runner": "21c4bd56ca3f1e8272430038392f12c533247988e57b8ebda831035c6b831f1b",
+  "worker": "9b90cc91b4a790d2820ad0dc1ec62cdaecf3d71ded8db938ab4bfa671c671fed"
+ },
+ "cohort": "D2_p31",
+ "depth": 2,
+ "dial": {
+  "lam_w": 0.015,
+  "r": 0.5
+ },
+ "done": true,
+ "family": "D2",
+ "files": {
+  "run.json.gz": {
+   "bytes": 175961,
+   "sha256": "0fb7317d0eb4510303692d92666723dc3522a3b76236973418b0d1ca63cc95e4"
+  }
+ },
+ "finished": "2026-10-01T10:43:36Z",
+ "host": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cpus": 4,
+  "node": "5bce98f7",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "id": "seedD2_r0.5_s5",
+ "init_seed": 106,
+ "instance": "66c3fd",
+ "owner": "S2",
+ "p": 31,
+ "ran_by": "S2",
+ "run": {
+  "final_loss": 1.3586310816911593,
+  "final_test": 0.9948186528497409,
+  "final_train": 1.0,
+  "horizon": 40000,
+  "last_layer_rate": null,
+  "resumed_from": 0,
+  "seconds": 856.9,
+  "steps": 40000,
+  "stop_reason": null,
+  "stopped_at": null,
+  "t10": 16980,
+  "t90": 28220,
+  "x": null
+ },
+ "seed": 5,
+ "split_seed": 206,
+ "stage": "D2",
+ "started": "2026-10-01T10:29:18Z",
+ "stolen_from": null,
+ "threads": 1,
+ "version": "campaign-F worker 1.0 (2026-09-30)",
+ "width": 256
+}

@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/magical-brahmagupta-im5xew",
  "broken": null,
- "campaign_left": 18,
+ "campaign_left": 17,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -23,9 +23,10 @@
   "H_p61_lw0.0200_s4",
   "H_p97_lw0.0200_s4",
   "T16_D2_p23_lw0.015_r0.45_s4_T80k",
-  "T3_D2_p47_r0.5_s3"
+  "T3_D2_p47_r0.5_s3",
+  "seedD2_r0.5_s5"
  ],
- "est_hours_left": 0.05,
+ "est_hours_left": 0.0,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -38,24 +39,14 @@
  },
  "instance": "66c3fd",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 1,
+ "own_left": 0,
  "own_total": 19,
  "push_error": null,
- "running": {
-  "seedD2_r0.5_s5": {
-   "phase": "run",
-   "since": "2026-10-01T10:29:18Z",
-   "step": 30000,
-   "steps": 40000,
-   "steps_per_s": 45.48,
-   "stolen_from": null,
-   "threads": 1
-  }
- },
+ "running": {},
  "started": "2026-09-30T21:40:38Z",
- "state": "running",
+ "state": "standby",
  "stolen": {},
- "updated": "2026-10-01T10:40:35Z",
+ "updated": "2026-10-01T10:43:37Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
