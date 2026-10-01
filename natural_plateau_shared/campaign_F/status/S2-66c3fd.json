@@ -2,7 +2,7 @@
  "abandoned": [],
  "branch": "claude/magical-brahmagupta-im5xew",
  "broken": null,
- "campaign_left": 24,
+ "campaign_left": 23,
  "commit_error": null,
  "cores": 4,
  "done": [
@@ -17,9 +17,10 @@
   "HW_p97_w2048_lw0.0150_s2",
   "H_p61_lw0.0200_s4",
   "H_p97_lw0.0200_s4",
-  "T16_D2_p23_lw0.015_r0.45_s4_T80k"
+  "T16_D2_p23_lw0.015_r0.45_s4_T80k",
+  "T3_D2_p47_r0.5_s3"
  ],
- "est_hours_left": 0.45,
+ "est_hours_left": 0.32,
  "failed": [],
  "fetch_error": null,
  "host": {
@@ -32,43 +33,43 @@
  },
  "instance": "66c3fd",
  "manifest_sha256": "1416d3cda4a344fd6af755dafe8144c08c9ae21767f023895f27e329a560e75a",
- "own_left": 7,
+ "own_left": 6,
  "own_total": 19,
  "push_error": null,
  "running": {
   "D3_p47_r0.45_s4": {
    "phase": "run",
    "since": "2026-10-01T09:55:43Z",
-   "step": 30000,
+   "step": 36000,
    "steps": 100000,
-   "steps_per_s": 15.04,
+   "steps_per_s": 15.44,
+   "stolen_from": null,
+   "threads": 1
+  },
+  "H_p31_lw0.0150_s4": {
+   "phase": "run",
+   "since": "2026-10-01T10:34:52Z",
+   "step": 0,
+   "steps": 40000,
+   "steps_per_s": 0.0,
    "stolen_from": null,
    "threads": 1
   },
   "H_p47_lw0.0200_s3": {
    "phase": "run",
    "since": "2026-10-01T10:18:48Z",
-   "step": 24000,
+   "step": 36000,
    "steps": 40000,
-   "steps_per_s": 36.1,
-   "stolen_from": null,
-   "threads": 1
-  },
-  "T3_D2_p47_r0.5_s3": {
-   "phase": "run",
-   "since": "2026-10-01T10:04:39Z",
-   "step": 32000,
-   "steps": 40000,
-   "steps_per_s": 21.93,
+   "steps_per_s": 38.06,
    "stolen_from": null,
    "threads": 1
   },
   "seedD2_r0.5_s5": {
    "phase": "run",
    "since": "2026-10-01T10:29:18Z",
-   "step": 0,
+   "step": 16000,
    "steps": 40000,
-   "steps_per_s": 0.0,
+   "steps_per_s": 50.57,
    "stolen_from": null,
    "threads": 1
   }
@@ -76,7 +77,7 @@
  "started": "2026-09-30T21:40:38Z",
  "state": "running",
  "stolen": {},
- "updated": "2026-10-01T10:29:18Z",
+ "updated": "2026-10-01T10:34:52Z",
  "version": "campaign-F worker 1.0 (2026-09-30)",
  "worker": "S2"
 }
